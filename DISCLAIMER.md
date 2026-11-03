@@ -50,3 +50,4 @@ If you are a copyright owner or authorized agent thereof and believe that any co
 - Issue Tracker: [https://github.com/hul0/gate-pyq-db/issues](https://github.com/hul0/gate-pyq-db/issues)
 
 Upon receipt of a valid and substantiated notification, the maintainers will promptly review the notice and remove or disable access to the relevant content in accordance with applicable laws.
+
