@@ -1,0 +1,247 @@
+{
+  "total_papers": 24,
+  "total_extracted": 1428,
+  "total_omitted": 556,
+  "papers": [
+    {
+      "paper_id": "2007_CS",
+      "year": 2007,
+      "session": "CS",
+      "total_questions": 85,
+      "extracted_questions": 75,
+      "omitted_questions": 10,
+      "json_file": "output/2007_CS.json",
+      "elapsed_seconds": 25.29
+    },
+    {
+      "paper_id": "2008_CS",
+      "year": 2008,
+      "session": "CS",
+      "total_questions": 82,
+      "extracted_questions": 57,
+      "omitted_questions": 25,
+      "json_file": "output/2008_CS.json",
+      "elapsed_seconds": 26.95
+    },
+    {
+      "paper_id": "2009_CS",
+      "year": 2009,
+      "session": "CS",
+      "total_questions": 65,
+      "extracted_questions": 49,
+      "omitted_questions": 16,
+      "json_file": "output/2009_CS.json",
+      "elapsed_seconds": 23.14
+    },
+    {
+      "paper_id": "2010_CS",
+      "year": 2010,
+      "session": "CS",
+      "total_questions": 65,
+      "extracted_questions": 41,
+      "omitted_questions": 24,
+      "json_file": "output/2010_CS.json",
+      "elapsed_seconds": 22.31
+    },
+    {
+      "paper_id": "2011_CS",
+      "year": 2011,
+      "session": "CS",
+      "total_questions": 65,
+      "extracted_questions": 54,
+      "omitted_questions": 11,
+      "json_file": "output/2011_CS.json",
+      "elapsed_seconds": 25.09
+    },
+    {
+      "paper_id": "2012_CS",
+      "year": 2012,
+      "session": "CS",
+      "total_questions": 65,
+      "extracted_questions": 60,
+      "omitted_questions": 5,
+      "json_file": "output/2012_CS.json",
+      "elapsed_seconds": 0.17
+    },
+    {
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "total_questions": 256,
+      "extracted_questions": 253,
+      "omitted_questions": 3,
+      "json_file": "output/2013_CS.json",
+      "elapsed_seconds": 1.21
+    },
+    {
+      "paper_id": "2014_CS",
+      "year": 2014,
+      "session": "CS",
+      "total_questions": 195,
+      "extracted_questions": 170,
+      "omitted_questions": 25,
+      "json_file": "output/2014_CS.json",
+      "elapsed_seconds": 0.43
+    },
+    {
+      "paper_id": "2015_CS",
+      "year": 2015,
+      "session": "CS",
+      "total_questions": 65,
+      "extracted_questions": 0,
+      "omitted_questions": 65,
+      "json_file": "output/2015_CS.json",
+      "elapsed_seconds": 0.04
+    },
+    {
+      "paper_id": "2016_CS",
+      "year": 2016,
+      "session": "CS",
+      "total_questions": 130,
+      "extracted_questions": 124,
+      "omitted_questions": 6,
+      "json_file": "output/2016_CS.json",
+      "elapsed_seconds": 0.18
+    },
+    {
+      "paper_id": "2017_CS1",
+      "year": 2017,
+      "session": "CS1",
+      "total_questions": 65,
+      "extracted_questions": 0,
+      "omitted_questions": 65,
+      "json_file": "output/2017_CS1.json",
+      "elapsed_seconds": 0.05
+    },
+    {
+      "paper_id": "2017_CS2",
+      "year": 2017,
+      "session": "CS2",
+      "total_questions": 65,
+      "extracted_questions": 0,
+      "omitted_questions": 65,
+      "json_file": "output/2017_CS2.json",
+      "elapsed_seconds": 0.05
+    },
+    {
+      "paper_id": "2018_CS",
+      "year": 2018,
+      "session": "CS",
+      "total_questions": 65,
+      "extracted_questions": 58,
+      "omitted_questions": 7,
+      "json_file": "output/2018_CS.json",
+      "elapsed_seconds": 0.15
+    },
+    {
+      "paper_id": "2019_CS",
+      "year": 2019,
+      "session": "CS",
+      "total_questions": 65,
+      "extracted_questions": 0,
+      "omitted_questions": 65,
+      "json_file": "output/2019_CS.json",
+      "elapsed_seconds": 0.01
+    },
+    {
+      "paper_id": "2020_CS",
+      "year": 2020,
+      "session": "CS",
+      "total_questions": 65,
+      "extracted_questions": 0,
+      "omitted_questions": 65,
+      "json_file": "output/2020_CS.json",
+      "elapsed_seconds": 0.03
+    },
+    {
+      "paper_id": "2021_CS",
+      "year": 2021,
+      "session": "CS",
+      "total_questions": 65,
+      "extracted_questions": 0,
+      "omitted_questions": 65,
+      "json_file": "output/2021_CS.json",
+      "elapsed_seconds": 0.06
+    },
+    {
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "total_questions": 65,
+      "extracted_questions": 61,
+      "omitted_questions": 4,
+      "json_file": "output/2022_CS.json",
+      "elapsed_seconds": 0.22
+    },
+    {
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "total_questions": 66,
+      "extracted_questions": 54,
+      "omitted_questions": 12,
+      "json_file": "output/2023_CS.json",
+      "elapsed_seconds": 0.24
+    },
+    {
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "total_questions": 65,
+      "extracted_questions": 63,
+      "omitted_questions": 2,
+      "json_file": "output/2024_CS1.json",
+      "elapsed_seconds": 0.29
+    },
+    {
+      "paper_id": "2024_CS2",
+      "year": 2024,
+      "session": "CS2",
+      "total_questions": 65,
+      "extracted_questions": 60,
+      "omitted_questions": 5,
+      "json_file": "output/2024_CS2.json",
+      "elapsed_seconds": 0.31
+    },
+    {
+      "paper_id": "2025_CS1",
+      "year": 2025,
+      "session": "CS1",
+      "total_questions": 65,
+      "extracted_questions": 61,
+      "omitted_questions": 4,
+      "json_file": "output/2025_CS1.json",
+      "elapsed_seconds": 0.47
+    },
+    {
+      "paper_id": "2025_CS2",
+      "year": 2025,
+      "session": "CS2",
+      "total_questions": 65,
+      "extracted_questions": 61,
+      "omitted_questions": 4,
+      "json_file": "output/2025_CS2.json",
+      "elapsed_seconds": 0.35
+    },
+    {
+      "paper_id": "2026_CS1",
+      "year": 2026,
+      "session": "CS1",
+      "total_questions": 65,
+      "extracted_questions": 62,
+      "omitted_questions": 3,
+      "json_file": "output/2026_CS1.json",
+      "elapsed_seconds": 0.37
+    },
+    {
+      "paper_id": "2026_CS2",
+      "year": 2026,
+      "session": "CS2",
+      "total_questions": 65,
+      "extracted_questions": 65,
+      "omitted_questions": 0,
+      "json_file": "output/2026_CS2.json",
+      "elapsed_seconds": 0.42
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+# Python virtual environments & packages
+.venv/
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing & caches
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# Raw binary exam question papers (PDFs)
+# Note: Raw question paper PDFs are excluded from the repository.
+# Processed JSON databases are stored in output/.
+CS/
+*.pdf
+
+# Environment files and credentials
+.env
+.env.*
+*.local
+
+# Editor & OS specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.log

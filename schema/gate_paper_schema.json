@@ -1,0 +1,188 @@
+{
+  "$defs": {
+    "GateQuestion": {
+      "description": "Schema for an individual extracted GATE question.",
+      "properties": {
+        "id": {
+          "description": "Unique identifier for the question (e.g., '2024_CS1_Q01' or '2018_CS_GA_Q01')",
+          "title": "Id",
+          "type": "string"
+        },
+        "question_number": {
+          "description": "Question number as printed in the exam paper",
+          "maximum": 100,
+          "minimum": 1,
+          "title": "Question Number",
+          "type": "integer"
+        },
+        "section": {
+          "description": "Section name (e.g. 'General Aptitude' or 'Computer Science and Information Technology')",
+          "title": "Section",
+          "type": "string"
+        },
+        "section_code": {
+          "description": "Standard 2-letter section code: GA (General Aptitude) or CS (Computer Science)",
+          "enum": [
+            "GA",
+            "CS"
+          ],
+          "title": "Section Code",
+          "type": "string"
+        },
+        "question_type": {
+          "description": "Question type: Multiple Choice (MCQ), Multiple Select (MSQ), or Numerical Answer Type (NAT)",
+          "enum": [
+            "MCQ",
+            "MSQ",
+            "NAT"
+          ],
+          "title": "Question Type",
+          "type": "string"
+        },
+        "marks": {
+          "description": "Marks allocated for correct answer (typically 1.0 or 2.0)",
+          "exclusiveMinimum": 0.0,
+          "title": "Marks",
+          "type": "number"
+        },
+        "negative_marks": {
+          "default": 0.0,
+          "description": "Deduction for wrong answer (typically 0.33, 0.66, or 0.0)",
+          "minimum": 0.0,
+          "title": "Negative Marks",
+          "type": "number"
+        },
+        "question_text": {
+          "description": "Clean text, markdown, or LaTeX representation of the question stem",
+          "title": "Question Text",
+          "type": "string"
+        },
+        "options": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "type": "string"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Options dictionary mapping 'A', 'B', 'C', 'D' to their text. Null/None for NAT questions.",
+          "title": "Options"
+        },
+        "has_images": {
+          "const": false,
+          "default": false,
+          "description": "Whether question contains images. Must be false for all extracted questions as questions containing images are omitted.",
+          "title": "Has Images",
+          "type": "boolean"
+        },
+        "page_start": {
+          "description": "Starting page number of the question in the PDF (1-indexed)",
+          "minimum": 1,
+          "title": "Page Start",
+          "type": "integer"
+        },
+        "page_end": {
+          "description": "Ending page number of the question in the PDF (1-indexed)",
+          "minimum": 1,
+          "title": "Page End",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "question_number",
+        "section",
+        "section_code",
+        "question_type",
+        "marks",
+        "question_text",
+        "page_start",
+        "page_end"
+      ],
+      "title": "GateQuestion",
+      "type": "object"
+    }
+  },
+  "description": "Schema for a parsed GATE exam paper.",
+  "properties": {
+    "paper_id": {
+      "description": "Identifier of the paper matching filename (e.g., '2026_CS1', '2018_CS')",
+      "title": "Paper Id",
+      "type": "string"
+    },
+    "year": {
+      "description": "Examination year (e.g., 2024)",
+      "maximum": 2050,
+      "minimum": 1990,
+      "title": "Year",
+      "type": "integer"
+    },
+    "subject": {
+      "default": "Computer Science and Information Technology",
+      "description": "Full subject title",
+      "title": "Subject",
+      "type": "string"
+    },
+    "subject_code": {
+      "default": "CS",
+      "description": "Subject paper code",
+      "title": "Subject Code",
+      "type": "string"
+    },
+    "session": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Session or set designator (e.g., 'Set 1', 'CS1', 'CS2', or None)",
+      "title": "Session"
+    },
+    "total_questions_in_paper": {
+      "description": "Total questions identified in the source paper (typically 65)",
+      "minimum": 0,
+      "title": "Total Questions In Paper",
+      "type": "integer"
+    },
+    "extracted_questions_count": {
+      "description": "Count of questions extracted (text-only, images omitted)",
+      "minimum": 0,
+      "title": "Extracted Questions Count",
+      "type": "integer"
+    },
+    "omitted_questions_count": {
+      "description": "Count of questions omitted due to containing images, diagrams, or scanned format",
+      "minimum": 0,
+      "title": "Omitted Questions Count",
+      "type": "integer"
+    },
+    "questions": {
+      "description": "List of text-only questions parsed from this paper",
+      "items": {
+        "$ref": "#/$defs/GateQuestion"
+      },
+      "title": "Questions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "paper_id",
+    "year",
+    "total_questions_in_paper",
+    "extracted_questions_count",
+    "omitted_questions_count",
+    "questions"
+  ],
+  "title": "GatePaper",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

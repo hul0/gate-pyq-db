@@ -1,0 +1,1070 @@
+{
+  "paper_id": "2008_CS",
+  "year": 2008,
+  "subject": "Computer Science and Information Technology",
+  "subject_code": "CS",
+  "session": "CS",
+  "total_questions_in_paper": 82,
+  "extracted_questions_count": 57,
+  "omitted_questions_count": 25,
+  "questions": [
+    {
+      "id": "2008_CS_CS_Q01",
+      "question_number": 1,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "_ x—sinx\nlim ————\n29° X+COSX",
+      "options": {
+        "A": "(B)-1",
+        "C": "@",
+        "D": "-«\nequals"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2
+    },
+    {
+      "id": "2008_CS_CS_Q02",
+      "question_number": 2,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "If P,Q, Rare subsets of the universal set U, then (PAQAR)UPSAQNAR) UQSUR® is",
+      "options": {
+        "A": "Q°URS",
+        "B": "PUQSUR®",
+        "C": "PSUQSURS",
+        "D": "U"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2
+    },
+    {
+      "id": "2008_CS_CS_Q03",
+      "question_number": 3,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "The following system of equations\nxXp+ x2+2x, = 1\nXt 2x2+3x; = 2\nX)+4x2+ ax3= 4\nhas a unique solution. The only possible value(s) for a is/are",
+      "options": {
+        "A": "0",
+        "B": "either 0 or 1",
+        "C": "one of 0, 1lor-1",
+        "D": "any real number"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2
+    },
+    {
+      "id": "2008_CS_CS_Q04",
+      "question_number": 4,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "_ Inthe IEEE floating point representation the hexadecimal value 0x00000000 corresponds to",
+      "options": {
+        "A": "the normalized value 27!”",
+        "B": "the normalized value 27’",
+        "C": "the normalized value +0",
+        "D": "the special value +0\n126"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2
+    },
+    {
+      "id": "2008_CS_CS_Q06",
+      "question_number": 6,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "— Let denote number system radix. The only value(s) of r that satisfy the equation\n121, =11, is/are",
+      "options": {
+        "A": "decimal 10",
+        "B": "decimal 11",
+        "C": "decimal 10 and 11",
+        "D": "any value > 2"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2
+    },
+    {
+      "id": "2008_CS_CS_Q07",
+      "question_number": 7,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "The most efficient algorithm for finding the number of connected components in an undirected\ngraph on n vertices and m edges has time complexity",
+      "options": {
+        "A": "O(n)",
+        "B": "O(m)",
+        "C": "O(m+n)",
+        "D": "O(mn)\ncs 2724\n2008\nMAIN PAPER ~ CS"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 3
+    },
+    {
+      "id": "2008_CS_CS_Q08",
+      "question_number": 8,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "— Given fj, f;and f in canonical sum of. products form (in decimal) for the circuit\nfi\nfy od\nf\nf, =2 m (4, 5, 6, 7, 8)\nf; = m(I, 6, 15)\nf = Tm(I, 6, 8, 15)\nthen f) is",
+      "options": {
+        "A": "= m (4, 6)",
+        "B": "= m (4, 8)",
+        "C": "Em, 8)",
+        "D": "= m(4, 6, 8)"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2008_CS_CS_Q09",
+      "question_number": 9,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which of the following is true for the language {a”| p is a prime}?",
+      "options": {
+        "A": "It is not accepted by a Turing Machine",
+        "B": "It is regular but not context-free",
+        "C": "It is context-free but not regular",
+        "D": "It is neither regular nor context-free, but accepted by a Turing machine"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2008_CS_CS_Q10",
+      "question_number": 10,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which of the following are decidable?\n1. Whether the intersection of two regular languages is infinite\nIl. Whether a given context-free language is regular\nIll. Whether two push-down automata accept the same language\nIV. Whether a given grammar is context-free",
+      "options": {
+        "A": "Land II",
+        "B": "Land IV",
+        "C": "Mand ll",
+        "D": "Hand Iv"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2008_CS_CS_Q11",
+      "question_number": 11,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which of the following describes a handle (as applicable to LR-parsing) appropriately?",
+      "options": {
+        "A": "It is the position in a sentential form where the next shift or reduce operation will occur",
+        "B": "It is a non-terminal whose production will be used for reduction in the next step",
+        "C": "It is a production that may be used for reduction in a future step along with a position in the\nsentential form where the next shift or reduce operation will occur",
+        "D": "It is the production p that will be used for reduction in the next step along with a position in the\nsentential form where the right hand side of the production may be found"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2008_CS_CS_Q12",
+      "question_number": 12,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Some code optimizations are carried out on the intermediate code because",
+      "options": {
+        "A": "they enhance the portability of the compiler to other target processors",
+        "B": "program analysis is more accurate on intermediate code than on machine code",
+        "C": "the information from dataflow analysis cannot otherwise be used for optimization",
+        "D": "the information from the front end cannot otherwise be used for optimization"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2008_CS_CS_Q13",
+      "question_number": 13,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "if Land Lare recursively enumerable then L is",
+      "options": {
+        "A": "regular",
+        "B": "context-free",
+        "C": "context-sensitive",
+        "D": "recursive\n\n2008\nMAIN PAPER — CS"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 4
+    },
+    {
+      "id": "2008_CS_CS_Q21",
+      "question_number": 21,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "The minimum number of equal length subintervals needed to approximate\n2\n1\nfue*ax to an accuracy of at least =\" 10~ using the trapezoidal rule is\ni",
+      "options": {
+        "A": "1000e",
+        "B": "1000",
+        "C": "100e",
+        "D": "100"
+      },
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "id": "2008_CS_CS_Q22",
+      "question_number": 22,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "The Newton-Raphson iteration x, ,, = 5, 4) can be used to compute the\nin",
+      "options": {
+        "A": "square of R",
+        "B": "reciprocal of R",
+        "C": "square rootofR",
+        "D": "logarithm of R"
+      },
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "id": "2008_CS_CS_Q23",
+      "question_number": 23,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which of the following statements is true for every planar graph on n vertices?",
+      "options": {
+        "A": "P=O-k",
+        "B": "P=Q+k",
+        "C": "P=",
+        "D": "P=Q + 2k"
+      },
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "id": "2008_CS_CS_Q25",
+      "question_number": 25,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "A point on a curve is said to be an extremum if it is a local minimum or a local maximum. The\nnumber of distinct extrema for the curve 3x’ — /6x° + 24x’ + 37 is",
+      "options": {
+        "A": "0",
+        "B": "1 (©) 2",
+        "D": "3"
+      },
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "id": "2008_CS_CS_Q26",
+      "question_number": 26,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "If P,Q, Rare Boolean variables, then\n(P+0)(P.O+P.R)(P.R+Q)\nsimplifies to",
+      "options": {
+        "A": "PO",
+        "B": "PR",
+        "C": "PO+R",
+        "D": "P.R+Q"
+      },
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "id": "2008_CS_CS_Q27",
+      "question_number": 27,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Aishwarya studies either computer science or mathematics everyday. If she studies computer\nscience on a day, then the probability that she studies mathematics the next day is 0.6. If she studies\nmathematics on a day, then the probability that she studies computer science the next day is 0.4.\nGiven that Aishwarya studies computer science on Monday, what is the probability that she studies\ncomputer science on Wednesday?",
+      "options": {
+        "A": "0.24",
+        "B": "0.36 (©) 0.4",
+        "D": "0.6"
+      },
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "id": "2008_CS_CS_Q28",
+      "question_number": 28,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "How many of the following matrices have an eigenvalue 1?\n1 0 0: de est 4 sb 6\no of fo off: 1}™ {1 -1",
+      "options": {
+        "A": "one",
+        "B": "two",
+        "C": "three",
+        "D": "four\ncs 5724"
+      },
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "id": "2008_CS_CS_Q35",
+      "question_number": 35,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "MAIN PAPER — CS\nLet X be a random variable following normal distribution with mean +1 and variance 4. Let Y be\nanother normal variable with mean —1 and variance unknown. If P( X < -1) = P( Y 2 2), the\nstandard deviation of Y is",
+      "options": {
+        "A": "IV only",
+        "B": "Land IV only",
+        "D": "1, Il, Ill and IV\n\n2008\nMAIN PAPER - CS",
+        "C": "1, WandIV only ="
+      },
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 7
+    },
+    {
+      "id": "2008_CS_CS_Q36",
+      "question_number": 36,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Which of the following are NOT true in a pipelined processor?\nI. Bypassing can handle all RAW hazards.\nIl. Register renaming can eliminate all register carried WAR hazards.\nIll. Control hazard penalties can be eliminated by dynamic branch prediction.",
+      "options": {
+        "A": "Land II only",
+        "B": "I and III only",
+        "C": "Iand II only",
+        "D": "1, and Il"
+      },
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 7
+    },
+    {
+      "id": "2008_CS_CS_Q37",
+      "question_number": 37,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "The use of multiple register windows with overlap causes a reduction in the number of memory",
+      "options": null,
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 7
+    },
+    {
+      "id": "2008_CS_CS_Q43",
+      "question_number": 43,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "accesses for\nI. function locals and parameters\nIl. register saves and restores\nIII. instruction fetches",
+      "options": {
+        "A": "T(n) $ 2T(n/5)+n",
+        "B": "T(n) S$ T(n/5)+T(4n/5)+n",
+        "C": "T(n) $ 2T(4n/5)+n",
+        "D": "T(n)< 2T(n/2)+n\ncs\n7724"
+      },
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 7
+    },
+    {
+      "id": "2008_CS_CS_Q48",
+      "question_number": 48,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "MAIN PAPER ~ CS\nThe subset-sum problem is defined as follows: Given a set S of n positive integers and a positive\ninteger W, determine whether there is a subset of S whose elements sum to W.\nAn algorithm Q solves this problem in O(n W) time. Which of the following statements is false?",
+      "options": {
+        "A": "Every NFA can be converted to an equivalent DFA",
+        "B": "Every non-deterministic Turing machine can be converted to an equivalent deterministic Turing\nmachine",
+        "C": "Every regular language is also a context-free language",
+        "D": "Every subset of a recursively enumerable set is recursive\n\n2008\nMAIN PAPER - CS"
+      },
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 9
+    },
+    {
+      "id": "2008_CS_CS_Q49",
+      "question_number": 49,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Given below are two finite state automata (—+ indicates the start state and F indicates a final state)",
+      "options": null,
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 9
+    },
+    {
+      "id": "2008_CS_CS_Q50",
+      "question_number": 50,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Which of the following statements are true?\nI. Every left-recursive grammar can be converted to a right-recursive grammar and vice-versa\nIl. All e-productions can be removed from any context-free grammar by suitable transformations\nIll. The language generated by a context-free grammar all of whose productions are of the form\nX—w or X¥ wy (where, w is a string of terminals and Y is a non-terminal), is always\nregular\nIV. The derivation trees of strings\nForm are always binary trees",
+      "options": {
+        "A": "I, I, Tl and IV",
+        "C": "I, Il and IV only\ngenerated by a context-free grammar in Chomsky Normal",
+        "B": "I, I and IV only",
+        "D": "I, Hand IV only"
+      },
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 9
+    },
+    {
+      "id": "2008_CS_CS_Q51",
+      "question_number": 51,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Match the following:\n(E) Checking that identifiers are declared before their | (P) L= {a°b\"c\"d™ |n>1,m> 1}\nuse\n(F) Number of formal parameters in the declaration of a (Q X> XbX|XcX | dxf lg\nfunction agrees with the number of actual\n__parameters in a use of that function\n(G) Arithmetic expressions with matched pairs of\n(R) L= { wew| w € (a|b)*}\nparentheses\n‘H) Palindromes Ss X>bXb|cXcele",
+      "options": {
+        "A": "E~P, F-R,G-Q,H- S$",
+        "B": "E-R,F-P,G-S,H-~Q",
+        "C": "E-R,F-P,G-Q,H-S",
+        "D": "E-P,F-R,G-S,H-Q\ncs\n9724\n2008 MAIN PAPER ~ CS."
+      },
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 10
+    },
+    {
+      "id": "2008_CS_CS_Q52",
+      "question_number": 52,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Match the following NFAs with the regular expressions they correspond to.\n1. © +0(01*1+00)*01*\n2. @+0(10*1+00)*0\n3. |+0(10*1+10)*1\n4. © +0(10*1+10)*10*",
+      "options": {
+        "A": "P-—2, Q-1,R-3,S-4 (@) P-1,Q-3, R-2,S-4",
+        "C": "P-1,Q-2,R-3,S-4 (@) P-3,Q-2,R-1,S-4"
+      },
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 10
+    },
+    {
+      "id": "2008_CS_CS_Q53",
+      "question_number": 53,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Which of the following are regular sets?\n1. {a\"b’™|n>0,m2>0}\nI. {a\"b™| n= 2m}\nI. {a\"b™|n#m}\nIV. {xcy | x,y € {a,b} *}",
+      "options": {
+        "A": "Land IV only",
+        "B": "Land III only",
+        "C": "Lonly",
+        "D": "IV only\ncs 10/24\n2008 MAIN PAPER ~ CS"
+      },
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 11
+    },
+    {
+      "id": "2008_CS_CS_Q54",
+      "question_number": 54,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Which of the following are true?\n1. A programming language which does not permit global variables of any kind and has no\nnesting of procedures/functions, but permits recursion can be implemented with static storage\nallocation\nIl. Multi-level access link (or display) arrangement is needed to arrange activation records only\nif the programming language being implemented has nesting of procedures/functions\nIll. Recursion in programming languages cannot be implemented with dynamic storage\nallocation\nIV. Nesting of procedures/functions and recursion require a dynamic heap allocation scheme and\ncannot be implemented with a stack-based allocation scheme for activation records\nV. Programming languages which permit a function to return a function as its result cannot be\nimplemented with a stack-based storage allocation scheme for activation records",
+      "options": {
+        "A": "I and V only",
+        "B": "1, Wand IV only",
+        "C": "I,landVonly —(D) I, Il and V only"
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 11
+    },
+    {
+      "id": "2008_CS_CS_Q55",
+      "question_number": 55,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "An LALR(1) parser for a grammar G can have shift-reduce (S-R) conflicts if and only if",
+      "options": {
+        "A": "the SLR(1) parser for G has S-R conflicts",
+        "B": "the LR(1) parser for G has S-R conflicts",
+        "C": "the LR(0) parser for G has S-R conflicts",
+        "D": "the LALR(1) parser for G has reduce-reduce conflicts"
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 11
+    },
+    {
+      "id": "2008_CS_CS_Q56",
+      "question_number": 56,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "In the slow start phase of the TCP congestion control algorithm, the size of the congestion window",
+      "options": {
+        "A": "1022",
+        "B": "1023",
+        "C": "2046",
+        "D": "2047"
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 11
+    },
+    {
+      "id": "2008_CS_CS_Q58",
+      "question_number": 58,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "A computer on a 10Mbps network is regulated by a token bucket. The token bucket is filled at a\nrate of 2Mbps. It is initially filled to capacity with 16 Megabits. What is the maximum duration for\nwhich the computer can transmit at the full 1OMbps?",
+      "options": {
+        "A": "1.6 seconds",
+        "B": "2 seconds",
+        "C": "5 seconds",
+        "D": "8 seconds"
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 11
+    },
+    {
+      "id": "2008_CS_CS_Q59",
+      "question_number": 59,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Acclient process P needs to make a TCP connection to a server process S. Consider the following\nsituation: the server process S executesa socket (), a bind() andalisten() system call\nin that order, following which it is preempted. Subsequently, the client process P executes a\nsocket () system call followed by connect () system call to connect to the server process Ss.\nThe server process has not executed any accept () system call. Which one of the following\nevents could take place?",
+      "options": {
+        "A": "connect () system call returns successfully",
+        "B": "connect () system call blocks",
+        "C": "connect () system call returns an error",
+        "D": "connect () system call results in a core dump\n\n2008 MAIN PAPER - CS"
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 12
+    },
+    {
+      "id": "2008_CS_CS_Q60",
+      "question_number": 60,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "What is printed by the following C program?\nint f(int x, int *py, int **ppz) void main()\n{ {\nint ivezs Int. Gn *bn thas\n**ppz += 1; z = *ppz; c = 4; b = &c; a = &b;\n*py += 2; y = *py; print£ (\"%a\",f£(c,b,a));\nx += 3; }\nreturn x+y+z;\n}",
+      "options": {
+        "A": "18",
+        "B": "19",
+        "C": "21",
+        "D": "22"
+      },
+      "has_images": false,
+      "page_start": 12,
+      "page_end": 12
+    },
+    {
+      "id": "2008_CS_CS_Q61",
+      "question_number": 61,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Choose the correct option to fill 21 and ?2 so that the program below prints an input string in\nreverse order. Assume that the input string is terminated by a newline character.\nvoid reverse (void) {\nint c;\nif(?1) reverse();\n7m\n}\nmain() {\nprintf(\"Enter Text\"); printf£(\"\\n\");\nreverse(); printf(\"\\n\");\n}",
+      "options": {
+        "A": "?1 is (getchar() ≠ '\\n')\n?2 is getchar(c);",
+        "B": "?1 is (c = getchar()) ≠ ‘'\\n')\n?2 is getchar(c) ;\n(© ?1 is (ec ≠ '\\n')\n?2 is putchar(c);",
+        "D": "?1 is ((c = getchar()) ≠ '\\n')\n?2 is putchar(c);"
+      },
+      "has_images": false,
+      "page_start": 12,
+      "page_end": 12
+    },
+    {
+      "id": "2008_CS_CS_Q62",
+      "question_number": 62,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The following C function takes a singly-linked list of integers as a parameter and rearranges the\nelements of the list. The function is called with the list containing the integers 1,2,3,4,5,6,7 in the\ngiven order. What will be the contents of the list after the function completes execution?\nstruct node {\nint value;\nstruct node *next;\nyi\nvoid rearrange (struct node *list) {\nstruct node *p, *q;\nint temp;\nif (!list || !list -> next) return;\np = list; q = list -> next;\nwhile (q) {\ntemp = p -> value; p -> value = q -> value;\nq -> value = temp; p = q -> next;\nq@=p?p -> next : 0;\n}\n}",
+      "options": {
+        "A": "1,2,3,4,5,6,7",
+        "B": "2,1,4,3,6,5,7",
+        "C": "1,3,2,5,4,7,6",
+        "D": "2,3,4,5,6,7,1\ncs 12/24\n2008 MAIN PAPER ~ CS"
+      },
+      "has_images": false,
+      "page_start": 12,
+      "page_end": 13
+    },
+    {
+      "id": "2008_CS_CS_Q63",
+      "question_number": 63,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The P and V operations on counting semaphores, where s is a counting semaphore, are defined as\nfollows:\nP(s): s=s—1;\nifs <0 then wait;\nV(s): s=s+1;\nif s ≤ 0 then wakeup a process waiting on s;\nAssume that P,, and V;, the wait and signal operations on binary semaphores are provided. Two\nbinary semaphores >; and yy, are used to implement the semaphore operations P(s) and V(s) as\nfollows:\nP(s): Pp(xp);\n3 = sent;\nLEG S09 ML\nVb (Xp) 5\nPy (Yb) i\nelse V(x»);\nVis): Pp(xp) 7\ns = s/# 1;\nif (s ≤ 0) Vplyp);\nVp (Xp) 7\nThe initial values of x, and y, are respectively",
+      "options": {
+        "A": "0 and 0",
+        "B": "Oand 1",
+        "C": "land0",
+        "D": "land 1"
+      },
+      "has_images": false,
+      "page_start": 13,
+      "page_end": 13
+    },
+    {
+      "id": "2008_CS_CS_Q64",
+      "question_number": 64,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Which of the following statements about synchronous and asynchronous I/O is NOT true?",
+      "options": {
+        "A": "An ISR is invoked on completion of I/O in synchronous I/O but not in asynchronous I/O",
+        "B": "In both synchronous and asynchronous I/O, an ISR (Interrupt Service Routine) is invoked after\ncompletion of the /O.",
+        "C": "A process making a synchronous V/O call waits until I/O is complete, but a process making an\nasynchronous I/O call does not wait for completion of the /O",
+        "D": "In the case of synchronous I/O, the process waiting for the completion of I/O is woken up by\nthe ISR that is invoked after the completion of /O"
+      },
+      "has_images": false,
+      "page_start": 13,
+      "page_end": 13
+    },
+    {
+      "id": "2008_CS_CS_Q65",
+      "question_number": 65,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Which of the following is NOT true of deadlock prevention and deadlock avoidance schemes?",
+      "options": {
+        "A": "In deadlock prevention, the request for resources is always granted if the resulting state is safe",
+        "B": "In deadlock avoidance, the request for resources is always granted if the resulting state is safe",
+        "C": "Deadlock avoidance is less restrictive than deadlock prevention",
+        "D": "Deadlock avoidance requires knowledge of resource requirements a priori"
+      },
+      "has_images": false,
+      "page_start": 13,
+      "page_end": 13
+    },
+    {
+      "id": "2008_CS_CS_Q66",
+      "question_number": 66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "A process executes the following code\nfor(i=0; i<n; i++) fork();\nThe total number of child processes created is",
+      "options": {
+        "A": "n",
+        "B": "2\"-1",
+        "C": "2\"",
+        "D": "2\"*'-1\n\n2008\nMAIN PAPER - CS"
+      },
+      "has_images": false,
+      "page_start": 13,
+      "page_end": 14
+    },
+    {
+      "id": "2008_CS_CS_Q70",
+      "question_number": 70,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "A processor uses 36 bit physical addresses and 32 bit virtual addresses, with a page frame size of 4\nKbytes. Each page table entry is of size 4 bytes. A three level page table is used for virtual-to-\nphysical address translation, where the virtual address is used as follows\n© bits 30-31 are used to index into the first level page table,\n© bits 21-29 are used to index into the second level page table,\n© bits 12-20 are used to index into the third level page table, and\n© bits 0-11 are used as offset within the page.\nThe number of bits required for addressing the next level page table (or page frame) in the page\ntable entry of the first, second and third level page tables are respectively",
+      "options": {
+        "A": "8 and 0",
+        "B": "128 and 6",
+        "C": "256 and 4",
+        "D": "512 and 5\ncs\n1424\n2008 MAIN PAPER ~ CS\nCommon Data Questions\nCommon Data for Questions 71,72 and 73:\nConsider a machine with a 2-way set associative data cache of size 64 Kbytes and block size 16 bytes. The\ncache is managed using 32 bit virtual addresses and the Page size is 4 Kbytes. A Program to be run on this\nmachine begins as follows:\ndouble ARR [1024] [1024];\nint i, j.;\n/* Initialize array ARR to 0.0 */\nfor (i = 0; i < 1024; i++)\nfor (j = 0; j < 1024; j++)\nARR [i] [5] = 0.0\ni lory starting at the beginning of virtual page\nOxFF000 and stored in row major order. The cache is initially empty and no pre-fetching is done. The only\ndata memory references made by the program are those to array ARR."
+      },
+      "has_images": false,
+      "page_start": 14,
+      "page_end": 15
+    },
+    {
+      "id": "2008_CS_CS_Q71",
+      "question_number": 71,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The total size of the tags in the cache directory is",
+      "options": {
+        "A": "32 Kbits",
+        "B": "34 Kbits",
+        "C": "64 Kbits",
+        "D": "68 Kbits"
+      },
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15
+    },
+    {
+      "id": "2008_CS_CS_Q72",
+      "question_number": 72,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Which of the following array elements has the same cache ind.\nlex as ARR [0] [0]?",
+      "options": {
+        "A": "ARR [0] [4]",
+        "B": "ARR [4] [0]",
+        "C": "ARR [0] [5]",
+        "D": "ARR [5] [0]"
+      },
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15
+    },
+    {
+      "id": "2008_CS_CS_Q73",
+      "question_number": 73,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The cache hit ratio for this initialization loop is",
+      "options": {
+        "A": "0%",
+        "B": "25%",
+        "C": "50%",
+        "D": "75%\n\n2008 MAIN PAPER ~ CS\nCommon Data for Questions 74 and 75:\nConsider the following C functions:\nint f1 ( int n )\n{\nif (n == 0 || n == 1)\nreturn n;\nelse\nreturn (2*f1(n-1) + 3*f1(n-2));\n}\nint £2 ( int n )\n{\naxit 27\nint X(N], YIN], ZIN];\nX[0] = ¥[0] = Z[0] = 0;\nX({1) = 1; ¥[1] = 2; 2(1) = 3;\nfor (i = 2; i £= my eet\nX{i] = Yf{i-1] + Z[i-2];\nY{i] = 2 * xfil;\nZ{i] = 3 * xXlil;\n}\nreturn X[n];\n}"
+      },
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 16
+    },
+    {
+      "id": "2008_CS_CS_Q74",
+      "question_number": 74,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The running time of £1 (n) and £2 (n) are",
+      "options": {
+        "A": "O(n) and O(n)",
+        "B": "0(2\") and O(n)",
+        "C": "O(n) and O(2\")",
+        "D": "©(2\") and ©(2\")"
+      },
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 16
+    },
+    {
+      "id": "2008_CS_CS_Q75",
+      "question_number": 75,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "£1(8) and £2 (8) return the values",
+      "options": {
+        "A": "1661 and 1640",
+        "B": "59 and 59",
+        "C": "1640 and 1640",
+        "D": "1640 and 1661\nLinked Answer Questions: Q.76 to Q.85 carry two marks each.\nStatement for Linked Answer Questions 76 and 77:\nDelayed branching can help in the handling of control hazards."
+      },
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 16
+    },
+    {
+      "id": "2008_CS_CS_Q76",
+      "question_number": 76,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "For all delayed conditional branch instructions, irrespective of whether the condition evaluates to\ntrue or false,",
+      "options": {
+        "A": "the instruction following the conditional branch instruction in memory is executed",
+        "B": "the first instruction in the fall through path is executed",
+        "C": "the first instruction in the taken path is executed",
+        "D": "the branch takes longer to execute than any other instruction\ncs 16/24\n2008 MAIN PAPER ~ CS"
+      },
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 17
+    },
+    {
+      "id": "2008_CS_CS_Q77",
+      "question_number": 77,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The following code is to run ona pipelined processor with one branch delay slot:\nIl: ADD R2<—R7+R8\nI2: SUB R4< R5-—R6\n13: ADD RI <—R2+R3\n14: STORE Memory[R4] — R1\nBRANCH to Label if RI == 0\nWhich of the instructions I1, 12, 13 or 14 can legi\ntimately occupy the delay slot without any other\nprogram modification?",
+      "options": {
+        "A": "IL",
+        "B": "12",
+        "C": "3",
+        "D": "14\nStatement for Linked Answer Questions 78 and 79:\nLet x, denote the number of binary strings of length n that contain no consecutive Os,"
+      },
+      "has_images": false,
+      "page_start": 17,
+      "page_end": 17
+    },
+    {
+      "id": "2008_CS_CS_Q78",
+      "question_number": 78,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Which of the following recurrences does x, satisfy?",
+      "options": {
+        "A": "x, =2x,_,",
+        "B": "x,= Xiniaytl (©) X =X ygitn (@) x, =x,.+4%,"
+      },
+      "has_images": false,
+      "page_start": 17,
+      "page_end": 17
+    },
+    {
+      "id": "2008_CS_CS_Q79",
+      "question_number": 79,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The value of x, is",
+      "options": {
+        "A": "5",
+        "B": "7 () 8",
+        "D": "16\nStatement for Linked Answer Questions 80 and 81:\nThe subset-sum problem is defined as follows. Given a set of n positive integers, S = {a, 14, 14s,...44,} ;\nand a positive integer W, is there a subset of S whose elements sum to W? A dynamic program for solving\nthis problem uses a 2-dimensional Boolean array, X, with n rows and W+1 columns. X (i, vb l<i<n,\n0< j<W, is TRUE if and only if there is a subset of {a, 9a 300650; } whose elements sum to /."
+      },
+      "has_images": false,
+      "page_start": 17,
+      "page_end": 17
+    },
+    {
+      "id": "2008_CS_CS_Q80",
+      "question_number": 80,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Which of the following is valid for 2<i<n anda, <j <W?",
+      "options": {
+        "A": "X[i,j]=X[i-Li]v X[i,j-a,]\n®) X[i,JJ=X[i-Lj]v X[i-1,j-a]\n© X[i,j)=X[i-1 ja X[i,j-a,]\n©) X[i,j]=X[i-1, ja X[i-1,j-a)]"
+      },
+      "has_images": false,
+      "page_start": 17,
+      "page_end": 17
+    },
+    {
+      "id": "2008_CS_CS_Q81",
+      "question_number": 81,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Which entry of the array X, if TRUE, implies that there is a subset whose elements sum to W?",
+      "options": {
+        "A": "X[LW]",
+        "B": "X[n,0] (©) X[n,W]",
+        "D": "X[n-1n]\ncs\n17724\n2008 MAIN PAPER ~ CS\nStatement for Linked Answer Questions 82 and 83:\nConsider the following ER diagram"
+      },
+      "has_images": false,
+      "page_start": 17,
+      "page_end": 18
+    },
+    {
+      "id": "2008_CS_CS_Q82",
+      "question_number": 82,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The minimum number of tables needed to represent M,N,P,R1,R2 is",
+      "options": {
+        "A": "2",
+        "B": "3 (4",
+        "D": "5"
+      },
+      "has_images": false,
+      "page_start": 18,
+      "page_end": 18
+    },
+    {
+      "id": "2008_CS_CS_Q83",
+      "question_number": 83,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Which of the following is a correct attribute set for one of the tables for the correct answer to the\nabove question?",
+      "options": {
+        "A": "{M1, M2, M3, PI}",
+        "B": "{M1, Pl, NI, N2}",
+        "C": "{MI1, Pl, N1}",
+        "D": "{MI1, Pl}\nStatement for Linked Answer Questions 84 and 85:\nConsider the following C program that attempts to locate an element x in an array ¥[] using binary\nsearch. The program is erroneous.\nBy f(int ¥[10], int x){\n2s int, d, Jase\nKs i= 0; j = 9;\n4. do {\n5. k = (i+5)/2;3\n6. if (Y[k] < x) i = k; else j =k;\nTs } while ((¥[k] ≠ x) && (i < j));\n8. if (¥{k) == x) printf(\"x is in the array\");\na. else printf(\"x is not in the array\");\n10. }"
+      },
+      "has_images": false,
+      "page_start": 18,
+      "page_end": 18
+    },
+    {
+      "id": "2008_CS_CS_Q84",
+      "question_number": 84,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "On which of the following contents of Y and x does the program fail?",
+      "options": {
+        "A": "Yis [123456789 10] and x<10",
+        "B": "y is(135791113 151719] andx<1",
+        "C": "vis [222222222 2]andx>2",
+        "D": "¥Y is [2 4.68 10 12 14 16 18 20] and 2 < x < 20 and x is even"
+      },
+      "has_images": false,
+      "page_start": 18,
+      "page_end": 18
+    },
+    {
+      "id": "2008_CS_CS_Q85",
+      "question_number": 85,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The correction needed in the program to make it work properly is",
+      "options": {
+        "A": "change line 6to: if (Y[k] < x) i = k+1; else j = k-1;",
+        "B": "change line 6 to: if (Y({k] < x) i = k-1; else j k+i;",
+        "C": "change line 6 to: if (¥{k] ≤ x) i = k; else j = k;",
+        "D": "change line 7 to: } while ((¥{k] == x) && (i < j));\n\ncs 18/24"
+      },
+      "has_images": false,
+      "page_start": 18,
+      "page_end": 18
+    }
+  ]
+}

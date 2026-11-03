@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gate-pyq-db"
+version = "1.0.0"
+description = "Curated JSON database and PDF extraction pipeline for GATE Computer Science Previous Year Questions (2007-2026)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "CC-BY-4.0" }
+authors = [
+    { name = "Rupam Ghosh" }
+]
+keywords = [
+    "gate",
+    "gate-cs",
+    "pyq",
+    "question-bank",
+    "exam-dataset",
+    "computer-science",
+    "dataset"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: Free For Educational Use",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering :: Information Analysis"
+]
+dependencies = [
+    "pydantic>=2.0.0",
+    "pymupdf>=1.24.0",
+    "pdfplumber>=0.11.0",
+    "pytesseract>=0.3.10",
+    "pillow>=10.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/hul0/gate-pyq-db"
+Repository = "https://github.com/hul0/gate-pyq-db"
+"Issue Tracker" = "https://github.com/hul0/gate-pyq-db/issues"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

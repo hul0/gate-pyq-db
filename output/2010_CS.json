@@ -1,0 +1,712 @@
+{
+  "paper_id": "2010_CS",
+  "year": 2010,
+  "subject": "Computer Science and Information Technology",
+  "subject_code": "CS",
+  "session": "CS",
+  "total_questions_in_paper": 65,
+  "extracted_questions_count": 41,
+  "omitted_questions_count": 24,
+  "questions": [
+    {
+      "id": "2010_CS_CS_Q01",
+      "question_number": 1,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "LetG=(V, £) bea graph. Define (G) = Dar xd where i, is the number of vertices of degree d\nin G. lf S and T are two different trees with aS) = (7), then",
+      "options": {
+        "A": "| S]= 2/7] (By S| =|Th-1 (Cy | S[=|7|",
+        "D": "{S|=|7|+1"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2
+    },
+    {
+      "id": "2010_CS_CS_Q02",
+      "question_number": 2,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Newton-Raphson method is used to compute a root of the equation a?-13=0 with 3.5 as the\ninitial value. The approximation after one iteration is",
+      "options": {
+        "A": "3.575 {B) 3.677",
+        "C": "3.607",
+        "D": "3.607"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2
+    },
+    {
+      "id": "2010_CS_CS_Q03",
+      "question_number": 3,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "What is the possible number of reflexive relations on a set of 5 clements?\n(Ay 2° (B) 2° (c) 2” @) 27",
+      "options": null,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2
+    },
+    {
+      "id": "2010_CS_CS_Q04",
+      "question_number": 4,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider the set S = (1, @, a}, where @ and a\" are cube roots of unity. If * denotes the\nmultiplication operation, the structure {S, *} forms",
+      "options": {
+        "A": "a group",
+        "B": "a ring",
+        "C": "an integral domain",
+        "D": "a field"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2
+    },
+    {
+      "id": "2010_CS_CS_Q05",
+      "question_number": 5,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "What is the value of im -+) ?\naoe fl\n(Ayo (B) e~* (Cc) &? (D) 1",
+      "options": null,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2
+    },
+    {
+      "id": "2010_CS_CS_Q06",
+      "question_number": 6,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "The minterm expansion of f(P,Q.R)= PQ + QR +PR is",
+      "options": {
+        "A": "m,+m,+m,+m,",
+        "B": "2, +2, +27, + ri,",
+        "C": "mi, +m, +m, +m,",
+        "D": "mn, +9, + ri, ty"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2
+    },
+    {
+      "id": "2010_CS_CS_Q07",
+      "question_number": 7,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "A main memory unit with a capacity of 4 megabytes is built using 1M x 1-bi DRAM chips. Each\nDRAM chip has 1K rows of cells with [K cells in each row. The time taken for a single refresh\noperation is 100 nanoseconds. The Lime required to perform one refresh operation on all the cells in\nthe memory unit is",
+      "options": {
+        "A": "100 nanoseconds",
+        "B": "100*2\" nanoseconds",
+        "C": "100*2” nanoseconds",
+        "D": "3200*2” nanoseconds"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2
+    },
+    {
+      "id": "2010_CS_CS_Q08",
+      "question_number": 8,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "P is a 16-bit signed integer. The 2's complement representation of P is (F87B)\\5. The 2’s\ncomplement representation of 8¥P is",
+      "options": {
+        "A": "(C3D8)is",
+        "B": "(87B)ia (CY (F878)",
+        "D": "(987B)is\nts ° 24\n210 cs"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 3
+    },
+    {
+      "id": "2010_CS_CS_Q10",
+      "question_number": 10,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Ina binary wee with n nodes, every node has an odd number of descendants. Every node is\nconsidered to be its own descendant. What is the number of nodes in the tree that have exactly one\nchild?\n(Ayo (B} 1 (C) (Lf (D} n-1\nQ.IL What does the following program print?\n#include <stdio.h>\nvoid ffint *p, int *q}t\nP=a\ntp = 2;\n}\nant i-0, j=l;\nint main.) {\nEt&i, &);\nprint£(\"d din\", i, jh:\nreturn 0;\n}",
+      "options": {
+        "A": "22",
+        "B": "21 © ol",
+        "D": "02"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2010_CS_CS_Q12",
+      "question_number": 12,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Two altemative packages A and B ure available for processing a database having 10\" records.\nPackage A requires 0.0001 7 time units and package B requires 10 nlog,, 7 time units to process\nnrecords. What is the smallest value of k for which package B will be preferred over A?",
+      "options": {
+        "A": "12",
+        "B": "1G",
+        "C": "6",
+        "D": "5"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2010_CS_CS_Q13",
+      "question_number": 13,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which data structure in a compiler is used for managing information about variables and their\nattributes?",
+      "options": {
+        "A": "Abstract syntax tree",
+        "B": "Symbol! table",
+        "C": "Semantic stack (1) Parse table"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2010_CS_CS_Q14",
+      "question_number": 14,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which languages necessarily need heap allocation in the runtime environment?",
+      "options": {
+        "A": "Those thai support recursion,",
+        "B": "Those that use dynamic scoping.\n(C} Those that allow dynamic data structures,",
+        "D": "Those that use global variables.\nSs 324\nBie)\nCy\nQS"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 4
+    },
+    {
+      "id": "2010_CS_CS_Q16",
+      "question_number": 16,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Qt?\nQi8\nQo\nOne of the header fields in an iP datagram is the Time-to-Live (TTL) field. Which of the following\nSlalernents best explains the aced for this field?\n{A} It can be used to prioritize packets.\n(B) it can be used to reduce delays.\n(C)} It can be used to optimize throughput.\n(D) It can be used to prevent packet looping.\nWhich one of the follow ing is not a client-server application?",
+      "options": {
+        "A": "1 (By2 (Cc) 3",
+        "B": "Web browsing",
+        "C": "L2 f] L3 is recursively enumerable,",
+        "D": "4\nA relational schema for a train reservation database is given below.\nPassenger (pid, prame, age}\nReservation(pid, class, tid)\nTuble: Passenger ‘Table: Reservation\npid | pname age | pid | class\n0 65\n66\n‘Sourav’ [67 __ 8201\n2 2\n[3 ‘Ani’ [69 § [ac’ | 8203\n8204\n8202\nWhat pids are retumed by the following SQL query for the above instance of the tables?\nSELECT pid\nFROM Reservation\nWHERE class = ‘AC’ AND\nEXISTS *\nPassenger\nfF age > 65 AND\nanger.pid = Reservation-pid)\n{A) 1.0 (By i. 2 (C13 (BD) 1.5\nC8\naa\n2010\ncs"
+      },
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 5
+    },
+    {
+      "id": "2010_CS_CS_Q25",
+      "question_number": 25,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which of the following statements are true?\nJ, Shortest remaining time first scheduling may cause starvation\nIL Preemptive scheduling may cause starvation\nTIL Round robin is beter than FCFS in terms of respoase time",
+      "options": {
+        "A": "Lonly",
+        "B": "[and I! only (C} Wand IL only",
+        "D": "1. Mand O"
+      },
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 6
+    },
+    {
+      "id": "2010_CS_CS_Q26",
+      "question_number": 26,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider a company that assembles computers. The probability of a faulty assembly of any\ncomputer is p. The company therefore subjects each computer to a testing process. This tesling\nProcess gives the correct result for any computer with a probability of g. What is the probability of\na computer being declared faulty’?",
+      "options": {
+        "A": "pq+U-py-g)—",
+        "B": "(L-@)p",
+        "C": "(-py {D) pq"
+      },
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 6
+    },
+    {
+      "id": "2010_CS_CS_Q27",
+      "question_number": 27,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "What is the probability that a divisor of 10” is a multiple of 10% 7\n{A) 1/625 (B) 4/625 (C) 12/625 (D) 16/625",
+      "options": null,
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 6
+    },
+    {
+      "id": "2010_CS_CS_Q28",
+      "question_number": 28,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The degree sequence of a simple graph is the sequence of the degrees of the nodes in the graph in\ndecreasing order. Which of the following sequences can not be the degree sequence of any graph?\nLL 7.6,5,4,.4,3,21\nEE 6,6.6.6.3.3,2,2\nWI. 7,6,6,4.4.3,2.2\nW. 8.7,7.6.4,2.b1",
+      "options": {
+        "A": "land TL {B) Ul and 1V",
+        "C": "IV only",
+        "D": "Mand Iv"
+      },
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 6
+    },
+    {
+      "id": "2010_CS_CS_Q29",
+      "question_number": 29,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following matrix\nA=\nx y\nIf the eigenvalues of A are 4 and 8, then",
+      "options": {
+        "A": "x=4,y= 10",
+        "B": "x=S.yx8",
+        "C": "x23, y=9 @) +=-4, y= 10"
+      },
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 6
+    },
+    {
+      "id": "2010_CS_CS_Q30",
+      "question_number": 30,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Suppose the predicate F(x,y,1) is used lo represent (he statement that person x can fool person y at\nlime 4. Which one of the statements below expresses best the meaning of the formula\nVx3 yd AF (x, yt)?\n{A) Everyone can fool some person al some time.\n(B) No one can fool everyone all the time.\n(C) Everyone cannot fool some person all the time.\n(D) No one can fool some persan al some time.\n2010 cs\nQ.3i What is the boolean expression for the output f of the combinational logic circuit of NOR gates\ngiven below?",
+      "options": {
+        "A": "O+R {B) P+O",
+        "C": "PR",
+        "D": "P+Q+R"
+      },
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 7
+    },
+    {
+      "id": "2010_CS_CS_Q33",
+      "question_number": 33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "A S-slage pipelined processor has Instruction Fetch (IF), Instruction Decode (ID). Operand Fetch\n(OF), Perform Operation (PO) and Write Operand (WO) stages. The IE 1D. OF and WO stages\ntake | clock cycle each for any instruction, The PO stage takes 1 clock cycle for ADD and SGB\ninstructions. 3 clock cycles for MUL instruction, and 6 clock cycles for DIV instruction\nrespectively. Operand for ing is used in the pipeline. What is the number of clock cycles\nneeded to execute the following sequence of instructions?\nInstruction Meaning of instruction\nfs MUL Rz. Ro. Rr Ri Ro\"Ri\n4: DIV: Rs, Rs Ra Rs+ RYRa\nft: ADDR: Rs, Re R; =~ Rs+Rz\nfy, SUB Ry. Ra. Ry Rs — R:-R,\n{A) 13 (B) LS (C) 17 (D) 19",
+      "options": null,
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 8
+    },
+    {
+      "id": "2010_CS_CS_Q34",
+      "question_number": 34,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The weight of a sequence @,,4,,...,@,., of real numbers is defined as a, + @,/2+...+@,.) ir,\nA subsequence of a sequence is oblained by deleling some clements from the sequence. keeping the\norder of the remaining clements the same. Let X denote the maximum possible weight of a\nsubsequence af dy.d,....4,, and ¥ the maximum possible weight of a subsequence of\naa @,.,. Then X is equat to",
+      "options": {
+        "A": "max(¥, a, + ¥)",
+        "B": "max(¥, dy + ¥/2} {C) max(¥ia, +27)",
+        "D": "ay + ¥/2"
+      },
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 8
+    },
+    {
+      "id": "2010_CS_CS_Q45",
+      "question_number": 45,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "What is the value printed by the following © program?\n#include <stdio.h>\nint €{int ta. int n}\n{\nif (nm ≤ 0} return 0;\nelse if (*a % 2 == 0) return *a + f£(a+1,n-1);\nelse return ta - f{atl,n-1);\n}\nint main( }\n{\nine af) = (12, 7, 13, 4, 11, 6);\nprintfivsd\", ffa,6));\nreturn 0;\n}",
+      "options": {
+        "A": "-9",
+        "B": "S",
+        "C": "15 (Lb) 19\n= oT\nzo10 cs"
+      },
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 9
+    },
+    {
+      "id": "2010_CS_CS_Q30_v2",
+      "question_number": 30,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The following C function takes a singly-linked list as input argument. It modifies the list by moving\nthe last clement to the front of the list and returns the modified list. Some part ef the cade is left\nblank.\ntypedef struct node {\nint value;\nstruct node *next;\n} Node;\nNode *move_to_front(Node *head) {\nNode *p, *q;\nif (thead = = NULL) || (head->next = = NULL)) return head;\ng = NULL; p = head;\nwhile (p->next ≠ NULL} {\nqep:\np = p->next;\nreturn head;\n}\nChoose the correct alternative to replace the blank line.",
+      "options": {
+        "A": "q = NULL; p->next = head; head = p;",
+        "B": "q->next = NULL; head = p; p->next = head;",
+        "C": "head = p; p->next = q: q->next = NULL:\n(D}q->next = NULL; p->next = head; head = p;:"
+      },
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 9
+    },
+    {
+      "id": "2010_CS_CS_Q37",
+      "question_number": 37,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "The program below uses six temporary variables a, b, c. d, e@, £-\naezil\nb= 10\nc = 20\ndz=a+hb\nezcrd\nf=c+e\nbecte\nezbrteft\nd=S5+e\nreturn d + f£\nAssuming that all operations take their operands from registers, what is the minimum number of\nregisters nceded to exccute this pragram without spilling?\n(Ay2 (B)3 «4 (D) 6",
+      "options": null,
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 9
+    },
+    {
+      "id": "2010_CS_CS_Q38",
+      "question_number": 38,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The grammar § ~+ aSa | bS |< is",
+      "options": {
+        "A": "LL(i) but not LR(1)",
+        "B": "LR(1) but not LL(1)",
+        "C": "Both LL(1) and LRU} (D} Neither LL(1) nor ERC)\nQ39) Let L= {ow © (0+ 1)*{ > bas even number of [5], ie. £ is the set of all bit strings with even\ntumber of 1s. Which one of the regular expressions below represents L7\nCA) (OF LO*1)* (BY UF 1O* 10%)\" (C} O*CLO\" 140\"",
+        "D": "O*1C10*1)#10*\nws U4\nAHO\nCh"
+      },
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 10
+    },
+    {
+      "id": "2010_CS_CS_Q43",
+      "question_number": 43,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Cs\nConsider the languages LJ = {0'l) | i# jf}, L2=401' | i= jf}, £7=40' | t= 2h 41).\n14 = (OV | §#2; }. Which one of the following statements is true?",
+      "options": {
+        "A": "TL. T2, T3",
+        "B": "T2. T4",
+        "C": "T3, T4",
+        "D": "T1.T2, T4"
+      },
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 11
+    },
+    {
+      "id": "2010_CS_CS_Q45_v2",
+      "question_number": 45,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The following program consists of 3 concurrent processes and 3 binary sémaphores. The\nsemaphores are initialized as S0=i, Sl=(), $2=0.\nProcess PO\nwhile (true) {\nwait (SO);\nprint ‘0’;\nrelease ($1);\nrelease (S2);\nProcess PJ Process P2\nwait (Sl); wait (S2)\nreiease (SO); release (50);\nHow many times will process PO print ‘0°?",
+      "options": {
+        "A": "At least twice (B} Exactly twice",
+        "C": "Exactly thrice",
+        "D": "Exactly once"
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 11
+    },
+    {
+      "id": "2010_CS_CS_Q46",
+      "question_number": 46,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "A system has n resources Ru. &,.;. and & processes Py,..P,.,. The implementation of the resource\nTequest logic of each process P;, is as follows:\nif (i%2==0; {\nif (i<n) request Rj ;\nif (i+2 <n) request RBj.2:\n}\nelse (\nif (isn) request Ri:\nif (i+2<n} request K,.. ¢:\n}\nIn which one of the following situations is a deadlock possible?",
+      "options": {
+        "A": "n =40,k = 26 (B}n=2).k= 12 {C) a = 20,4 = 10 (Djn=41,k=19"
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 11
+    },
+    {
+      "id": "2010_CS_CS_Q48",
+      "question_number": 48,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "When there is a miss in L] cache and a hit in L2 cache, a block is transferred from L2 cache to\nLI cache. What is the time taken for this transfer?",
+      "options": {
+        "A": "2 nanoseconds",
+        "B": "20 nanoseconds",
+        "C": "22 nanoseconds",
+        "D": "88 nanoseconds"
+      },
+      "has_images": false,
+      "page_start": 12,
+      "page_end": 12
+    },
+    {
+      "id": "2010_CS_CS_Q49",
+      "question_number": 49,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "9 When there is a miss in both LI cache and L2 cache, first a block is transferred from main memory\nto L2 cache, and then a block is transferred from L2 cache to L] cache. What is the tots) time taken\nfor these transfers?",
+      "options": {
+        "A": "222 nanoseconds",
+        "B": "888 nanoseconds",
+        "C": "902 nanoseconds (1) 968 nanoseconds\nCommon Data for Questions 50 and 51:\nConsider a complete undirected graph with vertex set {0.1.2.3,4]. Entry W; in the matrix W below is the\nweight of the edge {ij}.\nOo 1 8s 1 4)\n[0 124 9\nW=|8 12 0 7 3\n14 7 0 2\n49 3 20"
+      },
+      "has_images": false,
+      "page_start": 12,
+      "page_end": 12
+    },
+    {
+      "id": "2010_CS_CS_Q52",
+      "question_number": 52,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Which one of the following choices gives a possible order in which the key values could have been\ninserted in the table?\n(A} 46, 42, 34, 52, 23, 33\n(B) 34, 42, 23, 52, 33.46\n(C) 46, 34, 42, 23. 52, 33\n(D) 42, 46, 33, 23. 34, 52",
+      "options": null,
+      "has_images": false,
+      "page_start": 13,
+      "page_end": 13
+    },
+    {
+      "id": "2010_CS_CS_Q53",
+      "question_number": 53,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "How many different insertion sequences of the key values using the same hash function and linear\nprobing will result in the hash table shown above?\n{A} 10 : (B) 20 (C) 30 (D) 40\ncs 1W24\n2010 cs\nStatement for Linked Answer Questions 54 and 55:\nConsider a network with 6 routers RL to R6 connected with links having weights as shown in the\nfollowing diagram.",
+      "options": null,
+      "has_images": false,
+      "page_start": 13,
+      "page_end": 14
+    },
+    {
+      "id": "2010_CS_CS_Q54",
+      "question_number": 54,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "All the routers use the distance vector based routing algorithm to update their routing tables. Each\nTouter starts with ils routing table initialized to contain an entry for each neighbour with the weight\nof the respective connecting link. After all the rouling tables stabilize, how many links in the\nnetwork will never be used for carrying any data?\n{A} 4 (B)3 (C)2 (D) 1",
+      "options": null,
+      "has_images": false,
+      "page_start": 14,
+      "page_end": 14
+    },
+    {
+      "id": "2010_CS_CS_Q55",
+      "question_number": 55,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Suppose the weights of all unused links in the previous question are changed (o 2 and the distance\nvector algorithm is used again until all routing tables stabilize. How many links will now remain\nunused?\n{A)O {B) 1 {C)2 {D) 3\ncs 14/24\n2010 cs\nGeneral Aptitude (GA) Questions",
+      "options": null,
+      "has_images": false,
+      "page_start": 14,
+      "page_end": 15
+    },
+    {
+      "id": "2010_CS_CS_Q56",
+      "question_number": 56,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Choose the most appropriate word from the options given below to complete the following\nsentence:\nHis rather casual remarks on politics __ his lack of seriousness about the subject.",
+      "options": {
+        "A": "masked.",
+        "B": "belied",
+        "C": "betrayed\n{D) suppressed"
+      },
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15
+    },
+    {
+      "id": "2010_CS_CS_Q57",
+      "question_number": 57,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Which of the following options is the closest in meaning to the word below:\nCircuitous",
+      "options": {
+        "A": "cyclic",
+        "B": "indirect\n(€) confusing\n{D) crooked"
+      },
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15
+    },
+    {
+      "id": "2010_CS_CS_Q58",
+      "question_number": 58,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Choose the most appropriate word from the options given below to complete the following\nsentence:\nIf we manage to our natural resources, we would leave a better planet for\nour children.\n{A) uphold\n{B) restrain\n{€) cherish\n(D) conserve",
+      "options": null,
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15
+    },
+    {
+      "id": "2010_CS_CS_Q59",
+      "question_number": 59,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "25 persons are in a room. 15 af them play hockey, 17 of them play football and 10 of them play\nboth hockey and football. Then the number of persons playing neither hockey nor football is:",
+      "options": {
+        "A": "2",
+        "B": "17 «) 13",
+        "D": "3"
+      },
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15
+    },
+    {
+      "id": "2010_CS_CS_Q60",
+      "question_number": 60,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The question below consists of a pair af related words followed by four pairs of words. Select the\npair that best expresses the relation in the original pair.\nUnemployed ; Worker",
+      "options": {
+        "A": "fallow : land",
+        "B": "unaware ; sleeper",
+        "C": "wit : jester",
+        "D": "renovated : house"
+      },
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15
+    },
+    {
+      "id": "2010_CS_CS_Q61",
+      "question_number": 61,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "If 137 + 276 = 435 how much is 731 + 072?\n{A} 534 (B) 1403 (€) 1623 (D) 1513\ncs iit\n2010\ncs",
+      "options": null,
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 16
+    },
+    {
+      "id": "2010_CS_CS_Q65",
+      "question_number": 65,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Hari (FY), Gita (G). Irfan (1) and Saira (S) are siblings (i.e. brothers and sisters). AH were bom on\n1\" January. The age difference between any two successive siblings (that ts born one after unother)\nis than 3 years, Given the following facts:\ni. Hari’s age + Gita's age > Infan's age + Saira’s age\nii. The age difference between Gita and Saira is 1 year. However, Gita is not the\noldest and Saira is not the youngest.\niii, There are no twins.\nIn what order were they born (oldest first)?",
+      "options": {
+        "A": "50 (BYSL {C) 52",
+        "B": "SGHI",
+        "C": "} 16 days",
+        "D": "34\n\ncs\n24\n2010 cs\nSpace for Rough Work\ncs ~ 17724\n2010\nao\ncs\nSpace for Rough Work\nwa\n2o10 cs\nSpace for Rough Work\nts : Ga\n10\ncs\nSpace for Rough Work\ncs\nary\n2010 cs\nSpace for Rough Work\nry 212A\n2010\ncs\nSpace for Rough Work\nlt\n2010 cs\nSpace for Rough Work\ncs 224"
+      },
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 23
+    }
+  ]
+}

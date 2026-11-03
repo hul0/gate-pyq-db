@@ -1,0 +1,1397 @@
+{
+  "paper_id": "2007_CS",
+  "year": 2007,
+  "subject": "Computer Science and Information Technology",
+  "subject_code": "CS",
+  "session": "CS",
+  "total_questions_in_paper": 85,
+  "extracted_questions_count": 75,
+  "omitted_questions_count": 10,
+  "questions": [
+    {
+      "id": "2007_CS_CS_Q07",
+      "question_number": 7,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.25,
+      "question_text": "Which of the following is TRUE?",
+      "options": {
+        "A": "Every subset of a regular set is regular.",
+        "B": "Every finite subset of a non-regular set is regular.",
+        "C": "The union of two non-regular sets is not regular.",
+        "D": "Infinite union of finite sets is regular."
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2007_CS_CS_Q08",
+      "question_number": 8,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.25,
+      "question_text": "How many 3-to-8 line decoders with an enable input are needed to construct a 6-to-64\nline decoder without using any other logic gates?",
+      "options": {
+        "A": "7",
+        "B": "8 (© 9",
+        "D": "10"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2007_CS_CS_Q09",
+      "question_number": 9,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.25,
+      "question_text": "Consider the following Boolean function of four variables:\nF(X, ¥42) = ¥(1,3,4,6,9,11,12,14)\nThe function is",
+      "options": {
+        "A": "independent of one variable.",
+        "B": "independent of two variables.",
+        "C": "independent of three variables.",
+        "D": "dependent on all the variables."
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2007_CS_CS_Q10",
+      "question_number": 10,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.25,
+      "question_text": "Consider a 4-way set associative cache consisting of 128 lines with a line size of 64\nwords. The CPU generates a 20-bit address of a word in main memory. The number\nof bits in the TAG, LINE and WORD fields are respectively: .",
+      "options": {
+        "A": "9, 6, 5",
+        "B": "7, 7,6",
+        "C": "7,5,8",
+        "D": "9, 5,6"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2007_CS_CS_Q11",
+      "question_number": 11,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.25,
+      "question_text": "Consider a disk pack with 16 surfaces, 128 tracks per surface and 256 sectors per\ntrack. 512 bytes of data are stored in a bit serial manner in a sector. The capacity of\nthe disk pack and the number of bits required to specify a particular sector in the disk\nare respectively:",
+      "options": {
+        "A": "256 Mbyte, 19 bits",
+        "B": "256 Mbyte, 28 bits",
+        "C": "512 Mbyte, 20 bits",
+        "D": "64 Gbyte, 28 bits"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2007_CS_CS_Q12",
+      "question_number": 12,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "_ The height of a binary tree is the maximum number of edges in any root to leaf path.\nThe maximum number of nodes in a binary tree of height h is:\n(Aya7 Bye a1 (O24 (D) 2\"",
+      "options": null,
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2007_CS_CS_Q13",
+      "question_number": 13,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.25,
+      "question_text": "The maximum number of binary trees that can be formed with three unlabeled nodes\nis:",
+      "options": {
+        "A": "1",
+        "B": "5",
+        "C": "4",
+        "D": "3"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2007_CS_CS_Q14",
+      "question_number": 14,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.25,
+      "question_text": "Which of the following sorting algorithms has the lowest worst-case complexity?",
+      "options": {
+        "A": "Merge sort",
+        "B": "Bubble sort",
+        "C": "Quick sort",
+        "D": "Selection sort\nCS - 3/24"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2007_CS_CS_Q15",
+      "question_number": 15,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.25,
+      "question_text": "Consider the following segment of C-code:\nint j, nz\nj=l;\nwhile (j ≤ n)\nJoma g\nThe number of comparisons made in the execution of the loop for any n > 0 is:",
+      "options": {
+        "A": "flog, 7 |+1",
+        "B": "n",
+        "C": "flog, 7]",
+        "D": "[ log, 2 | +1"
+      },
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 4
+    },
+    {
+      "id": "2007_CS_CS_Q16",
+      "question_number": 16,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.25,
+      "question_text": "Group | contains some CPU scheduling algorithms and Group 2 contains some\napplications. Match entries in Group 1 to entries in Group 2.\nGroup 1 Group 2\nP. Gang Scheduling 1. Guaranteed Scheduling\nQ. Rate Monotonic Scheduling 2. Real-time Scheduling\nR. Fair Share Scheduling 3. Thread Scheduling",
+      "options": {
+        "A": "P-3; Q-2; R-1",
+        "B": "P-1; Q-2; R-3",
+        "C": "P-2; Q-3; R-I",
+        "D": "P-1; Q-3; R-2"
+      },
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 4
+    },
+    {
+      "id": "2007_CS_CS_Q17",
+      "question_number": 17,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.25,
+      "question_text": "Consider the following statements about user level threads and kernel level threads.\nWhich one of the following statements is FALSE? ‘",
+      "options": {
+        "A": "Context switch time is longer for kernel level threads than for user level threads.",
+        "B": "User level threads do not need any hardware support.",
+        "C": "Related kernel level threads can be scheduled on different processors in a multi-\nprocessor system.",
+        "D": "Blocking one kernel level thread blocks all related threads."
+      },
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 4
+    },
+    {
+      "id": "2007_CS_CS_Q18",
+      "question_number": 18,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.25,
+      "question_text": "Which one of the following is a top-down parser?",
+      "options": {
+        "A": "Recursive descent parser.",
+        "B": "Operator precedence parser.",
+        "C": "An LR(k) parser.",
+        "D": "An LALR(k) parser."
+      },
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 4
+    },
+    {
+      "id": "2007_CS_CS_Q19",
+      "question_number": 19,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.25,
+      "question_text": "In Ethernet when Manchester encoding is used, the bit rate is:",
+      "options": {
+        "A": "Half the baud rate.",
+        "B": "Twice the baud rate.",
+        "C": "Same as the baud rate.",
+        "D": "None of the above."
+      },
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 4
+    },
+    {
+      "id": "2007_CS_CS_Q20",
+      "question_number": 20,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.25,
+      "question_text": "Which one of the following uses UDP as the transport protocol?",
+      "options": {
+        "A": "HTTP",
+        "B": "Telnet",
+        "C": "DNS",
+        "D": "SMTP\nCS - 4/24\nQ. 21 to Q. 75 carry two marks each."
+      },
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 5
+    },
+    {
+      "id": "2007_CS_CS_Q21",
+      "question_number": 21,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "How many different non-isomorphic Abelian groups of order 4 are there?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "id": "2007_CS_CS_Q22",
+      "question_number": 22,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Let Graph(x) be a predicate which denotes that x is a graph. Let Connected(x) be a\npredicate which denotes that x is connected. Which of the following first order logic\nsentences DOES NOT represent the statement: “Not every graph is connected”?",
+      "options": {
+        "A": "=Vx (Graph(x) => Connected(x))",
+        "B": "Ax (Graph(x) A ~Connected(x))",
+        "C": "aVx (=Graph(x) v Connected(x))",
+        "D": "Vx (Graph(x) => ~Connected(x))"
+      },
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "id": "2007_CS_CS_Q24",
+      "question_number": 24,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Suppose we uniformly and randomly select a permutation from the 20! permutations\nof 1,2,3,...,20. What is the probability that 2 appears at an earlier position than any\nother even number in the selected permutation?\n1\n(at\n1\nOrn\n(ye\n20!\n(D) None of the above.",
+      "options": null,
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "id": "2007_CS_CS_Q25",
+      "question_number": 25,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Let Abea4dx4 matrix with eigenvalues —5,—2,1,4. Which of the following is an\nAl\neigenvalue of ; A where / is the 4x4 identity matrix?",
+      "options": {
+        "A": "-5",
+        "B": "-7",
+        "C": "2",
+        "D": "1\nCS - 5/24"
+      },
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "id": "2007_CS_CS_Q26",
+      "question_number": 26,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "+ Consider the set S = {a,b,c,d}. Consider the following 4 partitions 7,,7,,7;,7, on\nS: m= {abed} +7, = {ab,cd} 73 = {abe,a} +1, = {a,b,c,d} . Let < be the partial\norder on the set of partitions S'= {11,,7,7%,7%} defined as follows: 7, < 7, ifand\nonly if z, refines 7,. The poset digram for (S',<) is\nA B",
+      "options": {
+        "A": "(B) n,\na\n1\n2 , Tl 4\nLe)\nm§ Tt;\nCc D",
+        "C": "n, ()\nm Ue) me 3\nTy 73 y\na,\na,"
+      },
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 6
+    },
+    {
+      "id": "2007_CS_CS_Q27",
+      "question_number": 27,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Consider the set of (column) vectors defined by X = {x € R’ |x, +x, +x, =0, where\nx? =[,,%,,4,]\" }. Which of the following is TRUE?",
+      "options": {
+        "A": "1.5",
+        "B": "42",
+        "C": "1.6",
+        "D": "1.4"
+      },
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 6
+    },
+    {
+      "id": "2007_CS_CS_Q29",
+      "question_number": 29,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "A minimum state deterministic finite automaton accepting the language\nL= {ww € {0,1}\", number of Os and Is in w are divisible by 3 and 5, respectively} has",
+      "options": {
+        "A": "15 states",
+        "B": "11 states",
+        "C": "10 states",
+        "D": "9 states\nCS - 6/24"
+      },
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 6
+    },
+    {
+      "id": "2007_CS_CS_Q30",
+      "question_number": 30,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "The language L = { 021 | #20} over the alphabet {0, 1, 2} is",
+      "options": {
+        "A": "not recursive.",
+        "B": "is recursive and is a deterministic CFL.",
+        "C": "is a regular language.",
+        "D": "is not a deterministic CFL but a CFL."
+      },
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 7
+    },
+    {
+      "id": "2007_CS_CS_Q31",
+      "question_number": 31,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Which of the following languages is regular?",
+      "options": {
+        "A": "{ww\" we {0.1}\"}",
+        "B": "{ww\"s|s,we {0,1}\"}",
+        "C": "{ww jew € {0,1}\"}",
+        "D": "{xww\" jnwe {0,1}\"}"
+      },
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 7
+    },
+    {
+      "id": "2007_CS_CS_Q32",
+      "question_number": 32,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Let f(w,x,y,z) = > (0,4,5,7,8,9,13,15). Which of the following expressions are NOT\nequivalent to f ?\n(P) x'y'z'+w'xy'twy'z + xz\n(Q w'y'z'+wx' y'txz\n(R) w'y'z'+wx' y'txyz + xy'z\n(S) x'y'z'+wx' y'+w' y",
+      "options": {
+        "A": "P only",
+        "B": "QandS",
+        "C": "Rand S",
+        "D": "S only"
+      },
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 7
+    },
+    {
+      "id": "2007_CS_CS_Q33",
+      "question_number": 33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Define the connective * for the Boolean variables Y and Yas:X *Y =XY+XY'.\nLetZ = X *Y . Consider the following expressions P, Qand R.\nPwd Y *Z, QO: YuX*Z Ri X*Y%Z =]\nWhich of the following is TRUE?",
+      "options": {
+        "A": "Only P and Q are valid.",
+        "B": "Only Q and R are valid.\n(€) Only P and R are valid.",
+        "D": "All P, Q, R are valid."
+      },
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 7
+    },
+    {
+      "id": "2007_CS_CS_Q34",
+      "question_number": 34,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Suppose only one multiplexer and one inverter are allowed to be used to implement\nany Boolean function of n variables. What is the minimum size of the multiplexer\nneeded?",
+      "options": {
+        "A": "6,3",
+        "B": "10,4",
+        "C": "6.4",
+        "D": "10,5"
+      },
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 8
+    },
+    {
+      "id": "2007_CS_CS_Q36",
+      "question_number": 36,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "The control signal functions of a 4-bit binary counter are given below (where X is\n“don’t care”):\nClear | Clock | Load\nCount] Function |\n1 x x x Clear to 0\n0 Xx 0 0 No change\n0 t 1 xX Load input\n0 | t 0 1 Count next\nThe counter is connected as follows:\nAd AZ AQ AL\nCe oo oe\nAssume that the counter and gate delays are negligible. If the counter starts at 0, then\nit cycles through the following sequence:",
+      "options": {
+        "A": "0, 3, 4",
+        "B": "0, 3, 4,5",
+        "C": "0,1, 2, 3, 4",
+        "D": "0, 1, 2, 3, 4,5\nCS - 8/24"
+      },
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 8
+    },
+    {
+      "id": "2007_CS_CS_Q37",
+      "question_number": 37,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Consider a pipelined processor with the following four stages:\nIF: Instruction Fetch\nID: Instruction Decode and Operand Fetch\nEX: Execute\nWB: Write Back\nThe IF, ID and WB stages take one clock cycle each to complete the operation. The\nnumber of clock cycles for the EX stage depends on the instruction. The ADD and\nSUB instructions need 1 clock cycle and the MUL instruction needs 3 clock cycles in\nthe EX stage. Operand forwarding is used in the pipelined processor. What is the\nnumber of clock cycles taken to complete the following sequence of instructions?\nADD R2,R1, RO R2<—RI1+RO\nMUL R4, R3, R2 R4<— R3*R2\nSUB R6,R5, R4 R6<—RS5— R4",
+      "options": {
+        "A": "7",
+        "B": "8",
+        "C": "10",
+        "D": "14"
+      },
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 9
+    },
+    {
+      "id": "2007_CS_CS_Q38",
+      "question_number": 38,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "The following postfix expression with single digit operands is evaluated using a\nstack:\nS23 4/2345 25s —\nNote that * is the exponentiation operator. The top two elements of the stack after the\nfirst * is evaluated are:",
+      "options": {
+        "A": "6,1",
+        "B": "5,7 (©) 3,2",
+        "D": "1,5"
+      },
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 9
+    },
+    {
+      "id": "2007_CS_CS_Q39",
+      "question_number": 39,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "The inorder and preorder traversal of a binary tree are\ndbeafcgandabdecf g, respectively.\nThe postorder traversal of the binary tree is",
+      "options": {
+        "A": "debfgcea",
+        "B": "edbgfca\n(Chedbfgca",
+        "D": "defgbca"
+      },
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 9
+    },
+    {
+      "id": "2007_CS_CS_Q40",
+      "question_number": 40,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider a hash table of size seven, with starting index zero, and a hash function\n(3x+4)mod7. Assuming the hash table is initially empty, which of the foilowing is\nthe contents of the table when the sequence 1,3,8,10 is inserted into the table using\nclosed hashing? Note that — denotes an empty location in the table.\n(D) 1,10,8,-,-,-,3\n$/121 Food/06-CS-2 CS - 9/24",
+      "options": null,
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 9
+    },
+    {
+      "id": "2007_CS_CS_Q41",
+      "question_number": 41,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "In an unweighted, undirected connected graph, the shortest path from a node S to\nevery other node is computed most efficiently, in terms of time complexity, by",
+      "options": {
+        "A": "Dijkstra’s algorithm starting from S.",
+        "B": "Warshall’s algorithm.",
+        "C": "performing a DFS starting from S.",
+        "D": "performing a BFS starting from S."
+      },
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 10
+    },
+    {
+      "id": "2007_CS_CS_Q42",
+      "question_number": 42,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Consider the following C function:\nint f(int n)\n{static int r=0;\nif (n ≤ 0) return 1;\nif (n > 3)\n{f= 2\nreturn f(n-2)+2;\n}\nreturn f£(n-1)+r;\n}\nWhat is the value of £ (5) ?",
+      "options": {
+        "A": "5",
+        "B": "7 © 9",
+        "D": "18"
+      },
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 10
+    },
+    {
+      "id": "2007_CS_CS_Q43",
+      "question_number": 43,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "A complete n-ary tree is a tree in which each node has n children or no children. Let J\nbe the number of internal nodes and L be the number of leavés in a complete n-ary\ntree. If L = 41, and J=10, what is the value of n?",
+      "options": {
+        "A": "3",
+        "B": "4 (© 5",
+        "D": "6"
+      },
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 10
+    },
+    {
+      "id": "2007_CS_CS_Q44",
+      "question_number": 44,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Inthe following C function, let n 2m.\nint gcd(n,m)\n{\nif (ntm == 0) return m;\nn = nm;\nreturn gcd(m,n);\n}\nHow many recursive calls are made by this function?",
+      "options": {
+        "A": "O(log, »)",
+        "B": "Q(x) © O(log, log\")",
+        "D": "@(Vn)"
+      },
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 10
+    },
+    {
+      "id": "2007_CS_CS_Q45",
+      "question_number": 45,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "What is the time complexity of the following recursive function:\nint DoSomething (int n){\nif (n ≤ 2)\nreturn 1;\nelse\nreturn (DoSomething(floor(sqrt(n))) + n)#\n}",
+      "options": {
+        "A": "O(”*)",
+        "B": "O(nlog, n)",
+        "C": "O(log, n)",
+        "D": "O(log, log, )\nCS - 10/24"
+      },
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 10
+    },
+    {
+      "id": "2007_CS_CS_Q46",
+      "question_number": 46,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Consider the following C program segment where CellNode represents a node ina\nbinary tree:\nstruct CellNode {\nstruct CellNode *leftChild;\nint element;\nstruct CellNode *rightChild;\nMe\nint GetValue(struct CellNode *ptr) {\nint value = 0;\nif (ptr ≠ NULL) {\nif ((ptr->leftchild == NULL) &&\n(ptr->rightChild == NULL) )\nvalue = 1;\nelse\nvalue = value + GetValue (ptr->leftChild)\n+ GetValue (ptr->rightChild) ;\n}\nreturn (value) ;\n}\nThe value returned by GetValue when a pointer to the root of a binary tree is passed\nas its argument is:",
+      "options": {
+        "A": "the number of nodes in the tree.",
+        "B": "the number of internal nodes in the tree.",
+        "C": "the number of leaf nodes in the tree.",
+        "D": "the height of the tree."
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 11
+    },
+    {
+      "id": "2007_CS_CS_Q47",
+      "question_number": 47,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Consider the process of inserting an element into a Max Heap, where the Max Heap is\nrepresented by an array. Suppose we perform a binary search on the path from the\nnew leaf to the root to find the position for the newly inserted element, the number of\ncomparisons performed is:",
+      "options": {
+        "A": "O(log, n)",
+        "B": "O(log, log, n)",
+        "C": "O(n)",
+        "D": "@(nlog, n)"
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 11
+    },
+    {
+      "id": "2007_CS_CS_Q48",
+      "question_number": 48,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Which of the following is TRUE about formulae in Conjunctive Normal Form?",
+      "options": {
+        "A": "For any formula, there is a truth assignment for which at least half the clauses\nevaluate to true.",
+        "B": "For any formula, there is a truth assi\ntrue.",
+        "C": "There is a formula such that for each truth assignment, at most one-\nclauses evaluate to true.",
+        "D": "None of the above.\nignment for which all the clauses evaluate to\nfourth of the\nCS - 11/24"
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 11
+    },
+    {
+      "id": "2007_CS_CS_Q49",
+      "question_number": 49,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Let w be the minimum weight among all edge weights in an undirected connected\ngraph. Let e be a specific edge of weight w. Which of the following is FALSE?",
+      "options": {
+        "A": "There is a minimum spanning tree containing e.",
+        "B": "Ife is not in a minimum spanning tree T, then in the cycle formed by adding e\nto 7, all edges have the same weight.",
+        "C": "Every minimum spanning tree has an edge of weight w.",
+        "D": "¢ is present in every minimum spanning tree."
+      },
+      "has_images": false,
+      "page_start": 12,
+      "page_end": 12
+    },
+    {
+      "id": "2007_CS_CS_Q50",
+      "question_number": 50,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "An array of n numbers is given, where 7 is an even number. The maximum as well as\nthe minimum of these n numbers needs to be determined. Which of the following is\nTRUE about the number of comparisons needed?",
+      "options": {
+        "A": "At least 2n—c comparisons, for some constant c, are needed.",
+        "B": "At most 1.5m — 2 comparisons are needed.",
+        "C": "At least nlog, m comparisons are needed.",
+        "D": "None of the above."
+      },
+      "has_images": false,
+      "page_start": 12,
+      "page_end": 12
+    },
+    {
+      "id": "2007_CS_CS_Q51",
+      "question_number": 51,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Consider the following C code segment:\nint IsPrime(n)\n{\nint i,n;\nfor(i=2;i ≤ sqrt(n);i++)\nif(n%i == 0)\n{printf(“Not Prime\\n”); return 0;)}\nreturn 1;\n}\nLet 7(n) denote the number of times the for loop is executed by the program on\ninput n. Which of the following is TRUE?",
+      "options": {
+        "A": "Tin) = O( Vin) and Tin) = (Vn)",
+        "B": "Tin) = O(N) and T(x) = (1)",
+        "C": "Tn) = O(n) and T(n) = avn)",
+        "D": "None of the above."
+      },
+      "has_images": false,
+      "page_start": 12,
+      "page_end": 12
+    },
+    {
+      "id": "2007_CS_CS_Q52",
+      "question_number": 52,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Consider the grammar with non-terminals N = {S,C,S,} , terminals T= {a, 6, i, te},\nwith S as the start symbol, and the following set of rules:\nS + iCtSS,\\a\nS, > eS |e\nC>b\nThe grammar is NOT LL(1) because:",
+      "options": {
+        "A": "it is left recursive.",
+        "B": "it is right recursive.",
+        "C": "it is ambiguous.",
+        "D": "it is not context-free.\nCS - 12/24"
+      },
+      "has_images": false,
+      "page_start": 12,
+      "page_end": 12
+    },
+    {
+      "id": "2007_CS_CS_Q53",
+      "question_number": 53,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Consider the following two statements:\nP: Every regular grammar is LL(1)\nQ: Every regular set has a LR(1) grammar\nWhich of the following is TRUE?",
+      "options": {
+        "A": "Both P and Q are true.",
+        "B": "P is true and Q is false.",
+        "C": "P is false and Q is true.",
+        "D": "Both P and Q are false."
+      },
+      "has_images": false,
+      "page_start": 13,
+      "page_end": 13
+    },
+    {
+      "id": "2007_CS_CS_Q54",
+      "question_number": 54,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Ina simplified computer the instructions are:\nOP R;,R; - Performs Rj OP Rj and stores the result in register Rj.\nOP m,R; - Performs val OP R; and stores the result in R;. val denotes the\ncontent of memory location m.\nMOV m,Ri - Moves the content of memory location m to register Rj.\nMOV Ri,m - Moves the content of register Rj to memory location m.\nThe computer has only two registers, and OP is either ADD or SUB. Consider the\nfollowing basic block:\nth=atb\nb=ctd\nB=e-h\nGt -t\nAssume that all operands are initially in memory. The final value of the computation\nshould be in memory. What is the minimum number of MOV instructions in the code\ngenerated for this basic block?",
+      "options": {
+        "A": "2",
+        "B": "3\n(©)5",
+        "D": "6"
+      },
+      "has_images": false,
+      "page_start": 13,
+      "page_end": 13
+    },
+    {
+      "id": "2007_CS_CS_Q55",
+      "question_number": 55,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "An operating system uses Shortest Remaining Time first (SRT) process scheduling\nalgorithm. Consider the arrival times and execution times for the following processes:\nProcess Execution Arrival\ntime time\nPl 20 0\nP2 25 15\nP3 10 30\nP4 15 45\nWhat is the total waiting time for process P2?",
+      "options": {
+        "A": "5",
+        "B": "15",
+        "C": "40",
+        "D": "55\nCS - 13/24"
+      },
+      "has_images": false,
+      "page_start": 13,
+      "page_end": 13
+    },
+    {
+      "id": "2007_CS_CS_Q56",
+      "question_number": 56,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "A virtual memory system uses First In First Out (FIFO) page replacement policy and\nallocates a fixed number of frames to a process. Consider the following statements:\nP: Increasing the number of page frames allocated to a process sometimes increases\nthe page fault rate.\nQ: Some programs do not exhibit locality of reference.\nWhich one of the following is TRUE?",
+      "options": {
+        "A": "PO",
+        "B": "PI",
+        "C": "P2",
+        "D": "None of the above, since the system is in a deadlock."
+      },
+      "has_images": false,
+      "page_start": 14,
+      "page_end": 14
+    },
+    {
+      "id": "2007_CS_CS_Q58",
+      "question_number": 58,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Two processes, P1 and P2, need to access a critical section of code. Consider the\nfollowing synchronization construct used by the processes:\n7 °PL #7 PR\nwhile (true) { while (true) {\nwantsl = true; wants2 = true;\nwhile (wants2==true) ; while (wantsl==true);\n/* Critical /* Critical\nSection */ Section */\nwantsl=false; wants2=false;\n} }\n/* Remainder section */ /* Remainder section */\nHere, wants1 and wants2 are shared variables, which are initialized to false.\nWhich one of the following statements is TRUE about the above construct?",
+      "options": {
+        "A": "It does not ensure mutual exclusion.",
+        "B": "It does not ensure bounded waiting.",
+        "C": "It requires that processes enter the critical section in strict alternation.",
+        "D": "It does not prevent deadlocks, but ensures mutual exclusion.\nCS - 14/24"
+      },
+      "has_images": false,
+      "page_start": 14,
+      "page_end": 14
+    },
+    {
+      "id": "2007_CS_CS_Q59",
+      "question_number": 59,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Information about a collection of students is given by the relation studInfo(studId,\nname, sex). The relation enroll(studld, courseld) gives which student has enrolled for\n(or taken) what course(s). Assume that every course is taken by at least one male and\nat least one female student. What does the following relational algebra expression\nrepresent?\nTeoursetd ((studta(Osex =“femalen(StudInfo)) x Teourseta(enroll)) — enroll)",
+      "options": {
+        "A": "Courses in which all the female students are enrolled.",
+        "B": "Courses in which a proper subset of female students are enrolled.",
+        "C": "Courses in which only male students are enrolled.",
+        "D": "None of the above."
+      },
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15
+    },
+    {
+      "id": "2007_CS_CS_Q60",
+      "question_number": 60,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Consider the relation employee(name, sex, supervisorName) with name as the key.\nsupervisorName gives the name of the supervisor of the employee under\nconsideration. What does the following Tuple Relational Calculus query produce?\n{e.name | employee(e) A\n(vx)[ > employee(x) V x.supervisorName = e.name V x.sex = “male”] }",
+      "options": {
+        "A": "Names of employees with a male supervisor.",
+        "B": "Names of employees with no immediate male subordinates.",
+        "C": "Names of employees with no immediate female subordinates:",
+        "D": "Names of employees with a female supervisor."
+      },
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15
+    },
+    {
+      "id": "2007_CS_CS_Q61",
+      "question_number": 61,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the table employee(empld, name, department, salary) and the two queries\nQi, Q below. Assuming that department 5 has more than one employee, and we want\nto find the employees who get higher salary than anyone in the department 5, which\none of the statements is TRUE for any arbitrary employee table?",
+      "options": null,
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15
+    },
+    {
+      "id": "2007_CS_CS_Q01",
+      "question_number": 1,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.25,
+      "question_text": "Select e.empld\nFrom employee e\nWhere not exists\n(Select * From employee s Where s.department = “5” and s.salary ≥ e.salary)\nQ:: Select e.empld\nFrom employee e\nWhere e.salary > Any\n(Select distinct salary From employee s Where s.department = “5”)",
+      "options": {
+        "A": "Any relation with two attributes is in BCNF.",
+        "B": "A relation in which every key has only one attribute is in 2NF.",
+        "C": "A prime attribute can be transitively dependent on a key in a 3NF relation.",
+        "D": "A prime attribute can be transitively dependent on a key in a BCNF relation.\nCS - 15/24"
+      },
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15
+    },
+    {
+      "id": "2007_CS_CS_Q63",
+      "question_number": 63,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "The order of a leaf node in a B’-tree is the maximum number of (value, data record\npointer) pairs it can hold. Given that the block size is 1K bytes, data record pointer is\n7 bytes long, the value field is 9 bytes long and a block pointer is 6 bytes long, what\nis the order of the leaf node?",
+      "options": {
+        "A": "63",
+        "B": "64",
+        "C": "67",
+        "D": "68"
+      },
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 16
+    },
+    {
+      "id": "2007_CS_CS_Q64",
+      "question_number": 64,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Consider the following schedules involving two transactions. Which one of the\nfollowing statements is TRUE?\nSiz ri(X)s ri(Y)3 rxCX)s r2(Y); wa); wiCX)\nSz: ri(X)3 (CX); 2(Y); wal); CY); wiCX)",
+      "options": {
+        "A": "Both Sj and S; are conflict serializable.",
+        "B": "S; is conflict serializable and S2 is not conflict serializable.",
+        "C": "S; is not conflict serializable and S; is conflict serializable.",
+        "D": "Both S; and S) are not conflict serializable."
+      },
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 16
+    },
+    {
+      "id": "2007_CS_CS_Q65",
+      "question_number": 65,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "There are stations in a slotted LAN. Each station attempts to transmit with a\nprobability p in each time slot. What is the probability that ONLY one station\ntransmits in a given time slot?",
+      "options": {
+        "A": "np(l— p)”*",
+        "B": "(l= p)\"* (© pa-p)\"\",",
+        "D": "1-(-p)\"\""
+      },
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 16
+    },
+    {
+      "id": "2007_CS_CS_Q66",
+      "question_number": 66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Ina token ring network the transmission speed is 10’ bps and the propagation speed is\n200 metres/tts. The 1-bit delay in this network is equivalent to:",
+      "options": {
+        "A": "500 metres of cable.",
+        "B": "200 metres of cable.",
+        "C": "20 metres of cable.",
+        "D": "50 metres of cable."
+      },
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 16
+    },
+    {
+      "id": "2007_CS_CS_Q67",
+      "question_number": 67,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "The address of a class B host is to be split into subnets with a 6-bit subnet number.\nWhat is the maximum number of subnets and the maximum number of hosts in each\nsubnet?",
+      "options": {
+        "A": "62 subnets and 262142 hosts.",
+        "B": "64 subnets and 262142 hosts.",
+        "C": "62 subnets and 1022 hosts.",
+        "D": "64 subnets and 1024 hosts."
+      },
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 16
+    },
+    {
+      "id": "2007_CS_CS_Q68",
+      "question_number": 68,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "The message 11001001 is to be transmitted using the CRC polynomial x+1to\nprotect it from errors. The message that should be transmitted is:",
+      "options": {
+        "A": "11001001000",
+        "B": "11001001011 —",
+        "C": "11001010",
+        "D": "110010010011\nCS - 16/24"
+      },
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 16
+    },
+    {
+      "id": "2007_CS_CS_Q69",
+      "question_number": 69,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "The distance between two stations M and N is L kilometres. All frames are K bits\nlong. The propagation delay per kilometre is ¢ seconds. Let R bits/second be the\nchannel capacity. Assuming that processing delay is negligible, the minimum\nnumber of bits for the sequence number field in a frame for maximum utilization,\nwhen the sliding window protocol is used, is:\n(aoe, 2LtR+ 2k]\n) [ie, all\n2LtR + K\nC) | log, ————.\n(©) [ie, K |\n2LtR+K\nD) | log, ———\n¢ ) | oe, aK |",
+      "options": null,
+      "has_images": false,
+      "page_start": 17,
+      "page_end": 17
+    },
+    {
+      "id": "2007_CS_CS_Q70",
+      "question_number": 70,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Match the following:\nP. SMTP 1. Application layer\nQ. BGP 2. Transport layer\nR. TCP 3. Data link layer\nS. PPP 4. Network layer\n5. Physical layer",
+      "options": {
+        "A": "P-2, Q-1, R-3, S-5",
+        "B": "P-1, Q-4, R-2, S-3",
+        "C": "P-1, Q-4, R-2, S-5",
+        "D": "P-2, Q-4, R-1, S-3\nCS - 17/24\nCommon Data Questions\nCommon Data for Questions 71,72,73:\nConsider the following program segment. Here R1, R2 and R3 are the general purpose\nregisters.\nInstruction Operation Instruction size (no. of words)\nMOV RI, (3000) RI < M[3000] 2\nLOOP: MOV R2,(R3) R2<M[R3] 1\nADD R2,RI1 R2<RI+R2 1\nMOV (R3),R2 M[R3]<R2 1\nINC R3 R3<R3+1 1\nDEC RI RI€RI-1 1\nBNZ LOOP Branch on not zero 2\nHALT Stop 1\nAssume that the content of memory location 3000 is 10 and the content of the register R3 is\n2000. The content of each of the memory locations from 2000 to 2010 is 100. The program is\nloaded from the memory location 1000. All the numbers are in decimal."
+      },
+      "has_images": false,
+      "page_start": 17,
+      "page_end": 18
+    },
+    {
+      "id": "2007_CS_CS_Q71",
+      "question_number": 71,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Assume that the memory is word addressable. The number of memory references for\naccessing the data in executing the program completely is",
+      "options": {
+        "A": "10",
+        "B": "11",
+        "C": "20",
+        "D": "21"
+      },
+      "has_images": false,
+      "page_start": 18,
+      "page_end": 18
+    },
+    {
+      "id": "2007_CS_CS_Q72",
+      "question_number": 72,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Assume that the memory is word addressable. After the execution of this program, the\ncontent of memory location 2010 is",
+      "options": {
+        "A": "100",
+        "B": "101",
+        "C": "102",
+        "D": "110"
+      },
+      "has_images": false,
+      "page_start": 18,
+      "page_end": 18
+    },
+    {
+      "id": "2007_CS_CS_Q73",
+      "question_number": 73,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Assume that the memory is byte addressable and the word size is 32 bits. If an\ninterrupt occurs during the execution of the instruction “INC R3”, what return address\nwill be pushed on to the stack?",
+      "options": {
+        "A": "1005",
+        "B": "1020",
+        "C": "1024",
+        "D": "1040\nCS - 18/24\nCommon Data for Questions 74, 75:\nConsider the following Finite State Automaton:"
+      },
+      "has_images": false,
+      "page_start": 18,
+      "page_end": 19
+    },
+    {
+      "id": "2007_CS_CS_Q74",
+      "question_number": 74,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "The language accepted by this automaton is given by the regular expression",
+      "options": {
+        "A": "b’abab’ab®",
+        "B": "(a+ b)",
+        "C": "b'a(a+ b)",
+        "D": "b'ab’ab’"
+      },
+      "has_images": false,
+      "page_start": 19,
+      "page_end": 19
+    },
+    {
+      "id": "2007_CS_CS_Q75",
+      "question_number": 75,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "The minimum state automaton equivalent to the above FSA has the following number\nof states",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4\nLinked Answer Questions: Q.76 to Q.85 carry two marks each.\nStatement for Linked Answer Questions 76 & 77:\npeed EE ig 1 L +.\nSi the lett ,b,c,d,e, f har abilities —, —, -, —, —, —, tively.\njuppose the letters a,b,c,d,e, f have probabilities 5 a’ 8’ 16\" 30° 30 respectively."
+      },
+      "has_images": false,
+      "page_start": 19,
+      "page_end": 19
+    },
+    {
+      "id": "2007_CS_CS_Q76",
+      "question_number": 76,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "— Which of the following is the Huffman code for the letters a,b,c,d,e, f ?",
+      "options": {
+        "A": "0,10,110,1110,11110,11111",
+        "B": "11,10,011,010,001,000",
+        "C": "11,10,01,001,0001,0000",
+        "D": "110,100,010,000, 001,111"
+      },
+      "has_images": false,
+      "page_start": 19,
+      "page_end": 19
+    },
+    {
+      "id": "2007_CS_CS_Q77",
+      "question_number": 77,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "What is the average length of the correct answer to Q.76?",
+      "options": {
+        "A": "3",
+        "B": "2.1875 (©) 2.25",
+        "D": "1.9375\nCS - 19/24\nStatement for Linked Answer Questions 78 & 79:\nConsider the CFG with {S, A, B} as the non-terminal alphabet, {a,b} as the terminal alphabet,\nS as the start symbol and the following set of production rules:\nS—aB S—bA\nBb Aa\nBobS A>aS\nB- aBB A-—>bAA"
+      },
+      "has_images": false,
+      "page_start": 19,
+      "page_end": 20
+    },
+    {
+      "id": "2007_CS_CS_Q78",
+      "question_number": 78,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Which of the following strings is generated by the grammar?",
+      "options": {
+        "A": "aaaabb",
+        "B": "aabbbb",
+        "C": "aabbab",
+        "D": "abbbba"
+      },
+      "has_images": false,
+      "page_start": 20,
+      "page_end": 20
+    },
+    {
+      "id": "2007_CS_CS_Q79",
+      "question_number": 79,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "For the correct answer string to Q.78, how many derivation trees are there?",
+      "options": {
+        "A": "1",
+        "B": "2 (©) 3",
+        "D": "4\nStatement for Linked Answer Questions 80 & 81:\nConsider a machine with a byte addressable main memory of 2'* bytes. Assume that a direct\nmapped data cache consisting of 32 lines of 64 bytes each is used in the system. A 50 x 50\ntwo-dimensional array of bytes is stored in the main memory starting from memory location\n1100H. Assume that the data cache is initially empty. The complete array is accessed twice.\nAssume that the contents of the data cache do not change in between the two accesses."
+      },
+      "has_images": false,
+      "page_start": 20,
+      "page_end": 20
+    },
+    {
+      "id": "2007_CS_CS_Q80",
+      "question_number": 80,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "How many data cache misses will occur in total?",
+      "options": {
+        "A": "48",
+        "B": "50",
+        "C": "56",
+        "D": "59"
+      },
+      "has_images": false,
+      "page_start": 20,
+      "page_end": 20
+    },
+    {
+      "id": "2007_CS_CS_Q81",
+      "question_number": 81,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Which of the following lines of the data cache will be replaced by new blocks in\naccessing the array for the second time?",
+      "options": {
+        "A": "line 4 to line 11",
+        "B": "line 4 to line 12",
+        "C": "line 0 to line 7",
+        "D": "line 0 to line 8\nStatement for Linked Answer Questions 82 & 83:\nA process has been allocated 3 page frames. Assume that none of the pages of the process are\navailable in the memory initially. The process makes the following sequence of page\nreferences (reference string): 1, 2, 1,3, 7, 4, 5, 6, 3, 1"
+      },
+      "has_images": false,
+      "page_start": 20,
+      "page_end": 20
+    },
+    {
+      "id": "2007_CS_CS_Q82",
+      "question_number": 82,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "If optimal page replacement policy is used, how many page faults occur for the above\nreference string?",
+      "options": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10"
+      },
+      "has_images": false,
+      "page_start": 20,
+      "page_end": 20
+    },
+    {
+      "id": "2007_CS_CS_Q83",
+      "question_number": 83,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Least Recently Used (LRU) page replacement policy is a practical approximation to\noptimal page replacement. For the above reference string, how many more page faults\noccur with LRU than with the optimal page replacement policy?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3\nCS - 20/24\nStatement for Linked Answer Questions 84 & 85:\nSuppose that a robot is placed on the Cartesian plane. At each step it is allowed to move either\none unit up or one unit right, i.e., if it is at (i, /) then it can move to either (i+1, /) or\n(i, j+l)."
+      },
+      "has_images": false,
+      "page_start": 20,
+      "page_end": 21
+    },
+    {
+      "id": "2007_CS_CS_Q84",
+      "question_number": 84,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "How many distinct paths are there for the robot to reach the point (10,10) starting\nfrom the initial position (0,0)?",
+      "options": {
+        "A": "(3)",
+        "B": "2”",
+        "C": "2°",
+        "D": "None of the above"
+      },
+      "has_images": false,
+      "page_start": 21,
+      "page_end": 21
+    },
+    {
+      "id": "2007_CS_CS_Q85",
+      "question_number": 85,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.25,
+      "question_text": "Suppose that the robot is not allowed to traverse the line segment from (4,4) to (5,4).\nWith this constraint, how many distinct paths are there for the robot to reach (10,10)\nstarting from (0,0)?",
+      "options": {
+        "A": "2?",
+        "B": "2\"\n(©)(%)x(3')\n@)(i3)-(4)x(?)\n\nCS - 21/24"
+      },
+      "has_images": false,
+      "page_start": 21,
+      "page_end": 21
+    }
+  ]
+}

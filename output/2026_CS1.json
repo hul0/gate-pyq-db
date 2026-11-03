@@ -1,0 +1,1131 @@
+{
+  "paper_id": "2026_CS1",
+  "year": 2026,
+  "subject": "Computer Science and Information Technology",
+  "subject_code": "CS",
+  "session": "CS1",
+  "total_questions_in_paper": 65,
+  "extracted_questions_count": 62,
+  "omitted_questions_count": 3,
+  "questions": [
+    {
+      "id": "2026_CS1_GA_Q01",
+      "question_number": 1,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "The antonym of the word protagonist is ________.",
+      "options": {
+        "A": "agnostic",
+        "B": "antagonist",
+        "C": "arsonist",
+        "D": "anarchist"
+      },
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1
+    },
+    {
+      "id": "2026_CS1_GA_Q03",
+      "question_number": 3,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider a knock-out women’s badminton singles tournament where there are no\nties. The loser in each game is eliminated from the tournament. Every player\nplays until she is defeated or remains the last undefeated player. The last\nundefeated player is declared the winner of the tournament. If there are 64 players\nin the beginning of the tournament, how many games should be played in total to\ndeclare the winner of the tournament?",
+      "options": {
+        "A": "127",
+        "B": "64",
+        "C": "63",
+        "D": "32"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3
+    },
+    {
+      "id": "2026_CS1_GA_Q04",
+      "question_number": 4,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "A student needs to enroll for a minimum of 60 credits. A student cannot enroll for\nmore than 70 credits. The credits are divided amongst project and three distinct\nsets of courses namely, core courses, specialization courses, and elective courses.\nIt is compulsory for a student to enroll for exactly 15 credits of core courses and\nexactly 20 credits of project. In addition, a student has to enroll for a minimum of\n10 credits of specialization courses. The maximum credits of elective courses that\na student can enroll for is ______",
+      "options": {
+        "A": "10",
+        "B": "15",
+        "C": "20",
+        "D": "25"
+      },
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 4
+    },
+    {
+      "id": "2026_CS1_GA_Q05",
+      "question_number": 5,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "‘When the teacher is in the room, all students stand silently.’\nIf the above statement is true, which one of the following statements is not\nnecessarily true?",
+      "options": {
+        "A": "If any student is not standing silently, then the teacher is not in the room.",
+        "B": "When the teacher is in the room, all students are silent.",
+        "C": "If all students are standing, then the teacher is in the room.",
+        "D": "When the teacher is in the room, all students are standing."
+      },
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 4
+    },
+    {
+      "id": "2026_CS1_GA_Q06",
+      "question_number": 6,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Combinatorics deals with problems involving counting. For example, “How many\ndistinct arrangements of N distinct objects in M spaces on a circle are possible?”\nis a typical problem in combinatorics. This kind of counting is sometimes used in\nthe modeling of several physical phenomena. Often, in such models, the different\ncombinatorial possibilities are assigned probability values. Assigning probabilities\nenables the computation of the average values of physical quantities.\nConsider the following statements:\nP: Combinatorics is always invoked in the modeling of physical phenomena.\nQ: Modeling some physical phenomena involves assigning probabilities to\ncombinatorial possibilities in order to compute average values of physical\nquantities.\nBased on the passage above, what can be inferred about statements P and Q?",
+      "options": {
+        "A": "P is False and Q is False",
+        "B": "P is False and Q is True",
+        "C": "P is True and Q is False",
+        "D": "P is True and Q is True"
+      },
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5
+    },
+    {
+      "id": "2026_CS1_GA_Q07",
+      "question_number": 7,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "In Panel I of the figure below, the front view and top view of a structure are\nshown. Which one of the 3D structures shown in Panel II possesses the views\nshown in Panel I?",
+      "options": {
+        "A": "(i)",
+        "B": "(ii)",
+        "C": "(iii)",
+        "D": "(iv)"
+      },
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 6
+    },
+    {
+      "id": "2026_CS1_GA_Q08",
+      "question_number": 8,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "For positive real numbers 𝑆 and 𝐾, the function 𝐻𝐾(𝑆) is defined as:\n𝐻𝐾(𝑆) = max(𝑆−𝐾, 0). The max function is defined as:\nmax(𝑎, 𝑏) = {𝑎,\nwhen 𝑎> 𝑏\n𝑏,\nwhen 𝑎≤𝑏\nThe graph below shows the plot of a function 𝑁(𝑆) versus 𝑆.\n𝑁(𝑆) can be expressed as _____.",
+      "options": {
+        "A": "𝐻10(𝑆) −𝐻20(𝑆)",
+        "B": "𝐻10(𝑆) −2𝐻20(𝑆)",
+        "C": "−𝐻10(𝑆) + 𝐻20(𝑆)",
+        "D": "𝐻15(𝑆) −𝐻20(𝑆)"
+      },
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 7
+    },
+    {
+      "id": "2026_CS1_GA_Q09",
+      "question_number": 9,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "In the 2020 summer Olympics’ Javelin throw finals, Neeraj Chopra exhibited a\nspectacular performance to win the gold medal. The silver medal was won by\nJakub Vadlejch and the bronze medal was won by Vitezlav Vesely. There were\nsix rounds of throws with each athlete having one throw per round. The best of\nall the throws of each athlete is considered for the medal. Following were the\nobservations about the throws:\ni.\nThe first and second rounds were dominated by Neeraj Chopra with a gold\nmedal performance in his second throw, while the other two athletes did\nnot have any medal winning throws in these rounds.\n\nii.\nThe throws in the last round by both Jakub Vadlejch and Vitezlav Vesely\nwere fouls and were not considered for scoring.\n\niii.\nAfter four rounds, Vitezlav Vesely was in the second position and could\nnot improve upon his best throw in the succeeding rounds.\n\niv.\nIn the fourth round, the throw by Jakub Vadlejch was the best in that\nround.\nIn which round did Vitezlav Vesely have his best throw?",
+      "options": {
+        "A": "Third",
+        "B": "Fourth",
+        "C": "Fifth",
+        "D": "Sixth"
+      },
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 8
+    },
+    {
+      "id": "2026_CS1_GA_Q10",
+      "question_number": 10,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "An unbiased six-faced dice whose faces are marked with numbers 1, 2, 3, 4, 5,\nand 6 is rolled twice in succession and the number on the top face is recorded\neach time. The probability that the number appearing in the second roll is an\ninteger multiple of the number appearing in the first roll is __________",
+      "options": {
+        "A": "1\n6",
+        "B": "5\n18",
+        "C": "7\n18",
+        "D": "5\n6"
+      },
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 9
+    },
+    {
+      "id": "2026_CS1_CS_Q11",
+      "question_number": 11,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "An urn contains one red ball and one blue ball. At each step, a ball is picked\nuniformly at random from the urn, and this ball together with another ball of the\nsame color is put back in the urn. The probability that there are equal number of red\nand blue balls after two steps is",
+      "options": {
+        "A": "(B)",
+        "C": "(D)"
+      },
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 10
+    },
+    {
+      "id": "2026_CS1_CS_Q12",
+      "question_number": 12,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider 4 × 4 matrices with their elements from {𝟎, 𝟏}. The number of such\nmatrices with even number of 𝟏s in every row and every column is",
+      "options": {
+        "A": "512",
+        "B": "1025",
+        "C": "1023",
+        "D": "255"
+      },
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 10
+    },
+    {
+      "id": "2026_CS1_CS_Q13",
+      "question_number": 13,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "For 𝑛 > 1, the maximum multiplicity of any eigenvalue of an 𝑛× 𝑛 matrix with\nelements from ℝ is",
+      "options": {
+        "A": "𝑛",
+        "B": "𝑛−1",
+        "C": "1",
+        "D": "𝑛+ 1"
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 11
+    },
+    {
+      "id": "2026_CS1_CS_Q14",
+      "question_number": 14,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Match each addressing mode in List I with a data element or an element of a data\nstructure (in a high-level language) in List II:\nList I\nList II\nP. Immediate\n1. Element of an array\nQ. Indirect\n2. Pointer\nR. Base with index\n3. Element of a record\nS. Base with offset/displacement 4. Constant",
+      "options": {
+        "A": "P–4, Q–3, R–1, S–2",
+        "B": "P–4, Q–2, R–1, S–3",
+        "C": "P–1, Q–4, R–3, S–2",
+        "D": "P–2, Q–3, R–1, S–4"
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 11
+    },
+    {
+      "id": "2026_CS1_CS_Q15",
+      "question_number": 15,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider a processor P whose instruction set architecture is the load-store\narchitecture. The instruction format is such that the first operand of any instruction\nis the destination operand.\nWhich one of the following sequences of instructions corresponds to the high-level\nlanguage statement Z = X + Y ?\nNote: X, Y, and Z are memory operands. R0, R1, and R2 are registers.",
+      "options": {
+        "A": "ADD Z, X, Y",
+        "B": "LOAD R0, X\nADD Z, R0, Y",
+        "C": "ADD R0, X, Y\nSTORE Z, R0",
+        "D": "LOAD R0, X\nLOAD R1, Y\nADD R2, R0, R1\nSTORE Z, R2"
+      },
+      "has_images": false,
+      "page_start": 12,
+      "page_end": 12
+    },
+    {
+      "id": "2026_CS1_CS_Q16",
+      "question_number": 16,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which one of the following dependencies among the register operands of different\ninstructions can cause a data hazard in a pipelined processor?",
+      "options": {
+        "A": "Read-after-read",
+        "B": "Read-after-write",
+        "C": "Write-after-read",
+        "D": "Write-after-write"
+      },
+      "has_images": false,
+      "page_start": 13,
+      "page_end": 13
+    },
+    {
+      "id": "2026_CS1_CS_Q17",
+      "question_number": 17,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider the following recurrence relations:\nFor all 𝑛> 1,\n𝑇1(𝑛) = 4𝑇1 (𝑛\n2) + 𝑇2(𝑛)\n𝑇2(𝑛) = 5𝑇2 (𝑛\n4) + Θ(log2 𝑛)\nAssume that for all 𝑛≤1, 𝑇1(𝑛) = 1 and 𝑇2(𝑛) = 1.\nWhich one of the following options is correct?",
+      "options": {
+        "A": "𝑇1(𝑛) = Θ(𝑛2)",
+        "B": "𝑇1(𝑛) = Θ(𝑛2 log2 𝑛)",
+        "C": "𝑇1(𝑛) = Θ(𝑛log4 5)",
+        "D": "𝑇1(𝑛) = Θ(𝑛log4 5 log2 𝑛)"
+      },
+      "has_images": false,
+      "page_start": 14,
+      "page_end": 14
+    },
+    {
+      "id": "2026_CS1_CS_Q18",
+      "question_number": 18,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "With respect to a TCP connection between a client and a server, which one of the\nfollowing statements is true?",
+      "options": {
+        "A": "The client and server use a two-way handshake mechanism before the start of data\ntransmission",
+        "B": "The server cannot initiate closing of the connection before the client initiates\nclosing of the connection",
+        "C": "The TCP connection is half-duplex",
+        "D": "The client and server can initiate closing of the connection at the same time"
+      },
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15
+    },
+    {
+      "id": "2026_CS1_CS_Q19",
+      "question_number": 19,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which of the following statements is/are true with respect to the interaction of a\nweb browser with a web server using HTTP 1.1?",
+      "options": {
+        "A": "HTTP 1.1 facilitates downloading multiple objects of the same webpage over the\nsame TCP connection, if the objects are stored in the same server",
+        "B": "HTTP 1.1 facilitates downloading multiple objects of the same webpage over the\nsame TCP connection, even if they are stored in different servers",
+        "C": "HTTP 1.1 facilitates sending a request for downloading one object without waiting\nfor a previously requested object to be downloaded completely",
+        "D": "HTTP 1.1 facilitates downloading multiple webpages on the same server to be\ndownloaded over a single TCP connection"
+      },
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15
+    },
+    {
+      "id": "2026_CS1_CS_Q20",
+      "question_number": 20,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Let 𝑛 > 1. Consider an 𝑛× 𝑛 matrix 𝑀 with its elements from ℝ. Let the vector\n(0, 1, 0, 0, … , 0) ∈ℝ𝑛 be in the null space of 𝑀.\nWhich of the following options is/are always correct?",
+      "options": {
+        "A": "Determinant of 𝑀 is 1",
+        "B": "Determinant of 𝑀 is 0",
+        "C": "Rank of 𝑀 is 1",
+        "D": "There are at least two non-zero vectors in the null space of 𝑀"
+      },
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 16
+    },
+    {
+      "id": "2026_CS1_CS_Q21",
+      "question_number": 21,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider the following Boolean expression of a function F :\n𝐹(𝑃, 𝑄) = (𝑃̅ + 𝑄) ⊕(𝑃̅𝑄)\nWhich of the following expressions is/are equivalent to F ?",
+      "options": {
+        "A": "𝑃⊕𝑄̅̅̅̅̅̅̅̅",
+        "B": "𝑃⊕𝑄",
+        "C": "𝑃̅ ⊕𝑄",
+        "D": "𝑃̅ ⊕𝑄̅"
+      },
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 16
+    },
+    {
+      "id": "2026_CS1_CS_Q22",
+      "question_number": 22,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider the 8-bit signed integers 𝑋, 𝑌 and 𝑍 represented using the sign-magnitude\nform. The binary representations of 𝑋 and 𝑌 are as follows:\n𝑋: 10110100 𝑌: 01001100\nWhich of the following operations to compute 𝑍 result(s) in an arithmetic\noverflow?",
+      "options": {
+        "A": "𝑍= 𝑋+ 𝑌",
+        "B": "𝑍= 𝑋−𝑌",
+        "C": "𝑍= −𝑋+ 𝑌",
+        "D": "𝑍= −𝑋−𝑌"
+      },
+      "has_images": false,
+      "page_start": 17,
+      "page_end": 17
+    },
+    {
+      "id": "2026_CS1_CS_Q23",
+      "question_number": 23,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Let 𝑛 be an odd number greater than 100. Consider a binary minheap with\n𝑛 elements stored in an array 𝑃 whose index starts from 1.\nWhich of the following indices of 𝑃 do/does NOT correspond to any leaf node of\nthe minheap?",
+      "options": {
+        "A": "𝑛+ 1\n2",
+        "B": "𝑛−1\n2",
+        "C": "𝑛−3\n2",
+        "D": "𝑛"
+      },
+      "has_images": false,
+      "page_start": 18,
+      "page_end": 18
+    },
+    {
+      "id": "2026_CS1_CS_Q24",
+      "question_number": 24,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider a hash table 𝑃[0, 1, … , 10] that is initially empty. The hash table is\nmaintained using open addressing with linear probing. The hash function used is\nℎ(𝑥) = (𝑥+ 7) mod 11.\nConsider the following sequence of insertions performed on 𝑃:\n1, 13, 22, 15, 11, 24\nWhich of the following positions in the hash table is/are empty after these insertions\nare performed?",
+      "options": {
+        "A": "0",
+        "B": "10",
+        "C": "2",
+        "D": "1"
+      },
+      "has_images": false,
+      "page_start": 19,
+      "page_end": 19
+    },
+    {
+      "id": "2026_CS1_CS_Q25",
+      "question_number": 25,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider the following grammar where 𝑆 is the start symbol, and 𝑎 and 𝑏 are\nterminal symbols.\n𝑆 →𝑎𝑆𝑏𝑆 ∣ 𝑏𝑆 ∣ ϵ\nWhich of the following statements is/are true?",
+      "options": {
+        "A": "The grammar is ambiguous",
+        "B": "The string 𝑎𝑏𝑏 has two distinct derivations in this grammar",
+        "C": "The string 𝑎𝑏𝑎𝑏 has only one rightmost derivation",
+        "D": "The language generated by the grammar is undecidable"
+      },
+      "has_images": false,
+      "page_start": 20,
+      "page_end": 20
+    },
+    {
+      "id": "2026_CS1_CS_Q26",
+      "question_number": 26,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Let M be a nondeterministic finite automaton (NFA) with 6 states over a finite\nalphabet.\nWhich of the following options CANNOT be the number of states in the minimal\ndeterministic finite automaton (DFA) that is equivalent to 𝑀 ?",
+      "options": {
+        "A": "32",
+        "B": "65",
+        "C": "1",
+        "D": "128"
+      },
+      "has_images": false,
+      "page_start": 20,
+      "page_end": 20
+    },
+    {
+      "id": "2026_CS1_CS_Q27",
+      "question_number": 27,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider the following C statements:\nchar *str1 = \"Hello; /* Statement S1 */\nchar *str2 = \"Hello;\"; /* Statement S2 */\nint *str3 = \"Hello\"; /* Statement S3 */\nWhich of the following options is/are correct?",
+      "options": {
+        "A": "S1 and S2 have syntactic errors",
+        "B": "S2 has a lexical error and S3 has a syntactic error",
+        "C": "S1 has a lexical error and S3 has a semantic error",
+        "D": "S1 has a syntactic error and S3 has a semantic error"
+      },
+      "has_images": false,
+      "page_start": 21,
+      "page_end": 21
+    },
+    {
+      "id": "2026_CS1_CS_Q28",
+      "question_number": 28,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which of the following statements is/are true?",
+      "options": {
+        "A": "LL(1) parser uses backtracking",
+        "B": "For a grammar to be LL(1), it must be left-recursive",
+        "C": "For a grammar to be LL(1), it must be left-factored",
+        "D": "The LL(1) parsers are more powerful than the SLR parsers"
+      },
+      "has_images": false,
+      "page_start": 21,
+      "page_end": 21
+    },
+    {
+      "id": "2026_CS1_CS_Q29",
+      "question_number": 29,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "With respect to deadlocks in an operating system, which of the following\nstatements is/are FALSE?",
+      "options": {
+        "A": "Banker’s algorithm is used to prevent deadlocks",
+        "B": "Deadlock formation can be prevented by ensuring that the hold and wait\ncondition is not allowed",
+        "C": "An assignment edge in a resource allocation graph is marked from a process to a\nresource",
+        "D": "A safe state guarantees that all processes can finish without formation of a\ndeadlock"
+      },
+      "has_images": false,
+      "page_start": 22,
+      "page_end": 22
+    },
+    {
+      "id": "2026_CS1_CS_Q30",
+      "question_number": 30,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Let 𝑃, 𝑄, 𝑅 and 𝑆 be the attributes of a relation in a relational schema. Let 𝑋 ⟶𝑌\nindicate functional dependency in the context of a relational database, where\n𝑋, 𝑌 ⊆{𝑃, 𝑄, 𝑅, 𝑆}.\nWhich of the following options is/are always true?",
+      "options": {
+        "A": "If ( {𝑃, 𝑄} ⟶{𝑅} and {𝑃} ⟶{𝑅} ), then {𝑄} ⟶{𝑅}",
+        "B": "If {𝑃, 𝑄} ⟶{𝑅}, then ( {𝑃} ⟶{𝑅} or {𝑄} ⟶{𝑅} )",
+        "C": "If ( {𝑃} ⟶{𝑅} and {𝑄} ⟶{𝑆} ), then {𝑃, 𝑄} ⟶{𝑅, 𝑆}",
+        "D": "If {𝑃} ⟶{𝑅}, then {𝑃, 𝑄} ⟶{𝑅}"
+      },
+      "has_images": false,
+      "page_start": 22,
+      "page_end": 22
+    },
+    {
+      "id": "2026_CS1_CS_Q31",
+      "question_number": 31,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "In the context of relational database normalization, which of the following\nstatements is/are true?",
+      "options": {
+        "A": "It is always possible to obtain a dependency-preserving 3NF decomposition of a\nrelation",
+        "B": "It is always possible to obtain a dependency-preserving 1NF decomposition of a\nrelation",
+        "C": "It is not always possible to obtain a dependency-preserving BCNF decomposition\nof a relation",
+        "D": "It is not always possible to obtain a dependency-preserving 2NF decomposition of\na relation"
+      },
+      "has_images": false,
+      "page_start": 23,
+      "page_end": 23
+    },
+    {
+      "id": "2026_CS1_CS_Q32",
+      "question_number": 32,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the function 𝑓: ℝ→ℝ defined as follows:\n𝑓(𝑥) = {𝑐1𝑒𝑥−𝑐2 loge (1\n𝑥) , if 𝑥> 0\n3 otherwise\nwhere 𝑐1 , 𝑐2 ∈ℝ.\nIf 𝑓 is continuous at 𝑥 = 0, then 𝑐1 + 𝑐2 = _________. (answer in integer)",
+      "options": null,
+      "has_images": false,
+      "page_start": 23,
+      "page_end": 23
+    },
+    {
+      "id": "2026_CS1_CS_Q33",
+      "question_number": 33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "The height of a binary tree is the number of edges in the longest path from the root\nto a leaf in the tree. The maximum possible height of a full binary tree with\n23 nodes is _________. (answer in integer)",
+      "options": null,
+      "has_images": false,
+      "page_start": 23,
+      "page_end": 23
+    },
+    {
+      "id": "2026_CS1_CS_Q34",
+      "question_number": 34,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the following program in C:\n#include <stdio.h>\n\nvoid func(int i, int j) {\nif(i < j) {\nint i = 0;\nwhile (i < 10) {\nj += 2;\ni++;\n}\n}\nprintf(\"%d\", i);\n}\nint main() {\nint i = 9, j = 10;\nfunc(i, j);\nreturn 0;\n}\nThe output of the program is _________. (answer in integer)\nNote: Assume that the program compiles and runs successfully.",
+      "options": null,
+      "has_images": false,
+      "page_start": 24,
+      "page_end": 24
+    },
+    {
+      "id": "2026_CS1_CS_Q35",
+      "question_number": 35,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider a system consisting of 𝑘 instances of a resource 𝑅, being shared by\n5 processes. Assume that each process requires a maximum of two instances of\nresource 𝑅 and a process can request or release only one instance at a time. Further,\na process can request the second instance of the resource only after acquiring the\nfirst instance.\nThe minimum value of 𝑘 for the system to be deadlock-free is ________. (answer\nin integer)",
+      "options": null,
+      "has_images": false,
+      "page_start": 24,
+      "page_end": 24
+    },
+    {
+      "id": "2026_CS1_CS_Q36",
+      "question_number": 36,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the real valued variables X, Y and Z represented using the IEEE 754 single-\nprecision floating-point format. The binary representations of X and Y in hexadecimal\nnotation are as follows:\nX: 35C00000 Y: 34A00000\nLet 𝑍 = 𝑋+ 𝑌.\nWhich one of the following is the binary representation of 𝑍, in hexadecimal\nnotation?",
+      "options": {
+        "A": "35C80000",
+        "B": "35CC0000",
+        "C": "35E80000",
+        "D": "35EC0000"
+      },
+      "has_images": false,
+      "page_start": 25,
+      "page_end": 25
+    },
+    {
+      "id": "2026_CS1_CS_Q38",
+      "question_number": 38,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The size of the physical address space of a processor is 232 bytes. The capacity of a\ncache memory unit is 223 bytes. The cache block size is 128 bytes. The cache\nmemory unit can be built as a direct mapped cache or as a 𝐾-way set-associative\ncache, where 𝐾= 2𝐿 and 𝐿∈{1, 2, 3}. Let the length of the TAG field be 𝑀 bits\nfor the direct mapped cache, and 𝑁 bits for the set-associative cache.\nWhich one of the following options is true?",
+      "options": {
+        "A": "𝑁= 𝑀+ 𝐿",
+        "B": "𝑁= 𝑀−𝐿",
+        "C": "𝑁= 𝑀+ 𝐾",
+        "D": "𝑁= 𝑀−𝐾"
+      },
+      "has_images": false,
+      "page_start": 27,
+      "page_end": 27
+    },
+    {
+      "id": "2026_CS1_CS_Q39",
+      "question_number": 39,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following code snippet in C language that computes the number of\nnodes in a non-empty singly linked list pointed to by the pointer variable head.\nstruct node{\nint elt;\nstruct node *next;\n};\nint getListSize (struct node *head)\n{\nif( E1 ) return 1;\nreturn E2;\n}\nWhich one of the following options gives the correct replacements for the\nexpressions E1 and E2?",
+      "options": {
+        "A": "E1: head == NULL\nE2: 1 + getListSize(head)",
+        "B": "E1: head->next == NULL\nE2: 1 + getListSize(head->next)",
+        "C": "E1: head == NULL\nE2: 1 + getListSize(head->next)",
+        "D": "E1: head->next == NULL\nE2: 1 + getListSize(head)"
+      },
+      "has_images": false,
+      "page_start": 28,
+      "page_end": 28
+    },
+    {
+      "id": "2026_CS1_CS_Q40",
+      "question_number": 40,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Let 𝑃 be the set of all integers from 1 to 15. Consider any order of insertion of the\nelements of 𝑃 into a binary search tree that creates a complete binary tree.\nWhich one of the following elements can NEVER be the third element that is\ninserted?",
+      "options": {
+        "A": "4",
+        "B": "2",
+        "C": "10",
+        "D": "5"
+      },
+      "has_images": false,
+      "page_start": 29,
+      "page_end": 29
+    },
+    {
+      "id": "2026_CS1_CS_Q41",
+      "question_number": 41,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Let 𝐺(𝑉, 𝐸) be an undirected, edge-weighted graph with integer weights. The weight\nof a path is the sum of the weights of the edges in that path. The length of a path is\nthe number of edges in that path.\nLet 𝑠∈𝑉 be a vertex in 𝐺. For every 𝑢∈𝑉 and for every 𝑘 ≥0, let 𝑑𝑘(𝑢) denote\nthe weight of a shortest path (in terms of weight) from 𝑠 to 𝑢 of length at most 𝑘. If\nthere is no path from 𝑠 to 𝑢 of length at most 𝑘, then 𝑑𝑘(𝑢) = ∞.\nConsider the statements:\nS1:\nFor every 𝑘 ≥0 and 𝑢 ∈𝑉, 𝑑𝑘+1(𝑢) ≤𝑑𝑘(𝑢).\nS2:\nFor every (𝑢, 𝑣) ∈𝐸, if (𝑢, 𝑣) is part of a shortest path (in terms of\nweight) from 𝑠 to 𝑣, then for every 𝑘≥ 0, 𝑑𝑘(𝑢) ≤𝑑𝑘(𝑣).\nWhich one of the following options is correct?",
+      "options": {
+        "A": "Only S1 is true",
+        "B": "Only S2 is true",
+        "C": "Both S1 and S2 are true",
+        "D": "Neither S1 nor S2 is true"
+      },
+      "has_images": false,
+      "page_start": 30,
+      "page_end": 30
+    },
+    {
+      "id": "2026_CS1_CS_Q42",
+      "question_number": 42,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the control flow graph shown in the figure.\nWhich one of the following options correctly lists the set of redundant expressions\n(common subexpressions) in the basic blocks B4 and B5?\nNote: All the variables are integers.",
+      "options": {
+        "A": "B4: { 𝑏+ 𝑖 }\nB5: { 𝑐+ 𝑚 }",
+        "B": "B4: { 𝑔∗𝑘 }\nB5: { 𝑐+ 𝑚 }",
+        "C": "B4: { 𝑔∗𝑘, 𝑏+ 𝑖 }\nB5: { }",
+        "D": "B4: { 𝑔∗𝑘 }\nB5: { }"
+      },
+      "has_images": false,
+      "page_start": 31,
+      "page_end": 31
+    },
+    {
+      "id": "2026_CS1_CS_Q43",
+      "question_number": 43,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider a relational database schema with two relations 𝑅(𝑃, 𝑄) and 𝑆(𝑋, 𝑌).\nLet 𝐸 = {⟨𝑢⟩∣∃𝑣 ∃𝑤 ⟨𝑢, 𝑣⟩∈𝑅 ∧ ⟨𝑣, 𝑤⟩ ∈𝑆} be a tuple relational calculus\nexpression.\nWhich one of the following relational algebraic expressions is equivalent to 𝐸 ?",
+      "options": {
+        "A": "𝛱𝑃(𝑅⋈𝑅.𝑃=𝑆.𝑋𝑆)",
+        "B": "𝛱𝑃(𝑆⋈𝑆.𝑋=𝑅.𝑄𝑅)",
+        "C": "𝛱𝑃(𝑅⋈𝑅.𝑃=𝑆.𝑌𝑆)",
+        "D": "𝛱𝑃(𝑆⋈𝑆.𝑌=𝑅.𝑄𝑅)"
+      },
+      "has_images": false,
+      "page_start": 32,
+      "page_end": 32
+    },
+    {
+      "id": "2026_CS1_CS_Q44",
+      "question_number": 44,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "A TCP sender successfully establishes a connection with a TCP receiver and starts\nthe transmission of segments. The TCP congestion control mechanism’s slow-start\nthreshold is set to 10000 segments. Assume that the round-trip time is fixed at\n1 millisecond. Assume that the sender always has data to send, the segments are\nnumbered from 1, and no segment is lost. Let 𝑡 denote the time (in milliseconds) at\nwhich the transmission of segment number 2000 starts.\nWhich one of the following options is correct?",
+      "options": {
+        "A": "9 ≤ 𝑡 < 10",
+        "B": "10 ≤ 𝑡 < 11",
+        "C": "11 ≤ 𝑡 < 12",
+        "D": "12 ≤ 𝑡 < 13"
+      },
+      "has_images": false,
+      "page_start": 33,
+      "page_end": 33
+    },
+    {
+      "id": "2026_CS1_CS_Q45",
+      "question_number": 45,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the implementation of sliding window protocol over a lossless link, with a\nwindow size of 𝑊 frames, where each frame is of size 1000 bits (including header).\nThe bandwidth of the link is 100 kbps (1k = 103) and the one-way propagation delay\nis 100 milliseconds. Assume that processing times at the sender and receiver are zero\nand the transmission time of acknowledgements is also zero. Which one of the\nfollowing options gives the minimum size of 𝑊 (in number of frames) required to\nachieve 100% link utilization?",
+      "options": {
+        "A": "10",
+        "B": "21",
+        "C": "20",
+        "D": "11"
+      },
+      "has_images": false,
+      "page_start": 34,
+      "page_end": 34
+    },
+    {
+      "id": "2026_CS1_CS_Q46",
+      "question_number": 46,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Let 𝑓: ℝ→ℝ be defined as follows:\n𝑓(𝑥) = (|𝑥|\n2 −𝑥) (𝑥−|𝑥|\n2 )\nWhich of the following statements is/are true?",
+      "options": {
+        "A": "𝑓 has a local maximum",
+        "B": "𝑓 has a local minimum",
+        "C": "𝑓′ is continuous over ℝ",
+        "D": "𝑓′ is not differentiable over ℝ"
+      },
+      "has_images": false,
+      "page_start": 35,
+      "page_end": 35
+    },
+    {
+      "id": "2026_CS1_CS_Q47",
+      "question_number": 47,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Let 𝐺(𝑉, 𝐸) be a simple, undirected graph. A vertex cover of 𝐺 is a subset\n𝑉′ ⊆𝑉 such that for every (𝑢, 𝑣) ∈𝐸, 𝑢∈𝑉′or 𝑣∈𝑉′. Let the size of the smallest\nvertex cover in 𝐺 be 𝑘. Let 𝑆 be any vertex cover of size 𝑘.\nFor a vertex 𝑣∈𝑉, which of the following constraints will always ensure that\n𝑣∈𝑆 ?",
+      "options": {
+        "A": "The degree of 𝑣 is at least 𝑘+ 1",
+        "B": "The vertex 𝑣 is on a path of length 𝑘+ 1",
+        "C": "The vertex 𝑣 is on a cycle of length 𝑘+ 1",
+        "D": "The vertex 𝑣 is a part of a clique of size 𝑘"
+      },
+      "has_images": false,
+      "page_start": 35,
+      "page_end": 35
+    },
+    {
+      "id": "2026_CS1_CS_Q48",
+      "question_number": 48,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider a Boolean function F with the following minterm expression:\n𝐹(𝑃, 𝑄, 𝑅, 𝑆) = ∑𝑚 (1, 2, 3, 4, 5, 7, 10, 12, 13, 14)\nWhich of the following options is/are the minimal sum-of-products expression(s)\nof F ?",
+      "options": {
+        "A": "𝑃̅𝑆+ 𝑄𝑅̅ + 𝑃̅𝑄̅𝑅+ 𝑄̅𝑅𝑆̅",
+        "B": "𝑃̅𝑆+ 𝑄𝑅̅ + 𝑃̅𝑄̅𝑅+ 𝑃𝑅𝑆̅",
+        "C": "𝑃̅𝑆+ 𝑄𝑅̅ + 𝑃𝑄𝑆̅ + 𝑃𝑅𝑆̅",
+        "D": "𝑃̅𝑆+ 𝑄𝑅̅ + 𝑃𝑄𝑆̅ + 𝑄̅𝑅𝑆̅"
+      },
+      "has_images": false,
+      "page_start": 36,
+      "page_end": 36
+    },
+    {
+      "id": "2026_CS1_CS_Q49",
+      "question_number": 49,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Let 𝐺(𝑉, 𝐸) be a simple, undirected, edge-weighted graph with unique edge weights.\nWhich of the following statements about the minimum spanning trees (MST)\nof 𝐺 is/are true?",
+      "options": {
+        "A": "In every cycle 𝐶 of 𝐺, the edge with the largest weight in 𝐶 is not in any MST",
+        "B": "In every cycle 𝐶 of 𝐺, the edge with the smallest weight in 𝐶 is in every MST",
+        "C": "For every vertex 𝑣 ∈𝑉, the edge with the largest weight incident on 𝑣 is not in any\nMST",
+        "D": "For every vertex 𝑣 ∈𝑉, the edge with the smallest weight incident on 𝑣 is in every\nMST"
+      },
+      "has_images": false,
+      "page_start": 37,
+      "page_end": 37
+    },
+    {
+      "id": "2026_CS1_CS_Q50",
+      "question_number": 50,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following pseudocode for depth-first search (DFS) algorithm which\ntakes a directed graph 𝐺(𝑉, 𝐸) as input, where 𝑑[𝑣] and 𝑓[𝑣] are the discovery time\nand finishing time, respectively, of the vertex 𝑣 ∈𝑉.\n𝐷𝐹𝑆(𝐺):\n𝑢𝑛𝑚𝑎𝑟𝑘 𝑎𝑙𝑙 𝑣∈𝑉\n𝑡 ←0\n𝑓𝑜𝑟 𝑒𝑎𝑐ℎ 𝑣∈𝑉\n𝑖𝑓 𝑣 𝑖𝑠 𝑢𝑛𝑚𝑎𝑟𝑘𝑒𝑑\n𝑡←𝐸𝑥𝑝𝑙𝑜𝑟𝑒(𝐺, 𝑣, 𝑡)\n𝑒𝑛𝑑 𝑖𝑓\n𝑒𝑛𝑑 𝑓𝑜𝑟\n𝐸𝑥𝑝𝑙𝑜𝑟𝑒(𝐺, 𝑣, 𝑡):\n𝑚𝑎𝑟𝑘 𝑣\n𝑡 ←𝑡+ 1\n𝑑[𝑣] ←𝑡\n𝑓𝑜𝑟 𝑒𝑎𝑐ℎ (𝑣, 𝑤) ∈𝐸\n𝑖𝑓 𝑤 𝑖𝑠 𝑢𝑛𝑚𝑎𝑟𝑘𝑒𝑑\n𝑡←𝐸𝑥𝑝𝑙𝑜𝑟𝑒(𝐺, 𝑤, 𝑡)\n𝑒𝑛𝑑 𝑖𝑓\n𝑒𝑛𝑑 𝑓𝑜𝑟\n𝑡 ←𝑡 + 1\n𝑓[𝑣] ←𝑡\n𝑟𝑒𝑡𝑢𝑟𝑛 𝑡\nSuppose that the input directed graph 𝐺(𝑉, 𝐸) is a directed acyclic graph (DAG).\nFor an edge (𝑢, 𝑣) ∈𝐸, which of the following options will NEVER be correct?",
+      "options": {
+        "A": "𝑑[𝑢] < 𝑑[𝑣] < 𝑓[𝑣] < 𝑓[𝑢]",
+        "B": "𝑑[𝑣] < 𝑑[𝑢] < 𝑓[𝑢] < 𝑓[𝑣]",
+        "C": "𝑑[𝑣] < 𝑓[𝑣] < 𝑑[𝑢] < 𝑓[𝑢]",
+        "D": "𝑑[𝑢] < 𝑑[𝑣] < 𝑓[𝑢] < 𝑓[𝑣]"
+      },
+      "has_images": false,
+      "page_start": 38,
+      "page_end": 38
+    },
+    {
+      "id": "2026_CS1_CS_Q51",
+      "question_number": 51,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Let 𝐿1 and 𝐿2 be two languages over a finite alphabet, such that 𝐿1 ∩𝐿2 and 𝐿2 are\nregular languages.\nWhich of the following statements is/are always true?",
+      "options": {
+        "A": "𝐿1 is regular",
+        "B": "𝐿1 ∪𝐿2 is regular",
+        "C": "𝐿2 is context-free",
+        "D": "𝐿1 is context-free"
+      },
+      "has_images": false,
+      "page_start": 39,
+      "page_end": 39
+    },
+    {
+      "id": "2026_CS1_CS_Q52",
+      "question_number": 52,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following context-free grammar 𝐺.\n𝑆→𝑎𝑏𝑎𝐴𝐵𝐴𝑏𝑏𝑎\n𝐴→𝑎𝑎𝐵𝐵𝐴𝑏 | 𝑏𝐵𝑎𝑏𝑎𝑎\n𝐵→𝑎𝐵𝑏 | 𝑎𝑏\nIn the above grammar, 𝑆 is the start symbol, 𝑎 and 𝑏 are terminal symbols, and 𝐴 and\n𝐵 are non-terminal symbols.\nLet 𝐿(𝐺) be the language generated by the grammar 𝐺. For a string 𝑠∈𝐿(𝐺), let\n𝑛1(𝑠) be the number of 𝑎’s in 𝑠 and 𝑛2(𝑠) be the number of 𝑏’s in 𝑠.\nWhich of the following statements is/are true?",
+      "options": {
+        "A": "There is a string 𝑠∈𝐿(𝐺) such that 𝑛1(𝑠) < 𝑛2(𝑠)",
+        "B": "For every string 𝑠∈𝐿(𝐺), 𝑛1(𝑠) ≥𝑛2(𝑠)",
+        "C": "There is a string 𝑠∈𝐿(𝐺) such that 𝑛1(𝑠) > 2𝑛2(𝑠)",
+        "D": "For every string 𝑠∈𝐿(𝐺), 𝑛1(𝑠) ≤2𝑛2(𝑠)"
+      },
+      "has_images": false,
+      "page_start": 40,
+      "page_end": 40
+    },
+    {
+      "id": "2026_CS1_CS_Q53",
+      "question_number": 53,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following two syntax-directed definitions SDD1 and SDD2 for type\ndeclarations.\n𝐷 is the start symbol, and 𝑖𝑛𝑡, 𝑓𝑙𝑜𝑎𝑡 and 𝑖𝑑 are the three terminals. The non-terminal\n𝑉1 is the same as 𝑉 and the non-terminal 𝐷1 is the same as 𝐷. Here, the subscript is\nused to differentiate the grammar symbols on the two sides of a production. The\nfunction 𝑝𝑢𝑡 updates the symbol table with the type information for an identifier.\nLet P and Q be the languages specified by grammars G1 and G2, respectively.\nWhich of the following statements is/are true?\nSDD1\nGrammar\n(G1)\nSemantic Rules\n𝐷 →𝑇 𝑉\n𝐷. 𝑡𝑦𝑝𝑒 = 𝑇. 𝑡𝑦𝑝𝑒\n𝑉. 𝑡𝑦𝑝𝑒 = 𝑇. 𝑡𝑦𝑝𝑒\n𝑇 → 𝑖𝑛𝑡\n𝑇. 𝑡𝑦𝑝𝑒 = 𝑖𝑛𝑡\n𝑇 → 𝑓𝑙𝑜𝑎𝑡\n𝑇. 𝑡𝑦𝑝𝑒 = 𝑓𝑙𝑜𝑎𝑡\n𝑉→𝑉1 𝑖𝑑\n𝑉1. 𝑡𝑦𝑝𝑒= 𝑉. 𝑡𝑦𝑝𝑒\n𝑝𝑢𝑡(𝑖𝑑. 𝑒𝑛𝑡𝑟𝑦, 𝑉. 𝑡𝑦𝑝𝑒)\n𝑉 → 𝑖𝑑\n𝑝𝑢𝑡(𝑖𝑑. 𝑒𝑛𝑡𝑟𝑦, 𝑉. 𝑡𝑦𝑝𝑒)\nSDD2\nGrammar\n(G2)\nSemantic Rules\n𝐷→𝐷1 𝑖𝑑\n𝐷. 𝑡𝑦𝑝𝑒= 𝐷1. 𝑡𝑦𝑝𝑒\n𝑝𝑢𝑡(𝑖𝑑. 𝑒𝑛𝑡𝑟𝑦, 𝐷1. 𝑡𝑦𝑝𝑒)\n𝐷 → 𝑇 𝑖𝑑\n𝐷. 𝑡𝑦𝑝𝑒 = 𝑇. 𝑡𝑦𝑝𝑒\n𝑝𝑢𝑡(𝑖𝑑. 𝑒𝑛𝑡𝑟𝑦, 𝑇. 𝑡𝑦𝑝𝑒)\n𝑇 →𝑖𝑛𝑡\n𝑇. 𝑡𝑦𝑝𝑒 = 𝑖𝑛𝑡\n𝑇 → 𝑓𝑙𝑜𝑎𝑡\n𝑇. 𝑡𝑦𝑝𝑒 = 𝑓𝑙𝑜𝑎𝑡",
+      "options": {
+        "A": "The languages P and Q are the same",
+        "B": "SDD2 is S-attributed and contains only synthesized attributes",
+        "C": "SDD1 is L-attributed and contains only inherited attributes",
+        "D": "The specifications of SDD1 and SDD2 are such that the same entries get added to\nthe symbol table"
+      },
+      "has_images": false,
+      "page_start": 41,
+      "page_end": 41
+    },
+    {
+      "id": "2026_CS1_CS_Q54",
+      "question_number": 54,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider a system that has a cache memory unit and a memory management unit\n(MMU). The address input to the cache memory is a physical address. The MMU\nhas a translation lookaside buffer (TLB). Assume that when a page is evicted from\nthe main memory, the corresponding blocks in the cache are marked as invalid.\nFor a given memory reference, which of the following sequences of events can\nNEVER happen?",
+      "options": {
+        "A": "TLB miss, Page table hit, Cache hit",
+        "B": "TLB hit, Page table miss, Cache hit",
+        "C": "TLB miss, Page table miss, Cache hit",
+        "D": "TLB miss, Page table miss, Cache miss"
+      },
+      "has_images": false,
+      "page_start": 42,
+      "page_end": 42
+    },
+    {
+      "id": "2026_CS1_CS_Q55",
+      "question_number": 55,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "An undirected, unweighted, simple graph 𝐺(𝑉, 𝐸) is said to be 2-colorable if there\nexists a function 𝑐: 𝑉→{0, 1} such that for every (𝑢, 𝑣) ∈𝐸, 𝑐(𝑢) ≠𝑐(𝑣).\nWhich of the following statements about 2-colorable graphs is/are true?",
+      "options": {
+        "A": "If 𝐺 is 2-colorable, then 𝐺 may contain cycles of odd length",
+        "B": "If 𝐺 is 2-colorable, then 𝐺 may contain cycles of even length",
+        "C": "An optimal algorithm for testing whether 𝐺 is 2-colorable runs in time Θ(|𝑉| + |𝐸|),\nif 𝐺 is represented as an adjacency list",
+        "D": "An optimal algorithm for testing whether 𝐺 is 2-colorable runs in time Θ(|𝐸| log|𝑉|),\nif 𝐺 is represented as an adjacency list"
+      },
+      "has_images": false,
+      "page_start": 43,
+      "page_end": 43
+    },
+    {
+      "id": "2026_CS1_CS_Q56",
+      "question_number": 56,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "An ISP having an address block 202.16.0.0/15 assigns a block of 6000 IP addresses\nto a client, using the classless internet domain routing (CIDR) super-netting\napproach. Which of the following address blocks can be assigned by the ISP?",
+      "options": {
+        "A": "202.16.0.0/19",
+        "B": "202.17.64.0/19",
+        "C": "202.16.32.0/19",
+        "D": "202.17.24.0/19"
+      },
+      "has_images": false,
+      "page_start": 43,
+      "page_end": 43
+    },
+    {
+      "id": "2026_CS1_CS_Q57",
+      "question_number": 57,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Let 𝐺 be an undirected graph, which is a path on 8 vertices. The number of matchings\nin 𝐺 is ______. (answer in integer)",
+      "options": null,
+      "has_images": false,
+      "page_start": 44,
+      "page_end": 44
+    },
+    {
+      "id": "2026_CS1_CS_Q58",
+      "question_number": 58,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Let 𝑋 be a random variable which takes values in the set {1, 2, 3, 4, 5, 6, 7, 8}.\nFurther, Pr(𝑋= 1) = Pr(𝑋= 2) = Pr(𝑋= 5) = Pr(𝑋= 7) =\n1\n6 and\nPr(𝑋= 3) = Pr(𝑋= 4) = Pr(𝑋= 6) = Pr(𝑋= 8) =\n1\n12 .\nThe expected value of 𝑋, denoted by 𝐸[𝑋], is equal to ___________. (rounded off\nto two decimal places)",
+      "options": null,
+      "has_images": false,
+      "page_start": 44,
+      "page_end": 44
+    },
+    {
+      "id": "2026_CS1_CS_Q59",
+      "question_number": 59,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider a hard disk with a rotational speed of 15000 rpm. The time to move the\nread/write head from a track to its adjacent track is 1 millisecond. Initially, the head\nis on track 0. The number of sectors per track is 400. The sector size is 1024 bytes.\nIt is necessary to transfer data from 10 randomly located sectors in each of the\nfollowing tracks in the order: 5, 12 and 7.\nThe total time for the data transfer (in milliseconds) from the hard disk is _________.\n(rounded off to one decimal place)",
+      "options": null,
+      "has_images": false,
+      "page_start": 44,
+      "page_end": 44
+    },
+    {
+      "id": "2026_CS1_CS_Q61",
+      "question_number": 61,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the recursive functions represented by the following code segment:\nint bar(int n){\nif (n == 1) return 0;\nelse return 1 + bar(n/2);\n}\nint foo(int n){\nif (n == 1) return 1;\nelse return 1 + foo(bar(n));\n}\nThe smallest positive integer n for which foo(n) returns 5 is ______. (answer in\ninteger)\nNote: Ignore syntax errors (if any) in the function.",
+      "options": null,
+      "has_images": false,
+      "page_start": 45,
+      "page_end": 45
+    },
+    {
+      "id": "2026_CS1_CS_Q62",
+      "question_number": 62,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "The following sequence corresponds to the preorder traversal of a binary search\ntree 𝑇:\n50, 25, 13, 40, 30, 47, 75, 60, 70, 80, 77\nThe position of the element 60 in the postorder traversal of 𝑇 is ______. (answer in\ninteger)\nNote: The position begins with 1.",
+      "options": null,
+      "has_images": false,
+      "page_start": 45,
+      "page_end": 45
+    },
+    {
+      "id": "2026_CS1_CS_Q63",
+      "question_number": 63,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the following program snippet. Assume that the program compiles and runs\nsuccessfully. Further, assume that the fork() system call is always successful in\ncreating a process.\nint main () {\nint i;\nfor (i = 0; i < 3; i++){\nif (fork() == 0){\ncontinue;\n}\nbreak;\n}\nprintf(\"Hello!\");\nreturn 0;\n}\nThe total number of times that the printf statement gets executed is ________.\n(answer in integer)",
+      "options": null,
+      "has_images": false,
+      "page_start": 46,
+      "page_end": 46
+    },
+    {
+      "id": "2026_CS1_CS_Q64",
+      "question_number": 64,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider a CPU that has to execute two types of processes. The first type,\nActuators",
+      "options": {
+        "A": ", requires a CPU burst of 6 seconds. The second type, Controllers",
+        "C": ",\nrequires a CPU burst of 8 seconds. A new process of type A arrives at time 𝑡 = 10,\n20, 30, 40, and 50 (in seconds). Similarly, a new process of type C arrives at time 𝑡 =\n11, 22, 33, 44, and 55 (in seconds). The CPU scheduling policy is First Come First\nServe (FCFS). The first process of type A starts running at 𝑡 = 10 seconds. The\naverage waiting time (in seconds) for the 10 processes is ___________. (rounded off\nto one decimal place)"
+      },
+      "has_images": false,
+      "page_start": 46,
+      "page_end": 46
+    },
+    {
+      "id": "2026_CS1_CS_Q65",
+      "question_number": 65,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider a relational database schema with a relation 𝑅(𝐴, 𝐵, 𝐶, 𝐷). If {𝐴, 𝐵} and\n{𝐴, 𝐶} are the only two candidate keys of the relation 𝑅, then the number of superkeys\nof relation 𝑅 is ______. (answer in integer)",
+      "options": null,
+      "has_images": false,
+      "page_start": 46,
+      "page_end": 46
+    }
+  ]
+}
