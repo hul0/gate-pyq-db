@@ -1,0 +1,403 @@
+#!/usr/bin/env python3
+"""
+generate_paper_textbook.py
+
+Generates a print-friendly, standard academic textbook PDF for a GATE paper set:
+- Optimized for black-and-white / grayscale printing (zero ink waste).
+- Side-by-side design: Question + options with checkboxes on the left,
+  clean vertical divider, Answer + Topic + Explanation on the right.
+- Cover-and-practice layout: users can cover the right side with paper/ruler
+  and tick choices on the left.
+- Full LaTeX math and code rendering.
+- Produces:
+    dataset/papers/<paper_id>/<paper_id>_textbook.pdf
+    pdf_books/<paper_id>.pdf
+"""
+
+import os
+import sys
+import json
+import re
+import shutil
+import subprocess
+
+def escape_latex_outside_math(text):
+    if not text:
+        return ""
+        
+    # Split text into math parts and non-math parts
+    # Tokens can be $...$, $$...$$, \begin{...}...\end{...}, or regular text
+    math_pattern = r'(\$\$.*?\$\$|\$.*?\$|\\begin\{[a-zA-Z*]+\}.*?\\end\{[a-zA-Z*]+\})'
+    parts = re.split(math_pattern, text, flags=re.DOTALL)
+
+    escaped_parts = []
+    for i, part in enumerate(parts):
+        if i % 2 == 1:
+            # Inside math / environment - preserve as is
+            escaped_parts.append(part)
+        else:
+            # Outside math - escape special LaTeX characters
+            p = part
+            # Escape & (if not already escaped)
+            p = re.sub(r'(?<!\\)&', r'\&', p)
+            # Escape % (if not already escaped)
+            p = re.sub(r'(?<!\\)%', r'\%', p)
+            # Escape # (if not already escaped)
+            p = re.sub(r'(?<!\\)#', r'\#', p)
+            # Escape _ (if not already escaped)
+            p = re.sub(r'(?<!\\)_', r'\_', p)
+            escaped_parts.append(p)
+
+    return "".join(escaped_parts)
+
+def convert_markdown_tables_to_latex(text):
+    # Detect markdown tables: lines starting with |
+    lines = text.split("\n")
+    new_lines = []
+    table_lines = []
+    in_table = False
+
+    for line in lines:
+        sline = line.strip()
+        if sline.startswith("|") and sline.endswith("|"):
+            in_table = True
+            table_lines.append(sline)
+        else:
+            if in_table:
+                # Process collected table lines
+                table_tex = format_latex_table(table_lines)
+                new_lines.append(table_tex)
+                table_lines = []
+                in_table = False
+            new_lines.append(line)
+
+    if in_table and table_lines:
+        table_tex = format_latex_table(table_lines)
+        new_lines.append(table_tex)
+
+    return "\n".join(new_lines)
+
+def format_latex_table(table_lines):
+    if len(table_lines) < 2:
+        return "\n".join(table_lines)
+
+    rows = []
+    alignments = []
+    for idx, l in enumerate(table_lines):
+        cells = [c.strip() for c in l.strip("|").split("|")]
+        if idx == 1 and all(set(c).issubset({'-', ':', ' '}) for c in cells):
+            # Alignment row
+            for c in cells:
+                if c.startswith(":") and c.endswith(":"):
+                    alignments.append("c")
+                elif c.endswith(":"):
+                    alignments.append("r")
+                else:
+                    alignments.append("l")
+            continue
+        rows.append(cells)
+
+    if not rows:
+        return ""
+
+    num_cols = max(len(r) for r in rows)
+    if len(alignments) < num_cols:
+        alignments = ["l"] * num_cols
+
+    col_spec = "".join(alignments)
+    out = ["\\begin{center}\\small", f"\\begin{{tabular}}{{{col_spec}}}", "\\toprule"]
+    
+    # Header row
+    header_cells = rows[0]
+    out.append(" & ".join(header_cells) + " \\\\")
+    out.append("\\midrule")
+
+    # Data rows
+    for r in rows[1:]:
+        out.append(" & ".join(r) + " \\\\")
+
+    out.append("\\bottomrule")
+    out.append("\\end{tabular}\\end{center}")
+    return "\n".join(out)
+
+def convert_code_blocks_to_latex(text):
+    # Replace ```c ... ``` with lstlisting
+    code_pattern = r'```(?:c|C|cpp)?\s*\n(.*?)\n```'
+    def replacer(m):
+        code_content = m.group(1)
+        return (
+            "\\begin{lstlisting}[language=C, basicstyle=\\footnotesize\\ttfamily, "
+            "frame=single, rulecolor=\\color{black!30}, tabsize=2, breaklines=true]\n"
+            + code_content + "\n\\end{lstlisting}"
+        )
+    return re.sub(code_pattern, replacer, text, flags=re.DOTALL)
+
+def format_question_body(q):
+    # Prefer question_text_latex if available
+    text = q.get("question_text_latex") or q.get("question_text", "")
+    
+    # Clean PDF artifacts
+    text = re.sub(r'Organising Institute:.*', '', text)
+    text = re.sub(r'Organizing Institute:.*', '', text)
+    
+    # Format code blocks first (verbatim)
+    # Split code blocks so we don't escape inside them
+    code_parts = re.split(r'(```(?:c|C|cpp)?\s*\n.*?\n```)', text, flags=re.DOTALL)
+    processed_parts = []
+    for idx, cp in enumerate(code_parts):
+        if idx % 2 == 1:
+            # Code block
+            processed_parts.append(convert_code_blocks_to_latex(cp))
+        else:
+            # Normal text: tables and escaping
+            t = convert_markdown_tables_to_latex(cp)
+            t = escape_latex_outside_math(t)
+            # Normalize double newlines to paragraph breaks
+            t = t.replace("\n\n", "\n\\par\\medskip\n")
+            processed_parts.append(t)
+
+    return "".join(processed_parts)
+
+def format_options(q):
+    options = q.get("options_latex") or q.get("options")
+    if not options or not isinstance(options, dict):
+        # NAT Question
+        return "\\par\\vspace{6pt}\\noindent\\textbf{Your Answer:} \\fbox{\\rule{0pt}{1.3ex}\\hspace{3cm}}"
+
+    items = []
+    for opt_key in ["A", "B", "C", "D"]:
+        if opt_key in options:
+            val = options[opt_key]
+            # Clean footers
+            val = re.sub(r'Organising Institute:.*', '', str(val)).strip()
+            val = re.sub(r'Organizing Institute:.*', '', val).strip()
+            val = escape_latex_outside_math(val)
+            items.append(r"$\square$\ \textbf{(%s)} %s" % (opt_key, val))
+
+    if not items:
+        return ""
+
+    # Check if options are short enough for 2 columns or need stacked lines
+    max_len = max(len(it) for it in items)
+    if max_len < 35:
+        # 2 per line
+        chunks = []
+        if len(items) >= 2:
+            chunks.append(f"{items[0]} \\hfill {items[1]}")
+        if len(items) >= 4:
+            chunks.append(f"{items[2]} \\hfill {items[3]}")
+        elif len(items) == 3:
+            chunks.append(items[2])
+        return "\\par\\vspace{5pt}\\noindent " + " \\\\\n\\vspace{3pt}\n".join(chunks)
+    else:
+        # Stacked vertically
+        return "\\par\\vspace{5pt}\\noindent " + " \\\\\n\\vspace{3pt}\n\\noindent ".join(items)
+
+def format_solution_panel(q):
+    ans = q.get("answer", "").strip()
+    topic = q.get("topic") or "General"
+    subtopic = q.get("subtopic") or ""
+    diff = q.get("difficulty_level") or "Standard"
+    expl = q.get("explaination") or ""
+
+    topic = escape_latex_outside_math(topic)
+    subtopic = escape_latex_outside_math(subtopic)
+    expl = escape_latex_outside_math(expl)
+    expl = expl.replace("\n\n", "\n\\par\\smallskip\n")
+
+    lines = [
+        f"\\textbf{{Official Key:}} \\textbf{{\\large {ans}}} \\hfill \\textit{{\\small [{diff}]}}",
+        "\\vspace{2pt}\\hrule height 0.3pt\\vspace{3pt}",
+        f"\\textbf{{Topic:}} {topic} \\\\",
+        f"\\textbf{{Subtopic:}} \\textit{{{subtopic}}}" if subtopic else "",
+        "\\vspace{2pt}\\hrule height 0.3pt\\vspace{3pt}",
+        "\\textbf{Guide / Hint:} \\\\",
+        f"{{\\small {expl}}}" if expl else "\\textit{\\footnotesize [Hint to be added]}"
+    ]
+    return "\n".join([l for l in lines if l])
+
+def generate_latex_document(paper_data):
+    paper_id = paper_data.get("paper_id", "GATE")
+    year = paper_data.get("year", 2025)
+    session = paper_data.get("session", "CS2")
+    subject = paper_data.get("subject", "Computer Science and Information Technology")
+    questions = paper_data.get("questions", [])
+
+    tex = [
+        r"""\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.5cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape GATE """ + f"{year} {subject} ({session})" + r"""}
+\fancyhead[R]{\small\scshape Practice Compendium \& Solutions}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Code Listing Style (Monochrome, clean)
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=none,
+    frame=none,
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% Title Block
+\begin{center}
+    {\LARGE \textbf{GATE """ + str(year) + r""": Computer Science \& IT}}\\[0.25em]
+    {\large \textbf{Session """ + str(session) + r""" --- Problem Compendium with Side-by-Side Solutions}}\\[0.4em]
+    {\footnotesize \textsc{Organizing Institute: IIT Roorkee} \quad$\cdot$\quad \textsc{Reference: GATE 2026 Syllabus}}\\[0.4em]
+    \rule{\textwidth}{0.6pt}
+    \vspace{2pt}
+    {\footnotesize \textit{Practice Note: Cover the right column with a sheet of paper or ruler during mock attempts; tick your answers in the checkboxes on the left.}}
+    \vspace{-4pt}
+\end{center}
+"""
+    ]
+
+    current_section = None
+    for q in questions:
+        sec = q.get("section", "Computer Science and Information Technology")
+        if sec != current_section:
+            current_section = sec
+            tex.append(f"\\vspace{{6pt}}\n\\subsection*{{{sec}}}\n\\vspace{{-4pt}}")
+
+        q_num = q.get("question_number", 0)
+        q_type = q.get("question_type", "MCQ")
+        marks = q.get("marks", 1.0)
+        neg = q.get("negative_marks", 0.0)
+        qid = q.get("id", "")
+
+        q_body = format_question_body(q)
+        q_options = format_options(q)
+        sol_panel = format_solution_panel(q)
+
+        neg_text = f"Neg: {neg:.2f}" if neg > 0 else "No Neg"
+        clean_qid = qid.replace("_", r"\_")
+
+        box_header = (
+            "\\textbf{Q.%d} \\quad {\\footnotesize\\textsc{[%s $\\cdot$ %.0f Mark(s) $\\cdot$ %s]}} \\hfill {\\tiny\\texttt{%s}}"
+            % (q_num, q_type, marks, neg_text, clean_qid)
+        )
+
+        box_tex = "\n".join([
+            r"\noindent",
+            r"\begin{tcolorbox}[",
+            r"    sidebyside,",
+            r"    sidebyside align=top,",
+            r"    lefthand width=0.55\textwidth,",
+            r"    colback=white,",
+            r"    colframe=black!40,",
+            r"    colbacklower=white,",
+            r"    arc=0.8mm,",
+            r"    boxrule=0.4pt,",
+            r"    top=4pt, bottom=4pt, left=5pt, right=5pt,",
+            r"    middle=5pt",
+            r"]",
+            box_header,
+            r"\vspace{1pt}\hrule height 0.3pt\vspace{3pt}",
+            "",
+            q_body,
+            "",
+            q_options,
+            "",
+            r"\tcblower",
+            "",
+            sol_panel,
+            "",
+            r"\end{tcolorbox}",
+            r"\vspace{-4pt}"
+        ])
+        tex.append(box_tex)
+
+    tex.append(r"\end{document}")
+    return "\n".join(tex)
+
+def compile_latex_to_pdf(tex_content, output_dir, file_basename):
+    tex_path = os.path.join(output_dir, f"{file_basename}.tex")
+    pdf_path = os.path.join(output_dir, f"{file_basename}.pdf")
+
+    with open(tex_path, "w", encoding="utf-8") as f:
+        f.write(tex_content)
+
+    print(f"Compiling {tex_path} with xelatex...")
+    
+    # Run xelatex twice to resolve page counts / LastPage
+    cmd = ["xelatex", "-interaction=nonstopmode", f"{file_basename}.tex"]
+    res1 = subprocess.run(cmd, cwd=output_dir, capture_output=True, text=True)
+    if res1.returncode != 0:
+        print("First xelatex pass finished with warnings/errors. Running second pass...")
+        
+    res2 = subprocess.run(cmd, cwd=output_dir, capture_output=True, text=True)
+    
+    if os.path.exists(pdf_path):
+        print(f"Successfully generated PDF: {pdf_path}")
+        # Clean aux files
+        for ext in [".aux", ".log", ".out"]:
+            aux_file = os.path.join(output_dir, f"{file_basename}{ext}")
+            if os.path.exists(aux_file):
+                try:
+                    os.remove(aux_file)
+                except Exception:
+                    pass
+        return pdf_path
+    else:
+        print(f"Error: PDF was not generated. Compilation log tail:")
+        print(res2.stdout[-1500:])
+        return None
+
+def main():
+    paper_id = sys.argv[1] if len(sys.argv) > 1 else "2025_CS2"
+    root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    paper_dir = os.path.join(root_dir, "dataset", "papers", paper_id)
+    pdf_books_dir = os.path.join(root_dir, "pdf_books")
+    os.makedirs(pdf_books_dir, exist_ok=True)
+
+    full_paper_path = os.path.join(paper_dir, "full_paper.json")
+    if not os.path.exists(full_paper_path):
+        print(f"full_paper.json not found in {paper_dir}. Running generate_full_paper_json.py...")
+        subprocess.run([sys.executable, os.path.join(root_dir, "scripts", "generate_full_paper_json.py"), paper_id], check=True)
+
+    with open(full_paper_path, "r", encoding="utf-8") as f:
+        paper_data = json.load(f)
+
+    print(f"Generating LaTeX source for {paper_id} ({len(paper_data.get('questions', []))} questions)...")
+    tex_content = generate_latex_document(paper_data)
+
+    file_basename = f"{paper_id}_textbook"
+    pdf_path = compile_latex_to_pdf(tex_content, paper_dir, file_basename)
+
+    if pdf_path and os.path.exists(pdf_path):
+        # Also copy to centralized pdf_books/
+        dest_copy = os.path.join(pdf_books_dir, f"{paper_id}.pdf")
+        shutil.copy2(pdf_path, dest_copy)
+        print(f"Copied centralized PDF to: {dest_copy}")
+        size_kb = os.path.getsize(pdf_path) / 1024
+        print(f"Done! PDF size: {size_kb:.1f} KB")
+
+if __name__ == "__main__":
+    main()

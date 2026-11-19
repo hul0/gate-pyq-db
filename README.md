@@ -27,6 +27,19 @@ Author / Maintainer: Rupam Ghosh
 ## Repository Structure
 
 ```
+├── answer_keys/                     # Official answer key PDFs and scraped CSV/JSON keys
+├── digitized_answer_keys/           # Standardized JSON representations of official keys
+├── combined_qa/                     # Consolidated paper-level questions merged with official keys
+├── syllabus/
+│   └── cs_2026_syllabus.json        # Canonical GATE 2026 CS/IT & GA syllabus reference
+├── dataset/                         # Partitioned dataset, views, and master manifest
+│   ├── manifest.json                # Master catalog, summary stats, and lookup index
+│   ├── papers/                      # Per-paper directories (ga/cs slices, full_paper.json)
+│   └── views/                       # Global faceted views (by_marks, by_type, by_section)
+├── pdf_books/                       # Centralized print-ready textbook compendium PDFs
+├── docs/
+│   └── SPECIFICATIONS_AND_DECISIONS.md  # Comprehensive technical specs & ADRs
+├── scripts/                         # Production dataset building, enrichment & PDF scripts
 ├── output/                          # Ready-to-use parsed JSON papers (2007 - 2026)
 │   ├── 2007_CS.json
 │   ├── 2008_CS.json
@@ -53,6 +66,21 @@ Author / Maintainer: Rupam Ghosh
 ├── pytest.ini                       # Test runner configuration
 └── requirements.txt                 # Python dependencies
 ```
+
+---
+
+## Categorized Dataset, AI Enrichment & Textbook PDFs (2011–2025)
+
+The database includes a multi-dimensional categorized dataset, official syllabus alignment, AI metadata enrichment, and print-ready textbook compendiums:
+
+- **Syllabus Reference**: [syllabus/cs_2026_syllabus.json](syllabus/cs_2026_syllabus.json) contains a hierarchical representation of Sections 1–10 (CS & IT) plus General Aptitude.
+- **Categorized Slices**: Each paper under `dataset/papers/<paper_id>/` contains modular category slices (`ga_1_mark.json`, `ga_2_mark.json`, `cs_1_mark.json`, `cs_2_mark.json`) as well as the sequential monolithic `full_paper.json`.
+- **Global Faceted Views**: Cross-paper slicing available under `dataset/views/` (by marks, by question type, and by section).
+- **Master Query Manifest**: [dataset/manifest.json](dataset/manifest.json) provides fast in-memory indexing of all questions with tags and file pointers.
+- **Print-Optimized Textbook Compendiums**: High-resolution monochrome PDFs under `pdf_books/<paper_id>.pdf` designed with a 2-column cover-and-practice layout (left for questions with checkboxes, right for solutions and hints) using standard Times Roman (Liberation Serif).
+
+For the authoritative specification and architecture decisions record, refer to:
+- [docs/SPECIFICATIONS_AND_DECISIONS.md](docs/SPECIFICATIONS_AND_DECISIONS.md)
 
 ---
 
