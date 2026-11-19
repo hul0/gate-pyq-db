@@ -1,0 +1,185 @@
+{
+  "paper_id": "2024_CS1",
+  "year": 2024,
+  "session": "CS1",
+  "category": "ga_2_mark",
+  "total_questions": 4,
+  "questions": [
+    {
+      "id": "2024_CS1_GA_Q06",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 6,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 5,
+      "question_text": "In the given text, the blanks are numbered (i)−(iv). Select the best match for all the\nblanks.\nSteve was advised to keep his head (i) before heading (ii) to bat;\nfor, while he had a head (iii) batting, he could only do so with a cool head\ns (iv) his shoulders.",
+      "options": {
+        "A": "(i) down\n(ii) down\n(iii) on\n(iv) for",
+        "B": "(i) on\n(ii) down\n(iii) for\n(iv) on",
+        "C": "(i) down\n(ii) out\n(iii) for\n(iv) on",
+        "D": "(i) on\n(ii) out\n(iii) on\n(iv) for"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2024",
+        "2_mark",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2024_CS1_GA_Q07",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 7,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 6,
+      "question_text": "A rectangular paper sheet of dimensions 54 cm × 4 cm is taken. The two longer\nedges of the sheet are joined together to create a cylindrical tube. A cube whose\nsurface area is equal to the area of the sheet is also taken.\nThen, the ratio of the volume of the cylindrical tube to the volume of the cube is",
+      "options": {
+        "A": "1/π",
+        "B": "2/π",
+        "C": "3/π",
+        "D": "4/π"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2024",
+        "2_mark",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2024_CS1_GA_Q09",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 9,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 7,
+      "question_text": "A rectangular paper of 20 cm × 8 cm is folded 3 times. Each fold is made along the\nline of symmetry, which is perpendicular to its long edge. The perimeter of the final\nfolded sheet (in cm) is",
+      "options": {
+        "A": "18",
+        "B": "24",
+        "C": "20",
+        "D": "21"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2024",
+        "2_mark",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2024_CS1_GA_Q10",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 10,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 8,
+      "question_text": "The least number of squares to be added in the figure to make AB a line of\nsymmetry is",
+      "options": {
+        "A": "6",
+        "B": "4",
+        "C": "5",
+        "D": "7"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2024",
+        "2_mark",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    }
+  ]
+}

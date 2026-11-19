@@ -1,0 +1,229 @@
+{
+  "paper_id": "2022_CS",
+  "year": 2022,
+  "session": "CS",
+  "category": "ga_2_mark",
+  "total_questions": 5,
+  "questions": [
+    {
+      "id": "2022_CS_GA_Q06",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 6,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 7,
+      "question_text": "Some people believe that “what gets measured, improves”. Some others believe\nthat “what gets measured, gets gamed”. One possible reason for the difference in\nthe beliefs is the work culture in organizations. In organizations with good work\nculture, metrics help improve outcomes. However, the same metrics are\ncounterproductive in organizations with poor work culture.\nWhich one of the following is the CORRECT logical inference based on the\ninformation in the above passage?",
+      "options": {
+        "A": "Metrics are useful in organizations with poor work culture",
+        "B": "Metrics are useful in organizations with good work culture",
+        "C": "Metrics are always counterproductive in organizations with good work culture",
+        "D": "Metrics are never useful in organizations with good work culture"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2022",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2022_CS_GA_Q07",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 7,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 8,
+      "question_text": "In a recently conducted national entrance test, boys constituted 65% of those who\nappeared for the test. Girls constituted the remaining candidates and they\naccounted for 60% of the qualified candidates.\nWhich one of the following is the correct logical inference based on the\ninformation provided in the above passage?",
+      "options": {
+        "A": "Equal number of boys and girls qualified",
+        "B": "Equal number of boys and girls appeared for the test",
+        "C": "The number of boys who appeared for the test is less than the number of girls\nwho appeared",
+        "D": "The number of boys who qualified the test is less than the number of girls who\nqualified"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2022",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2022_CS_GA_Q08",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 8,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 9,
+      "question_text": "A box contains five balls of same size and shape. Three of them are green\ncoloured balls and two of them are orange coloured balls. Balls are drawn from\nthe box one at a time. If a green ball is drawn, it is not replaced. If an orange ball\nis drawn, it is replaced with another orange ball.\nFirst ball is drawn. What is the probability of getting an orange ball in the next\ndraw?",
+      "options": {
+        "A": "1\n2",
+        "B": "8\n25",
+        "C": "19\n50",
+        "D": "23\n50"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2022",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2022_CS_GA_Q09",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 9,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 10,
+      "question_text": "The corners and mid-points of the sides of a triangle are named using the distinct\nletters P, Q, R, S, T and U, but not necessarily in the same order. Consider the\nfollowing statements:\n The line joining P and R is parallel to the line joining Q and S.\n P is placed on the side opposite to the corner T.\n S and U cannot be placed on the same side.\nWhich one of the following statements is correct based on the above\ninformation?",
+      "options": {
+        "A": "P cannot be placed at a corner",
+        "B": "S cannot be placed at a corner",
+        "C": "U cannot be placed at a mid-point",
+        "D": "R cannot be placed at a corner"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2022",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2022_CS_GA_Q10",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 10,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 11,
+      "question_text": "A plot of land must be divided between four families. They want their\nindividual plots to be similar in shape, not necessarily equal in area. The land\nhas equally spaced poles, marked as dots in the below figure. Two ropes, R1 and\nR2, are already present and cannot be moved.\nWhat is the least number of additional straight ropes needed to create the\ndesired plots? A single rope can pass through three poles that are aligned in a\nstraight line.",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "5",
+        "D": "3\nQ.11 – Q.22 Multiple Choice Questions (MCQ), carry ONE mark each."
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2022",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    }
+  ]
+}

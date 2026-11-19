@@ -1,0 +1,246 @@
+{
+  "exam": "GATE 2026",
+  "paper": "Computer Science and Information Technology",
+  "paper_code": "CS",
+  "organizing_institute": "IIT Guwahati",
+  "sections": [
+    {
+      "section_id": "GA",
+      "section_name": "General Aptitude",
+      "modules": [
+        {
+          "module_name": "Verbal Aptitude",
+          "topics": [
+            "Basic English grammar: tenses, articles, adjectives, prepositions, conjunctions, verb-noun agreement",
+            "Vocabulary: words, idioms, and phrases in context",
+            "Reading and comprehension",
+            "Narrative sequencing"
+          ]
+        },
+        {
+          "module_name": "Quantitative Aptitude",
+          "topics": [
+            "Data interpretation: data graphs (bar graphs, pie charts, and other graphs representing data), 2- and 3-dimensional plots, maps, and tables",
+            "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+            "Mensuration and geometry",
+            "Elementary statistics and probability"
+          ]
+        },
+        {
+          "module_name": "Analytical Aptitude",
+          "topics": [
+            "Logic: deduction and induction",
+            "Analogy",
+            "Numerical relations and reasoning"
+          ]
+        },
+        {
+          "module_name": "Spatial Aptitude",
+          "topics": [
+            "Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping",
+            "Paper folding, cutting, and patterns in 2 and 3 dimensions"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "CS_SEC_1",
+      "section_number": 1,
+      "section_name": "Engineering Mathematics",
+      "modules": [
+        {
+          "module_name": "Discrete Mathematics",
+          "topics": [
+            "Propositional and first order logic",
+            "Sets, relations, functions, partial orders and lattices",
+            "Monoids, Groups",
+            "Graphs: connectivity, matching, colouring",
+            "Combinatorics: counting, recurrence relations, generating functions"
+          ]
+        },
+        {
+          "module_name": "Linear Algebra",
+          "topics": [
+            "Matrices, determinants",
+            "System of linear equations",
+            "Eigenvalues and eigenvectors",
+            "LU decomposition"
+          ]
+        },
+        {
+          "module_name": "Calculus",
+          "topics": [
+            "Limits, continuity and differentiability",
+            "Maxima and minima",
+            "Mean value theorem",
+            "Integration"
+          ]
+        },
+        {
+          "module_name": "Probability and Statistics",
+          "topics": [
+            "Random variables",
+            "Uniform, normal, exponential, Poisson and binomial distributions",
+            "Mean, median, mode and standard deviation",
+            "Conditional probability and Bayes theorem"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "CS_SEC_2",
+      "section_number": 2,
+      "section_name": "Digital Logic",
+      "modules": [
+        {
+          "module_name": "Digital Logic",
+          "topics": [
+            "Boolean algebra",
+            "Combinational and sequential circuits",
+            "Minimization",
+            "Number representations and computer arithmetic (fixed and floating point)"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "CS_SEC_3",
+      "section_number": 3,
+      "section_name": "Computer Organization and Architecture",
+      "modules": [
+        {
+          "module_name": "Computer Organization and Architecture",
+          "topics": [
+            "Machine instructions and addressing modes",
+            "ALU, data-path and control unit",
+            "Instruction pipelining, pipeline hazards",
+            "Memory hierarchy: cache, main memory and secondary storage",
+            "I/O interface: interrupt and DMA mode"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "CS_SEC_4",
+      "section_number": 4,
+      "section_name": "Programming and Data Structures",
+      "modules": [
+        {
+          "module_name": "Programming and Data Structures",
+          "topics": [
+            "Programming in C",
+            "Recursion",
+            "Arrays, stacks, queues, linked lists",
+            "Trees, binary search trees, binary heaps",
+            "Graphs"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "CS_SEC_5",
+      "section_number": 5,
+      "section_name": "Algorithms",
+      "modules": [
+        {
+          "module_name": "Algorithms",
+          "topics": [
+            "Searching, sorting, hashing",
+            "Asymptotic worst case time and space complexity",
+            "Algorithm design techniques: greedy, dynamic programming and divide-and-conquer",
+            "Graph traversals, minimum spanning trees, shortest paths"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "CS_SEC_6",
+      "section_number": 6,
+      "section_name": "Theory of Computation",
+      "modules": [
+        {
+          "module_name": "Theory of Computation",
+          "topics": [
+            "Regular expressions and finite automata",
+            "Context-free grammars and push-down automata",
+            "Regular and context-free languages, pumping lemma",
+            "Turing machines and undecidability"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "CS_SEC_7",
+      "section_number": 7,
+      "section_name": "Compiler Design",
+      "modules": [
+        {
+          "module_name": "Compiler Design",
+          "topics": [
+            "Lexical analysis, parsing, syntax-directed translation",
+            "Runtime environments",
+            "Intermediate code generation",
+            "Local optimisation",
+            "Data flow analyses: constant propagation, liveness analysis, common sub expression elimination"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "CS_SEC_8",
+      "section_number": 8,
+      "section_name": "Operating System",
+      "modules": [
+        {
+          "module_name": "Operating System",
+          "topics": [
+            "System calls, processes, threads, inter-process communication",
+            "Concurrency and synchronization",
+            "Deadlock",
+            "CPU and I/O scheduling",
+            "Memory management and virtual memory",
+            "File systems"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "CS_SEC_9",
+      "section_number": 9,
+      "section_name": "Databases",
+      "modules": [
+        {
+          "module_name": "Databases",
+          "topics": [
+            "ER-model",
+            "Relational model: relational algebra, tuple calculus, SQL",
+            "Integrity constraints, normal forms",
+            "File organization, indexing (e.g., B and B+ trees)",
+            "Transactions and concurrency control"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "CS_SEC_10",
+      "section_number": 10,
+      "section_name": "Computer Networks",
+      "modules": [
+        {
+          "module_name": "Computer Networks",
+          "topics": [
+            "Concept of layering: OSI and TCP/IP Protocol Stacks",
+            "Basics of packet, circuit and virtual circuit-switching",
+            "Data link layer: framing, error detection, Medium Access Control, Ethernet bridging",
+            "Routing protocols: shortest path, flooding, distance vector and link state routing",
+            "Fragmentation and IP addressing, IPv4, CIDR notation",
+            "Basics of IP support protocols: ARP, DHCP, ICMP",
+            "Network Address Translation (NAT)",
+            "Transport layer: flow control and congestion control, UDP, TCP, sockets",
+            "Application layer protocols: DNS, SMTP, HTTP, FTP, Email"
+          ]
+        }
+      ]
+    }
+  ]
+}

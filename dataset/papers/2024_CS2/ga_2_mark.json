@@ -1,0 +1,185 @@
+{
+  "paper_id": "2024_CS2",
+  "year": 2024,
+  "session": "CS2",
+  "category": "ga_2_mark",
+  "total_questions": 4,
+  "questions": [
+    {
+      "id": "2024_CS2_GA_Q06",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS2",
+      "year": 2024,
+      "session": "CS2",
+      "question_number": 6,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 5,
+      "question_text": "Sequence the following sentences in a coherent passage.\nP:\nThis fortuitous geological event generated a colossal amount of energy and\nheat that resulted in the rocks rising to an average height of 4 km across the\ncontact zone.\nQ: Thus, the geophysicists tend to think of the Himalayas as an active geological\nevent rather than as a static geological feature.\nR: The natural process of the cooling of this massive edifice absorbed large\nquantities of atmospheric carbon dioxide, altering the earth’s atmosphere and\nmaking it better suited for life.\nS:\nMany millennia ago, a breakaway chunk of bedrock from the Antarctic Plate\ncollided with the massive Eurasian Plate.",
+      "options": {
+        "A": "QPSR",
+        "B": "QSPR",
+        "C": "SPRQ",
+        "D": "SRPQ\n\nOrganizing Institute: IISc, Bengaluru"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2024",
+        "2_mark",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2024_CS2_GA_Q07",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS2",
+      "year": 2024,
+      "session": "CS2",
+      "question_number": 7,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 6,
+      "question_text": "A person sold two different items at the same price. He made 10% profit in one\nitem, and 10% loss in the other item. In selling these two items, the person made a\ntotal of",
+      "options": {
+        "A": "1% profit",
+        "B": "2% profit",
+        "C": "1% loss",
+        "D": "2% loss\n\nOrganizing Institute: IISc, Bengaluru"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2024",
+        "2_mark",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2024_CS2_GA_Q09",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS2",
+      "year": 2024,
+      "session": "CS2",
+      "question_number": 9,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 8,
+      "question_text": "A cube is to be cut into 8 pieces of equal size and shape. Here, each cut should be\nstraight and it should not stop till it reaches the other end of the cube.\nThe minimum number of such cuts required is",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "7",
+        "D": "8\n\nOrganizing Institute: IISc, Bengaluru"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2024",
+        "2_mark",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2024_CS2_GA_Q10",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS2",
+      "year": 2024,
+      "session": "CS2",
+      "question_number": 10,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 9,
+      "question_text": "In the 4 × 4 array shown below, each cell of the first three rows has either a\ncross (X) or a number.\nThe number in a cell represents the count of the immediate neighboring cells\n(left, right, top, bottom, diagonals) NOT having a cross (X). Given that the last row\nhas no crosses (X), the sum of the four numbers to be filled in the last row is",
+      "options": {
+        "A": "11",
+        "B": "10",
+        "C": "12",
+        "D": "9\n\nOrganizing Institute: IISc, Bengaluru"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2024",
+        "2_mark",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "paper_id": "2022_CS",
+  "year": 2022,
+  "session": "CS",
+  "category": "ga_1_mark",
+  "total_questions": 4,
+  "questions": [
+    {
+      "id": "2022_CS_GA_Q01",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 1,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 2,
+      "question_text": "The _________ is too high for it to be considered _________.",
+      "options": {
+        "A": "fair / fare",
+        "B": "faer / fair",
+        "C": "fare / fare",
+        "D": "fare / fair"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2022",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2022_CS_GA_Q02",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 2,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 3,
+      "question_text": "A function y(x) is defined in the interval [0, 1] on the 𝑥-axis as\n𝑦(𝑥) =\n⎩\n⎪\n⎨\n⎪\n⎧\n2 if 0 ≤𝑥< 1\n3\n3 if 1\n3 ≤𝑥< 3\n4\n1 if 3\n4 ≤𝑥≤1\nWhich one of the following is the area under the curve for the interval [0, 1] on\nthe 𝑥-axis?",
+      "options": {
+        "A": "5\n6",
+        "B": "6\n5",
+        "C": "13\n6",
+        "D": "6\n13"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2022",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2022_CS_GA_Q03",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 3,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 4,
+      "question_text": "Let r be a root of the equation 𝑥ଶ+ 2𝑥+ 6 = 0.\nThen the value of the expression (𝑟+ 2)(𝑟+ 3)(𝑟+ 4)(𝑟+ 5) is",
+      "options": {
+        "A": "51",
+        "B": "−51",
+        "C": "126",
+        "D": "−126"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2022",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2022_CS_GA_Q04",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 4,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 5,
+      "question_text": "Given below are four statements.\nStatement 1: All students are inquisitive.\nStatement 2: Some students are inquisitive.\nStatement 3: No student is inquisitive.\nStatement 4: Some students are not inquisitive.\nFrom the given four statements, find the two statements that CANNOT BE\nTRUE simultaneously, assuming that there is at least one student in the class.",
+      "options": {
+        "A": "Statement 1 and Statement 3",
+        "B": "Statement 1 and Statement 2",
+        "C": "Statement 2 and Statement 4",
+        "D": "Statement 3 and Statement 4"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2022",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "paper_id": "2024_CS1",
+  "year": 2024,
+  "session": "CS1",
+  "category": "ga_1_mark",
+  "total_questions": 5,
+  "questions": [
+    {
+      "id": "2024_CS1_GA_Q01",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 1,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1,
+      "question_text": "If ‘→’ denotes increasing order of intensity, then the meaning of the words\n[dry → arid → parched] is analogous to [diet → fast → ________ ].\nWhich one of the given options is appropriate to fill the blank?",
+      "options": {
+        "A": "starve",
+        "B": "reject",
+        "C": "feast",
+        "D": "deny"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2024",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2024_CS1_GA_Q02",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 2,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 2,
+      "question_text": "If two distinct non-zero real variables 𝑥 and 𝑦 are such that (𝑥+ 𝑦) is proportional\nto (𝑥−𝑦) then the value of\n𝑥\n𝑦",
+      "options": {
+        "A": "depends on 𝑥𝑦",
+        "B": "depends only on 𝑥 and not on 𝑦",
+        "C": "depends only on 𝑦 and not on 𝑥",
+        "D": "is a constant"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2024",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2024_CS1_GA_Q03",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 3,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2,
+      "question_text": "Consider the following sample of numbers:\n9, 18, 11, 14, 15, 17, 10, 69, 11, 13\nThe median of the sample is",
+      "options": {
+        "A": "13.5",
+        "B": "14",
+        "C": "11",
+        "D": "18.7"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2024",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2024_CS1_GA_Q04",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 4,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 3,
+      "question_text": "The number of coins of ₹1, ₹5, and ₹10 denominations that a person has are in the\nratio 5:3:13. Of the total amount, the percentage of money in ₹5 coins is",
+      "options": {
+        "A": "21%",
+        "B": "14\n2\n7%",
+        "C": "10%",
+        "D": "30%"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2024",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2024_CS1_GA_Q05",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 5,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 4,
+      "question_text": "For positive non-zero real variables 𝑝 and 𝑞, if\nlog (𝑝2 + 𝑞2) = log 𝑝+ log 𝑞+ 2 log 3 ,\nthen, the value of\n𝑝4+𝑞4\n𝑝2𝑞2 is",
+      "options": {
+        "A": "79",
+        "B": "81",
+        "C": "9",
+        "D": "83"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2024",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    }
+  ]
+}

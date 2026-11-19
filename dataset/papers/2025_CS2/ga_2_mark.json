@@ -1,0 +1,162 @@
+{
+  "paper_id": "2025_CS2",
+  "year": 2025,
+  "session": "CS2",
+  "category": "ga_2_mark",
+  "total_questions": 3,
+  "questions": [
+    {
+      "id": "2025_CS2_GA_Q06",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS2",
+      "year": 2025,
+      "session": "CS2",
+      "question_number": 6,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 7,
+      "question_text": "Based only on the conversation below, identify the logically correct inference:\n“Even if I had known that you were in the hospital, I would not have gone there to\nsee you”, Ramya told Josephine.",
+      "options": {
+        "A": "Ramya knew that Josephine was in the hospital.",
+        "B": "Ramya did not know that Josephine was in the hospital.",
+        "C": "Ramya and Josephine were once close friends; but now, they are not.",
+        "D": "Josephine was in the hospital due to an injury to her leg.\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Analytical Aptitude",
+      "subtopic": "Logic: deduction and conditional statements",
+      "difficulty_level": "Easy",
+      "explaination": "The subjunctive statement 'Even if I had known that you were in the hospital...' logically presupposes that the speaker did not know about Josephine's hospitalization at that time.",
+      "tags": [
+        "2025",
+        "2_mark",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Based only on the conversation below, identify the logically correct inference:\n``Even if I had known that you were in the hospital, I would not have gone there to see you'', Ramya told Josephine.",
+      "options_latex": {
+        "A": "Ramya knew that Josephine was in the hospital.",
+        "B": "Ramya did not know that Josephine was in the hospital.",
+        "C": "Ramya and Josephine were once close friends; but now, they are not.",
+        "D": "Josephine was in the hospital due to an injury to her leg."
+      }
+    },
+    {
+      "id": "2025_CS2_GA_Q07",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS2",
+      "year": 2025,
+      "session": "CS2",
+      "question_number": 7,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 8,
+      "question_text": "If IMAGE and FIELD are coded as FHBNJ and EMFJG respectively then, which\none among the given options is the most appropriate code for BEACH ?",
+      "options": {
+        "A": "CEADP",
+        "B": "IDBFC",
+        "C": "JGIBC",
+        "D": "IBCEC\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Analytical Aptitude",
+      "subtopic": "Letter patterns, sequencing and coding-decoding",
+      "difficulty_level": "Medium",
+      "explaination": "The coding rule applies a $+1$ alphabetical shift to each character followed by string reversal. Shifting $\\text{BEACH}$ by $+1$ gives $\\text{CFBDI}$, and reversing this yields $\\text{IDBFC}$.",
+      "tags": [
+        "2025",
+        "2_mark",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "If $\\text{IMAGE}$ and $\\text{FIELD}$ are coded as $\\text{FHBNJ}$ and $\\text{EMFJG}$ respectively then, which one among the given options is the most appropriate code for $\\text{BEACH}$?",
+      "options_latex": {
+        "A": "CEADP",
+        "B": "IDBFC",
+        "C": "JGIBC",
+        "D": "IBCEC"
+      }
+    },
+    {
+      "id": "2025_CS2_GA_Q08",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS2",
+      "year": 2025,
+      "session": "CS2",
+      "question_number": 8,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 9,
+      "question_text": "Which one of the following options is correct for the given data in the table?\nIteration (i)\n0\n1\n2\n3\nInput (I)\n20\n−4\n10\n15\nOutput (X)\n20\n16\n26\n41\nOutput (Y)\n20\n−80\n−800\n−12000",
+      "options": {
+        "A": "𝑋(𝑖) = 𝑋(𝑖−1) + 𝐼(𝑖); 𝑌(𝑖) = 𝑌(𝑖−1)𝐼(𝑖); 𝑖> 0",
+        "B": "𝑋(𝑖) = 𝑋(𝑖−1)𝐼(𝑖); 𝑌(𝑖) = 𝑌(𝑖−1) + 𝐼(𝑖); 𝑖> 0",
+        "C": "𝑋(𝑖) = 𝑋(𝑖−1)𝐼(𝑖); 𝑌(𝑖) = 𝑌(𝑖−1)𝐼(𝑖); 𝑖> 0",
+        "D": "𝑋(𝑖) = 𝑋(𝑖−1) + 𝐼(𝑖); 𝑌(𝑖) = 𝑌(𝑖−1)𝐼(𝑖−1); 𝑖> 0\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical reasoning and recurrence relations",
+      "difficulty_level": "Medium",
+      "explaination": "Check the sequence updates: $X(i) = X(i-1) + I(i)$ yields $20 + (-4) = 16, 16 + 10 = 26, 26 + 15 = 41$, and $Y(i) = Y(i-1) \\cdot I(i)$ yields $20 \\times (-4) = -80, -80 \\times 10 = -800, -800 \\times 15 = -12000$.",
+      "tags": [
+        "2025",
+        "2_mark",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Which one of the following options is correct for the given data in the table?\n\n| Iteration ($i$) | Input ($I$) | Output ($X$) | Output ($Y$) |\n| :---: | :---: | :---: | :---: |\n| 0 | 20 | 20 | 20 |\n| 1 | $-4$ | 16 | $-80$ |\n| 2 | 10 | 26 | $-800$ |\n| 3 | 15 | 41 | $-12000$ |",
+      "options_latex": {
+        "A": "$X(i) = X(i-1) + I(i); \\; Y(i) = Y(i-1) I(i); \\; i > 0$",
+        "B": "$X(i) = X(i-1) I(i); \\; Y(i) = Y(i-1) + I(i); \\; i > 0$",
+        "C": "$X(i) = X(i-1) I(i); \\; Y(i) = Y(i-1) I(i); \\; i > 0$",
+        "D": "$X(i) = X(i-1) + I(i); \\; Y(i) = Y(i-1) I(i-1); \\; i > 0$"
+      }
+    }
+  ]
+}

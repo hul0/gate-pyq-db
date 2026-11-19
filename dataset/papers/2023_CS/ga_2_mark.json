@@ -1,0 +1,229 @@
+{
+  "paper_id": "2023_CS",
+  "year": 2023,
+  "session": "CS",
+  "category": "ga_2_mark",
+  "total_questions": 5,
+  "questions": [
+    {
+      "id": "2023_CS_GA_Q06",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 6,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 5,
+      "question_text": "The country of Zombieland is in distress since more than 75% of its working\npopulation is suffering from serious health issues. Studies conducted by competent\nhealth experts concluded that a complete lack of physical exercise among its\nworking population was one of the leading causes of their health issues. As one of\nthe measures to address the problem, the Government of Zombieland has decided\nto provide monetary incentives to those who ride bicycles to work.\n\nBased only on the information provided above, which one of the following\nstatements can be logically inferred with certainty?",
+      "options": {
+        "A": "All the working population of Zombieland will henceforth ride bicycles to work.",
+        "B": "Riding bicycles will ensure that all of the working population of Zombieland is free\nof health issues.",
+        "C": "The health experts suggested to the Government of Zombieland to declare riding\nbicycles as mandatory.",
+        "D": "The Government of Zombieland believes that riding bicycles is a form of physical\nexercise."
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2023",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2023_CS_GA_Q07",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 7,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 6,
+      "question_text": "Consider two functions of time (𝑡),\n𝑓(𝑡) = 0.01 𝑡2\n𝑔(𝑡) = 4 𝑡\nwhere 0 < 𝑡< ∞.\nNow consider the following two statements:\n(i)\nFor some 𝑡> 0, 𝑔(𝑡) > 𝑓(𝑡).\n(ii)\nThere exists a 𝑇, such that 𝑓(𝑡) > 𝑔(𝑡) for all 𝑡> 𝑇.\nWhich one of the following options is TRUE?",
+      "options": {
+        "A": "only (i) is correct",
+        "B": "only (ii) is correct",
+        "C": "both (i) and (ii) are correct",
+        "D": "neither (i) nor (ii) is correct"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2023",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2023_CS_GA_Q08",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 8,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 6,
+      "question_text": "Which one of the following sentence sequences creates a coherent narrative?\n(i)\nOnce on the terrace, on her way to her small room in the corner, she\nnotices the man right away.\n(ii)\nShe begins to pant by the time she has climbed all the stairs.\n(iii)\nMina has bought vegetables and rice at the market, so her bags are\nheavy.\n(iv)\nHe was leaning against the parapet, watching the traffic below.",
+      "options": {
+        "A": "(i), (ii), (iv), (iii)",
+        "B": "(ii), (iii), (i), (iv)",
+        "C": "(iv), (ii), (i), (iii)",
+        "D": "(iii), (ii), (i), (iv)"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2023",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2023_CS_GA_Q09",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 9,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 7,
+      "question_text": "( )\nf x and ( )\ng y are functions of x and y, respectively, and\n( )\n( )\nf x\ng y\n=\nfor all real\nvalues of 𝑥 and 𝑦. Which one of the following options is necessarily TRUE for all\nx and y?",
+      "options": {
+        "A": "( )\n0\nf x =\nand ( )\n0\ng y =",
+        "B": "( )\n( )\nconstant\nf x\ng y\n=\n=",
+        "C": "( )\nconstant\nf x ≠\nand ( )\nconstant\ng y ≠",
+        "D": "( )\n( )\n( )\n( )\n=\n\nf x\ng y\nf x\ng y\n+\n−"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2023",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2023_CS_GA_Q10",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 10,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 8,
+      "question_text": "Which one of the options best describes the transformation of the 2-dimensional\nfigure P to Q, and then to R, as shown?",
+      "options": {
+        "A": "Only S1 is TRUE.",
+        "B": "Only S1 and S2 are TRUE.",
+        "C": "S1, S2, and S3 are all TRUE.",
+        "D": "Only S1 and S3 are TRUE.\nCS"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2023",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "paper_id": "2025_CS2",
+  "year": 2025,
+  "session": "CS2",
+  "category": "ga_1_mark",
+  "total_questions": 4,
+  "questions": [
+    {
+      "id": "2025_CS2_GA_Q01",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS2",
+      "year": 2025,
+      "session": "CS2",
+      "question_number": 1,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 2,
+      "question_text": "Despite his initial hesitation, Rehman’s _________ to contribute to the success of\nthe project never wavered.\nSelect the most appropriate option to complete the above sentence.",
+      "options": {
+        "A": "ambivalence",
+        "B": "satisfaction",
+        "C": "resolve",
+        "D": "revolve\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "The sentence sets up a contrast between Rehman's initial hesitation and his continuing commitment. 'Resolve' denotes firm determination and perseverance, which fits the context accurately.",
+      "tags": [
+        "1_mark",
+        "2025",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Despite his initial hesitation, Rehman’s \\_\\_\\_\\_\\_\\_\\_\\_\\_ to contribute to the success of the project never wavered.\nSelect the most appropriate option to complete the above sentence.",
+      "options_latex": {
+        "A": "ambivalence",
+        "B": "satisfaction",
+        "C": "resolve",
+        "D": "revolve"
+      }
+    },
+    {
+      "id": "2025_CS2_GA_Q02",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS2",
+      "year": 2025,
+      "session": "CS2",
+      "question_number": 2,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 3,
+      "question_text": "Bird : Nest :: Bee : _______\nSelect the correct option to complete the analogy.",
+      "options": {
+        "A": "Kennel",
+        "B": "Hammock",
+        "C": "Hive",
+        "D": "Lair\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: word analogy and contextual relations",
+      "difficulty_level": "Easy",
+      "explaination": "This is a habitat/dwelling analogy: a bird naturally lives in a nest, and similarly, a bee lives in a hive.",
+      "tags": [
+        "1_mark",
+        "2025",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "$\\text{Bird} : \\text{Nest} :: \\text{Bee} : \\text{\\_\\_\\_\\_\\_\\_\\_}$\nSelect the correct option to complete the analogy.",
+      "options_latex": {
+        "A": "Kennel",
+        "B": "Hammock",
+        "C": "Hive",
+        "D": "Lair"
+      }
+    },
+    {
+      "id": "2025_CS2_GA_Q03",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS2",
+      "year": 2025,
+      "session": "CS2",
+      "question_number": 3,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 4,
+      "question_text": "If 𝑃𝑒𝑥= 𝑄𝑒−𝑥 for all real values of 𝑥, which one of the following statements is\ntrue?",
+      "options": {
+        "A": "𝑃= 𝑄= 0",
+        "B": "𝑃= 𝑄= 1",
+        "C": "𝑃= 1; 𝑄= −1",
+        "D": "𝑃\n𝑄= 0\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and functions: exponents and equations",
+      "difficulty_level": "Medium",
+      "explaination": "For $P e^x = Q e^{-x}$ to hold for all real $x$, multiply both sides by $e^x$ to get $P e^{2x} = Q$. Differentiating with respect to $x$ gives $2P e^{2x} = 0$, implying $P = 0$. Substituting $P = 0$ yields $Q = 0$, so $P = Q = 0$.",
+      "tags": [
+        "1_mark",
+        "2025",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "If $P e^x = Q e^{-x}$ for all real values of $x$, which one of the following statements is true?",
+      "options_latex": {
+        "A": "$P = Q = 0$",
+        "B": "$P = Q = 1$",
+        "C": "$P = 1; Q = -1$",
+        "D": "$\\frac{P}{Q} = 0$"
+      }
+    },
+    {
+      "id": "2025_CS2_GA_Q05",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS2",
+      "year": 2025,
+      "session": "CS2",
+      "question_number": 5,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 6,
+      "question_text": "Let 𝑝1 and 𝑝2 denote two arbitrary prime numbers. Which one of the following\nstatements is correct for all values of 𝑝1 and 𝑝2?",
+      "options": {
+        "A": "𝑝1 + 𝑝2 is not a prime number.",
+        "B": "𝑝1𝑝2 is not a prime number.",
+        "C": "𝑝1 + 𝑝2 + 1 is a prime number.",
+        "D": "𝑝1𝑝2 + 1 is a prime number.\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Elementary number theory and prime numbers",
+      "difficulty_level": "Easy",
+      "explaination": "For any two prime numbers $p_1$ and $p_2$, the product $p_1 p_2$ has at least three distinct positive divisors ($1, p_1, p_1 p_2$ when $p_1=p_2$, or $1, p_1, p_2, p_1 p_2$ when $p_1 \\neq p_2$). Hence, $p_1 p_2$ can never be prime.",
+      "tags": [
+        "1_mark",
+        "2025",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Let $p_1$ and $p_2$ denote two arbitrary prime numbers. Which one of the following statements is correct for all values of $p_1$ and $p_2$?",
+      "options_latex": {
+        "A": "$p_1 + p_2$ is not a prime number.",
+        "B": "$p_1 p_2$ is not a prime number.",
+        "C": "$p_1 + p_2 + 1$ is a prime number.",
+        "D": "$p_1 p_2 + 1$ is a prime number."
+      }
+    }
+  ]
+}

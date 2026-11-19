@@ -1,0 +1,185 @@
+{
+  "paper_id": "2025_CS1",
+  "year": 2025,
+  "session": "CS1",
+  "category": "ga_1_mark",
+  "total_questions": 4,
+  "questions": [
+    {
+      "id": "2025_CS1_GA_Q01",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS1",
+      "year": 2025,
+      "session": "CS1",
+      "question_number": 1,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 2,
+      "question_text": "Ravi had ______ younger brother who taught at ______ university. He was widely\nregarded as ______ honorable man.\nSelect the option with the correct sequence of articles to fill in the blanks.",
+      "options": {
+        "A": "a; a; an",
+        "B": "the; an; a",
+        "C": "a; an; a",
+        "D": "an; an; a\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2025",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2025_CS1_GA_Q02",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS1",
+      "year": 2025,
+      "session": "CS1",
+      "question_number": 2,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 3,
+      "question_text": "The CEO’s decision to downsize the workforce was considered myopic because it\nsacrificed long-term stability to accommodate short-term gains.\nSelect the most appropriate option that can replace the word “myopic” without\nchanging the meaning of the sentence.",
+      "options": {
+        "A": "visionary",
+        "B": "shortsighted",
+        "C": "progressive",
+        "D": "innovative\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2025",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2025_CS1_GA_Q03",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS1",
+      "year": 2025,
+      "session": "CS1",
+      "question_number": 3,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 4,
+      "question_text": "The average marks obtained by a class in an examination were calculated as 30.8.\nHowever, while checking the marks entered, the teacher found that the marks of one\nstudent were entered incorrectly as 24 instead of 42. After correcting the marks, the\naverage becomes 31.4. How many students does the class have?",
+      "options": {
+        "A": "25",
+        "B": "28",
+        "C": "30",
+        "D": "32\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2025",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2025_CS1_GA_Q04",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS1",
+      "year": 2025,
+      "session": "CS1",
+      "question_number": 4,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 5,
+      "question_text": "Consider the relationships among P, Q, R, S, and T:\n• P is the brother of Q.\n• S is the daughter of Q.\n• T is the sister of S.\n• R is the mother of Q.\nThe following statements are made based on the relationships given above.\n(1) R is the grandmother of S.\n(2) P is the uncle of S and T.\n(3) R has only one son.\n(4) Q has only one daughter.\nWhich one of the following options is correct?",
+      "options": {
+        "A": "Both (1) and (2) are true.",
+        "B": "Both (1) and (3) are true.",
+        "C": "Only (3) is true.",
+        "D": "Only (4) is true.\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2025",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    }
+  ]
+}

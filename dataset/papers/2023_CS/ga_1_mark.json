@@ -1,0 +1,232 @@
+{
+  "paper_id": "2023_CS",
+  "year": 2023,
+  "session": "CS",
+  "category": "ga_1_mark",
+  "total_questions": 5,
+  "questions": [
+    {
+      "id": "2023_CS_GA_Q01",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 1,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1,
+      "question_text": "We reached the station late, and _______ missed the train.",
+      "options": {
+        "A": "near",
+        "B": "nearly",
+        "C": "utterly",
+        "D": "mostly"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2023",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2023_CS_GA_Q02",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 2,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1,
+      "question_text": "Kind : _______ : : Often : Frequently\n(By word meaning)",
+      "options": {
+        "A": "Mean",
+        "B": "Type",
+        "C": "Cruel",
+        "D": "Kindly"
+      },
+      "answer": "MTA",
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2023",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2023_CS_GA_Q03",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 3,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 3,
+      "question_text": "A series of natural numbers 𝐹1, 𝐹2, 𝐹3, 𝐹4, 𝐹5, 𝐹6, 𝐹7, … obeys 𝐹𝑛+1 = 𝐹𝑛+ 𝐹𝑛−1\nfor all integers 𝑛≥2 .\nIf 𝐹6 = 37, and 𝐹7 = 60, then what is 𝐹1 ?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "8",
+        "D": "9"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2023",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2023_CS_GA_Q04",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 4,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3,
+      "question_text": "A survey for a certain year found that 90% of pregnant women received medical\ncare at least once before giving birth. Of these women, 60% received medical care\nfrom doctors, while 40% received medical care from other healthcare providers.\nGiven this information, which one of the following statements can be inferred with\ncertainty?",
+      "options": {
+        "A": "More than half of the pregnant women received medical care at least once from a\ndoctor.",
+        "B": "Less than half of the pregnant women received medical care at least once from a\ndoctor.",
+        "C": "More than half of the pregnant women received medical care at most once from a\ndoctor.",
+        "D": "Less than half of the pregnant women received medical care at most once from a\ndoctor."
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2023",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2023_CS_GA_Q05",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 5,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 4,
+      "question_text": "Looking at the surface of a smooth 3-dimensional object from the outside, which\none of the following options is TRUE?",
+      "options": {
+        "A": "The surface of the object must be concave everywhere.",
+        "B": "The surface of the object must be convex everywhere.",
+        "C": "The surface of the object may be concave in some places and convex in other places.",
+        "D": "The object can have edges, but no corners."
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "1_mark",
+        "2023",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    }
+  ]
+}

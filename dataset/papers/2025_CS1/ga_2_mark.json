@@ -1,0 +1,141 @@
+{
+  "paper_id": "2025_CS1",
+  "year": 2025,
+  "session": "CS1",
+  "category": "ga_2_mark",
+  "total_questions": 3,
+  "questions": [
+    {
+      "id": "2025_CS1_GA_Q06",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS1",
+      "year": 2025,
+      "session": "CS1",
+      "question_number": 6,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 7,
+      "question_text": "“I put the brown paper in my pocket along with the chalks, and possibly other things.\nI suppose every one must have reflected how primeval and how poetical are the\nthings that one carries in one’s pocket: the pocket-knife, for instance the type of all\nhuman tools, the infant of the sword. Once I planned to write a book of poems\nentirely about the things in my pocket. But I found it would be too long: and the age\nof the great epics is past.”\n(From G.K. Chesterton’s “A Piece of Chalk”)\nBased only on the information provided in the above passage, which one of the\nfollowing statements is true?",
+      "options": {
+        "A": "The author of the passage carries a mirror in his pocket to reflect upon things.",
+        "B": "The author of the passage had decided to write a poem on epics.",
+        "C": "The pocket-knife is described as the infant of the sword.",
+        "D": "Epics are described as too inconvenient to write.\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2025",
+        "2_mark",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2025_CS1_GA_Q08",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS1",
+      "year": 2025,
+      "session": "CS1",
+      "question_number": 8,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 9,
+      "question_text": "A fair six-faced dice, with the faces labelled ‘1’, ‘2’, ‘3’, ‘4’, ‘5’, and ‘6’, is rolled\nthrice. What is the probability of rolling ‘6’ exactly once?",
+      "options": {
+        "A": "75\n216",
+        "B": "1\n6",
+        "C": "1\n18",
+        "D": "25\n216\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2025",
+        "2_mark",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    },
+    {
+      "id": "2025_CS1_GA_Q10",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS1",
+      "year": 2025,
+      "session": "CS1",
+      "question_number": 10,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 10,
+      "question_text": "A shop has 4 distinct flavors of ice-cream. One can purchase any number of scoops\nof any flavor. The order in which the scoops are purchased is inconsequential.\nIf one wants to purchase 3 scoops of ice-cream, in how many ways can one make\nthat purchase?",
+      "options": {
+        "A": "4",
+        "B": "20",
+        "C": "24",
+        "D": "48"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "",
+      "subtopic": "",
+      "difficulty_level": "",
+      "explaination": "",
+      "tags": [
+        "2025",
+        "2_mark",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ]
+    }
+  ]
+}
