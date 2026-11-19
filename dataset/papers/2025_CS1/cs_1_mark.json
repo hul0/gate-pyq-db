@@ -33,10 +33,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "I/O interface: interrupt and DMA mode",
+      "difficulty_level": "Easy",
+      "explaination": "When an asynchronous interrupt arrives, the processor first finishes the execution of the current instruction (iii). Next, it saves the current program counter (and processor state) onto the stack (i). Finally, it loads the starting address of the interrupt service routine into the program counter (ii).",
       "tags": [
         "1_mark",
         "2025",
@@ -47,7 +47,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Suppose a program is running on a non-pipelined single processor computer system. The computer is connected to an external device that can interrupt the processor asynchronously. The processor needs to execute the interrupt service routine (ISR) to serve this interrupt. The following steps (not necessarily in order) are taken by the processor when the interrupt arrives:\n\\begin{enumerate}[label=(\\roman*)]\n\\item The processor saves the content of the program counter.\n\\item The program counter is loaded with the start address of the ISR.\n\\item The processor finishes the present instruction.\n\\end{enumerate}\nWhich ONE of the following is the CORRECT sequence of steps?",
+      "options_latex": {
+        "A": "(iii), (i), (ii)",
+        "B": "(i), (iii), (ii)",
+        "C": "(i), (ii), (iii)",
+        "D": "(iii), (ii), (i)"
+      }
     },
     {
       "id": "2025_CS1_CS_Q12",
@@ -77,10 +84,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Easy",
+      "explaination": "The symbol table is actively used throughout all phases of the compiler, including semantic analysis, intermediate code generation, code optimization, and target code generation for type checking, memory allocation, and address resolution. Thus, claiming it is not required after parsing is false.",
       "tags": [
         "1_mark",
         "2025",
@@ -91,7 +98,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which ONE of the following statements is FALSE regarding the symbol table?",
+      "options_latex": {
+        "A": "Symbol table is responsible for keeping track of the scope of variables.",
+        "B": "Symbol table can be implemented using a binary search tree.",
+        "C": "Symbol table is not required after the parsing phase.",
+        "D": "Symbol table is created during the lexical analysis phase."
+      }
     },
     {
       "id": "2025_CS1_CS_Q13",
@@ -121,10 +135,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Data flow analyses: constant propagation, liveness analysis, common sub expression elimination",
+      "difficulty_level": "Easy",
+      "explaination": "Live variable analysis determines whether the value in a variable could be read along some execution path before being redefined. This information is directly used in register allocation and assignment to construct interference graphs and allocate registers efficiently.",
       "tags": [
         "1_mark",
         "2025",
@@ -135,7 +149,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which ONE of the following techniques used in compiler code optimization uses live variable analysis?",
+      "options_latex": {
+        "A": "Run-time function call management",
+        "B": "Register assignment to variables",
+        "C": "Strength reduction",
+        "D": "Constant folding"
+      }
     },
     {
       "id": "2025_CS1_CS_Q14",
@@ -165,10 +186,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Memory management and virtual memory",
+      "difficulty_level": "Medium",
+      "explaination": "With a page size of $2048 = 2^{11}$ bytes, the page offset requires 11 bits. The 32-bit logical address is split into page number and page offset, so the page number has $32 - 11 = 21$ bits. Hence, the page table contains at most $2^{21}$ entries.",
       "tags": [
         "1_mark",
         "2025",
@@ -179,7 +200,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a demand paging memory management system with 32-bit logical address, 20-bit physical address, and page size of 2048 bytes. Assuming that the memory is byte addressable, what is the maximum number of entries in the page table?",
+      "options_latex": {
+        "A": "$2^{21}$",
+        "B": "$2^{20}$",
+        "C": "$2^{22}$",
+        "D": "$2^{24}$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q15",
@@ -209,10 +237,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty_level": "Medium",
+      "explaination": "Transaction $T_1$ writes to item $Y$ ($W_1(Y)$). Subsequently, both $T_2$ and $T_3$ read uncommitted data item $Y$ ($R_2(Y)$ and $R_3(Y)$) written by $T_1$ before $T_1$ commits. When $T_1$ aborts, a cascading rollback is triggered, requiring both $T_2$ and $T_3$ to be rolled back.",
       "tags": [
         "1_mark",
         "2025",
@@ -223,7 +251,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A schedule of three database transactions $T_1, T_2$, and $T_3$ is shown. $R_i(A)$ and $W_i(A)$ denote read and write of data item $A$ by transaction $T_i$, $i= 1,2,3$. The transaction $T_1$ aborts at the end. Which other transaction(s) will be required to be rolled back?\n\\[ R_1(X) \\; W_1(Y) \\; R_2(X) \\; R_2(Y) \\; R_3(Y) \\; ABORT(T_1) \\]",
+      "options_latex": {
+        "A": "Only $T_2$",
+        "B": "Only $T_3$",
+        "C": "Both $T_2$ and $T_3$",
+        "D": "Neither $T_2$ nor $T_3$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q16",
@@ -253,10 +288,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Concept of layering: OSI and TCP/IP Protocol Stacks",
+      "difficulty_level": "Easy",
+      "explaination": "The Network layer is responsible for packet routing across networks ((a)-(I)). The Transport layer provides end-to-end communication services between hosts ((b)-(III)). The Data Link layer handles framing, flow control, and physical error handling ((c)-(II)).",
       "tags": [
         "1_mark",
         "2025",
@@ -267,7 +302,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Identify the ONE CORRECT matching between the OSI layers and their corresponding functionalities as shown.\n\n\\begin{tabular}{ll}\n\\textbf{OSI Layers} & \\textbf{Functionalities} \\\\\n(a) Network layer & (I) Packet routing \\\\\n(b) Transport layer & (II) Framing and error handling \\\\\n(c) Datalink layer & (III) Host to host communication\n\\end{tabular}",
+      "options_latex": {
+        "A": "(a)-(I), (b)-(II), (c)-(III)",
+        "B": "(a)-(I), (b)-(III), (c)-(II)",
+        "C": "(a)-(II), (b)-(I), (c)-(III)",
+        "D": "(a)-(III), (b)-(II), (c)-(I)"
+      }
     },
     {
       "id": "2025_CS1_CS_Q17",
@@ -297,10 +339,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Sets, relations, functions, partial orders and lattices",
+      "difficulty_level": "Medium",
+      "explaination": "If the composition $f \\circ g: A \\to C$ is surjective, $f$ must be surjective, but $g$ is not required to be either injective or surjective. For example, if $C$ is a singleton $\\{c\\}$ and $B = \\{b_1, b_2\\}$, $g$ can map all of $A$ to $b_1$ where $f(b_1) = c$, leaving $b_2$ uncovered (not onto) and having many collisions (not one-to-one).",
       "tags": [
         "1_mark",
         "2025",
@@ -311,7 +353,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "$g(\\cdot)$ is a function from $A$ to $B$, $f(\\cdot)$ is a function from $B$ to $C$, and their composition defined as $f(g(\\cdot))$ is a mapping from $A$ to $C$.\nIf $f(\\cdot)$ and $f(g(\\cdot))$ are onto (surjective) functions, which ONE of the following is TRUE about the function $g(\\cdot)$?",
+      "options_latex": {
+        "A": "$g(\\cdot)$ must be an onto (surjective) function.",
+        "B": "$g(\\cdot)$ must be a one-to-one (injective) function.",
+        "C": "$g(\\cdot)$ must be a bijective function, that is, both one-to-one and onto.",
+        "D": "$g(\\cdot)$ is not required to be a one-to-one or onto function."
+      }
     },
     {
       "id": "2025_CS1_CS_Q18",
@@ -341,10 +390,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Graph traversals, minimum spanning trees, shortest paths",
+      "difficulty_level": "Easy",
+      "explaination": "Since the minimum spanning tree $T$ is a subgraph of $G$ ($E(T) \\subseteq E(G)$), every path between $u$ and $v$ in $T$ is also a valid path in $G$. Thus, the shortest path distance in $G$ cannot exceed that in $T$, guaranteeing $d_1(u, v) \\le d_2(u, v)$.",
       "tags": [
         "1_mark",
         "2025",
@@ -355,7 +404,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $G$ be any undirected graph with positive edge weights, and $T$ be a minimum spanning tree of $G$. For any two vertices, $u$ and $v$, let $d_1(u, v)$ and $d_2(u, v)$ be the shortest distances between $u$ and $v$ in $G$ and $T$, respectively. Which ONE of the options is CORRECT for all possible $G, T, u$ and $v$?",
+      "options_latex": {
+        "A": "$d_1(u, v) = d_2(u, v)$",
+        "B": "$d_1(u, v) \\le d_2(u, v)$",
+        "C": "$d_1(u, v) \\ge d_2(u, v)$",
+        "D": "$d_1(u, v) \\ne d_2(u, v)$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q19",
@@ -385,10 +441,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Context-free grammars and push-down automata",
+      "difficulty_level": "Easy",
+      "explaination": "From the rules, $A$ generates $a^+$ (any $a^n$ with $n \\ge 1$) and $B$ generates $b^+$ (any $b^n$ with $n \\ge 1$). Thus, $aaB$ produces $a^2b^n$ ($n \\ge 1$), and $Abb$ produces $a^nb^2$ ($n \\ge 1$). Therefore, $L(G) = \\{a^2b^n \\mid n \\ge 1\\} \\cup \\{a^nb^2 \\mid n \\ge 1\\}$.",
       "tags": [
         "1_mark",
         "2025",
@@ -399,7 +455,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following context-free grammar $G$, where $S, A$, and $B$ are the variables (non-terminals), $a$ and $b$ are the terminal symbols, $S$ is the start variable, and the rules of $G$ are described as:\n\\[ S \\to aaB \\mid Abb \\]\n\\[ A \\to a \\mid aA \\]\n\\[ B \\to b \\mid bB \\]\nWhich ONE of the languages $L(G)$ is accepted by $G$?",
+      "options_latex": {
+        "A": "$L(G) = \\{a^2b^n \\mid n \\ge 1\\} \\cup \\{a^nb^2 \\mid n \\ge 1\\}$",
+        "B": "$L(G) = \\{a^nb^{2n} \\mid n \\ge 1\\} \\cup \\{a^{2n}b^n \\mid n \\ge 1\\}$",
+        "C": "$L(G) = \\{a^nb^n \\mid n \\ge 1\\}$",
+        "D": "$L(G) = \\{a^{2n}b^{2n} \\mid n \\ge 1\\}$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q20",
@@ -429,10 +492,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Asymptotic worst case time and space complexity",
+      "difficulty_level": "Medium",
+      "explaination": "Dividing both sides by $2^n$ yields $\\frac{T(n)}{2^n} = \\frac{T(n-1)}{2^{n-1}} + n$. Letting $S(n) = \\frac{T(n)}{2^n}$, we have $S(n) = S(n-1) + n = S(0) + \\sum_{i=1}^n i = 1 + \\frac{n(n+1)}{2} = \\Theta(n^2)$. Multiplying back gives $T(n) = \\Theta(n^2 2^n)$.",
       "tags": [
         "1_mark",
         "2025",
@@ -443,7 +506,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following recurrence relation:\n\\[ T(n) = 2T(n-1) + n2^n \\quad \\text{for } n > 0, \\; T(0) = 1. \\]\nWhich ONE of the following options is CORRECT?",
+      "options_latex": {
+        "A": "$T(n) = \\Theta(n^2 2^n)$",
+        "B": "$T(n) = \\Theta(n 2^n)$",
+        "C": "$T(n) = \\Theta((\\log n)^2 2^n)$",
+        "D": "$T(n) = \\Theta(4^n)$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q21",
@@ -474,10 +544,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "File organization, indexing (e.g., B and B+ trees)",
+      "difficulty_level": "Medium",
+      "explaination": "With maximum key capacity of 3 keys per node, the targeted leaf node containing keys $[20, 21, 22]$ is already full. Inserting 23 causes this leaf node to overflow and split, propagating a split upward to the already-saturated root, which creates a new root node and increases tree height.",
       "tags": [
         "1_mark",
         "2025",
@@ -488,7 +558,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a $B^+$ tree with 5 nodes, in which a node can store at most 3 key values. The value 23 is now inserted in the $B^+$ tree. Which of the following option(s) is/are CORRECT?",
+      "options_latex": {
+        "A": "None of the nodes will split.",
+        "B": "At least one node will split and redistribute.",
+        "C": "The total number of nodes will remain same.",
+        "D": "The height of the tree will increase."
+      }
     },
     {
       "id": "2025_CS1_CS_Q22",
@@ -519,10 +596,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Transport layer: flow control and congestion control, UDP, TCP, sockets",
+      "difficulty_level": "Easy",
+      "explaination": "In TCP 3-way handshaking: Packet 1 (Client to Server) sends a SYN segment with flag $[\\text{SYN}=1, \\text{ACK}=0]$; Packet 2 (Server to Client) responds with $[\\text{SYN}=1, \\text{ACK}=1]$; Packet 3 (Client to Server) completes setup with $[\\text{SYN}=0, \\text{ACK}=1]$. Hence, P1 has SYN = 1 and P2 has SYN = 1, ACK = 1.",
       "tags": [
         "1_mark",
         "2025",
@@ -533,7 +610,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the 3-way handshaking protocol for TCP connection establishment. Let the three packets exchanged during the connection establishment be denoted as P1, P2, and P3, in order. Which of the following option(s) is/are TRUE with respect to TCP header flags that are set in the packets?",
+      "options_latex": {
+        "A": "P3: SYN = 1, ACK = 1",
+        "B": "P2: SYN = 1, ACK = 1",
+        "C": "P2: SYN = 0, ACK = 1",
+        "D": "P1: SYN = 1"
+      }
     },
     {
       "id": "2025_CS1_CS_Q23",
@@ -564,10 +648,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Linear Algebra",
+      "subtopic": "System of linear equations",
+      "difficulty_level": "Medium",
+      "explaination": "The coefficient determinant is $|A| = 1 - k^2 = 0 \\implies k = \\pm 1$. For $k = 1$, equations are $x + y = 1$ and $x + y = -1$, which are inconsistent (no solution). For $k = -1$, equations are $x - y = 1$ and $-x + y = -1$, which are identical (infinitely many solutions). For all $k \\neq \\pm 1$, there is a unique solution.",
       "tags": [
         "1_mark",
         "2025",
@@ -578,7 +662,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the given system of linear equations for variables $x$ and $y$, where $k$ is a real-valued constant. Which of the following option(s) is/are CORRECT?\n\\[ x + ky = 1 \\]\n\\[ kx + y = -1 \\]",
+      "options_latex": {
+        "A": "There is exactly one value of $k$ for which the above system of equations has no solution.",
+        "B": "There exist an infinite number of values of $k$ for which the system of equations has no solution.",
+        "C": "There exists exactly one value of $k$ for which the system of equations has exactly one solution.",
+        "D": "There exists exactly one value of $k$ for which the system of equations has an infinite number of solutions."
+      }
     },
     {
       "id": "2025_CS1_CS_Q24",
@@ -609,10 +700,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Boolean algebra",
+      "difficulty_level": "Medium",
+      "explaination": "The majority function is $X(a, b, c) = ab + bc + ca$. In (B), $X(a, b, M) = ab + bM + aM = ab + (a+b)M = ab + (a+b)(ab+bc+ca) = ab + bc + ca = X(a, b, c)$, so (B) holds. In (D), $X(a, c, c) = c$, giving $X(a, M, c) = aM + Mc + ca = (a+c)M + ac = (a+c)(ab+bc+ca) + ac = ab + bc + ca = X(a, b, c)$, so (D) holds.",
       "tags": [
         "1_mark",
         "2025",
@@ -623,7 +714,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $X$ be a 3-variable Boolean function that produces output as `1' when at least two of the input variables are `1'. Which of the following statement(s) is/are CORRECT, where $a, b, c, d, e$ are Boolean variables?",
+      "options_latex": {
+        "A": "$X(a, b, X(c, d, e)) = X(X(a, b, c), d, e)$",
+        "B": "$X(a, b, X(a, b, c)) = X(a, b, c)$",
+        "C": "$X(a, b, X(a, c, d)) = (X(a, b, a) \\text{ AND } X(c, d, c))$",
+        "D": "$X(a, b, c) = X(a, X(a, b, c), X(a, c, c))$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q25",
@@ -654,10 +752,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Number representations and computer arithmetic (fixed and floating point)",
+      "difficulty_level": "Easy",
+      "explaination": "Sign extension in two's complement preserves the numerical value by replicating the most significant bit (sign bit). Since the 4-bit representation of $-6$ is $1010$ (sign bit 1), extending to 8 bits gives $1111\\,1010$ and extending to 16 bits gives $1111\\,1111\\,1111\\,1010$.",
       "tags": [
         "1_mark",
         "2025",
@@ -668,7 +766,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The number $-6$ can be represented as $1010_2$ in 4-bit 2's complement representation. Which of the following is/are CORRECT 2's complement representation(s) of $-6$?",
+      "options_latex": {
+        "A": "1000 1010 in 8-bits",
+        "B": "1111 1010 in 8-bits",
+        "C": "1000 0000 0000 1010 in 16-bits",
+        "D": "1111 1111 1111 1010 in 16-bits"
+      }
     },
     {
       "id": "2025_CS1_CS_Q26",
@@ -699,10 +804,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees, binary search trees, binary heaps",
+      "difficulty_level": "Easy",
+      "explaination": "In a degenerate (skewed) binary search tree, the path length from root to the farthest leaf is $n - 1$ edges (A is true). Inorder traversal of any valid BST visits nodes in strictly increasing order (B is true). Worst-case search in an unbalanced BST takes $O(n)$ time, and BST property differs fundamentally from heap order.",
       "tags": [
         "1_mark",
         "2025",
@@ -713,7 +818,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statement(s) is/are TRUE for any binary search tree (BST) having $n$ distinct integers?",
+      "options_latex": {
+        "A": "The maximum length of a path from the root node to any other node is $(n-1)$.",
+        "B": "An inorder traversal will always produce a sorted sequence of elements.",
+        "C": "Finding an element takes $O(\\log_2 n)$ time in the worst case.",
+        "D": "Every BST is also a Min-Heap."
+      }
     },
     {
       "id": "2025_CS1_CS_Q27",
@@ -745,10 +857,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "ALU, data-path and control unit",
+      "difficulty_level": "Medium",
+      "explaination": "Since Mux\\_A can select either register RA or an immediate value, and Mux\\_B can independently select either register RB or an immediate value, the ALU inputs can be configured as (RA, RB), (RA, immediate), (immediate, RB), or (immediate, immediate). Thus A, B, and C are all valid.",
       "tags": [
         "1_mark",
         "2025",
@@ -759,7 +871,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A partial data path of a processor is given, where RA, RB, and RZ are 32-bit registers. Multiplexer Mux\\_A selects between RA and a 32-bit immediate value, and Mux\\_B selects between RB and a 32-bit immediate value. The output of the ALU is stored into RZ. Which option(s) is/are CORRECT related to arithmetic operations using the data path as shown?",
+      "options_latex": {
+        "A": "The data path can implement arithmetic operations involving two registers.",
+        "B": "The data path can implement arithmetic operations involving one register and one immediate value.",
+        "C": "The data path can implement arithmetic operations involving two immediate values.",
+        "D": "The data path can only implement arithmetic operations involving one register and one immediate value."
+      }
     },
     {
       "id": "2025_CS1_CS_Q28",
@@ -789,10 +908,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular expressions and finite automata",
+      "difficulty_level": "Easy",
+      "explaination": "By the standard subset construction algorithm, every $n$-state NFA can be converted into an equivalent deterministic finite automaton (DFA) having at most $2^n$ states. Statement D asserts that every DFA must have strictly more than $2^n$ states, which is directly false.",
       "tags": [
         "1_mark",
         "2025",
@@ -803,7 +922,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A regular language $L$ is accepted by a non-deterministic finite automaton (NFA) with $n$ states. Which of the following statement(s) is/are FALSE?",
+      "options_latex": {
+        "A": "$L$ may have an accepting NFA with $< n$ states.",
+        "B": "$L$ may have an accepting DFA with $< n$ states.",
+        "C": "There exists a DFA with $\\le 2^n$ states that accepts $L$.",
+        "D": "Every DFA that accepts $L$ has $> 2^n$ states."
+      }
     },
     {
       "id": "2025_CS1_CS_Q29",
@@ -829,10 +955,10 @@
         "min": 21.0,
         "max": 21.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "CPU and I/O scheduling",
+      "difficulty_level": "Medium",
+      "explaination": "There is 1 initial `scanf` and 20 iterations of `printf`, totaling $1 + 20 = 21$ I/O operations. Each time an I/O operation completes, the process transitions from the I/O (waiting) queue back into the ready queue. Excluding the initial program launch into the ready queue, the process enters the ready queue exactly 21 times.",
       "tags": [
         "1_mark",
         "2025",
@@ -842,7 +968,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Suppose in a multiprogramming environment, the following C program segment is executed. A process goes into I/O queue whenever an I/O related operation is performed. Assume that there will always be a context switch whenever a process requests for an I/O, and also whenever the process returns from an I/O. The number of times the process will enter the ready queue during its lifetime (not counting the time the process enters the ready queue when it is run initially) is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)\n\n\\begin{verbatim}\nint main()\n{\n    int x=0, i=0;\n    scanf(\"%d\", &x);\n    for(i=0; i<20; i++)\n    {\n        x = x + 20;\n        printf(\"%d\\n\", x);\n    }\n    return 0;\n}\n\\end{verbatim}",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q30",
@@ -868,10 +996,10 @@
         "min": 195.0,
         "max": 195.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Combinatorics: counting, recurrence relations, generating functions",
+      "difficulty_level": "Medium",
+      "explaination": "The total number of ternary strings of length 5 is $3^5 = 243$. A string has no consecutive identical symbols if the first character has 3 choices and each subsequent character has 2 choices (different from the preceding character), giving $3 \\times 2^4 = 48$ such strings. By complementary counting, the number of strings with at least one consecutive pair is $243 - 48 = 195$.",
       "tags": [
         "1_mark",
         "2025",
@@ -881,7 +1009,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $S$ be the set of all ternary strings defined over the alphabet $\\{a, b, c\\}$. Consider all strings in $S$ that contain at least one occurrence of two consecutive symbols, that is, ``aa'', ``bb'' or ``cc''. The number of such strings of length 5 that are possible is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q31",
@@ -907,10 +1037,10 @@
         "min": -2.1,
         "max": -1.9
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Calculus",
+      "subtopic": "Limits, continuity and differentiability",
+      "difficulty_level": "Easy",
+      "explaination": "For differentiability at $x = 1$, left and right derivatives must be equal: $\\lim_{x \\to 1^-} f'(x) = a$ and $\\lim_{x \\to 1^+} f'(x) = 3(1)^2 + 2(1) = 5$, so $a = 5$. Continuity at $x = 1$ requires $a(1) + b = 1^3 + 1^2 + 1 = 3$. Substituting $a = 5$ gives $5 + b = 3 \\implies b = -2.0$.",
       "tags": [
         "1_mark",
         "2025",
@@ -920,7 +1050,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the given function $f(x)$:\n\\[ f(x) = \\begin{cases} ax + b & \\text{for } x < 1 \\\\ x^3 + x^2 + 1 & \\text{for } x \\ge 1 \\end{cases} \\]\nIf the function is differentiable everywhere, the value of $b$ must be \\_\\_\\_\\_\\_\\_\\. (rounded off to one decimal place)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q32",
@@ -946,10 +1078,10 @@
         "min": 0.49,
         "max": 0.51
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Probability and Statistics",
+      "subtopic": "Conditional probability and Bayes theorem",
+      "difficulty_level": "Medium",
+      "explaination": "Let $F$ be the event of picking the fake coin ($P(F) = 1/5$) and $R$ picking a regular coin ($P(R) = 4/5$). The likelihood of two heads is $P(2H \\mid F) = 1^2 = 1$ and $P(2H \\mid R) = (0.5)^2 = 0.25$. By Bayes' theorem, $P(F \\mid 2H) = \\frac{(1/5)(1)}{(1/5)(1) + (4/5)(0.25)} = \\frac{0.2}{0.2 + 0.2} = 0.50$.",
       "tags": [
         "1_mark",
         "2025",
@@ -959,7 +1091,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A box contains 5 coins: 4 regular coins and 1 fake coin. When a regular coin is tossed, the probability $P(\\text{head}) = 0.5$ and for a fake coin, $P(\\text{head}) = 1$. You pick a coin at random and toss it twice, and get two heads. The probability that the coin you have chosen is the fake coin is \\_\\_\\_\\_\\_\\_\\. (rounded off to two decimal places)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q33",
@@ -985,10 +1119,10 @@
         "min": 435.0,
         "max": 435.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Searching, sorting, hashing",
+      "difficulty_level": "Easy",
+      "explaination": "The function implements standard Bubble Sort. When sorting an array of $n = 30$ elements in strictly reverse order, every comparison triggers a swap operation. The total number of swaps is $\\sum_{i=0}^{n-2} (n - 1 - i) = \\frac{n(n-1)}{2} = \\frac{30 \\times 29}{2} = 435$.",
       "tags": [
         "1_mark",
         "2025",
@@ -998,7 +1132,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The pseudocode of a function fun() is given below:\n\\begin{verbatim}\nfun(int A[0,...,n-1]){\n    for i=0 to n-2\n        for j=0 to n-i-2\n            if (A[j] > A[j+1])\n                then swap A[j] and A[j+1]\n}\n\\end{verbatim}\nLet $A[0, \\ldots, 29]$ be an array storing 30 distinct integers in descending order. The number of swap operations that will be performed, if the function fun() is called with $A[0, \\ldots, 29]$ as argument, is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q34",
@@ -1024,10 +1160,10 @@
         "min": 25.0,
         "max": 25.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Easy",
+      "explaination": "In `main()`, pointer `z` is assigned the memory address of variable `a` (`&a`). Function `foo(z, b)` dereferences `p` (which points to `a`) and assigns `x = b = 25` to `*p`. Thus, `a` is updated to 25, which `printf` prints.",
       "tags": [
         "1_mark",
         "2025",
@@ -1037,7 +1173,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C program:\n\n\\begin{verbatim}\n#include <stdio.h>\nvoid foo(int *p, int x){\n    *p = x;\n}\nint main(){\n    int *z;\n    int a = 20, b = 25;\n    z = &a;\n    foo(z, b);\n    printf(\"%d\", a);\n    return 0;\n}\n\\end{verbatim}\nThe output of the given C program is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q35",
@@ -1063,10 +1201,10 @@
         "min": 5.0,
         "max": 5.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees, binary search trees, binary heaps",
+      "difficulty_level": "Easy",
+      "explaination": "A binary heap storing $n$ keys is an almost complete binary tree whose height in terms of edges is $\\lfloor \\log_2 n \\rfloor$. For $n = 32$, the height is $\\lfloor \\log_2 32 \\rfloor = 5$.",
       "tags": [
         "1_mark",
         "2025",
@@ -1076,7 +1214,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The height of any rooted tree is defined as the maximum number of edges in the path from the root node to any leaf node. Suppose a Min-Heap $T$ stores 32 keys. The height of $T$ is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     }
   ]
 }

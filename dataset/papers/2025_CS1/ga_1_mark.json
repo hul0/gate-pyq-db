@@ -33,10 +33,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Basic English grammar: tenses, articles, adjectives, prepositions, conjunctions, verb-noun agreement",
+      "difficulty_level": "Easy",
+      "explaination": "'Younger' begins with a consonant sound (/j/), requiring the indefinite article 'a'. 'University' also begins with a consonant sound (/juː/), taking 'a'. 'Honorable' has a silent 'h' and begins with a vowel sound (/ɒ/), requiring 'an'. Hence, the sequence is a; a; an.",
       "tags": [
         "1_mark",
         "2025",
@@ -47,7 +47,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Ravi had \\_\\_\\_\\_\\_\\_ younger brother who taught at \\_\\_\\_\\_\\_\\_ university. He was widely regarded as \\_\\_\\_\\_\\_\\_ honorable man.\nSelect the option with the correct sequence of articles to fill in the blanks.",
+      "options_latex": {
+        "A": "a; a; an",
+        "B": "the; an; a",
+        "C": "a; an; a",
+        "D": "an; an; a"
+      }
     },
     {
       "id": "2025_CS1_GA_Q02",
@@ -77,10 +84,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'Myopic' literally means nearsighted, and metaphorically refers to lacking foresight or being shortsighted by focusing only on immediate considerations rather than long-term outcomes.",
       "tags": [
         "1_mark",
         "2025",
@@ -91,7 +98,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The CEO’s decision to downsize the workforce was considered myopic because it sacrificed long-term stability to accommodate short-term gains.\nSelect the most appropriate option that can replace the word ``myopic'' without changing the meaning of the sentence.",
+      "options_latex": {
+        "A": "visionary",
+        "B": "shortsighted",
+        "C": "progressive",
+        "D": "innovative"
+      }
     },
     {
       "id": "2025_CS1_GA_Q03",
@@ -121,10 +135,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Elementary statistics and probability",
+      "difficulty_level": "Easy",
+      "explaination": "Let $n$ be the number of students. The total increase in marks after correction is $42 - 24 = 18$. The increase in average is $31.4 - 30.8 = 0.6$. Therefore, $0.6 \\times n = 18$, giving $n = \\frac{18}{0.6} = 30$ students.",
       "tags": [
         "1_mark",
         "2025",
@@ -135,7 +149,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The average marks obtained by a class in an examination were calculated as 30.8. However, while checking the marks entered, the teacher found that the marks of one student were entered incorrectly as 24 instead of 42. After correcting the marks, the average becomes 31.4. How many students does the class have?",
+      "options_latex": {
+        "A": "25",
+        "B": "28",
+        "C": "30",
+        "D": "32"
+      }
     },
     {
       "id": "2025_CS1_GA_Q04",
@@ -165,10 +186,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Analytical Aptitude",
+      "subtopic": "Logic: deduction and induction",
+      "difficulty_level": "Easy",
+      "explaination": "Since R is the mother of Q and S is the daughter of Q, R is definitely the grandmother of S (statement 1 is true). P is the brother of Q, so P is the maternal/paternal uncle of Q's children S and T (statement 2 is true). The genders and number of other children of R and Q are not specified, so (3) and (4) cannot be established.",
       "tags": [
         "1_mark",
         "2025",
@@ -179,7 +200,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the relationships among P, Q, R, S, and T:\n\\begin{itemize}\n\\item P is the brother of Q.\n\\item S is the daughter of Q.\n\\item T is the sister of S.\n\\item R is the mother of Q.\n\\end{itemize}\nThe following statements are made based on the relationships given above:\n(1) R is the grandmother of S.\n(2) P is the uncle of S and T.\n(3) R has only one son.\n(4) Q has only one daughter.\nWhich one of the following options is correct?",
+      "options_latex": {
+        "A": "Both (1) and (2) are true.",
+        "B": "Both (1) and (3) are true.",
+        "C": "Only (3) is true.",
+        "D": "Only (4) is true."
+      }
     }
   ]
 }

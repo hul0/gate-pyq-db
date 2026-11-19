@@ -33,10 +33,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading and comprehension",
+      "difficulty_level": "Easy",
+      "explaination": "The passage explicitly states: 'the pocket-knife, for instance the type of all human tools, the infant of the sword.' Statement C directly reflects this verbatim description.",
       "tags": [
         "2025",
         "2_mark",
@@ -47,7 +47,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "``I put the brown paper in my pocket along with the chalks, and possibly other things. I suppose every one must have reflected how primeval and how poetical are the things that one carries in one's pocket: the pocket-knife, for instance the type of all human tools, the infant of the sword. Once I planned to write a book of poems entirely about the things in my pocket. But I found it would be too long: and the age of the great epics is past.''\n(From G.K. Chesterton's ``A Piece of Chalk'')\n\nBased only on the information provided in the above passage, which one of the following statements is true?",
+      "options_latex": {
+        "A": "The author of the passage carries a mirror in his pocket to reflect upon things.",
+        "B": "The author of the passage had decided to write a poem on epics.",
+        "C": "The pocket-knife is described as the infant of the sword.",
+        "D": "Epics are described as too inconvenient to write."
+      }
     },
     {
       "id": "2025_CS1_GA_Q08",
@@ -77,10 +84,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Elementary statistics and probability",
+      "difficulty_level": "Medium",
+      "explaination": "The probability of rolling a 6 is $p = \\frac{1}{6}$, and not rolling a 6 is $q = \\frac{5}{6}$. Using the binomial distribution for $n = 3$ trials with $k = 1$ success, $P(X = 1) = \\binom{3}{1} \\left(\\frac{1}{6}\\right)^1 \\left(\\frac{5}{6}\\right)^2 = 3 \\times \\frac{1}{6} \\times \\frac{25}{36} = \\frac{75}{216}$.",
       "tags": [
         "2025",
         "2_mark",
@@ -91,7 +98,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A fair six-faced dice, with the faces labelled `1', `2', `3', `4', `5', and `6', is rolled thrice. What is the probability of rolling `6' exactly once?",
+      "options_latex": {
+        "A": "$\\frac{75}{216}$",
+        "B": "$\\frac{1}{6}$",
+        "C": "$\\frac{1}{18}$",
+        "D": "$\\frac{25}{216}$"
+      }
     },
     {
       "id": "2025_CS1_GA_Q10",
@@ -121,10 +135,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "This is a multichoose problem (combination with repetition), where $r = 3$ scoops are chosen from $n = 4$ flavors. The number of ways is given by the stars and bars formula $\\binom{n + r - 1}{r} = \\binom{4 + 3 - 1}{3} = \\binom{6}{3} = \\frac{6 \\times 5 \\times 4}{3 \\times 2 \\times 1} = 20$.",
       "tags": [
         "2025",
         "2_mark",
@@ -135,7 +149,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A shop has 4 distinct flavors of ice-cream. One can purchase any number of scoops of any flavor. The order in which the scoops are purchased is inconsequential. If one wants to purchase 3 scoops of ice-cream, in how many ways can one make that purchase?",
+      "options_latex": {
+        "A": "4",
+        "B": "20",
+        "C": "24",
+        "D": "48"
+      }
     }
   ]
 }

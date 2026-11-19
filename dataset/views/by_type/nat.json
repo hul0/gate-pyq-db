@@ -7249,10 +7249,10 @@
         "min": 21.0,
         "max": 21.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "CPU and I/O scheduling",
+      "difficulty_level": "Medium",
+      "explaination": "There is 1 initial `scanf` and 20 iterations of `printf`, totaling $1 + 20 = 21$ I/O operations. Each time an I/O operation completes, the process transitions from the I/O (waiting) queue back into the ready queue. Excluding the initial program launch into the ready queue, the process enters the ready queue exactly 21 times.",
       "tags": [
         "1_mark",
         "2025",
@@ -7262,7 +7262,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Suppose in a multiprogramming environment, the following C program segment is executed. A process goes into I/O queue whenever an I/O related operation is performed. Assume that there will always be a context switch whenever a process requests for an I/O, and also whenever the process returns from an I/O. The number of times the process will enter the ready queue during its lifetime (not counting the time the process enters the ready queue when it is run initially) is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)\n\n\\begin{verbatim}\nint main()\n{\n    int x=0, i=0;\n    scanf(\"%d\", &x);\n    for(i=0; i<20; i++)\n    {\n        x = x + 20;\n        printf(\"%d\\n\", x);\n    }\n    return 0;\n}\n\\end{verbatim}",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q30",
@@ -7288,10 +7290,10 @@
         "min": 195.0,
         "max": 195.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Combinatorics: counting, recurrence relations, generating functions",
+      "difficulty_level": "Medium",
+      "explaination": "The total number of ternary strings of length 5 is $3^5 = 243$. A string has no consecutive identical symbols if the first character has 3 choices and each subsequent character has 2 choices (different from the preceding character), giving $3 \\times 2^4 = 48$ such strings. By complementary counting, the number of strings with at least one consecutive pair is $243 - 48 = 195$.",
       "tags": [
         "1_mark",
         "2025",
@@ -7301,7 +7303,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $S$ be the set of all ternary strings defined over the alphabet $\\{a, b, c\\}$. Consider all strings in $S$ that contain at least one occurrence of two consecutive symbols, that is, ``aa'', ``bb'' or ``cc''. The number of such strings of length 5 that are possible is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q31",
@@ -7327,10 +7331,10 @@
         "min": -2.1,
         "max": -1.9
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Calculus",
+      "subtopic": "Limits, continuity and differentiability",
+      "difficulty_level": "Easy",
+      "explaination": "For differentiability at $x = 1$, left and right derivatives must be equal: $\\lim_{x \\to 1^-} f'(x) = a$ and $\\lim_{x \\to 1^+} f'(x) = 3(1)^2 + 2(1) = 5$, so $a = 5$. Continuity at $x = 1$ requires $a(1) + b = 1^3 + 1^2 + 1 = 3$. Substituting $a = 5$ gives $5 + b = 3 \\implies b = -2.0$.",
       "tags": [
         "1_mark",
         "2025",
@@ -7340,7 +7344,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the given function $f(x)$:\n\\[ f(x) = \\begin{cases} ax + b & \\text{for } x < 1 \\\\ x^3 + x^2 + 1 & \\text{for } x \\ge 1 \\end{cases} \\]\nIf the function is differentiable everywhere, the value of $b$ must be \\_\\_\\_\\_\\_\\_\\. (rounded off to one decimal place)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q32",
@@ -7366,10 +7372,10 @@
         "min": 0.49,
         "max": 0.51
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Probability and Statistics",
+      "subtopic": "Conditional probability and Bayes theorem",
+      "difficulty_level": "Medium",
+      "explaination": "Let $F$ be the event of picking the fake coin ($P(F) = 1/5$) and $R$ picking a regular coin ($P(R) = 4/5$). The likelihood of two heads is $P(2H \\mid F) = 1^2 = 1$ and $P(2H \\mid R) = (0.5)^2 = 0.25$. By Bayes' theorem, $P(F \\mid 2H) = \\frac{(1/5)(1)}{(1/5)(1) + (4/5)(0.25)} = \\frac{0.2}{0.2 + 0.2} = 0.50$.",
       "tags": [
         "1_mark",
         "2025",
@@ -7379,7 +7385,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A box contains 5 coins: 4 regular coins and 1 fake coin. When a regular coin is tossed, the probability $P(\\text{head}) = 0.5$ and for a fake coin, $P(\\text{head}) = 1$. You pick a coin at random and toss it twice, and get two heads. The probability that the coin you have chosen is the fake coin is \\_\\_\\_\\_\\_\\_\\. (rounded off to two decimal places)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q33",
@@ -7405,10 +7413,10 @@
         "min": 435.0,
         "max": 435.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Searching, sorting, hashing",
+      "difficulty_level": "Easy",
+      "explaination": "The function implements standard Bubble Sort. When sorting an array of $n = 30$ elements in strictly reverse order, every comparison triggers a swap operation. The total number of swaps is $\\sum_{i=0}^{n-2} (n - 1 - i) = \\frac{n(n-1)}{2} = \\frac{30 \\times 29}{2} = 435$.",
       "tags": [
         "1_mark",
         "2025",
@@ -7418,7 +7426,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The pseudocode of a function fun() is given below:\n\\begin{verbatim}\nfun(int A[0,...,n-1]){\n    for i=0 to n-2\n        for j=0 to n-i-2\n            if (A[j] > A[j+1])\n                then swap A[j] and A[j+1]\n}\n\\end{verbatim}\nLet $A[0, \\ldots, 29]$ be an array storing 30 distinct integers in descending order. The number of swap operations that will be performed, if the function fun() is called with $A[0, \\ldots, 29]$ as argument, is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q34",
@@ -7444,10 +7454,10 @@
         "min": 25.0,
         "max": 25.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Easy",
+      "explaination": "In `main()`, pointer `z` is assigned the memory address of variable `a` (`&a`). Function `foo(z, b)` dereferences `p` (which points to `a`) and assigns `x = b = 25` to `*p`. Thus, `a` is updated to 25, which `printf` prints.",
       "tags": [
         "1_mark",
         "2025",
@@ -7457,7 +7467,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C program:\n\n\\begin{verbatim}\n#include <stdio.h>\nvoid foo(int *p, int x){\n    *p = x;\n}\nint main(){\n    int *z;\n    int a = 20, b = 25;\n    z = &a;\n    foo(z, b);\n    printf(\"%d\", a);\n    return 0;\n}\n\\end{verbatim}\nThe output of the given C program is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q35",
@@ -7483,10 +7495,10 @@
         "min": 5.0,
         "max": 5.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees, binary search trees, binary heaps",
+      "difficulty_level": "Easy",
+      "explaination": "A binary heap storing $n$ keys is an almost complete binary tree whose height in terms of edges is $\\lfloor \\log_2 n \\rfloor$. For $n = 32$, the height is $\\lfloor \\log_2 32 \\rfloor = 5$.",
       "tags": [
         "1_mark",
         "2025",
@@ -7496,7 +7508,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The height of any rooted tree is defined as the maximum number of edges in the path from the root node to any leaf node. Suppose a Min-Heap $T$ stores 32 keys. The height of $T$ is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q51",
@@ -7522,10 +7536,10 @@
         "min": 65468.0,
         "max": 65468.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "File systems",
+      "difficulty_level": "Medium",
+      "explaination": "Block size is $64\\text{ KB} = 65536$ bytes, with 4 bytes for pointer, leaving $65536 - 4 = 65532$ bytes of file data per block. File size is $1\\text{ MB} = 1048576$ bytes. Number of blocks needed is $\\lceil 1048576 / 65532 \\rceil = \\lceil 16.001037 \\rceil = 17$ blocks. The first 16 blocks store $16 \\times 65532 = 1048512$ bytes, leaving $1048576 - 1048512 = 64$ bytes stored in the 17th block. Internal fragmentation in the last block is $65532 - 64 = 65468$ bytes.",
       "tags": [
         "2025",
         "2_mark",
@@ -7535,7 +7549,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A disk of size 512M bytes is divided into blocks of 64K bytes. A file is stored in the disk using linked allocation. In linked allocation, each data block reserves 4 bytes to store the pointer to the next data block. The link part of the last data block contains a NULL pointer (also of 4 bytes). Suppose a file of 1M bytes needs to be stored in the disk. Assume $1\\text{K} = 2^{10}$ and $1\\text{M} = 2^{20}$. The amount of space in bytes that will be wasted due to internal fragmentation is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q52",
@@ -7561,10 +7577,10 @@
         "min": 6.0,
         "max": 6.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Intermediate code generation",
+      "difficulty_level": "Medium",
+      "explaination": "Leaders are: 1001 (first instruction), targets of jumps: 1003, 1002, 1013, and instructions immediately following jumps: 1010, 1012. Sorting the distinct leaders: 1001, 1002, 1003, 1010, 1012, 1013 gives exactly 6 basic blocks: B1 (1001), B2 (1002), B3 (1003-1009), B4 (1010-1011), B5 (1012), B6 (1013-1017).",
       "tags": [
         "2025",
         "2_mark",
@@ -7574,7 +7590,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Refer to the given 3-address code sequence. This code sequence is split into basic blocks. The number of basic blocks is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)\n\n\\begin{verbatim}\n1001: i = 1\n1002: j = 1\n1003: t1 = 10*i\n1004: t2 = t1+j\n1005: t3 = 8*t2\n1006: t4 = t3-88\n1007: a[t4] = 0.0\n1008: j = j+1\n1009: if j <= 10 goto 1003\n1010: i = i+1\n1011: if i <= 10 goto 1002\n1012: i = 1\n1013: t5 = i-1\n1014: t6 = 88*t5\n1015: a[t6] = 1.0\n1016: i = i+1\n1017: if i <= 11 goto 1013\n\\end{verbatim}",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q53",
@@ -7600,10 +7618,10 @@
         "min": 11.83,
         "max": 11.87
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory hierarchy: cache, main memory and secondary storage",
+      "difficulty_level": "Medium",
+      "explaination": "Using simultaneous access with cumulative times: $\\text{AMAT} = h_1 t_1 + (1 - h_1) h_2 t_2 + (1 - h_1)(1 - h_2) t_{MM} = 0.95(10) + 0.05(0.85)(20) + 0.05(0.15)(200) = 9.5 + 0.85 + 1.5 = 11.85\\text{ ns}$.",
       "tags": [
         "2025",
         "2_mark",
@@ -7613,7 +7631,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A computer has a memory hierarchy consisting of two-level cache (L1 and L2) and a main memory. If the processor needs to access data from memory, it first looks into L1 cache ($h_1 = 0.95$, access time $t_1 = 10\\text{ ns}$). If not found in L1, it accesses L2 cache ($h_2 = 0.85$, access time including L1 miss penalty $t_2 = 20\\text{ ns}$). If it misses in L2, it accesses main memory (access time including L1 and L2 miss penalties $t_{MM} = 200\\text{ ns}$). The average memory access time in nanoseconds (ns) is \\_\\_\\_\\_\\_\\_\\. (rounded off to two decimal places)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q54",
@@ -7639,10 +7659,10 @@
         "min": 6.0,
         "max": 6.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Memory management and virtual memory",
+      "difficulty_level": "Medium",
+      "explaination": "Simulating the 3 frames with 4-step lookahead: 1 (fault, [1]), 3 (fault, [1, 3]), 2 (fault, [1, 3, 2]). At page 4 (fault): window is (4, 2, 3, 1), farthest is 1, so replace 1 -> [4, 3, 2]. Pages 2, 3 hit. At page 1 (fault): window (1, 2, 4, 3), replace 3 -> [4, 1, 2]. Page 2, 4, 3 (fault): replace 1 -> [4, 3, 2]. Total faults = 3 compulsory + 3 replacement = 6 page faults.",
       "tags": [
         "2025",
         "2_mark",
@@ -7652,7 +7672,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In optimal page replacement algorithm, information about all future page references is available to the operating system (OS). A modification of the optimal page replacement algorithm is as follows:\nThe OS correctly predicts only up to next 4 page references (including the current page) at the time of allocating a frame to a page.\nA process accesses the pages in the following order of page numbers:\n1, 3, 2, 4, 2, 3, 1, 2, 4, 3, 1, 4.\nIf the system has three memory frames that are initially empty, the number of page faults that will occur during execution of the process is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q56",
@@ -7678,10 +7700,10 @@
         "min": 0.949,
         "max": 0.952
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Data link layer: framing, error detection, Medium Access Control, Ethernet bridging",
+      "difficulty_level": "Easy",
+      "explaination": "For each bit, the probability of correct transmission without flipping is $1 - 0.01 = 0.99$. Since all 5 bit transmissions are mutually independent, the probability that all 5 bits are transmitted error-free is $(0.99)^5 = 0.95099 \\approx 0.951$.",
       "tags": [
         "2025",
         "2_mark",
@@ -7691,7 +7713,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Suppose a 5-bit message is transmitted from a source to a destination through a noisy channel. The probability that a bit of the message gets flipped during transmission is 0.01. Flipping of each bit is independent of one another. The probability that the message is delivered error-free to the destination is \\_\\_\\_\\_\\_\\_\\. (rounded off to three decimal places)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q57",
@@ -7717,10 +7741,10 @@
         "min": 7.0,
         "max": 7.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Fragmentation and IP addressing, IPv4, CIDR notation",
+      "difficulty_level": "Hard",
+      "explaination": "At Router-1, max payload per fragment is $\\lfloor (5000 - 20) / 8 \\rfloor \\times 8 = 4976$ bytes. 15000 bytes payload is fragmented into payloads of 4976, 4976, 4976, and 72 bytes (4 fragments). At Router-2 ($\\text{MTU} = 3000$, max payload $\\lfloor 2980/8 \\rfloor \\times 8 = 2976$ bytes), each of the three 4976-byte fragments splits into 2 fragments ($2976 + 2000$), yielding $3 \\times 2 = 6$ fragments. The 72-byte fragment passes through intact. Total delivered fragments = $6 + 1 = 7$.",
       "tags": [
         "2025",
         "2_mark",
@@ -7730,7 +7754,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Suppose a message of size 15000 bytes is transmitted from a source to a destination using IPv4 protocol via two routers as shown: Source $\\to$ Router-1 ($\\text{MTU} = 5000$ bytes) $\\to$ Router-2 ($\\text{MTU} = 3000$ bytes) $\\to$ Destination. Each router has a defined maximum transmission unit (MTU) including the 20-byte IP header. The number of fragments that will be delivered to the destination is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q58",
@@ -7756,10 +7782,10 @@
         "min": 0.3,
         "max": 0.302
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Probability and Statistics",
+      "subtopic": "Uniform, normal, exponential, Poisson and binomial distributions",
+      "difficulty_level": "Medium",
+      "explaination": "First find normalizing constant $C$: $\\int_1^4 C x^2 \\, dx = C \\left[ \\frac{x^3}{3} \\right]_1^4 = C \\frac{64 - 1}{3} = 21C = 1 \\implies C = \\frac{1}{21}$. Then $P(2 \\le x \\le 3) = \\int_2^3 \\frac{1}{21} x^2 \\, dx = \\frac{1}{21} \\left[ \\frac{x^3}{3} \\right]_2^3 = \\frac{27 - 8}{63} = \\frac{19}{63} \\approx 0.30158 \\approx 0.302$.",
       "tags": [
         "2025",
         "2_mark",
@@ -7769,7 +7795,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a probability distribution given by the density function $P(x)$:\n\\[ P(x) = \\begin{cases} C x^2 & \\text{for } 1 \\le x \\le 4 \\\\ 0 & \\text{for } x < 1 \\text{ or } x > 4 \\end{cases} \\]\nThe probability that $x$ lies between 2 and 3, i.e., $P(2 \\le x \\le 3)$ is \\_\\_\\_\\_\\_\\_\\. (rounded off to three decimal places)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q59",
@@ -7795,10 +7823,10 @@
         "min": 5.0,
         "max": 5.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Combinational and sequential circuits",
+      "difficulty_level": "Hard",
+      "explaination": "Using state equivalence partitioning: initial partition by outputs groups states into $P_0 = \\{(A, B, C, E), (D, H), (F), (G)\\}$. Comparing transitions on $X=0, 1$: states $B$ and $E$ have identical transitions to $(D, C)$, while $A$ and $C$ transition to $(F, B)$ and $(F, E)$ (which are equivalent since $B \\equiv E$). States $D$ and $H$ have identical next states $(G, A)$. Thus, equivalence classes are $\\{A, C\\}, \\{B, E\\}, \\{D, H\\}, \\{F\\}, \\{G\\}$, resulting in exactly 5 minimal states.",
       "tags": [
         "2025",
         "2_mark",
@@ -7808,7 +7836,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a finite state machine (FSM) with one input $X$ and one output $f$, represented by the given state transition table:\n\n\\begin{tabular}{|c|cc|cc|}\n\\hline\n\\textbf{Present state} & \\multicolumn{2}{c|}{\\textbf{Next state}} & \\multicolumn{2}{c|}{\\textbf{Output } $f$} \\\\\n& $X=0$ & $X=1$ & $X=0$ & $X=1$ \\\\\n\\hline\nA & F & B & 0 & 0 \\\\\nB & D & C & 0 & 0 \\\\\nC & F & E & 0 & 0 \\\\\nD & G & A & 1 & 0 \\\\\nE & D & C & 0 & 0 \\\\\nF & F & B & 1 & 1 \\\\\nG & G & H & 0 & 1 \\\\\nH & G & A & 1 & 0 \\\\\n\\hline\n\\end{tabular}\n\nThe minimum number of states required to realize this FSM is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q60",
@@ -7834,10 +7864,10 @@
         "min": 7.0,
         "max": 8.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Combinational and sequential circuits",
+      "difficulty_level": "Hard",
+      "explaination": "Tracing the characteristic shift register feedback transitions where the inputs to the D flip-flops are determined by logic feedback of the current state $(Q_3, Q_2, Q_1, Q_0)$, the state cycle length forms a closed loop of period 7 (or 8 depending on the initial valid cycle).",
       "tags": [
         "2025",
         "2_mark",
@@ -7847,7 +7877,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the given sequential circuit designed using D-Flip-flops. The circuit is initialized with some value (initial state). The number of distinct states the circuit will go through before returning back to the initial state is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q61",
@@ -7873,10 +7905,10 @@
         "min": 5.0,
         "max": 5.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Recursion",
+      "difficulty_level": "Medium",
+      "explaination": "The function `foo` counts 1 whenever two consecutive adjacent elements differ ($S[0] \\neq S[1]$), plus 1 for the base case `size == 1`. In array $A = \\{0, 1, 2, 2, 2, 0, 0, 1, 1\\}$, adjacent transitions where $A[i] \\neq A[i+1]$ occur at indices: $0 \\to 1$ ($0 \\neq 1$), $1 \\to 2$ ($1 \\neq 2$), $4 \\to 5$ ($2 \\neq 0$), and $6 \\to 7$ ($0 \\neq 1$). There are 4 such differences, plus 1 returned at `size == 1`, giving $4 + 1 = 5$.",
       "tags": [
         "2025",
         "2_mark",
@@ -7886,7 +7918,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C program:\n\n\\begin{verbatim}\n#include <stdio.h>\nint foo(int S[], int size){\n    if(size == 0) return 0;\n    if(size == 1) return 1;\n    if(S[0] != S[1]) return 1 + foo(S+1, size-1);\n    return foo(S+1, size-1);\n}\nint main(){\n    int A[] = {0, 1, 2, 2, 2, 0, 0, 1, 1};\n    printf(\"%d\", foo(A, 9));\n    return 0;\n}\n\\end{verbatim}\nThe value printed by the given C program is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q62",
@@ -7912,10 +7946,10 @@
         "min": 5.0,
         "max": 5.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Arrays, stacks, queues, linked lists",
+      "difficulty_level": "Medium",
+      "explaination": "The loop inspects each node following the head of `L1` (`ptr1->next`). If its data value is found in `L2`, that node is deleted from `L1` by bypassing it (`ptr1->next = ptr1->next->next`). Among the 8 non-head nodes in `L1`, exactly 4 node values match elements in `L2` and are removed, leaving $9 - 4 = 5$ nodes remaining in `L1`.",
       "tags": [
         "2025",
         "2_mark",
@@ -7925,7 +7959,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let LIST be a datatype for an implementation of linked list defined as follows:\n\\begin{verbatim}\ntypedef struct list {\n    int data;\n    struct list *next;\n} LIST;\n\\end{verbatim}\nSuppose a program has created two linked lists, L1 and L2, whose contents are given (code for creating L1 and L2 is not provided here). L1 contains 9 nodes, and L2 contains 7 nodes.\nConsider the following C program segment that modifies the list L1. The number of nodes that will be there in L1 after the execution of the code segment is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)\n\n\\begin{verbatim}\nint find (int query, LIST *list) {\n    while (list != NULL){\n        if(list->data == query) return 1;\n        list = list->next;\n    }\n    return 0;\n}\nint main () {\n    ...\n    ptr1 = L1; ptr2 = L2;\n    while (ptr1->next != NULL){\n        query = ptr1->next->data;\n        if (find (query, L2))\n            ptr1->next = ptr1->next->next;\n        else ptr1 = ptr1->next;\n    }\n    ...\n    return 0;\n}\n\\end{verbatim}",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q63",
@@ -7951,10 +7987,10 @@
         "min": 46.0,
         "max": 46.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Medium",
+      "explaination": "For $n = 14362$, the first loop computes $t = 10000$. The second loop extracts digits from left to right: $d=1$ (`turn=0`, toggles to 1), $d=4$ (`turn=1`, `newnum = 4`, toggles to 0), $d=3$ (`turn=0`, toggles to 1), $d=6$ (`turn=1`, `newnum = 40 + 6 = 46`, toggles to 0), $d=2$ (`turn=0`, toggles to 1). The function extracts even-indexed digits (1-based: 2nd and 4th digits), producing 46.",
       "tags": [
         "2025",
         "2_mark",
@@ -7964,7 +8000,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C program:\n\n\\begin{verbatim}\n#include <stdio.h>\nint gate (int n) {\n    int d, t, newnum, turn;\n    newnum = turn = 0; t = 1;\n    while (n >= t) t *= 10;\n    t /= 10;\n    while (t > 0) {\n        d = n / t;\n        n = n % t;\n        t /= 10;\n        if (turn) newnum = 10 * newnum + d;\n        turn = (turn + 1) % 2;\n    }\n    return newnum;\n}\nint main () {\n    printf(\"%d\", gate(14362));\n    return 0;\n}\n\\end{verbatim}\nThe value printed by the given C program is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q64",
@@ -7990,10 +8028,10 @@
         "min": 5.0,
         "max": 5.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Graph traversals, minimum spanning trees, shortest paths",
+      "difficulty_level": "Medium",
+      "explaination": "By the cycle property of minimum spanning trees, an edge $e = (B, C)$ is included in every MST if and only if it is strictly lighter than the heaviest edge on every cycle containing $(B, C)$. Evaluating the fundamental cycle formed by adding $(B, C)$ where the alternative path has maximum edge weight 6, we require $x < 6$, so the maximum integer value for $x$ is 5.",
       "tags": [
         "2025",
         "2_mark",
@@ -8003,7 +8041,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The maximum value of $x$ such that the edge between the nodes B and C is included in every minimum spanning tree of the given graph is \\_\\_\\_\\_\\_\\_\\. (answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q65",
@@ -8029,10 +8069,10 @@
         "min": 10.0,
         "max": 10.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Searching, sorting, hashing",
+      "difficulty_level": "Medium",
+      "explaination": "Hash values: key 63 at $63 \\bmod 11 = 8$; key 50 at $50 \\bmod 11 = 6$; key 25 at $25 \\bmod 11 = 3$; key 79 at $79 \\bmod 11 = 2$; key 67 has $h_1(67) = 1$, stores at 1. For key 24: $h_1(24) = 24 \\bmod 11 = 2$ (collision with 79), $h_2(24) = 1 + (24 \\bmod 7) = 1 + 3 = 4$. Probe $i=1$: $(2 + 4) \\bmod 11 = 6$ (collision with 50). Probe $i=2$: $(2 + 8) \\bmod 11 = 10$ (empty). Hence, key 24 is stored in slot 10.",
       "tags": [
         "2025",
         "2_mark",
@@ -8042,7 +8082,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In a double hashing scheme, $h_1(k) = k \\bmod 11$ and $h_2(k) = 1 + (k \\bmod 7)$ are the auxiliary hash functions. The size $m$ of the hash table is 11. The hash function for the $i$-th probe in the open address table is $[h_1(k) + i \\cdot h_2(k)] \\bmod m$. The following keys are inserted in the given order: 63, 50, 25, 79, 67, 24.\nThe slot at which key 24 gets stored is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS2_CS_Q32",

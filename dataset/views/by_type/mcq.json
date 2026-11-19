@@ -30667,10 +30667,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "I/O interface: interrupt and DMA mode",
+      "difficulty_level": "Easy",
+      "explaination": "When an asynchronous interrupt arrives, the processor first finishes the execution of the current instruction (iii). Next, it saves the current program counter (and processor state) onto the stack (i). Finally, it loads the starting address of the interrupt service routine into the program counter (ii).",
       "tags": [
         "1_mark",
         "2025",
@@ -30681,7 +30681,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Suppose a program is running on a non-pipelined single processor computer system. The computer is connected to an external device that can interrupt the processor asynchronously. The processor needs to execute the interrupt service routine (ISR) to serve this interrupt. The following steps (not necessarily in order) are taken by the processor when the interrupt arrives:\n\\begin{enumerate}[label=(\\roman*)]\n\\item The processor saves the content of the program counter.\n\\item The program counter is loaded with the start address of the ISR.\n\\item The processor finishes the present instruction.\n\\end{enumerate}\nWhich ONE of the following is the CORRECT sequence of steps?",
+      "options_latex": {
+        "A": "(iii), (i), (ii)",
+        "B": "(i), (iii), (ii)",
+        "C": "(i), (ii), (iii)",
+        "D": "(iii), (ii), (i)"
+      }
     },
     {
       "id": "2025_CS1_CS_Q12",
@@ -30711,10 +30718,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Easy",
+      "explaination": "The symbol table is actively used throughout all phases of the compiler, including semantic analysis, intermediate code generation, code optimization, and target code generation for type checking, memory allocation, and address resolution. Thus, claiming it is not required after parsing is false.",
       "tags": [
         "1_mark",
         "2025",
@@ -30725,7 +30732,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which ONE of the following statements is FALSE regarding the symbol table?",
+      "options_latex": {
+        "A": "Symbol table is responsible for keeping track of the scope of variables.",
+        "B": "Symbol table can be implemented using a binary search tree.",
+        "C": "Symbol table is not required after the parsing phase.",
+        "D": "Symbol table is created during the lexical analysis phase."
+      }
     },
     {
       "id": "2025_CS1_CS_Q13",
@@ -30755,10 +30769,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Data flow analyses: constant propagation, liveness analysis, common sub expression elimination",
+      "difficulty_level": "Easy",
+      "explaination": "Live variable analysis determines whether the value in a variable could be read along some execution path before being redefined. This information is directly used in register allocation and assignment to construct interference graphs and allocate registers efficiently.",
       "tags": [
         "1_mark",
         "2025",
@@ -30769,7 +30783,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which ONE of the following techniques used in compiler code optimization uses live variable analysis?",
+      "options_latex": {
+        "A": "Run-time function call management",
+        "B": "Register assignment to variables",
+        "C": "Strength reduction",
+        "D": "Constant folding"
+      }
     },
     {
       "id": "2025_CS1_CS_Q14",
@@ -30799,10 +30820,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Memory management and virtual memory",
+      "difficulty_level": "Medium",
+      "explaination": "With a page size of $2048 = 2^{11}$ bytes, the page offset requires 11 bits. The 32-bit logical address is split into page number and page offset, so the page number has $32 - 11 = 21$ bits. Hence, the page table contains at most $2^{21}$ entries.",
       "tags": [
         "1_mark",
         "2025",
@@ -30813,7 +30834,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a demand paging memory management system with 32-bit logical address, 20-bit physical address, and page size of 2048 bytes. Assuming that the memory is byte addressable, what is the maximum number of entries in the page table?",
+      "options_latex": {
+        "A": "$2^{21}$",
+        "B": "$2^{20}$",
+        "C": "$2^{22}$",
+        "D": "$2^{24}$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q15",
@@ -30843,10 +30871,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty_level": "Medium",
+      "explaination": "Transaction $T_1$ writes to item $Y$ ($W_1(Y)$). Subsequently, both $T_2$ and $T_3$ read uncommitted data item $Y$ ($R_2(Y)$ and $R_3(Y)$) written by $T_1$ before $T_1$ commits. When $T_1$ aborts, a cascading rollback is triggered, requiring both $T_2$ and $T_3$ to be rolled back.",
       "tags": [
         "1_mark",
         "2025",
@@ -30857,7 +30885,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A schedule of three database transactions $T_1, T_2$, and $T_3$ is shown. $R_i(A)$ and $W_i(A)$ denote read and write of data item $A$ by transaction $T_i$, $i= 1,2,3$. The transaction $T_1$ aborts at the end. Which other transaction(s) will be required to be rolled back?\n\\[ R_1(X) \\; W_1(Y) \\; R_2(X) \\; R_2(Y) \\; R_3(Y) \\; ABORT(T_1) \\]",
+      "options_latex": {
+        "A": "Only $T_2$",
+        "B": "Only $T_3$",
+        "C": "Both $T_2$ and $T_3$",
+        "D": "Neither $T_2$ nor $T_3$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q16",
@@ -30887,10 +30922,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Concept of layering: OSI and TCP/IP Protocol Stacks",
+      "difficulty_level": "Easy",
+      "explaination": "The Network layer is responsible for packet routing across networks ((a)-(I)). The Transport layer provides end-to-end communication services between hosts ((b)-(III)). The Data Link layer handles framing, flow control, and physical error handling ((c)-(II)).",
       "tags": [
         "1_mark",
         "2025",
@@ -30901,7 +30936,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Identify the ONE CORRECT matching between the OSI layers and their corresponding functionalities as shown.\n\n\\begin{tabular}{ll}\n\\textbf{OSI Layers} & \\textbf{Functionalities} \\\\\n(a) Network layer & (I) Packet routing \\\\\n(b) Transport layer & (II) Framing and error handling \\\\\n(c) Datalink layer & (III) Host to host communication\n\\end{tabular}",
+      "options_latex": {
+        "A": "(a)-(I), (b)-(II), (c)-(III)",
+        "B": "(a)-(I), (b)-(III), (c)-(II)",
+        "C": "(a)-(II), (b)-(I), (c)-(III)",
+        "D": "(a)-(III), (b)-(II), (c)-(I)"
+      }
     },
     {
       "id": "2025_CS1_CS_Q17",
@@ -30931,10 +30973,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Sets, relations, functions, partial orders and lattices",
+      "difficulty_level": "Medium",
+      "explaination": "If the composition $f \\circ g: A \\to C$ is surjective, $f$ must be surjective, but $g$ is not required to be either injective or surjective. For example, if $C$ is a singleton $\\{c\\}$ and $B = \\{b_1, b_2\\}$, $g$ can map all of $A$ to $b_1$ where $f(b_1) = c$, leaving $b_2$ uncovered (not onto) and having many collisions (not one-to-one).",
       "tags": [
         "1_mark",
         "2025",
@@ -30945,7 +30987,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "$g(\\cdot)$ is a function from $A$ to $B$, $f(\\cdot)$ is a function from $B$ to $C$, and their composition defined as $f(g(\\cdot))$ is a mapping from $A$ to $C$.\nIf $f(\\cdot)$ and $f(g(\\cdot))$ are onto (surjective) functions, which ONE of the following is TRUE about the function $g(\\cdot)$?",
+      "options_latex": {
+        "A": "$g(\\cdot)$ must be an onto (surjective) function.",
+        "B": "$g(\\cdot)$ must be a one-to-one (injective) function.",
+        "C": "$g(\\cdot)$ must be a bijective function, that is, both one-to-one and onto.",
+        "D": "$g(\\cdot)$ is not required to be a one-to-one or onto function."
+      }
     },
     {
       "id": "2025_CS1_CS_Q18",
@@ -30975,10 +31024,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Graph traversals, minimum spanning trees, shortest paths",
+      "difficulty_level": "Easy",
+      "explaination": "Since the minimum spanning tree $T$ is a subgraph of $G$ ($E(T) \\subseteq E(G)$), every path between $u$ and $v$ in $T$ is also a valid path in $G$. Thus, the shortest path distance in $G$ cannot exceed that in $T$, guaranteeing $d_1(u, v) \\le d_2(u, v)$.",
       "tags": [
         "1_mark",
         "2025",
@@ -30989,7 +31038,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $G$ be any undirected graph with positive edge weights, and $T$ be a minimum spanning tree of $G$. For any two vertices, $u$ and $v$, let $d_1(u, v)$ and $d_2(u, v)$ be the shortest distances between $u$ and $v$ in $G$ and $T$, respectively. Which ONE of the options is CORRECT for all possible $G, T, u$ and $v$?",
+      "options_latex": {
+        "A": "$d_1(u, v) = d_2(u, v)$",
+        "B": "$d_1(u, v) \\le d_2(u, v)$",
+        "C": "$d_1(u, v) \\ge d_2(u, v)$",
+        "D": "$d_1(u, v) \\ne d_2(u, v)$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q19",
@@ -31019,10 +31075,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Context-free grammars and push-down automata",
+      "difficulty_level": "Easy",
+      "explaination": "From the rules, $A$ generates $a^+$ (any $a^n$ with $n \\ge 1$) and $B$ generates $b^+$ (any $b^n$ with $n \\ge 1$). Thus, $aaB$ produces $a^2b^n$ ($n \\ge 1$), and $Abb$ produces $a^nb^2$ ($n \\ge 1$). Therefore, $L(G) = \\{a^2b^n \\mid n \\ge 1\\} \\cup \\{a^nb^2 \\mid n \\ge 1\\}$.",
       "tags": [
         "1_mark",
         "2025",
@@ -31033,7 +31089,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following context-free grammar $G$, where $S, A$, and $B$ are the variables (non-terminals), $a$ and $b$ are the terminal symbols, $S$ is the start variable, and the rules of $G$ are described as:\n\\[ S \\to aaB \\mid Abb \\]\n\\[ A \\to a \\mid aA \\]\n\\[ B \\to b \\mid bB \\]\nWhich ONE of the languages $L(G)$ is accepted by $G$?",
+      "options_latex": {
+        "A": "$L(G) = \\{a^2b^n \\mid n \\ge 1\\} \\cup \\{a^nb^2 \\mid n \\ge 1\\}$",
+        "B": "$L(G) = \\{a^nb^{2n} \\mid n \\ge 1\\} \\cup \\{a^{2n}b^n \\mid n \\ge 1\\}$",
+        "C": "$L(G) = \\{a^nb^n \\mid n \\ge 1\\}$",
+        "D": "$L(G) = \\{a^{2n}b^{2n} \\mid n \\ge 1\\}$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q20",
@@ -31063,10 +31126,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Asymptotic worst case time and space complexity",
+      "difficulty_level": "Medium",
+      "explaination": "Dividing both sides by $2^n$ yields $\\frac{T(n)}{2^n} = \\frac{T(n-1)}{2^{n-1}} + n$. Letting $S(n) = \\frac{T(n)}{2^n}$, we have $S(n) = S(n-1) + n = S(0) + \\sum_{i=1}^n i = 1 + \\frac{n(n+1)}{2} = \\Theta(n^2)$. Multiplying back gives $T(n) = \\Theta(n^2 2^n)$.",
       "tags": [
         "1_mark",
         "2025",
@@ -31077,7 +31140,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following recurrence relation:\n\\[ T(n) = 2T(n-1) + n2^n \\quad \\text{for } n > 0, \\; T(0) = 1. \\]\nWhich ONE of the following options is CORRECT?",
+      "options_latex": {
+        "A": "$T(n) = \\Theta(n^2 2^n)$",
+        "B": "$T(n) = \\Theta(n 2^n)$",
+        "C": "$T(n) = \\Theta((\\log n)^2 2^n)$",
+        "D": "$T(n) = \\Theta(4^n)$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q36",
@@ -31107,10 +31177,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory hierarchy: cache, main memory and secondary storage",
+      "difficulty_level": "Medium",
+      "explaination": "With block size $16 = 2^4$ bytes, block offset is 4 bits. Cache size is $16\\text{ KB} = 2^{14}$ bytes, so number of cache lines is $2^{14}/2^4 = 2^{10} = 1024$, requiring 10 line index bits. The tag bits per line are $20 - (10 + 4) = 6$ bits. For all $2^{10}$ lines, total tag bits required are $6 \\times 2^{10}$.",
       "tags": [
         "2025",
         "2_mark",
@@ -31121,7 +31191,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a memory system with 1M bytes of main memory and 16K bytes of cache memory. Assume that the processor generates 20-bit memory address, and the cache block size is 16 bytes. If the cache uses direct mapping, how many bits will be required to store all the tag values? [Assume memory is byte addressable, $1\\text{K}=2^{10}, 1\\text{M}=2^{20}$.]",
+      "options_latex": {
+        "A": "$6 \\times 2^{10}$",
+        "B": "$8 \\times 2^{10}$",
+        "C": "$2^{12}$",
+        "D": "$2^{14}$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q37",
@@ -31151,10 +31228,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Machine instructions and addressing modes",
+      "difficulty_level": "Medium",
+      "explaination": "To represent 50 distinct instruction opcodes, $\\lceil \\log_2 50 \\rceil = 6$ opcode bits are required. Specifying one destination register among 64 general-purpose registers requires $\\lceil \\log_2 64 \\rceil = 6$ bits. In a 32-bit instruction word, the remaining bits for the immediate field are $32 - (6 + 6) = 20$ bits.",
       "tags": [
         "2025",
         "2_mark",
@@ -31165,7 +31242,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A processor has 64 general-purpose registers and 50 distinct instruction types. An instruction is encoded in 32-bits. What is the maximum number of bits that can be used to store the immediate operand for the given instruction?\n\\begin{verbatim}\nADD R1, #25 // R1 = R1 + 25\n\\end{verbatim}",
+      "options_latex": {
+        "A": "16",
+        "B": "20",
+        "C": "22",
+        "D": "24"
+      }
     },
     {
       "id": "2025_CS1_CS_Q38",
@@ -31195,10 +31279,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "CPU and I/O scheduling",
+      "difficulty_level": "Hard",
+      "explaination": "At $t = 0$, $M_1$ takes highest priority process $P_1$ (burst 20) and $M_2$ takes $P_2$ (burst 16). At $t = 16$, $M_2$ frees up; among remaining processes $\\{P_3, P_4\\}$, $P_3$ has higher priority on $M_2$, so $P_3$ runs on $M_2$ ($t = 16$ to 41). At $t = 20$, $M_1$ frees up and executes $P_4$ ($t = 20$ to 30). Waiting times are: $P_1 = 0$, $P_2 = 0$, $P_3 = 16$, $P_4 = 20$. Average waiting time is $(0 + 0 + 16 + 20) / 4 = 36 / 4 = 9.00$ ms.",
       "tags": [
         "2025",
         "2_mark",
@@ -31209,7 +31293,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A computer has two processors, $M_1$ and $M_2$. Four processes $P_1, P_2, P_3, P_4$ with CPU bursts of 20, 16, 25, and 10 milliseconds, respectively, arrive at the same time and these are the only processes in the system. The scheduler uses non-preemptive priority scheduling, with priorities decided as follows:\n\\begin{itemize}\n\\item $M_1$ uses priority of execution for the processes as, $P_1 > P_3 > P_2 > P_4$, i.e., $P_1$ and $P_4$ have highest and lowest priorities, respectively.\n\\item $M_2$ uses priority of execution for the processes as, $P_2 > P_3 > P_4 > P_1$, i.e., $P_2$ and $P_1$ have highest and lowest priorities, respectively.\n\\end{itemize}\nA process $P_i$ is scheduled to a processor $M_k$, if the processor is free and no other process $P_j$ is waiting with higher priority. At any given point of time, a process can be allocated to any one of the free processors without violating the execution priority rules. Ignore the context switch time. What will be the average waiting time of the processes in milliseconds?",
+      "options_latex": {
+        "A": "9.00",
+        "B": "8.75",
+        "C": "6.50",
+        "D": "7.50"
+      }
     },
     {
       "id": "2025_CS1_CS_Q39",
@@ -31239,10 +31330,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Relational model: relational algebra, tuple calculus, SQL",
+      "difficulty_level": "Medium",
+      "explaination": "The query must select `p.pname` from the `players` relation ($p \\in players$) and join with a tuple $t \\in teams$ on the foreign key condition $p.tid = t.tid$, while filtering for $t.tname = \\text{'MI'}$. Option A accurately expresses this quantified condition in Tuple Relational Calculus.",
       "tags": [
         "2025",
         "2_mark",
@@ -31253,7 +31344,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider two relations describing $teams$ and $players$ in a sports league:\n\\begin{itemize}\n\\item $teams(tid, tname)$: $tid, tname$ are team-id and team-name, respectively\n\\item $players(pid, pname, tid)$: $pid, pname$, and $tid$ denote player-id, player-name and the team-id of the player, respectively\n\\end{itemize}\nWhich ONE of the following tuple relational calculus queries returns the name of the players who play for the team having $tname$ as 'MI'?",
+      "options_latex": {
+        "A": "$\\{ p.pname \\mid p \\in players \\land \\exists t (t \\in teams \\land p.tid = t.tid \\land t.tname = \\text{'MI'}) \\}$",
+        "B": "$\\{ p.pname \\mid p \\in teams \\land \\exists t (t \\in players \\land p.tid = t.tid \\land t.tname = \\text{'MI'}) \\}$",
+        "C": "$\\{ p.pname \\mid p \\in players \\land \\exists t (t \\in teams \\land t.tname = \\text{'MI'}) \\}$",
+        "D": "$\\{ p.pname \\mid p \\in teams \\land \\exists t (t \\in players \\land t.tname = \\text{'MI'}) \\}$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q40",
@@ -31283,10 +31381,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Routing protocols: shortest path, flooding, distance vector and link state routing",
+      "difficulty_level": "Medium",
+      "explaination": "The destination address has third octet $109 = 01101101_2$. For /16, $145.36.0.0$ matches. For /17 ($128 = 10000000_2$), the leading bit is 0, so /17 does not match. For /18 ($64 = 01000000_2$), the first two bits are $01_2$, which matches $109$ ($01101101_2$). For /24, 255 does not match. By Longest Prefix Match, /18 (interface E3) is chosen.",
       "tags": [
         "2025",
         "2_mark",
@@ -31297,7 +31395,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A packet with the destination IP address 145.36.109.70 arrives at a router whose routing table is shown below:\n\n\\begin{tabular}{|l|l|c|}\n\\hline\n\\textbf{Subnet Address} & \\textbf{Subnet Mask (CIDR)} & \\textbf{Interface} \\\\\n\\hline\n145.36.0.0 & /16 & E1 \\\\\n145.36.128.0 & /17 & E2 \\\\\n145.36.64.0 & /18 & E3 \\\\\n145.36.255.0 & /24 & E4 \\\\\nDefault & -- & E5 \\\\\n\\hline\n\\end{tabular}\n\nWhich interface will the packet be forwarded to?",
+      "options_latex": {
+        "A": "E3",
+        "B": "E1",
+        "C": "E2",
+        "D": "E5"
+      }
     },
     {
       "id": "2025_CS1_CS_Q41",
@@ -31327,10 +31432,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Linear Algebra",
+      "subtopic": "Eigenvalues and eigenvectors",
+      "difficulty_level": "Medium",
+      "explaination": "The characteristic equation of $A$ is $\\det(A - \\lambda I) = (1 - \\lambda)(-1 - \\lambda) - 1 = \\lambda^2 - 2 = 0$, so eigenvalues of $A$ are $\\lambda_1 = \\sqrt{2}$ and $\\lambda_2 = -\\sqrt{2}$. The eigenvalues of $A^{13}$ are $(\\sqrt{2})^{13} = 2^6 \\sqrt{2} = 64\\sqrt{2}$ and $(-\\sqrt{2})^{13} = -64\\sqrt{2}$.",
       "tags": [
         "2025",
         "2_mark",
@@ -31341,7 +31446,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $A$ be a $2 \\times 2$ matrix given by:\n\\[ A = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\]\nWhat are the eigenvalues of the matrix $A^{13}$?",
+      "options_latex": {
+        "A": "$1, -1$",
+        "B": "$2\\sqrt{2}, -2\\sqrt{2}$",
+        "C": "$4\\sqrt{2}, -4\\sqrt{2}$",
+        "D": "$64\\sqrt{2}, -64\\sqrt{2}$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q42",
@@ -31371,10 +31483,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Minimization",
+      "difficulty_level": "Medium",
+      "explaination": "Grouping minterms on a 4-variable K-map: minterms $\\{0, 2, 8, 10\\}$ form a 4-cell group giving $\\overline{b}_2\\overline{b}_0$; minterms $\\{0, 4, 8, 12\\}$ form a 4-cell group giving $\\overline{b}_1\\overline{b}_0$; remaining minterm 11 combines with 10 to give $b_3\\overline{b}_2b_1$. Combining these essential prime implicants yields $\\overline{b}_1\\overline{b}_0 + \\overline{b}_2\\overline{b}_0 + b_1\\overline{b}_2b_3$.",
       "tags": [
         "2025",
         "2_mark",
@@ -31385,7 +31497,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following four variable Boolean function in sum-of-product form:\n\\[ F(b_3, b_2, b_1, b_0) = \\sum(0, 2, 4, 8, 10, 11, 12) \\]\nwhere the value of the function is computed by considering $b_3b_2b_1b_0$ as a 4-bit binary number, where $b_3$ denotes the most significant bit and $b_0$ denotes the least significant bit. Note that there are no don't care terms. Which ONE of the following options is the CORRECT minimized expression?",
+      "options_latex": {
+        "A": "$\\overline{b}_1\\overline{b}_0 + \\overline{b}_2\\overline{b}_0 + b_1\\overline{b}_2b_3$",
+        "B": "$\\overline{b}_1\\overline{b}_0 + \\overline{b}_2\\overline{b}_0$",
+        "C": "$\\overline{b}_2\\overline{b}_0 + b_1b_2b_3$",
+        "D": "$\\overline{b}_0\\overline{b}_2 + \\overline{b}_3$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q43",
@@ -31415,10 +31534,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Graph traversals, minimum spanning trees, shortest paths",
+      "difficulty_level": "Medium",
+      "explaination": "The diameter of $G$ is $\\text{diam}(G) = \\max_{u,v} d(u, v) = 30$. For any BFS root $r$, the triangle inequality ensures that for the pair $(u, v)$ realizing the diameter, $30 = d(u, v) \\le d(r, u) + d(r, v) \\le 2 \\times \\text{height}(T)$. Hence, $\\text{height}(T) \\ge \\lceil 30/2 \\rceil = 15$.",
       "tags": [
         "2025",
         "2_mark",
@@ -31429,7 +31548,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $G(V, E)$ be an undirected and unweighted graph with 100 vertices. Let $d(u, v)$ denote the number of edges in a shortest path between vertices $u$ and $v$ in $V$. Let the maximum value of $d(u, v), u, v \\in V$ such that $u \\neq v$, be 30. Let $T$ be any breadth-first-search tree of $G$. Which ONE of the given options is CORRECT for every such graph $G$?",
+      "options_latex": {
+        "A": "The height of $T$ is exactly 15.",
+        "B": "The height of $T$ is exactly 30.",
+        "C": "The height of $T$ is at least 15.",
+        "D": "The height of $T$ is at least 30."
+      }
     },
     {
       "id": "2025_CS1_CS_Q44",
@@ -31459,10 +31585,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular and context-free languages, pumping lemma",
+      "difficulty_level": "Medium",
+      "explaination": "For $L_2$, $\\alpha = a^k$ ($k \\ge 1$). A string belongs to $L_2$ if and only if it starts with $a$, ends with $a$, and has length at least 3 ($a(a+b)^+a$), which is clearly regular. For $L_1$, the prefix $\\alpha$ and suffix $\\alpha$ must match over $\\{a, b\\}^+$, which requires unbounded memory to verify matching arbitrary binary strings, making $L_1$ non-regular.",
       "tags": [
         "2025",
         "2_mark",
@@ -31473,7 +31599,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following two languages over the alphabet $\\{a, b\\}$:\n\\[ L_1 = \\{ \\alpha\\beta\\alpha \\mid \\alpha \\in \\{a, b\\}^+ \\text{ AND } \\beta \\in \\{a, b\\}^+ \\} \\]\n\\[ L_2 = \\{ \\alpha\\beta\\alpha \\mid \\alpha \\in \\{a\\}^+ \\text{ AND } \\beta \\in \\{a, b\\}^+ \\} \\]\nWhich ONE of the following statements is CORRECT?",
+      "options_latex": {
+        "A": "Both $L_1$ and $L_2$ are regular languages.",
+        "B": "$L_1$ is a regular language but $L_2$ is not a regular language.",
+        "C": "$L_1$ is not a regular language but $L_2$ is a regular language.",
+        "D": "Neither $L_1$ nor $L_2$ is a regular language."
+      }
     },
     {
       "id": "2025_CS1_CS_Q45",
@@ -31503,10 +31636,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Context-free grammars and push-down automata",
+      "difficulty_level": "Medium",
+      "explaination": "In $L_2$, rewrite $c^{m+n} = c^n c^m$ or generate using PDA by pushing $a$'s and $b$'s and popping on $c$'s ($c$'s match total count of $a$'s and $b$'s), which requires a single stack, so $L_2$ is context-free. In $L_1$, $a^m b^m c^m c^n$ simultaneously requires equality between powers of $a$ and $b$, plus matching with $c$, requiring two independent stack comparisons, making $L_1$ non-CFL.",
       "tags": [
         "2025",
         "2_mark",
@@ -31517,7 +31650,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following two languages over the alphabet $\\{a, b, c\\}$, where $m$ and $n$ are natural numbers.\n\\[ L_1 = \\{a^mb^mc^{m+n} \\mid m, n \\ge 1\\} \\]\n\\[ L_2 = \\{a^mb^nc^{m+n} \\mid m, n \\ge 1\\} \\]\nWhich ONE of the following statements is CORRECT?",
+      "options_latex": {
+        "A": "Both $L_1$ and $L_2$ are context-free languages.",
+        "B": "$L_1$ is a context-free language but $L_2$ is not a context-free language.",
+        "C": "$L_1$ is not a context-free language but $L_2$ is a context-free language.",
+        "D": "Neither $L_1$ nor $L_2$ are context-free languages."
+      }
     },
     {
       "id": "2025_CS1_GA_Q01",
@@ -31547,10 +31687,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Basic English grammar: tenses, articles, adjectives, prepositions, conjunctions, verb-noun agreement",
+      "difficulty_level": "Easy",
+      "explaination": "'Younger' begins with a consonant sound (/j/), requiring the indefinite article 'a'. 'University' also begins with a consonant sound (/juː/), taking 'a'. 'Honorable' has a silent 'h' and begins with a vowel sound (/ɒ/), requiring 'an'. Hence, the sequence is a; a; an.",
       "tags": [
         "1_mark",
         "2025",
@@ -31561,7 +31701,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Ravi had \\_\\_\\_\\_\\_\\_ younger brother who taught at \\_\\_\\_\\_\\_\\_ university. He was widely regarded as \\_\\_\\_\\_\\_\\_ honorable man.\nSelect the option with the correct sequence of articles to fill in the blanks.",
+      "options_latex": {
+        "A": "a; a; an",
+        "B": "the; an; a",
+        "C": "a; an; a",
+        "D": "an; an; a"
+      }
     },
     {
       "id": "2025_CS1_GA_Q02",
@@ -31591,10 +31738,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'Myopic' literally means nearsighted, and metaphorically refers to lacking foresight or being shortsighted by focusing only on immediate considerations rather than long-term outcomes.",
       "tags": [
         "1_mark",
         "2025",
@@ -31605,7 +31752,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The CEO’s decision to downsize the workforce was considered myopic because it sacrificed long-term stability to accommodate short-term gains.\nSelect the most appropriate option that can replace the word ``myopic'' without changing the meaning of the sentence.",
+      "options_latex": {
+        "A": "visionary",
+        "B": "shortsighted",
+        "C": "progressive",
+        "D": "innovative"
+      }
     },
     {
       "id": "2025_CS1_GA_Q03",
@@ -31635,10 +31789,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Elementary statistics and probability",
+      "difficulty_level": "Easy",
+      "explaination": "Let $n$ be the number of students. The total increase in marks after correction is $42 - 24 = 18$. The increase in average is $31.4 - 30.8 = 0.6$. Therefore, $0.6 \\times n = 18$, giving $n = \\frac{18}{0.6} = 30$ students.",
       "tags": [
         "1_mark",
         "2025",
@@ -31649,7 +31803,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The average marks obtained by a class in an examination were calculated as 30.8. However, while checking the marks entered, the teacher found that the marks of one student were entered incorrectly as 24 instead of 42. After correcting the marks, the average becomes 31.4. How many students does the class have?",
+      "options_latex": {
+        "A": "25",
+        "B": "28",
+        "C": "30",
+        "D": "32"
+      }
     },
     {
       "id": "2025_CS1_GA_Q04",
@@ -31679,10 +31840,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Analytical Aptitude",
+      "subtopic": "Logic: deduction and induction",
+      "difficulty_level": "Easy",
+      "explaination": "Since R is the mother of Q and S is the daughter of Q, R is definitely the grandmother of S (statement 1 is true). P is the brother of Q, so P is the maternal/paternal uncle of Q's children S and T (statement 2 is true). The genders and number of other children of R and Q are not specified, so (3) and (4) cannot be established.",
       "tags": [
         "1_mark",
         "2025",
@@ -31693,7 +31854,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the relationships among P, Q, R, S, and T:\n\\begin{itemize}\n\\item P is the brother of Q.\n\\item S is the daughter of Q.\n\\item T is the sister of S.\n\\item R is the mother of Q.\n\\end{itemize}\nThe following statements are made based on the relationships given above:\n(1) R is the grandmother of S.\n(2) P is the uncle of S and T.\n(3) R has only one son.\n(4) Q has only one daughter.\nWhich one of the following options is correct?",
+      "options_latex": {
+        "A": "Both (1) and (2) are true.",
+        "B": "Both (1) and (3) are true.",
+        "C": "Only (3) is true.",
+        "D": "Only (4) is true."
+      }
     },
     {
       "id": "2025_CS1_GA_Q06",
@@ -31723,10 +31891,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading and comprehension",
+      "difficulty_level": "Easy",
+      "explaination": "The passage explicitly states: 'the pocket-knife, for instance the type of all human tools, the infant of the sword.' Statement C directly reflects this verbatim description.",
       "tags": [
         "2025",
         "2_mark",
@@ -31737,7 +31905,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "``I put the brown paper in my pocket along with the chalks, and possibly other things. I suppose every one must have reflected how primeval and how poetical are the things that one carries in one's pocket: the pocket-knife, for instance the type of all human tools, the infant of the sword. Once I planned to write a book of poems entirely about the things in my pocket. But I found it would be too long: and the age of the great epics is past.''\n(From G.K. Chesterton's ``A Piece of Chalk'')\n\nBased only on the information provided in the above passage, which one of the following statements is true?",
+      "options_latex": {
+        "A": "The author of the passage carries a mirror in his pocket to reflect upon things.",
+        "B": "The author of the passage had decided to write a poem on epics.",
+        "C": "The pocket-knife is described as the infant of the sword.",
+        "D": "Epics are described as too inconvenient to write."
+      }
     },
     {
       "id": "2025_CS1_GA_Q08",
@@ -31767,10 +31942,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Elementary statistics and probability",
+      "difficulty_level": "Medium",
+      "explaination": "The probability of rolling a 6 is $p = \\frac{1}{6}$, and not rolling a 6 is $q = \\frac{5}{6}$. Using the binomial distribution for $n = 3$ trials with $k = 1$ success, $P(X = 1) = \\binom{3}{1} \\left(\\frac{1}{6}\\right)^1 \\left(\\frac{5}{6}\\right)^2 = 3 \\times \\frac{1}{6} \\times \\frac{25}{36} = \\frac{75}{216}$.",
       "tags": [
         "2025",
         "2_mark",
@@ -31781,7 +31956,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A fair six-faced dice, with the faces labelled `1', `2', `3', `4', `5', and `6', is rolled thrice. What is the probability of rolling `6' exactly once?",
+      "options_latex": {
+        "A": "$\\frac{75}{216}$",
+        "B": "$\\frac{1}{6}$",
+        "C": "$\\frac{1}{18}$",
+        "D": "$\\frac{25}{216}$"
+      }
     },
     {
       "id": "2025_CS1_GA_Q10",
@@ -31811,10 +31993,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "This is a multichoose problem (combination with repetition), where $r = 3$ scoops are chosen from $n = 4$ flavors. The number of ways is given by the stars and bars formula $\\binom{n + r - 1}{r} = \\binom{4 + 3 - 1}{3} = \\binom{6}{3} = \\frac{6 \\times 5 \\times 4}{3 \\times 2 \\times 1} = 20$.",
       "tags": [
         "2025",
         "2_mark",
@@ -31825,7 +32007,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A shop has 4 distinct flavors of ice-cream. One can purchase any number of scoops of any flavor. The order in which the scoops are purchased is inconsequential. If one wants to purchase 3 scoops of ice-cream, in how many ways can one make that purchase?",
+      "options_latex": {
+        "A": "4",
+        "B": "20",
+        "C": "24",
+        "D": "48"
+      }
     },
     {
       "id": "2025_CS2_CS_Q11",

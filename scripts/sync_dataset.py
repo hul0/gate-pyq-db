@@ -39,6 +39,8 @@ def main():
 
         json_files = sorted(glob.glob(os.path.join(p_dir, "*.json")))
         for j_file in json_files:
+            if os.path.basename(j_file) == "full_paper.json":
+                continue
             with open(j_file, "r", encoding="utf-8") as f:
                 cat_data = json.load(f)
             

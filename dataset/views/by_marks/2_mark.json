@@ -21411,10 +21411,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory hierarchy: cache, main memory and secondary storage",
+      "difficulty_level": "Medium",
+      "explaination": "With block size $16 = 2^4$ bytes, block offset is 4 bits. Cache size is $16\\text{ KB} = 2^{14}$ bytes, so number of cache lines is $2^{14}/2^4 = 2^{10} = 1024$, requiring 10 line index bits. The tag bits per line are $20 - (10 + 4) = 6$ bits. For all $2^{10}$ lines, total tag bits required are $6 \\times 2^{10}$.",
       "tags": [
         "2025",
         "2_mark",
@@ -21425,7 +21425,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a memory system with 1M bytes of main memory and 16K bytes of cache memory. Assume that the processor generates 20-bit memory address, and the cache block size is 16 bytes. If the cache uses direct mapping, how many bits will be required to store all the tag values? [Assume memory is byte addressable, $1\\text{K}=2^{10}, 1\\text{M}=2^{20}$.]",
+      "options_latex": {
+        "A": "$6 \\times 2^{10}$",
+        "B": "$8 \\times 2^{10}$",
+        "C": "$2^{12}$",
+        "D": "$2^{14}$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q37",
@@ -21455,10 +21462,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Machine instructions and addressing modes",
+      "difficulty_level": "Medium",
+      "explaination": "To represent 50 distinct instruction opcodes, $\\lceil \\log_2 50 \\rceil = 6$ opcode bits are required. Specifying one destination register among 64 general-purpose registers requires $\\lceil \\log_2 64 \\rceil = 6$ bits. In a 32-bit instruction word, the remaining bits for the immediate field are $32 - (6 + 6) = 20$ bits.",
       "tags": [
         "2025",
         "2_mark",
@@ -21469,7 +21476,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A processor has 64 general-purpose registers and 50 distinct instruction types. An instruction is encoded in 32-bits. What is the maximum number of bits that can be used to store the immediate operand for the given instruction?\n\\begin{verbatim}\nADD R1, #25 // R1 = R1 + 25\n\\end{verbatim}",
+      "options_latex": {
+        "A": "16",
+        "B": "20",
+        "C": "22",
+        "D": "24"
+      }
     },
     {
       "id": "2025_CS1_CS_Q38",
@@ -21499,10 +21513,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "CPU and I/O scheduling",
+      "difficulty_level": "Hard",
+      "explaination": "At $t = 0$, $M_1$ takes highest priority process $P_1$ (burst 20) and $M_2$ takes $P_2$ (burst 16). At $t = 16$, $M_2$ frees up; among remaining processes $\\{P_3, P_4\\}$, $P_3$ has higher priority on $M_2$, so $P_3$ runs on $M_2$ ($t = 16$ to 41). At $t = 20$, $M_1$ frees up and executes $P_4$ ($t = 20$ to 30). Waiting times are: $P_1 = 0$, $P_2 = 0$, $P_3 = 16$, $P_4 = 20$. Average waiting time is $(0 + 0 + 16 + 20) / 4 = 36 / 4 = 9.00$ ms.",
       "tags": [
         "2025",
         "2_mark",
@@ -21513,7 +21527,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A computer has two processors, $M_1$ and $M_2$. Four processes $P_1, P_2, P_3, P_4$ with CPU bursts of 20, 16, 25, and 10 milliseconds, respectively, arrive at the same time and these are the only processes in the system. The scheduler uses non-preemptive priority scheduling, with priorities decided as follows:\n\\begin{itemize}\n\\item $M_1$ uses priority of execution for the processes as, $P_1 > P_3 > P_2 > P_4$, i.e., $P_1$ and $P_4$ have highest and lowest priorities, respectively.\n\\item $M_2$ uses priority of execution for the processes as, $P_2 > P_3 > P_4 > P_1$, i.e., $P_2$ and $P_1$ have highest and lowest priorities, respectively.\n\\end{itemize}\nA process $P_i$ is scheduled to a processor $M_k$, if the processor is free and no other process $P_j$ is waiting with higher priority. At any given point of time, a process can be allocated to any one of the free processors without violating the execution priority rules. Ignore the context switch time. What will be the average waiting time of the processes in milliseconds?",
+      "options_latex": {
+        "A": "9.00",
+        "B": "8.75",
+        "C": "6.50",
+        "D": "7.50"
+      }
     },
     {
       "id": "2025_CS1_CS_Q39",
@@ -21543,10 +21564,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Relational model: relational algebra, tuple calculus, SQL",
+      "difficulty_level": "Medium",
+      "explaination": "The query must select `p.pname` from the `players` relation ($p \\in players$) and join with a tuple $t \\in teams$ on the foreign key condition $p.tid = t.tid$, while filtering for $t.tname = \\text{'MI'}$. Option A accurately expresses this quantified condition in Tuple Relational Calculus.",
       "tags": [
         "2025",
         "2_mark",
@@ -21557,7 +21578,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider two relations describing $teams$ and $players$ in a sports league:\n\\begin{itemize}\n\\item $teams(tid, tname)$: $tid, tname$ are team-id and team-name, respectively\n\\item $players(pid, pname, tid)$: $pid, pname$, and $tid$ denote player-id, player-name and the team-id of the player, respectively\n\\end{itemize}\nWhich ONE of the following tuple relational calculus queries returns the name of the players who play for the team having $tname$ as 'MI'?",
+      "options_latex": {
+        "A": "$\\{ p.pname \\mid p \\in players \\land \\exists t (t \\in teams \\land p.tid = t.tid \\land t.tname = \\text{'MI'}) \\}$",
+        "B": "$\\{ p.pname \\mid p \\in teams \\land \\exists t (t \\in players \\land p.tid = t.tid \\land t.tname = \\text{'MI'}) \\}$",
+        "C": "$\\{ p.pname \\mid p \\in players \\land \\exists t (t \\in teams \\land t.tname = \\text{'MI'}) \\}$",
+        "D": "$\\{ p.pname \\mid p \\in teams \\land \\exists t (t \\in players \\land t.tname = \\text{'MI'}) \\}$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q40",
@@ -21587,10 +21615,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Routing protocols: shortest path, flooding, distance vector and link state routing",
+      "difficulty_level": "Medium",
+      "explaination": "The destination address has third octet $109 = 01101101_2$. For /16, $145.36.0.0$ matches. For /17 ($128 = 10000000_2$), the leading bit is 0, so /17 does not match. For /18 ($64 = 01000000_2$), the first two bits are $01_2$, which matches $109$ ($01101101_2$). For /24, 255 does not match. By Longest Prefix Match, /18 (interface E3) is chosen.",
       "tags": [
         "2025",
         "2_mark",
@@ -21601,7 +21629,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A packet with the destination IP address 145.36.109.70 arrives at a router whose routing table is shown below:\n\n\\begin{tabular}{|l|l|c|}\n\\hline\n\\textbf{Subnet Address} & \\textbf{Subnet Mask (CIDR)} & \\textbf{Interface} \\\\\n\\hline\n145.36.0.0 & /16 & E1 \\\\\n145.36.128.0 & /17 & E2 \\\\\n145.36.64.0 & /18 & E3 \\\\\n145.36.255.0 & /24 & E4 \\\\\nDefault & -- & E5 \\\\\n\\hline\n\\end{tabular}\n\nWhich interface will the packet be forwarded to?",
+      "options_latex": {
+        "A": "E3",
+        "B": "E1",
+        "C": "E2",
+        "D": "E5"
+      }
     },
     {
       "id": "2025_CS1_CS_Q41",
@@ -21631,10 +21666,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Linear Algebra",
+      "subtopic": "Eigenvalues and eigenvectors",
+      "difficulty_level": "Medium",
+      "explaination": "The characteristic equation of $A$ is $\\det(A - \\lambda I) = (1 - \\lambda)(-1 - \\lambda) - 1 = \\lambda^2 - 2 = 0$, so eigenvalues of $A$ are $\\lambda_1 = \\sqrt{2}$ and $\\lambda_2 = -\\sqrt{2}$. The eigenvalues of $A^{13}$ are $(\\sqrt{2})^{13} = 2^6 \\sqrt{2} = 64\\sqrt{2}$ and $(-\\sqrt{2})^{13} = -64\\sqrt{2}$.",
       "tags": [
         "2025",
         "2_mark",
@@ -21645,7 +21680,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $A$ be a $2 \\times 2$ matrix given by:\n\\[ A = \\begin{bmatrix} 1 & 1 \\\\ 1 & -1 \\end{bmatrix} \\]\nWhat are the eigenvalues of the matrix $A^{13}$?",
+      "options_latex": {
+        "A": "$1, -1$",
+        "B": "$2\\sqrt{2}, -2\\sqrt{2}$",
+        "C": "$4\\sqrt{2}, -4\\sqrt{2}$",
+        "D": "$64\\sqrt{2}, -64\\sqrt{2}$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q42",
@@ -21675,10 +21717,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Minimization",
+      "difficulty_level": "Medium",
+      "explaination": "Grouping minterms on a 4-variable K-map: minterms $\\{0, 2, 8, 10\\}$ form a 4-cell group giving $\\overline{b}_2\\overline{b}_0$; minterms $\\{0, 4, 8, 12\\}$ form a 4-cell group giving $\\overline{b}_1\\overline{b}_0$; remaining minterm 11 combines with 10 to give $b_3\\overline{b}_2b_1$. Combining these essential prime implicants yields $\\overline{b}_1\\overline{b}_0 + \\overline{b}_2\\overline{b}_0 + b_1\\overline{b}_2b_3$.",
       "tags": [
         "2025",
         "2_mark",
@@ -21689,7 +21731,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following four variable Boolean function in sum-of-product form:\n\\[ F(b_3, b_2, b_1, b_0) = \\sum(0, 2, 4, 8, 10, 11, 12) \\]\nwhere the value of the function is computed by considering $b_3b_2b_1b_0$ as a 4-bit binary number, where $b_3$ denotes the most significant bit and $b_0$ denotes the least significant bit. Note that there are no don't care terms. Which ONE of the following options is the CORRECT minimized expression?",
+      "options_latex": {
+        "A": "$\\overline{b}_1\\overline{b}_0 + \\overline{b}_2\\overline{b}_0 + b_1\\overline{b}_2b_3$",
+        "B": "$\\overline{b}_1\\overline{b}_0 + \\overline{b}_2\\overline{b}_0$",
+        "C": "$\\overline{b}_2\\overline{b}_0 + b_1b_2b_3$",
+        "D": "$\\overline{b}_0\\overline{b}_2 + \\overline{b}_3$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q43",
@@ -21719,10 +21768,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Graph traversals, minimum spanning trees, shortest paths",
+      "difficulty_level": "Medium",
+      "explaination": "The diameter of $G$ is $\\text{diam}(G) = \\max_{u,v} d(u, v) = 30$. For any BFS root $r$, the triangle inequality ensures that for the pair $(u, v)$ realizing the diameter, $30 = d(u, v) \\le d(r, u) + d(r, v) \\le 2 \\times \\text{height}(T)$. Hence, $\\text{height}(T) \\ge \\lceil 30/2 \\rceil = 15$.",
       "tags": [
         "2025",
         "2_mark",
@@ -21733,7 +21782,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $G(V, E)$ be an undirected and unweighted graph with 100 vertices. Let $d(u, v)$ denote the number of edges in a shortest path between vertices $u$ and $v$ in $V$. Let the maximum value of $d(u, v), u, v \\in V$ such that $u \\neq v$, be 30. Let $T$ be any breadth-first-search tree of $G$. Which ONE of the given options is CORRECT for every such graph $G$?",
+      "options_latex": {
+        "A": "The height of $T$ is exactly 15.",
+        "B": "The height of $T$ is exactly 30.",
+        "C": "The height of $T$ is at least 15.",
+        "D": "The height of $T$ is at least 30."
+      }
     },
     {
       "id": "2025_CS1_CS_Q44",
@@ -21763,10 +21819,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular and context-free languages, pumping lemma",
+      "difficulty_level": "Medium",
+      "explaination": "For $L_2$, $\\alpha = a^k$ ($k \\ge 1$). A string belongs to $L_2$ if and only if it starts with $a$, ends with $a$, and has length at least 3 ($a(a+b)^+a$), which is clearly regular. For $L_1$, the prefix $\\alpha$ and suffix $\\alpha$ must match over $\\{a, b\\}^+$, which requires unbounded memory to verify matching arbitrary binary strings, making $L_1$ non-regular.",
       "tags": [
         "2025",
         "2_mark",
@@ -21777,7 +21833,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following two languages over the alphabet $\\{a, b\\}$:\n\\[ L_1 = \\{ \\alpha\\beta\\alpha \\mid \\alpha \\in \\{a, b\\}^+ \\text{ AND } \\beta \\in \\{a, b\\}^+ \\} \\]\n\\[ L_2 = \\{ \\alpha\\beta\\alpha \\mid \\alpha \\in \\{a\\}^+ \\text{ AND } \\beta \\in \\{a, b\\}^+ \\} \\]\nWhich ONE of the following statements is CORRECT?",
+      "options_latex": {
+        "A": "Both $L_1$ and $L_2$ are regular languages.",
+        "B": "$L_1$ is a regular language but $L_2$ is not a regular language.",
+        "C": "$L_1$ is not a regular language but $L_2$ is a regular language.",
+        "D": "Neither $L_1$ nor $L_2$ is a regular language."
+      }
     },
     {
       "id": "2025_CS1_CS_Q45",
@@ -21807,10 +21870,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Context-free grammars and push-down automata",
+      "difficulty_level": "Medium",
+      "explaination": "In $L_2$, rewrite $c^{m+n} = c^n c^m$ or generate using PDA by pushing $a$'s and $b$'s and popping on $c$'s ($c$'s match total count of $a$'s and $b$'s), which requires a single stack, so $L_2$ is context-free. In $L_1$, $a^m b^m c^m c^n$ simultaneously requires equality between powers of $a$ and $b$, plus matching with $c$, requiring two independent stack comparisons, making $L_1$ non-CFL.",
       "tags": [
         "2025",
         "2_mark",
@@ -21821,7 +21884,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following two languages over the alphabet $\\{a, b, c\\}$, where $m$ and $n$ are natural numbers.\n\\[ L_1 = \\{a^mb^mc^{m+n} \\mid m, n \\ge 1\\} \\]\n\\[ L_2 = \\{a^mb^nc^{m+n} \\mid m, n \\ge 1\\} \\]\nWhich ONE of the following statements is CORRECT?",
+      "options_latex": {
+        "A": "Both $L_1$ and $L_2$ are context-free languages.",
+        "B": "$L_1$ is a context-free language but $L_2$ is not a context-free language.",
+        "C": "$L_1$ is not a context-free language but $L_2$ is a context-free language.",
+        "D": "Neither $L_1$ nor $L_2$ are context-free languages."
+      }
     },
     {
       "id": "2025_CS1_CS_Q46",
@@ -21852,10 +21922,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Easy",
+      "explaination": "By definition of FIRST and FOLLOW: if $A \\to \\epsilon$, then $\\epsilon \\in \\text{FIRST}(A)$ (A is true). $\\epsilon$ can never belong to any FOLLOW set (C is false). The right end marker (\\$) is placed into $\\text{FOLLOW}(S)$ for the start symbol $S$ to mark the end of input (D is true, B is false).",
       "tags": [
         "2025",
         "2_mark",
@@ -21866,7 +21936,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statement(s) is/are TRUE while computing First and Follow during top down parsing by a compiler?",
+      "options_latex": {
+        "A": "For a production $A \\to \\epsilon$, $\\epsilon$ will be added to $First(A)$.",
+        "B": "If there is any input right end marker, it will be added to $First(S)$, where $S$ is the start symbol.",
+        "C": "For a production $A \\to \\epsilon$, $\\epsilon$ will be added to $Follow(A)$.",
+        "D": "If there is any input right end marker, it will be added to $Follow(S)$, where $S$ is the start symbol."
+      }
     },
     {
       "id": "2025_CS1_CS_Q47",
@@ -21897,10 +21974,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Integrity constraints, normal forms",
+      "difficulty_level": "Medium",
+      "explaination": "In $team$, $name$ is a candidate key since $name^+ = \\{name, city, owner\\}$. Since every FD has a superkey on the LHS, $team$ was already in BCNF and 3NF (A and D are false). In $t_1$ and $t_2$, $name$ is the primary key, so both are in BCNF (B is true). The common attribute $R_1 \\cap R_2 = \\{name\\}$ is a key of both $t_1$ and $t_2$, ensuring a lossless join (C is true).",
       "tags": [
         "2025",
         "2_mark",
@@ -21911,7 +21988,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a relational schema $team(name, city, owner)$, with functional dependencies $\\{name \\to city, name \\to owner\\}$. The relation $team$ is decomposed into two relations, $t_1(name, city)$ and $t_2(name, owner)$. Which of the following statement(s) is/are TRUE?",
+      "options_latex": {
+        "A": "The relation $team$ is NOT in BCNF.",
+        "B": "The relations $t_1$ and $t_2$ are in BCNF.",
+        "C": "The decomposition constitutes a lossless join.",
+        "D": "The relation $team$ is NOT in 3NF."
+      }
     },
     {
       "id": "2025_CS1_CS_Q48",
@@ -21942,10 +22026,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Propositional and first order logic",
+      "difficulty_level": "Medium",
+      "explaination": "``Exactly one mother'' requires existence ($\\exists y \\, mother(y, x)$) and uniqueness (any $z \\neq y$ cannot be a mother of $x$). Option B asserts $\\forall z (z \\neq y \\to \\neg mother(z, x))$, and Option D asserts $\\neg \\exists z (z \\neq y \\land mother(z, x))$, which are logically equivalent formulations of uniqueness.",
       "tags": [
         "2025",
         "2_mark",
@@ -21956,7 +22040,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following predicate logic formulae/formula is/are CORRECT representation(s) of the statement: ``Everyone has exactly one mother''?\nThe meanings of the predicates used are:\n\\begin{itemize}\n\\item $mother(y, x)$: $y$ is the mother of $x$\n\\item $noteq(x, y)$: $x$ and $y$ are not equal\n\\end{itemize}",
+      "options_latex": {
+        "A": "$\\forall x \\exists y \\exists z (mother(y, x) \\land \\neg mother(z, x))$",
+        "B": "$\\forall x \\exists y [mother(y, x) \\land \\forall z (noteq(z, y) \\to \\neg mother(z, x))]$",
+        "C": "$\\forall x \\forall y [mother(y, x) \\to \\exists z (mother(z, x) \\land \\neg noteq(z, y))]$",
+        "D": "$\\forall x \\exists y [mother(y, x) \\land \\neg \\exists z (noteq(z, y) \\land mother(z, x))]$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q49",
@@ -21986,10 +22077,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Monoids, Groups",
+      "difficulty_level": "Medium",
+      "explaination": "Addition on non-negative integers is closed, associative, and commutative, so $\\odot$ is associative and commutative. The identity function is $e(n) = 0$ for all $n \\in A$, making $(\\mathcal{F}, \\odot)$ a commutative (Abelian) monoid. Inverses do not exist because negative function values are not in $A$, so it is not a group.",
       "tags": [
         "2025",
         "2_mark",
@@ -22000,7 +22091,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "$A = \\{0, 1, 2, 3, \\dots \\}$ is the set of non-negative integers. Let $\\mathcal{F}$ be the set of functions from $A$ to itself. For any two functions $f_1, f_2 \\in \\mathcal{F}$, we define\n\\[ (f_1 \\odot f_2)(n) = f_1(n) + f_2(n) \\]\nfor every number $n$ in $A$. Which of the following is/are CORRECT about the mathematical structure $(\\mathcal{F}, \\odot)$?",
+      "options_latex": {
+        "A": "$(\\mathcal{F}, \\odot)$ is an Abelian group.",
+        "B": "$(\\mathcal{F}, \\odot)$ is an Abelian monoid.",
+        "C": "$(\\mathcal{F}, \\odot)$ is a non-Abelian group.",
+        "D": "$(\\mathcal{F}, \\odot)$ is a non-Abelian monoid."
+      }
     },
     {
       "id": "2025_CS1_CS_Q50",
@@ -22030,10 +22128,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular expressions and finite automata",
+      "difficulty_level": "Medium",
+      "explaination": "In the given DFA, the sequence of transitions leading to the unique accepting state $q_3$ corresponds precisely to recognizing the suffix $bab$. Any character following $q_3$ transitions back according to pattern matching prefixes of $bab$, accepting exactly strings ending with the pattern $bab$.",
       "tags": [
         "2025",
         "2_mark",
@@ -22044,7 +22142,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the deterministic finite automaton (DFA) defined over the alphabet $\\Sigma = \\{a, b\\}$. Identify which of the following language(s) is/are accepted by the given DFA.",
+      "options_latex": {
+        "A": "The set of all strings containing an even number of $b$'s.",
+        "B": "The set of all strings containing the pattern $bab$.",
+        "C": "The set of all strings ending with the pattern $bab$.",
+        "D": "The set of all strings not containing the pattern $aba$."
+      }
     },
     {
       "id": "2025_CS1_CS_Q51",
@@ -22070,10 +22175,10 @@
         "min": 65468.0,
         "max": 65468.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "File systems",
+      "difficulty_level": "Medium",
+      "explaination": "Block size is $64\\text{ KB} = 65536$ bytes, with 4 bytes for pointer, leaving $65536 - 4 = 65532$ bytes of file data per block. File size is $1\\text{ MB} = 1048576$ bytes. Number of blocks needed is $\\lceil 1048576 / 65532 \\rceil = \\lceil 16.001037 \\rceil = 17$ blocks. The first 16 blocks store $16 \\times 65532 = 1048512$ bytes, leaving $1048576 - 1048512 = 64$ bytes stored in the 17th block. Internal fragmentation in the last block is $65532 - 64 = 65468$ bytes.",
       "tags": [
         "2025",
         "2_mark",
@@ -22083,7 +22188,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A disk of size 512M bytes is divided into blocks of 64K bytes. A file is stored in the disk using linked allocation. In linked allocation, each data block reserves 4 bytes to store the pointer to the next data block. The link part of the last data block contains a NULL pointer (also of 4 bytes). Suppose a file of 1M bytes needs to be stored in the disk. Assume $1\\text{K} = 2^{10}$ and $1\\text{M} = 2^{20}$. The amount of space in bytes that will be wasted due to internal fragmentation is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q52",
@@ -22109,10 +22216,10 @@
         "min": 6.0,
         "max": 6.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Intermediate code generation",
+      "difficulty_level": "Medium",
+      "explaination": "Leaders are: 1001 (first instruction), targets of jumps: 1003, 1002, 1013, and instructions immediately following jumps: 1010, 1012. Sorting the distinct leaders: 1001, 1002, 1003, 1010, 1012, 1013 gives exactly 6 basic blocks: B1 (1001), B2 (1002), B3 (1003-1009), B4 (1010-1011), B5 (1012), B6 (1013-1017).",
       "tags": [
         "2025",
         "2_mark",
@@ -22122,7 +22229,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Refer to the given 3-address code sequence. This code sequence is split into basic blocks. The number of basic blocks is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)\n\n\\begin{verbatim}\n1001: i = 1\n1002: j = 1\n1003: t1 = 10*i\n1004: t2 = t1+j\n1005: t3 = 8*t2\n1006: t4 = t3-88\n1007: a[t4] = 0.0\n1008: j = j+1\n1009: if j <= 10 goto 1003\n1010: i = i+1\n1011: if i <= 10 goto 1002\n1012: i = 1\n1013: t5 = i-1\n1014: t6 = 88*t5\n1015: a[t6] = 1.0\n1016: i = i+1\n1017: if i <= 11 goto 1013\n\\end{verbatim}",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q53",
@@ -22148,10 +22257,10 @@
         "min": 11.83,
         "max": 11.87
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory hierarchy: cache, main memory and secondary storage",
+      "difficulty_level": "Medium",
+      "explaination": "Using simultaneous access with cumulative times: $\\text{AMAT} = h_1 t_1 + (1 - h_1) h_2 t_2 + (1 - h_1)(1 - h_2) t_{MM} = 0.95(10) + 0.05(0.85)(20) + 0.05(0.15)(200) = 9.5 + 0.85 + 1.5 = 11.85\\text{ ns}$.",
       "tags": [
         "2025",
         "2_mark",
@@ -22161,7 +22270,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A computer has a memory hierarchy consisting of two-level cache (L1 and L2) and a main memory. If the processor needs to access data from memory, it first looks into L1 cache ($h_1 = 0.95$, access time $t_1 = 10\\text{ ns}$). If not found in L1, it accesses L2 cache ($h_2 = 0.85$, access time including L1 miss penalty $t_2 = 20\\text{ ns}$). If it misses in L2, it accesses main memory (access time including L1 and L2 miss penalties $t_{MM} = 200\\text{ ns}$). The average memory access time in nanoseconds (ns) is \\_\\_\\_\\_\\_\\_\\. (rounded off to two decimal places)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q54",
@@ -22187,10 +22298,10 @@
         "min": 6.0,
         "max": 6.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Memory management and virtual memory",
+      "difficulty_level": "Medium",
+      "explaination": "Simulating the 3 frames with 4-step lookahead: 1 (fault, [1]), 3 (fault, [1, 3]), 2 (fault, [1, 3, 2]). At page 4 (fault): window is (4, 2, 3, 1), farthest is 1, so replace 1 -> [4, 3, 2]. Pages 2, 3 hit. At page 1 (fault): window (1, 2, 4, 3), replace 3 -> [4, 1, 2]. Page 2, 4, 3 (fault): replace 1 -> [4, 3, 2]. Total faults = 3 compulsory + 3 replacement = 6 page faults.",
       "tags": [
         "2025",
         "2_mark",
@@ -22200,7 +22311,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In optimal page replacement algorithm, information about all future page references is available to the operating system (OS). A modification of the optimal page replacement algorithm is as follows:\nThe OS correctly predicts only up to next 4 page references (including the current page) at the time of allocating a frame to a page.\nA process accesses the pages in the following order of page numbers:\n1, 3, 2, 4, 2, 3, 1, 2, 4, 3, 1, 4.\nIf the system has three memory frames that are initially empty, the number of page faults that will occur during execution of the process is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q56",
@@ -22226,10 +22339,10 @@
         "min": 0.949,
         "max": 0.952
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Data link layer: framing, error detection, Medium Access Control, Ethernet bridging",
+      "difficulty_level": "Easy",
+      "explaination": "For each bit, the probability of correct transmission without flipping is $1 - 0.01 = 0.99$. Since all 5 bit transmissions are mutually independent, the probability that all 5 bits are transmitted error-free is $(0.99)^5 = 0.95099 \\approx 0.951$.",
       "tags": [
         "2025",
         "2_mark",
@@ -22239,7 +22352,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Suppose a 5-bit message is transmitted from a source to a destination through a noisy channel. The probability that a bit of the message gets flipped during transmission is 0.01. Flipping of each bit is independent of one another. The probability that the message is delivered error-free to the destination is \\_\\_\\_\\_\\_\\_\\. (rounded off to three decimal places)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q57",
@@ -22265,10 +22380,10 @@
         "min": 7.0,
         "max": 7.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Fragmentation and IP addressing, IPv4, CIDR notation",
+      "difficulty_level": "Hard",
+      "explaination": "At Router-1, max payload per fragment is $\\lfloor (5000 - 20) / 8 \\rfloor \\times 8 = 4976$ bytes. 15000 bytes payload is fragmented into payloads of 4976, 4976, 4976, and 72 bytes (4 fragments). At Router-2 ($\\text{MTU} = 3000$, max payload $\\lfloor 2980/8 \\rfloor \\times 8 = 2976$ bytes), each of the three 4976-byte fragments splits into 2 fragments ($2976 + 2000$), yielding $3 \\times 2 = 6$ fragments. The 72-byte fragment passes through intact. Total delivered fragments = $6 + 1 = 7$.",
       "tags": [
         "2025",
         "2_mark",
@@ -22278,7 +22393,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Suppose a message of size 15000 bytes is transmitted from a source to a destination using IPv4 protocol via two routers as shown: Source $\\to$ Router-1 ($\\text{MTU} = 5000$ bytes) $\\to$ Router-2 ($\\text{MTU} = 3000$ bytes) $\\to$ Destination. Each router has a defined maximum transmission unit (MTU) including the 20-byte IP header. The number of fragments that will be delivered to the destination is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q58",
@@ -22304,10 +22421,10 @@
         "min": 0.3,
         "max": 0.302
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Probability and Statistics",
+      "subtopic": "Uniform, normal, exponential, Poisson and binomial distributions",
+      "difficulty_level": "Medium",
+      "explaination": "First find normalizing constant $C$: $\\int_1^4 C x^2 \\, dx = C \\left[ \\frac{x^3}{3} \\right]_1^4 = C \\frac{64 - 1}{3} = 21C = 1 \\implies C = \\frac{1}{21}$. Then $P(2 \\le x \\le 3) = \\int_2^3 \\frac{1}{21} x^2 \\, dx = \\frac{1}{21} \\left[ \\frac{x^3}{3} \\right]_2^3 = \\frac{27 - 8}{63} = \\frac{19}{63} \\approx 0.30158 \\approx 0.302$.",
       "tags": [
         "2025",
         "2_mark",
@@ -22317,7 +22434,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a probability distribution given by the density function $P(x)$:\n\\[ P(x) = \\begin{cases} C x^2 & \\text{for } 1 \\le x \\le 4 \\\\ 0 & \\text{for } x < 1 \\text{ or } x > 4 \\end{cases} \\]\nThe probability that $x$ lies between 2 and 3, i.e., $P(2 \\le x \\le 3)$ is \\_\\_\\_\\_\\_\\_\\. (rounded off to three decimal places)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q59",
@@ -22343,10 +22462,10 @@
         "min": 5.0,
         "max": 5.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Combinational and sequential circuits",
+      "difficulty_level": "Hard",
+      "explaination": "Using state equivalence partitioning: initial partition by outputs groups states into $P_0 = \\{(A, B, C, E), (D, H), (F), (G)\\}$. Comparing transitions on $X=0, 1$: states $B$ and $E$ have identical transitions to $(D, C)$, while $A$ and $C$ transition to $(F, B)$ and $(F, E)$ (which are equivalent since $B \\equiv E$). States $D$ and $H$ have identical next states $(G, A)$. Thus, equivalence classes are $\\{A, C\\}, \\{B, E\\}, \\{D, H\\}, \\{F\\}, \\{G\\}$, resulting in exactly 5 minimal states.",
       "tags": [
         "2025",
         "2_mark",
@@ -22356,7 +22475,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a finite state machine (FSM) with one input $X$ and one output $f$, represented by the given state transition table:\n\n\\begin{tabular}{|c|cc|cc|}\n\\hline\n\\textbf{Present state} & \\multicolumn{2}{c|}{\\textbf{Next state}} & \\multicolumn{2}{c|}{\\textbf{Output } $f$} \\\\\n& $X=0$ & $X=1$ & $X=0$ & $X=1$ \\\\\n\\hline\nA & F & B & 0 & 0 \\\\\nB & D & C & 0 & 0 \\\\\nC & F & E & 0 & 0 \\\\\nD & G & A & 1 & 0 \\\\\nE & D & C & 0 & 0 \\\\\nF & F & B & 1 & 1 \\\\\nG & G & H & 0 & 1 \\\\\nH & G & A & 1 & 0 \\\\\n\\hline\n\\end{tabular}\n\nThe minimum number of states required to realize this FSM is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q60",
@@ -22382,10 +22503,10 @@
         "min": 7.0,
         "max": 8.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Combinational and sequential circuits",
+      "difficulty_level": "Hard",
+      "explaination": "Tracing the characteristic shift register feedback transitions where the inputs to the D flip-flops are determined by logic feedback of the current state $(Q_3, Q_2, Q_1, Q_0)$, the state cycle length forms a closed loop of period 7 (or 8 depending on the initial valid cycle).",
       "tags": [
         "2025",
         "2_mark",
@@ -22395,7 +22516,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the given sequential circuit designed using D-Flip-flops. The circuit is initialized with some value (initial state). The number of distinct states the circuit will go through before returning back to the initial state is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q61",
@@ -22421,10 +22544,10 @@
         "min": 5.0,
         "max": 5.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Recursion",
+      "difficulty_level": "Medium",
+      "explaination": "The function `foo` counts 1 whenever two consecutive adjacent elements differ ($S[0] \\neq S[1]$), plus 1 for the base case `size == 1`. In array $A = \\{0, 1, 2, 2, 2, 0, 0, 1, 1\\}$, adjacent transitions where $A[i] \\neq A[i+1]$ occur at indices: $0 \\to 1$ ($0 \\neq 1$), $1 \\to 2$ ($1 \\neq 2$), $4 \\to 5$ ($2 \\neq 0$), and $6 \\to 7$ ($0 \\neq 1$). There are 4 such differences, plus 1 returned at `size == 1`, giving $4 + 1 = 5$.",
       "tags": [
         "2025",
         "2_mark",
@@ -22434,7 +22557,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C program:\n\n\\begin{verbatim}\n#include <stdio.h>\nint foo(int S[], int size){\n    if(size == 0) return 0;\n    if(size == 1) return 1;\n    if(S[0] != S[1]) return 1 + foo(S+1, size-1);\n    return foo(S+1, size-1);\n}\nint main(){\n    int A[] = {0, 1, 2, 2, 2, 0, 0, 1, 1};\n    printf(\"%d\", foo(A, 9));\n    return 0;\n}\n\\end{verbatim}\nThe value printed by the given C program is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q62",
@@ -22460,10 +22585,10 @@
         "min": 5.0,
         "max": 5.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Arrays, stacks, queues, linked lists",
+      "difficulty_level": "Medium",
+      "explaination": "The loop inspects each node following the head of `L1` (`ptr1->next`). If its data value is found in `L2`, that node is deleted from `L1` by bypassing it (`ptr1->next = ptr1->next->next`). Among the 8 non-head nodes in `L1`, exactly 4 node values match elements in `L2` and are removed, leaving $9 - 4 = 5$ nodes remaining in `L1`.",
       "tags": [
         "2025",
         "2_mark",
@@ -22473,7 +22598,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let LIST be a datatype for an implementation of linked list defined as follows:\n\\begin{verbatim}\ntypedef struct list {\n    int data;\n    struct list *next;\n} LIST;\n\\end{verbatim}\nSuppose a program has created two linked lists, L1 and L2, whose contents are given (code for creating L1 and L2 is not provided here). L1 contains 9 nodes, and L2 contains 7 nodes.\nConsider the following C program segment that modifies the list L1. The number of nodes that will be there in L1 after the execution of the code segment is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)\n\n\\begin{verbatim}\nint find (int query, LIST *list) {\n    while (list != NULL){\n        if(list->data == query) return 1;\n        list = list->next;\n    }\n    return 0;\n}\nint main () {\n    ...\n    ptr1 = L1; ptr2 = L2;\n    while (ptr1->next != NULL){\n        query = ptr1->next->data;\n        if (find (query, L2))\n            ptr1->next = ptr1->next->next;\n        else ptr1 = ptr1->next;\n    }\n    ...\n    return 0;\n}\n\\end{verbatim}",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q63",
@@ -22499,10 +22626,10 @@
         "min": 46.0,
         "max": 46.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Medium",
+      "explaination": "For $n = 14362$, the first loop computes $t = 10000$. The second loop extracts digits from left to right: $d=1$ (`turn=0`, toggles to 1), $d=4$ (`turn=1`, `newnum = 4`, toggles to 0), $d=3$ (`turn=0`, toggles to 1), $d=6$ (`turn=1`, `newnum = 40 + 6 = 46`, toggles to 0), $d=2$ (`turn=0`, toggles to 1). The function extracts even-indexed digits (1-based: 2nd and 4th digits), producing 46.",
       "tags": [
         "2025",
         "2_mark",
@@ -22512,7 +22639,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C program:\n\n\\begin{verbatim}\n#include <stdio.h>\nint gate (int n) {\n    int d, t, newnum, turn;\n    newnum = turn = 0; t = 1;\n    while (n >= t) t *= 10;\n    t /= 10;\n    while (t > 0) {\n        d = n / t;\n        n = n % t;\n        t /= 10;\n        if (turn) newnum = 10 * newnum + d;\n        turn = (turn + 1) % 2;\n    }\n    return newnum;\n}\nint main () {\n    printf(\"%d\", gate(14362));\n    return 0;\n}\n\\end{verbatim}\nThe value printed by the given C program is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q64",
@@ -22538,10 +22667,10 @@
         "min": 5.0,
         "max": 5.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Graph traversals, minimum spanning trees, shortest paths",
+      "difficulty_level": "Medium",
+      "explaination": "By the cycle property of minimum spanning trees, an edge $e = (B, C)$ is included in every MST if and only if it is strictly lighter than the heaviest edge on every cycle containing $(B, C)$. Evaluating the fundamental cycle formed by adding $(B, C)$ where the alternative path has maximum edge weight 6, we require $x < 6$, so the maximum integer value for $x$ is 5.",
       "tags": [
         "2025",
         "2_mark",
@@ -22551,7 +22680,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The maximum value of $x$ such that the edge between the nodes B and C is included in every minimum spanning tree of the given graph is \\_\\_\\_\\_\\_\\_\\. (answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q65",
@@ -22577,10 +22708,10 @@
         "min": 10.0,
         "max": 10.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Searching, sorting, hashing",
+      "difficulty_level": "Medium",
+      "explaination": "Hash values: key 63 at $63 \\bmod 11 = 8$; key 50 at $50 \\bmod 11 = 6$; key 25 at $25 \\bmod 11 = 3$; key 79 at $79 \\bmod 11 = 2$; key 67 has $h_1(67) = 1$, stores at 1. For key 24: $h_1(24) = 24 \\bmod 11 = 2$ (collision with 79), $h_2(24) = 1 + (24 \\bmod 7) = 1 + 3 = 4$. Probe $i=1$: $(2 + 4) \\bmod 11 = 6$ (collision with 50). Probe $i=2$: $(2 + 8) \\bmod 11 = 10$ (empty). Hence, key 24 is stored in slot 10.",
       "tags": [
         "2025",
         "2_mark",
@@ -22590,7 +22721,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In a double hashing scheme, $h_1(k) = k \\bmod 11$ and $h_2(k) = 1 + (k \\bmod 7)$ are the auxiliary hash functions. The size $m$ of the hash table is 11. The hash function for the $i$-th probe in the open address table is $[h_1(k) + i \\cdot h_2(k)] \\bmod m$. The following keys are inserted in the given order: 63, 50, 25, 79, 67, 24.\nThe slot at which key 24 gets stored is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_GA_Q06",
@@ -22620,10 +22753,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading and comprehension",
+      "difficulty_level": "Easy",
+      "explaination": "The passage explicitly states: 'the pocket-knife, for instance the type of all human tools, the infant of the sword.' Statement C directly reflects this verbatim description.",
       "tags": [
         "2025",
         "2_mark",
@@ -22634,7 +22767,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "``I put the brown paper in my pocket along with the chalks, and possibly other things. I suppose every one must have reflected how primeval and how poetical are the things that one carries in one's pocket: the pocket-knife, for instance the type of all human tools, the infant of the sword. Once I planned to write a book of poems entirely about the things in my pocket. But I found it would be too long: and the age of the great epics is past.''\n(From G.K. Chesterton's ``A Piece of Chalk'')\n\nBased only on the information provided in the above passage, which one of the following statements is true?",
+      "options_latex": {
+        "A": "The author of the passage carries a mirror in his pocket to reflect upon things.",
+        "B": "The author of the passage had decided to write a poem on epics.",
+        "C": "The pocket-knife is described as the infant of the sword.",
+        "D": "Epics are described as too inconvenient to write."
+      }
     },
     {
       "id": "2025_CS1_GA_Q08",
@@ -22664,10 +22804,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Elementary statistics and probability",
+      "difficulty_level": "Medium",
+      "explaination": "The probability of rolling a 6 is $p = \\frac{1}{6}$, and not rolling a 6 is $q = \\frac{5}{6}$. Using the binomial distribution for $n = 3$ trials with $k = 1$ success, $P(X = 1) = \\binom{3}{1} \\left(\\frac{1}{6}\\right)^1 \\left(\\frac{5}{6}\\right)^2 = 3 \\times \\frac{1}{6} \\times \\frac{25}{36} = \\frac{75}{216}$.",
       "tags": [
         "2025",
         "2_mark",
@@ -22678,7 +22818,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A fair six-faced dice, with the faces labelled `1', `2', `3', `4', `5', and `6', is rolled thrice. What is the probability of rolling `6' exactly once?",
+      "options_latex": {
+        "A": "$\\frac{75}{216}$",
+        "B": "$\\frac{1}{6}$",
+        "C": "$\\frac{1}{18}$",
+        "D": "$\\frac{25}{216}$"
+      }
     },
     {
       "id": "2025_CS1_GA_Q10",
@@ -22708,10 +22855,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "This is a multichoose problem (combination with repetition), where $r = 3$ scoops are chosen from $n = 4$ flavors. The number of ways is given by the stars and bars formula $\\binom{n + r - 1}{r} = \\binom{4 + 3 - 1}{3} = \\binom{6}{3} = \\frac{6 \\times 5 \\times 4}{3 \\times 2 \\times 1} = 20$.",
       "tags": [
         "2025",
         "2_mark",
@@ -22722,7 +22869,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A shop has 4 distinct flavors of ice-cream. One can purchase any number of scoops of any flavor. The order in which the scoops are purchased is inconsequential. If one wants to purchase 3 scoops of ice-cream, in how many ways can one make that purchase?",
+      "options_latex": {
+        "A": "4",
+        "B": "20",
+        "C": "24",
+        "D": "48"
+      }
     },
     {
       "id": "2025_CS2_CS_Q36",
