@@ -1,0 +1,1307 @@
+{
+  "paper_id": "2020_CS",
+  "year": 2020,
+  "total_keys": 65,
+  "keys": [
+    {
+      "question_number": 1,
+      "paper_question_number": 1,
+      "printed_question_number": 1,
+      "raw_question_number": 1,
+      "section_code": "GA",
+      "section": "GA",
+      "question_type": "MCQ",
+      "key": "D",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 2,
+      "paper_question_number": 2,
+      "printed_question_number": 2,
+      "raw_question_number": 2,
+      "section_code": "GA",
+      "section": "GA",
+      "question_type": "MCQ",
+      "key": "A",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 3,
+      "paper_question_number": 3,
+      "printed_question_number": 3,
+      "raw_question_number": 3,
+      "section_code": "GA",
+      "section": "GA",
+      "question_type": "MCQ",
+      "key": "A",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 4,
+      "paper_question_number": 4,
+      "printed_question_number": 4,
+      "raw_question_number": 4,
+      "section_code": "GA",
+      "section": "GA",
+      "question_type": "MCQ",
+      "key": "D",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 5,
+      "paper_question_number": 5,
+      "printed_question_number": 5,
+      "raw_question_number": 5,
+      "section_code": "GA",
+      "section": "GA",
+      "question_type": "MCQ",
+      "key": "B",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 6,
+      "paper_question_number": 6,
+      "printed_question_number": 6,
+      "raw_question_number": 6,
+      "section_code": "GA",
+      "section": "GA",
+      "question_type": "MCQ",
+      "key": "D",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 7,
+      "paper_question_number": 7,
+      "printed_question_number": 7,
+      "raw_question_number": 7,
+      "section_code": "GA",
+      "section": "GA",
+      "question_type": "MCQ",
+      "key": "C",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 8,
+      "paper_question_number": 8,
+      "printed_question_number": 8,
+      "raw_question_number": 8,
+      "section_code": "GA",
+      "section": "GA",
+      "question_type": "MCQ",
+      "key": "A",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 9,
+      "paper_question_number": 9,
+      "printed_question_number": 9,
+      "raw_question_number": 9,
+      "section_code": "GA",
+      "section": "GA",
+      "question_type": "MCQ",
+      "key": "B",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 10,
+      "paper_question_number": 10,
+      "printed_question_number": 10,
+      "raw_question_number": 10,
+      "section_code": "GA",
+      "section": "GA",
+      "question_type": "MCQ",
+      "key": "C",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 11,
+      "paper_question_number": 11,
+      "printed_question_number": 1,
+      "raw_question_number": 1,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "A",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 12,
+      "paper_question_number": 12,
+      "printed_question_number": 2,
+      "raw_question_number": 2,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "A",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 13,
+      "paper_question_number": 13,
+      "printed_question_number": 3,
+      "raw_question_number": 3,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "C",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 14,
+      "paper_question_number": 14,
+      "printed_question_number": 4,
+      "raw_question_number": 4,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "C",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 15,
+      "paper_question_number": 15,
+      "printed_question_number": 5,
+      "raw_question_number": 5,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "B",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 16,
+      "paper_question_number": 16,
+      "printed_question_number": 6,
+      "raw_question_number": 6,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "C",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 17,
+      "paper_question_number": 17,
+      "printed_question_number": 7,
+      "raw_question_number": 7,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "D",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 18,
+      "paper_question_number": 18,
+      "printed_question_number": 8,
+      "raw_question_number": 8,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "D",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 19,
+      "paper_question_number": 19,
+      "printed_question_number": 9,
+      "raw_question_number": 9,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "D",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 20,
+      "paper_question_number": 20,
+      "printed_question_number": 10,
+      "raw_question_number": 10,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "C",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 21,
+      "paper_question_number": 21,
+      "printed_question_number": 11,
+      "raw_question_number": 11,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "C",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 22,
+      "paper_question_number": 22,
+      "printed_question_number": 12,
+      "raw_question_number": 12,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "C",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 23,
+      "paper_question_number": 23,
+      "printed_question_number": 13,
+      "raw_question_number": 13,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "A",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 24,
+      "paper_question_number": 24,
+      "printed_question_number": 14,
+      "raw_question_number": 14,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "A",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 25,
+      "paper_question_number": 25,
+      "printed_question_number": 15,
+      "raw_question_number": 15,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "D",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 26,
+      "paper_question_number": 26,
+      "printed_question_number": 16,
+      "raw_question_number": 16,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "C",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 27,
+      "paper_question_number": 27,
+      "printed_question_number": 17,
+      "raw_question_number": 17,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "0.125 to 0.125",
+      "correct_options": null,
+      "marks": 1.0
+    },
+    {
+      "question_number": 28,
+      "paper_question_number": 28,
+      "printed_question_number": 18,
+      "raw_question_number": 18,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "7 to 7",
+      "correct_options": null,
+      "marks": 1.0
+    },
+    {
+      "question_number": 29,
+      "paper_question_number": 29,
+      "printed_question_number": 19,
+      "raw_question_number": 19,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "5 to 5",
+      "correct_options": null,
+      "marks": 1.0
+    },
+    {
+      "question_number": 30,
+      "paper_question_number": 30,
+      "printed_question_number": 20,
+      "raw_question_number": 20,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "1034 to 1034",
+      "correct_options": null,
+      "marks": 1.0
+    },
+    {
+      "question_number": 31,
+      "paper_question_number": 31,
+      "printed_question_number": 21,
+      "raw_question_number": 21,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "13.5 to 13.5",
+      "correct_options": null,
+      "marks": 1.0
+    },
+    {
+      "question_number": 32,
+      "paper_question_number": 32,
+      "printed_question_number": 22,
+      "raw_question_number": 22,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "19 to 19",
+      "correct_options": null,
+      "marks": 1.0
+    },
+    {
+      "question_number": 33,
+      "paper_question_number": 33,
+      "printed_question_number": 23,
+      "raw_question_number": 23,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "13 to 13",
+      "correct_options": null,
+      "marks": 1.0
+    },
+    {
+      "question_number": 34,
+      "paper_question_number": 34,
+      "printed_question_number": 24,
+      "raw_question_number": 24,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "7 to 7",
+      "correct_options": null,
+      "marks": 1.0
+    },
+    {
+      "question_number": 35,
+      "paper_question_number": 35,
+      "printed_question_number": 25,
+      "raw_question_number": 25,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "6 to 6",
+      "correct_options": null,
+      "marks": 1.0
+    },
+    {
+      "question_number": 36,
+      "paper_question_number": 36,
+      "printed_question_number": 26,
+      "raw_question_number": 26,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "A",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 37,
+      "paper_question_number": 37,
+      "printed_question_number": 27,
+      "raw_question_number": 27,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "C",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 38,
+      "paper_question_number": 38,
+      "printed_question_number": 28,
+      "raw_question_number": 28,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "B",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 39,
+      "paper_question_number": 39,
+      "printed_question_number": 29,
+      "raw_question_number": 29,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "B",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 40,
+      "paper_question_number": 40,
+      "printed_question_number": 30,
+      "raw_question_number": 30,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "B",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 41,
+      "paper_question_number": 41,
+      "printed_question_number": 31,
+      "raw_question_number": 31,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "D",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 42,
+      "paper_question_number": 42,
+      "printed_question_number": 32,
+      "raw_question_number": 32,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "A",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 43,
+      "paper_question_number": 43,
+      "printed_question_number": 33,
+      "raw_question_number": 33,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "B",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 44,
+      "paper_question_number": 44,
+      "printed_question_number": 34,
+      "raw_question_number": 34,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "A",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 45,
+      "paper_question_number": 45,
+      "printed_question_number": 35,
+      "raw_question_number": 35,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "B",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 46,
+      "paper_question_number": 46,
+      "printed_question_number": 36,
+      "raw_question_number": 36,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "A",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 47,
+      "paper_question_number": 47,
+      "printed_question_number": 37,
+      "raw_question_number": 37,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "A",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 48,
+      "paper_question_number": 48,
+      "printed_question_number": 38,
+      "raw_question_number": 38,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "B",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 49,
+      "paper_question_number": 49,
+      "printed_question_number": 39,
+      "raw_question_number": 39,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "C",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 50,
+      "paper_question_number": 50,
+      "printed_question_number": 40,
+      "raw_question_number": 40,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "A",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 51,
+      "paper_question_number": 51,
+      "printed_question_number": 41,
+      "raw_question_number": 41,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "MCQ",
+      "key": "B",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 52,
+      "paper_question_number": 52,
+      "printed_question_number": 42,
+      "raw_question_number": 42,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "12 to 12",
+      "correct_options": null,
+      "marks": 2.0
+    },
+    {
+      "question_number": 53,
+      "paper_question_number": 53,
+      "printed_question_number": 43,
+      "raw_question_number": 43,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "2.15 to 2.18",
+      "correct_options": null,
+      "marks": 2.0
+    },
+    {
+      "question_number": 54,
+      "paper_question_number": 54,
+      "printed_question_number": 44,
+      "raw_question_number": 44,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "14 to 14",
+      "correct_options": null,
+      "marks": 2.0
+    },
+    {
+      "question_number": 55,
+      "paper_question_number": 55,
+      "printed_question_number": 45,
+      "raw_question_number": 45,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "0.5 to 0.5",
+      "correct_options": null,
+      "marks": 2.0
+    },
+    {
+      "question_number": 56,
+      "paper_question_number": 56,
+      "printed_question_number": 46,
+      "raw_question_number": 46,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "55 to 55",
+      "correct_options": null,
+      "marks": 2.0
+    },
+    {
+      "question_number": 57,
+      "paper_question_number": 57,
+      "printed_question_number": 47,
+      "raw_question_number": 47,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "511 to 511",
+      "correct_options": null,
+      "marks": 2.0
+    },
+    {
+      "question_number": 58,
+      "paper_question_number": 58,
+      "printed_question_number": 48,
+      "raw_question_number": 48,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "81 to 81",
+      "correct_options": null,
+      "marks": 2.0
+    },
+    {
+      "question_number": 59,
+      "paper_question_number": 59,
+      "printed_question_number": 49,
+      "raw_question_number": 49,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "99 to 99",
+      "correct_options": null,
+      "marks": 2.0
+    },
+    {
+      "question_number": 60,
+      "paper_question_number": 60,
+      "printed_question_number": 50,
+      "raw_question_number": 50,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "5.25 to 5.25",
+      "correct_options": null,
+      "marks": 2.0
+    },
+    {
+      "question_number": 61,
+      "paper_question_number": 61,
+      "printed_question_number": 51,
+      "raw_question_number": 51,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "6 to 6",
+      "correct_options": null,
+      "marks": 2.0
+    },
+    {
+      "question_number": 62,
+      "paper_question_number": 62,
+      "printed_question_number": 52,
+      "raw_question_number": 52,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "7 to 7",
+      "correct_options": null,
+      "marks": 2.0
+    },
+    {
+      "question_number": 63,
+      "paper_question_number": 63,
+      "printed_question_number": 53,
+      "raw_question_number": 53,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "154.5 to 155.5",
+      "correct_options": null,
+      "marks": 2.0
+    },
+    {
+      "question_number": 64,
+      "paper_question_number": 64,
+      "printed_question_number": 54,
+      "raw_question_number": 54,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "4 to 4",
+      "correct_options": null,
+      "marks": 2.0
+    },
+    {
+      "question_number": 65,
+      "paper_question_number": 65,
+      "printed_question_number": 55,
+      "raw_question_number": 55,
+      "section_code": "CS",
+      "section": "CS",
+      "question_type": "NAT",
+      "key": "44 to 44",
+      "correct_options": null,
+      "marks": 2.0
+    }
+  ],
+  "keys_by_number": {
+    "1": "D",
+    "2": "A",
+    "3": "A",
+    "4": "D",
+    "5": "B",
+    "6": "D",
+    "7": "C",
+    "8": "A",
+    "9": "B",
+    "10": "C",
+    "11": "A",
+    "12": "A",
+    "13": "C",
+    "14": "C",
+    "15": "B",
+    "16": "C",
+    "17": "D",
+    "18": "D",
+    "19": "D",
+    "20": "C",
+    "21": "C",
+    "22": "C",
+    "23": "A",
+    "24": "A",
+    "25": "D",
+    "26": "C",
+    "27": "0.125 to 0.125",
+    "28": "7 to 7",
+    "29": "5 to 5",
+    "30": "1034 to 1034",
+    "31": "13.5 to 13.5",
+    "32": "19 to 19",
+    "33": "13 to 13",
+    "34": "7 to 7",
+    "35": "6 to 6",
+    "36": "A",
+    "37": "C",
+    "38": "B",
+    "39": "B",
+    "40": "B",
+    "41": "D",
+    "42": "A",
+    "43": "B",
+    "44": "A",
+    "45": "B",
+    "46": "A",
+    "47": "A",
+    "48": "B",
+    "49": "C",
+    "50": "A",
+    "51": "B",
+    "52": "12 to 12",
+    "53": "2.15 to 2.18",
+    "54": "14 to 14",
+    "55": "0.5 to 0.5",
+    "56": "55 to 55",
+    "57": "511 to 511",
+    "58": "81 to 81",
+    "59": "99 to 99",
+    "60": "5.25 to 5.25",
+    "61": "6 to 6",
+    "62": "7 to 7",
+    "63": "154.5 to 155.5",
+    "64": "4 to 4",
+    "65": "44 to 44"
+  },
+  "correct_options_by_number": {
+    "1": [
+      "D"
+    ],
+    "2": [
+      "A"
+    ],
+    "3": [
+      "A"
+    ],
+    "4": [
+      "D"
+    ],
+    "5": [
+      "B"
+    ],
+    "6": [
+      "D"
+    ],
+    "7": [
+      "C"
+    ],
+    "8": [
+      "A"
+    ],
+    "9": [
+      "B"
+    ],
+    "10": [
+      "C"
+    ],
+    "11": [
+      "A"
+    ],
+    "12": [
+      "A"
+    ],
+    "13": [
+      "C"
+    ],
+    "14": [
+      "C"
+    ],
+    "15": [
+      "B"
+    ],
+    "16": [
+      "C"
+    ],
+    "17": [
+      "D"
+    ],
+    "18": [
+      "D"
+    ],
+    "19": [
+      "D"
+    ],
+    "20": [
+      "C"
+    ],
+    "21": [
+      "C"
+    ],
+    "22": [
+      "C"
+    ],
+    "23": [
+      "A"
+    ],
+    "24": [
+      "A"
+    ],
+    "25": [
+      "D"
+    ],
+    "26": [
+      "C"
+    ],
+    "27": null,
+    "28": null,
+    "29": null,
+    "30": null,
+    "31": null,
+    "32": null,
+    "33": null,
+    "34": null,
+    "35": null,
+    "36": [
+      "A"
+    ],
+    "37": [
+      "C"
+    ],
+    "38": [
+      "B"
+    ],
+    "39": [
+      "B"
+    ],
+    "40": [
+      "B"
+    ],
+    "41": [
+      "D"
+    ],
+    "42": [
+      "A"
+    ],
+    "43": [
+      "B"
+    ],
+    "44": [
+      "A"
+    ],
+    "45": [
+      "B"
+    ],
+    "46": [
+      "A"
+    ],
+    "47": [
+      "A"
+    ],
+    "48": [
+      "B"
+    ],
+    "49": [
+      "C"
+    ],
+    "50": [
+      "A"
+    ],
+    "51": [
+      "B"
+    ],
+    "52": null,
+    "53": null,
+    "54": null,
+    "55": null,
+    "56": null,
+    "57": null,
+    "58": null,
+    "59": null,
+    "60": null,
+    "61": null,
+    "62": null,
+    "63": null,
+    "64": null,
+    "65": null
+  },
+  "keys_by_section_and_number": {
+    "GA_1": "D",
+    "GA_2": "A",
+    "GA_3": "A",
+    "GA_4": "D",
+    "GA_5": "B",
+    "GA_6": "D",
+    "GA_7": "C",
+    "GA_8": "A",
+    "GA_9": "B",
+    "GA_10": "C",
+    "CS_1": "A",
+    "CS_2": "A",
+    "CS_3": "C",
+    "CS_4": "C",
+    "CS_5": "B",
+    "CS_6": "C",
+    "CS_7": "D",
+    "CS_8": "D",
+    "CS_9": "D",
+    "CS_10": "C",
+    "CS_11": "C",
+    "CS_12": "C",
+    "CS_13": "A",
+    "CS_14": "A",
+    "CS_15": "D",
+    "CS_16": "C",
+    "CS_17": "0.125 to 0.125",
+    "CS_18": "7 to 7",
+    "CS_19": "5 to 5",
+    "CS_20": "1034 to 1034",
+    "CS_21": "13.5 to 13.5",
+    "CS_22": "19 to 19",
+    "CS_23": "13 to 13",
+    "CS_24": "7 to 7",
+    "CS_25": "6 to 6",
+    "CS_26": "A",
+    "CS_27": "C",
+    "CS_28": "B",
+    "CS_29": "B",
+    "CS_30": "B",
+    "CS_31": "D",
+    "CS_32": "A",
+    "CS_33": "B",
+    "CS_34": "A",
+    "CS_35": "B",
+    "CS_36": "A",
+    "CS_37": "A",
+    "CS_38": "B",
+    "CS_39": "C",
+    "CS_40": "A",
+    "CS_41": "B",
+    "CS_42": "12 to 12",
+    "CS_43": "2.15 to 2.18",
+    "CS_44": "14 to 14",
+    "CS_45": "0.5 to 0.5",
+    "CS_46": "55 to 55",
+    "CS_47": "511 to 511",
+    "CS_48": "81 to 81",
+    "CS_49": "99 to 99",
+    "CS_50": "5.25 to 5.25",
+    "CS_51": "6 to 6",
+    "CS_52": "7 to 7",
+    "CS_53": "154.5 to 155.5",
+    "CS_54": "4 to 4",
+    "CS_55": "44 to 44"
+  },
+  "correct_options_by_section_and_number": {
+    "GA_1": [
+      "D"
+    ],
+    "GA_2": [
+      "A"
+    ],
+    "GA_3": [
+      "A"
+    ],
+    "GA_4": [
+      "D"
+    ],
+    "GA_5": [
+      "B"
+    ],
+    "GA_6": [
+      "D"
+    ],
+    "GA_7": [
+      "C"
+    ],
+    "GA_8": [
+      "A"
+    ],
+    "GA_9": [
+      "B"
+    ],
+    "GA_10": [
+      "C"
+    ],
+    "CS_1": [
+      "A"
+    ],
+    "CS_2": [
+      "A"
+    ],
+    "CS_3": [
+      "C"
+    ],
+    "CS_4": [
+      "C"
+    ],
+    "CS_5": [
+      "B"
+    ],
+    "CS_6": [
+      "C"
+    ],
+    "CS_7": [
+      "D"
+    ],
+    "CS_8": [
+      "D"
+    ],
+    "CS_9": [
+      "D"
+    ],
+    "CS_10": [
+      "C"
+    ],
+    "CS_11": [
+      "C"
+    ],
+    "CS_12": [
+      "C"
+    ],
+    "CS_13": [
+      "A"
+    ],
+    "CS_14": [
+      "A"
+    ],
+    "CS_15": [
+      "D"
+    ],
+    "CS_16": [
+      "C"
+    ],
+    "CS_17": null,
+    "CS_18": null,
+    "CS_19": null,
+    "CS_20": null,
+    "CS_21": null,
+    "CS_22": null,
+    "CS_23": null,
+    "CS_24": null,
+    "CS_25": null,
+    "CS_26": [
+      "A"
+    ],
+    "CS_27": [
+      "C"
+    ],
+    "CS_28": [
+      "B"
+    ],
+    "CS_29": [
+      "B"
+    ],
+    "CS_30": [
+      "B"
+    ],
+    "CS_31": [
+      "D"
+    ],
+    "CS_32": [
+      "A"
+    ],
+    "CS_33": [
+      "B"
+    ],
+    "CS_34": [
+      "A"
+    ],
+    "CS_35": [
+      "B"
+    ],
+    "CS_36": [
+      "A"
+    ],
+    "CS_37": [
+      "A"
+    ],
+    "CS_38": [
+      "B"
+    ],
+    "CS_39": [
+      "C"
+    ],
+    "CS_40": [
+      "A"
+    ],
+    "CS_41": [
+      "B"
+    ],
+    "CS_42": null,
+    "CS_43": null,
+    "CS_44": null,
+    "CS_45": null,
+    "CS_46": null,
+    "CS_47": null,
+    "CS_48": null,
+    "CS_49": null,
+    "CS_50": null,
+    "CS_51": null,
+    "CS_52": null,
+    "CS_53": null,
+    "CS_54": null,
+    "CS_55": null
+  }
+}

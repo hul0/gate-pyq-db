@@ -1,0 +1,1658 @@
+{
+  "paper_id": "2013_CS",
+  "year": 2013,
+  "total_keys": 65,
+  "keys": [
+    {
+      "question_number": 1,
+      "paper_question_number": 1,
+      "printed_question_number": 1,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "A",
+      "code_a": "A",
+      "code_b": "C",
+      "code_c": "D",
+      "code_d": "C",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 2,
+      "paper_question_number": 2,
+      "printed_question_number": 2,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "C",
+      "code_c": "C",
+      "code_d": "C",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 3,
+      "paper_question_number": 3,
+      "printed_question_number": 3,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "A",
+      "code_a": "A",
+      "code_b": "D",
+      "code_c": "B",
+      "code_d": "C",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 4,
+      "paper_question_number": 4,
+      "printed_question_number": 4,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "B",
+      "code_a": "B",
+      "code_b": "A",
+      "code_c": "B",
+      "code_d": "B",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 5,
+      "paper_question_number": 5,
+      "printed_question_number": 5,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "A",
+      "code_a": "A",
+      "code_b": "D",
+      "code_c": "A",
+      "code_d": "C",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 6,
+      "paper_question_number": 6,
+      "printed_question_number": 6,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "B",
+      "code_a": "B",
+      "code_b": "A",
+      "code_c": "C",
+      "code_d": "A",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 7,
+      "paper_question_number": 7,
+      "printed_question_number": 7,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "C",
+      "code_c": "B",
+      "code_d": "C",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 8,
+      "paper_question_number": 8,
+      "printed_question_number": 8,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "A",
+      "code_a": "A",
+      "code_b": "A",
+      "code_c": "A",
+      "code_d": "A",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 9,
+      "paper_question_number": 9,
+      "printed_question_number": 9,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "B",
+      "code_a": "B",
+      "code_b": "C",
+      "code_c": "B",
+      "code_d": "D",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 10,
+      "paper_question_number": 10,
+      "printed_question_number": 10,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "B",
+      "code_a": "B",
+      "code_b": "B",
+      "code_c": "A",
+      "code_d": "A",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 11,
+      "paper_question_number": 11,
+      "printed_question_number": 11,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "C",
+      "code_c": "C",
+      "code_d": "D",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 12,
+      "paper_question_number": 12,
+      "printed_question_number": 12,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "C",
+      "code_c": "A",
+      "code_d": "C",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 13,
+      "paper_question_number": 13,
+      "printed_question_number": 13,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "D",
+      "code_a": "D",
+      "code_b": "C",
+      "code_c": "C",
+      "code_d": "C",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 14,
+      "paper_question_number": 14,
+      "printed_question_number": 14,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "D",
+      "code_c": "C",
+      "code_d": "A",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 15,
+      "paper_question_number": 15,
+      "printed_question_number": 15,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "C",
+      "code_c": "D",
+      "code_d": "C",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 16,
+      "paper_question_number": 16,
+      "printed_question_number": 16,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "B",
+      "code_a": "B",
+      "code_b": "B",
+      "code_c": "A",
+      "code_d": "A",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 17,
+      "paper_question_number": 17,
+      "printed_question_number": 17,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "B",
+      "code_c": "D",
+      "code_d": "B",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 18,
+      "paper_question_number": 18,
+      "printed_question_number": 18,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "A",
+      "code_a": "A",
+      "code_b": "A",
+      "code_c": "A",
+      "code_d": "A",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 19,
+      "paper_question_number": 19,
+      "printed_question_number": 19,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "C",
+      "code_c": "C",
+      "code_d": "B",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 20,
+      "paper_question_number": 20,
+      "printed_question_number": 20,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "A",
+      "code_a": "A",
+      "code_b": "B",
+      "code_c": "A",
+      "code_d": "C",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 21,
+      "paper_question_number": 21,
+      "printed_question_number": 21,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "D",
+      "code_a": "D",
+      "code_b": "A",
+      "code_c": "C",
+      "code_d": "A",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 22,
+      "paper_question_number": 22,
+      "printed_question_number": 22,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "A",
+      "code_a": "A",
+      "code_b": "B",
+      "code_c": "B",
+      "code_d": "B",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 23,
+      "paper_question_number": 23,
+      "printed_question_number": 23,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "D",
+      "code_a": "D",
+      "code_b": "A",
+      "code_c": "C",
+      "code_d": "B",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 24,
+      "paper_question_number": 24,
+      "printed_question_number": 24,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "C",
+      "code_c": "C",
+      "code_d": "C",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 25,
+      "paper_question_number": 25,
+      "printed_question_number": 25,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "A",
+      "code_c": "C",
+      "code_d": "D",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 26,
+      "paper_question_number": 26,
+      "printed_question_number": 26,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "A",
+      "code_a": "A",
+      "code_b": "Marks to All",
+      "code_c": "B",
+      "code_d": "C",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 27,
+      "paper_question_number": 27,
+      "printed_question_number": 27,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "D",
+      "code_a": "D",
+      "code_b": "B",
+      "code_c": "A",
+      "code_d": "A",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 28,
+      "paper_question_number": 28,
+      "printed_question_number": 28,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "D",
+      "code_a": "D",
+      "code_b": "B",
+      "code_c": "D",
+      "code_d": "C",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 29,
+      "paper_question_number": 29,
+      "printed_question_number": 29,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "D",
+      "code_a": "D",
+      "code_b": "A",
+      "code_c": "D",
+      "code_d": "D",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 30,
+      "paper_question_number": 30,
+      "printed_question_number": 30,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "D",
+      "code_c": "D",
+      "code_d": "D",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 31,
+      "paper_question_number": 31,
+      "printed_question_number": 31,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "B",
+      "code_a": "B",
+      "code_b": "Marks to All",
+      "code_c": "B",
+      "code_d": "Marks to All",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 32,
+      "paper_question_number": 32,
+      "printed_question_number": 32,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "D",
+      "code_a": "D",
+      "code_b": "D",
+      "code_c": "C",
+      "code_d": "D",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 33,
+      "paper_question_number": 33,
+      "printed_question_number": 33,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "D",
+      "code_a": "D",
+      "code_b": "D",
+      "code_c": "D",
+      "code_d": "B",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 34,
+      "paper_question_number": 34,
+      "printed_question_number": 34,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "D",
+      "code_a": "D",
+      "code_b": "C",
+      "code_c": "D",
+      "code_d": "A",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 35,
+      "paper_question_number": 35,
+      "printed_question_number": 35,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "A",
+      "code_a": "A",
+      "code_b": "A",
+      "code_c": "A",
+      "code_d": "B",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 36,
+      "paper_question_number": 36,
+      "printed_question_number": 36,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "B",
+      "code_a": "B",
+      "code_b": "C",
+      "code_c": "D",
+      "code_d": "Marks to All",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 37,
+      "paper_question_number": 37,
+      "printed_question_number": 37,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "B",
+      "code_c": "Marks to All",
+      "code_d": "D",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 38,
+      "paper_question_number": 38,
+      "printed_question_number": 38,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "A",
+      "code_a": "A",
+      "code_b": "A",
+      "code_c": "B",
+      "code_d": "A",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 39,
+      "paper_question_number": 39,
+      "printed_question_number": 39,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "D",
+      "code_c": "B",
+      "code_d": "D",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 40,
+      "paper_question_number": 40,
+      "printed_question_number": 40,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "D",
+      "code_a": "D",
+      "code_b": "D",
+      "code_c": "A",
+      "code_d": "D",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 41,
+      "paper_question_number": 41,
+      "printed_question_number": 41,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "D",
+      "code_a": "D",
+      "code_b": "D",
+      "code_c": "D",
+      "code_d": "C",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 42,
+      "paper_question_number": 42,
+      "printed_question_number": 42,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "Marks to All",
+      "code_a": "Marks to All",
+      "code_b": "B",
+      "code_c": "Marks to All",
+      "code_d": "B",
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 43,
+      "paper_question_number": 43,
+      "printed_question_number": 43,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "D",
+      "code_a": "D",
+      "code_b": "C",
+      "code_c": "D",
+      "code_d": "D",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 44,
+      "paper_question_number": 44,
+      "printed_question_number": 44,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "A",
+      "code_a": "A",
+      "code_b": "D",
+      "code_c": "D",
+      "code_d": "D",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 45,
+      "paper_question_number": 45,
+      "printed_question_number": 45,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "B",
+      "code_a": "B",
+      "code_b": "D",
+      "code_c": "C",
+      "code_d": "D",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 46,
+      "paper_question_number": 46,
+      "printed_question_number": 46,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "B",
+      "code_a": "B",
+      "code_b": "A",
+      "code_c": "C",
+      "code_d": "A",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 47,
+      "paper_question_number": 47,
+      "printed_question_number": 47,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "Marks to All",
+      "code_a": "Marks to All",
+      "code_b": "D",
+      "code_c": "A",
+      "code_d": "B",
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 48,
+      "paper_question_number": 48,
+      "printed_question_number": 48,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "B",
+      "code_a": "B",
+      "code_b": "B",
+      "code_c": "B",
+      "code_d": "C",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 49,
+      "paper_question_number": 49,
+      "printed_question_number": 49,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "B",
+      "code_a": "B",
+      "code_b": "C",
+      "code_c": "B",
+      "code_d": "B",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 50,
+      "paper_question_number": 50,
+      "printed_question_number": 50,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "B",
+      "code_a": "B",
+      "code_b": "B",
+      "code_c": "C",
+      "code_d": "B",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 51,
+      "paper_question_number": 51,
+      "printed_question_number": 51,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "B",
+      "code_c": "B",
+      "code_d": "B",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 52,
+      "paper_question_number": 52,
+      "printed_question_number": 52,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "B",
+      "code_c": "C",
+      "code_d": "B",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 53,
+      "paper_question_number": 53,
+      "printed_question_number": 53,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "A",
+      "code_c": "C",
+      "code_d": "A",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 54,
+      "paper_question_number": 54,
+      "printed_question_number": 54,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "B",
+      "code_a": "B",
+      "code_b": "C",
+      "code_c": "B",
+      "code_d": "C",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 55,
+      "paper_question_number": 55,
+      "printed_question_number": 55,
+      "section_code": "CS",
+      "section": "Computer Science and Information Technology",
+      "question_type": "MCQ",
+      "key": "A",
+      "code_a": "A",
+      "code_b": "C",
+      "code_c": "A",
+      "code_d": "C",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 56,
+      "paper_question_number": 56,
+      "printed_question_number": 56,
+      "section_code": "GA",
+      "section": "General Aptitude",
+      "question_type": "MCQ",
+      "key": "B",
+      "code_a": "B",
+      "code_b": "A",
+      "code_c": "A",
+      "code_d": "C",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 57,
+      "paper_question_number": 57,
+      "printed_question_number": 57,
+      "section_code": "GA",
+      "section": "General Aptitude",
+      "question_type": "MCQ",
+      "key": "A",
+      "code_a": "A",
+      "code_b": "A",
+      "code_c": "C",
+      "code_d": "C",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 58,
+      "paper_question_number": 58,
+      "printed_question_number": 58,
+      "section_code": "GA",
+      "section": "General Aptitude",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "B",
+      "code_c": "A",
+      "code_d": "A",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 59,
+      "paper_question_number": 59,
+      "printed_question_number": 59,
+      "section_code": "GA",
+      "section": "General Aptitude",
+      "question_type": "MCQ",
+      "key": "A",
+      "code_a": "A",
+      "code_b": "C",
+      "code_c": "C",
+      "code_d": "B",
+      "correct_options": [
+        "A"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 60,
+      "paper_question_number": 60,
+      "printed_question_number": 60,
+      "section_code": "GA",
+      "section": "General Aptitude",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "C",
+      "code_c": "B",
+      "code_d": "A",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 1.0
+    },
+    {
+      "question_number": 61,
+      "paper_question_number": 61,
+      "printed_question_number": 61,
+      "section_code": "GA",
+      "section": "General Aptitude",
+      "question_type": "MCQ",
+      "key": "B",
+      "code_a": "B",
+      "code_b": "D",
+      "code_c": "C",
+      "code_d": "B",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 62,
+      "paper_question_number": 62,
+      "printed_question_number": 62,
+      "section_code": "GA",
+      "section": "General Aptitude",
+      "question_type": "MCQ",
+      "key": "D",
+      "code_a": "D",
+      "code_b": "C",
+      "code_c": "B",
+      "code_d": "D",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 63,
+      "paper_question_number": 63,
+      "printed_question_number": 63,
+      "section_code": "GA",
+      "section": "General Aptitude",
+      "question_type": "MCQ",
+      "key": "D",
+      "code_a": "D",
+      "code_b": "B",
+      "code_c": "D",
+      "code_d": "C",
+      "correct_options": [
+        "D"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 64,
+      "paper_question_number": 64,
+      "printed_question_number": 64,
+      "section_code": "GA",
+      "section": "General Aptitude",
+      "question_type": "MCQ",
+      "key": "C",
+      "code_a": "C",
+      "code_b": "B",
+      "code_c": "D",
+      "code_d": "B",
+      "correct_options": [
+        "C"
+      ],
+      "marks": 2.0
+    },
+    {
+      "question_number": 65,
+      "paper_question_number": 65,
+      "printed_question_number": 65,
+      "section_code": "GA",
+      "section": "General Aptitude",
+      "question_type": "MCQ",
+      "key": "B",
+      "code_a": "B",
+      "code_b": "D",
+      "code_c": "B",
+      "code_d": "D",
+      "correct_options": [
+        "B"
+      ],
+      "marks": 2.0
+    }
+  ],
+  "keys_by_number": {
+    "1": "A",
+    "2": "C",
+    "3": "A",
+    "4": "B",
+    "5": "A",
+    "6": "B",
+    "7": "C",
+    "8": "A",
+    "9": "B",
+    "10": "B",
+    "11": "C",
+    "12": "C",
+    "13": "D",
+    "14": "C",
+    "15": "C",
+    "16": "B",
+    "17": "C",
+    "18": "A",
+    "19": "C",
+    "20": "A",
+    "21": "D",
+    "22": "A",
+    "23": "D",
+    "24": "C",
+    "25": "C",
+    "26": "A",
+    "27": "D",
+    "28": "D",
+    "29": "D",
+    "30": "C",
+    "31": "B",
+    "32": "D",
+    "33": "D",
+    "34": "D",
+    "35": "A",
+    "36": "B",
+    "37": "C",
+    "38": "A",
+    "39": "C",
+    "40": "D",
+    "41": "D",
+    "42": "Marks to All",
+    "43": "D",
+    "44": "A",
+    "45": "B",
+    "46": "B",
+    "47": "Marks to All",
+    "48": "B",
+    "49": "B",
+    "50": "B",
+    "51": "C",
+    "52": "C",
+    "53": "C",
+    "54": "B",
+    "55": "A",
+    "56": "B",
+    "57": "A",
+    "58": "C",
+    "59": "A",
+    "60": "C",
+    "61": "B",
+    "62": "D",
+    "63": "D",
+    "64": "C",
+    "65": "B"
+  },
+  "correct_options_by_number": {
+    "1": [
+      "A"
+    ],
+    "2": [
+      "C"
+    ],
+    "3": [
+      "A"
+    ],
+    "4": [
+      "B"
+    ],
+    "5": [
+      "A"
+    ],
+    "6": [
+      "B"
+    ],
+    "7": [
+      "C"
+    ],
+    "8": [
+      "A"
+    ],
+    "9": [
+      "B"
+    ],
+    "10": [
+      "B"
+    ],
+    "11": [
+      "C"
+    ],
+    "12": [
+      "C"
+    ],
+    "13": [
+      "D"
+    ],
+    "14": [
+      "C"
+    ],
+    "15": [
+      "C"
+    ],
+    "16": [
+      "B"
+    ],
+    "17": [
+      "C"
+    ],
+    "18": [
+      "A"
+    ],
+    "19": [
+      "C"
+    ],
+    "20": [
+      "A"
+    ],
+    "21": [
+      "D"
+    ],
+    "22": [
+      "A"
+    ],
+    "23": [
+      "D"
+    ],
+    "24": [
+      "C"
+    ],
+    "25": [
+      "C"
+    ],
+    "26": [
+      "A"
+    ],
+    "27": [
+      "D"
+    ],
+    "28": [
+      "D"
+    ],
+    "29": [
+      "D"
+    ],
+    "30": [
+      "C"
+    ],
+    "31": [
+      "B"
+    ],
+    "32": [
+      "D"
+    ],
+    "33": [
+      "D"
+    ],
+    "34": [
+      "D"
+    ],
+    "35": [
+      "A"
+    ],
+    "36": [
+      "B"
+    ],
+    "37": [
+      "C"
+    ],
+    "38": [
+      "A"
+    ],
+    "39": [
+      "C"
+    ],
+    "40": [
+      "D"
+    ],
+    "41": [
+      "D"
+    ],
+    "42": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "43": [
+      "D"
+    ],
+    "44": [
+      "A"
+    ],
+    "45": [
+      "B"
+    ],
+    "46": [
+      "B"
+    ],
+    "47": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "48": [
+      "B"
+    ],
+    "49": [
+      "B"
+    ],
+    "50": [
+      "B"
+    ],
+    "51": [
+      "C"
+    ],
+    "52": [
+      "C"
+    ],
+    "53": [
+      "C"
+    ],
+    "54": [
+      "B"
+    ],
+    "55": [
+      "A"
+    ],
+    "56": [
+      "B"
+    ],
+    "57": [
+      "A"
+    ],
+    "58": [
+      "C"
+    ],
+    "59": [
+      "A"
+    ],
+    "60": [
+      "C"
+    ],
+    "61": [
+      "B"
+    ],
+    "62": [
+      "D"
+    ],
+    "63": [
+      "D"
+    ],
+    "64": [
+      "C"
+    ],
+    "65": [
+      "B"
+    ]
+  },
+  "keys_by_section_and_number": {
+    "CS_1": "A",
+    "CS_2": "C",
+    "CS_3": "A",
+    "CS_4": "B",
+    "CS_5": "A",
+    "CS_6": "B",
+    "CS_7": "C",
+    "CS_8": "A",
+    "CS_9": "B",
+    "CS_10": "B",
+    "CS_11": "C",
+    "CS_12": "C",
+    "CS_13": "D",
+    "CS_14": "C",
+    "CS_15": "C",
+    "CS_16": "B",
+    "CS_17": "C",
+    "CS_18": "A",
+    "CS_19": "C",
+    "CS_20": "A",
+    "CS_21": "D",
+    "CS_22": "A",
+    "CS_23": "D",
+    "CS_24": "C",
+    "CS_25": "C",
+    "CS_26": "A",
+    "CS_27": "D",
+    "CS_28": "D",
+    "CS_29": "D",
+    "CS_30": "C",
+    "CS_31": "B",
+    "CS_32": "D",
+    "CS_33": "D",
+    "CS_34": "D",
+    "CS_35": "A",
+    "CS_36": "B",
+    "CS_37": "C",
+    "CS_38": "A",
+    "CS_39": "C",
+    "CS_40": "D",
+    "CS_41": "D",
+    "CS_42": "Marks to All",
+    "CS_43": "D",
+    "CS_44": "A",
+    "CS_45": "B",
+    "CS_46": "B",
+    "CS_47": "Marks to All",
+    "CS_48": "B",
+    "CS_49": "B",
+    "CS_50": "B",
+    "CS_51": "C",
+    "CS_52": "C",
+    "CS_53": "C",
+    "CS_54": "B",
+    "CS_55": "A",
+    "GA_56": "B",
+    "GA_57": "A",
+    "GA_58": "C",
+    "GA_59": "A",
+    "GA_60": "C",
+    "GA_61": "B",
+    "GA_62": "D",
+    "GA_63": "D",
+    "GA_64": "C",
+    "GA_65": "B"
+  },
+  "correct_options_by_section_and_number": {
+    "CS_1": [
+      "A"
+    ],
+    "CS_2": [
+      "C"
+    ],
+    "CS_3": [
+      "A"
+    ],
+    "CS_4": [
+      "B"
+    ],
+    "CS_5": [
+      "A"
+    ],
+    "CS_6": [
+      "B"
+    ],
+    "CS_7": [
+      "C"
+    ],
+    "CS_8": [
+      "A"
+    ],
+    "CS_9": [
+      "B"
+    ],
+    "CS_10": [
+      "B"
+    ],
+    "CS_11": [
+      "C"
+    ],
+    "CS_12": [
+      "C"
+    ],
+    "CS_13": [
+      "D"
+    ],
+    "CS_14": [
+      "C"
+    ],
+    "CS_15": [
+      "C"
+    ],
+    "CS_16": [
+      "B"
+    ],
+    "CS_17": [
+      "C"
+    ],
+    "CS_18": [
+      "A"
+    ],
+    "CS_19": [
+      "C"
+    ],
+    "CS_20": [
+      "A"
+    ],
+    "CS_21": [
+      "D"
+    ],
+    "CS_22": [
+      "A"
+    ],
+    "CS_23": [
+      "D"
+    ],
+    "CS_24": [
+      "C"
+    ],
+    "CS_25": [
+      "C"
+    ],
+    "CS_26": [
+      "A"
+    ],
+    "CS_27": [
+      "D"
+    ],
+    "CS_28": [
+      "D"
+    ],
+    "CS_29": [
+      "D"
+    ],
+    "CS_30": [
+      "C"
+    ],
+    "CS_31": [
+      "B"
+    ],
+    "CS_32": [
+      "D"
+    ],
+    "CS_33": [
+      "D"
+    ],
+    "CS_34": [
+      "D"
+    ],
+    "CS_35": [
+      "A"
+    ],
+    "CS_36": [
+      "B"
+    ],
+    "CS_37": [
+      "C"
+    ],
+    "CS_38": [
+      "A"
+    ],
+    "CS_39": [
+      "C"
+    ],
+    "CS_40": [
+      "D"
+    ],
+    "CS_41": [
+      "D"
+    ],
+    "CS_42": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "CS_43": [
+      "D"
+    ],
+    "CS_44": [
+      "A"
+    ],
+    "CS_45": [
+      "B"
+    ],
+    "CS_46": [
+      "B"
+    ],
+    "CS_47": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "CS_48": [
+      "B"
+    ],
+    "CS_49": [
+      "B"
+    ],
+    "CS_50": [
+      "B"
+    ],
+    "CS_51": [
+      "C"
+    ],
+    "CS_52": [
+      "C"
+    ],
+    "CS_53": [
+      "C"
+    ],
+    "CS_54": [
+      "B"
+    ],
+    "CS_55": [
+      "A"
+    ],
+    "GA_56": [
+      "B"
+    ],
+    "GA_57": [
+      "A"
+    ],
+    "GA_58": [
+      "C"
+    ],
+    "GA_59": [
+      "A"
+    ],
+    "GA_60": [
+      "C"
+    ],
+    "GA_61": [
+      "B"
+    ],
+    "GA_62": [
+      "D"
+    ],
+    "GA_63": [
+      "D"
+    ],
+    "GA_64": [
+      "C"
+    ],
+    "GA_65": [
+      "B"
+    ]
+  }
+}

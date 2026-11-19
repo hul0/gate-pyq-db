@@ -1,0 +1,1438 @@
+{
+  "paper_id": "2024_CS1",
+  "year": 2024,
+  "subject": "Computer Science and Information Technology",
+  "subject_code": "CS",
+  "session": "CS1",
+  "total_questions_in_paper": 65,
+  "extracted_questions_count": 63,
+  "omitted_questions_count": 2,
+  "questions": [
+    {
+      "id": "2024_CS1_GA_Q01",
+      "question_number": 1,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "If \u2018\u2192\u2019 denotes increasing order of intensity, then the meaning of the words\n[dry \u2192 arid \u2192 parched] is analogous to [diet \u2192 fast \u2192 ________ ].\nWhich one of the given options is appropriate to fill the blank?",
+      "options": {
+        "A": "starve",
+        "B": "reject",
+        "C": "feast",
+        "D": "deny"
+      },
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_GA_Q02",
+      "question_number": 2,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "If two distinct non-zero real variables \ud835\udc65 and \ud835\udc66 are such that (\ud835\udc65+ \ud835\udc66) is proportional\nto (\ud835\udc65\u2212\ud835\udc66) then the value of\n\ud835\udc65\n\ud835\udc66",
+      "options": {
+        "A": "depends on \ud835\udc65\ud835\udc66",
+        "B": "depends only on \ud835\udc65 and not on \ud835\udc66",
+        "C": "depends only on \ud835\udc66 and not on \ud835\udc65",
+        "D": "is a constant"
+      },
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 2,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_GA_Q03",
+      "question_number": 3,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider the following sample of numbers:\n9, 18, 11, 14, 15, 17, 10, 69, 11, 13\nThe median of the sample is",
+      "options": {
+        "A": "13.5",
+        "B": "14",
+        "C": "11",
+        "D": "18.7"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_GA_Q04",
+      "question_number": 4,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "The number of coins of \u20b91, \u20b95, and \u20b910 denominations that a person has are in the\nratio 5:3:13. Of the total amount, the percentage of money in \u20b95 coins is",
+      "options": {
+        "A": "21%",
+        "B": "14\n2\n7%",
+        "C": "10%",
+        "D": "30%"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 3,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_GA_Q05",
+      "question_number": 5,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "For positive non-zero real variables \ud835\udc5d and \ud835\udc5e, if\nlog (\ud835\udc5d2 + \ud835\udc5e2) = log \ud835\udc5d+ log \ud835\udc5e+ 2 log 3 ,\nthen, the value of\n\ud835\udc5d4+\ud835\udc5e4\n\ud835\udc5d2\ud835\udc5e2 is",
+      "options": {
+        "A": "79",
+        "B": "81",
+        "C": "9",
+        "D": "83"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 4,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_GA_Q06",
+      "question_number": 6,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "In the given text, the blanks are numbered (i)\u2212(iv). Select the best match for all the\nblanks.\nSteve was advised to keep his head (i) before heading (ii) to bat;\nfor, while he had a head (iii) batting, he could only do so with a cool head\ns (iv) his shoulders.",
+      "options": {
+        "A": "(i) down\n(ii) down\n(iii) on\n(iv) for",
+        "B": "(i) on\n(ii) down\n(iii) for\n(iv) on",
+        "C": "(i) down\n(ii) out\n(iii) for\n(iv) on",
+        "D": "(i) on\n(ii) out\n(iii) on\n(iv) for"
+      },
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 5,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_GA_Q07",
+      "question_number": 7,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "A rectangular paper sheet of dimensions 54 cm \u00d7 4 cm is taken. The two longer\nedges of the sheet are joined together to create a cylindrical tube. A cube whose\nsurface area is equal to the area of the sheet is also taken.\nThen, the ratio of the volume of the cylindrical tube to the volume of the cube is",
+      "options": {
+        "A": "1/\u03c0",
+        "B": "2/\u03c0",
+        "C": "3/\u03c0",
+        "D": "4/\u03c0"
+      },
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 6,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_GA_Q09",
+      "question_number": 9,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "A rectangular paper of 20 cm \u00d7 8 cm is folded 3 times. Each fold is made along the\nline of symmetry, which is perpendicular to its long edge. The perimeter of the final\nfolded sheet (in cm) is",
+      "options": {
+        "A": "18",
+        "B": "24",
+        "C": "20",
+        "D": "21"
+      },
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 7,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_GA_Q10",
+      "question_number": 10,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The least number of squares to be added in the figure to make AB a line of\nsymmetry is",
+      "options": {
+        "A": "6",
+        "B": "4",
+        "C": "5",
+        "D": "7"
+      },
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 8,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q11",
+      "question_number": 11,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Let \ud835\udc53: \u211d \u2192 \u211d be a function such that \ud835\udc53(\ud835\udc65) = max{\ud835\udc65, \ud835\udc653}, \ud835\udc65\u2208\u211d , where \u211d is the\nset\nof\nall\nreal\nnumbers.\nThe\nset\nof\nall\npoints\nwhere\n\ud835\udc53(\ud835\udc65)\nis\nNOT differentiable is",
+      "options": {
+        "A": "{\u22121, 1, 2}",
+        "B": "{\u22122, \u22121, 1}",
+        "C": "{0, 1}",
+        "D": "{\u22121, 0, 1}"
+      },
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 8,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q12",
+      "question_number": 12,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "The product of all eigenvalues of the matrix [\n1\n2\n3\n4\n5\n6\n7\n8\n9\n] is",
+      "options": {
+        "A": "\u22121",
+        "B": "0",
+        "C": "1",
+        "D": "2"
+      },
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 9,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q13",
+      "question_number": 13,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider a system that uses 5 bits for representing signed integers in 2\u2019s complement\nformat. In this system, two integers \ud835\udc34 and \ud835\udc35 are represented as \ud835\udc34=01010 and\n\ud835\udc35=11010. Which one of the following operations will result in either an arithmetic\noverflow or an arithmetic underflow?",
+      "options": {
+        "A": "\ud835\udc34+ \ud835\udc35",
+        "B": "\ud835\udc34\u2212\ud835\udc35",
+        "C": "\ud835\udc35\u2212\ud835\udc34",
+        "D": "2 \u2217\ud835\udc35"
+      },
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 9,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q14",
+      "question_number": 14,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider a permutation sampled uniformly at random from the set of all\npermutations of {1, 2, 3, \u22ef, \ud835\udc5b} for some \ud835\udc5b \u22654. Let \ud835\udc4b be the event that 1 occurs\nbefore 2 in the permutation, and \ud835\udc4c the event that 3 occurs before 4. Which one of\nthe following statements is TRUE?",
+      "options": {
+        "A": "The events \ud835\udc4b and \ud835\udc4c are mutually exclusive",
+        "B": "The events \ud835\udc4b and \ud835\udc4c are independent",
+        "C": "Either event \ud835\udc4b or \ud835\udc4c must occur",
+        "D": "Event \ud835\udc4b is more likely than event \ud835\udc4c"
+      },
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 10,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q15",
+      "question_number": 15,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which one of the following statements is FALSE?",
+      "options": {
+        "A": "In the cycle stealing mode of DMA, one word of data is transferred between an I/O\ndevice and main memory in a stolen cycle",
+        "B": "For bulk data transfer, the burst mode of DMA has a higher throughput than the\ncycle stealing mode",
+        "C": "Programmed I/O mechanism has a better CPU utilization than the interrupt driven\nI/O mechanism",
+        "D": "The CPU can start executing an interrupt service routine faster with vectored\ninterrupts than with non-vectored interrupts"
+      },
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 11,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q16",
+      "question_number": 16,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "A user starts browsing a webpage hosted at a remote server. The browser opens a\nsingle TCP connection to fetch the entire webpage from the server. The webpage\nconsists of a top-level index page with multiple embedded image objects. Assume\nthat all caches (e.g., DNS cache, browser cache) are all initially empty. The\nfollowing packets leave the user\u2019s computer in some order.\n(i)\nHTTP GET request for the index page\n(ii)\nDNS request to resolve the web server\u2019s name to its IP address\n(iii)\nHTTP GET request for an image object\n(iv)\nTCP SYN to open a connection to the web server\nWhich one of the following is the CORRECT chronological order (earliest in time\nto latest) of the packets leaving the computer ?",
+      "options": {
+        "A": "(iv), (ii), (iii), (i)",
+        "B": "(ii), (iv), (iii), (i)",
+        "C": "(ii), (iv), (i), (iii)",
+        "D": "(iv), (ii), (i), (iii)"
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 11,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q17",
+      "question_number": 17,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Given an integer array of size N, we want to check if the array is sorted (in either\nascending or descending order). An algorithm solves this problem by making a\nsingle pass through the array and comparing each element of the array only with its\nadjacent elements. The worst-case time complexity of this algorithm is",
+      "options": {
+        "A": "both \u039f(\ud835\udc41) and \u03a9(\ud835\udc41)",
+        "B": "\u039f(\ud835\udc41) but not \u03a9(\ud835\udc41)",
+        "C": "\u03a9(\ud835\udc41) but not \u039f(\ud835\udc41)",
+        "D": "neither \u039f(\ud835\udc41) nor \u03a9(\ud835\udc41)"
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 12,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q18",
+      "question_number": 18,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider the following C program:\n#include <stdio.h>\nint main(){\nint a = 6;\nint b = 0;\nwhile(a < 10) {\na = a / 12 + 1;\na += b;}\nprintf(\u201d%d\u201d, a);\nreturn 0;}\nWhich one of the following statements is CORRECT?",
+      "options": {
+        "A": "The program prints 9 as output",
+        "B": "The program prints 10 as output",
+        "C": "The program gets stuck in an infinite loop",
+        "D": "The program prints 6 as output"
+      },
+      "has_images": false,
+      "page_start": 12,
+      "page_end": 13,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q19",
+      "question_number": 19,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider the following C program:\n#include <stdio.h>\nvoid fX();\nint main(){\nfX();\nreturn 0;}\nvoid fX(){\nchar a;\nif((a=getchar()) \u2260 \u2019\\n\u2019)\nfX();\nif(a \u2260 \u2019\\n\u2019)\nputchar(a);}\nAssume that the input to the program from the command line is 1234 followed by\na newline character. Which one of the following statements is CORRECT?",
+      "options": {
+        "A": "The program will not terminate",
+        "B": "The program will terminate with no output",
+        "C": "The program will terminate with 4321 as output",
+        "D": "The program will terminate with 1234 as output"
+      },
+      "has_images": false,
+      "page_start": 13,
+      "page_end": 14,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q20",
+      "question_number": 20,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Let S be the specification: \"Instructors teach courses. Students register for courses.\nCourses are allocated classrooms. Instructors guide students.\" Which one of the\nfollowing ER diagrams CORRECTLY represents S?",
+      "options": {
+        "A": "(i)",
+        "B": "(ii)",
+        "C": "(iii)",
+        "D": "(iv)"
+      },
+      "has_images": false,
+      "page_start": 14,
+      "page_end": 15,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q21",
+      "question_number": 21,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "In a B+ tree, the requirement of at least half-full (50%) node occupancy is relaxed\nfor which one of the following cases?",
+      "options": {
+        "A": "Only the root node",
+        "B": "All leaf nodes",
+        "C": "All internal nodes",
+        "D": "Only the leftmost leaf node"
+      },
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q22",
+      "question_number": 22,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Which of the following statements about a relation R in first normal form (1NF)\nis/are TRUE ?",
+      "options": {
+        "A": "R can have a multi-attribute key",
+        "B": "R cannot have a foreign key",
+        "C": "R cannot have a composite attribute",
+        "D": "R cannot have more than one candidate key"
+      },
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 16,
+      "answer": "A;C",
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q23",
+      "question_number": 23,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Let \ud835\udc3f1, \ud835\udc3f2 be two regular languages and \ud835\udc3f3 a language which is not regular.\nWhich of the following statements is/are always TRUE?",
+      "options": {
+        "A": "\ud835\udc3f1 = \ud835\udc3f2 if and only if \ud835\udc3f1 \u2229 \ud835\udc3f2\u0305\u0305\u0305 = \ud835\udf19",
+        "B": "\ud835\udc3f1 \u222a\ud835\udc3f3 is not regular",
+        "C": "\ud835\udc3f3\u0305\u0305\u0305 is not regular",
+        "D": "\ud835\udc3f1\u0305\u0305\u0305 \u222a\ud835\udc3f2\u0305\u0305\u0305 is regular"
+      },
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 16,
+      "answer": "C;D",
+      "correct_options": [
+        "C",
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q24",
+      "question_number": 24,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Which of the following statements about threads is/are TRUE?",
+      "options": {
+        "A": "Threads can only be implemented in kernel space",
+        "B": "Each thread has its own file descriptor table for open files",
+        "C": "All the threads belonging to a process share a common stack",
+        "D": "Threads belonging to a process are by default not protected from each other"
+      },
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 17,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q25",
+      "question_number": 25,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Which of the following process state transitions is/are NOT possible?",
+      "options": {
+        "A": "Running to Ready",
+        "B": "Waiting to Running",
+        "C": "Ready to Waiting",
+        "D": "Running to Terminated"
+      },
+      "has_images": false,
+      "page_start": 17,
+      "page_end": 17,
+      "answer": "B;C",
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q26",
+      "question_number": 26,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Which of the following is/are Bottom-Up Parser(s)?",
+      "options": {
+        "A": "Shift-reduce Parser",
+        "B": "Predictive Parser",
+        "C": "LL(1) Parser",
+        "D": "LR Parser"
+      },
+      "has_images": false,
+      "page_start": 17,
+      "page_end": 18,
+      "answer": "A;D",
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q27",
+      "question_number": 27,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Let \ud835\udc34 and \ud835\udc35 be two events in a probability space with \ud835\udc43(\ud835\udc34) = 0.3, \ud835\udc43(\ud835\udc35) = 0.5,\nand \ud835\udc43(\ud835\udc34\u2229\ud835\udc35) = 0.1. Which of the following statements is/are TRUE?",
+      "options": {
+        "A": "The two events \ud835\udc34 and \ud835\udc35 are independent",
+        "B": "\ud835\udc43(\ud835\udc34\u222a\ud835\udc35) = 0.7",
+        "C": "\ud835\udc43(\ud835\udc34\u2229\ud835\udc35\ud835\udc50) = 0.2, where \ud835\udc35\ud835\udc50 is the complement of the event \ud835\udc35",
+        "D": "\ud835\udc43(\ud835\udc34\ud835\udc50\u2229\ud835\udc35\ud835\udc50) = 0.4, where \ud835\udc34\ud835\udc50 and \ud835\udc35\ud835\udc50 are the complements of the events \ud835\udc34 and \ud835\udc35,\nrespectively"
+      },
+      "has_images": false,
+      "page_start": 18,
+      "page_end": 18,
+      "answer": "B;C",
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q28",
+      "question_number": 28,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the circuit shown below where the gates may have propagation delays.\nAssume that all signal transitions occur instantaneously and that wires have no\ndelays. Which of the following statements about the circuit is/are CORRECT?",
+      "options": {
+        "A": "With no propagation delays, the output \ud835\udc80 is always logic Zero",
+        "B": "With no propagation delays, the output \ud835\udc80 is always logic One",
+        "C": "With propagation delays, the output \ud835\udc80 can have a transient logic One after \ud835\udc7f\ntransitions from logic Zero to logic One",
+        "D": "With propagation delays, the output \ud835\udc80 can have a transient logic Zero after \ud835\udc7f\ntransitions from logic One to logic Zero"
+      },
+      "has_images": false,
+      "page_start": 18,
+      "page_end": 19,
+      "answer": "A;C",
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q29",
+      "question_number": 29,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "TCP client P successfully establishes a connection to TCP server Q. Let \ud835\udc41\ud835\udc43 denote\nthe sequence number in the SYN sent from P to Q. Let \ud835\udc41\ud835\udc44 denote the\nacknowledgement number in the SYN ACK from Q to P. Which of the following\nstatements is/are CORRECT?",
+      "options": {
+        "A": "The sequence number \ud835\udc41\ud835\udc43 is chosen randomly by P",
+        "B": "The sequence number \ud835\udc41\ud835\udc43 is always 0 for a new connection",
+        "C": "The acknowledgement number \ud835\udc41\ud835\udc44 is equal to \ud835\udc41\ud835\udc43",
+        "D": "The acknowledgement number \ud835\udc41\ud835\udc44 is equal to \ud835\udc41\ud835\udc43+ 1"
+      },
+      "has_images": false,
+      "page_start": 19,
+      "page_end": 19,
+      "answer": "A;D",
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q30",
+      "question_number": 30,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider a 5-stage pipelined processor with Instruction Fetch (IF), Instruction\nDecode (ID), Execute (EX), Memory Access (MEM), and Register Writeback (WB)\nstages. Which of the following statements about forwarding is/are CORRECT?",
+      "options": {
+        "A": "In a pipelined execution, forwarding means the result from a source stage of an\nearlier instruction is passed on to the destination stage of a later instruction",
+        "B": "In forwarding, data from the output of the MEM stage can be passed on to the\ninput of the EX stage of the next instruction",
+        "C": "Forwarding cannot prevent all pipeline stalls",
+        "D": "Forwarding does not require any extra hardware to retrieve the data from the\npipeline stages"
+      },
+      "has_images": false,
+      "page_start": 19,
+      "page_end": 20,
+      "answer": "A;C",
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q31",
+      "question_number": 31,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Which of the following fields is/are modified in the IP header of a packet going out\nof a network address translation (NAT) device from an internal network to an\nexternal network?",
+      "options": {
+        "A": "Source IP",
+        "B": "Destination IP",
+        "C": "Header Checksum",
+        "D": "Total Length"
+      },
+      "has_images": false,
+      "page_start": 20,
+      "page_end": 20,
+      "answer": "A;C",
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q32",
+      "question_number": 32,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Let \ud835\udc34 and \ud835\udc35 be non-empty finite sets such that there exist one-to-one and onto\nfunctions (i) from \ud835\udc34 to \ud835\udc35 and (ii) from \ud835\udc34\u00d7 \ud835\udc34 to \ud835\udc34\u222a\ud835\udc35. The number of possible\nvalues of |\ud835\udc34| is __________",
+      "options": null,
+      "has_images": false,
+      "page_start": 20,
+      "page_end": 20,
+      "answer": "2 to 2",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q33",
+      "question_number": 33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the operator precedence and associativity rules for the integer arithmetic\noperators given in the table below.\nOperator\nPrecedence\nAssociativity\n+\nHighest\nLeft\n\u2212\nHigh\nRight\n\u2217\nMedium\nRight\n/\nLow\nRight\nThe value of the expression 3 + 1 + 5 \u22172 / 7 + 2 \u22124 \u22127 \u22126 / 2 as per the\nabove rules is __________",
+      "options": null,
+      "has_images": false,
+      "page_start": 20,
+      "page_end": 21,
+      "answer": "6 to 6",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q34",
+      "question_number": 34,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "The number of spanning trees in a complete graph of 4 vertices labelled A, B, C,\nand D is _________",
+      "options": null,
+      "has_images": false,
+      "page_start": 21,
+      "page_end": 21,
+      "answer": "16 to 16",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q35",
+      "question_number": 35,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the following two relations, R(A,B) and S(A,C):\n\ud835\udc79\n\n\ud835\udc7a\n\ud835\udc68\n\ud835\udc69\n\n\ud835\udc68\n\ud835\udc6a\n10\n20\n\n10\n90\n20\n30\n\n30\n45\n30\n40\n\n40\n80\n30\n50\n\n50\n95\nThe total number of tuples obtained by evaluating the following expression\n\ud835\udf48\ud835\udc69<\ud835\udc6a(\ud835\udc79\u22c8\ud835\udc79.\ud835\udc68=\ud835\udc7a.\ud835\udc68\ud835\udc7a)\nis _________",
+      "options": null,
+      "has_images": false,
+      "page_start": 21,
+      "page_end": 22,
+      "answer": "2 to 2",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q36",
+      "question_number": 36,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider a network path P\u2014Q\u2014R between nodes P and R via router Q. Node P\nsends a file of size 106 bytes to R via this path by splitting the file into chunks of\n103 bytes each. Node P sends these chunks one after the other without any wait time\nbetween the successive chunk transmissions. Assume that the size of extra headers\nadded to these chunks is negligible, and that the chunk size is less than the MTU.\n\nEach of the links P\u2014Q and Q\u2014R has a bandwidth of 106 bits/sec, and negligible\npropagation latency. Router Q immediately transmits every packet it receives from\nP to R, with negligible processing and queueing delays. Router Q can\nsimultaneously receive on link P\u2014Q and transmit on link Q\u2014R.\n\nAssume P starts transmitting the chunks at time \ud835\udc61= 0.\nWhich one of the following options gives the time (in seconds, rounded off to 3\ndecimal places) at which R receives all the chunks of the file?",
+      "options": {
+        "A": "8.000",
+        "B": "8.008",
+        "C": "15.992",
+        "D": "16.000"
+      },
+      "has_images": false,
+      "page_start": 22,
+      "page_end": 23,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q37",
+      "question_number": 37,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following syntax-directed definition (SDD).\n\ud835\udc46\u2192\ud835\udc37\ud835\udc3b\ud835\udc47\ud835\udc48\n{ \ud835\udc46. \ud835\udc63\ud835\udc4e\ud835\udc59 = \ud835\udc37. \ud835\udc63\ud835\udc4e\ud835\udc59 + \ud835\udc3b. \ud835\udc63\ud835\udc4e\ud835\udc59 + \ud835\udc47. \ud835\udc63\ud835\udc4e\ud835\udc59 + \ud835\udc48. \ud835\udc63\ud835\udc4e\ud835\udc59; }\n\ud835\udc37\u2192\"M\"\ud835\udc371\n{ \ud835\udc37. \ud835\udc63\ud835\udc4e\ud835\udc59 = 5 + \ud835\udc371. \ud835\udc63\ud835\udc4e\ud835\udc59; }\n\ud835\udc37\u2192\ud835\udf16\n{ \ud835\udc37. \ud835\udc63\ud835\udc4e\ud835\udc59 = \u22125; }\n\ud835\udc3b\u2192\"L\"\ud835\udc3b1\n{ \ud835\udc3b. \ud835\udc63\ud835\udc4e\ud835\udc59 = 5 \u221710 + \ud835\udc3b1. \ud835\udc63\ud835\udc4e\ud835\udc59; }\n\ud835\udc3b\u2192\ud835\udf16\n{ \ud835\udc3b. \ud835\udc63\ud835\udc4e\ud835\udc59 = \u221210; }\n\ud835\udc47\u2192\"C\"\ud835\udc471\n{ \ud835\udc47. \ud835\udc63\ud835\udc4e\ud835\udc59 = 5 \u2217100 + \ud835\udc471. \ud835\udc63\ud835\udc4e\ud835\udc59; }\n\ud835\udc47\u2192\ud835\udf16\n{ \ud835\udc47. \ud835\udc63\ud835\udc4e\ud835\udc59 = \u22125; }\n\ud835\udc48\u2192\"K\"\n{ \ud835\udc48. \ud835\udc63\ud835\udc4e\ud835\udc59 = 5; }\nGiven \"MMLK\" as the input, which one of the following options is the CORRECT\nvalue computed by the SDD (in the attribute \ud835\udc46. \ud835\udc63\ud835\udc4e\ud835\udc59)?",
+      "options": {
+        "A": "45",
+        "B": "50",
+        "C": "55",
+        "D": "65"
+      },
+      "has_images": false,
+      "page_start": 23,
+      "page_end": 24,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q38",
+      "question_number": 38,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following grammar \ud835\udc3a, with \ud835\udc46 as the start symbol. The grammar \ud835\udc3a has\nthree incomplete productions denoted by (1), (2), and (3).\n\ud835\udc46\u2192\ud835\udc51\ud835\udc4e\ud835\udc47 | (1)\n\ud835\udc47\u2192\ud835\udc4e\ud835\udc46 | \ud835\udc4f\ud835\udc47 | (2)\n\ud835\udc45\u2192 (3) | \ud835\udf16\nThe set of terminals is {\ud835\udc4e, \ud835\udc4f, \ud835\udc50, \ud835\udc51, \ud835\udc53}. The FIRST and FOLLOW sets of the different\nnon-terminals are as follows.\nFIRST(\ud835\udc46) = {\ud835\udc50, \ud835\udc51, \ud835\udc53}, FIRST(\ud835\udc47) = {\ud835\udc4e, \ud835\udc4f, \ud835\udf16}, FIRST(\ud835\udc45) = {\ud835\udc50, \ud835\udf16}\nFOLLOW(\ud835\udc46) = FOLLOW(\ud835\udc47) = {\ud835\udc50, \ud835\udc53, $}, FOLLOW(\ud835\udc45) = {\ud835\udc53}\nWhich one of the following options CORRECTLY fills in the incomplete\nproductions?",
+      "options": {
+        "A": "(1) \ud835\udc46\u2192\ud835\udc45\ud835\udc53 (2) \ud835\udc47\u2192\ud835\udf16 (3) \ud835\udc45\u2192\ud835\udc50\ud835\udc47\ud835\udc45",
+        "B": "(1) \ud835\udc46\u2192\ud835\udc53\ud835\udc45 (2) \ud835\udc47\u2192\ud835\udf16 (3) \ud835\udc45\u2192\ud835\udc50\ud835\udc47\ud835\udc45",
+        "C": "(1) \ud835\udc46\u2192\ud835\udc53\ud835\udc45 (2) \ud835\udc47\u2192\ud835\udc50\ud835\udc47 (3) \ud835\udc45\u2192\ud835\udc50\ud835\udc45",
+        "D": "(1) \ud835\udc46\u2192\ud835\udc45\ud835\udc53 (2) \ud835\udc47\u2192\ud835\udc50\ud835\udc47 (3) \ud835\udc45\u2192\ud835\udc50\ud835\udc45"
+      },
+      "has_images": false,
+      "page_start": 24,
+      "page_end": 25,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q39",
+      "question_number": 39,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following pseudo-code.\n\ud835\udc3f1: \ud835\udc611 = \u22121\n\ud835\udc3f2: \ud835\udc612 = 0\n\ud835\udc3f3: \ud835\udc613 = 0\n\ud835\udc3f4: \ud835\udc614 = 4 \u2217\ud835\udc613\n\ud835\udc3f5: \ud835\udc615 = 4 \u2217\ud835\udc612\n\ud835\udc3f6: \ud835\udc616 = \ud835\udc615 \u2217\ud835\udc40\n\ud835\udc3f7: \ud835\udc617 = \ud835\udc614 + \ud835\udc616\n\ud835\udc3f8: \ud835\udc618 = \ud835\udc4e[\ud835\udc617]\n\ud835\udc3f9: if \ud835\udc618 \u2264 \ud835\udc5a\ud835\udc4e\ud835\udc65 goto \ud835\udc3f11\n\ud835\udc3f10: \ud835\udc611 = \ud835\udc618\n\ud835\udc3f11: \ud835\udc613 = \ud835\udc613 + 1\n\ud835\udc3f12: if \ud835\udc613 < \ud835\udc40 goto \ud835\udc3f4\n\ud835\udc3f13: \ud835\udc612 = \ud835\udc612 + 1\n\ud835\udc3f14: if \ud835\udc612 < \ud835\udc41 goto \ud835\udc3f3\n\ud835\udc3f15: \ud835\udc5a\ud835\udc4e\ud835\udc65 = \ud835\udc611\nWhich one of the following options CORRECTLY specifies the number of basic\nblocks and the number of instructions in the largest basic block, respectively ?",
+      "options": {
+        "A": "6 and 6",
+        "B": "6 and 7",
+        "C": "7 and 7",
+        "D": "7 and 6"
+      },
+      "has_images": false,
+      "page_start": 25,
+      "page_end": 26,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q40",
+      "question_number": 40,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following two threads T1 and T2 that update two shared variables\na and b. Assume that initially a = b = 1. Though context switching between\nthreads can happen at any time, each statement of T1 or T2 is executed atomically\nwithout interruption.\nT1 T2\na = a + 1; b = 2 * b;\nb = b + 1; a = 2 * a;\nWhich one of the following options lists all the possible combinations of values of\na and b after both T1 and T2 finish execution?",
+      "options": {
+        "A": "(a = 4, b = 4); (a = 3, b = 3); (a = 4, b = 3)",
+        "B": "(a = 3, b = 4); (a = 4, b = 3); (a = 3, b = 3)",
+        "C": "(a = 4, b = 4); (a = 4, b = 3); (a = 3, b = 4)",
+        "D": "(a = 2, b = 2); (a = 2, b = 3); (a = 3, b = 4)"
+      },
+      "has_images": false,
+      "page_start": 26,
+      "page_end": 26,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q41",
+      "question_number": 41,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "An array [82, 101, 90, 11, 111, 75, 33, 131, 44, 93] is heapified. Which one of the\nfollowing options represents the first three elements in the heapified array?",
+      "options": {
+        "A": "82, 90, 101",
+        "B": "82, 11, 93",
+        "C": "131, 11, 93",
+        "D": "131, 111, 90"
+      },
+      "has_images": false,
+      "page_start": 26,
+      "page_end": 27,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q42",
+      "question_number": 42,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following recurrence relation:\n\ud835\udc47(\ud835\udc5b) = {\u221a\ud835\udc5b\ud835\udc47(\u221a\ud835\udc5b) + \ud835\udc5b for \ud835\udc5b\u22651,\n1 for \ud835\udc5b= 1.\nWhich one of the following options is CORRECT?",
+      "options": {
+        "A": "\ud835\udc47(\ud835\udc5b) = \u0398(\ud835\udc5b log log \ud835\udc5b)",
+        "B": "\ud835\udc47(\ud835\udc5b) = \u0398(\ud835\udc5b log \ud835\udc5b)",
+        "C": "\ud835\udc47(\ud835\udc5b) = \u0398(\ud835\udc5b2 log \ud835\udc5b)",
+        "D": "\ud835\udc47(\ud835\udc5b) = \u0398(\ud835\udc5b2 log log \ud835\udc5b)"
+      },
+      "has_images": false,
+      "page_start": 27,
+      "page_end": 27,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q43",
+      "question_number": 43,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider a binary min-heap containing 105 distinct elements. Let \ud835\udc58 be the index (in\nthe underlying array) of the maximum element stored in the heap. The number of\npossible values of \ud835\udc58 is",
+      "options": {
+        "A": "53",
+        "B": "52",
+        "C": "27",
+        "D": "1"
+      },
+      "has_images": false,
+      "page_start": 27,
+      "page_end": 28,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q44",
+      "question_number": 44,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "The symbol \u2192 indicates functional dependency in the context of a relational\ndatabase. Which of the following options is/are TRUE?",
+      "options": {
+        "A": "(\ud835\udc4b, \ud835\udc4c) \u2192(\ud835\udc4d, \ud835\udc4a) implies \ud835\udc4b\u2192(\ud835\udc4d, \ud835\udc4a)",
+        "B": "(\ud835\udc4b, \ud835\udc4c) \u2192(\ud835\udc4d, \ud835\udc4a) implies (\ud835\udc4b, \ud835\udc4c) \u2192\ud835\udc4d",
+        "C": "((\ud835\udc4b, \ud835\udc4c) \u2192\ud835\udc4d and \ud835\udc4a\u2192\ud835\udc4c) implies (\ud835\udc4b, \ud835\udc4a) \u2192\ud835\udc4d",
+        "D": "(\ud835\udc4b\u2192\ud835\udc4c and \ud835\udc4c\u2192\ud835\udc4d) implies \ud835\udc4b\u2192\ud835\udc4d"
+      },
+      "has_images": false,
+      "page_start": 28,
+      "page_end": 28,
+      "answer": "B;C;D",
+      "correct_options": [
+        "B",
+        "C",
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q45",
+      "question_number": 45,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Let \ud835\udc3a be a directed graph and \ud835\udc47 a depth first search (DFS) spanning tree in \ud835\udc3a that\nis rooted at a vertex \ud835\udc63. Suppose \ud835\udc47 is also a breadth first search (BFS) tree in \ud835\udc3a,\nrooted at \ud835\udc63. Which of the following statements is/are TRUE for every such graph \ud835\udc3a\nand tree \ud835\udc47 ?",
+      "options": {
+        "A": "There are no back-edges in \ud835\udc3a with respect to the tree \ud835\udc47",
+        "B": "There are no cross-edges in \ud835\udc3a with respect to the tree \ud835\udc47",
+        "C": "There are no forward-edges in \ud835\udc3a with respect to the tree \ud835\udc47",
+        "D": "The only edges in \ud835\udc3a are the edges in \ud835\udc47"
+      },
+      "has_images": false,
+      "page_start": 28,
+      "page_end": 29,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q46",
+      "question_number": 46,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the following read-write schedule \ud835\udc46 over three transactions\n\ud835\udc471, \ud835\udc472, and \ud835\udc473, where the subscripts in the schedule indicate transaction IDs:\n\ud835\udc46: \ud835\udc5f1(\ud835\udc67); \ud835\udc641(\ud835\udc67); \ud835\udc5f2(\ud835\udc65); \ud835\udc5f3(\ud835\udc66); \ud835\udc643(\ud835\udc66); \ud835\udc5f2(\ud835\udc66); \ud835\udc642(\ud835\udc65); \ud835\udc642(\ud835\udc66);\nWhich of the following transaction schedules is/are conflict equivalent to \ud835\udc46 ?",
+      "options": {
+        "A": "\ud835\udc471\ud835\udc472\ud835\udc473",
+        "B": "\ud835\udc471\ud835\udc473\ud835\udc472",
+        "C": "\ud835\udc473\ud835\udc472\ud835\udc471",
+        "D": "\ud835\udc473\ud835\udc471\ud835\udc472"
+      },
+      "has_images": false,
+      "page_start": 29,
+      "page_end": 29,
+      "answer": "B;C;D",
+      "correct_options": [
+        "B",
+        "C",
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q47",
+      "question_number": 47,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider a Boolean expression given by \ud835\udc39(\ud835\udc4b, \ud835\udc4c, \ud835\udc4d) = \u2211(3,5,6,7).\nWhich of the following statements is/are CORRECT?",
+      "options": {
+        "A": "\ud835\udc39(\ud835\udc4b, \ud835\udc4c, \ud835\udc4d) = \u03a0(0,1,2,4)",
+        "B": "\ud835\udc39(\ud835\udc4b, \ud835\udc4c, \ud835\udc4d) = \ud835\udc4b\ud835\udc4c+ \ud835\udc4c\ud835\udc4d+ \ud835\udc4b\ud835\udc4d",
+        "C": "\ud835\udc39(\ud835\udc4b, \ud835\udc4c, \ud835\udc4d) is independent of input \ud835\udc4c",
+        "D": "\ud835\udc39(\ud835\udc4b, \ud835\udc4c, \ud835\udc4d) is independent of input \ud835\udc4b"
+      },
+      "has_images": false,
+      "page_start": 29,
+      "page_end": 30,
+      "answer": "A;B",
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q48",
+      "question_number": 48,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the following C function definition.\nint f(int x, int y) {\nfor (int i=0; i<y; i++) {\nx=x+x+y;\n}\nreturn x;\n}\nWhich of the following statements is/are TRUE about the above function?",
+      "options": {
+        "A": "If the inputs are x=20, y=10, then the return value is greater than 220",
+        "B": "If the inputs are x=20, y=20, then the return value is greater than 220",
+        "C": "If the inputs are x=20, y=10, then the return value is less than 210",
+        "D": "If the inputs are x=10, y=20, then the return value is greater than 220"
+      },
+      "has_images": false,
+      "page_start": 30,
+      "page_end": 30,
+      "answer": "B;D",
+      "correct_options": [
+        "B",
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q49",
+      "question_number": 49,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Let \ud835\udc34 be any \ud835\udc5b\u00d7 \ud835\udc5a matrix, where \ud835\udc5a > \ud835\udc5b. Which of the following statements is/are\nTRUE about the system of linear equations \ud835\udc34\ud835\udc65= 0 ?",
+      "options": {
+        "A": "There exist at least \ud835\udc5a\u2212\ud835\udc5b linearly independent solutions to this system",
+        "B": "There exist \ud835\udc5a\u2212\ud835\udc5b linearly independent vectors such that every solution is a linear\ncombination of these vectors",
+        "C": "There exists a non-zero solution in which at least \ud835\udc5a\u2212\ud835\udc5b variables are 0",
+        "D": "There exists a solution in which at least \ud835\udc5b variables are non-zero"
+      },
+      "has_images": false,
+      "page_start": 30,
+      "page_end": 31,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q50",
+      "question_number": 50,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the 5-state DFA \ud835\udc40 accepting the language \ud835\udc3f(\ud835\udc40) \u2282(0 + 1)\u2217 shown\nbelow. For any string \ud835\udc64\u2208(0 + 1)\u2217 let \ud835\udc5b0(\ud835\udc64) be the number of 0\u2032\ud835\udc60 in \ud835\udc64 and\n\ud835\udc5b1(\ud835\udc64) be the number of 1\u2032\ud835\udc60 in \ud835\udc64.\nWhich of the following statements is/are FALSE?",
+      "options": {
+        "A": "States 2 and 4 are distinguishable in \ud835\udc40",
+        "B": "States 3 and 4 are distinguishable in \ud835\udc40",
+        "C": "States 2 and 5 are distinguishable in \ud835\udc40",
+        "D": "Any string \ud835\udc64 with \ud835\udc5b0(\ud835\udc64) = \ud835\udc5b1(\ud835\udc64) is in \ud835\udc3f(\ud835\udc40)"
+      },
+      "has_images": false,
+      "page_start": 31,
+      "page_end": 32,
+      "answer": "B;C",
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q51",
+      "question_number": 51,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "The chromatic number of a graph is the minimum number of colours used in a\nproper colouring of the graph. Let \ud835\udc3a be any graph with \ud835\udc5b vertices and chromatic\nnumber \ud835\udc58. Which of the following statements is/are always TRUE?",
+      "options": {
+        "A": "\ud835\udc3a contains a complete subgraph with \ud835\udc58 vertices",
+        "B": "\ud835\udc3a contains an independent set of size at least \ud835\udc5b/\ud835\udc58",
+        "C": "\ud835\udc3a contains at least \ud835\udc58(\ud835\udc58\u22121)/2 edges",
+        "D": "\ud835\udc3a contains a vertex of degree at least \ud835\udc58"
+      },
+      "has_images": false,
+      "page_start": 32,
+      "page_end": 32,
+      "answer": "B;C",
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q52",
+      "question_number": 52,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the operators \u25ca and \u25a1 defined by \ud835\udc4e\u25ca\ud835\udc4f= \ud835\udc4e+ 2\ud835\udc4f, \ud835\udc4e\u25a1\ud835\udc4f= \ud835\udc4e\ud835\udc4f, for positive\nintegers. Which of the following statements is/are TRUE?",
+      "options": {
+        "A": "Operator \u25ca obeys the associative law",
+        "B": "Operator \u25a1 obeys the associative law",
+        "C": "Operator \u25ca over the operator \u25a1 obeys the distributive law",
+        "D": "Operator \u25a1 over the operator \u25ca obeys the distributive law"
+      },
+      "has_images": false,
+      "page_start": 32,
+      "page_end": 33,
+      "answer": "B;D",
+      "correct_options": [
+        "B",
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q53",
+      "question_number": 53,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "MSQ",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider two set-associative cache memory architectures: WBC, which uses the\nwrite back policy, and WTC, which uses the write through policy. Both of them use\nthe LRU (Least Recently Used) block replacement policy. The cache memory is\nconnected to the main memory. Which of the following statements is/are TRUE?",
+      "options": {
+        "A": "A read miss in WBC never evicts a dirty block",
+        "B": "A read miss in WTC never triggers a write back operation of a cache block to\nmain memory",
+        "C": "A write hit in WBC can modify the value of the dirty bit of a cache block",
+        "D": "A write miss in WTC always writes the victim cache block to main memory\nbefore loading the missed block to the cache"
+      },
+      "has_images": false,
+      "page_start": 33,
+      "page_end": 33,
+      "answer": "B;C",
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q54",
+      "question_number": 54,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider a 512 GB hard disk with 32 storage surfaces. There are 4096 sectors per\ntrack and each sector holds 1024 bytes of data. The number of cylinders in the hard\ndisk is _________",
+      "options": null,
+      "has_images": false,
+      "page_start": 33,
+      "page_end": 33,
+      "answer": "4096 to 4096",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q55",
+      "question_number": 55,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "The baseline execution time of a program on a 2 GHz single core machine is\n100 nanoseconds (ns). The code corresponding to 90% of the execution time can be\nfully parallelized. The overhead for using an additional core is 10 ns when running\non a multicore system. Assume that all cores in the multicore system run their share\nof the parallelized code for an equal amount of time.\nThe number of cores that minimize the execution time of the program is ________",
+      "options": null,
+      "has_images": false,
+      "page_start": 33,
+      "page_end": 33,
+      "answer": "3 to 3",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q56",
+      "question_number": 56,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "A given program has 25% load/store instructions. Suppose the ideal CPI (cycles per\ninstruction) without any memory stalls is 2. The program exhibits 2% miss rate on\ninstruction cache and 8% miss rate on data cache. The miss penalty is 100 cycles.\nThe speedup (rounded off to two decimal places) achieved with a perfect cache (i.e.,\nwith NO data or instruction cache misses) is _________",
+      "options": null,
+      "has_images": false,
+      "page_start": 33,
+      "page_end": 34,
+      "answer": "3.00 to 3.00",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q57",
+      "question_number": 57,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the following code snippet using the fork() and wait() system calls.\nAssume that the code compiles and runs correctly, and that the system calls run\nsuccessfully without any errors.\nint x = 3;\nwhile(x > 0) {\nfork();\nprintf(\"hello\");\nwait(NULL);\nx--;\n}\nThe total number of times the printf statement is executed is _______",
+      "options": null,
+      "has_images": false,
+      "page_start": 34,
+      "page_end": 34,
+      "answer": "14 to 14",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q58",
+      "question_number": 58,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the entries shown below in the forwarding table of an IP router. Each entry\nconsists of an IP prefix and the corresponding next hop router for packets whose\ndestination IP address matches the prefix. The notation \u201c/N\u201d in a prefix indicates a\nsubnet mask with the most significant N bits set to 1.\nPrefix\nNext hop router\n10.1.1.0/24\nR1\n10.1.1.128/25\nR2\n10.1.1.64/26\nR3\n10.1.1.192/26\nR4\nThis router forwards 20 packets each to 5 hosts. The IP addresses of the hosts are\n10.1.1.16, 10.1.1.72, 10.1.1.132, 10.1.1.191, and 10.1.1.205 . The number of\npackets forwarded via the next hop router R2 is _______",
+      "options": null,
+      "has_images": false,
+      "page_start": 34,
+      "page_end": 34,
+      "answer": "40 to 40",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q59",
+      "question_number": 59,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Let \ud835\udc3a = (\ud835\udc49, \u03a3, \ud835\udc46, \ud835\udc43) be a context-free grammar in Chomsky Normal Form with\n\u03a3 = {\ud835\udc4e, \ud835\udc4f, \ud835\udc50} and \ud835\udc49 containing 10 variable symbols including the start\nsymbol \ud835\udc46. The string \ud835\udc64 = \ud835\udc4e30\ud835\udc4f30\ud835\udc5030 is derivable from \ud835\udc46. The number of steps\n(application of rules) in the derivation \ud835\udc46\u2192\u2217\ud835\udc64 is _________",
+      "options": null,
+      "has_images": false,
+      "page_start": 34,
+      "page_end": 35,
+      "answer": "179 to 179",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q60",
+      "question_number": 60,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "The number of edges present in the forest generated by the DFS traversal of an\nundirected graph \ud835\udc3a with 100 vertices is 40. The number of connected components\nin \ud835\udc3a is _________",
+      "options": null,
+      "has_images": false,
+      "page_start": 35,
+      "page_end": 35,
+      "answer": "60 to 60",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q61",
+      "question_number": 61,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the following two regular expressions over the alphabet {0,1}:\n\ud835\udc5f= 0\u2217+ 1\u2217\n\ud835\udc60= 01\u2217+ 10\u2217\nThe total number of strings of length less than or equal to 5, which are\nneither in \ud835\udc5f nor in \ud835\udc60, is _________",
+      "options": null,
+      "has_images": false,
+      "page_start": 35,
+      "page_end": 35,
+      "answer": "44 to 44",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q62",
+      "question_number": 62,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider a memory management system that uses a page size of 2 KB. Assume that\nboth the physical and virtual addresses start from 0. Assume that the pages 0, 1, 2,\nand 3 are stored in the page frames 1, 3, 2, and 0, respectively. The physical address\n(in decimal format) corresponding to the virtual address 2500 (in decimal format)\nis _________",
+      "options": null,
+      "has_images": false,
+      "page_start": 35,
+      "page_end": 35,
+      "answer": "6596 to 6596",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q63",
+      "question_number": 63,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "A bag contains 10 red balls and 15 blue balls. Two balls are drawn randomly without\nreplacement. Given that the first ball drawn is red, the probability (rounded off to 3\ndecimal places) that both balls drawn are red is _________",
+      "options": null,
+      "has_images": false,
+      "page_start": 35,
+      "page_end": 36,
+      "answer": "0.370 to 0.380",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2024_CS1_CS_Q65",
+      "question_number": 65,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider sending an IP datagram of size 1420 bytes (including 20 bytes of IP\nheader) from a sender to a receiver over a path of two links with a router between\nthem. The first link (sender to router) has an MTU (Maximum Transmission Unit)\nsize of 542 bytes, while the second link (router to receiver) has an MTU size of 360\nbytes. The number of fragments that would be delivered at the receiver is ________",
+      "options": null,
+      "has_images": false,
+      "page_start": 36,
+      "page_end": 36,
+      "answer": "6 to 6",
+      "correct_options": null,
+      "explaination": ""
+    }
+  ]
+}

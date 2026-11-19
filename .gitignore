@@ -21,6 +21,7 @@ htmlcov/
 # Processed JSON databases are stored in output/.
 CS/
 *.pdf
+answer_keys/
 
 # Environment files and credentials
 .env

@@ -1,0 +1,2631 @@
+{
+  "paper_id": "2016_CS",
+  "year": 2016,
+  "subject": "Computer Science and Information Technology",
+  "subject_code": "CS",
+  "session": "CS",
+  "total_questions_in_paper": 130,
+  "extracted_questions_count": 124,
+  "omitted_questions_count": 6,
+  "questions": [
+    {
+      "id": "2016_CS_GA_Q01",
+      "question_number": 1,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Out of the following four sentences, select the most suitable sentence with respect to grammar and\nusage.",
+      "options": {
+        "A": "I will not leave the place until the minister does not meet me.",
+        "B": "I will not leave the place until the minister doesn\u2019t meet me.",
+        "C": "I will not leave the place until the minister meet me.",
+        "D": "I will not leave the place until the minister meets me."
+      },
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q02",
+      "question_number": 2,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "A rewording of something written or spoken is a ______________.",
+      "options": {
+        "A": "paraphrase",
+        "B": "paradox",
+        "C": "paradigm",
+        "D": "paraffin"
+      },
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q03",
+      "question_number": 3,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Archimedes said, \u201cGive me a lever long enough and a fulcrum on which to place it, and I will move\nthe world.\u201d\n\nThe sentence above is an example of a ___________ statement.",
+      "options": {
+        "A": "figurative",
+        "B": "collateral",
+        "C": "literal",
+        "D": "figurine"
+      },
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q04",
+      "question_number": 4,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "If \u2018relftaga\u2019 means carefree, \u2018otaga\u2019 means careful and \u2018fertaga\u2019 means careless, which of the\nfollowing could mean \u2018aftercare\u2019?",
+      "options": {
+        "A": "zentaga",
+        "B": "tagafer",
+        "C": "tagazen",
+        "D": "relffer"
+      },
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q05",
+      "question_number": 5,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "A cube is built using 64 cubic blocks of side one unit. After it is built, one cubic block is removed\nfrom every corner of the cube. The resulting surface area of the body (in square units) after the\nremoval is __________.",
+      "options": {
+        "A": "56",
+        "B": "64",
+        "C": "72",
+        "D": "96"
+      },
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 2,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q06",
+      "question_number": 6,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "A shaving set company sells 4 different types of razors, Elegance, Smooth, Soft and Executive.\nElegance sells at Rs. 48, Smooth at Rs. 63, Soft at Rs. 78 and Executive at Rs. 173 per piece. The\ntable below shows the numbers of each razor sold in each quarter of a year.\nQuarter \\ Product\nElegance\nSmooth\nSoft\nExecutive\nQ1\n27300\n20009\n17602\n9999\nQ2\n25222\n19392\n18445\n8942\nQ3\n28976\n22429\n19544\n10234\nQ4\n21012\n18229\n16595\n10109\n\nWhich product contributes the greatest fraction to the revenue of the company in that year?",
+      "options": {
+        "A": "Elegance",
+        "B": "Executive",
+        "C": "Smooth",
+        "D": "Soft"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q07",
+      "question_number": 7,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Indian currency notes show the denomination indicated in at least seventeen languages. If this is not\nan indication of the nation\u2019s diversity, nothing else is.\n\nWhich of the following can be logically inferred from the above sentences?",
+      "options": {
+        "A": "India is a country of exactly seventeen languages.",
+        "B": "Linguistic pluralism is the only indicator of a nation\u2019s diversity.",
+        "C": "Indian currency notes have sufficient space for all the Indian languages.",
+        "D": "Linguistic pluralism is strong evidence of India\u2019s diversity."
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q08",
+      "question_number": 8,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following statements relating to the level of poker play of four players P, Q, R and S.\nI.\nP always beats Q\nII.\nR always beats S\nIII.\nS loses to P only sometimes\nIV.\nR always loses to Q\n\nWhich of the following can be logically inferred from the above statements?\n(i)\nP is likely to beat all the three other players\n(ii)\nS is the absolute worst player in the set",
+      "options": {
+        "A": "(i) only",
+        "B": "(ii) only",
+        "C": "(i) and (ii)",
+        "D": "neither (i) nor (ii)"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q09",
+      "question_number": 9,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "If f(\ud835\udc65\ud835\udc65) = 2\ud835\udc65\ud835\udc657 + 3\ud835\udc65\ud835\udc65\u22125, which of the following is a factor of f(x)?",
+      "options": {
+        "A": "(x3+8)",
+        "B": "(x-1)",
+        "C": "(2x-5)",
+        "D": "(x+1)"
+      },
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 3,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q10",
+      "question_number": 10,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "In a process, the number of cycles to failure decreases exponentially with an increase in load. At a\nload of 80 units, it takes 100 cycles for failure. When the load is halved, it takes 10000 cycles for\nfailure. The load for which the failure will happen in 5000 cycles is ________.",
+      "options": {
+        "A": "40.00",
+        "B": "46.02",
+        "C": "60.01",
+        "D": "92.02"
+      },
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q01_v2",
+      "question_number": 1,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Let p,q,r,s represent the following propositions.\np: x \u2208{8,9,10,11,12}\nq: x is a composite number\nr: x is a perfect square\ns: x is a prime number\nThe integer x \u22652 which satis\ufb01es \u00ac((p \u21d2q)\u2227(\u00acr \u2228\u00acs)) is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 4,
+      "answer": "11.0 : 11.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q02_v2",
+      "question_number": 2,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Let an be the number of n-bit strings that do NOT contain two consecutive 1s. Which one of\nthe following is the recurrence relation for an?",
+      "options": {
+        "A": "an = an\u22121 +2an\u22122",
+        "B": "an = an\u22121 +an\u22122",
+        "C": "an = 2an\u22121 +an\u22122",
+        "D": "an = 2an\u22121 +2an\u22122"
+      },
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 4,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q03_v2",
+      "question_number": 3,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "lim\nx\u21924\nsin(x\u22124)\nx\u22124\n=\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 4,
+      "answer": "1.0 : 1.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q04_v2",
+      "question_number": 4,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "A probability density function on the interval [a,1] is given by 1/x2 and outside this interval\nthe value of the function is zero. The value of a is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 4,
+      "answer": "0.5 : 0.5",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q05_v2",
+      "question_number": 5,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Two eigenvalues of a 3 \u00d7 3 real matrix P are (2 + \u221a\u22121) and 3. The determinant of P is\n.\nCS(Set A)",
+      "options": null,
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 4,
+      "answer": "15.0 : 15.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q06_v2",
+      "question_number": 6,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider the Boolean operator # with the following properties:\nx#0 = x, x#1 = \u00afx, x#x = 0 and x# \u00afx = 1. Then x#y is equivalent to",
+      "options": {
+        "A": "x\u00afy+ \u00afxy",
+        "B": "x\u00afy+ \u00afx\u00afy",
+        "C": "\u00afxy+xy",
+        "D": "xy+ \u00afx\u00afy"
+      },
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q07_v2",
+      "question_number": 7,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "The 16-bit 2\u2019s complement representation of an integer is 1111 1111 1111 0101; its decimal\nrepresentation is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5,
+      "answer": "-11.0 : -11.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q08_v2",
+      "question_number": 8,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "We want to design a synchronous counter that counts the sequence 0-1-0-2-0-3 and then\nrepeats.\nThe minimum number of J-K \ufb02ip-\ufb02ops required to implement this counter is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5,
+      "answer": "3.0 : 4.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q09_v2",
+      "question_number": 9,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "A processor can support a maximum memory of 4 GB, where the memory is word-addressable\n(a word consists of two bytes). The size of the address bus of the processor is at least\nbits.",
+      "options": null,
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5,
+      "answer": "31.0 : 31.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q10_v2",
+      "question_number": 10,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "A queue is implemented using an array such that ENQUEUE and DEQUEUE operations are\nperformed ef\ufb01ciently. Which one of the following statements is CORRECT (n refers to the\nnumber of items in the queue)?",
+      "options": {
+        "A": "Both operations can be performed in O(1) time",
+        "B": "At most one operation can be performed in O(1) time but the worst case time for\nthe other operation will be \u2126(n)",
+        "C": "The worst case time complexity for both operations will be \u2126(n)",
+        "D": "Worst case time complexity for both operations will be \u2126(logn)\nCS(Set A)"
+      },
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 5,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q11",
+      "question_number": 11,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the following directed graph:\na\nb\nc\nf\ne\nd\nThe number of different topological orderings of the vertices of the graph is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 6,
+      "answer": "6.0 : 6.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q12",
+      "question_number": 12,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider the following C program.\nvoid f(int, short);\nvoid main()\n{\nint i = 100;\nshort s = 12;\nshort *p = &s;\n__________ ;\n// call to f()\n}\nWhich one of the following expressions, when placed in the blank above, will NOT result in\na type checking error?",
+      "options": {
+        "A": "f(s,*s)",
+        "B": "i = f(i,s)",
+        "C": "f(i,*s)",
+        "D": "f(i,*p)\nCS(Set A)"
+      },
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 6,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q13",
+      "question_number": 13,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "The worst case running times of Insertion sort, Merge sort and Quick sort, respectively, are:",
+      "options": {
+        "A": "\u0398(nlogn), \u0398(nlogn), and \u0398(n2)",
+        "B": "\u0398(n2), \u0398(n2), and \u0398(nlogn)",
+        "C": "\u0398(n2), \u0398(nlogn), and \u0398(nlogn)",
+        "D": "\u0398(n2), \u0398(nlogn), and \u0398(n2)"
+      },
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 7,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q14",
+      "question_number": 14,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Let G be a weighted connected undirected graph with distinct positive edge weights. If every\nedge weight is increased by the same value, then which of the following statements is/are\nTRUE?\nP: Minimum spanning tree of G does not change\nQ: Shortest path between any pair of vertices does not change",
+      "options": {
+        "A": "P only",
+        "B": "Q only",
+        "C": "Neither P nor Q",
+        "D": "Both P and Q\nCS(Set A)"
+      },
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 7,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q15",
+      "question_number": 15,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the following C program.\n#include<stdio.h>\nvoid mystery(int *ptra, int *ptrb) {\nint *temp;\ntemp = ptrb;\nptrb = ptra;\nptra = temp;\n}\nint main() {\nint a=2016, b=0, c=4, d=42;\nmystery(&a, &b);\nif (a < c)\nmystery(&c, &a);\nmystery(&a, &d);\nprintf(\"%d\\n\", a);\n}\nThe output of the program is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 8,
+      "answer": "2016.0 : 2016.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q16",
+      "question_number": 16,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which of the following languages is generated by the given grammar?\nS\n\u2212\u2192\naS | bS | \u03b5",
+      "options": {
+        "A": "{anbm | n,m \u22650}",
+        "B": "{w \u2208{a,b}\u2217| w has equal number of a\u2019s and b\u2019s }",
+        "C": "{an | n \u22650}\u222a{bn | n \u22650}\u222a{anbn | n \u22650}",
+        "D": "{a,b}\u2217\nCS(Set A)"
+      },
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 8,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q17",
+      "question_number": 17,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which of the following decision problems are undecidable?\nI. Given NFAs N1 and N2, is L(N1)\u2229L(N2) = \u03a6?\nII. Given a CFG G = (N,\u03a3,P,S) and a string x \u2208\u03a3\u2217, does x \u2208L(G)?\nIII. Given CFGs G1 and G2, is L(G1) = L(G2)?\nIV. Given a TM M, is L(M) = \u03a6?",
+      "options": {
+        "A": "I and IV only",
+        "B": "II and III only",
+        "C": "III and IV only",
+        "D": "II and IV only"
+      },
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 9,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q18",
+      "question_number": 18,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which one of the following regular expressions represents the language: the set of all binary\nstrings having two consecutive 0s and two consecutive 1s?",
+      "options": {
+        "A": "(0+1)\u22170011(0+1)\u2217+(0+1)\u22171100(0+1)\u2217",
+        "B": "(0+1)\u2217(00(0+1)\u221711+11(0+1)\u221700)(0+1)\u2217",
+        "C": "(0+1)\u221700(0+1)\u2217+(0+1)\u221711(0+1)\u2217",
+        "D": "00(0+1)\u221711+11(0+1)\u221700"
+      },
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 9,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q19",
+      "question_number": 19,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the following code segment.\nx = u - t;\ny = x * v;\nx = y + w;\ny = t - z;\ny = x * y;\nThe minimum number of total variables required to convert the above code segment to static\nsingle assignment form is\n.\nCS(Set A)",
+      "options": null,
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 9,
+      "answer": "10.0 : 10.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q20",
+      "question_number": 20,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider an arbitrary set of CPU-bound processes with unequal CPU burst lengths\nsubmitted at the same time to a computer system.\nWhich one of the following process\nscheduling algorithms would minimize the average waiting time in the ready queue?",
+      "options": {
+        "A": "Shortest remaining time \ufb01rst",
+        "B": "Round-robin with time quantum less than the shortest CPU burst",
+        "C": "Uniform random",
+        "D": "Highest priority \ufb01rst with priority proportional to CPU burst length"
+      },
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 10,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q21",
+      "question_number": 21,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which of the following is NOT a superkey in a relational schema with attributes\nV, W, X, Y, Z and primary key V Y?",
+      "options": {
+        "A": "VXYZ",
+        "B": "VWXZ",
+        "C": "VWXY",
+        "D": "VWXYZ"
+      },
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 10,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q22",
+      "question_number": 22,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which one of the following is NOT a part of the ACID properties of database transactions?",
+      "options": {
+        "A": "Atomicity",
+        "B": "Consistency",
+        "C": "Isolation",
+        "D": "Deadlock-freedom\nCS(Set A)"
+      },
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 10,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q23",
+      "question_number": 23,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "A database of research articles in a journal uses the following schema.\n(VOLUME, NUMBER, STARTPAGE, ENDPAGE, TITLE, YEAR, PRICE)\nThe primary key is (VOLUME, NUMBER, STARTPAGE, ENDPAGE) and the following\nfunctional dependencies exist in the schema.\n(VOLUME, NUMBER, STARTPAGE, ENDPAGE)\n\u2192\nTITLE\n(VOLUME, NUMBER)\n\u2192\nYEAR\n(VOLUME, NUMBER, STARTPAGE, ENDPAGE)\n\u2192\nPRICE\nThe database is redesigned to use the following schemas.\n(VOLUME, NUMBER, STARTPAGE, ENDPAGE, TITLE, PRICE)\n(VOLUME, NUMBER, YEAR)\nWhich is the weakest normal form that the new database satis\ufb01es, but the old one does not?",
+      "options": {
+        "A": "1NF",
+        "B": "2NF",
+        "C": "3NF",
+        "D": "BCNF"
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 11,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q24",
+      "question_number": 24,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which one of the following protocols is NOT used to resolve one form of address to another\none?",
+      "options": {
+        "A": "DNS",
+        "B": "ARP",
+        "C": "DHCP",
+        "D": "RARP"
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 11,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q25",
+      "question_number": 25,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Which of the following is/are example(s) of stateful application layer protocols?\n(i) HTTP\n(ii) FTP\n(iii) TCP\n(iv) POP3",
+      "options": {
+        "A": "(i) and (ii) only",
+        "B": "(ii) and (iii) only",
+        "C": "(ii) and (iv) only",
+        "D": "(iv) only\nCS(Set A)"
+      },
+      "has_images": false,
+      "page_start": 11,
+      "page_end": 11,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q26",
+      "question_number": 26,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "The coef\ufb01cient of x12 in (x3 +x4 +x5 +x6 +\u00b7\u00b7\u00b7)3 is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 12,
+      "page_end": 12,
+      "answer": "10.0 : 10.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q27",
+      "question_number": 27,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the recurrence relation a1 = 8, an = 6n2 +2n+an\u22121. Let a99 = K \u00d7104. The value\nof K is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 12,
+      "page_end": 12,
+      "answer": "197.9 : 198.1",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q28",
+      "question_number": 28,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "A function f : N+ \u2192N+, de\ufb01ned on the set of positive integers N+, satis\ufb01es the following\nproperties:\nf(n) = f(n/2)\nif nis even\nf(n) = f(n+5)\nif nis odd\nLet R = {i|\u2203j : f(j) = i} be the set of distinct values that f takes. The maximum possible size\nof R is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 12,
+      "page_end": 12,
+      "answer": "2.0 : 2.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q29",
+      "question_number": 29,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the following experiment.\nStep 1. Flip a fair coin twice.\nStep 2. If the outcomes are (TAILS, HEADS) then output Y and stop.\nStep 3. If the outcomes are either (HEADS, HEADS) or (HEADS, TAILS), then output N and\nstop.\nStep 4. If the outcomes are (TAILS, TAILS), then go to Step 1.\nThe probability that the output of the experiment is Y is (up to two decimal places)\n.\nCS(Set A)",
+      "options": null,
+      "has_images": false,
+      "page_start": 12,
+      "page_end": 12,
+      "answer": "0.33 : 0.34",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q31",
+      "question_number": 31,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "The size of the data count register of a DMA controller is 16 bits. The processor needs to\ntransfer a \ufb01le of 29,154 kilobytes from disk to main memory. The memory is byte addressable.\nThe minimum number of times the DMA controller needs to get the control of the system bus\nfrom the processor to transfer the \ufb01le from the disk to main memory is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 13,
+      "page_end": 13,
+      "answer": "456.0 : 456.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q32",
+      "question_number": 32,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "The stage delays in a 4-stage pipeline are 800, 500, 400 and 300 picoseconds. The \ufb01rst\nstage (with delay 800 picoseconds) is replaced with a functionally equivalent design involving\ntwo stages with respective delays 600 and 350 picoseconds. The throughput increase of the\npipeline is\npercent.",
+      "options": null,
+      "has_images": false,
+      "page_start": 13,
+      "page_end": 13,
+      "answer": "33.0 : 34.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q33",
+      "question_number": 33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider a carry lookahead adder for adding two n-bit integers, built using gates of fan-in at\nmost two. The time to perform addition using this adder is",
+      "options": {
+        "A": "\u0398(1)",
+        "B": "\u0398(log(n))",
+        "C": "\u0398(\u221an)",
+        "D": "\u0398(n)\nCS(Set A)"
+      },
+      "has_images": false,
+      "page_start": 13,
+      "page_end": 13,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q34",
+      "question_number": 34,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The following function computes the maximum value contained in an integer array p[] of size\nn (n \u2265 1).\nint max(int *p, int n) {\nint a=0, b=n-1;\nwhile (__________) {\nif (p[a] \u2264 p[b]) { a = a+1; }\nelse\n{ b = b-1; }\n}\nreturn p[a];\n}\nThe missing loop condition is",
+      "options": {
+        "A": "a \u2260 n",
+        "B": "b \u2260 0",
+        "C": "b > (a + 1)",
+        "D": "b \u2260 a"
+      },
+      "has_images": false,
+      "page_start": 14,
+      "page_end": 14,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q35",
+      "question_number": 35,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "What will be the output of the following C program?\nvoid count(int n){\nstatic int d=1;\nprintf(\"%d \", n);\nprintf(\"%d \", d);\nd++;\nif(n>1) count(n-1);\nprintf(\"%d \", d);\n}\nvoid main(){\ncount(3);\n}",
+      "options": {
+        "A": "3 1 2 2 1 3 4 4 4",
+        "B": "3 1 2 1 1 1 2 2 2",
+        "C": "3 1 2 2 1 3 4",
+        "D": "3 1 2 1 1 1 2\nCS(Set A)"
+      },
+      "has_images": false,
+      "page_start": 14,
+      "page_end": 14,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q36",
+      "question_number": 36,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "What will be the output of the following pseudo-code when parameters are passed by reference\nand dynamic scoping is assumed?\na=3;\nvoid n(x) {x = x * a; print(x);}\nvoid m(y) {a = 1; a = y - a; n(a); print(a);}\nvoid main() {m(a);}",
+      "options": {
+        "A": "6, 2",
+        "B": "6, 6",
+        "C": "4, 2",
+        "D": "4, 4"
+      },
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q37",
+      "question_number": 37,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "An operator delete(i) for a binary heap data structure is to be designed to delete the item in\nthe i-th node. Assume that the heap is implemented in an array and i refers to the i-th index\nof the array. If the heap tree has depth d (number of edges on the path from the root to the\nfarthest leaf), then what is the time complexity to re-\ufb01x the heap ef\ufb01ciently after the removal\nof the element?",
+      "options": {
+        "A": "O(1)",
+        "B": "O(d) but not O(1)",
+        "C": "O(2d) but not O(d)",
+        "D": "O(d 2d) but not O(2d)"
+      },
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q38",
+      "question_number": 38,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the weighted undirected graph with 4 vertices, where the weight of edge {i, j} is\ngiven by the entry Wi j in the matrix W.\nW =\n\uf8ee\n\uf8ef\uf8ef\uf8f0\n0\n2\n8\n5\n2\n0\n5\n8\n8\n5\n0\nx\n5\n8\nx\n0\n\uf8f9\n\uf8fa\uf8fa\uf8fb\nThe largest possible integer value of x, for which at least one shortest path between some pair\nof vertices will contain the edge with weight x is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15,
+      "answer": "12.0 : 12.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q39",
+      "question_number": 39,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Let G be a complete undirected graph on 4 vertices, having 6 edges with weights being 1, 2,\n3, 4, 5, and 6. The maximum possible weight that a minimum weight spanning tree of G can\nhave is\n.\nCS(Set A)",
+      "options": null,
+      "has_images": false,
+      "page_start": 15,
+      "page_end": 15,
+      "answer": "7.0 : 7.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q40",
+      "question_number": 40,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "G = (V,E) is an undirected simple graph in which each edge has a distinct weight, and e is a\nparticular edge of G. Which of the following statements about the minimum spanning trees\n(MSTs) of G is/are TRUE?\nI. If e is the lightest edge of some cycle in G, then every MST of G includes e\nII. If e is the heaviest edge of some cycle in G, then every MST of G excludes e",
+      "options": {
+        "A": "I only",
+        "B": "II only",
+        "C": "both I and II",
+        "D": "neither I nor II"
+      },
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 16,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q41",
+      "question_number": 41,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Let Q denote a queue containing sixteen numbers and S be an empty stack. Head(Q) returns\nthe element at the head of the queue Q without removing it from Q. Similarly Top(S) returns\nthe element at the top of S without removing it from S. Consider the algorithm given below.\nwhile Q is not Empty do\nif S is Empty OR Top(S) \u2264Head(Q) then\nx := Dequeue(Q);\nPush(S,x);\nelse\nx := Pop(S);\nEnqueue(Q,x);\nend\nend\nThe maximum possible number of iterations of the while loop in the algorithm is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 16,
+      "answer": "256.0 : 256.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q42",
+      "question_number": 42,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following context-free grammars:\nG1: S \u2192aS|B, B \u2192b|bB\nG2: S \u2192aA|bB, A \u2192aA|B|\u03b5, B \u2192bB|\u03b5\nWhich one of the following pairs of languages is generated by G1 and G2, respectively?",
+      "options": {
+        "A": "{ambn|m > 0 or n > 0} and {ambn|m > 0 and n > 0}",
+        "B": "{ambn|m > 0 and n > 0} and {ambn|m > 0 or n \u22650}",
+        "C": "{ambn|m \u22650 or n > 0} and {ambn|m > 0 and n > 0}",
+        "D": "{ambn|m \u22650 and n > 0} and {ambn|m > 0 or n > 0}\nCS(Set A)"
+      },
+      "has_images": false,
+      "page_start": 16,
+      "page_end": 16,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q44",
+      "question_number": 44,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Let X be a recursive language and Y be a recursively enumerable but not recursive language.\nLet W and Z be two languages such that Y reduces to W, and Z reduces to X (reduction means\nthe standard many-one reduction). Which one of the following statements is TRUE?",
+      "options": {
+        "A": "W can be recursively enumerable and Z is recursive.",
+        "B": "W can be recursive and Z is recursively enumerable.",
+        "C": "W is not recursively enumerable and Z is recursive.",
+        "D": "W is not recursively enumerable and Z is not recursive."
+      },
+      "has_images": false,
+      "page_start": 17,
+      "page_end": 17,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q45",
+      "question_number": 45,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "The attributes of three arithmetic operators in some programming language are given below.\nOperator\nPrecedence\nAssociativity\nArity\n+\nHigh\nLeft\nBinary\n\u2212\nMedium\nRight\nBinary\n\u2217\nLow\nLeft\nBinary\nThe value of the expression 2\u22125+1\u22127\u22173 in this language is\n.\nCS(Set A)",
+      "options": null,
+      "has_images": false,
+      "page_start": 17,
+      "page_end": 17,
+      "answer": "9.0 : 9.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q46",
+      "question_number": 46,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following Syntax Directed Translation Scheme (SDTS), with non-terminals\n{S, A} and terminals {a, b}.\nS\n\u2212\u2192\naA\n{ print 1 }\nS\n\u2212\u2192\na\n{ print 2 }\nA\n\u2212\u2192\nSb\n{ print 3 }\nUsing the above SDTS, the output printed by a bottom-up parser, for the input aab is:",
+      "options": {
+        "A": "1 3 2",
+        "B": "2 2 3",
+        "C": "2 3 1",
+        "D": "syntax error"
+      },
+      "has_images": false,
+      "page_start": 18,
+      "page_end": 18,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q47",
+      "question_number": 47,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider a computer system with 40-bit virtual addressing and page size of sixteen\nkilobytes. If the computer system has a one-level page table per process and each page table\nentry requires 48 bits, then the size of the per-process page table is\nmegabytes.",
+      "options": null,
+      "has_images": false,
+      "page_start": 18,
+      "page_end": 18,
+      "answer": "384.0 : 384.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q48",
+      "question_number": 48,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider a disk queue with requests for I/O to blocks on cylinders 47, 38, 121, 191, 87, 11,\n92, 10. The C-LOOK scheduling algorithm is used. The head is initially at cylinder number\n63, moving towards larger cylinder numbers on its servicing pass. The cylinders are numbered\nfrom 0 to 199. The total head movement (in number of cylinders) incurred while servicing\nthese requests is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 18,
+      "page_end": 18,
+      "answer": "346.0 : 346.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q49",
+      "question_number": 49,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider a computer system with ten physical page frames. The system is provided with\nan access sequence (a1,a2,...,a20,a1,a2,...,a20), where each ai is a distinct virtual page\nnumber.\nThe difference in the number of page faults between the last-in-\ufb01rst-out page\nreplacement policy and the optimal page replacement policy is\n.\nCS(Set A)",
+      "options": null,
+      "has_images": false,
+      "page_start": 18,
+      "page_end": 18,
+      "answer": "1.0 : 1.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q50",
+      "question_number": 50,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following proposed solution for the critical section problem.\nThere are n\nprocesses: P0 ...Pn\u22121. In the code, function pmax returns an integer not smaller than any\nof its arguments. For all i, t[i] is initialized to zero.\nCode for Pi:\ndo {\nc[i]=1; t[i] = pmax(t[0],...,t[n-1])+1; c[i]=0;\nfor every j\u0338 = i in {0,...,n-1} {\nwhile (c[j]);\nwhile (t[j] \u2260 0 && t[j]\u2264t[i]);\n}\nCritical Section;\nt[i]=0;\nRemainder Section;\n} while (true);\nWhich one of the following is TRUE about the above solution?",
+      "options": {
+        "A": "At most one process can be in the critical section at any time",
+        "B": "The bounded wait condition is satis\ufb01ed",
+        "C": "The progress condition is satis\ufb01ed",
+        "D": "It cannot cause a deadlock"
+      },
+      "has_images": false,
+      "page_start": 19,
+      "page_end": 19,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q51",
+      "question_number": 51,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following two phase locking protocol. Suppose a transaction T accesses (for\nread or write operations), a certain set of objects {O1,...,Ok}. This is done in the following\nmanner:\nStep 1. T acquires exclusive locks to O1, ..., Ok in increasing order of their addresses.\nStep 2. The required operations are performed.\nStep 3. All locks are released.\nThis protocol will",
+      "options": {
+        "A": "guarantee serializability and deadlock-freedom",
+        "B": "guarantee neither serializability nor deadlock-freedom",
+        "C": "guarantee serializability but not deadlock-freedom",
+        "D": "guarantee deadlock-freedom but not serializability\nCS(Set A)"
+      },
+      "has_images": false,
+      "page_start": 19,
+      "page_end": 19,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q52",
+      "question_number": 52,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider that B wants to send a message m that is digitally signed to A. Let the pair of private\nand public keys for A and B be denoted by K\u2212\nx and K+\nx for x = A,B, respectively. Let Kx(m)\nrepresent the operation of encrypting m with a key Kx and H(m) represent the message digest.\nWhich one of the following indicates the CORRECT way of sending the message m along\nwith the digital signature to A?",
+      "options": {
+        "A": "{m,K+\nB (H(m))}",
+        "B": "{m,K\u2212\nB (H(m))}",
+        "C": "{m,K\u2212\nA (H(m))}",
+        "D": "{m,K+\nA (m)}"
+      },
+      "has_images": false,
+      "page_start": 20,
+      "page_end": 20,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q53",
+      "question_number": 53,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "An IP datagram of size 1000 bytes arrives at a router. The router has to forward this packet on\na link whose MTU (maximum transmission unit) is 100 bytes. Assume that the size of the IP\nheader is 20 bytes.\nThe number of fragments that the IP datagram will be divided into for transmission is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 20,
+      "page_end": 20,
+      "answer": "13.0 : 13.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q54",
+      "question_number": 54,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "For a host machine that uses the token bucket algorithm for congestion control, the token\nbucket has a capacity of 1 megabyte and the maximum output rate is 20 megabytes per second.\nTokens arrive at a rate to sustain output at a rate of 10 megabytes per second. The token bucket\nis currently full and the machine needs to send 12 megabytes of data. The minimum time\nrequired to transmit the data is\nseconds.",
+      "options": null,
+      "has_images": false,
+      "page_start": 20,
+      "page_end": 20,
+      "answer": "1.1 : 1.1",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q55",
+      "question_number": 55,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "A sender uses the Stop-and-Wait ARQ protocol for reliable transmission of frames. Frames\nare of size 1000 bytes and the transmission rate at the sender is 80 Kbps (1Kbps = 1000\nbits/second). Size of an acknowledgement is 100 bytes and the transmission rate at the receiver\nis 8 Kbps. The one-way propagation delay is 100 milliseconds.\nAssuming no frame is lost, the sender throughput is\nbytes/second.\nCS(Set A)\n\nQ. No Type\nSection\nKey\nMarks\n1\nMCQ\nGA\nD\n1\n2\nMCQ\nGA\nA\n1\n3\nMCQ\nGA\nA\n1\n4\nMCQ\nGA\nC\n1\n5\nMCQ\nGA\nD\n1\n6\nMCQ\nGA\nB\n2\n7\nMCQ\nGA\nD\n2\n8\nMCQ\nGA\nD\n2\n9\nMCQ\nGA\nB\n2\n10\nMCQ\nGA\nB\n2\n1\nNAT\nCS-1\n11.0 : 11.0\n1\n2\nMCQ\nCS-1\nB\n1\n3\nNAT\nCS-1\n1.0 : 1.0\n1\n4\nNAT\nCS-1\n0.5 : 0.5\n1\n5\nNAT\nCS-1\n15.0 : 15.0\n1\n6\nMCQ\nCS-1\nA\n1\n7\nNAT\nCS-1\n-11.0 : -11.0\n1\n8\nNAT\nCS-1\n3.0 : 4.0\n1\n9\nNAT\nCS-1\n31.0 : 31.0\n1\n10\nMCQ\nCS-1\nA\n1\n11\nNAT\nCS-1\n6.0 : 6.0\n1\n12\nMCQ\nCS-1\nD\n1\n13\nMCQ\nCS-1\nD\n1\n14\nMCQ\nCS-1\nA\n1\n15\nNAT\nCS-1\n2016.0 : 2016.0\n1\n16\nMCQ\nCS-1\nD\n1\n17\nMCQ\nCS-1\nC\n1\n18\nMCQ\nCS-1\nB\n1\n19\nNAT\nCS-1\n10.0 : 10.0\n1\n20\nMCQ\nCS-1\nA\n1\n21\nMCQ\nCS-1\nB\n1\n22\nMCQ\nCS-1\nD\n1\n23\nMCQ\nCS-1\nB\n1\n24\nMCQ\nCS-1\nC\n1\n25\nMCQ\nCS-1\nC\n1\n26\nNAT\nCS-1\n10.0 : 10.0\n2\n27\nNAT\nCS-1\n197.9 : 198.1\n2\n28\nNAT\nCS-1\n2.0 : 2.0\n2\n29\nNAT\nCS-1\n0.33 : 0.34\n2\n30\nMCQ\nCS-1\nD\n2\n31\nNAT\nCS-1\n456.0 : 456.0\n2\n32\nNAT\nCS-1\n33.0 : 34.0\n2\n33\nMCQ\nCS-1\nB\n2\n34\nMCQ\nCS-1\nD\n2\n35\nMCQ\nCS-1\nA\n2\n36\nMCQ\nCS-1\nD\n2\n37\nMCQ\nCS-1\nB\n2\n38\nNAT\nCS-1\n12.0 : 12.0\n2\n39\nNAT\nCS-1\n7.0 : 7.0\n2\n40\nMCQ\nCS-1\nB\n2\n41\nNAT\nCS-1\n256.0 : 256.0\n2\n42\nMCQ\nCS-1\nD\n2\n43\nMCQ\nCS-1\nD\n2\n44\nMCQ\nCS-1\nC\n2\n45\nNAT\nCS-1\n9.0 : 9.0\n2\n46\nMCQ\nCS-1\nC\n2\n47\nNAT\nCS-1\n384.0 : 384.0\n2\n48\nNAT\nCS-1\n346.0 : 346.0\n2\n49\nNAT\nCS-1\n1.0 : 1.0\n2\n50\nMCQ\nCS-1\nA\n2\n51\nMCQ\nCS-1\nA\n2\n52\nMCQ\nCS-1\nB\n2\n53\nNAT\nCS-1\n13.0 : 13.0\n2\n54\nNAT\nCS-1\n1.1 : 1.1\n2\n55\nNAT\nCS-1\n2500.0 : 2500.0\n2",
+      "options": null,
+      "has_images": false,
+      "page_start": 20,
+      "page_end": 23,
+      "answer": "2500.0 : 2500.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q01_v3",
+      "question_number": 1,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "The man who is now Municipal Commissioner worked as ____________________.",
+      "options": {
+        "A": "the security guard at a university",
+        "B": "a security guard at the university",
+        "C": "a security guard at university",
+        "D": "the security guard at the university"
+      },
+      "has_images": false,
+      "page_start": 23,
+      "page_end": 23,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q02_v3",
+      "question_number": 2,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Nobody knows how the Indian cricket team is going to cope with the difficult and seamer-friendly\nwickets in Australia.\n\nChoose the option which is closest in meaning to the underlined phrase in the above sentence.",
+      "options": {
+        "A": "put up with",
+        "B": "put in with",
+        "C": "put down to",
+        "D": "put up against"
+      },
+      "has_images": false,
+      "page_start": 23,
+      "page_end": 23,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q03_v3",
+      "question_number": 3,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Find the odd one in the following group of words.\n\nmock, deride, praise, jeer",
+      "options": {
+        "A": "mock",
+        "B": "deride",
+        "C": "praise",
+        "D": "jeer"
+      },
+      "has_images": false,
+      "page_start": 23,
+      "page_end": 23,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q04_v3",
+      "question_number": 4,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Pick the odd one from the following options.",
+      "options": {
+        "A": "CADBE",
+        "B": "JHKIL",
+        "C": "XVYWZ",
+        "D": "ONPMQ"
+      },
+      "has_images": false,
+      "page_start": 23,
+      "page_end": 23,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q05_v3",
+      "question_number": 5,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "In a quadratic function, the value of the product of the roots (\u03b1, \u03b2) is 4. Find the value of\n\ud835\udefc\ud835\udefc\ud835\udc5b\ud835\udc5b+ \ud835\udefd\ud835\udefd\ud835\udc5b\ud835\udc5b\n\ud835\udefc\ud835\udefc\u2212\ud835\udc5b\ud835\udc5b+ \ud835\udefd\ud835\udefd\u2212\ud835\udc5b\ud835\udc5b",
+      "options": {
+        "A": "n4",
+        "B": "4n",
+        "C": "22n-1",
+        "D": "4n-1"
+      },
+      "has_images": false,
+      "page_start": 23,
+      "page_end": 23,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q06_v3",
+      "question_number": 6,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Among 150 faculty members in an institute, 55 are connected with each other through Facebook\u00ae\nand 85 are connected through WhatsApp\u00ae. 30 faculty members do not have Facebook\u00ae or\nWhatsApp\u00ae accounts. The number of faculty members connected only through Facebook\u00ae accounts\nis ______________.",
+      "options": {
+        "A": "35",
+        "B": "45",
+        "C": "65",
+        "D": "90"
+      },
+      "has_images": false,
+      "page_start": 23,
+      "page_end": 24,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q07_v3",
+      "question_number": 7,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Computers were invented for performing only high-end useful computations. However, it is no\nunderstatement that they have taken over our world today. The internet, for example, is ubiquitous.\nMany believe that the internet itself is an unintended consequence of the original invention. With\nthe advent of mobile computing on our phones, a whole new dimension is now enabled. One is left\nwondering if all these developments are good or, more importantly, required.\n\nWhich of the statement(s) below is/are logically valid and can be inferred from the above\nparagraph?\n(i)\nThe author believes that computers are not good for us.\n(ii)\nMobile computers and the internet are both intended inventions",
+      "options": {
+        "A": "(i) only",
+        "B": "(ii) only",
+        "C": "both (i) and (ii)",
+        "D": "neither (i) nor (ii)"
+      },
+      "has_images": false,
+      "page_start": 24,
+      "page_end": 24,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q08_v3",
+      "question_number": 8,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "All hill-stations have a lake. Ooty has two lakes.\n\nWhich of the statement(s) below is/are logically valid and can be inferred from the above\nsentences?\n(i) Ooty is not a hill-station.\n(ii) No hill-station can have more than one lake.",
+      "options": {
+        "A": "(i) only",
+        "B": "(ii) only",
+        "C": "both (i) and (ii)",
+        "D": "neither (i) nor (ii)"
+      },
+      "has_images": false,
+      "page_start": 24,
+      "page_end": 24,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q01_v4",
+      "question_number": 1,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the following expressions:\n(i) false\n(ii) Q\n(iii) true\n(iv) P\u2228Q\n(v) \u00acQ\u2228P\nThe number of expressions given above that are logically implied by P \u2227(P \u21d2Q) is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 26,
+      "page_end": 26,
+      "answer": "4.0 : 4.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q02_v4",
+      "question_number": 2,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Let f(x) be a polynomial and g(x) = f \u2032(x) be its derivative. If the degree of (f(x)+ f(\u2212x)) is\n10, then the degree of (g(x)\u2212g(\u2212x)) is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 26,
+      "page_end": 26,
+      "answer": "9.0 : 9.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q03_v4",
+      "question_number": 3,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "The minimum number of colours that is suf\ufb01cient to vertex-colour any planar graph is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 26,
+      "page_end": 26,
+      "answer": "4.0 : 4.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q04_v4",
+      "question_number": 4,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider the systems, each consisting of m linear equations in n variables.\nI. If m < n, then all such systems have a solution\nII. If m > n, then none of these systems has a solution\nIII. If m = n, then there exists a system which has a solution\nWhich one of the following is CORRECT?",
+      "options": {
+        "A": "I, II and III are true",
+        "B": "Only II and III are true",
+        "C": "Only III is true",
+        "D": "None of them is true\nCS(Set B)"
+      },
+      "has_images": false,
+      "page_start": 26,
+      "page_end": 26,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q05_v4",
+      "question_number": 5,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Suppose that a shop has an equal number of LED bulbs of two different types. The probability\nof an LED bulb lasting more than 100 hours given that it is of Type 1 is 0.7, and given that it\nis of Type 2 is 0.4. The probability that an LED bulb chosen uniformly at random lasts more\nthan 100 hours is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 27,
+      "page_end": 27,
+      "answer": "0.55 : 0.55",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q06_v4",
+      "question_number": 6,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Suppose that the eigenvalues of matrix A are 1,2,4.\nThe determinant of (A\u22121)T is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 27,
+      "page_end": 27,
+      "answer": "0.124 : 0.126",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q07_v4",
+      "question_number": 7,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider an eight-bit ripple-carry adder for computing the sum of A and B, where A and B are\nintegers represented in 2\u2019s complement form. If the decimal value of A is one, the decimal\nvalue of B that leads to the longest latency for the sum to stabilize is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 27,
+      "page_end": 27,
+      "answer": "-1.0 : -1.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q08_v4",
+      "question_number": 8,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Let, x1\u2295x2\u2295x3\u2295x4 = 0 where x1, x2, x3, x4 are Boolean variables, and \u2295is the XOR operator.\nWhich one of the following must always be TRUE?",
+      "options": {
+        "A": "x1x2x3x4 = 0",
+        "B": "x1x3 +x2 = 0",
+        "C": "\u00afx1 \u2295\u00afx3 = \u00afx2 \u2295\u00afx4",
+        "D": "x1 +x2 +x3 +x4 = 0"
+      },
+      "has_images": false,
+      "page_start": 27,
+      "page_end": 27,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q09_v3",
+      "question_number": 9,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Let X be the number of distinct 16-bit integers in 2\u2019s complement representation. Let Y be the\nnumber of distinct 16-bit integers in sign magnitude representation.\nThen X \u2212Y is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 27,
+      "page_end": 27,
+      "answer": "1.0 : 1.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q10_v3",
+      "question_number": 10,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "A processor has 40 distinct instructions and 24 general purpose registers. A 32-bit instruction\nword has an opcode, two register operands and an immediate operand. The number of bits\navailable for the immediate operand \ufb01eld is\n.\nCS(Set B)",
+      "options": null,
+      "has_images": false,
+      "page_start": 27,
+      "page_end": 27,
+      "answer": "16.0 : 16.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q11_v2",
+      "question_number": 11,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "Breadth First Search (BFS) is started on a binary tree beginning from the root vertex. There is\na vertex t at a distance four from the root. If t is the n-th vertex in this BFS traversal, then the\nmaximum possible value of n is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 28,
+      "page_end": 28,
+      "answer": "31.0 : 31.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q12_v2",
+      "question_number": 12,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "The value printed by the following program is\n.\nvoid f(int* p, int m){\nm = m + 5;\n*p = *p + m;\nreturn;\n}\nvoid main(){\nint i=5, j=10;\nf(&i, j);\nprintf(\"%d\", i+j);\n}",
+      "options": null,
+      "has_images": false,
+      "page_start": 28,
+      "page_end": 28,
+      "answer": "30.0 : 30.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q13_v2",
+      "question_number": 13,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Assume that the algorithms considered here sort the input sequences in ascending order. If the\ninput is already in ascending order, which of the following are TRUE?\nI. Quicksort runs in \u0398(n2) time\nII. Bubblesort runs in \u0398(n2) time\nIII. Mergesort runs in \u0398(n) time\nIV. Insertion sort runs in \u0398(n) time",
+      "options": {
+        "A": "I and II only",
+        "B": "I and III only",
+        "C": "II and IV only",
+        "D": "I and IV only\nCS(Set B)"
+      },
+      "has_images": false,
+      "page_start": 28,
+      "page_end": 28,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q14_v2",
+      "question_number": 14,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "The Floyd-Warshall algorithm for all-pair shortest paths computation is based on",
+      "options": {
+        "A": "Greedy paradigm.",
+        "B": "Divide-and-Conquer paradigm.",
+        "C": "Dynamic Programming paradigm.",
+        "D": "neither Greedy nor Divide-and-Conquer nor Dynamic Programming paradigm."
+      },
+      "has_images": false,
+      "page_start": 29,
+      "page_end": 29,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q15_v2",
+      "question_number": 15,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "N items are stored in a sorted doubly linked list. For a delete operation, a pointer is provided\nto the record to be deleted. For a decrease-key operation, a pointer is provided to the record on\nwhich the operation is to be performed.\nAn algorithm performs the following operations on the list in this order: \u0398(N) delete, O(logN)\ninsert, O(logN) \ufb01nd, and \u0398(N) decrease-key.\nWhat is the time complexity of all these\noperations put together?",
+      "options": {
+        "A": "O(log2 N)",
+        "B": "O(N)",
+        "C": "O(N2)",
+        "D": "\u0398(N2 logN)"
+      },
+      "has_images": false,
+      "page_start": 29,
+      "page_end": 29,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q16_v2",
+      "question_number": 16,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 1.0,
+      "negative_marks": 0.0,
+      "question_text": "The number of states in the minimum sized DFA that accepts the language de\ufb01ned by the\nregular expression\n(0+1)\u2217(0+1)(0+1)\u2217\nis\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 29,
+      "page_end": 29,
+      "answer": "2.0 : 2.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q17_v2",
+      "question_number": 17,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Language L1 is de\ufb01ned by the grammar: S1 \u2192aS1b|\u03b5\nLanguage L2 is de\ufb01ned by the grammar: S2 \u2192abS2|\u03b5\nConsider the following statements:\nP: L1 is regular\nQ: L2 is regular\nWhich one of the following is TRUE?",
+      "options": {
+        "A": "Both P and Q are true",
+        "B": "P is true and Q is false",
+        "C": "P is false and Q is true",
+        "D": "Both P and Q are false\nCS(Set B)"
+      },
+      "has_images": false,
+      "page_start": 29,
+      "page_end": 29,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q18_v2",
+      "question_number": 18,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Consider the following types of languages: L1 : Regular, L2 : Context-free, L3 : Recursive,\nL4 : Recursively enumerable. Which of the following is/are TRUE?\nI. L3 \u222aL4 is recursively enumerable\nII. L2 \u222aL3 is recursive\nIII. L\u2217\n1 \u2229L2 is context-free\nIV. L1 \u222aL2 is context-free",
+      "options": {
+        "A": "I only",
+        "B": "I and III only",
+        "C": "I and IV only",
+        "D": "I, II and III only"
+      },
+      "has_images": false,
+      "page_start": 30,
+      "page_end": 30,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q19_v2",
+      "question_number": 19,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Match the following:\n(P) Lexical analysis\n(i) Leftmost derivation\n(Q) Top down parsing\n(ii) Type checking\n(R) Semantic analysis\n(iii) Regular expressions\n(S) Runtime environments\n(iv) Activation records",
+      "options": {
+        "A": "P \u2194i, Q \u2194ii, R \u2194iv, S \u2194iii",
+        "B": "P \u2194iii, Q \u2194i, R \u2194ii, S \u2194iv",
+        "C": "P \u2194ii, Q \u2194iii, R \u2194i, S \u2194iv",
+        "D": "P \u2194iv, Q \u2194i, R \u2194ii, S \u2194iii"
+      },
+      "has_images": false,
+      "page_start": 30,
+      "page_end": 30,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q20_v2",
+      "question_number": 20,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "In which one of the following page replacement algorithms it is possible for the page fault rate\nto increase even when the number of allocated frames increases?",
+      "options": {
+        "A": "LRU (Least Recently Used)",
+        "B": "OPT (Optimal Page Replacement)",
+        "C": "MRU (Most Recently Used)",
+        "D": "FIFO (First In First Out)\nCS(Set B)"
+      },
+      "has_images": false,
+      "page_start": 30,
+      "page_end": 30,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q21_v2",
+      "question_number": 21,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "B+ Trees are considered BALANCED because",
+      "options": {
+        "A": "the lengths of the paths from the root to all leaf nodes are all equal.",
+        "B": "the lengths of the paths from the root to all leaf nodes differ from each other by at\nmost 1.",
+        "C": "the number of children of any two non-leaf sibling nodes differ by at most 1.",
+        "D": "the number of records in any two leaf nodes differ by at most 1."
+      },
+      "has_images": false,
+      "page_start": 31,
+      "page_end": 31,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q22_v2",
+      "question_number": 22,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Suppose a database schedule S involves transactions T1, ..., Tn. Construct the precedence\ngraph of S with vertices representing the transactions and edges representing the con\ufb02icts. If\nS is serializable, which one of the following orderings of the vertices of the precedence graph\nis guaranteed to yield a serial schedule?",
+      "options": {
+        "A": "Topological order",
+        "B": "Depth-\ufb01rst order",
+        "C": "Breadth-\ufb01rst order",
+        "D": "Ascending order of transaction indices"
+      },
+      "has_images": false,
+      "page_start": 31,
+      "page_end": 31,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q23_v2",
+      "question_number": 23,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Anarkali digitally signs a message and sends it to Salim. Veri\ufb01cation of the signature by Salim\nrequires",
+      "options": {
+        "A": "Anarkali\u2019s public key.",
+        "B": "Salim\u2019s public key.",
+        "C": "Salim\u2019s private key.",
+        "D": "Anarkali\u2019s private key."
+      },
+      "has_images": false,
+      "page_start": 31,
+      "page_end": 31,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q24_v2",
+      "question_number": 24,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "In an Ethernet local area network, which one of the following statements is TRUE?",
+      "options": {
+        "A": "A station stops to sense the channel once it starts transmitting a frame.",
+        "B": "The purpose of the jamming signal is to pad the frames that are smaller than the\nminimum frame size.",
+        "C": "A station continues to transmit the packet even after the collision is detected.",
+        "D": "The exponential backoff mechanism reduces the probability of collision on\nretransmissions.\nCS(Set B)"
+      },
+      "has_images": false,
+      "page_start": 31,
+      "page_end": 31,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q25_v2",
+      "question_number": 25,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "question_text": "Identify the correct sequence in which the following packets are transmitted on the network\nby a host when a browser requests a webpage from a remote server, assuming that the host has\njust been restarted.",
+      "options": {
+        "A": "HTTP GET request, DNS query, TCP SYN",
+        "B": "DNS query, HTTP GET request, TCP SYN",
+        "C": "DNS query, TCP SYN, HTTP GET request",
+        "D": "TCP SYN, DNS query, HTTP GET request"
+      },
+      "has_images": false,
+      "page_start": 32,
+      "page_end": 32,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q26_v2",
+      "question_number": 26,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "A binary relation R on N \u00d7 N is de\ufb01ned as follows: (a,b)R(c,d) if a \u2264c or b \u2264d. Consider\nthe following propositions:\nP: R is re\ufb02exive\nQ: R is transitive\nWhich one of the following statements is TRUE?",
+      "options": {
+        "A": "Both P and Q are true.",
+        "B": "P is true and Q is false.",
+        "C": "P is false and Q is true.",
+        "D": "Both P and Q are false."
+      },
+      "has_images": false,
+      "page_start": 32,
+      "page_end": 32,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q27_v2",
+      "question_number": 27,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Which one of the following well-formed formulae in predicate calculus is NOT valid?",
+      "options": {
+        "A": "(\u2200x p(x) \u21d2\u2200xq(x)) \u21d2(\u2203x\u00acp(x) \u2228\u2200xq(x))",
+        "B": "(\u2203x p(x) \u2228\u2203xq(x)) \u21d2\u2203x(p(x) \u2228q(x))",
+        "C": "\u2203x(p(x) \u2227q(x)) \u21d2(\u2203x p(x) \u2227\u2203xq(x))",
+        "D": "\u2200x(p(x) \u2228q(x)) \u21d2(\u2200x p(x) \u2228\u2200xq(x))\nCS(Set B)"
+      },
+      "has_images": false,
+      "page_start": 32,
+      "page_end": 32,
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q28_v2",
+      "question_number": 28,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider a set U of 23 different compounds in a Chemistry lab. There is a subset S of U of\n9 compounds, each of which reacts with exactly 3 compounds of U. Consider the following\nstatements:\nI. Each compound in U \\S reacts with an odd number of compounds.\nII. At least one compound in U \\S reacts with an odd number of compounds.\nIII. Each compound in U \\S reacts with an even number of compounds.\nWhich one of the above statements is ALWAYS TRUE?",
+      "options": {
+        "A": "Only I",
+        "B": "Only II",
+        "C": "Only III",
+        "D": "None"
+      },
+      "has_images": false,
+      "page_start": 33,
+      "page_end": 33,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q29_v2",
+      "question_number": 29,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "The value of the expression 1399(mod 17), in the range 0 to 16, is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 33,
+      "page_end": 33,
+      "answer": "4.0 : 4.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q30",
+      "question_number": 30,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Suppose the functions F and G can be computed in 5 and 3 nanoseconds by functional units\nUF and UG, respectively. Given two instances of UF and two instances of UG, it is required to\nimplement the computation F(G(Xi)) for 1 \u2264i \u226410. Ignoring all other delays, the minimum\ntime required to complete this computation is\nnanoseconds.",
+      "options": null,
+      "has_images": false,
+      "page_start": 33,
+      "page_end": 33,
+      "answer": "28.0 : 28.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q31_v2",
+      "question_number": 31,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider a processor with 64 registers and an instruction set of size twelve. Each instruction\nhas \ufb01ve distinct \ufb01elds, namely, opcode, two source register identi\ufb01ers, one destination register\nidenti\ufb01er, and a twelve-bit immediate value. Each instruction must be stored in memory in\na byte-aligned fashion. If a program has 100 instructions, the amount of memory (in bytes)\nconsumed by the program text is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 33,
+      "page_end": 33,
+      "answer": "500.0 : 500.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q32_v2",
+      "question_number": 32,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "The width of the physical address on a machine is 40 bits. The width of the tag \ufb01eld in a 512\nKB 8-way set associative cache is\nbits.\nCS(Set B)",
+      "options": null,
+      "has_images": false,
+      "page_start": 33,
+      "page_end": 33,
+      "answer": "24.0 : 24.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q33_v2",
+      "question_number": 33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider a 3 GHz (gigahertz) processor with a three-stage pipeline and stage latencies \u03c41,\n\u03c42, and \u03c43 such that \u03c41 = 3\u03c42/4 = 2\u03c43. If the longest pipeline stage is split into two pipeline\nstages of equal latency, the new frequency is\nGHz, ignoring delays in the pipeline\nregisters.",
+      "options": null,
+      "has_images": false,
+      "page_start": 34,
+      "page_end": 34,
+      "answer": "3.9 : 4.1",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q34_v2",
+      "question_number": 34,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "A complete binary min-heap is made by including each integer in [1,1023] exactly once.\nThe depth of a node in the heap is the length of the path from the root of the heap to that\nnode. Thus, the root is at depth 0. The maximum depth at which integer 9 can appear is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 34,
+      "page_end": 34,
+      "answer": "8.0 : 8.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q35_v2",
+      "question_number": 35,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "The following function computes XY for positive integers X and Y.\nint exp(int X, int Y) {\nint res = 1, a = X, b = Y;\nwhile ( b \u2260 0 ){\nif ( b%2 == 0) { a = a*a; b = b/2; }\nelse\n{ res = res*a; b = b-1; }\n}\nreturn res;\n}\nWhich one of the following conditions is TRUE before every iteration of the loop?",
+      "options": {
+        "A": "XY = ab",
+        "B": "(res\u2217a)Y = (res\u2217X)b",
+        "C": "XY = res\u2217ab",
+        "D": "XY = (res\u2217a)b\nCS(Set B)"
+      },
+      "has_images": false,
+      "page_start": 34,
+      "page_end": 34,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q36_v2",
+      "question_number": 36,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following New-order strategy for traversing a binary tree:\n\u2022 Visit the root;\n\u2022 Visit the right subtree using New-order;\n\u2022 Visit the left subtree using New-order;\nThe New-order traversal of the expression tree corresponding to the reverse polish expression\n3 4 * 5 - 2 \u02c6 6 7 * 1 + -\nis given by:",
+      "options": {
+        "A": "+ - 1 6 7 * 2 \u02c6 5 - 3 4 *",
+        "B": "- + 1 * 6 7 \u02c6 2 - 5 * 3 4",
+        "C": "- + 1 * 7 6 \u02c6 2 - 5 * 4 3",
+        "D": "1 7 6 * + 2 5 4 3 * - \u02c6 -"
+      },
+      "has_images": false,
+      "page_start": 35,
+      "page_end": 35,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q37_v2",
+      "question_number": 37,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the following program:\nint f(int *p, int n)\n{\nif (n \u2264 1) return 0;\nelse return max(f(p+1,n-1),p[0]-p[1]);\n}\nint main()\n{\nint a[] = {3,5,2,6,4};\nprintf(\"%d\", f(a,5));\n}\nNote: max(x,y) returns the maximum of x and y.\nThe value printed by this program is\n.",
+      "options": null,
+      "has_images": false,
+      "page_start": 35,
+      "page_end": 35,
+      "answer": "3.0 : 3.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q38_v2",
+      "question_number": 38,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Let A1,A2,A3, and A4 be four matrices of dimensions 10 \u00d7 5,5 \u00d7 20,20 \u00d7 10, and 10 \u00d7 5,\nrespectively. The minimum number of scalar multiplications required to \ufb01nd the product\nA1A2A3A4 using the basic matrix multiplication method is\n.\nCS(Set B)",
+      "options": null,
+      "has_images": false,
+      "page_start": 35,
+      "page_end": 35,
+      "answer": "1500.0 : 1500.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q40_v2",
+      "question_number": 40,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "The number of ways in which the numbers 1, 2, 3, 4, 5, 6, 7 can be inserted in an empty binary\nsearch tree, such that the resulting tree has height 6, is\n.\nNote: The height of a tree with a single node is 0.\nCS(Set B)",
+      "options": null,
+      "has_images": false,
+      "page_start": 36,
+      "page_end": 36,
+      "answer": "64.0 : 64.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q41_v2",
+      "question_number": 41,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "In an adjacency list representation of an undirected simple graph G = (V,E), each edge (u,v)\nhas two adjacency list entries: [v] in the adjacency list of u, and [u] in the adjacency list of\nv. These are called twins of each other. A twin pointer is a pointer from an adjacency list\nentry to its twin. If |E| = m and |V| = n, and the memory size is not a constraint, what is the\ntime complexity of the most ef\ufb01cient algorithm to set the twin pointer in each entry in each\nadjacency list?",
+      "options": {
+        "A": "\u0398(n2)",
+        "B": "\u0398(n+m)",
+        "C": "\u0398(m2)",
+        "D": "\u0398(n4)"
+      },
+      "has_images": false,
+      "page_start": 37,
+      "page_end": 37,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q42_v2",
+      "question_number": 42,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following two statements:\nI. If all states of an NFA are accepting states then the language accepted by the NFA is \u03a3\u2217.\nII. There exists a regular language A such that for all languages B, A\u2229B is regular.\nWhich one of the following is CORRECT?",
+      "options": {
+        "A": "Only I is true",
+        "B": "Only II is true",
+        "C": "Both I and II are true",
+        "D": "Both I and II are false"
+      },
+      "has_images": false,
+      "page_start": 37,
+      "page_end": 37,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q43",
+      "question_number": 43,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following languages:\nL1 = {anbmcn+m : m,n \u22651}\nL2 = {anbnc2n : n \u22651}\nWhich one of the following is TRUE?",
+      "options": {
+        "A": "Both L1 and L2 are context-free.",
+        "B": "L1 is context-free while L2 is not context-free.",
+        "C": "L2 is context-free while L1 is not context-free.",
+        "D": "Neither L1 nor L2 is context-free.\nCS(Set B)"
+      },
+      "has_images": false,
+      "page_start": 37,
+      "page_end": 37,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q44_v2",
+      "question_number": 44,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following languages.\nL1\n=\n{\u27e8M\u27e9| M takes at least 2016 steps on some input},\nL2\n=\n{\u27e8M\u27e9| M takes at least 2016 steps on all inputs} and\nL3\n=\n{\u27e8M\u27e9| M accepts \u03b5},\nwhere for each Turing machine M, \u27e8M\u27e9denotes a speci\ufb01c encoding of M. Which one of the\nfollowing is TRUE?",
+      "options": {
+        "A": "L1 is recursive and L2,L3 are not recursive",
+        "B": "L2 is recursive and L1,L3 are not recursive",
+        "C": "L1,L2 are recursive and L3 is not recursive",
+        "D": "L1,L2,L3 are recursive"
+      },
+      "has_images": false,
+      "page_start": 38,
+      "page_end": 38,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q45_v2",
+      "question_number": 45,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Which one of the following grammars is free from left recursion?",
+      "options": {
+        "A": "S\n\u2192\nAB\nA\n\u2192\nAa\n|\nb\nB\n\u2192\nc",
+        "B": "S\n\u2192\nAb\n|\nBb\n|\nc\nA\n\u2192\nBd\n|\n\u03b5\nB\n\u2192\ne",
+        "C": "S\n\u2192\nAa\n|\nB\nA\n\u2192\nBb\n|\nSc\n|\n\u03b5\nB\n\u2192\nd",
+        "D": "S\n\u2192\nAa\n|\nBb\n|\nc\nA\n\u2192\nBd\n|\n\u03b5\nB\n\u2192\nAe\n|\n\u03b5\nCS(Set B)"
+      },
+      "has_images": false,
+      "page_start": 38,
+      "page_end": 38,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q46_v2",
+      "question_number": 46,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "A student wrote two context-free grammars G1 and G2 for generating a single C-like array\ndeclaration. The dimension of the array is at least one. For example,\nint a[10][3];\nThe grammars use D as the start symbol, and use six terminal symbols int ; id [ ] num.\nGrammar G1\nGrammar G2\nD \u2192intL;\nD \u2192intL;\nL \u2192id[E\nL \u2192idE\nE \u2192num]\nE \u2192E[num]\nE \u2192num][E\nE \u2192[num]\nWhich of the grammars correctly generate the declaration mentioned above?",
+      "options": {
+        "A": "Both G1 and G2",
+        "B": "Only G1",
+        "C": "Only G2",
+        "D": "Neither G1 nor G2"
+      },
+      "has_images": false,
+      "page_start": 39,
+      "page_end": 39,
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q47_v2",
+      "question_number": 47,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the following processes, with the arrival time and the length of the CPU burst given\nin milliseconds. The scheduling algorithm used is preemptive shortest remaining-time \ufb01rst.\nProcess\nArrival Time\nBurst Time\nP1\n0\n10\nP2\n3\n6\nP3\n7\n1\nP4\n8\n3\nThe average turn around time of these processes is\nmilliseconds.\nCS(Set B)",
+      "options": null,
+      "has_images": false,
+      "page_start": 39,
+      "page_end": 39,
+      "answer": "8.2 : 8.3",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q48_v2",
+      "question_number": 48,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following two-process synchronization solution.\nProcess 0\n---------\nEntry: loop while (turn == 1);\n(critical section)\nExit:\nturn = 1;\nProcess 1\n----------\nEntry: loop while (turn == 0);\n(critical section)\nExit:\nturn = 0;\nThe shared variable turn is initialized to zero. Which one of the following is TRUE?",
+      "options": {
+        "A": "This is a correct two-process synchronization solution.",
+        "B": "This solution violates mutual exclusion requirement.",
+        "C": "This solution violates progress requirement.",
+        "D": "This solution violates bounded wait requirement."
+      },
+      "has_images": false,
+      "page_start": 40,
+      "page_end": 40,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q49_v2",
+      "question_number": 49,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider a non-negative counting semaphore S. The operation P(S) decrements S, and V(S)\nincrements S. During an execution, 20 P(S) operations and 12 V(S) operations are issued in\nsome order. The largest initial value of S for which at least one P(S) operation will remain\nblocked is\n.\nCS(Set B)",
+      "options": null,
+      "has_images": false,
+      "page_start": 40,
+      "page_end": 40,
+      "answer": "7.0 : 7.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q51_v2",
+      "question_number": 51,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "Consider the following database schedule with two transactions, T1 and T2.\nS = r2(X); r1(X); r2(Y); w1(X); r1(Y); w2(X); a1; a2\nwhere ri(Z) denotes a read operation by transaction Ti on a variable Z, wi(Z) denotes a write\noperation by Ti on a variable Z and ai denotes an abort by transaction Ti.\nWhich one of the following statements about the above schedule is TRUE?",
+      "options": {
+        "A": "S is non-recoverable",
+        "B": "S is recoverable, but has a cascading abort",
+        "C": "S does not have a cascading abort",
+        "D": "S is strict\nCS(Set B)"
+      },
+      "has_images": false,
+      "page_start": 41,
+      "page_end": 41,
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q52_v2",
+      "question_number": 52,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider the following database table named water_schemes :\nwater_schemes\nscheme_no\ndistrict_name\ncapacity\n1\nAjmer\n20\n1\nBikaner\n10\n2\nBikaner\n10\n3\nBikaner\n20\n1\nChuru\n10\n2\nChuru\n20\n1\nDungargarh\n10\nThe number of tuples returned by the following SQL query is\n.\nwith total(name, capacity) as\nselect district_name, sum(capacity)\nfrom water_schemes\ngroup by district_name\nwith total_avg(capacity) as\nselect avg(capacity)\nfrom total\nselect name\nfrom total, total_avg\nwhere total.capacity \u2265total_avg.capacity",
+      "options": null,
+      "has_images": false,
+      "page_start": 42,
+      "page_end": 42,
+      "answer": "2.0 : 2.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q53_v2",
+      "question_number": 53,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "A network has a data transmission bandwidth of 20\u00d7106 bits per second. It uses CSMA/CD\nin the MAC layer. The maximum signal propagation time from one node to another node is\n40 microseconds. The minimum size of a frame in the network is\nbytes.\nCS(Set B)",
+      "options": null,
+      "has_images": false,
+      "page_start": 42,
+      "page_end": 42,
+      "answer": "200.0 : 200.0",
+      "correct_options": null,
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q54_v2",
+      "question_number": 54,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "MCQ",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "question_text": "For the IEEE 802.11 MAC protocol for wireless communication, which of the following\nstatements is/are TRUE?\nI. At least three non-overlapping channels are available for transmissions.\nII. The RTS-CTS mechanism is used for collision detection.\nIII. Unicast frames are ACKed.",
+      "options": {
+        "A": "All I, II, and III",
+        "B": "I and III only",
+        "C": "II and III only",
+        "D": "II only"
+      },
+      "has_images": false,
+      "page_start": 43,
+      "page_end": 43,
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "explaination": ""
+    },
+    {
+      "id": "2016_CS_GA_Q55_v2",
+      "question_number": 55,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "question_type": "NAT",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "question_text": "Consider a 128\u00d7103 bits/second satellite communication link with one way propagation delay\nof 150 milliseconds. Selective retransmission (repeat) protocol is used on this link to send\ndata with a frame size of 1 kilobyte. Neglect the transmission time of acknowledgement. The\nminimum number of bits required for the sequence number \ufb01eld to achieve 100% utilization\nis\n.\nCS(Set B)\n\nQ. No Type\nSection\nKey\nMarks\n1\nMCQ\nGA\nB\n1\n2\nMCQ\nGA\nA\n1\n3\nMCQ\nGA\nC\n1\n4\nMCQ\nGA\nD\n1\n5\nMCQ\nGA\nB\n1\n6\nMCQ\nGA\nA\n2\n7\nMCQ\nGA\nD\n2\n8\nMCQ\nGA\nD\n2\n9\nMCQ\nGA\nC\n2\n10\nMCQ\nGA\nC\n2\n1\nNAT\nCS-2\n4.0 : 4.0\n1\n2\nNAT\nCS-2\n9.0 : 9.0\n1\n3\nNAT\nCS-2\n4.0 : 4.0\n1\n4\nMCQ\nCS-2\nC\n1\n5\nNAT\nCS-2\n0.55 : 0.55\n1\n6\nNAT\nCS-2\n0.124 : 0.126\n1\n7\nNAT\nCS-2\n-1.0 : -1.0\n1\n8\nMCQ\nCS-2\nC\n1\n9\nNAT\nCS-2\n1.0 : 1.0\n1\n10\nNAT\nCS-2\n16.0 : 16.0\n1\n11\nNAT\nCS-2\n31.0 : 31.0\n1\n12\nNAT\nCS-2\n30.0 : 30.0\n1\n13\nMCQ\nCS-2\nD\n1\n14\nMCQ\nCS-2\nC\n1\n15\nMCQ\nCS-2\nC\n1\n16\nNAT\nCS-2\n2.0 : 2.0\n1\n17\nMCQ\nCS-2\nC\n1\n18\nMCQ\nCS-2\nD\n1\n19\nMCQ\nCS-2\nB\n1\n20\nMCQ\nCS-2\nD\n1\n21\nMCQ\nCS-2\nA\n1\n22\nMCQ\nCS-2\nA\n1\n23\nMCQ\nCS-2\nA\n1\n24\nMCQ\nCS-2\nD\n1\n25\nMCQ\nCS-2\nC\n1\n26\nMCQ\nCS-2\nB\n2\n27\nMCQ\nCS-2\nD\n2\n28\nMCQ\nCS-2\nB\n2\n29\nNAT\nCS-2\n4.0 : 4.0\n2\n30\nNAT\nCS-2\n28.0 : 28.0\n2\n31\nNAT\nCS-2\n500.0 : 500.0\n2\n32\nNAT\nCS-2\n24.0 : 24.0\n2\n33\nNAT\nCS-2\n3.9 : 4.1\n2\n34\nNAT\nCS-2\n8.0 : 8.0\n2\n35\nMCQ\nCS-2\nC\n2\n36\nMCQ\nCS-2\nC\n2\n37\nNAT\nCS-2\n3.0 : 3.0\n2\n38\nNAT\nCS-2\n1500.0 : 1500.0\n2\n39\nNAT\nCS-2\n2.2 : 2.4\n2\n40\nNAT\nCS-2\n64.0 : 64.0\n2\n41\nMCQ\nCS-2\nB\n2\n42\nMCQ\nCS-2\nB\n2\n43\nMCQ\nCS-2\nB\n2\n44\nMCQ\nCS-2\nC\n2\n45\nMCQ\nCS-2\nB\n2\n46\nMCQ\nCS-2\nA\n2\n47\nNAT\nCS-2\n8.2 : 8.3\n2\n48\nMCQ\nCS-2\nC\n2\n49\nNAT\nCS-2\n7.0 : 7.0\n2\n50\nNAT\nCS-2\n30.0 : 30.0\n2\n51\nMCQ\nCS-2\nC\n2\n52\nNAT\nCS-2\n2.0 : 2.0\n2\n53\nNAT\nCS-2\n200.0 : 200.0\n2\n54\nMCQ\nCS-2\nB\n2\n55\nNAT\nCS-2\n4.0 : 4.0\n2",
+      "options": null,
+      "has_images": false,
+      "page_start": 43,
+      "page_end": 45,
+      "answer": "4.0 : 4.0",
+      "correct_options": null,
+      "explaination": ""
+    }
+  ]
+}
