@@ -164,7 +164,7 @@ def format_options(q):
         # NAT Question
         return "\\par\\vspace{6pt}\\noindent\\textbf{Your Answer:} \\fbox{\\rule{0pt}{1.3ex}\\hspace{3cm}}"
 
-    items = []
+    clean_opts = {}
     for opt_key in ["A", "B", "C", "D"]:
         if opt_key in options:
             val = options[opt_key]
@@ -172,26 +172,45 @@ def format_options(q):
             val = re.sub(r'Organising Institute:.*', '', str(val)).strip()
             val = re.sub(r'Organizing Institute:.*', '', val).strip()
             val = escape_latex_outside_math(val)
-            items.append(r"$\square$\ \textbf{(%s)} %s" % (opt_key, val))
+            val = val.replace("\n", r" \newline ")
+            clean_opts[opt_key] = val
 
-    if not items:
+    if not clean_opts:
         return ""
 
-    # Check if options are short enough for 2 columns or need stacked lines
-    max_len = max(len(it) for it in items)
-    if max_len < 35:
-        # 2 per line
-        chunks = []
-        if len(items) >= 2:
-            chunks.append(f"{items[0]} \\hfill {items[1]}")
-        if len(items) >= 4:
-            chunks.append(f"{items[2]} \\hfill {items[3]}")
-        elif len(items) == 3:
-            chunks.append(items[2])
-        return "\\par\\vspace{5pt}\\noindent " + " \\\\\n\\vspace{3pt}\n".join(chunks)
+    # Determine if 2-column tabular is suitable:
+    # All 4 options exist, none has newlines or is too long (> 30 chars)
+    is_short_2col = (
+        len(clean_opts) == 4
+        and all(len(v) < 32 for v in clean_opts.values())
+        and all(r"\newline" not in v for v in clean_opts.values())
+    )
+
+    if is_short_2col:
+        # Laser-straight 2-column alignment
+        a, b = clean_opts["A"], clean_opts["B"]
+        c, d = clean_opts["C"], clean_opts["D"]
+        return (
+            "\\par\\vspace{6pt}\\noindent\n"
+            "\\begin{tabular}{@{}p{0.48\\linewidth}@{\\hspace{0.04\\linewidth}}p{0.48\\linewidth}@{}}\n"
+            f"$\\square$\\ \\textbf{{(A)}} {a} & $\\square$\\ \\textbf{{(B)}} {b} \\\\\n"
+            f"\\addlinespace[3pt]\n"
+            f"$\\square$\\ \\textbf{{(C)}} {c} & $\\square$\\ \\textbf{{(D)}} {d}\n"
+            "\\end{tabular}"
+        )
     else:
-        # Stacked vertically
-        return "\\par\\vspace{5pt}\\noindent " + " \\\\\n\\vspace{3pt}\n\\noindent ".join(items)
+        # Laser-straight 1-column stacked alignment
+        rows = []
+        for k in ["A", "B", "C", "D"]:
+            if k in clean_opts:
+                rows.append(f"$\\square$\\ \\textbf{{({k})}} {clean_opts[k]}")
+        rows_tex = " \\\\\n\\addlinespace[3pt]\n".join(rows)
+        return (
+            "\\par\\vspace{6pt}\\noindent\n"
+            "\\begin{tabular}{@{}p{0.98\\linewidth}@{}}\n"
+            f"{rows_tex}\n"
+            "\\end{tabular}"
+        )
 
 def format_solution_panel(q):
     ans = q.get("answer", "").strip()
@@ -364,21 +383,16 @@ Practice Recommendation: Use an opaque sheet of paper or ruler to cover the righ
         box_tex = "\n".join([
             r"\noindent",
             r"\begin{tcolorbox}[",
-            r"    enhanced,",
-            r"    standard jigsaw,",
+            r"    blanker,",
             r"    sidebyside,",
             r"    sidebyside align=top,",
             r"    lefthand width=0.55\textwidth,",
-            r"    opacityback=0,",
-            r"    opacitybacklower=0,",
-            r"    colframe=black!40,",
-            r"    arc=0.8mm,",
-            r"    boxrule=0.4pt,",
-            r"    top=4pt, bottom=4pt, left=5pt, right=5pt,",
-            r"    middle=5pt",
+            r"    segmentation style={draw=black!40, line width=0.4pt},",
+            r"    top=4pt, bottom=4pt, left=0pt, right=0pt,",
+            r"    middle=12pt",
             r"]",
             box_header,
-            r"\vspace{1pt}\hrule height 0.3pt\vspace{3pt}",
+            r"\vspace{2pt}\hrule height 0.3pt\vspace{4pt}",
             "",
             q_body,
             "",
@@ -389,7 +403,7 @@ Practice Recommendation: Use an opaque sheet of paper or ruler to cover the righ
             sol_panel,
             "",
             r"\end{tcolorbox}",
-            r"\vspace{-4pt}"
+            r"\vspace{6pt}\hrule height 0.35pt\vspace{6pt}"
         ])
         tex.append(box_tex)
 
