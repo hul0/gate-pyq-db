@@ -216,18 +216,24 @@ def format_solution_panel(q):
     ]
     return "\n".join([l for l in lines if l])
 
-def generate_latex_document(paper_data):
+def generate_latex_document(paper_data, abs_logo_path):
     paper_id = paper_data.get("paper_id", "GATE")
     year = paper_data.get("year", 2025)
     session = paper_data.get("session", "CS2")
     subject = paper_data.get("subject", "Computer Science and Information Technology")
     questions = paper_data.get("questions", [])
 
+    # Escape logo path for LaTeX (convert backslashes to forward slashes)
+    logo_path_latex = abs_logo_path.replace("\\", "/")
+
     tex = [
         r"""\documentclass[a4paper,10pt]{article}
 \usepackage{amsmath,amssymb}
 \usepackage{fontspec}
 \setmainfont{Liberation Serif}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{tikz}
 \usepackage[most]{tcolorbox}
 \usepackage{geometry}
 \usepackage{fancyhdr}
@@ -245,12 +251,28 @@ def generate_latex_document(paper_data):
     right=1.2cm
 }
 
+% Persistent Unremovable Canvas Watermark on Every Page (Shared XObject)
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=8cm]{""" + logo_path_latex + r"""} \\[-0.5em]
+        {\fontsize{18}{22}\selectfont\bfseries\scshape www.studiva.co.in}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.12] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
 % Header and Footer
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\small\scshape GATE """ + f"{year} {subject} ({session})" + r"""}
 \fancyhead[R]{\small\scshape Practice Compendium \& Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026 Rupam Ghosh \& Studiva}}
 \fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\scriptsize\texttt{www.studiva.co.in}}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
@@ -266,16 +288,51 @@ def generate_latex_document(paper_data):
 
 \begin{document}
 
-% Title Block
+% ==================== PAGE 1: DEDICATED IMPRINT & COPYRIGHT PAGE ====================
+\thispagestyle{empty}
+\vspace*{0.5cm}
 \begin{center}
-    {\LARGE \textbf{GATE """ + str(year) + r""": Computer Science \& IT}}\\[0.25em]
-    {\large \textbf{Session """ + str(session) + r""" --- Problem Compendium with Side-by-Side Solutions}}\\[0.4em]
-    {\footnotesize \textsc{Organizing Institute: IIT Roorkee} \quad$\cdot$\quad \textsc{Reference: GATE 2026 Syllabus}}\\[0.4em]
-    \rule{\textwidth}{0.6pt}
-    \vspace{2pt}
-    {\footnotesize \textit{Practice Note: Cover the right column with a sheet of paper or ruler during mock attempts; tick your answers in the checkboxes on the left.}}
-    \vspace{-4pt}
+    \includegraphics[width=2.5cm]{""" + logo_path_latex + r"""}\\[0.6em]
+    {\LARGE \textbf{GATE COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTIONS COMPENDIUM}}\\[0.2em]
+    {\normalsize \textsc{Session """ + str(session) + r""" $\cdot$ Examination Year """ + str(year) + r"""}}\\[1.2em]
+    \rule{0.6\textwidth}{0.6pt}
 \end{center}
+
+\vspace{1em}
+\noindent\begin{tabular}{ll}
+\textbf{Author / Compiler:} & Rupam Ghosh \\
+\textbf{Publisher \& Platform:} & Studiva (\texttt{www.studiva.co.in}) \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Standard Edition (2026) \\
+\textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
+\end{tabular}
+
+\vspace{1.5em}
+\begin{tcolorbox}[colback=white, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva}.\\[0.6em]
+\textbf{Terms of Use \& Attribution Rules:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
+    \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
+\end{itemize}
+\vspace{0.6em}
+\textbf{Fair Use Disclaimer:}\\
+The underlying examination questions originate from the Graduate Aptitude Test in Engineering (GATE), conducted by the Indian Institutes of Technology (IITs) and Indian Institute of Science (IISc). Question texts are reproduced for non-commercial educational study under Fair Use doctrines. No copyright is claimed over the original GATE examination question texts.
+\end{tcolorbox}
+
+\vspace{1.2em}
+\begin{center}
+\small\itshape
+Practice Recommendation: Use an opaque sheet of paper or ruler to cover the right-hand column during mock attempts. Tick your chosen answers directly in the check boxes on the left, then slide the cover to check the solution and hint.
+\end{center}
+
+\newpage
+% ==================== PAGE 2 ONWARDS: QUESTION COMPENDIUM ====================
 """
     ]
 
@@ -382,11 +439,24 @@ def main():
         print(f"full_paper.json not found in {paper_dir}. Running generate_full_paper_json.py...")
         subprocess.run([sys.executable, os.path.join(root_dir, "scripts", "generate_full_paper_json.py"), paper_id], check=True)
 
+    # Ensure PNG logo exists from webp
+    assets_dir = os.path.join(root_dir, "assets")
+    png_logo_path = os.path.join(assets_dir, "studiva_butterfly_icon_transparent.png")
+    webp_logo_path = os.path.join(assets_dir, "studiva_butterfly_icon_transparent.webp")
+    if not os.path.exists(png_logo_path) and os.path.exists(webp_logo_path):
+        try:
+            from PIL import Image
+            im = Image.open(webp_logo_path)
+            im.save(png_logo_path)
+            print(f"Converted {webp_logo_path} to {png_logo_path}")
+        except Exception as e:
+            print(f"Notice: Pillow conversion warning: {e}")
+
     with open(full_paper_path, "r", encoding="utf-8") as f:
         paper_data = json.load(f)
 
     print(f"Generating LaTeX source for {paper_id} ({len(paper_data.get('questions', []))} questions)...")
-    tex_content = generate_latex_document(paper_data)
+    tex_content = generate_latex_document(paper_data, png_logo_path)
 
     file_basename = f"{paper_id}_textbook"
     pdf_path = compile_latex_to_pdf(tex_content, paper_dir, file_basename)

@@ -28,26 +28,29 @@ This project is designed to aid students, researchers, and educators by offering
 The **Creative Commons Attribution 4.0 International (CC BY 4.0)** license governing this repository applies strictly to:
 - The original software source code (parsers, OCR extractors, image omission detectors, clean-up routines).
 - The JSON schema designs and validation logic (`schema/gate_paper_schema.json`, Pydantic models).
-- The structural database organization, metadata curation, and formatting methodology developed by Rupam Ghosh.
+- The structural database organization, metadata curation, and formatting methodology developed by Rupam Ghosh and Studiva.
 
-The CC BY 4.0 license does **not** grant or convey copyright over the underlying examination questions themselves.
+The license does **not** grant or convey copyright over the underlying examination questions themselves.
 
 ---
 
 ## 4. Non-Affiliation and Trademarks
 
 - "GATE" and "Graduate Aptitude Test in Engineering" are designations associated with the National Coordination Board (NCB) - GATE and the Ministry of Education, Government of India.
-- This repository is not endorsed by, sponsored by, affiliated with, or officially recognized by the GATE Committee, any IIT, IISc Bangalore, or the Government of India.
+- This repository is an independent educational initiative by Rupam Ghosh and Studiva. It is not endorsed by, sponsored by, affiliated with, or officially recognized by the GATE Committee, any IIT, IISc Bangalore, or the Government of India.
 - Any references to institute names, examination sessions, or course codes are made solely for identification, descriptive, and educational categorization purposes.
 
 ---
 
 ## 5. Takedown Policy and Contact
 
-If you are a copyright owner or authorized agent thereof and believe that any content in this repository infringes upon your copyright or intellectual property rights, please contact the maintainer or open an issue on GitHub:
+If you are a copyright owner or authorized agent thereof and believe that any content in this repository infringes upon your copyright or intellectual property rights, please contact the rights holders:
 
-- Repository: [https://github.com/hul0/gate-pyq-db](https://github.com/hul0/gate-pyq-db)
-- Issue Tracker: [https://github.com/hul0/gate-pyq-db/issues](https://github.com/hul0/gate-pyq-db/issues)
+- **Authors / Rights Holders:** Rupam Ghosh & Studiva
+- **Platform Website:** [https://www.studiva.co.in](https://www.studiva.co.in)
+- **Contact Email:** contact@studiva.co.in
+- **Repository:** [https://github.com/hul0/gate-pyq-db](https://github.com/hul0/gate-pyq-db)
+- **Issue Tracker:** [https://github.com/hul0/gate-pyq-db/issues](https://github.com/hul0/gate-pyq-db/issues)
 
-Upon receipt of a valid and substantiated notification, the maintainers will promptly review the notice and remove or disable access to the relevant content in accordance with applicable laws.
+Upon receipt of a valid and substantiated notification, the maintainers will promptly review the notice and take appropriate corrective action in accordance with applicable laws.
 

@@ -20,8 +20,8 @@ htmlcov/
 # Note: Raw question paper PDFs are excluded from the repository.
 # Processed JSON databases are stored in output/.
 CS/
-*.pdf
 answer_keys/
+temp/
 
 # Environment files and credentials
 .env

@@ -2,6 +2,9 @@
 \usepackage{amsmath,amssymb}
 \usepackage{fontspec}
 \setmainfont{Liberation Serif}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{tikz}
 \usepackage[most]{tcolorbox}
 \usepackage{geometry}
 \usepackage{fancyhdr}
@@ -19,12 +22,28 @@
     right=1.2cm
 }
 
+% Persistent Unremovable Canvas Watermark on Every Page (Shared XObject)
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=8cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.png} \\[-0.5em]
+        {\fontsize{18}{22}\selectfont\bfseries\scshape www.studiva.co.in}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.12] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
 % Header and Footer
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\small\scshape GATE 2025 Computer Science and Information Technology (CS2)}
 \fancyhead[R]{\small\scshape Practice Compendium \& Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026 Rupam Ghosh \& Studiva}}
 \fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\scriptsize\texttt{www.studiva.co.in}}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
@@ -40,16 +59,51 @@
 
 \begin{document}
 
-% Title Block
+% ==================== PAGE 1: DEDICATED IMPRINT & COPYRIGHT PAGE ====================
+\thispagestyle{empty}
+\vspace*{0.5cm}
 \begin{center}
-    {\LARGE \textbf{GATE 2025: Computer Science \& IT}}\\[0.25em]
-    {\large \textbf{Session CS2 --- Problem Compendium with Side-by-Side Solutions}}\\[0.4em]
-    {\footnotesize \textsc{Organizing Institute: IIT Roorkee} \quad$\cdot$\quad \textsc{Reference: GATE 2026 Syllabus}}\\[0.4em]
-    \rule{\textwidth}{0.6pt}
-    \vspace{2pt}
-    {\footnotesize \textit{Practice Note: Cover the right column with a sheet of paper or ruler during mock attempts; tick your answers in the checkboxes on the left.}}
-    \vspace{-4pt}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.png}\\[0.6em]
+    {\LARGE \textbf{GATE COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTIONS COMPENDIUM}}\\[0.2em]
+    {\normalsize \textsc{Session CS2 $\cdot$ Examination Year 2025}}\\[1.2em]
+    \rule{0.6\textwidth}{0.6pt}
 \end{center}
+
+\vspace{1em}
+\noindent\begin{tabular}{ll}
+\textbf{Author / Compiler:} & Rupam Ghosh \\
+\textbf{Publisher \& Platform:} & Studiva (\texttt{www.studiva.co.in}) \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Standard Edition (2026) \\
+\textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
+\end{tabular}
+
+\vspace{1.5em}
+\begin{tcolorbox}[colback=white, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva}.\\[0.6em]
+\textbf{Terms of Use \& Attribution Rules:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
+    \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
+\end{itemize}
+\vspace{0.6em}
+\textbf{Fair Use Disclaimer:}\\
+The underlying examination questions originate from the Graduate Aptitude Test in Engineering (GATE), conducted by the Indian Institutes of Technology (IITs) and Indian Institute of Science (IISc). Question texts are reproduced for non-commercial educational study under Fair Use doctrines. No copyright is claimed over the original GATE examination question texts.
+\end{tcolorbox}
+
+\vspace{1.2em}
+\begin{center}
+\small\itshape
+Practice Recommendation: Use an opaque sheet of paper or ruler to cover the right-hand column during mock attempts. Tick your chosen answers directly in the check boxes on the left, then slide the cover to check the solution and hint.
+\end{center}
+
+\newpage
+% ==================== PAGE 2 ONWARDS: QUESTION COMPENDIUM ====================
 
 \vspace{6pt}
 \subsection*{General Aptitude}

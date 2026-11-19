@@ -131,6 +131,14 @@ Each question object in any category slice, monolithic paper file, or faceted vi
 * **Decision:** Standardize on **Times Roman / Liberation Serif** (`\usepackage{fontspec}`, `\setmainfont{Liberation Serif}`) via XeLaTeX.
 * **Rationale:** Selected after evaluating 5 textbook variations. Times Roman is the universally recognized standard for academic exam papers and STEM university textbooks (Pearson, McGraw-Hill, Springer), offering maximum readability, compact line length, and sharp mathematical typesetting.
 
+### ADR-08: Copyright, Imprint Page, and Anti-Tampering Watermark Policy
+* **Decision:**
+  1. **Intellectual Property Ownership:** All software, taxonomy, categorized datasets, LaTeX formatting, hints, and PDF compendiums are the proprietary copyright of **Rupam Ghosh** and **Studiva** ([www.studiva.co.in](https://www.studiva.co.in)), licensed under a Proprietary Educational License.
+  2. **Dedicated Imprint Page (Page 1):** Every generated textbook PDF must begin with a dedicated Imprint & Copyright Page setting out title details, author/publisher identity (Rupam Ghosh & Studiva, `contact@studiva.co.in`), terms of use, mandatory attribution requirements, commercial use prohibition, and fair use disclaimer. Problem content starts strictly on Page 2.
+  3. **Unremovable Background Watermark:** Every single page must feature the transparent Studiva butterfly icon (`assets/studiva_butterfly_icon_transparent.png`, width $8\,\text{cm}$, opacity $12\%$) with `www.studiva.co.in` underneath, embedded directly into the page content stream using `\AddToShipoutPictureBG` and `tikz`. The watermark must be integrated into the page graphics stream rather than an optional PDF layer/OCG to prevent programmatic layer stripping.
+  4. **Running Footer Attribution:** Every page must include running footer attribution: `Copyright © 2026 Rupam Ghosh & Studiva` on the left and `www.studiva.co.in` on the right.
+* **Rationale:** Protects author and organizational intellectual property across public distributions and prints while maintaining student educational access and preventing uncredited scraping.
+
 ---
 
 ## 5. Tooling & Automation Pipeline
@@ -156,3 +164,4 @@ To maintain dataset integrity, any future changes must adhere to these rules:
 2. **Never overwrite raw text:** Always store edited/LaTeX representations in `_latex` fields.
 3. **Keep `manifest.json` in sync:** Run `scripts/sync_dataset.py` whenever paper question JSONs are edited or enriched.
 4. **Preserve print standards:** Textbook PDF generation must remain strictly monochrome, maintaining the side-by-side cover-and-practice layout and Variation A font.
+
