@@ -32,7 +32,7 @@ Adhere strictly to the architecture and standards defined in docs/SPECIFICATIONS
 5. TEXTBOOK PDF GENERATION:
    Run `python3 scripts/generate_paper_textbook.py <PAPER_ID>` to compile the print-ready textbook compendium:
    - Typeface: Variation A (Times Roman / Liberation Serif via fontspec).
-   - Layout: Frameless side-by-side design (55% question on left, 45% solution on right) separated by a dashed vertical divider (dashed, 0.4pt).
+   - Layout: Frameless side-by-side design (55% question on left, 45% solution on right) separated by an explicit TikZ underlay dashed vertical divider (black!80, 0.8pt, dash pattern=on 4pt off 3pt).
    - Alignment: Laser-aligned checkboxes using fixed-width tabular grids.
    - Page 1 Imprint: Dedicated book copyright page with Studiva logo, Rupam Ghosh & Studiva metadata, terms of use, and fair use disclaimer.
    - Watermark: Persistent unremovable canvas background watermark (Studiva butterfly logo + www.studiva.co.in at 12% opacity) on every page.
@@ -75,8 +75,9 @@ pdftotext -f 1 -l 2 dataset/papers/<PAPER_ID>/<PAPER_ID>_textbook.pdf - | head -
 Before committing any paper set, verify the following contracts:
 - [ ] **Dual-Field Architecture:** Never overwrite raw `question_text` or `options`. Only write LaTeX representations to `question_text_latex` and `options_latex`.
 - [ ] **Negative Marking Invariant:** `negative_marks` must strictly be `0.0` for all MSQ and NAT questions (`0.33` for 1-mark MCQ, `0.66` for 2-mark MCQ).
-- [ ] **Dashed Vertical Divider:** The vertical divider between questions and solutions must use `segmentation style={draw=black!40, line width=0.4pt, dashed}`.
+- [ ] **Dashed Vertical Divider:** The vertical divider between questions and solutions must be explicitly drawn via `underlay` with `black!80`, `0.8pt`, and `dash pattern=on 4pt off 3pt` (do not rely on `segmentation style` with `blanker`).
 - [ ] **Transparent Background:** Boxes must retain `blanker` and `opacityback=0` so the watermark remains visible through every question.
 - [ ] **Option Checkbox Alignment:** Checkboxes must strictly use fixed-width `tabular` columns (`p{0.48\linewidth}` or `p{0.98\linewidth}`) to guarantee straight alignment.
 - [ ] **Page 1 Imprint:** Every PDF must feature the standalone copyright imprint on Page 1 before questions begin on Page 2.
 - [ ] **No Emojis:** Never use emojis in code, LaTeX source, commit messages, or documentation.
+
