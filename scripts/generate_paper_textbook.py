@@ -387,7 +387,7 @@ Practice Recommendation: Use an opaque sheet of paper or ruler to cover the righ
             r"    sidebyside,",
             r"    sidebyside align=top,",
             r"    lefthand width=0.55\textwidth,",
-            r"    segmentation style={draw=black!40, line width=0.4pt},",
+            r"    segmentation style={draw=black!40, line width=0.4pt, dashed},",
             r"    top=4pt, bottom=4pt, left=0pt, right=0pt,",
             r"    middle=12pt",
             r"]",
