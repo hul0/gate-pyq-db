@@ -309,7 +309,7 @@ def generate_latex_document(paper_data, abs_logo_path):
 \end{tabular}
 
 \vspace{1.5em}
-\begin{tcolorbox}[colback=white, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\begin{tcolorbox}[enhanced, standard jigsaw, opacityback=0, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
 \textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
 Copyright \copyright\ 2026 Rupam Ghosh \& Studiva. All Rights Reserved.\\[0.5em]
 This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva}.\\[0.6em]
@@ -364,12 +364,14 @@ Practice Recommendation: Use an opaque sheet of paper or ruler to cover the righ
         box_tex = "\n".join([
             r"\noindent",
             r"\begin{tcolorbox}[",
+            r"    enhanced,",
+            r"    standard jigsaw,",
             r"    sidebyside,",
             r"    sidebyside align=top,",
             r"    lefthand width=0.55\textwidth,",
-            r"    colback=white,",
+            r"    opacityback=0,",
+            r"    opacitybacklower=0,",
             r"    colframe=black!40,",
-            r"    colbacklower=white,",
             r"    arc=0.8mm,",
             r"    boxrule=0.4pt,",
             r"    top=4pt, bottom=4pt, left=5pt, right=5pt,",
