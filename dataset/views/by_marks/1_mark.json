@@ -18189,10 +18189,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "I/O interface: interrupt and DMA mode",
+      "difficulty_level": "Medium",
+      "explaination": "Processor clock frequency is $4\\text{ MHz} = 4 \\times 10^6$ cycles/s. DMA steals 1\\% of cycles $= 0.01 \\times 4 \\times 10^6 = 40,000$ cycles/s. In each stolen cycle, 8 bytes ($8 \\times 8 = 64$ bits) are transferred. Transfer rate $= 40,000 \\times 64 = 2,560,000$ bps $= 25,60,000$ bps.",
       "tags": [
         "1_mark",
         "2024",
@@ -18203,7 +18203,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a computer with a 4 MHz processor. Its DMA controller can transfer 8 bytes in 1 cycle from a device to main memory through cycle stealing at regular intervals. Which one of the following is the data transfer rate (in bits per second) of the DMA controller if 1\\% of the processor cycles are used for DMA?",
+      "options_latex": {
+        "A": "2,56,000",
+        "B": "3,200",
+        "C": "25,60,000",
+        "D": "32,000"
+      }
     },
     {
       "id": "2024_CS2_CS_Q12",
@@ -18233,10 +18240,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Propositional and first order logic",
+      "difficulty_level": "Easy",
+      "explaination": "The statement is: 'Fail grade cannot be given ($\\neg p$) when student scores more than 50\\% marks ($q$)', which means 'If $q$, then $\\neg p$'. In propositional logic, this is directly formalized as $q \\to \\neg p$.",
       "tags": [
         "1_mark",
         "2024",
@@ -18247,7 +18254,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $p$ and $q$ be the following propositions:\n$p$: Fail grade can be given.\n$q$: Student scores more than 50\\% marks.\nConsider the statement: ``Fail grade cannot be given when student scores more than 50\\% marks.''\nWhich one of the following is the CORRECT representation of the above statement in propositional logic?",
+      "options_latex": {
+        "A": "$q \\to \\neg p$",
+        "B": "$q \\to p$",
+        "C": "$p \\to q$",
+        "D": "$\\neg p \\to q$"
+      }
     },
     {
       "id": "2024_CS2_CS_Q13",
@@ -18277,10 +18291,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Medium",
+      "explaination": "In `main()`, `f(g(10), h(20))` evaluates parameters from right to left: `h(20)` executes first, printing `20` and returning 20 ($y = 20$), then `g(10)` executes, printing `10` and returning 10 ($x = 10$). Inside `f`, `g(x)` executes printing `10`, followed by `h(y)` printing `20`. The complete printed sequence is `20101020`.",
       "tags": [
         "1_mark",
         "2024",
@@ -18291,7 +18305,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C program. Assume parameters to a function are evaluated from right to left.\n\\begin{verbatim}\n#include <stdio.h>\nint g(int p) { printf(\"%d\", p); return p; }\nint h(int q) { printf(\"%d\", q); return q; }\nvoid f(int x, int y) {\n    g(x);\n    h(y);\n}\nint main() {\n    f(g(10), h(20));\n}\n\\end{verbatim}\nWhich one of the following is the output of the program?",
+      "options_latex": {
+        "A": "20101020",
+        "B": "10202010",
+        "C": "20102010",
+        "D": "10201020"
+      }
     },
     {
       "id": "2024_CS2_CS_Q14",
@@ -18321,10 +18342,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Number representations and computer arithmetic (fixed and floating point)",
+      "difficulty_level": "Easy",
+      "explaination": "In IEEE 754 single precision: sign bit 0 means positive. The exponent field 11111111 is reserved for $\\pm\\infty$ and NaN. The largest finite representable number has the maximum non-reserved biased exponent, which is $254 = 11111110_2$, with all mantissa bits set to 1 ($111\\dots1$), corresponding to option B.",
       "tags": [
         "1_mark",
         "2024",
@@ -18335,7 +18356,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The format of a single-precision floating-point number as per the IEEE 754 standard is:\nSign (1 bit), Exponent (8 bits), Mantissa (23 bits).\nChoose the largest floating-point number among the following options.",
+      "options_latex": {
+        "A": "Sign: 0, Exponent: 0111 1111, Mantissa: 1111 1111 1111 1111 1111 111",
+        "B": "Sign: 0, Exponent: 1111 1110, Mantissa: 1111 1111 1111 1111 1111 111",
+        "C": "Sign: 0, Exponent: 1111 1111, Mantissa: 1111 1111 1111 1111 1111 111",
+        "D": "Sign: 0, Exponent: 0111 1111, Mantissa: 0000 0000 0000 0000 0000 000"
+      }
     },
     {
       "id": "2024_CS2_CS_Q15",
@@ -18365,10 +18393,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Combinatorics: counting, recurrence relations, generating functions",
+      "difficulty_level": "Easy",
+      "explaination": "The characteristic equation is $r^2 - 5r + 6 = 0 \\implies (r - 2)(r - 3) = 0$, with roots $r = 2, 3$. The general solution is $T(n) = c_1 2^n + c_2 3^n$. Using initial conditions $T(0) = 1, T(1) = 2$: $c_1 + c_2 = 1$ and $2c_1 + 3c_2 = 2 \\implies c_1 = 1, c_2 = 0$. Thus, $T(n) = 2^n = \\Theta(2^n)$.",
       "tags": [
         "1_mark",
         "2024",
@@ -18379,7 +18407,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $T(n)$ be the recurrence relation defined as follows:\n\\[ T(0) = 1, \\quad T(1) = 2, \\quad \\text{and} \\quad T(n) = 5T(n-1) - 6T(n-2) \\quad \\text{for } n \\ge 2 \\]\nWhich one of the following statements is TRUE?",
+      "options_latex": {
+        "A": "$T(n) = \\Theta(2^n)$",
+        "B": "$T(n) = \\Theta(n 2^n)$",
+        "C": "$T(n) = \\Theta(3^n)$",
+        "D": "$T(n) = \\Theta(n 3^n)$"
+      }
     },
     {
       "id": "2024_CS2_CS_Q16",
@@ -18409,10 +18444,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Calculus",
+      "subtopic": "Integration",
+      "difficulty_level": "Medium",
+      "explaination": "Let $I = \\int_0^2 f(x) \\, dx$. Using the property $\\int_0^a f(x) \\, dx = \\int_0^a f(a - x) \\, dx$, $I = \\int_0^2 f(2 - x) \\, dx$. Adding both gives $2I = \\int_0^2 [f(x) + f(2 - x)] \\, dx$. Since $f(x) + f(2 - x) = 1$, we have $2I = \\int_0^2 1 \\, dx = 2 \\implies I = 1$.",
       "tags": [
         "1_mark",
         "2024",
@@ -18423,7 +18458,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $f(x)$ be a continuous function from $\\mathbb{R}$ to $\\mathbb{R}$ such that\n\\[ f(x) = 1 - f(2 - x) \\]\nWhich one of the following options is the CORRECT value of $\\int_0^2 f(x) \\, dx$?",
+      "options_latex": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "-1"
+      }
     },
     {
       "id": "2024_CS2_CS_Q17",
@@ -18453,10 +18495,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Graphs: connectivity, matching, colouring",
+      "difficulty_level": "Medium",
+      "explaination": "If $A = A^{-1}$, then $A^2 = I$. The $(i, j)$-th entry of $A^2$ is the number of walks of length 2 between vertex $i$ and vertex $j$. Thus $(A^2)_{ii} = \\text{deg}(i) = 1$ for every vertex $i$, and $(A^2)_{ij} = 0$ for $i \\neq j$. Every vertex has degree exactly 1, which defines a 1-regular graph, i.e., a perfect matching.",
       "tags": [
         "1_mark",
         "2024",
@@ -18467,7 +18509,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $A$ be the adjacency matrix of a simple undirected graph $G$. Suppose $A$ is its own inverse. Which one of the following statements is always TRUE?",
+      "options_latex": {
+        "A": "$G$ is a cycle",
+        "B": "$G$ is a perfect matching",
+        "C": "$G$ is a complete graph",
+        "D": "There is no such graph $G$"
+      }
     },
     {
       "id": "2024_CS2_CS_Q18",
@@ -18497,10 +18546,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Probability and Statistics",
+      "subtopic": "Conditional probability and Bayes theorem",
+      "difficulty_level": "Easy",
+      "explaination": "When six unbiased 6-faced dice are rolled, total outcomes are $6^6$. The number of outcomes where all 6 faces are distinct is $6! = 720$. The probability is $\\frac{6!}{6^6} = \\frac{720}{46656} = \\frac{5}{324}$.",
       "tags": [
         "1_mark",
         "2024",
@@ -18511,7 +18560,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "When six unbiased dice are rolled simultaneously, the probability of getting all distinct numbers (i.e., 1, 2, 3, 4, 5, and 6) is:",
+      "options_latex": {
+        "A": "$\\frac{1}{324}$",
+        "B": "$\\frac{5}{324}$",
+        "C": "$\\frac{7}{324}$",
+        "D": "$\\frac{11}{324}$"
+      }
     },
     {
       "id": "2024_CS2_CS_Q19",
@@ -18541,10 +18597,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty_level": "Easy",
+      "explaination": "The Durability property of the ACID paradigm guarantees that once a transaction has committed successfully, its updates and effects survive permanently in non-volatile storage, even in the event of a subsequent system crash.",
       "tags": [
         "1_mark",
         "2024",
@@ -18555,7 +18611,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Once the DBMS informs the user that a transaction has been successfully completed, its effect should persist even if the system crashes before all its changes are reflected on disk. This property is called:",
+      "options_latex": {
+        "A": "durability",
+        "B": "atomicity",
+        "C": "consistency",
+        "D": "isolation"
+      }
     },
     {
       "id": "2024_CS2_CS_Q20",
@@ -18585,10 +18648,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "ER-model",
+      "difficulty_level": "Easy",
+      "explaination": "A weak entity cannot exist without its identifying (owner) entity. Therefore, every instance of the weak entity set must be associated with an owner entity instance via the identifying relationship, mandating total participation of the weak entity set.",
       "tags": [
         "1_mark",
         "2024",
@@ -18599,7 +18662,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In the context of owner and weak entity sets in the ER (Entity-Relationship) data model, which one of the following statements is TRUE?",
+      "options_latex": {
+        "A": "The weak entity set MUST have total participation in the identifying relationship",
+        "B": "The owner entity set MUST have total participation in the identifying relationship",
+        "C": "Both weak and owner entity sets MUST have total participation in the identifying relationship",
+        "D": "Neither weak entity set nor owner entity set MUST have total participation in the identifying relationship"
+      }
     },
     {
       "id": "2024_CS2_CS_Q21",
@@ -18629,10 +18699,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Easy",
+      "explaination": "Lexical Analyzer outputs tokens (P - 2). Syntax Analyzer constructs parse trees (Q - 3). Intermediate Code Generator generates abstract syntax trees or intermediate representations (R - 1). Code Optimizer performs constant folding (S - 4). Thus, the correct matching is P - 2; Q - 3; R - 1; S - 4.",
       "tags": [
         "1_mark",
         "2024",
@@ -18643,7 +18713,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following two sets:\n\n\\begin{tabular}{ll}\n\\textbf{Set X} & \\textbf{Set Y} \\\\\nP. Lexical Analyzer & 1. Abstract Syntax Tree \\\\\nQ. Syntax Analyzer & 2. Token \\\\\nR. Intermediate Code Generator & 3. Parse Tree \\\\\nS. Code Optimizer & 4. Constant Folding\n\\end{tabular}\n\nWhich one of the following options is the CORRECT match from Set X to Set Y?",
+      "options_latex": {
+        "A": "P -- 4; Q -- 1; R -- 3; S -- 2",
+        "B": "P -- 2; Q -- 3; R -- 1; S -- 4",
+        "C": "P -- 2; Q -- 1; R -- 3; S -- 4",
+        "D": "P -- 4; Q -- 3; R -- 2; S -- 1"
+      }
     },
     {
       "id": "2024_CS2_CS_Q23",
@@ -18673,10 +18750,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Concept of layering: OSI and TCP/IP Protocol Stacks",
+      "difficulty_level": "Easy",
+      "explaination": "In an end-to-end IP network, the destination IP address remains invariant throughout transit and is always the IP address of final host Y. The destination MAC address changes hop-by-hop and is set to the MAC address of the next-hop router R (not switch S, which operates transparently at Layer 2).",
       "tags": [
         "1_mark",
         "2024",
@@ -18687,7 +18764,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Node X has a TCP connection open to node Y. The packets from X to Y go through an intermediate IP router R. Ethernet switch S is the first switch on the network path between X and R. Consider a packet sent from X to Y over this connection.\nWhich of the following statements is/are TRUE about the destination addresses?",
+      "options_latex": {
+        "A": "The destination IP address is the IP address of R",
+        "B": "The destination IP address is the IP address of Y",
+        "C": "The destination MAC address is the MAC address of S",
+        "D": "The destination MAC address is the MAC address of Y"
+      }
     },
     {
       "id": "2024_CS2_CS_Q24",
@@ -18719,10 +18803,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Memory management and virtual memory",
+      "difficulty_level": "Medium",
+      "explaination": "The MMU hardware translates virtual addresses to physical addresses using page tables/TLB (B), generates a page-fault trap when a page table entry is invalid (C), and raises a protection trap on access permission violations such as writing to read-only pages (D). Page table allocation (A) is an OS kernel duty.",
       "tags": [
         "1_mark",
         "2024",
@@ -18733,7 +18817,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following tasks is/are the responsibility/responsibilities of the memory management unit (MMU) in a system with paging-based memory management?",
+      "options_latex": {
+        "A": "Allocate a new page table for a newly created process",
+        "B": "Translate a virtual address to a physical address using the page table",
+        "C": "Raise a trap when a virtual address is not found in the page table",
+        "D": "Raise a trap when a process tries to write to a page marked with read-only permission in the page table"
+      }
     },
     {
       "id": "2024_CS2_CS_Q25",
@@ -18764,10 +18855,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "System calls, processes, threads, inter-process communication",
+      "difficulty_level": "Medium",
+      "explaination": "When process P executes a blocking I/O system call, it must wait for disk transfer and is moved to the blocked state (A). When P experiences a page fault on a swapped page, it is put into the blocked state until disk I/O completes (B). Interrupts from other devices (C) or timer ticks (D) in preemptive systems might return directly to P after ISR handling if P has highest priority.",
       "tags": [
         "1_mark",
         "2024",
@@ -18778,7 +18869,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a process P running on a CPU. Which one or more of the following events will always trigger a context switch by the OS that results in process P moving to a non-running state (e.g., ready, blocked)?",
+      "options_latex": {
+        "A": "P makes a blocking system call to read a block of data from the disk",
+        "B": "P tries to access a page that is in the swap space, triggering a page fault",
+        "C": "An interrupt is raised by the disk to deliver data requested by some other process",
+        "D": "A timer interrupt is raised by the hardware"
+      }
     },
     {
       "id": "2024_CS2_CS_Q26",
@@ -18809,10 +18907,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "File organization, indexing (e.g., B and B+ trees)",
+      "difficulty_level": "Easy",
+      "explaination": "A full table scan retrieves all pages sequentially. Sorted and Heap files store data records densely packed across consecutive data pages, requiring reading each page exactly once. Unclustered indexes store data out of order, incurring multiple random I/Os per record.",
       "tags": [
         "1_mark",
         "2024",
@@ -18823,7 +18921,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following file organizations is/are I/O efficient for the scan operation in DBMS?",
+      "options_latex": {
+        "A": "Sorted",
+        "B": "Heap",
+        "C": "Unclustered tree index",
+        "D": "Unclustered hash index"
+      }
     },
     {
       "id": "2024_CS2_CS_Q27",
@@ -18855,10 +18960,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty_level": "Medium",
+      "explaination": "Two-Phase Locking (2PL) guarantees conflict serializability (A). In 2PL, once a lock is released (shrinking phase), no new locks can be acquired (C). Basic 2PL is susceptible to deadlocks due to circular wait conditions (D). Statement B describes conservative/static locking, not general 2PL.",
       "tags": [
         "1_mark",
         "2024",
@@ -18869,7 +18974,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statements about the Two Phase Locking (2PL) protocol is/are TRUE?",
+      "options_latex": {
+        "A": "2PL permits only serializable schedules",
+        "B": "With 2PL, a transaction always locks the data item being read or written just before every operation",
+        "C": "With 2PL, once a lock is released on any data item inside a transaction, no more locks on any data item can be acquired",
+        "D": "A deadlock is possible with 2PL"
+      }
     },
     {
       "id": "2024_CS2_CS_Q28",
@@ -18900,10 +19012,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Fragmentation and IP addressing, IPv4, CIDR notation",
+      "difficulty_level": "Easy",
+      "explaination": "In IPv4, any intermediate router encountering a packet larger than the outgoing link MTU performs fragmentation (B). In contrast, fragment reassembly is performed strictly at the final destination host (C) to prevent re-fragmentation overhead and handle out-of-order routing.",
       "tags": [
         "1_mark",
         "2024",
@@ -18914,7 +19026,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statements about IPv4 fragmentation is/are TRUE?",
+      "options_latex": {
+        "A": "The fragmentation of an IP datagram is performed only at the source of the datagram",
+        "B": "The fragmentation of an IP datagram is performed at any IP router which finds that the size of the datagram is greater than the MTU of the outgoing link",
+        "C": "The reassembly of fragments is performed only at the destination of the datagram",
+        "D": "The reassembly of fragments is performed at all intermediate routers along the path from the source to destination"
+      }
     },
     {
       "id": "2024_CS2_CS_Q29",
@@ -18945,10 +19064,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Hard",
+      "explaination": "L-attributed definitions are explicitly defined such that their attributes can always be evaluated via depth-first (left-to-right) traversal (making statement B false). Not all L-attributed definitions on LR(1) grammars can be evaluated during bottom-up parsing without rewriting or marker nonterminals (making statement D false).",
       "tags": [
         "1_mark",
         "2024",
@@ -18959,7 +19078,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statements is/are FALSE?",
+      "options_latex": {
+        "A": "An attribute grammar is a syntax-directed definition (SDD) in which the functions in the semantic rules have no side effects",
+        "B": "The attributes in a L-attributed definition cannot always be evaluated in a depth-first order",
+        "C": "Synthesized attributes can be evaluated by a bottom-up parser as the input is parsed",
+        "D": "All L-attributed definitions based on LR(1) grammar can be evaluated using a bottom-up parsing strategy"
+      }
     },
     {
       "id": "2024_CS2_CS_Q30",
@@ -18990,10 +19116,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Boolean algebra",
+      "difficulty_level": "Easy",
+      "explaination": "In Boolean algebra: $x + 1 = 1$ (null element property of OR), so $x + 1 = x$ is FALSE (B is false). Also, $x \\cdot x = x$ (idempotent property of AND), so $x \\cdot x = 0$ is FALSE (C is false).",
       "tags": [
         "1_mark",
         "2024",
@@ -19004,7 +19130,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "For a Boolean variable $x$, which of the following statements is/are FALSE?",
+      "options_latex": {
+        "A": "$x \\cdot 1 = x$",
+        "B": "$x + 1 = x$",
+        "C": "$x \\cdot x = 0$",
+        "D": "$x + \\overline{x} = 1$"
+      }
     },
     {
       "id": "2024_CS2_CS_Q31",
@@ -19034,10 +19167,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Instruction pipelining, pipeline hazards",
+      "difficulty_level": "Easy",
+      "explaination": "In I1: `DIV R3, R1, R2` (writes R3); I2: `SUB R5, R3, R4` (reads R3). Since I2 reads R3 after I1 writes R3, this is a Read-After-Write (RAW) data dependency on R3 between I1 and I2 (A is true). I3 writes R3, so between I1 (write) and I3 (write) is WAW, and between I2 (read) and I3 (write) is WAR.",
       "tags": [
         "1_mark",
         "2024",
@@ -19048,7 +19181,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "An instruction format has the following structure:\nInstruction Number: Opcode destination reg, source reg-1, source reg-2\nConsider the following sequence of instructions to be executed in a pipelined processor:\n\\begin{verbatim}\nI1: DIV R3, R1, R2\nI2: SUB R5, R3, R4\nI3: ADD R3, R5, R6\nI4: MUL R7, R3, R8\n\\end{verbatim}\nWhich of the following dependencies is/are TRUE?",
+      "options_latex": {
+        "A": "There is a RAW dependency on R3 between I1 and I2",
+        "B": "There is a WAR dependency on R3 between I1 and I3",
+        "C": "There is a RAW dependency on R3 between I2 and I3",
+        "D": "There is a WAW dependency on R3 between I3 and I4"
+      }
     },
     {
       "id": "2024_CS2_CS_Q32",
@@ -19079,10 +19219,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Fragmentation and IP addressing, IPv4, CIDR notation",
+      "difficulty_level": "Easy",
+      "explaination": "Whenever an IP packet is processed by an intermediate router, its Time to Live (TTL) field is decremented by at least 1. Because the header content changes, the router must recompute and update the Header Checksum field. Source and Protocol remain unchanged.",
       "tags": [
         "1_mark",
         "2024",
@@ -19093,7 +19233,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following fields of an IP header is/are always modified by any router before it forwards the IP packet?",
+      "options_latex": {
+        "A": "Source IP Address",
+        "B": "Protocol",
+        "C": "Time to Live (TTL)",
+        "D": "Header Checksum"
+      }
     },
     {
       "id": "2024_CS2_CS_Q33",
@@ -19125,10 +19272,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Easy",
+      "explaination": "The function `fX` calculates the string length by advancing pointer `b` until the null terminator `\\0` is reached, then returning pointer difference `b - a`. String literals in C are null-terminated, so calls with string literals or character arrays (`fX(\"abcd\")`, `fX(c)`) correctly compute 4 and return (A, B, and D are true).",
       "tags": [
         "1_mark",
         "2024",
@@ -19139,7 +19286,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C function definition:\n\\begin{verbatim}\nint fX(char *a){\n    char *b = a;\n    while(*b)\n        b++;\n    return b - a;\n}\n\\end{verbatim}\nWhich of the following statements is/are TRUE?",
+      "options_latex": {
+        "A": "The function call fX(\"abcd\") will always return a value",
+        "B": "Assuming a character array c is declared as char c[] = \"abcd\" in main(), the function call fX(c) will always return a value",
+        "C": "The code of the function will not compile",
+        "D": "Assuming a character pointer c is declared as char *c = \"abcd\" in main(), the function call fX(c) will always return a value"
+      }
     },
     {
       "id": "2024_CS2_CS_Q34",
@@ -19165,10 +19319,10 @@
         "min": 5.0,
         "max": 5.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Sets, relations, functions, partial orders and lattices",
+      "difficulty_level": "Medium",
+      "explaination": "The poset constraints are: $1 < 2$, $3 < 2$, and $3 < 4$. Any compatible total order is a linear extension of this DAG. Elements 1 and 3 must precede 2, while 3 must precede 4. Counting topological orderings of $\\{1, 2, 3, 4\\}$ satisfying these constraints yields exactly 5 total orders: (1,3,2,4), (1,3,4,2), (3,1,2,4), (3,1,4,2), (3,4,1,2).",
       "tags": [
         "1_mark",
         "2024",
@@ -19178,7 +19332,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $P$ be the partial order defined on the set $\\{1,2,3,4\\}$ as follows:\n\\[ P = \\{(x, x) \\mid x \\in \\{1,2,3,4\\}\\} \\cup \\{(1,2), (3,2), (3,4)\\} \\]\nThe number of total orders on $\\{1,2,3,4\\}$ that contain $P$ is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS2_CS_Q35",
@@ -19204,10 +19360,10 @@
         "min": 3.0,
         "max": 3.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Searching, sorting, hashing",
+      "difficulty_level": "Easy",
+      "explaination": "To minimize replacements to make array $A$ sorted in non-decreasing order, keep the longest non-decreasing subsequence (LNDS). For $A = [2, 5, 3, 1, 4, 2, 6]$, a longest non-decreasing subsequence is $[2, 3, 4, 6]$ of length 4. The minimum elements to replace is $n - \\text{length(LNDS)} = 7 - 4 = 3$.",
       "tags": [
         "1_mark",
         "2024",
@@ -19217,7 +19373,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $A$ be an array containing integer values. The distance of $A$ is defined as the minimum number of elements in $A$ that must be replaced with another integer so that the resulting array is sorted in non-decreasing order. The distance of the array $[2, 5, 3, 1, 4, 2, 6]$ is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS2_GA_Q01",
@@ -19247,10 +19405,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'Walk -> jog -> sprint' depicts an increasing scale of physical speed/exertion. Similarly, 'bothered -> fazed -> daunted' depicts an increasing degree of perturbation/discouragement. 'Fazed' means disconcerted or perturbed, fitting between bothered and daunted.",
       "tags": [
         "1_mark",
         "2024",
@@ -19261,7 +19419,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "If `$\\to$' denotes increasing order of intensity, then the meaning of the words $[\\text{walk} \\to \\text{jog} \\to \\text{sprint}]$ is analogous to $[\\text{bothered} \\to \\text{\\_\\_\\_\\_\\_\\_\\_\\_} \\to \\text{daunted}]$.\nWhich one of the given options is appropriate to fill the blank?",
+      "options_latex": {
+        "A": "phased",
+        "B": "phrased",
+        "C": "fazed",
+        "D": "fused"
+      }
     },
     {
       "id": "2024_CS2_GA_Q02",
@@ -19291,10 +19456,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "There are 4 distinct elements (water, air, fire, earth). The number of distinct permutations/orderings of these 4 elements is $4! = 4 \\times 3 \\times 2 \\times 1 = 24$. Since each wizard tries all possible orders independently, each wizard makes 24 attempts.",
       "tags": [
         "1_mark",
         "2024",
@@ -19305,7 +19470,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Two wizards try to create a spell using all the four elements, water, air, fire, and earth. For this, they decide to mix all these elements in all possible orders. They also decide to work independently. After trying all possible combination of elements, they conclude that the spell does not work.\nHow many attempts does each wizard make before coming to this conclusion, independently?",
+      "options_latex": {
+        "A": "24",
+        "B": "48",
+        "C": "16",
+        "D": "12"
+      }
     },
     {
       "id": "2024_CS2_GA_Q03",
@@ -19335,10 +19507,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Data interpretation: data graphs (bar graphs, pie charts, and other graphs representing data), 2- and 3-dimensional plots, maps, and tables",
+      "difficulty_level": "Medium",
+      "explaination": "Let $C$ and $O$ be sets of students liking core and other branches. Total students $N = 10000$, neither $= 1500$, so $|C \\cup O| = 10000 - 1500 = 8500$. We are given $|C \\cap O| = 500$ and $|C| = \\frac{1}{4}|O| \\implies |O| = 4|C|$. By inclusion-exclusion, $|C \\cup O| = |C| + |O| - |C \\cap O| \\implies 8500 = |C| + 4|C| - 500 \\implies 5|C| = 9000 \\implies |C| = 1800$.",
       "tags": [
         "1_mark",
         "2024",
@@ -19349,7 +19521,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In an engineering college of 10,000 students, 1,500 like neither their core branches nor other branches. The number of students who like their core branches is 1/4th of the number of students who like other branches. The number of students who like both their core and other branches is 500.\nThe number of students who like their core branches is:",
+      "options_latex": {
+        "A": "1,800",
+        "B": "3,500",
+        "C": "1,600",
+        "D": "1,500"
+      }
     },
     {
       "id": "2024_CS2_GA_Q04",
@@ -19378,10 +19557,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "From $\\ln\\left(\\frac{x+y}{2}\\right) = \\frac{1}{2}[\\ln(x) + \\ln(y)] = \\ln(\\sqrt{xy})$, we obtain $\\frac{x+y}{2} = \\sqrt{xy} \\implies x + y = 2\\sqrt{xy} \\implies (\\sqrt{x} - \\sqrt{y})^2 = 0 \\implies x = y$. Substituting $x = y$ gives $\\frac{x}{y} + \\frac{y}{x} = 1 + 1 = 2$.",
       "tags": [
         "1_mark",
         "2024",
@@ -19392,7 +19571,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "For positive non-zero real variables $x$ and $y$, if\n\\[ \\ln\\left(\\frac{x+y}{2}\\right) = \\frac{1}{2} [\\ln(x) + \\ln(y)] \\]\nthen, the value of $\\frac{x}{y} + \\frac{y}{x}$ is:",
+      "options_latex": {
+        "A": "1",
+        "B": "1/2",
+        "C": "2",
+        "D": "4"
+      }
     },
     {
       "id": "2024_CS2_GA_Q05",
@@ -19422,10 +19608,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Examine the consecutive differences: $9 - 6 = 3$, $14 - 9 = 5$, $x - 14 = d_3$, $30 - x = d_4$, $41 - 30 = 11$. The differences are consecutive odd numbers: $3, 5, 7, 9, 11$. For $d_3 = 7$, $x = 14 + 7 = 21$, and checking $d_4 = 30 - 21 = 9$ matches. Hence, $x = 21$.",
       "tags": [
         "1_mark",
         "2024",
@@ -19436,7 +19622,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In the sequence 6, 9, 14, $x$, 30, 41, a possible value of $x$ is:",
+      "options_latex": {
+        "A": "25",
+        "B": "21",
+        "C": "18",
+        "D": "20"
+      }
     },
     {
       "id": "2025_CS1_CS_Q11",

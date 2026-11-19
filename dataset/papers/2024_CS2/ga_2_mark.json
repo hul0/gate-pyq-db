@@ -33,10 +33,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Narrative sequencing",
+      "difficulty_level": "Medium",
+      "explaination": "Sentence S introduces the foundational historical premise (many millennia ago, Antarctic plate collided with Eurasian plate). Sentence P describes the immediate effect of this event (energy/heat rising to 4 km height). Sentence R details the subsequent cooling that altered the atmosphere. Sentence Q concludes with the geophysicists' resulting viewpoint. The logical sequence is SPRQ.",
       "tags": [
         "2024",
         "2_mark",
@@ -47,7 +47,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Sequence the following sentences in a coherent passage.\n\\begin{itemize}\n\\item[P:] This fortuitous geological event generated a colossal amount of energy and heat that resulted in the rocks rising to an average height of 4 km across the contact zone.\n\\item[Q:] Thus, the geophysicists tend to think of the Himalayas as an active geological event rather than as a static geological feature.\n\\item[R:] The natural process of the cooling of this massive edifice absorbed large quantities of atmospheric carbon dioxide, altering the earth’s atmosphere and making it better suited for life.\n\\item[S:] Many millennia ago, a breakaway chunk of bedrock from the Antarctic Plate collided with the massive Eurasian Plate.\n\\end{itemize}",
+      "options_latex": {
+        "A": "QPSR",
+        "B": "QSPR",
+        "C": "SPRQ",
+        "D": "SRPQ"
+      }
     },
     {
       "id": "2024_CS2_GA_Q07",
@@ -77,10 +84,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "When two items are sold at the same selling price $S$, one at a profit of $x\\%$ and the other at a loss of $x\\%$, there is always an overall net loss given by $\\frac{x^2}{100}\\%$. Here $x = 10$, so the net loss is $\\frac{10^2}{100}\\% = 1\\%$ loss.",
       "tags": [
         "2024",
         "2_mark",
@@ -91,7 +98,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A person sold two different items at the same price. He made 10\\% profit in one item, and 10\\% loss in the other item. In selling these two items, the person made a total of:",
+      "options_latex": {
+        "A": "1\\% profit",
+        "B": "2\\% profit",
+        "C": "1\\% loss",
+        "D": "2\\% loss"
+      }
     },
     {
       "id": "2024_CS2_GA_Q09",
@@ -121,10 +135,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Spatial Aptitude",
+      "subtopic": "Paper folding, cutting, and patterns in 2 and 3 dimensions",
+      "difficulty_level": "Easy",
+      "explaination": "A single full planar straight cut can at most double the number of pieces. With $k$ cuts through 3 orthogonal dimensions (1 cut parallel to $xy$-plane, 1 parallel to $yz$-plane, 1 parallel to $zx$-plane), the cube is divided into $2 \\times 2 \\times 2 = 8$ equal pieces. Thus, a minimum of 3 cuts is required.",
       "tags": [
         "2024",
         "2_mark",
@@ -135,7 +149,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A cube is to be cut into 8 pieces of equal size and shape. Here, each cut should be straight and it should not stop till it reaches the other end of the cube.\nThe minimum number of such cuts required is:",
+      "options_latex": {
+        "A": "3",
+        "B": "4",
+        "C": "7",
+        "D": "8"
+      }
     },
     {
       "id": "2024_CS2_GA_Q10",
@@ -165,10 +186,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Analytical Aptitude",
+      "subtopic": "Logic: deduction and induction",
+      "difficulty_level": "Hard",
+      "explaination": "Each number in a cell denotes how many neighboring cells do NOT contain an 'X'. With crosses determined from the first three rows, the count of non-cross neighbors for each of the 4 cells in the bottom row evaluates to values whose total sum is 11.",
       "tags": [
         "2024",
         "2_mark",
@@ -179,7 +200,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In a $4 \\times 4$ array, each cell of the first three rows has either a cross (X) or a number. The number in a cell represents the count of the immediate neighboring cells (left, right, top, bottom, diagonals) NOT having a cross (X). Given that the last row has no crosses (X), the sum of the four numbers to be filled in the last row is:",
+      "options_latex": {
+        "A": "11",
+        "B": "10",
+        "C": "12",
+        "D": "9"
+      }
     }
   ]
 }

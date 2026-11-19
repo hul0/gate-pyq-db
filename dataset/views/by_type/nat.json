@@ -6703,10 +6703,10 @@
         "min": 5.0,
         "max": 5.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Sets, relations, functions, partial orders and lattices",
+      "difficulty_level": "Medium",
+      "explaination": "The poset constraints are: $1 < 2$, $3 < 2$, and $3 < 4$. Any compatible total order is a linear extension of this DAG. Elements 1 and 3 must precede 2, while 3 must precede 4. Counting topological orderings of $\\{1, 2, 3, 4\\}$ satisfying these constraints yields exactly 5 total orders: (1,3,2,4), (1,3,4,2), (3,1,2,4), (3,1,4,2), (3,4,1,2).",
       "tags": [
         "1_mark",
         "2024",
@@ -6716,7 +6716,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $P$ be the partial order defined on the set $\\{1,2,3,4\\}$ as follows:\n\\[ P = \\{(x, x) \\mid x \\in \\{1,2,3,4\\}\\} \\cup \\{(1,2), (3,2), (3,4)\\} \\]\nThe number of total orders on $\\{1,2,3,4\\}$ that contain $P$ is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS2_CS_Q35",
@@ -6742,10 +6744,10 @@
         "min": 3.0,
         "max": 3.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Searching, sorting, hashing",
+      "difficulty_level": "Easy",
+      "explaination": "To minimize replacements to make array $A$ sorted in non-decreasing order, keep the longest non-decreasing subsequence (LNDS). For $A = [2, 5, 3, 1, 4, 2, 6]$, a longest non-decreasing subsequence is $[2, 3, 4, 6]$ of length 4. The minimum elements to replace is $n - \\text{length(LNDS)} = 7 - 4 = 3$.",
       "tags": [
         "1_mark",
         "2024",
@@ -6755,7 +6757,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $A$ be an array containing integer values. The distance of $A$ is defined as the minimum number of elements in $A$ that must be replaced with another integer so that the resulting array is sorted in non-decreasing order. The distance of the array $[2, 5, 3, 1, 4, 2, 6]$ is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS2_CS_Q53",
@@ -6781,10 +6785,10 @@
         "min": 29.5,
         "max": 30.5
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "File systems",
+      "difficulty_level": "Medium",
+      "explaination": "At 6000 RPM, one rotation takes $\\frac{60}{6000} = 10\\text{ ms}$. Average rotational latency $= 10/2 = 5\\text{ ms}$. Transfer time per sector $= \\frac{10\\text{ ms}}{500} = 0.02\\text{ ms}$. Time to access each random sector $= \\text{seek} + \\text{rotational latency} + \\text{transfer} = 5 + 5 + 0.02 = 10.02\\text{ ms}$. Total time for 3000 random sectors $= 3000 \\times 10.02\\text{ ms} = 30060\\text{ ms} \\approx 30.06$ seconds.",
       "tags": [
         "2024",
         "2_mark",
@@ -6794,7 +6798,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a disk with the following specifications: rotation speed of 6000 RPM, average seek time of 5 milliseconds, 500 sectors/track, 512-byte sectors. A file has content stored in 3000 sectors located randomly on the disk. Assuming average rotational latency, the total time (in seconds, rounded off to 2 decimal places) to read the entire file from the disk is \\_\\_\\_\\_\\_\\_\\. (Answer in range 29.50 to 30.50)",
+      "options_latex": null
     },
     {
       "id": "2024_CS2_CS_Q54",
@@ -6820,10 +6826,10 @@
         "min": 4.0,
         "max": 4.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Transport layer: flow control and congestion control, UDP, TCP, sockets",
+      "difficulty_level": "Medium",
+      "explaination": "When timeout occurs at $\\text{cwnd} = 12\\text{ MSS}$, slow start threshold is set to $\\text{ssthresh} = \\lfloor 12 / 2 \\rfloor = 6\\text{ MSS}$, and $\\text{cwnd}$ resets to $1\\text{ MSS}$ for the 1st RTT. After receiving ACKs in the 1st RTT, slow start doubles $\\text{cwnd}$ to $2\\text{ MSS}$ during the 2nd RTT. After receiving ACKs in the 2nd RTT, $\\text{cwnd}$ doubles again to $4\\text{ MSS}$ during the 3rd RTT.",
       "tags": [
         "2024",
         "2_mark",
@@ -6833,7 +6839,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a TCP connection operating at a point of time with the congestion window of size 12 MSS (Maximum Segment Size), when a timeout occurs due to packet loss. Assuming that all the segments transmitted in the next two RTTs (Round Trip Time) are acknowledged correctly, the congestion window size (in MSS) during the third RTT will be \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS2_CS_Q55",
@@ -6859,10 +6867,10 @@
         "min": 500.0,
         "max": 500.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Data link layer: framing, error detection, Medium Access Control, Ethernet bridging",
+      "difficulty_level": "Easy",
+      "explaination": "Propagation delay $T_p = \\frac{\\text{Distance}}{\\text{Velocity}} = \\frac{500}{2 \\times 10^8} = 2.5 \\times 10^{-6}\\text{ s} = 2.5\\,\\mu\\text{s}$. For collision detection in CSMA/CD, transmission time must satisfy $T_t \\ge 2 T_p = 5\\,\\mu\\text{s}$. Minimum frame size $L = 2 T_p \\times B = (5 \\times 10^{-6}\\text{ s}) \\times 10^8\\text{ bps} = 500$ bits.",
       "tags": [
         "2024",
         "2_mark",
@@ -6872,7 +6880,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider an Ethernet segment with a transmission speed of $10^8$ bits/sec and a maximum segment length of 500 meters. If the speed of propagation of the signal in the medium is $2 \\times 10^8$ meters/sec, then the minimum frame size (in bits) required for collision detection is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS2_CS_Q56",
@@ -6898,10 +6908,10 @@
         "min": 50.0,
         "max": 50.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Integrity constraints, normal forms",
+      "difficulty_level": "Medium",
+      "explaination": "For each attribute $A$ among the 4 attributes, there are 3 mutually exclusive choices: $A \\in X$, $A \\in Y$, or $A \\notin (X \\cup Y)$, giving $3^4 = 81$ pairs of disjoint sets $(X, Y)$. We subtract cases where $X = \\emptyset$ ($2^4 = 16$), where $Y = \\emptyset$ ($2^4 = 16$), and add back the double-subtracted case where $X = Y = \\emptyset$ ($1$). Total useful FDs $= 81 - 16 - 16 + 1 = 50$.",
       "tags": [
         "2024",
         "2_mark",
@@ -6911,7 +6921,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A functional dependency $F: X \\to Y$ is termed as a useful functional dependency if and only if it satisfies all the following three conditions:\n\\begin{itemize}\n\\item $X$ is not the empty set.\n\\item $Y$ is not the empty set.\n\\item Intersection of $X$ and $Y$ is the empty set.\n\\end{itemize}\nFor a relation $R$ with 4 attributes, the total number of possible useful functional dependencies is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS2_CS_Q57",
@@ -6937,10 +6949,10 @@
         "min": 32.0,
         "max": 32.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Machine instructions and addressing modes",
+      "difficulty_level": "Medium",
+      "explaination": "Instruction length is 32 bits. Register fields: 16 registers need $\\log_2 16 = 4$ bits each ($2 \\times 4 = 8$ bits). Addressing mode: 8 modes need $\\log_2 8 = 3$ bits. Scalar field: 16 bits. Remaining bits for opcode $= 32 - (3 + 8 + 16) = 5$ bits. The maximum number of unique opcodes possible for every addressing mode is $2^5 = 32$.",
       "tags": [
         "2024",
         "2_mark",
@@ -6950,7 +6962,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A processor with 16 general purpose registers uses a 32-bit instruction format. The instruction format consists of an opcode field, an addressing mode field, two register operand fields, and a 16-bit scalar field. If 8 addressing modes are to be supported, the maximum number of unique opcodes possible for every addressing mode is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS2_CS_Q58",
@@ -6976,10 +6990,10 @@
         "min": 2.9,
         "max": 3.1
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Instruction pipelining, pipeline hazards",
+      "difficulty_level": "Medium",
+      "explaination": "Average cycles per instruction in non-pipelined design: $\\text{CPI}_{\\text{non-pipe}} = 6$. In pipelined design: $\\text{CPI}_{\\text{pipe}} = 1 + (0.20 \\times 2) + (0.20 \\times 3) = 1 + 0.40 + 0.60 = 2.0$. Since clock frequency is 2 GHz in both, speedup $= \\frac{\\text{CPI}_{\\text{non-pipe}}}{\\text{CPI}_{\\text{pipe}}} = \\frac{6}{2.0} = 3.0$.",
       "tags": [
         "2024",
         "2_mark",
@@ -6989,7 +7003,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A non-pipelined instruction execution unit operating at 2 GHz takes an average of 6 cycles to execute an instruction of a program P. The unit is then redesigned to operate on a 5-stage pipeline at 2 GHz. Assume that the ideal throughput of the pipelined unit is 1 instruction per cycle. In the execution of program P, 20\\% instructions incur an average of 2 cycles stall due to data hazards and 20\\% instructions incur an average of 3 cycles stall due to control hazards. The speedup (rounded off to one decimal place) obtained by the pipelined design over the non-pipelined design is \\_\\_\\_\\_\\_\\_\\. (Answer in range 2.9 to 3.1)",
+      "options_latex": null
     },
     {
       "id": "2024_CS2_CS_Q60",
@@ -7015,10 +7031,10 @@
         "min": 2.0,
         "max": 2.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Graphs: connectivity, matching, colouring",
+      "difficulty_level": "Easy",
+      "explaination": "A graph has chromatic number 2 if and only if it is bipartite and contains at least one edge, which is equivalent to having no odd cycles. Inspection of the given graph verifies that it contains no odd-length cycles, meaning it can be properly colored with 2 colors.",
       "tags": [
         "2024",
         "2_mark",
@@ -7028,7 +7044,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The chromatic number of a graph is the minimum number of colours used in a proper colouring of the graph. The chromatic number of the given bipartite graph is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS2_CS_Q61",
@@ -7054,10 +7072,10 @@
         "min": 34.0,
         "max": 34.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Machine instructions and addressing modes",
+      "difficulty_level": "Hard",
+      "explaination": "150 distinct instructions split equally means 75 R-type and 75 I-type. To represent 75 operations with 1 type bit, opcode bits $Y = 1 + \\lceil \\log_2 75 \\rceil = 1 + 7 = 8$ bits. 50 registers require $\\lceil \\log_2 50 \\rceil = 6$ bits each. R-type has 3 register fields ($3 \\times 6 = 18$ bits), so $X = 32 - (8 + 18) = 6$ bits. I-type has 2 register fields ($2 \\times 6 = 12$ bits), so $Z = 32 - (8 + 12) = 12$ bits. Thus, $X + 2Y + Z = 6 + 2(8) + 12 = 34$.",
       "tags": [
         "2024",
         "2_mark",
@@ -7067,7 +7085,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A processor uses a 32-bit instruction format and supports byte-addressable memory access. The ISA of the processor has 150 distinct instructions. The instructions are equally divided into two types, namely R-type and I-type, whose formats are shown below:\n\\begin{verbatim}\nR-type: OPCODE | UNUSED | DST Register | SRC Register1 | SRC Register 2\nI-type: OPCODE | DST Register | SRC Register | Immediate value/address\n\\end{verbatim}\nIn the OPCODE, 1 bit distinguishes between I-type and R-type and the remaining bits indicate the operation. The processor has 50 architectural registers, and all register fields are of equal size.\nLet $X$ be the bits for UNUSED, $Y$ for OPCODE, and $Z$ for immediate value/address. The value of $X + 2Y + Z$ is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS2_CS_Q62",
@@ -7093,10 +7113,10 @@
         "min": 15.0,
         "max": 15.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular expressions and finite automata",
+      "difficulty_level": "Medium",
+      "explaination": "$L_1$ requires an odd number of $a$'s: strings containing either 1 or 3 $a$'s (since length $\\le 4$). Length $\\le 4$ with exactly one $a$: length 1 has $1$, length 2 has $2$, length 3 has $3$, length 4 has $4$ (total $1 + 2 + 3 + 4 = 10$). Length $\\le 4$ with exactly three $a$'s: length 3 has $aaa$ ($1$), length 4 has $\\binom{4}{3} = 4$. Total strings in $L_1 \\cap L_2 = 10 + 1 + 4 = 15$.",
       "tags": [
         "2024",
         "2_mark",
@@ -7106,7 +7126,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $L_1$ be the language represented by the regular expression $b^* a b^* (a b^* a b^*)^*$ and $L_2 = \\{ w \\in (a + b)^* \\mid |w| \\le 4 \\}$, where $|w|$ denotes the length of string $w$. The number of strings in $L_2$ which are also in $L_1$ is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS2_CS_Q63",
@@ -7132,10 +7154,10 @@
         "min": 4.0,
         "max": 4.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Monoids, Groups",
+      "difficulty_level": "Easy",
+      "explaination": "In an additive group, an element $x$ is its own inverse if $x + x \\equiv 0 \\pmod n \\implies 2x \\equiv 0 \\pmod n$. In $\\mathbb{Z}_2$, elements satisfying $2x \\equiv 0$ are $\\{0, 1\\}$ (2 elements). In $\\mathbb{Z}_3$, only $\\{0\\}$ satisfies $2x \\equiv 0 \\pmod 3$ (1 element). In $\\mathbb{Z}_4$, $\\{0, 2\\}$ satisfy $2x \\equiv 0 \\pmod 4$ (2 elements). In the direct product group $\\mathbb{Z}_2 \\times \\mathbb{Z}_3 \\times \\mathbb{Z}_4$, total self-inverse elements $= 2 \\times 1 \\times 2 = 4$.",
       "tags": [
         "2024",
         "2_mark",
@@ -7145,7 +7167,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $Z_n$ be the group of integers $\\{0, 1, 2, \\dots, n-1\\}$ with addition modulo $n$ as the group operation. The number of elements in the group $Z_2 \\times Z_3 \\times Z_4$ that are their own inverses is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS2_CS_Q64",
@@ -7171,10 +7195,10 @@
         "min": 1028.0,
         "max": 1028.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Memory management and virtual memory",
+      "difficulty_level": "Hard",
+      "explaination": "Page size is $4\\text{ KB} = 2^{12}$ bytes, PTE size is 4 bytes, so each page table holds $2^{12} / 4 = 1024$ entries. The process accesses 2000 unique pages. Minimum inner page tables $X$: $\\lceil 2000 / 1024 \\rceil = 2$ inner pages plus 1 outer page directory $= 3$. Maximum inner page tables $Y$: 2000 pages distributed across 2000 different inner tables, bounded by total possible entries in directory $= 1024$ inner pages plus 1 outer page directory $= 1025$. Hence, $X + Y = 3 + 1025 = 1028$.",
       "tags": [
         "2024",
         "2_mark",
@@ -7184,7 +7208,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a 32-bit system with 4 KB page size and page table entries of size 4 bytes each. Assume $1\\text{ KB} = 2^{10}$ bytes. The OS uses a 2-level page table for memory management, with an outer page directory and an inner page table. The OS allocates 1 page for the outer page directory upon process creation. The OS uses demand paging when allocating memory for the inner page table. An active process accesses 2000 unique pages during its execution. Let $X$ denote the minimum and $Y$ denote the maximum number of pages across the two levels of the page table of the process. The value of $X + Y$ is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS2_CS_Q65",
@@ -7210,10 +7236,10 @@
         "min": 9.0,
         "max": 9.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Medium",
+      "explaination": "From $I_0 = \\text{CLOSURE}(\\{S' \\to \\bullet S\\})$, transitions on $S$ produce kernel items $\\{S' \\to S \\bullet, S \\to S \\bullet S\\}$. Taking closure adds initial items for productions where $S$ appears before non-terminals. The total number of LR(0) items in $\\text{GOTO}(I_0, S)$ evaluates to exactly 9 items.",
       "tags": [
         "2024",
         "2_mark",
@@ -7223,7 +7249,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following augmented grammar, which is to be parsed with a SLR parser. The set of terminals is $\\{a,b,c,d,\\#,@\\}$:\n\\[ S' \\to S \\]\n\\[ S \\to SS \\mid Aa \\mid bAc \\mid Bc \\mid bBa \\]\n\\[ A \\to d\\# \\]\n\\[ B \\to @ \\]\nLet $I_0 = \\text{CLOSURE}(\\{S' \\to \\bullet S\\})$. The number of items in the set $\\text{GOTO}(I_0, S)$ is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2025_CS1_CS_Q29",

@@ -2220,10 +2220,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Concept of layering: OSI and TCP/IP Protocol Stacks",
+      "difficulty_level": "Easy",
+      "explaination": "In an end-to-end IP network, the destination IP address remains invariant throughout transit and is always the IP address of final host Y. The destination MAC address changes hop-by-hop and is set to the MAC address of the next-hop router R (not switch S, which operates transparently at Layer 2).",
       "tags": [
         "1_mark",
         "2024",
@@ -2234,7 +2234,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Node X has a TCP connection open to node Y. The packets from X to Y go through an intermediate IP router R. Ethernet switch S is the first switch on the network path between X and R. Consider a packet sent from X to Y over this connection.\nWhich of the following statements is/are TRUE about the destination addresses?",
+      "options_latex": {
+        "A": "The destination IP address is the IP address of R",
+        "B": "The destination IP address is the IP address of Y",
+        "C": "The destination MAC address is the MAC address of S",
+        "D": "The destination MAC address is the MAC address of Y"
+      }
     },
     {
       "id": "2024_CS2_CS_Q24",
@@ -2266,10 +2273,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Memory management and virtual memory",
+      "difficulty_level": "Medium",
+      "explaination": "The MMU hardware translates virtual addresses to physical addresses using page tables/TLB (B), generates a page-fault trap when a page table entry is invalid (C), and raises a protection trap on access permission violations such as writing to read-only pages (D). Page table allocation (A) is an OS kernel duty.",
       "tags": [
         "1_mark",
         "2024",
@@ -2280,7 +2287,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following tasks is/are the responsibility/responsibilities of the memory management unit (MMU) in a system with paging-based memory management?",
+      "options_latex": {
+        "A": "Allocate a new page table for a newly created process",
+        "B": "Translate a virtual address to a physical address using the page table",
+        "C": "Raise a trap when a virtual address is not found in the page table",
+        "D": "Raise a trap when a process tries to write to a page marked with read-only permission in the page table"
+      }
     },
     {
       "id": "2024_CS2_CS_Q25",
@@ -2311,10 +2325,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "System calls, processes, threads, inter-process communication",
+      "difficulty_level": "Medium",
+      "explaination": "When process P executes a blocking I/O system call, it must wait for disk transfer and is moved to the blocked state (A). When P experiences a page fault on a swapped page, it is put into the blocked state until disk I/O completes (B). Interrupts from other devices (C) or timer ticks (D) in preemptive systems might return directly to P after ISR handling if P has highest priority.",
       "tags": [
         "1_mark",
         "2024",
@@ -2325,7 +2339,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a process P running on a CPU. Which one or more of the following events will always trigger a context switch by the OS that results in process P moving to a non-running state (e.g., ready, blocked)?",
+      "options_latex": {
+        "A": "P makes a blocking system call to read a block of data from the disk",
+        "B": "P tries to access a page that is in the swap space, triggering a page fault",
+        "C": "An interrupt is raised by the disk to deliver data requested by some other process",
+        "D": "A timer interrupt is raised by the hardware"
+      }
     },
     {
       "id": "2024_CS2_CS_Q26",
@@ -2356,10 +2377,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "File organization, indexing (e.g., B and B+ trees)",
+      "difficulty_level": "Easy",
+      "explaination": "A full table scan retrieves all pages sequentially. Sorted and Heap files store data records densely packed across consecutive data pages, requiring reading each page exactly once. Unclustered indexes store data out of order, incurring multiple random I/Os per record.",
       "tags": [
         "1_mark",
         "2024",
@@ -2370,7 +2391,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following file organizations is/are I/O efficient for the scan operation in DBMS?",
+      "options_latex": {
+        "A": "Sorted",
+        "B": "Heap",
+        "C": "Unclustered tree index",
+        "D": "Unclustered hash index"
+      }
     },
     {
       "id": "2024_CS2_CS_Q27",
@@ -2402,10 +2430,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty_level": "Medium",
+      "explaination": "Two-Phase Locking (2PL) guarantees conflict serializability (A). In 2PL, once a lock is released (shrinking phase), no new locks can be acquired (C). Basic 2PL is susceptible to deadlocks due to circular wait conditions (D). Statement B describes conservative/static locking, not general 2PL.",
       "tags": [
         "1_mark",
         "2024",
@@ -2416,7 +2444,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statements about the Two Phase Locking (2PL) protocol is/are TRUE?",
+      "options_latex": {
+        "A": "2PL permits only serializable schedules",
+        "B": "With 2PL, a transaction always locks the data item being read or written just before every operation",
+        "C": "With 2PL, once a lock is released on any data item inside a transaction, no more locks on any data item can be acquired",
+        "D": "A deadlock is possible with 2PL"
+      }
     },
     {
       "id": "2024_CS2_CS_Q28",
@@ -2447,10 +2482,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Fragmentation and IP addressing, IPv4, CIDR notation",
+      "difficulty_level": "Easy",
+      "explaination": "In IPv4, any intermediate router encountering a packet larger than the outgoing link MTU performs fragmentation (B). In contrast, fragment reassembly is performed strictly at the final destination host (C) to prevent re-fragmentation overhead and handle out-of-order routing.",
       "tags": [
         "1_mark",
         "2024",
@@ -2461,7 +2496,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statements about IPv4 fragmentation is/are TRUE?",
+      "options_latex": {
+        "A": "The fragmentation of an IP datagram is performed only at the source of the datagram",
+        "B": "The fragmentation of an IP datagram is performed at any IP router which finds that the size of the datagram is greater than the MTU of the outgoing link",
+        "C": "The reassembly of fragments is performed only at the destination of the datagram",
+        "D": "The reassembly of fragments is performed at all intermediate routers along the path from the source to destination"
+      }
     },
     {
       "id": "2024_CS2_CS_Q29",
@@ -2492,10 +2534,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Hard",
+      "explaination": "L-attributed definitions are explicitly defined such that their attributes can always be evaluated via depth-first (left-to-right) traversal (making statement B false). Not all L-attributed definitions on LR(1) grammars can be evaluated during bottom-up parsing without rewriting or marker nonterminals (making statement D false).",
       "tags": [
         "1_mark",
         "2024",
@@ -2506,7 +2548,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statements is/are FALSE?",
+      "options_latex": {
+        "A": "An attribute grammar is a syntax-directed definition (SDD) in which the functions in the semantic rules have no side effects",
+        "B": "The attributes in a L-attributed definition cannot always be evaluated in a depth-first order",
+        "C": "Synthesized attributes can be evaluated by a bottom-up parser as the input is parsed",
+        "D": "All L-attributed definitions based on LR(1) grammar can be evaluated using a bottom-up parsing strategy"
+      }
     },
     {
       "id": "2024_CS2_CS_Q30",
@@ -2537,10 +2586,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Boolean algebra",
+      "difficulty_level": "Easy",
+      "explaination": "In Boolean algebra: $x + 1 = 1$ (null element property of OR), so $x + 1 = x$ is FALSE (B is false). Also, $x \\cdot x = x$ (idempotent property of AND), so $x \\cdot x = 0$ is FALSE (C is false).",
       "tags": [
         "1_mark",
         "2024",
@@ -2551,7 +2600,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "For a Boolean variable $x$, which of the following statements is/are FALSE?",
+      "options_latex": {
+        "A": "$x \\cdot 1 = x$",
+        "B": "$x + 1 = x$",
+        "C": "$x \\cdot x = 0$",
+        "D": "$x + \\overline{x} = 1$"
+      }
     },
     {
       "id": "2024_CS2_CS_Q31",
@@ -2581,10 +2637,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Instruction pipelining, pipeline hazards",
+      "difficulty_level": "Easy",
+      "explaination": "In I1: `DIV R3, R1, R2` (writes R3); I2: `SUB R5, R3, R4` (reads R3). Since I2 reads R3 after I1 writes R3, this is a Read-After-Write (RAW) data dependency on R3 between I1 and I2 (A is true). I3 writes R3, so between I1 (write) and I3 (write) is WAW, and between I2 (read) and I3 (write) is WAR.",
       "tags": [
         "1_mark",
         "2024",
@@ -2595,7 +2651,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "An instruction format has the following structure:\nInstruction Number: Opcode destination reg, source reg-1, source reg-2\nConsider the following sequence of instructions to be executed in a pipelined processor:\n\\begin{verbatim}\nI1: DIV R3, R1, R2\nI2: SUB R5, R3, R4\nI3: ADD R3, R5, R6\nI4: MUL R7, R3, R8\n\\end{verbatim}\nWhich of the following dependencies is/are TRUE?",
+      "options_latex": {
+        "A": "There is a RAW dependency on R3 between I1 and I2",
+        "B": "There is a WAR dependency on R3 between I1 and I3",
+        "C": "There is a RAW dependency on R3 between I2 and I3",
+        "D": "There is a WAW dependency on R3 between I3 and I4"
+      }
     },
     {
       "id": "2024_CS2_CS_Q32",
@@ -2626,10 +2689,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Fragmentation and IP addressing, IPv4, CIDR notation",
+      "difficulty_level": "Easy",
+      "explaination": "Whenever an IP packet is processed by an intermediate router, its Time to Live (TTL) field is decremented by at least 1. Because the header content changes, the router must recompute and update the Header Checksum field. Source and Protocol remain unchanged.",
       "tags": [
         "1_mark",
         "2024",
@@ -2640,7 +2703,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following fields of an IP header is/are always modified by any router before it forwards the IP packet?",
+      "options_latex": {
+        "A": "Source IP Address",
+        "B": "Protocol",
+        "C": "Time to Live (TTL)",
+        "D": "Header Checksum"
+      }
     },
     {
       "id": "2024_CS2_CS_Q33",
@@ -2672,10 +2742,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Easy",
+      "explaination": "The function `fX` calculates the string length by advancing pointer `b` until the null terminator `\\0` is reached, then returning pointer difference `b - a`. String literals in C are null-terminated, so calls with string literals or character arrays (`fX(\"abcd\")`, `fX(c)`) correctly compute 4 and return (A, B, and D are true).",
       "tags": [
         "1_mark",
         "2024",
@@ -2686,7 +2756,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C function definition:\n\\begin{verbatim}\nint fX(char *a){\n    char *b = a;\n    while(*b)\n        b++;\n    return b - a;\n}\n\\end{verbatim}\nWhich of the following statements is/are TRUE?",
+      "options_latex": {
+        "A": "The function call fX(\"abcd\") will always return a value",
+        "B": "Assuming a character array c is declared as char c[] = \"abcd\" in main(), the function call fX(c) will always return a value",
+        "C": "The code of the function will not compile",
+        "D": "Assuming a character pointer c is declared as char *c = \"abcd\" in main(), the function call fX(c) will always return a value"
+      }
     },
     {
       "id": "2024_CS2_CS_Q46",
@@ -2717,10 +2794,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Concurrency and synchronization",
+      "difficulty_level": "Medium",
+      "explaination": "If T2 runs first: T2 takes s1, increments x (x=1), prints 1, signals s2, signals s1. Then T1 executes: takes s1, increments x (x=2), prints 2, completes wait(s2) without blocking (since s2 was signaled), signals s1 (outcome B). If T1 runs first: T1 takes s1, prints 1, and blocks on wait(s2) while holding s1, causing deadlock where T2 blocks on wait(s1) (outcome C).",
       "tags": [
         "2024",
         "2_mark",
@@ -2731,7 +2808,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a multi-threaded program with two threads T1 and T2. The threads share two semaphores: s1 (initialized to 1) and s2 (initialized to 0). The threads also share a global variable x (initialized to 0). The threads execute the code shown below:\n\\begin{verbatim}\n// code of T1        // code of T2\nwait(s1);            wait(s1);\nx = x + 1;           x = x + 1;\nprint(x);            print(x);\nwait(s2);            signal(s2);\nsignal(s1);          signal(s1);\n\\end{verbatim}\nWhich of the following outcomes is/are possible when threads T1 and T2 execute concurrently?",
+      "options_latex": {
+        "A": "T1 runs first and prints 1, T2 runs next and prints 2",
+        "B": "T2 runs first and prints 1, T1 runs next and prints 2",
+        "C": "T1 runs first and prints 1, T2 does not print anything (deadlock)",
+        "D": "T2 runs first and prints 1, T1 does not print anything (deadlock)"
+      }
     },
     {
       "id": "2024_CS2_CS_Q47",
@@ -2762,10 +2846,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Linear Algebra",
+      "subtopic": "Matrices, determinants",
+      "difficulty_level": "Easy",
+      "explaination": "Swapping two rows of a matrix negates the determinant: $\\det(B) = -\\det(A)$ (A is true). If $A$ is invertible, $\\det(A) \\neq 0 \\implies \\det(B) = -\\det(A) \\neq 0$, so $B$ is also invertible (B is true). Row swapping does not preserve symmetry or trace.",
       "tags": [
         "2024",
         "2_mark",
@@ -2776,7 +2860,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $A$ be an $n \\times n$ matrix over the set of all real numbers $\\mathbb{R}$. Let $B$ be a matrix obtained from $A$ by swapping two rows. Which of the following statements is/are TRUE?",
+      "options_latex": {
+        "A": "The determinant of $B$ is the negative of the determinant of $A$",
+        "B": "If $A$ is invertible, then $B$ is also invertible",
+        "C": "If $A$ is symmetric, then $B$ is also symmetric",
+        "D": "If the trace of $A$ is zero, then the trace of $B$ is also zero"
+      }
     },
     {
       "id": "2024_CS2_CS_Q48",
@@ -2808,10 +2899,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Arrays, stacks, queues, linked lists",
+      "difficulty_level": "Medium",
+      "explaination": "S1 initially contains [100, 200, 300, 400] from bottom to top; S2 has capacity 2. Sequence (B): Push 400 to S2, push 300 to S2, output 200, pop 300 to S1 and output 300, pop 400 to S1 and output 400, output 100. Similarly, sequences (C) and (D) can be generated within S2's 2-element capacity limit.",
       "tags": [
         "2024",
         "2_mark",
@@ -2822,7 +2913,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let S1 and S2 be two stacks. S1 has capacity of 4 elements. S2 has capacity of 2 elements. S1 already has 4 elements: 100, 200, 300, and 400 (top), whereas S2 is empty.\nOnly the following three operations are available: PushToS2, PushToS1, and GenerateOutput.\nWhich of the following output sequences can be generated?",
+      "options_latex": {
+        "A": "100, 200, 400, 300",
+        "B": "200, 300, 400, 100",
+        "C": "400, 200, 100, 300",
+        "D": "300, 200, 400, 100"
+      }
     },
     {
       "id": "2024_CS2_CS_Q49",
@@ -2854,10 +2952,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Number representations and computer arithmetic (fixed and floating point)",
+      "difficulty_level": "Easy",
+      "explaination": "Convert $224_5$ to decimal: $2(5^2) + 2(5^1) + 4(5^0) = 50 + 10 + 4 = 64_{10}$ (A is true). In base 8: $64_{10} = 100_8$ (B is true). In base 16: $64_{10} = 40_{16} \\neq 50_{16}$ (C is false). In base 7: $64_{10} = 1(7^2) + 2(7^1) + 1(7^0) = 121_7$ (D is true).",
       "tags": [
         "2024",
         "2_mark",
@@ -2868,7 +2966,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following is/are EQUAL to 224 in radix-5 (i.e., base-5) notation?",
+      "options_latex": {
+        "A": "64 in radix-10",
+        "B": "100 in radix-8",
+        "C": "50 in radix-16",
+        "D": "121 in radix-7"
+      }
     },
     {
       "id": "2024_CS2_CS_Q51",
@@ -2898,10 +3003,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Graphs: connectivity, matching, colouring",
+      "difficulty_level": "Hard",
+      "explaination": "Let $T$ be a spanning tree of $G$. For any chord $e \\notin T$ creating a fundamental cycle $C$ with path $P \\subseteq T$, $T' = T \\setminus \\{e'\\} \\cup \\{e\\}$ is also a spanning tree. Since $w(T)$ and $w(T')$ are both even, $w(e) \\equiv w(e') \\pmod 2$ for every edge on $C$. Thus all edges in cycle $C$ must have the same parity (either all even or all odd).",
       "tags": [
         "2024",
         "2_mark",
@@ -2912,7 +3017,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $G$ be an undirected connected graph in which every edge has a positive integer weight. Suppose that every spanning tree in $G$ has even weight. Which of the following statements is/are TRUE for every such graph $G$?",
+      "options_latex": {
+        "A": "All edges in $G$ have even weight",
+        "B": "All edges in $G$ have even weight OR all edges in $G$ have odd weight",
+        "C": "In each cycle $C$ in $G$, all edges in $C$ have even weight",
+        "D": "In each cycle $C$ in $G$, either all edges in $C$ have even weight OR all edges in $C$ have odd weight"
+      }
     },
     {
       "id": "2024_CS2_CS_Q52",
@@ -2943,10 +3055,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Context-free grammars and push-down automata",
+      "difficulty_level": "Medium",
+      "explaination": "Each application of $S \\to aSbS$ consumes one $S$ and introduces two new $S$'s along with one $b$, effectively adding $+1$ to the count of $S$'s. Each termination $S \\to c$ eliminates one $S$ and adds one $c$. Thus, the total number of $c$'s must equal the number of $b$'s plus 1: $n_c(w) = n_b(w) + 1$ (C is true). Also, every $b$ is accompanied by an $a$, and additional $a$'s can come from $S \\to aS$, giving $n_a(w) \\ge n_b(w) = n_c(w) - 1 > n_c(w) - 2$ (B is true).",
       "tags": [
         "2024",
         "2_mark",
@@ -2957,7 +3069,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a context-free grammar $G$ with the following 3 rules:\n\\[ S \\to aS \\mid aSbS \\mid c \\]\nLet $w \\in L(G)$. Let $n_a(w), n_b(w), n_c(w)$ denote the number of times $a, b, c$ occur in $w$, respectively. Which of the following statements is/are TRUE?",
+      "options_latex": {
+        "A": "$n_a(w) > n_b(w)$",
+        "B": "$n_a(w) > n_c(w) - 2$",
+        "C": "$n_c(w) = n_b(w) + 1$",
+        "D": "$n_c(w) = n_b(w) * 2$"
+      }
     },
     {
       "id": "2025_CS1_CS_Q21",

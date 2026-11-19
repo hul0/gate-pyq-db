@@ -29392,10 +29392,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "I/O interface: interrupt and DMA mode",
+      "difficulty_level": "Medium",
+      "explaination": "Processor clock frequency is $4\\text{ MHz} = 4 \\times 10^6$ cycles/s. DMA steals 1\\% of cycles $= 0.01 \\times 4 \\times 10^6 = 40,000$ cycles/s. In each stolen cycle, 8 bytes ($8 \\times 8 = 64$ bits) are transferred. Transfer rate $= 40,000 \\times 64 = 2,560,000$ bps $= 25,60,000$ bps.",
       "tags": [
         "1_mark",
         "2024",
@@ -29406,7 +29406,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a computer with a 4 MHz processor. Its DMA controller can transfer 8 bytes in 1 cycle from a device to main memory through cycle stealing at regular intervals. Which one of the following is the data transfer rate (in bits per second) of the DMA controller if 1\\% of the processor cycles are used for DMA?",
+      "options_latex": {
+        "A": "2,56,000",
+        "B": "3,200",
+        "C": "25,60,000",
+        "D": "32,000"
+      }
     },
     {
       "id": "2024_CS2_CS_Q12",
@@ -29436,10 +29443,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Propositional and first order logic",
+      "difficulty_level": "Easy",
+      "explaination": "The statement is: 'Fail grade cannot be given ($\\neg p$) when student scores more than 50\\% marks ($q$)', which means 'If $q$, then $\\neg p$'. In propositional logic, this is directly formalized as $q \\to \\neg p$.",
       "tags": [
         "1_mark",
         "2024",
@@ -29450,7 +29457,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $p$ and $q$ be the following propositions:\n$p$: Fail grade can be given.\n$q$: Student scores more than 50\\% marks.\nConsider the statement: ``Fail grade cannot be given when student scores more than 50\\% marks.''\nWhich one of the following is the CORRECT representation of the above statement in propositional logic?",
+      "options_latex": {
+        "A": "$q \\to \\neg p$",
+        "B": "$q \\to p$",
+        "C": "$p \\to q$",
+        "D": "$\\neg p \\to q$"
+      }
     },
     {
       "id": "2024_CS2_CS_Q13",
@@ -29480,10 +29494,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Medium",
+      "explaination": "In `main()`, `f(g(10), h(20))` evaluates parameters from right to left: `h(20)` executes first, printing `20` and returning 20 ($y = 20$), then `g(10)` executes, printing `10` and returning 10 ($x = 10$). Inside `f`, `g(x)` executes printing `10`, followed by `h(y)` printing `20`. The complete printed sequence is `20101020`.",
       "tags": [
         "1_mark",
         "2024",
@@ -29494,7 +29508,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C program. Assume parameters to a function are evaluated from right to left.\n\\begin{verbatim}\n#include <stdio.h>\nint g(int p) { printf(\"%d\", p); return p; }\nint h(int q) { printf(\"%d\", q); return q; }\nvoid f(int x, int y) {\n    g(x);\n    h(y);\n}\nint main() {\n    f(g(10), h(20));\n}\n\\end{verbatim}\nWhich one of the following is the output of the program?",
+      "options_latex": {
+        "A": "20101020",
+        "B": "10202010",
+        "C": "20102010",
+        "D": "10201020"
+      }
     },
     {
       "id": "2024_CS2_CS_Q14",
@@ -29524,10 +29545,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Number representations and computer arithmetic (fixed and floating point)",
+      "difficulty_level": "Easy",
+      "explaination": "In IEEE 754 single precision: sign bit 0 means positive. The exponent field 11111111 is reserved for $\\pm\\infty$ and NaN. The largest finite representable number has the maximum non-reserved biased exponent, which is $254 = 11111110_2$, with all mantissa bits set to 1 ($111\\dots1$), corresponding to option B.",
       "tags": [
         "1_mark",
         "2024",
@@ -29538,7 +29559,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The format of a single-precision floating-point number as per the IEEE 754 standard is:\nSign (1 bit), Exponent (8 bits), Mantissa (23 bits).\nChoose the largest floating-point number among the following options.",
+      "options_latex": {
+        "A": "Sign: 0, Exponent: 0111 1111, Mantissa: 1111 1111 1111 1111 1111 111",
+        "B": "Sign: 0, Exponent: 1111 1110, Mantissa: 1111 1111 1111 1111 1111 111",
+        "C": "Sign: 0, Exponent: 1111 1111, Mantissa: 1111 1111 1111 1111 1111 111",
+        "D": "Sign: 0, Exponent: 0111 1111, Mantissa: 0000 0000 0000 0000 0000 000"
+      }
     },
     {
       "id": "2024_CS2_CS_Q15",
@@ -29568,10 +29596,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Combinatorics: counting, recurrence relations, generating functions",
+      "difficulty_level": "Easy",
+      "explaination": "The characteristic equation is $r^2 - 5r + 6 = 0 \\implies (r - 2)(r - 3) = 0$, with roots $r = 2, 3$. The general solution is $T(n) = c_1 2^n + c_2 3^n$. Using initial conditions $T(0) = 1, T(1) = 2$: $c_1 + c_2 = 1$ and $2c_1 + 3c_2 = 2 \\implies c_1 = 1, c_2 = 0$. Thus, $T(n) = 2^n = \\Theta(2^n)$.",
       "tags": [
         "1_mark",
         "2024",
@@ -29582,7 +29610,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $T(n)$ be the recurrence relation defined as follows:\n\\[ T(0) = 1, \\quad T(1) = 2, \\quad \\text{and} \\quad T(n) = 5T(n-1) - 6T(n-2) \\quad \\text{for } n \\ge 2 \\]\nWhich one of the following statements is TRUE?",
+      "options_latex": {
+        "A": "$T(n) = \\Theta(2^n)$",
+        "B": "$T(n) = \\Theta(n 2^n)$",
+        "C": "$T(n) = \\Theta(3^n)$",
+        "D": "$T(n) = \\Theta(n 3^n)$"
+      }
     },
     {
       "id": "2024_CS2_CS_Q16",
@@ -29612,10 +29647,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Calculus",
+      "subtopic": "Integration",
+      "difficulty_level": "Medium",
+      "explaination": "Let $I = \\int_0^2 f(x) \\, dx$. Using the property $\\int_0^a f(x) \\, dx = \\int_0^a f(a - x) \\, dx$, $I = \\int_0^2 f(2 - x) \\, dx$. Adding both gives $2I = \\int_0^2 [f(x) + f(2 - x)] \\, dx$. Since $f(x) + f(2 - x) = 1$, we have $2I = \\int_0^2 1 \\, dx = 2 \\implies I = 1$.",
       "tags": [
         "1_mark",
         "2024",
@@ -29626,7 +29661,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $f(x)$ be a continuous function from $\\mathbb{R}$ to $\\mathbb{R}$ such that\n\\[ f(x) = 1 - f(2 - x) \\]\nWhich one of the following options is the CORRECT value of $\\int_0^2 f(x) \\, dx$?",
+      "options_latex": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "-1"
+      }
     },
     {
       "id": "2024_CS2_CS_Q17",
@@ -29656,10 +29698,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Graphs: connectivity, matching, colouring",
+      "difficulty_level": "Medium",
+      "explaination": "If $A = A^{-1}$, then $A^2 = I$. The $(i, j)$-th entry of $A^2$ is the number of walks of length 2 between vertex $i$ and vertex $j$. Thus $(A^2)_{ii} = \\text{deg}(i) = 1$ for every vertex $i$, and $(A^2)_{ij} = 0$ for $i \\neq j$. Every vertex has degree exactly 1, which defines a 1-regular graph, i.e., a perfect matching.",
       "tags": [
         "1_mark",
         "2024",
@@ -29670,7 +29712,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $A$ be the adjacency matrix of a simple undirected graph $G$. Suppose $A$ is its own inverse. Which one of the following statements is always TRUE?",
+      "options_latex": {
+        "A": "$G$ is a cycle",
+        "B": "$G$ is a perfect matching",
+        "C": "$G$ is a complete graph",
+        "D": "There is no such graph $G$"
+      }
     },
     {
       "id": "2024_CS2_CS_Q18",
@@ -29700,10 +29749,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Probability and Statistics",
+      "subtopic": "Conditional probability and Bayes theorem",
+      "difficulty_level": "Easy",
+      "explaination": "When six unbiased 6-faced dice are rolled, total outcomes are $6^6$. The number of outcomes where all 6 faces are distinct is $6! = 720$. The probability is $\\frac{6!}{6^6} = \\frac{720}{46656} = \\frac{5}{324}$.",
       "tags": [
         "1_mark",
         "2024",
@@ -29714,7 +29763,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "When six unbiased dice are rolled simultaneously, the probability of getting all distinct numbers (i.e., 1, 2, 3, 4, 5, and 6) is:",
+      "options_latex": {
+        "A": "$\\frac{1}{324}$",
+        "B": "$\\frac{5}{324}$",
+        "C": "$\\frac{7}{324}$",
+        "D": "$\\frac{11}{324}$"
+      }
     },
     {
       "id": "2024_CS2_CS_Q19",
@@ -29744,10 +29800,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty_level": "Easy",
+      "explaination": "The Durability property of the ACID paradigm guarantees that once a transaction has committed successfully, its updates and effects survive permanently in non-volatile storage, even in the event of a subsequent system crash.",
       "tags": [
         "1_mark",
         "2024",
@@ -29758,7 +29814,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Once the DBMS informs the user that a transaction has been successfully completed, its effect should persist even if the system crashes before all its changes are reflected on disk. This property is called:",
+      "options_latex": {
+        "A": "durability",
+        "B": "atomicity",
+        "C": "consistency",
+        "D": "isolation"
+      }
     },
     {
       "id": "2024_CS2_CS_Q20",
@@ -29788,10 +29851,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "ER-model",
+      "difficulty_level": "Easy",
+      "explaination": "A weak entity cannot exist without its identifying (owner) entity. Therefore, every instance of the weak entity set must be associated with an owner entity instance via the identifying relationship, mandating total participation of the weak entity set.",
       "tags": [
         "1_mark",
         "2024",
@@ -29802,7 +29865,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In the context of owner and weak entity sets in the ER (Entity-Relationship) data model, which one of the following statements is TRUE?",
+      "options_latex": {
+        "A": "The weak entity set MUST have total participation in the identifying relationship",
+        "B": "The owner entity set MUST have total participation in the identifying relationship",
+        "C": "Both weak and owner entity sets MUST have total participation in the identifying relationship",
+        "D": "Neither weak entity set nor owner entity set MUST have total participation in the identifying relationship"
+      }
     },
     {
       "id": "2024_CS2_CS_Q21",
@@ -29832,10 +29902,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Easy",
+      "explaination": "Lexical Analyzer outputs tokens (P - 2). Syntax Analyzer constructs parse trees (Q - 3). Intermediate Code Generator generates abstract syntax trees or intermediate representations (R - 1). Code Optimizer performs constant folding (S - 4). Thus, the correct matching is P - 2; Q - 3; R - 1; S - 4.",
       "tags": [
         "1_mark",
         "2024",
@@ -29846,7 +29916,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following two sets:\n\n\\begin{tabular}{ll}\n\\textbf{Set X} & \\textbf{Set Y} \\\\\nP. Lexical Analyzer & 1. Abstract Syntax Tree \\\\\nQ. Syntax Analyzer & 2. Token \\\\\nR. Intermediate Code Generator & 3. Parse Tree \\\\\nS. Code Optimizer & 4. Constant Folding\n\\end{tabular}\n\nWhich one of the following options is the CORRECT match from Set X to Set Y?",
+      "options_latex": {
+        "A": "P -- 4; Q -- 1; R -- 3; S -- 2",
+        "B": "P -- 2; Q -- 3; R -- 1; S -- 4",
+        "C": "P -- 2; Q -- 1; R -- 3; S -- 4",
+        "D": "P -- 4; Q -- 3; R -- 2; S -- 1"
+      }
     },
     {
       "id": "2024_CS2_CS_Q36",
@@ -29876,10 +29953,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Easy",
+      "explaination": "In pointer arithmetic, pointer subtraction `q - p` yields the number of elements between pointers, so $(q - p) = 1$. The expression `*q - *p` calculates the difference between pointed double values: $25.0 - 20.0 = 5.0$, cast to integer is 5. Thus, `1,5` is printed.",
       "tags": [
         "2024",
         "2_mark",
@@ -29890,7 +29967,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "What is the output of the following C program?\n\\begin{verbatim}\n#include <stdio.h>\nint main() {\n    double a[2] = {20.0, 25.0}, *p, *q;\n    p = a;\n    q = p + 1;\n    printf(\"%d,%d\", (int)(q - p), (int)(*q - *p));\n    return 0;\n}\n\\end{verbatim}",
+      "options_latex": {
+        "A": "4,8",
+        "B": "1,5",
+        "C": "8,5",
+        "D": "1,8"
+      }
     },
     {
       "id": "2024_CS2_CS_Q37",
@@ -29920,10 +30004,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "CPU and I/O scheduling",
+      "difficulty_level": "Medium",
+      "explaination": "Under SRTF: execution order is A(0-2), B(2-4), C(4-7), B(7-11), D(11-18), A(18-26). Turnaround times: A=26, B=9, C=3, D=12; Waiting times: A=16, B=3, C=0, D=5. Average waiting time $= 24/4 = 6.0$. Under NP-SJF: A runs non-preemptively (0-10), then C(10-13), B(13-19), D(19-26). Waiting times: A=0, C=6, B=11, D=13. Average waiting time $= 30/4 = 7.5$.",
       "tags": [
         "2024",
         "2_mark",
@@ -29934,7 +30018,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a single processor system with four processes A, B, C, and D, represented as given below, where for each process the first value is its arrival time, and the second value is its CPU burst time:\nA (0, 10), B (2, 6), C (4, 3), and D (6, 7).\nWhich one of the following options gives the average waiting time for Shortest Remaining Time First (SRTF) and Non-Preemptive Shortest Job First (NP-SJF) scheduling?",
+      "options_latex": {
+        "A": "SRTF = 6, NP-SJF = 7",
+        "B": "SRTF = 6, NP-SJF = 7.5",
+        "C": "SRTF = 7, NP-SJF = 7.5",
+        "D": "SRTF = 7, NP-SJF = 8.5"
+      }
     },
     {
       "id": "2024_CS2_CS_Q38",
@@ -29964,10 +30055,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Fragmentation and IP addressing, IPv4, CIDR notation",
+      "difficulty_level": "Easy",
+      "explaination": "The address range spans from $10.12.2.0$ ($00000010_2$) to $10.12.3.255$ ($00000011_2$). The first 23 bits ($8 + 8 + 7 = 23$) are identical ($10.12.2$). Total addresses in range $= 2 \\times 256 = 512 = 2^{32 - 23}$, which exactly matches CIDR prefix `10.12.2.0/23`.",
       "tags": [
         "2024",
         "2_mark",
@@ -29978,7 +30069,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one of the following CIDR prefixes exactly represents the range of IP addresses 10.12.2.0 to 10.12.3.255?",
+      "options_latex": {
+        "A": "10.12.2.0/23",
+        "B": "10.12.2.0/24",
+        "C": "10.12.0.0/22",
+        "D": "10.12.2.0/22"
+      }
     },
     {
       "id": "2024_CS2_CS_Q39",
@@ -30008,10 +30106,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees, binary search trees, binary heaps",
+      "difficulty_level": "Easy",
+      "explaination": "For any binary search tree, the inorder traversal sequence always visits elements in strictly increasing sorted order regardless of insertion order or tree shape. Since the set of distinct elements $V$ is known, sorting $V$ directly determines the unique inorder traversal.",
       "tags": [
         "2024",
         "2_mark",
@@ -30022,7 +30120,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "You are given a set $V$ of distinct integers. A binary search tree $T$ is created by inserting all elements of $V$ one by one, starting with an empty tree. The tree $T$ follows the convention that, at each node, all values stored in the left subtree of the node are smaller than the value stored at the node. Which of the following is TRUE?",
+      "options_latex": {
+        "A": "Inorder traversal of $T$ can be determined from $V$",
+        "B": "Root node of $T$ can be determined from $V$",
+        "C": "Preorder traversal of $T$ can be determined from $V$",
+        "D": "Postorder traversal of $T$ can be determined from $V$"
+      }
     },
     {
       "id": "2024_CS2_CS_Q40",
@@ -30052,10 +30157,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Medium",
+      "explaination": "FIRST(A) = {c, $\\epsilon$} and FIRST(B) = {d, $\\epsilon$}. For $S \\to AaAb$, FIRST($AaAb$) = {c, a}, so entry $M[S, c]$ gets $S \\to AaAb$ (cell 1). For $S \\to BbBa$, FIRST($BbBa$) = {d, b}, so entry $M[S, d]$ gets $S \\to BbBa$ (cell 2). FOLLOW(A) = {a, b}, so $A \\to \\epsilon$ appears on $a$ and $b$ (cell 3). FOLLOW(B) = {b, a}, so $B \\to \\epsilon$ appears on $b$ and $a$ (cell 4).",
       "tags": [
         "2024",
         "2_mark",
@@ -30066,7 +30171,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following context-free grammar where the start symbol is $S$ and the set of terminals is $\\{a,b,c,d\\}$:\n\\[ S \\to AaAb \\mid BbBa \\]\n\\[ A \\to cS \\mid \\epsilon \\]\n\\[ B \\to dS \\mid \\epsilon \\]\nThe following is a partially-filled LL(1) parsing table:\n\n\\begin{tabular}{|c|c|c|c|c|c|}\n\\hline\n& $a$ & $b$ & $c$ & $d$ & \\$ \\\\\n\\hline\n$S$ & $S \\to AaAb$ & $S \\to BbBa$ & (1) & (2) & \\\\\n$A$ & $A \\to \\epsilon$ & (3) & $A \\to cS$ & & \\\\\n$B$ & (4) & $B \\to \\epsilon$ & & $B \\to dS$ & \\\\\n\\hline\n\\end{tabular}\n\nWhich one of the following options represents the CORRECT combination for the numbered cells in the parsing table?",
+      "options_latex": {
+        "A": "(1) $S \\to AaAb$ (2) $S \\to BbBa$ (3) $A \\to \\epsilon$ (4) $B \\to \\epsilon$",
+        "B": "(1) $S \\to BbBa$ (2) $S \\to AaAb$ (3) $A \\to \\epsilon$ (4) $B \\to \\epsilon$",
+        "C": "(1) $S \\to AaAb$ (2) $S \\to BbBa$ (3) blank (4) blank",
+        "D": "(1) $S \\to BbBa$ (2) $S \\to AaAb$ (3) blank (4) blank"
+      }
     },
     {
       "id": "2024_CS2_CS_Q42",
@@ -30096,10 +30208,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Hard",
+      "explaination": "When $X[i] == second$, the current element matches the older distinct value, switching identity with `first`. Because $X[i]$ has just appeared once consecutively, `len1` resets to 1 (expression $P = 1$). When encountering a third distinct value (else branch), the previous window keeping at most two distinct values must keep only the contiguous run of `first` plus current element, so $Q = len1 + 1$.",
       "tags": [
         "2024",
         "2_mark",
@@ -30110,7 +30222,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider an array X that contains n positive integers. A subarray of X is defined to be a sequence of array locations with consecutive indices.\nThe C code snippet given below has been written to compute the length of the longest subarray of X that contains at most two distinct integers. The code has two missing expressions labelled $(P)$ and $(Q)$:\n\\begin{verbatim}\nint first=0, second=0, len1=0, len2=0, maxlen=0;\nfor (int i=0; i < n; i++) {\n    if (X[i] == first) {\n        len2++; len1++;\n    } else if (X[i] == second) {\n        len2++;\n        len1 = (P);\n        second = first;\n    } else {\n        len2 = (Q);\n        len1 = 1; second = first;\n    }\n    if (len2 > maxlen) maxlen = len2;\n    first = X[i];\n}\n\\end{verbatim}\nWhich one of the following options gives the CORRECT missing expressions?",
+      "options_latex": {
+        "A": "(P) len1+1 (Q) len2+1",
+        "B": "(P) 1 (Q) len1+1",
+        "C": "(P) 1 (Q) len2+1",
+        "D": "(P) len2+1 (Q) len1+1"
+      }
     },
     {
       "id": "2024_CS2_CS_Q43",
@@ -30140,10 +30259,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Intermediate code generation",
+      "difficulty_level": "Medium",
+      "explaination": "In compiler triples for array references: array indexing $s[i]$ uses index operation `=[] s i` at triple (1). Triple (2) applies unary minus to (1): `uminus (1)`. Triple (3) multiplies $(p + r)$ at (0) with $-s[i]$ at (2): `* (0) (2)`. For assignment to array $x[i]$, triple (6) performs indexed target `[]= x i`, and triple (7) stores value (5) into (6).",
       "tags": [
         "2024",
         "2_mark",
@@ -30154,7 +30273,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following expression: $x[i] = (p + r) * -s[i] + u / w$. The following sequence shows the list of triples representing the given expression, with entries missing for triples (1), (3), and (6):\n\\begin{verbatim}\n(0) + p r\n(1)\n(2) uminus (1)\n(3)\n(4) / u w\n(5) + (3) (4)\n(6)\n(7) = (6) (5)\n\\end{verbatim}\nWhich one of the following options fills in the missing entries CORRECTLY?",
+      "options_latex": {
+        "A": "(1) =[] s i; (3) * (0) (2); (6) []= x i",
+        "B": "(1) []= s i; (3) - (0) (2); (6) =[] x (5)",
+        "C": "(1) =[] s i; (3) * (0) (2); (6) []= x (5)",
+        "D": "(1) []= s i; (3) - (0) (2); (6) =[] x i"
+      }
     },
     {
       "id": "2024_CS2_CS_Q44",
@@ -30184,10 +30310,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Probability and Statistics",
+      "subtopic": "Random variables",
+      "difficulty_level": "Medium",
+      "explaination": "Since $y \\in [0, 1]$, $z = xy \\le x(1) = x$ holds for every realization. Taking the expectation of both sides yields $E[z] \\le E[x]$, which directly implies $\\overline{z} \\le \\overline{x}$.",
       "tags": [
         "2024",
         "2_mark",
@@ -30198,7 +30324,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $x$ and $y$ be random variables, not necessarily independent, that take real values in the interval $[0,1]$. Let $z = xy$ and let the mean values of $x, y, z$ be $\\overline{x}, \\overline{y}, \\overline{z}$, respectively. Which one of the following statements is TRUE?",
+      "options_latex": {
+        "A": "$\\overline{z} = \\overline{x}\\overline{y}$",
+        "B": "$\\overline{z} \\le \\overline{x}\\overline{y}$",
+        "C": "$\\overline{z} \\ge \\overline{x}\\overline{y}$",
+        "D": "$\\overline{z} \\le \\overline{x}$"
+      }
     },
     {
       "id": "2024_CS2_CS_Q45",
@@ -30228,10 +30361,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Relational model: relational algebra, tuple calculus, SQL",
+      "difficulty_level": "Medium",
+      "explaination": "To find cities with at least 3 distinct persons residing in them using selection, projection, cross-product, and rename, we need 3 copies of the Person table ($P_1, P_2, P_3$). Combining 3 relations requires 2 cross-product operations: $(P_1 \\times P_2) \\times P_3$.",
       "tags": [
         "2024",
         "2_mark",
@@ -30242,7 +30375,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The relation schema, Person(pid, city), describes the city of residence for every person uniquely identified by pid. The following relational algebra operators are available: selection, projection, cross product, and rename.\nTo find the list of cities where at least 3 persons reside, what is the minimum number of cross product operations required?",
+      "options_latex": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      }
     },
     {
       "id": "2024_CS2_GA_Q01",
@@ -30272,10 +30412,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'Walk -> jog -> sprint' depicts an increasing scale of physical speed/exertion. Similarly, 'bothered -> fazed -> daunted' depicts an increasing degree of perturbation/discouragement. 'Fazed' means disconcerted or perturbed, fitting between bothered and daunted.",
       "tags": [
         "1_mark",
         "2024",
@@ -30286,7 +30426,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "If `$\\to$' denotes increasing order of intensity, then the meaning of the words $[\\text{walk} \\to \\text{jog} \\to \\text{sprint}]$ is analogous to $[\\text{bothered} \\to \\text{\\_\\_\\_\\_\\_\\_\\_\\_} \\to \\text{daunted}]$.\nWhich one of the given options is appropriate to fill the blank?",
+      "options_latex": {
+        "A": "phased",
+        "B": "phrased",
+        "C": "fazed",
+        "D": "fused"
+      }
     },
     {
       "id": "2024_CS2_GA_Q02",
@@ -30316,10 +30463,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "There are 4 distinct elements (water, air, fire, earth). The number of distinct permutations/orderings of these 4 elements is $4! = 4 \\times 3 \\times 2 \\times 1 = 24$. Since each wizard tries all possible orders independently, each wizard makes 24 attempts.",
       "tags": [
         "1_mark",
         "2024",
@@ -30330,7 +30477,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Two wizards try to create a spell using all the four elements, water, air, fire, and earth. For this, they decide to mix all these elements in all possible orders. They also decide to work independently. After trying all possible combination of elements, they conclude that the spell does not work.\nHow many attempts does each wizard make before coming to this conclusion, independently?",
+      "options_latex": {
+        "A": "24",
+        "B": "48",
+        "C": "16",
+        "D": "12"
+      }
     },
     {
       "id": "2024_CS2_GA_Q03",
@@ -30360,10 +30514,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Data interpretation: data graphs (bar graphs, pie charts, and other graphs representing data), 2- and 3-dimensional plots, maps, and tables",
+      "difficulty_level": "Medium",
+      "explaination": "Let $C$ and $O$ be sets of students liking core and other branches. Total students $N = 10000$, neither $= 1500$, so $|C \\cup O| = 10000 - 1500 = 8500$. We are given $|C \\cap O| = 500$ and $|C| = \\frac{1}{4}|O| \\implies |O| = 4|C|$. By inclusion-exclusion, $|C \\cup O| = |C| + |O| - |C \\cap O| \\implies 8500 = |C| + 4|C| - 500 \\implies 5|C| = 9000 \\implies |C| = 1800$.",
       "tags": [
         "1_mark",
         "2024",
@@ -30374,7 +30528,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In an engineering college of 10,000 students, 1,500 like neither their core branches nor other branches. The number of students who like their core branches is 1/4th of the number of students who like other branches. The number of students who like both their core and other branches is 500.\nThe number of students who like their core branches is:",
+      "options_latex": {
+        "A": "1,800",
+        "B": "3,500",
+        "C": "1,600",
+        "D": "1,500"
+      }
     },
     {
       "id": "2024_CS2_GA_Q04",
@@ -30403,10 +30564,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "From $\\ln\\left(\\frac{x+y}{2}\\right) = \\frac{1}{2}[\\ln(x) + \\ln(y)] = \\ln(\\sqrt{xy})$, we obtain $\\frac{x+y}{2} = \\sqrt{xy} \\implies x + y = 2\\sqrt{xy} \\implies (\\sqrt{x} - \\sqrt{y})^2 = 0 \\implies x = y$. Substituting $x = y$ gives $\\frac{x}{y} + \\frac{y}{x} = 1 + 1 = 2$.",
       "tags": [
         "1_mark",
         "2024",
@@ -30417,7 +30578,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "For positive non-zero real variables $x$ and $y$, if\n\\[ \\ln\\left(\\frac{x+y}{2}\\right) = \\frac{1}{2} [\\ln(x) + \\ln(y)] \\]\nthen, the value of $\\frac{x}{y} + \\frac{y}{x}$ is:",
+      "options_latex": {
+        "A": "1",
+        "B": "1/2",
+        "C": "2",
+        "D": "4"
+      }
     },
     {
       "id": "2024_CS2_GA_Q05",
@@ -30447,10 +30615,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Examine the consecutive differences: $9 - 6 = 3$, $14 - 9 = 5$, $x - 14 = d_3$, $30 - x = d_4$, $41 - 30 = 11$. The differences are consecutive odd numbers: $3, 5, 7, 9, 11$. For $d_3 = 7$, $x = 14 + 7 = 21$, and checking $d_4 = 30 - 21 = 9$ matches. Hence, $x = 21$.",
       "tags": [
         "1_mark",
         "2024",
@@ -30461,7 +30629,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In the sequence 6, 9, 14, $x$, 30, 41, a possible value of $x$ is:",
+      "options_latex": {
+        "A": "25",
+        "B": "21",
+        "C": "18",
+        "D": "20"
+      }
     },
     {
       "id": "2024_CS2_GA_Q06",
@@ -30491,10 +30666,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Narrative sequencing",
+      "difficulty_level": "Medium",
+      "explaination": "Sentence S introduces the foundational historical premise (many millennia ago, Antarctic plate collided with Eurasian plate). Sentence P describes the immediate effect of this event (energy/heat rising to 4 km height). Sentence R details the subsequent cooling that altered the atmosphere. Sentence Q concludes with the geophysicists' resulting viewpoint. The logical sequence is SPRQ.",
       "tags": [
         "2024",
         "2_mark",
@@ -30505,7 +30680,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Sequence the following sentences in a coherent passage.\n\\begin{itemize}\n\\item[P:] This fortuitous geological event generated a colossal amount of energy and heat that resulted in the rocks rising to an average height of 4 km across the contact zone.\n\\item[Q:] Thus, the geophysicists tend to think of the Himalayas as an active geological event rather than as a static geological feature.\n\\item[R:] The natural process of the cooling of this massive edifice absorbed large quantities of atmospheric carbon dioxide, altering the earth’s atmosphere and making it better suited for life.\n\\item[S:] Many millennia ago, a breakaway chunk of bedrock from the Antarctic Plate collided with the massive Eurasian Plate.\n\\end{itemize}",
+      "options_latex": {
+        "A": "QPSR",
+        "B": "QSPR",
+        "C": "SPRQ",
+        "D": "SRPQ"
+      }
     },
     {
       "id": "2024_CS2_GA_Q07",
@@ -30535,10 +30717,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "When two items are sold at the same selling price $S$, one at a profit of $x\\%$ and the other at a loss of $x\\%$, there is always an overall net loss given by $\\frac{x^2}{100}\\%$. Here $x = 10$, so the net loss is $\\frac{10^2}{100}\\% = 1\\%$ loss.",
       "tags": [
         "2024",
         "2_mark",
@@ -30549,7 +30731,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A person sold two different items at the same price. He made 10\\% profit in one item, and 10\\% loss in the other item. In selling these two items, the person made a total of:",
+      "options_latex": {
+        "A": "1\\% profit",
+        "B": "2\\% profit",
+        "C": "1\\% loss",
+        "D": "2\\% loss"
+      }
     },
     {
       "id": "2024_CS2_GA_Q09",
@@ -30579,10 +30768,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Spatial Aptitude",
+      "subtopic": "Paper folding, cutting, and patterns in 2 and 3 dimensions",
+      "difficulty_level": "Easy",
+      "explaination": "A single full planar straight cut can at most double the number of pieces. With $k$ cuts through 3 orthogonal dimensions (1 cut parallel to $xy$-plane, 1 parallel to $yz$-plane, 1 parallel to $zx$-plane), the cube is divided into $2 \\times 2 \\times 2 = 8$ equal pieces. Thus, a minimum of 3 cuts is required.",
       "tags": [
         "2024",
         "2_mark",
@@ -30593,7 +30782,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A cube is to be cut into 8 pieces of equal size and shape. Here, each cut should be straight and it should not stop till it reaches the other end of the cube.\nThe minimum number of such cuts required is:",
+      "options_latex": {
+        "A": "3",
+        "B": "4",
+        "C": "7",
+        "D": "8"
+      }
     },
     {
       "id": "2024_CS2_GA_Q10",
@@ -30623,10 +30819,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Analytical Aptitude",
+      "subtopic": "Logic: deduction and induction",
+      "difficulty_level": "Hard",
+      "explaination": "Each number in a cell denotes how many neighboring cells do NOT contain an 'X'. With crosses determined from the first three rows, the count of non-cross neighbors for each of the 4 cells in the bottom row evaluates to values whose total sum is 11.",
       "tags": [
         "2024",
         "2_mark",
@@ -30637,7 +30833,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In a $4 \\times 4$ array, each cell of the first three rows has either a cross (X) or a number. The number in a cell represents the count of the immediate neighboring cells (left, right, top, bottom, diagonals) NOT having a cross (X). Given that the last row has no crosses (X), the sum of the four numbers to be filled in the last row is:",
+      "options_latex": {
+        "A": "11",
+        "B": "10",
+        "C": "12",
+        "D": "9"
+      }
     },
     {
       "id": "2025_CS1_CS_Q11",

@@ -1,0 +1,773 @@
+#!/usr/bin/env python3
+"""
+enrich_2024_cs2.py
+
+Fills the AI metadata fields for 2024 CS2 questions based on syllabus/cs_2026_syllabus.json:
+- topic: Canonical syllabus module
+- subtopic: Granular syllabus concept
+- difficulty_level: Easy | Medium | Hard
+- explaination: Concise 2-3 sentence hint with embedded LaTeX formulas ($...$)
+- question_text_latex: Formatted question text with proper LaTeX math ($...$)
+- options_latex: Formatted options with LaTeX math ($...$) and cleaned PDF footers
+"""
+
+import os
+import json
+
+ENRICHMENTS = {
+    # ==================== GA 1-MARK ====================
+    "2024_CS2_GA_Q01": {
+        "topic": "Verbal Aptitude",
+        "subtopic": "Vocabulary: words, idioms, and phrases in context",
+        "difficulty_level": "Easy",
+        "explaination": "'Walk -> jog -> sprint' depicts an increasing scale of physical speed/exertion. Similarly, 'bothered -> fazed -> daunted' depicts an increasing degree of perturbation/discouragement. 'Fazed' means disconcerted or perturbed, fitting between bothered and daunted.",
+        "question_text_latex": "If `$\\to$' denotes increasing order of intensity, then the meaning of the words $[\\text{walk} \\to \\text{jog} \\to \\text{sprint}]$ is analogous to $[\\text{bothered} \\to \\text{\\_\\_\\_\\_\\_\\_\\_\\_} \\to \\text{daunted}]$.\nWhich one of the given options is appropriate to fill the blank?",
+        "options_latex": {
+            "A": "phased",
+            "B": "phrased",
+            "C": "fazed",
+            "D": "fused"
+        }
+    },
+    "2024_CS2_GA_Q02": {
+        "topic": "Quantitative Aptitude",
+        "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+        "difficulty_level": "Easy",
+        "explaination": "There are 4 distinct elements (water, air, fire, earth). The number of distinct permutations/orderings of these 4 elements is $4! = 4 \\times 3 \\times 2 \\times 1 = 24$. Since each wizard tries all possible orders independently, each wizard makes 24 attempts.",
+        "question_text_latex": "Two wizards try to create a spell using all the four elements, water, air, fire, and earth. For this, they decide to mix all these elements in all possible orders. They also decide to work independently. After trying all possible combination of elements, they conclude that the spell does not work.\nHow many attempts does each wizard make before coming to this conclusion, independently?",
+        "options_latex": {
+            "A": "24",
+            "B": "48",
+            "C": "16",
+            "D": "12"
+        }
+    },
+    "2024_CS2_GA_Q03": {
+        "topic": "Quantitative Aptitude",
+        "subtopic": "Data interpretation: data graphs (bar graphs, pie charts, and other graphs representing data), 2- and 3-dimensional plots, maps, and tables",
+        "difficulty_level": "Medium",
+        "explaination": "Let $C$ and $O$ be sets of students liking core and other branches. Total students $N = 10000$, neither $= 1500$, so $|C \\cup O| = 10000 - 1500 = 8500$. We are given $|C \\cap O| = 500$ and $|C| = \\frac{1}{4}|O| \\implies |O| = 4|C|$. By inclusion-exclusion, $|C \\cup O| = |C| + |O| - |C \\cap O| \\implies 8500 = |C| + 4|C| - 500 \\implies 5|C| = 9000 \\implies |C| = 1800$.",
+        "question_text_latex": "In an engineering college of 10,000 students, 1,500 like neither their core branches nor other branches. The number of students who like their core branches is 1/4th of the number of students who like other branches. The number of students who like both their core and other branches is 500.\nThe number of students who like their core branches is:",
+        "options_latex": {
+            "A": "1,800",
+            "B": "3,500",
+            "C": "1,600",
+            "D": "1,500"
+        }
+    },
+    "2024_CS2_GA_Q04": {
+        "topic": "Quantitative Aptitude",
+        "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+        "difficulty_level": "Easy",
+        "explaination": "From $\\ln\\left(\\frac{x+y}{2}\\right) = \\frac{1}{2}[\\ln(x) + \\ln(y)] = \\ln(\\sqrt{xy})$, we obtain $\\frac{x+y}{2} = \\sqrt{xy} \\implies x + y = 2\\sqrt{xy} \\implies (\\sqrt{x} - \\sqrt{y})^2 = 0 \\implies x = y$. Substituting $x = y$ gives $\\frac{x}{y} + \\frac{y}{x} = 1 + 1 = 2$.",
+        "question_text_latex": "For positive non-zero real variables $x$ and $y$, if\n\\[ \\ln\\left(\\frac{x+y}{2}\\right) = \\frac{1}{2} [\\ln(x) + \\ln(y)] \\]\nthen, the value of $\\frac{x}{y} + \\frac{y}{x}$ is:",
+        "options_latex": {
+            "A": "1",
+            "B": "1/2",
+            "C": "2",
+            "D": "4"
+        }
+    },
+    "2024_CS2_GA_Q05": {
+        "topic": "Quantitative Aptitude",
+        "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+        "difficulty_level": "Easy",
+        "explaination": "Examine the consecutive differences: $9 - 6 = 3$, $14 - 9 = 5$, $x - 14 = d_3$, $30 - x = d_4$, $41 - 30 = 11$. The differences are consecutive odd numbers: $3, 5, 7, 9, 11$. For $d_3 = 7$, $x = 14 + 7 = 21$, and checking $d_4 = 30 - 21 = 9$ matches. Hence, $x = 21$.",
+        "question_text_latex": "In the sequence 6, 9, 14, $x$, 30, 41, a possible value of $x$ is:",
+        "options_latex": {
+            "A": "25",
+            "B": "21",
+            "C": "18",
+            "D": "20"
+        }
+    },
+
+    # ==================== GA 2-MARK ====================
+    "2024_CS2_GA_Q06": {
+        "topic": "Verbal Aptitude",
+        "subtopic": "Narrative sequencing",
+        "difficulty_level": "Medium",
+        "explaination": "Sentence S introduces the foundational historical premise (many millennia ago, Antarctic plate collided with Eurasian plate). Sentence P describes the immediate effect of this event (energy/heat rising to 4 km height). Sentence R details the subsequent cooling that altered the atmosphere. Sentence Q concludes with the geophysicists' resulting viewpoint. The logical sequence is SPRQ.",
+        "question_text_latex": "Sequence the following sentences in a coherent passage.\n\\begin{itemize}\n\\item[P:] This fortuitous geological event generated a colossal amount of energy and heat that resulted in the rocks rising to an average height of 4 km across the contact zone.\n\\item[Q:] Thus, the geophysicists tend to think of the Himalayas as an active geological event rather than as a static geological feature.\n\\item[R:] The natural process of the cooling of this massive edifice absorbed large quantities of atmospheric carbon dioxide, altering the earth’s atmosphere and making it better suited for life.\n\\item[S:] Many millennia ago, a breakaway chunk of bedrock from the Antarctic Plate collided with the massive Eurasian Plate.\n\\end{itemize}",
+        "options_latex": {
+            "A": "QPSR",
+            "B": "QSPR",
+            "C": "SPRQ",
+            "D": "SRPQ"
+        }
+    },
+    "2024_CS2_GA_Q07": {
+        "topic": "Quantitative Aptitude",
+        "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+        "difficulty_level": "Easy",
+        "explaination": "When two items are sold at the same selling price $S$, one at a profit of $x\\%$ and the other at a loss of $x\\%$, there is always an overall net loss given by $\\frac{x^2}{100}\\%$. Here $x = 10$, so the net loss is $\\frac{10^2}{100}\\% = 1\\%$ loss.",
+        "question_text_latex": "A person sold two different items at the same price. He made 10\\% profit in one item, and 10\\% loss in the other item. In selling these two items, the person made a total of:",
+        "options_latex": {
+            "A": "1\\% profit",
+            "B": "2\\% profit",
+            "C": "1\\% loss",
+            "D": "2\\% loss"
+        }
+    },
+    "2024_CS2_GA_Q09": {
+        "topic": "Spatial Aptitude",
+        "subtopic": "Paper folding, cutting, and patterns in 2 and 3 dimensions",
+        "difficulty_level": "Easy",
+        "explaination": "A single full planar straight cut can at most double the number of pieces. With $k$ cuts through 3 orthogonal dimensions (1 cut parallel to $xy$-plane, 1 parallel to $yz$-plane, 1 parallel to $zx$-plane), the cube is divided into $2 \\times 2 \\times 2 = 8$ equal pieces. Thus, a minimum of 3 cuts is required.",
+        "question_text_latex": "A cube is to be cut into 8 pieces of equal size and shape. Here, each cut should be straight and it should not stop till it reaches the other end of the cube.\nThe minimum number of such cuts required is:",
+        "options_latex": {
+            "A": "3",
+            "B": "4",
+            "C": "7",
+            "D": "8"
+        }
+    },
+    "2024_CS2_GA_Q10": {
+        "topic": "Analytical Aptitude",
+        "subtopic": "Logic: deduction and induction",
+        "difficulty_level": "Hard",
+        "explaination": "Each number in a cell denotes how many neighboring cells do NOT contain an 'X'. With crosses determined from the first three rows, the count of non-cross neighbors for each of the 4 cells in the bottom row evaluates to values whose total sum is 11.",
+        "question_text_latex": "In a $4 \\times 4$ array, each cell of the first three rows has either a cross (X) or a number. The number in a cell represents the count of the immediate neighboring cells (left, right, top, bottom, diagonals) NOT having a cross (X). Given that the last row has no crosses (X), the sum of the four numbers to be filled in the last row is:",
+        "options_latex": {
+            "A": "11",
+            "B": "10",
+            "C": "12",
+            "D": "9"
+        }
+    },
+
+    # ==================== CS 1-MARK ====================
+    "2024_CS2_CS_Q11": {
+        "topic": "Computer Organization and Architecture",
+        "subtopic": "I/O interface: interrupt and DMA mode",
+        "difficulty_level": "Medium",
+        "explaination": "Processor clock frequency is $4\\text{ MHz} = 4 \\times 10^6$ cycles/s. DMA steals 1\\% of cycles $= 0.01 \\times 4 \\times 10^6 = 40,000$ cycles/s. In each stolen cycle, 8 bytes ($8 \\times 8 = 64$ bits) are transferred. Transfer rate $= 40,000 \\times 64 = 2,560,000$ bps $= 25,60,000$ bps.",
+        "question_text_latex": "Consider a computer with a 4 MHz processor. Its DMA controller can transfer 8 bytes in 1 cycle from a device to main memory through cycle stealing at regular intervals. Which one of the following is the data transfer rate (in bits per second) of the DMA controller if 1\\% of the processor cycles are used for DMA?",
+        "options_latex": {
+            "A": "2,56,000",
+            "B": "3,200",
+            "C": "25,60,000",
+            "D": "32,000"
+        }
+    },
+    "2024_CS2_CS_Q12": {
+        "topic": "Discrete Mathematics",
+        "subtopic": "Propositional and first order logic",
+        "difficulty_level": "Easy",
+        "explaination": "The statement is: 'Fail grade cannot be given ($\\neg p$) when student scores more than 50\\% marks ($q$)', which means 'If $q$, then $\\neg p$'. In propositional logic, this is directly formalized as $q \\to \\neg p$.",
+        "question_text_latex": "Let $p$ and $q$ be the following propositions:\n$p$: Fail grade can be given.\n$q$: Student scores more than 50\\% marks.\nConsider the statement: ``Fail grade cannot be given when student scores more than 50\\% marks.''\nWhich one of the following is the CORRECT representation of the above statement in propositional logic?",
+        "options_latex": {
+            "A": "$q \\to \\neg p$",
+            "B": "$q \\to p$",
+            "C": "$p \\to q$",
+            "D": "$\\neg p \\to q$"
+        }
+    },
+    "2024_CS2_CS_Q13": {
+        "topic": "Programming and Data Structures",
+        "subtopic": "Programming in C",
+        "difficulty_level": "Medium",
+        "explaination": "In `main()`, `f(g(10), h(20))` evaluates parameters from right to left: `h(20)` executes first, printing `20` and returning 20 ($y = 20$), then `g(10)` executes, printing `10` and returning 10 ($x = 10$). Inside `f`, `g(x)` executes printing `10`, followed by `h(y)` printing `20`. The complete printed sequence is `20101020`.",
+        "question_text_latex": "Consider the following C program. Assume parameters to a function are evaluated from right to left.\n\\begin{verbatim}\n#include <stdio.h>\nint g(int p) { printf(\"%d\", p); return p; }\nint h(int q) { printf(\"%d\", q); return q; }\nvoid f(int x, int y) {\n    g(x);\n    h(y);\n}\nint main() {\n    f(g(10), h(20));\n}\n\\end{verbatim}\nWhich one of the following is the output of the program?",
+        "options_latex": {
+            "A": "20101020",
+            "B": "10202010",
+            "C": "20102010",
+            "D": "10201020"
+        }
+    },
+    "2024_CS2_CS_Q14": {
+        "topic": "Digital Logic",
+        "subtopic": "Number representations and computer arithmetic (fixed and floating point)",
+        "difficulty_level": "Easy",
+        "explaination": "In IEEE 754 single precision: sign bit 0 means positive. The exponent field 11111111 is reserved for $\\pm\\infty$ and NaN. The largest finite representable number has the maximum non-reserved biased exponent, which is $254 = 11111110_2$, with all mantissa bits set to 1 ($111\\dots1$), corresponding to option B.",
+        "question_text_latex": "The format of a single-precision floating-point number as per the IEEE 754 standard is:\nSign (1 bit), Exponent (8 bits), Mantissa (23 bits).\nChoose the largest floating-point number among the following options.",
+        "options_latex": {
+            "A": "Sign: 0, Exponent: 0111 1111, Mantissa: 1111 1111 1111 1111 1111 111",
+            "B": "Sign: 0, Exponent: 1111 1110, Mantissa: 1111 1111 1111 1111 1111 111",
+            "C": "Sign: 0, Exponent: 1111 1111, Mantissa: 1111 1111 1111 1111 1111 111",
+            "D": "Sign: 0, Exponent: 0111 1111, Mantissa: 0000 0000 0000 0000 0000 000"
+        }
+    },
+    "2024_CS2_CS_Q15": {
+        "topic": "Discrete Mathematics",
+        "subtopic": "Combinatorics: counting, recurrence relations, generating functions",
+        "difficulty_level": "Easy",
+        "explaination": "The characteristic equation is $r^2 - 5r + 6 = 0 \\implies (r - 2)(r - 3) = 0$, with roots $r = 2, 3$. The general solution is $T(n) = c_1 2^n + c_2 3^n$. Using initial conditions $T(0) = 1, T(1) = 2$: $c_1 + c_2 = 1$ and $2c_1 + 3c_2 = 2 \\implies c_1 = 1, c_2 = 0$. Thus, $T(n) = 2^n = \\Theta(2^n)$.",
+        "question_text_latex": "Let $T(n)$ be the recurrence relation defined as follows:\n\\[ T(0) = 1, \\quad T(1) = 2, \\quad \\text{and} \\quad T(n) = 5T(n-1) - 6T(n-2) \\quad \\text{for } n \\ge 2 \\]\nWhich one of the following statements is TRUE?",
+        "options_latex": {
+            "A": "$T(n) = \\Theta(2^n)$",
+            "B": "$T(n) = \\Theta(n 2^n)$",
+            "C": "$T(n) = \\Theta(3^n)$",
+            "D": "$T(n) = \\Theta(n 3^n)$"
+        }
+    },
+    "2024_CS2_CS_Q16": {
+        "topic": "Calculus",
+        "subtopic": "Integration",
+        "difficulty_level": "Medium",
+        "explaination": "Let $I = \\int_0^2 f(x) \\, dx$. Using the property $\\int_0^a f(x) \\, dx = \\int_0^a f(a - x) \\, dx$, $I = \\int_0^2 f(2 - x) \\, dx$. Adding both gives $2I = \\int_0^2 [f(x) + f(2 - x)] \\, dx$. Since $f(x) + f(2 - x) = 1$, we have $2I = \\int_0^2 1 \\, dx = 2 \\implies I = 1$.",
+        "question_text_latex": "Let $f(x)$ be a continuous function from $\\mathbb{R}$ to $\\mathbb{R}$ such that\n\\[ f(x) = 1 - f(2 - x) \\]\nWhich one of the following options is the CORRECT value of $\\int_0^2 f(x) \\, dx$?",
+        "options_latex": {
+            "A": "0",
+            "B": "1",
+            "C": "2",
+            "D": "-1"
+        }
+    },
+    "2024_CS2_CS_Q17": {
+        "topic": "Discrete Mathematics",
+        "subtopic": "Graphs: connectivity, matching, colouring",
+        "difficulty_level": "Medium",
+        "explaination": "If $A = A^{-1}$, then $A^2 = I$. The $(i, j)$-th entry of $A^2$ is the number of walks of length 2 between vertex $i$ and vertex $j$. Thus $(A^2)_{ii} = \\text{deg}(i) = 1$ for every vertex $i$, and $(A^2)_{ij} = 0$ for $i \\neq j$. Every vertex has degree exactly 1, which defines a 1-regular graph, i.e., a perfect matching.",
+        "question_text_latex": "Let $A$ be the adjacency matrix of a simple undirected graph $G$. Suppose $A$ is its own inverse. Which one of the following statements is always TRUE?",
+        "options_latex": {
+            "A": "$G$ is a cycle",
+            "B": "$G$ is a perfect matching",
+            "C": "$G$ is a complete graph",
+            "D": "There is no such graph $G$"
+        }
+    },
+    "2024_CS2_CS_Q18": {
+        "topic": "Probability and Statistics",
+        "subtopic": "Conditional probability and Bayes theorem",
+        "difficulty_level": "Easy",
+        "explaination": "When six unbiased 6-faced dice are rolled, total outcomes are $6^6$. The number of outcomes where all 6 faces are distinct is $6! = 720$. The probability is $\\frac{6!}{6^6} = \\frac{720}{46656} = \\frac{5}{324}$.",
+        "question_text_latex": "When six unbiased dice are rolled simultaneously, the probability of getting all distinct numbers (i.e., 1, 2, 3, 4, 5, and 6) is:",
+        "options_latex": {
+            "A": "$\\frac{1}{324}$",
+            "B": "$\\frac{5}{324}$",
+            "C": "$\\frac{7}{324}$",
+            "D": "$\\frac{11}{324}$"
+        }
+    },
+    "2024_CS2_CS_Q19": {
+        "topic": "Databases",
+        "subtopic": "Transactions and concurrency control",
+        "difficulty_level": "Easy",
+        "explaination": "The Durability property of the ACID paradigm guarantees that once a transaction has committed successfully, its updates and effects survive permanently in non-volatile storage, even in the event of a subsequent system crash.",
+        "question_text_latex": "Once the DBMS informs the user that a transaction has been successfully completed, its effect should persist even if the system crashes before all its changes are reflected on disk. This property is called:",
+        "options_latex": {
+            "A": "durability",
+            "B": "atomicity",
+            "C": "consistency",
+            "D": "isolation"
+        }
+    },
+    "2024_CS2_CS_Q20": {
+        "topic": "Databases",
+        "subtopic": "ER-model",
+        "difficulty_level": "Easy",
+        "explaination": "A weak entity cannot exist without its identifying (owner) entity. Therefore, every instance of the weak entity set must be associated with an owner entity instance via the identifying relationship, mandating total participation of the weak entity set.",
+        "question_text_latex": "In the context of owner and weak entity sets in the ER (Entity-Relationship) data model, which one of the following statements is TRUE?",
+        "options_latex": {
+            "A": "The weak entity set MUST have total participation in the identifying relationship",
+            "B": "The owner entity set MUST have total participation in the identifying relationship",
+            "C": "Both weak and owner entity sets MUST have total participation in the identifying relationship",
+            "D": "Neither weak entity set nor owner entity set MUST have total participation in the identifying relationship"
+        }
+    },
+    "2024_CS2_CS_Q21": {
+        "topic": "Compiler Design",
+        "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+        "difficulty_level": "Easy",
+        "explaination": "Lexical Analyzer outputs tokens (P - 2). Syntax Analyzer constructs parse trees (Q - 3). Intermediate Code Generator generates abstract syntax trees or intermediate representations (R - 1). Code Optimizer performs constant folding (S - 4). Thus, the correct matching is P - 2; Q - 3; R - 1; S - 4.",
+        "question_text_latex": "Consider the following two sets:\n\n\\begin{tabular}{ll}\n\\textbf{Set X} & \\textbf{Set Y} \\\\\nP. Lexical Analyzer & 1. Abstract Syntax Tree \\\\\nQ. Syntax Analyzer & 2. Token \\\\\nR. Intermediate Code Generator & 3. Parse Tree \\\\\nS. Code Optimizer & 4. Constant Folding\n\\end{tabular}\n\nWhich one of the following options is the CORRECT match from Set X to Set Y?",
+        "options_latex": {
+            "A": "P -- 4; Q -- 1; R -- 3; S -- 2",
+            "B": "P -- 2; Q -- 3; R -- 1; S -- 4",
+            "C": "P -- 2; Q -- 1; R -- 3; S -- 4",
+            "D": "P -- 4; Q -- 3; R -- 2; S -- 1"
+        }
+    },
+    "2024_CS2_CS_Q23": {
+        "topic": "Computer Networks",
+        "subtopic": "Concept of layering: OSI and TCP/IP Protocol Stacks",
+        "difficulty_level": "Easy",
+        "explaination": "In an end-to-end IP network, the destination IP address remains invariant throughout transit and is always the IP address of final host Y. The destination MAC address changes hop-by-hop and is set to the MAC address of the next-hop router R (not switch S, which operates transparently at Layer 2).",
+        "question_text_latex": "Node X has a TCP connection open to node Y. The packets from X to Y go through an intermediate IP router R. Ethernet switch S is the first switch on the network path between X and R. Consider a packet sent from X to Y over this connection.\nWhich of the following statements is/are TRUE about the destination addresses?",
+        "options_latex": {
+            "A": "The destination IP address is the IP address of R",
+            "B": "The destination IP address is the IP address of Y",
+            "C": "The destination MAC address is the MAC address of S",
+            "D": "The destination MAC address is the MAC address of Y"
+        }
+    },
+    "2024_CS2_CS_Q24": {
+        "topic": "Operating System",
+        "subtopic": "Memory management and virtual memory",
+        "difficulty_level": "Medium",
+        "explaination": "The MMU hardware translates virtual addresses to physical addresses using page tables/TLB (B), generates a page-fault trap when a page table entry is invalid (C), and raises a protection trap on access permission violations such as writing to read-only pages (D). Page table allocation (A) is an OS kernel duty.",
+        "question_text_latex": "Which of the following tasks is/are the responsibility/responsibilities of the memory management unit (MMU) in a system with paging-based memory management?",
+        "options_latex": {
+            "A": "Allocate a new page table for a newly created process",
+            "B": "Translate a virtual address to a physical address using the page table",
+            "C": "Raise a trap when a virtual address is not found in the page table",
+            "D": "Raise a trap when a process tries to write to a page marked with read-only permission in the page table"
+        }
+    },
+    "2024_CS2_CS_Q25": {
+        "topic": "Operating System",
+        "subtopic": "System calls, processes, threads, inter-process communication",
+        "difficulty_level": "Medium",
+        "explaination": "When process P executes a blocking I/O system call, it must wait for disk transfer and is moved to the blocked state (A). When P experiences a page fault on a swapped page, it is put into the blocked state until disk I/O completes (B). Interrupts from other devices (C) or timer ticks (D) in preemptive systems might return directly to P after ISR handling if P has highest priority.",
+        "question_text_latex": "Consider a process P running on a CPU. Which one or more of the following events will always trigger a context switch by the OS that results in process P moving to a non-running state (e.g., ready, blocked)?",
+        "options_latex": {
+            "A": "P makes a blocking system call to read a block of data from the disk",
+            "B": "P tries to access a page that is in the swap space, triggering a page fault",
+            "C": "An interrupt is raised by the disk to deliver data requested by some other process",
+            "D": "A timer interrupt is raised by the hardware"
+        }
+    },
+    "2024_CS2_CS_Q26": {
+        "topic": "Databases",
+        "subtopic": "File organization, indexing (e.g., B and B+ trees)",
+        "difficulty_level": "Easy",
+        "explaination": "A full table scan retrieves all pages sequentially. Sorted and Heap files store data records densely packed across consecutive data pages, requiring reading each page exactly once. Unclustered indexes store data out of order, incurring multiple random I/Os per record.",
+        "question_text_latex": "Which of the following file organizations is/are I/O efficient for the scan operation in DBMS?",
+        "options_latex": {
+            "A": "Sorted",
+            "B": "Heap",
+            "C": "Unclustered tree index",
+            "D": "Unclustered hash index"
+        }
+    },
+    "2024_CS2_CS_Q27": {
+        "topic": "Databases",
+        "subtopic": "Transactions and concurrency control",
+        "difficulty_level": "Medium",
+        "explaination": "Two-Phase Locking (2PL) guarantees conflict serializability (A). In 2PL, once a lock is released (shrinking phase), no new locks can be acquired (C). Basic 2PL is susceptible to deadlocks due to circular wait conditions (D). Statement B describes conservative/static locking, not general 2PL.",
+        "question_text_latex": "Which of the following statements about the Two Phase Locking (2PL) protocol is/are TRUE?",
+        "options_latex": {
+            "A": "2PL permits only serializable schedules",
+            "B": "With 2PL, a transaction always locks the data item being read or written just before every operation",
+            "C": "With 2PL, once a lock is released on any data item inside a transaction, no more locks on any data item can be acquired",
+            "D": "A deadlock is possible with 2PL"
+        }
+    },
+    "2024_CS2_CS_Q28": {
+        "topic": "Computer Networks",
+        "subtopic": "Fragmentation and IP addressing, IPv4, CIDR notation",
+        "difficulty_level": "Easy",
+        "explaination": "In IPv4, any intermediate router encountering a packet larger than the outgoing link MTU performs fragmentation (B). In contrast, fragment reassembly is performed strictly at the final destination host (C) to prevent re-fragmentation overhead and handle out-of-order routing.",
+        "question_text_latex": "Which of the following statements about IPv4 fragmentation is/are TRUE?",
+        "options_latex": {
+            "A": "The fragmentation of an IP datagram is performed only at the source of the datagram",
+            "B": "The fragmentation of an IP datagram is performed at any IP router which finds that the size of the datagram is greater than the MTU of the outgoing link",
+            "C": "The reassembly of fragments is performed only at the destination of the datagram",
+            "D": "The reassembly of fragments is performed at all intermediate routers along the path from the source to destination"
+        }
+    },
+    "2024_CS2_CS_Q29": {
+        "topic": "Compiler Design",
+        "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+        "difficulty_level": "Hard",
+        "explaination": "L-attributed definitions are explicitly defined such that their attributes can always be evaluated via depth-first (left-to-right) traversal (making statement B false). Not all L-attributed definitions on LR(1) grammars can be evaluated during bottom-up parsing without rewriting or marker nonterminals (making statement D false).",
+        "question_text_latex": "Which of the following statements is/are FALSE?",
+        "options_latex": {
+            "A": "An attribute grammar is a syntax-directed definition (SDD) in which the functions in the semantic rules have no side effects",
+            "B": "The attributes in a L-attributed definition cannot always be evaluated in a depth-first order",
+            "C": "Synthesized attributes can be evaluated by a bottom-up parser as the input is parsed",
+            "D": "All L-attributed definitions based on LR(1) grammar can be evaluated using a bottom-up parsing strategy"
+        }
+    },
+    "2024_CS2_CS_Q30": {
+        "topic": "Digital Logic",
+        "subtopic": "Boolean algebra",
+        "difficulty_level": "Easy",
+        "explaination": "In Boolean algebra: $x + 1 = 1$ (null element property of OR), so $x + 1 = x$ is FALSE (B is false). Also, $x \\cdot x = x$ (idempotent property of AND), so $x \\cdot x = 0$ is FALSE (C is false).",
+        "question_text_latex": "For a Boolean variable $x$, which of the following statements is/are FALSE?",
+        "options_latex": {
+            "A": "$x \\cdot 1 = x$",
+            "B": "$x + 1 = x$",
+            "C": "$x \\cdot x = 0$",
+            "D": "$x + \\overline{x} = 1$"
+        }
+    },
+    "2024_CS2_CS_Q31": {
+        "topic": "Computer Organization and Architecture",
+        "subtopic": "Instruction pipelining, pipeline hazards",
+        "difficulty_level": "Easy",
+        "explaination": "In I1: `DIV R3, R1, R2` (writes R3); I2: `SUB R5, R3, R4` (reads R3). Since I2 reads R3 after I1 writes R3, this is a Read-After-Write (RAW) data dependency on R3 between I1 and I2 (A is true). I3 writes R3, so between I1 (write) and I3 (write) is WAW, and between I2 (read) and I3 (write) is WAR.",
+        "question_text_latex": "An instruction format has the following structure:\nInstruction Number: Opcode destination reg, source reg-1, source reg-2\nConsider the following sequence of instructions to be executed in a pipelined processor:\n\\begin{verbatim}\nI1: DIV R3, R1, R2\nI2: SUB R5, R3, R4\nI3: ADD R3, R5, R6\nI4: MUL R7, R3, R8\n\\end{verbatim}\nWhich of the following dependencies is/are TRUE?",
+        "options_latex": {
+            "A": "There is a RAW dependency on R3 between I1 and I2",
+            "B": "There is a WAR dependency on R3 between I1 and I3",
+            "C": "There is a RAW dependency on R3 between I2 and I3",
+            "D": "There is a WAW dependency on R3 between I3 and I4"
+        }
+    },
+    "2024_CS2_CS_Q32": {
+        "topic": "Computer Networks",
+        "subtopic": "Fragmentation and IP addressing, IPv4, CIDR notation",
+        "difficulty_level": "Easy",
+        "explaination": "Whenever an IP packet is processed by an intermediate router, its Time to Live (TTL) field is decremented by at least 1. Because the header content changes, the router must recompute and update the Header Checksum field. Source and Protocol remain unchanged.",
+        "question_text_latex": "Which of the following fields of an IP header is/are always modified by any router before it forwards the IP packet?",
+        "options_latex": {
+            "A": "Source IP Address",
+            "B": "Protocol",
+            "C": "Time to Live (TTL)",
+            "D": "Header Checksum"
+        }
+    },
+    "2024_CS2_CS_Q33": {
+        "topic": "Programming and Data Structures",
+        "subtopic": "Programming in C",
+        "difficulty_level": "Easy",
+        "explaination": "The function `fX` calculates the string length by advancing pointer `b` until the null terminator `\\0` is reached, then returning pointer difference `b - a`. String literals in C are null-terminated, so calls with string literals or character arrays (`fX(\"abcd\")`, `fX(c)`) correctly compute 4 and return (A, B, and D are true).",
+        "question_text_latex": "Consider the following C function definition:\n\\begin{verbatim}\nint fX(char *a){\n    char *b = a;\n    while(*b)\n        b++;\n    return b - a;\n}\n\\end{verbatim}\nWhich of the following statements is/are TRUE?",
+        "options_latex": {
+            "A": "The function call fX(\"abcd\") will always return a value",
+            "B": "Assuming a character array c is declared as char c[] = \"abcd\" in main(), the function call fX(c) will always return a value",
+            "C": "The code of the function will not compile",
+            "D": "Assuming a character pointer c is declared as char *c = \"abcd\" in main(), the function call fX(c) will always return a value"
+        }
+    },
+    "2024_CS2_CS_Q34": {
+        "topic": "Discrete Mathematics",
+        "subtopic": "Sets, relations, functions, partial orders and lattices",
+        "difficulty_level": "Medium",
+        "explaination": "The poset constraints are: $1 < 2$, $3 < 2$, and $3 < 4$. Any compatible total order is a linear extension of this DAG. Elements 1 and 3 must precede 2, while 3 must precede 4. Counting topological orderings of $\\{1, 2, 3, 4\\}$ satisfying these constraints yields exactly 5 total orders: (1,3,2,4), (1,3,4,2), (3,1,2,4), (3,1,4,2), (3,4,1,2).",
+        "question_text_latex": "Let $P$ be the partial order defined on the set $\\{1,2,3,4\\}$ as follows:\n\\[ P = \\{(x, x) \\mid x \\in \\{1,2,3,4\\}\\} \\cup \\{(1,2), (3,2), (3,4)\\} \\]\nThe number of total orders on $\\{1,2,3,4\\}$ that contain $P$ is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+        "options_latex": None
+    },
+    "2024_CS2_CS_Q35": {
+        "topic": "Algorithms",
+        "subtopic": "Searching, sorting, hashing",
+        "difficulty_level": "Easy",
+        "explaination": "To minimize replacements to make array $A$ sorted in non-decreasing order, keep the longest non-decreasing subsequence (LNDS). For $A = [2, 5, 3, 1, 4, 2, 6]$, a longest non-decreasing subsequence is $[2, 3, 4, 6]$ of length 4. The minimum elements to replace is $n - \\text{length(LNDS)} = 7 - 4 = 3$.",
+        "question_text_latex": "Let $A$ be an array containing integer values. The distance of $A$ is defined as the minimum number of elements in $A$ that must be replaced with another integer so that the resulting array is sorted in non-decreasing order. The distance of the array $[2, 5, 3, 1, 4, 2, 6]$ is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+        "options_latex": None
+    },
+
+    # ==================== CS 2-MARK ====================
+    "2024_CS2_CS_Q36": {
+        "topic": "Programming and Data Structures",
+        "subtopic": "Programming in C",
+        "difficulty_level": "Easy",
+        "explaination": "In pointer arithmetic, pointer subtraction `q - p` yields the number of elements between pointers, so $(q - p) = 1$. The expression `*q - *p` calculates the difference between pointed double values: $25.0 - 20.0 = 5.0$, cast to integer is 5. Thus, `1,5` is printed.",
+        "question_text_latex": "What is the output of the following C program?\n\\begin{verbatim}\n#include <stdio.h>\nint main() {\n    double a[2] = {20.0, 25.0}, *p, *q;\n    p = a;\n    q = p + 1;\n    printf(\"%d,%d\", (int)(q - p), (int)(*q - *p));\n    return 0;\n}\n\\end{verbatim}",
+        "options_latex": {
+            "A": "4,8",
+            "B": "1,5",
+            "C": "8,5",
+            "D": "1,8"
+        }
+    },
+    "2024_CS2_CS_Q37": {
+        "topic": "Operating System",
+        "subtopic": "CPU and I/O scheduling",
+        "difficulty_level": "Medium",
+        "explaination": "Under SRTF: execution order is A(0-2), B(2-4), C(4-7), B(7-11), D(11-18), A(18-26). Turnaround times: A=26, B=9, C=3, D=12; Waiting times: A=16, B=3, C=0, D=5. Average waiting time $= 24/4 = 6.0$. Under NP-SJF: A runs non-preemptively (0-10), then C(10-13), B(13-19), D(19-26). Waiting times: A=0, C=6, B=11, D=13. Average waiting time $= 30/4 = 7.5$.",
+        "question_text_latex": "Consider a single processor system with four processes A, B, C, and D, represented as given below, where for each process the first value is its arrival time, and the second value is its CPU burst time:\nA (0, 10), B (2, 6), C (4, 3), and D (6, 7).\nWhich one of the following options gives the average waiting time for Shortest Remaining Time First (SRTF) and Non-Preemptive Shortest Job First (NP-SJF) scheduling?",
+        "options_latex": {
+            "A": "SRTF = 6, NP-SJF = 7",
+            "B": "SRTF = 6, NP-SJF = 7.5",
+            "C": "SRTF = 7, NP-SJF = 7.5",
+            "D": "SRTF = 7, NP-SJF = 8.5"
+        }
+    },
+    "2024_CS2_CS_Q38": {
+        "topic": "Computer Networks",
+        "subtopic": "Fragmentation and IP addressing, IPv4, CIDR notation",
+        "difficulty_level": "Easy",
+        "explaination": "The address range spans from $10.12.2.0$ ($00000010_2$) to $10.12.3.255$ ($00000011_2$). The first 23 bits ($8 + 8 + 7 = 23$) are identical ($10.12.2$). Total addresses in range $= 2 \\times 256 = 512 = 2^{32 - 23}$, which exactly matches CIDR prefix `10.12.2.0/23`.",
+        "question_text_latex": "Which one of the following CIDR prefixes exactly represents the range of IP addresses 10.12.2.0 to 10.12.3.255?",
+        "options_latex": {
+            "A": "10.12.2.0/23",
+            "B": "10.12.2.0/24",
+            "C": "10.12.0.0/22",
+            "D": "10.12.2.0/22"
+        }
+    },
+    "2024_CS2_CS_Q39": {
+        "topic": "Programming and Data Structures",
+        "subtopic": "Trees, binary search trees, binary heaps",
+        "difficulty_level": "Easy",
+        "explaination": "For any binary search tree, the inorder traversal sequence always visits elements in strictly increasing sorted order regardless of insertion order or tree shape. Since the set of distinct elements $V$ is known, sorting $V$ directly determines the unique inorder traversal.",
+        "question_text_latex": "You are given a set $V$ of distinct integers. A binary search tree $T$ is created by inserting all elements of $V$ one by one, starting with an empty tree. The tree $T$ follows the convention that, at each node, all values stored in the left subtree of the node are smaller than the value stored at the node. Which of the following is TRUE?",
+        "options_latex": {
+            "A": "Inorder traversal of $T$ can be determined from $V$",
+            "B": "Root node of $T$ can be determined from $V$",
+            "C": "Preorder traversal of $T$ can be determined from $V$",
+            "D": "Postorder traversal of $T$ can be determined from $V$"
+        }
+    },
+    "2024_CS2_CS_Q40": {
+        "topic": "Compiler Design",
+        "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+        "difficulty_level": "Medium",
+        "explaination": "FIRST(A) = {c, $\\epsilon$} and FIRST(B) = {d, $\\epsilon$}. For $S \\to AaAb$, FIRST($AaAb$) = {c, a}, so entry $M[S, c]$ gets $S \\to AaAb$ (cell 1). For $S \\to BbBa$, FIRST($BbBa$) = {d, b}, so entry $M[S, d]$ gets $S \\to BbBa$ (cell 2). FOLLOW(A) = {a, b}, so $A \\to \\epsilon$ appears on $a$ and $b$ (cell 3). FOLLOW(B) = {b, a}, so $B \\to \\epsilon$ appears on $b$ and $a$ (cell 4).",
+        "question_text_latex": "Consider the following context-free grammar where the start symbol is $S$ and the set of terminals is $\\{a,b,c,d\\}$:\n\\[ S \\to AaAb \\mid BbBa \\]\n\\[ A \\to cS \\mid \\epsilon \\]\n\\[ B \\to dS \\mid \\epsilon \\]\nThe following is a partially-filled LL(1) parsing table:\n\n\\begin{tabular}{|c|c|c|c|c|c|}\n\\hline\n& $a$ & $b$ & $c$ & $d$ & \\$ \\\\\n\\hline\n$S$ & $S \\to AaAb$ & $S \\to BbBa$ & (1) & (2) & \\\\\n$A$ & $A \\to \\epsilon$ & (3) & $A \\to cS$ & & \\\\\n$B$ & (4) & $B \\to \\epsilon$ & & $B \\to dS$ & \\\\\n\\hline\n\\end{tabular}\n\nWhich one of the following options represents the CORRECT combination for the numbered cells in the parsing table?",
+        "options_latex": {
+            "A": "(1) $S \\to AaAb$ (2) $S \\to BbBa$ (3) $A \\to \\epsilon$ (4) $B \\to \\epsilon$",
+            "B": "(1) $S \\to BbBa$ (2) $S \\to AaAb$ (3) $A \\to \\epsilon$ (4) $B \\to \\epsilon$",
+            "C": "(1) $S \\to AaAb$ (2) $S \\to BbBa$ (3) blank (4) blank",
+            "D": "(1) $S \\to BbBa$ (2) $S \\to AaAb$ (3) blank (4) blank"
+        }
+    },
+    "2024_CS2_CS_Q42": {
+        "topic": "Programming and Data Structures",
+        "subtopic": "Programming in C",
+        "difficulty_level": "Hard",
+        "explaination": "When $X[i] == second$, the current element matches the older distinct value, switching identity with `first`. Because $X[i]$ has just appeared once consecutively, `len1` resets to 1 (expression $P = 1$). When encountering a third distinct value (else branch), the previous window keeping at most two distinct values must keep only the contiguous run of `first` plus current element, so $Q = len1 + 1$.",
+        "question_text_latex": "Consider an array X that contains n positive integers. A subarray of X is defined to be a sequence of array locations with consecutive indices.\nThe C code snippet given below has been written to compute the length of the longest subarray of X that contains at most two distinct integers. The code has two missing expressions labelled $(P)$ and $(Q)$:\n\\begin{verbatim}\nint first=0, second=0, len1=0, len2=0, maxlen=0;\nfor (int i=0; i < n; i++) {\n    if (X[i] == first) {\n        len2++; len1++;\n    } else if (X[i] == second) {\n        len2++;\n        len1 = (P);\n        second = first;\n    } else {\n        len2 = (Q);\n        len1 = 1; second = first;\n    }\n    if (len2 > maxlen) maxlen = len2;\n    first = X[i];\n}\n\\end{verbatim}\nWhich one of the following options gives the CORRECT missing expressions?",
+        "options_latex": {
+            "A": "(P) len1+1 (Q) len2+1",
+            "B": "(P) 1 (Q) len1+1",
+            "C": "(P) 1 (Q) len2+1",
+            "D": "(P) len2+1 (Q) len1+1"
+        }
+    },
+    "2024_CS2_CS_Q43": {
+        "topic": "Compiler Design",
+        "subtopic": "Intermediate code generation",
+        "difficulty_level": "Medium",
+        "explaination": "In compiler triples for array references: array indexing $s[i]$ uses index operation `=[] s i` at triple (1). Triple (2) applies unary minus to (1): `uminus (1)`. Triple (3) multiplies $(p + r)$ at (0) with $-s[i]$ at (2): `* (0) (2)`. For assignment to array $x[i]$, triple (6) performs indexed target `[]= x i`, and triple (7) stores value (5) into (6).",
+        "question_text_latex": "Consider the following expression: $x[i] = (p + r) * -s[i] + u / w$. The following sequence shows the list of triples representing the given expression, with entries missing for triples (1), (3), and (6):\n\\begin{verbatim}\n(0) + p r\n(1)\n(2) uminus (1)\n(3)\n(4) / u w\n(5) + (3) (4)\n(6)\n(7) = (6) (5)\n\\end{verbatim}\nWhich one of the following options fills in the missing entries CORRECTLY?",
+        "options_latex": {
+            "A": "(1) =[] s i; (3) * (0) (2); (6) []= x i",
+            "B": "(1) []= s i; (3) - (0) (2); (6) =[] x (5)",
+            "C": "(1) =[] s i; (3) * (0) (2); (6) []= x (5)",
+            "D": "(1) []= s i; (3) - (0) (2); (6) =[] x i"
+        }
+    },
+    "2024_CS2_CS_Q44": {
+        "topic": "Probability and Statistics",
+        "subtopic": "Random variables",
+        "difficulty_level": "Medium",
+        "explaination": "Since $y \\in [0, 1]$, $z = xy \\le x(1) = x$ holds for every realization. Taking the expectation of both sides yields $E[z] \\le E[x]$, which directly implies $\\overline{z} \\le \\overline{x}$.",
+        "question_text_latex": "Let $x$ and $y$ be random variables, not necessarily independent, that take real values in the interval $[0,1]$. Let $z = xy$ and let the mean values of $x, y, z$ be $\\overline{x}, \\overline{y}, \\overline{z}$, respectively. Which one of the following statements is TRUE?",
+        "options_latex": {
+            "A": "$\\overline{z} = \\overline{x}\\overline{y}$",
+            "B": "$\\overline{z} \\le \\overline{x}\\overline{y}$",
+            "C": "$\\overline{z} \\ge \\overline{x}\\overline{y}$",
+            "D": "$\\overline{z} \\le \\overline{x}$"
+        }
+    },
+    "2024_CS2_CS_Q45": {
+        "topic": "Databases",
+        "subtopic": "Relational model: relational algebra, tuple calculus, SQL",
+        "difficulty_level": "Medium",
+        "explaination": "To find cities with at least 3 distinct persons residing in them using selection, projection, cross-product, and rename, we need 3 copies of the Person table ($P_1, P_2, P_3$). Combining 3 relations requires 2 cross-product operations: $(P_1 \\times P_2) \\times P_3$.",
+        "question_text_latex": "The relation schema, Person(pid, city), describes the city of residence for every person uniquely identified by pid. The following relational algebra operators are available: selection, projection, cross product, and rename.\nTo find the list of cities where at least 3 persons reside, what is the minimum number of cross product operations required?",
+        "options_latex": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        }
+    },
+    "2024_CS2_CS_Q46": {
+        "topic": "Operating System",
+        "subtopic": "Concurrency and synchronization",
+        "difficulty_level": "Medium",
+        "explaination": "If T2 runs first: T2 takes s1, increments x (x=1), prints 1, signals s2, signals s1. Then T1 executes: takes s1, increments x (x=2), prints 2, completes wait(s2) without blocking (since s2 was signaled), signals s1 (outcome B). If T1 runs first: T1 takes s1, prints 1, and blocks on wait(s2) while holding s1, causing deadlock where T2 blocks on wait(s1) (outcome C).",
+        "question_text_latex": "Consider a multi-threaded program with two threads T1 and T2. The threads share two semaphores: s1 (initialized to 1) and s2 (initialized to 0). The threads also share a global variable x (initialized to 0). The threads execute the code shown below:\n\\begin{verbatim}\n// code of T1        // code of T2\nwait(s1);            wait(s1);\nx = x + 1;           x = x + 1;\nprint(x);            print(x);\nwait(s2);            signal(s2);\nsignal(s1);          signal(s1);\n\\end{verbatim}\nWhich of the following outcomes is/are possible when threads T1 and T2 execute concurrently?",
+        "options_latex": {
+            "A": "T1 runs first and prints 1, T2 runs next and prints 2",
+            "B": "T2 runs first and prints 1, T1 runs next and prints 2",
+            "C": "T1 runs first and prints 1, T2 does not print anything (deadlock)",
+            "D": "T2 runs first and prints 1, T1 does not print anything (deadlock)"
+        }
+    },
+    "2024_CS2_CS_Q47": {
+        "topic": "Linear Algebra",
+        "subtopic": "Matrices, determinants",
+        "difficulty_level": "Easy",
+        "explaination": "Swapping two rows of a matrix negates the determinant: $\\det(B) = -\\det(A)$ (A is true). If $A$ is invertible, $\\det(A) \\neq 0 \\implies \\det(B) = -\\det(A) \\neq 0$, so $B$ is also invertible (B is true). Row swapping does not preserve symmetry or trace.",
+        "question_text_latex": "Let $A$ be an $n \\times n$ matrix over the set of all real numbers $\\mathbb{R}$. Let $B$ be a matrix obtained from $A$ by swapping two rows. Which of the following statements is/are TRUE?",
+        "options_latex": {
+            "A": "The determinant of $B$ is the negative of the determinant of $A$",
+            "B": "If $A$ is invertible, then $B$ is also invertible",
+            "C": "If $A$ is symmetric, then $B$ is also symmetric",
+            "D": "If the trace of $A$ is zero, then the trace of $B$ is also zero"
+        }
+    },
+    "2024_CS2_CS_Q48": {
+        "topic": "Programming and Data Structures",
+        "subtopic": "Arrays, stacks, queues, linked lists",
+        "difficulty_level": "Medium",
+        "explaination": "S1 initially contains [100, 200, 300, 400] from bottom to top; S2 has capacity 2. Sequence (B): Push 400 to S2, push 300 to S2, output 200, pop 300 to S1 and output 300, pop 400 to S1 and output 400, output 100. Similarly, sequences (C) and (D) can be generated within S2's 2-element capacity limit.",
+        "question_text_latex": "Let S1 and S2 be two stacks. S1 has capacity of 4 elements. S2 has capacity of 2 elements. S1 already has 4 elements: 100, 200, 300, and 400 (top), whereas S2 is empty.\nOnly the following three operations are available: PushToS2, PushToS1, and GenerateOutput.\nWhich of the following output sequences can be generated?",
+        "options_latex": {
+            "A": "100, 200, 400, 300",
+            "B": "200, 300, 400, 100",
+            "C": "400, 200, 100, 300",
+            "D": "300, 200, 400, 100"
+        }
+    },
+    "2024_CS2_CS_Q49": {
+        "topic": "Digital Logic",
+        "subtopic": "Number representations and computer arithmetic (fixed and floating point)",
+        "difficulty_level": "Easy",
+        "explaination": "Convert $224_5$ to decimal: $2(5^2) + 2(5^1) + 4(5^0) = 50 + 10 + 4 = 64_{10}$ (A is true). In base 8: $64_{10} = 100_8$ (B is true). In base 16: $64_{10} = 40_{16} \\neq 50_{16}$ (C is false). In base 7: $64_{10} = 1(7^2) + 2(7^1) + 1(7^0) = 121_7$ (D is true).",
+        "question_text_latex": "Which of the following is/are EQUAL to 224 in radix-5 (i.e., base-5) notation?",
+        "options_latex": {
+            "A": "64 in radix-10",
+            "B": "100 in radix-8",
+            "C": "50 in radix-16",
+            "D": "121 in radix-7"
+        }
+    },
+    "2024_CS2_CS_Q51": {
+        "topic": "Discrete Mathematics",
+        "subtopic": "Graphs: connectivity, matching, colouring",
+        "difficulty_level": "Hard",
+        "explaination": "Let $T$ be a spanning tree of $G$. For any chord $e \\notin T$ creating a fundamental cycle $C$ with path $P \\subseteq T$, $T' = T \\setminus \\{e'\\} \\cup \\{e\\}$ is also a spanning tree. Since $w(T)$ and $w(T')$ are both even, $w(e) \\equiv w(e') \\pmod 2$ for every edge on $C$. Thus all edges in cycle $C$ must have the same parity (either all even or all odd).",
+        "question_text_latex": "Let $G$ be an undirected connected graph in which every edge has a positive integer weight. Suppose that every spanning tree in $G$ has even weight. Which of the following statements is/are TRUE for every such graph $G$?",
+        "options_latex": {
+            "A": "All edges in $G$ have even weight",
+            "B": "All edges in $G$ have even weight OR all edges in $G$ have odd weight",
+            "C": "In each cycle $C$ in $G$, all edges in $C$ have even weight",
+            "D": "In each cycle $C$ in $G$, either all edges in $C$ have even weight OR all edges in $C$ have odd weight"
+        }
+    },
+    "2024_CS2_CS_Q52": {
+        "topic": "Theory of Computation",
+        "subtopic": "Context-free grammars and push-down automata",
+        "difficulty_level": "Medium",
+        "explaination": "Each application of $S \\to aSbS$ consumes one $S$ and introduces two new $S$'s along with one $b$, effectively adding $+1$ to the count of $S$'s. Each termination $S \\to c$ eliminates one $S$ and adds one $c$. Thus, the total number of $c$'s must equal the number of $b$'s plus 1: $n_c(w) = n_b(w) + 1$ (C is true). Also, every $b$ is accompanied by an $a$, and additional $a$'s can come from $S \\to aS$, giving $n_a(w) \\ge n_b(w) = n_c(w) - 1 > n_c(w) - 2$ (B is true).",
+        "question_text_latex": "Consider a context-free grammar $G$ with the following 3 rules:\n\\[ S \\to aS \\mid aSbS \\mid c \\]\nLet $w \\in L(G)$. Let $n_a(w), n_b(w), n_c(w)$ denote the number of times $a, b, c$ occur in $w$, respectively. Which of the following statements is/are TRUE?",
+        "options_latex": {
+            "A": "$n_a(w) > n_b(w)$",
+            "B": "$n_a(w) > n_c(w) - 2$",
+            "C": "$n_c(w) = n_b(w) + 1$",
+            "D": "$n_c(w) = n_b(w) * 2$"
+        }
+    },
+    "2024_CS2_CS_Q53": {
+        "topic": "Operating System",
+        "subtopic": "File systems",
+        "difficulty_level": "Medium",
+        "explaination": "At 6000 RPM, one rotation takes $\\frac{60}{6000} = 10\\text{ ms}$. Average rotational latency $= 10/2 = 5\\text{ ms}$. Transfer time per sector $= \\frac{10\\text{ ms}}{500} = 0.02\\text{ ms}$. Time to access each random sector $= \\text{seek} + \\text{rotational latency} + \\text{transfer} = 5 + 5 + 0.02 = 10.02\\text{ ms}$. Total time for 3000 random sectors $= 3000 \\times 10.02\\text{ ms} = 30060\\text{ ms} \\approx 30.06$ seconds.",
+        "question_text_latex": "Consider a disk with the following specifications: rotation speed of 6000 RPM, average seek time of 5 milliseconds, 500 sectors/track, 512-byte sectors. A file has content stored in 3000 sectors located randomly on the disk. Assuming average rotational latency, the total time (in seconds, rounded off to 2 decimal places) to read the entire file from the disk is \\_\\_\\_\\_\\_\\_\\. (Answer in range 29.50 to 30.50)",
+        "options_latex": None
+    },
+    "2024_CS2_CS_Q54": {
+        "topic": "Computer Networks",
+        "subtopic": "Transport layer: flow control and congestion control, UDP, TCP, sockets",
+        "difficulty_level": "Medium",
+        "explaination": "When timeout occurs at $\\text{cwnd} = 12\\text{ MSS}$, slow start threshold is set to $\\text{ssthresh} = \\lfloor 12 / 2 \\rfloor = 6\\text{ MSS}$, and $\\text{cwnd}$ resets to $1\\text{ MSS}$ for the 1st RTT. After receiving ACKs in the 1st RTT, slow start doubles $\\text{cwnd}$ to $2\\text{ MSS}$ during the 2nd RTT. After receiving ACKs in the 2nd RTT, $\\text{cwnd}$ doubles again to $4\\text{ MSS}$ during the 3rd RTT.",
+        "question_text_latex": "Consider a TCP connection operating at a point of time with the congestion window of size 12 MSS (Maximum Segment Size), when a timeout occurs due to packet loss. Assuming that all the segments transmitted in the next two RTTs (Round Trip Time) are acknowledged correctly, the congestion window size (in MSS) during the third RTT will be \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+        "options_latex": None
+    },
+    "2024_CS2_CS_Q55": {
+        "topic": "Computer Networks",
+        "subtopic": "Data link layer: framing, error detection, Medium Access Control, Ethernet bridging",
+        "difficulty_level": "Easy",
+        "explaination": "Propagation delay $T_p = \\frac{\\text{Distance}}{\\text{Velocity}} = \\frac{500}{2 \\times 10^8} = 2.5 \\times 10^{-6}\\text{ s} = 2.5\\,\\mu\\text{s}$. For collision detection in CSMA/CD, transmission time must satisfy $T_t \\ge 2 T_p = 5\\,\\mu\\text{s}$. Minimum frame size $L = 2 T_p \\times B = (5 \\times 10^{-6}\\text{ s}) \\times 10^8\\text{ bps} = 500$ bits.",
+        "question_text_latex": "Consider an Ethernet segment with a transmission speed of $10^8$ bits/sec and a maximum segment length of 500 meters. If the speed of propagation of the signal in the medium is $2 \\times 10^8$ meters/sec, then the minimum frame size (in bits) required for collision detection is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+        "options_latex": None
+    },
+    "2024_CS2_CS_Q56": {
+        "topic": "Databases",
+        "subtopic": "Integrity constraints, normal forms",
+        "difficulty_level": "Medium",
+        "explaination": "For each attribute $A$ among the 4 attributes, there are 3 mutually exclusive choices: $A \\in X$, $A \\in Y$, or $A \\notin (X \\cup Y)$, giving $3^4 = 81$ pairs of disjoint sets $(X, Y)$. We subtract cases where $X = \\emptyset$ ($2^4 = 16$), where $Y = \\emptyset$ ($2^4 = 16$), and add back the double-subtracted case where $X = Y = \\emptyset$ ($1$). Total useful FDs $= 81 - 16 - 16 + 1 = 50$.",
+        "question_text_latex": "A functional dependency $F: X \\to Y$ is termed as a useful functional dependency if and only if it satisfies all the following three conditions:\n\\begin{itemize}\n\\item $X$ is not the empty set.\n\\item $Y$ is not the empty set.\n\\item Intersection of $X$ and $Y$ is the empty set.\n\\end{itemize}\nFor a relation $R$ with 4 attributes, the total number of possible useful functional dependencies is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+        "options_latex": None
+    },
+    "2024_CS2_CS_Q57": {
+        "topic": "Computer Organization and Architecture",
+        "subtopic": "Machine instructions and addressing modes",
+        "difficulty_level": "Medium",
+        "explaination": "Instruction length is 32 bits. Register fields: 16 registers need $\\log_2 16 = 4$ bits each ($2 \\times 4 = 8$ bits). Addressing mode: 8 modes need $\\log_2 8 = 3$ bits. Scalar field: 16 bits. Remaining bits for opcode $= 32 - (3 + 8 + 16) = 5$ bits. The maximum number of unique opcodes possible for every addressing mode is $2^5 = 32$.",
+        "question_text_latex": "A processor with 16 general purpose registers uses a 32-bit instruction format. The instruction format consists of an opcode field, an addressing mode field, two register operand fields, and a 16-bit scalar field. If 8 addressing modes are to be supported, the maximum number of unique opcodes possible for every addressing mode is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+        "options_latex": None
+    },
+    "2024_CS2_CS_Q58": {
+        "topic": "Computer Organization and Architecture",
+        "subtopic": "Instruction pipelining, pipeline hazards",
+        "difficulty_level": "Medium",
+        "explaination": "Average cycles per instruction in non-pipelined design: $\\text{CPI}_{\\text{non-pipe}} = 6$. In pipelined design: $\\text{CPI}_{\\text{pipe}} = 1 + (0.20 \\times 2) + (0.20 \\times 3) = 1 + 0.40 + 0.60 = 2.0$. Since clock frequency is 2 GHz in both, speedup $= \\frac{\\text{CPI}_{\\text{non-pipe}}}{\\text{CPI}_{\\text{pipe}}} = \\frac{6}{2.0} = 3.0$.",
+        "question_text_latex": "A non-pipelined instruction execution unit operating at 2 GHz takes an average of 6 cycles to execute an instruction of a program P. The unit is then redesigned to operate on a 5-stage pipeline at 2 GHz. Assume that the ideal throughput of the pipelined unit is 1 instruction per cycle. In the execution of program P, 20\\% instructions incur an average of 2 cycles stall due to data hazards and 20\\% instructions incur an average of 3 cycles stall due to control hazards. The speedup (rounded off to one decimal place) obtained by the pipelined design over the non-pipelined design is \\_\\_\\_\\_\\_\\_\\. (Answer in range 2.9 to 3.1)",
+        "options_latex": None
+    },
+    "2024_CS2_CS_Q60": {
+        "topic": "Discrete Mathematics",
+        "subtopic": "Graphs: connectivity, matching, colouring",
+        "difficulty_level": "Easy",
+        "explaination": "A graph has chromatic number 2 if and only if it is bipartite and contains at least one edge, which is equivalent to having no odd cycles. Inspection of the given graph verifies that it contains no odd-length cycles, meaning it can be properly colored with 2 colors.",
+        "question_text_latex": "The chromatic number of a graph is the minimum number of colours used in a proper colouring of the graph. The chromatic number of the given bipartite graph is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+        "options_latex": None
+    },
+    "2024_CS2_CS_Q61": {
+        "topic": "Computer Organization and Architecture",
+        "subtopic": "Machine instructions and addressing modes",
+        "difficulty_level": "Hard",
+        "explaination": "150 distinct instructions split equally means 75 R-type and 75 I-type. To represent 75 operations with 1 type bit, opcode bits $Y = 1 + \\lceil \\log_2 75 \\rceil = 1 + 7 = 8$ bits. 50 registers require $\\lceil \\log_2 50 \\rceil = 6$ bits each. R-type has 3 register fields ($3 \\times 6 = 18$ bits), so $X = 32 - (8 + 18) = 6$ bits. I-type has 2 register fields ($2 \\times 6 = 12$ bits), so $Z = 32 - (8 + 12) = 12$ bits. Thus, $X + 2Y + Z = 6 + 2(8) + 12 = 34$.",
+        "question_text_latex": "A processor uses a 32-bit instruction format and supports byte-addressable memory access. The ISA of the processor has 150 distinct instructions. The instructions are equally divided into two types, namely R-type and I-type, whose formats are shown below:\n\\begin{verbatim}\nR-type: OPCODE | UNUSED | DST Register | SRC Register1 | SRC Register 2\nI-type: OPCODE | DST Register | SRC Register | Immediate value/address\n\\end{verbatim}\nIn the OPCODE, 1 bit distinguishes between I-type and R-type and the remaining bits indicate the operation. The processor has 50 architectural registers, and all register fields are of equal size.\nLet $X$ be the bits for UNUSED, $Y$ for OPCODE, and $Z$ for immediate value/address. The value of $X + 2Y + Z$ is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+        "options_latex": None
+    },
+    "2024_CS2_CS_Q62": {
+        "topic": "Theory of Computation",
+        "subtopic": "Regular expressions and finite automata",
+        "difficulty_level": "Medium",
+        "explaination": "$L_1$ requires an odd number of $a$'s: strings containing either 1 or 3 $a$'s (since length $\\le 4$). Length $\\le 4$ with exactly one $a$: length 1 has $1$, length 2 has $2$, length 3 has $3$, length 4 has $4$ (total $1 + 2 + 3 + 4 = 10$). Length $\\le 4$ with exactly three $a$'s: length 3 has $aaa$ ($1$), length 4 has $\\binom{4}{3} = 4$. Total strings in $L_1 \\cap L_2 = 10 + 1 + 4 = 15$.",
+        "question_text_latex": "Let $L_1$ be the language represented by the regular expression $b^* a b^* (a b^* a b^*)^*$ and $L_2 = \\{ w \\in (a + b)^* \\mid |w| \\le 4 \\}$, where $|w|$ denotes the length of string $w$. The number of strings in $L_2$ which are also in $L_1$ is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+        "options_latex": None
+    },
+    "2024_CS2_CS_Q63": {
+        "topic": "Discrete Mathematics",
+        "subtopic": "Monoids, Groups",
+        "difficulty_level": "Easy",
+        "explaination": "In an additive group, an element $x$ is its own inverse if $x + x \\equiv 0 \\pmod n \\implies 2x \\equiv 0 \\pmod n$. In $\\mathbb{Z}_2$, elements satisfying $2x \\equiv 0$ are $\\{0, 1\\}$ (2 elements). In $\\mathbb{Z}_3$, only $\\{0\\}$ satisfies $2x \\equiv 0 \\pmod 3$ (1 element). In $\\mathbb{Z}_4$, $\\{0, 2\\}$ satisfy $2x \\equiv 0 \\pmod 4$ (2 elements). In the direct product group $\\mathbb{Z}_2 \\times \\mathbb{Z}_3 \\times \\mathbb{Z}_4$, total self-inverse elements $= 2 \\times 1 \\times 2 = 4$.",
+        "question_text_latex": "Let $Z_n$ be the group of integers $\\{0, 1, 2, \\dots, n-1\\}$ with addition modulo $n$ as the group operation. The number of elements in the group $Z_2 \\times Z_3 \\times Z_4$ that are their own inverses is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+        "options_latex": None
+    },
+    "2024_CS2_CS_Q64": {
+        "topic": "Operating System",
+        "subtopic": "Memory management and virtual memory",
+        "difficulty_level": "Hard",
+        "explaination": "Page size is $4\\text{ KB} = 2^{12}$ bytes, PTE size is 4 bytes, so each page table holds $2^{12} / 4 = 1024$ entries. The process accesses 2000 unique pages. Minimum inner page tables $X$: $\\lceil 2000 / 1024 \\rceil = 2$ inner pages plus 1 outer page directory $= 3$. Maximum inner page tables $Y$: 2000 pages distributed across 2000 different inner tables, bounded by total possible entries in directory $= 1024$ inner pages plus 1 outer page directory $= 1025$. Hence, $X + Y = 3 + 1025 = 1028$.",
+        "question_text_latex": "Consider a 32-bit system with 4 KB page size and page table entries of size 4 bytes each. Assume $1\\text{ KB} = 2^{10}$ bytes. The OS uses a 2-level page table for memory management, with an outer page directory and an inner page table. The OS allocates 1 page for the outer page directory upon process creation. The OS uses demand paging when allocating memory for the inner page table. An active process accesses 2000 unique pages during its execution. Let $X$ denote the minimum and $Y$ denote the maximum number of pages across the two levels of the page table of the process. The value of $X + Y$ is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+        "options_latex": None
+    },
+    "2024_CS2_CS_Q65": {
+        "topic": "Compiler Design",
+        "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+        "difficulty_level": "Medium",
+        "explaination": "From $I_0 = \\text{CLOSURE}(\\{S' \\to \\bullet S\\})$, transitions on $S$ produce kernel items $\\{S' \\to S \\bullet, S \\to S \\bullet S\\}$. Taking closure adds initial items for productions where $S$ appears before non-terminals. The total number of LR(0) items in $\\text{GOTO}(I_0, S)$ evaluates to exactly 9 items.",
+        "question_text_latex": "Consider the following augmented grammar, which is to be parsed with a SLR parser. The set of terminals is $\\{a,b,c,d,\\#,@\\}$:\n\\[ S' \\to S \\]\n\\[ S \\to SS \\mid Aa \\mid bAc \\mid Bc \\mid bBa \\]\n\\[ A \\to d\\# \\]\n\\[ B \\to @ \\]\nLet $I_0 = \\text{CLOSURE}(\\{S' \\to \\bullet S\\})$. The number of items in the set $\\text{GOTO}(I_0, S)$ is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+        "options_latex": None
+    }
+}
+
+def main():
+    root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    paper_dir = os.path.join(root_dir, "dataset", "papers", "2024_CS2")
+
+    files = ["ga_1_mark.json", "ga_2_mark.json", "cs_1_mark.json", "cs_2_mark.json"]
+    updated_count = 0
+
+    for fname in files:
+        fpath = os.path.join(paper_dir, fname)
+        if not os.path.exists(fpath):
+            print(f"Warning: {fpath} does not exist.")
+            continue
+
+        with open(fpath, "r", encoding="utf-8") as fp:
+            data = json.load(fp)
+
+        for q in data.get("questions", []):
+            qid = q.get("id")
+            if qid in ENRICHMENTS:
+                enr = ENRICHMENTS[qid]
+                q["topic"] = enr["topic"]
+                q["subtopic"] = enr["subtopic"]
+                q["difficulty_level"] = enr["difficulty_level"]
+                q["explaination"] = enr["explaination"]
+                q["question_text_latex"] = enr["question_text_latex"]
+                q["options_latex"] = enr["options_latex"]
+                updated_count += 1
+            else:
+                print(f"Notice: No enrichment found for {qid}")
+
+        with open(fpath, "w", encoding="utf-8") as fp:
+            json.dump(data, fp, indent=2, ensure_ascii=False)
+
+    print(f"Enriched {updated_count} questions in 2024_CS2 paper files successfully.")
+
+if __name__ == "__main__":
+    main()
