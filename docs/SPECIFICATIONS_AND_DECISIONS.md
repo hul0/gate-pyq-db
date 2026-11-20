@@ -42,17 +42,29 @@ GATE_CS_PYQ_DB/
 │   │       ├── full_paper.json           # Monolithic paper JSON (Q1 to Q65 in official sequence)
 │   │       ├── <paper_id>_textbook.tex   # Generated LaTeX source for the compendium
 │   │       └── <paper_id>_textbook.pdf   # Compiled print-ready academic textbook PDF
-│   └── views/                            # Global faceted slices across all papers
-│       ├── by_marks/                     # 1_mark.json, 2_mark.json
-│       ├── by_type/                      # mcq.json, msq.json, nat.json
-│       └── by_section/                   # general_aptitude.json, computer_science.json
+│   ├── views/                            # Global faceted slices across all papers
+│   │   ├── by_marks/                     # 1_mark.json, 2_mark.json
+│   │   ├── by_type/                      # mcq.json, msq.json, nat.json
+│   │   └── by_section/                   # general_aptitude.json, computer_science.json
+│   └── categorized/                      # Multi-year combined categorized datasets (2018-2025)
+│       ├── subject_wise/                 # 12 core subjects + 7 modular subtopics JSONs
+│       ├── question_type_wise/           # mcq.json, msq.json, nat.json
+│       ├── difficulty_wise/              # easy.json, medium.json, hard.json
+│       └── marks_wise/                   # 1_mark.json, 2_marks.json
 ├── pdf_books/                            # Centralized repository of all compiled textbook PDFs
-│   └── <paper_id>.pdf                    # e.g., 2025_CS2.pdf
+│   ├── <paper_id>.pdf                    # Individual exam papers (e.g. 2025_CS2.pdf)
+│   ├── subject_wise/                     # Subject-wise compiled textbooks (12 Core + 7 Modules)
+│   ├── question_type_wise/               # MCQ, MSQ, NAT compiled textbooks
+│   ├── difficulty_wise/                  # Easy, Medium, Hard compiled textbooks
+│   └── marks_wise/                       # 1-Mark, 2-Mark compiled textbooks
 └── scripts/                              # Production pipeline scripts
     ├── download_answer_keys.py
     ├── digitize_and_merge_keys.py
     ├── build_categorized_dataset.py
     ├── sync_dataset.py
+    ├── generate_categorized_textbooks.py
+    ├── generate_full_paper_json.py
+    └── generate_paper_textbook.py
     ├── enrich_2025_cs2.py
     ├── generate_full_paper_json.py
     └── generate_paper_textbook.py

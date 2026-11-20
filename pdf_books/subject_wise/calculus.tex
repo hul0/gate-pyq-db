@@ -1,0 +1,448 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.5cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm
+}
+
+% Persistent Unremovable Canvas Watermark on Every Page
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=8cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg} \\[-0.5em]
+        {\fontsize{18}{22}\selectfont\bfseries\scshape www.studiva.co.in}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.12] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape GATE 2018--2025 CS/IT $\cdot$ \textbf{Calculus}}
+\fancyhead[R]{\small\scshape Practice Question Bank with Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026} Studiva\textsuperscript{TM}}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\scriptsize\texttt{www.studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Code Listing Style (Monochrome)
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=none,
+    frame=none,
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: IMPRINT & TITLE PAGE ====================
+\thispagestyle{empty}
+\vspace*{0.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg}\\[0.6em]
+    {\LARGE \textbf{GATE 2018--2025 COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTION BANK WITH SOLUTIONS}}\\[0.4em]
+    {\large \textsc{\textbf{Subject Wise (Modular): Calculus}}}\\[0.2em]
+    {\normalsize \textsc{Combined 2018--2025 Examination Papers $\cdot$ Comprehensive Edition ($\mathbf{9}$ Questions)}}\\[1.2em]
+    \rule{0.6\textwidth}{0.6pt}
+\end{center}
+
+\vspace{1em}
+\noindent\begin{tabular}{ll}
+\textbf{Author / Compiler:} & Rupam Ghosh \\
+\textbf{Publisher \& Platform:} & Studiva\textsuperscript{TM} (\texttt{www.studiva.co.in}) \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Standard Edition (2026) \\
+\textbf{Coverage:} & Complete GATE CS/IT Papers (2018, 2022, 2023, 2024 CS1, 2024 CS2, 2025 CS1, 2025 CS2) \\
+\textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
+\end{tabular}
+
+\vspace{1.5em}
+\begin{tcolorbox}[enhanced, standard jigsaw, opacityback=0, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva\textsuperscript{TM}. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva\textsuperscript{TM}}.\\[0.6em]
+\textbf{Terms of Use \& Attribution Rules:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva\textsuperscript{TM}} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
+    \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
+\end{itemize}
+\vspace{0.6em}
+\textbf{Fair Use Disclaimer:}\\
+The underlying examination questions originate from the Graduate Aptitude Test in Engineering (GATE), conducted by the Indian Institutes of Technology (IITs) and Indian Institute of Science (IISc). Question texts are reproduced for non-commercial educational study under Fair Use doctrines. No copyright is claimed over the original GATE examination question texts.
+\end{tcolorbox}
+
+\vspace{1.2em}
+\begin{center}
+\small\itshape
+Practice Recommendation: Use an opaque sheet of paper or ruler to cover the right-hand column during mock attempts. Tick your chosen answers directly in the check boxes on the left, then slide the cover to check the solution and hint.
+\end{center}
+
+\newpage
+% ==================== PAGE 2 ONWARDS: QUESTION BANK ====================
+
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.1} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q16}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The value of $\int_0^{\pi/4} x \cos(x^2) \, dx$ correct to three decimal places (assuming that $\pi = 3.14$) is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 0.27 to 0.30} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Calculus \\
+\textbf{Subtopic:} \textit{Integration}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Substitute $u = x^2$, so $du = 2x\,dx$. The limits transform from $x = 0 \implies u = 0$ to $x = \frac{\pi}{4} \implies u = \frac{\pi^2}{16} \approx \frac{9.8596}{16} \approx 0.61685$ radians. The integral is $\frac{1}{2}\int_0^{\pi^2/16} \cos u \, du = \frac{1}{2} \sin\left(\frac{\pi^2}{16}\right) \approx \frac{1}{2} \sin(0.61685) \approx \frac{1}{2}(0.5784) \approx 0.289$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.2} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_GA\_Q02}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A function $y(x)$ is defined in the interval $[0, 1]$ on the $x$-axis as
+\[ y(x) = \begin{cases} 2 & \text{if } 0 \le x < \frac{1}{3} \\ 3 & \text{if } \frac{1}{3} \le x < \frac{3}{4} \\ 1 & \text{if } \frac{3}{4} \le x \le 1 \end{cases} \]
+Which one of the following is the area under the curve for the interval $[0, 1]$ on the $x$-axis?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $5/6$ & $\square$\ \textbf{(B)} $6/5$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $13/6$ & $\square$\ \textbf{(D)} $6/13$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Calculus \\
+\textbf{Subtopic:} \textit{Integration}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The area under the piecewise step function is the sum of the rectangular areas: $\int_0^1 y(x) \, dx = 2\left(\frac{1}{3} - 0\right) + 3\left(\frac{3}{4} - \frac{1}{3}\right) + 1\left(1 - \frac{3}{4}\right) = \frac{2}{3} + 3\left(\frac{5}{12}\right) + \frac{1}{4} = \frac{2}{3} + \frac{5}{4} + \frac{1}{4} = \frac{2}{3} + \frac{3}{2} = \frac{13}{6}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.3} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q34}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The value of the following limit is \_\_\_\_\_\_\_\_\_\_\_\_\. (Answer in numeric format)
+\[ \lim\_{x \to 0^+} \frac{x}{1 - e^{2x}} \]
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large -0.5 to -0.5} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Calculus \\
+\textbf{Subtopic:} \textit{Limits, continuity and differentiability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The limit $\lim_{x \to 0} \frac{x}{1 - e^{2x}}$ has indeterminate form $\frac{0}{0}$. Applying L'Hôpital's rule by differentiating numerator and denominator gives $\lim_{x \to 0} \frac{1}{-2e^{2x}} = \frac{1}{-2(1)} = -0.5$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.4} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q28}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let
+\[ f(x) = x^3 + 15x^2 - 33x - 36 \]
+be a real-valued function.
+Which of the following statements is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $f(x)$ does not have a local maximum. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $f(x)$ has a local maximum. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $f(x)$ does not have a local minimum. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $f(x)$ has a local minimum.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B, D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Calculus \\
+\textbf{Subtopic:} \textit{Maxima and minima}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Setting $f'(x) = 3x^2 + 30x - 33 = 3(x+11)(x-1) = 0$ yields critical points $x = -11$ and $x = 1$. The second derivative is $f''(x) = 6x + 30$. Since $f''(-11) = -36 < 0$, $x = -11$ is a local maximum (B is TRUE). Since $f''(1) = 36 > 0$, $x = 1$ is a local minimum (D is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.5} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q31}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The value of the definite integral
+\[ \int\_{-3}^3 \int\_{-2}^2 \int\_{-1}^1 (4x^2 y - z^3) \, dz \, dy \, dx \]
+is \_\_\_\_\_\_\_\_\. (Rounded off to the nearest integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 0 to 0} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Calculus \\
+\textbf{Subtopic:} \textit{Integration}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The integral splits into $\int_{-3}^3 \int_{-2}^2 \int_{-1}^1 4x^2 y \, dz \, dy \, dx - \int_{-3}^3 \int_{-2}^2 \int_{-1}^1 z^3 \, dz \, dy \, dx$. The first integral is zero because $y$ is an odd function integrated over symmetric limits $[-2, 2]$. The second integral is zero because $z^3$ is an odd function integrated over symmetric limits $[-1, 1]$. Thus, the total value is $0 - 0 = 0$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.6} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q11}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $f: \mathbb{R} \to \mathbb{R}$ be a function such that $f(x) = \max\{x, x^3\}$, where $\mathbb{R}$ is the set of all real numbers. The set of all points where $f(x)$ is NOT differentiable is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $\{-1, 1, 2\}$ & $\square$\ \textbf{(B)} $\{-2, -1, 1\}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\{0, 1\}$ & $\square$\ \textbf{(D)} $\{-1, 0, 1\}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Calculus \\
+\textbf{Subtopic:} \textit{Limits, continuity and differentiability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The functions $y = x$ and $y = x^3$ intersect at $x^3 - x = 0 \implies x \in \{-1, 0, 1\}$. The maximum function $f(x) = \max\{x, x^3\}$ switches between $x$ and $x^3$ at each of these three intersection points. Because the left and right derivatives at each transition point differ ($f'(-1^-) = 3 \neq 1 = f'(-1^+)$, $f'(0^-) = 1 \neq 0 = f'(0^+)$, $f'(1^-) = 1 \neq 3 = f'(1^+)$), $f(x)$ is not differentiable at $\{-1, 0, 1\}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.7} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q16}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $f(x)$ be a continuous function from $\mathbb{R}$ to $\mathbb{R}$ such that
+\[ f(x) = 1 - f(2 - x) \]
+Which one of the following options is the CORRECT value of $\int_0^2 f(x) \, dx$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 0 & $\square$\ \textbf{(B)} 1 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 2 & $\square$\ \textbf{(D)} -1
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Calculus \\
+\textbf{Subtopic:} \textit{Integration}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let $I = \int_0^2 f(x) \, dx$. Using the property $\int_0^a f(x) \, dx = \int_0^a f(a - x) \, dx$, $I = \int_0^2 f(2 - x) \, dx$. Adding both gives $2I = \int_0^2 [f(x) + f(2 - x)] \, dx$. Since $f(x) + f(2 - x) = 1$, we have $2I = \int_0^2 1 \, dx = 2 \implies I = 1$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.8} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q31}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the given function $f(x)$:
+\[ f(x) = \begin{cases} ax + b & \text{for } x < 1 \\ x^3 + x^2 + 1 & \text{for } x \ge 1 \end{cases} \]
+If the function is differentiable everywhere, the value of $b$ must be \_\_\_\_\_\_\. (rounded off to one decimal place)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large -2.1 to -1.9} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Calculus \\
+\textbf{Subtopic:} \textit{Limits, continuity and differentiability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For differentiability at $x = 1$, left and right derivatives must be equal: $\lim_{x \to 1^-} f'(x) = a$ and $\lim_{x \to 1^+} f'(x) = 3(1)^2 + 2(1) = 5$, so $a = 5$. Continuity at $x = 1$ requires $a(1) + b = 1^3 + 1^2 + 1 = 3$. Substituting $a = 5$ gives $5 + b = 3 \implies b = -2.0$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.9} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q12}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The value of $x$ such that $x > 1$, satisfying the equation $\int_1^x t \ln t \, dt = \frac{1}{4}$ is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $\sqrt{e}$ & $\square$\ \textbf{(B)} $e$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $e^2$ & $\square$\ \textbf{(D)} $e^{-1}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Calculus \\
+\textbf{Subtopic:} \textit{Integration and definite integrals}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Using integration by parts, $\int_1^x t \ln t \, dt = \left[\frac{t^2}{2} \ln t - \frac{t^2}{4}\right]_1^x = \frac{x^2}{2} \ln x - \frac{x^2}{4} + \frac{1}{4}$. Equating this to $\frac{1}{4}$ gives $\frac{x^2}{4}(2\ln x - 1) = 0$. Since $x > 1$, we have $2\ln x = 1 \implies x = e^{1/2} = \sqrt{e}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\end{document}

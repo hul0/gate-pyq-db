@@ -1,0 +1,1316 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.5cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm
+}
+
+% Persistent Unremovable Canvas Watermark on Every Page
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=8cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg} \\[-0.5em]
+        {\fontsize{18}{22}\selectfont\bfseries\scshape www.studiva.co.in}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.12] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape GATE 2018--2025 CS/IT $\cdot$ \textbf{Theory of Computation}}
+\fancyhead[R]{\small\scshape Practice Question Bank with Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026} Studiva\textsuperscript{TM}}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\scriptsize\texttt{www.studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Code Listing Style (Monochrome)
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=none,
+    frame=none,
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: IMPRINT & TITLE PAGE ====================
+\thispagestyle{empty}
+\vspace*{0.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg}\\[0.6em]
+    {\LARGE \textbf{GATE 2018--2025 COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTION BANK WITH SOLUTIONS}}\\[0.4em]
+    {\large \textsc{\textbf{Subject Wise: Theory of Computation}}}\\[0.2em]
+    {\normalsize \textsc{Combined 2018--2025 Examination Papers $\cdot$ Comprehensive Edition ($\mathbf{29}$ Questions)}}\\[1.2em]
+    \rule{0.6\textwidth}{0.6pt}
+\end{center}
+
+\vspace{1em}
+\noindent\begin{tabular}{ll}
+\textbf{Author / Compiler:} & Rupam Ghosh \\
+\textbf{Publisher \& Platform:} & Studiva\textsuperscript{TM} (\texttt{www.studiva.co.in}) \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Standard Edition (2026) \\
+\textbf{Coverage:} & Complete GATE CS/IT Papers (2018, 2022, 2023, 2024 CS1, 2024 CS2, 2025 CS1, 2025 CS2) \\
+\textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
+\end{tabular}
+
+\vspace{1.5em}
+\begin{tcolorbox}[enhanced, standard jigsaw, opacityback=0, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva\textsuperscript{TM}. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva\textsuperscript{TM}}.\\[0.6em]
+\textbf{Terms of Use \& Attribution Rules:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva\textsuperscript{TM}} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
+    \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
+\end{itemize}
+\vspace{0.6em}
+\textbf{Fair Use Disclaimer:}\\
+The underlying examination questions originate from the Graduate Aptitude Test in Engineering (GATE), conducted by the Indian Institutes of Technology (IITs) and Indian Institute of Science (IISc). Question texts are reproduced for non-commercial educational study under Fair Use doctrines. No copyright is claimed over the original GATE examination question texts.
+\end{tcolorbox}
+
+\vspace{1.2em}
+\begin{center}
+\small\itshape
+Practice Recommendation: Use an opaque sheet of paper or ruler to cover the right-hand column during mock attempts. Tick your chosen answers directly in the check boxes on the left, then slide the cover to check the solution and hint.
+\end{center}
+
+\newpage
+% ==================== PAGE 2 ONWARDS: QUESTION BANK ====================
+
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.1} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q06\_v2}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $N$ be an NFA with $n$ states. Let $k$ be the number of states of a minimal DFA which is equivalent to $N$. Which one of the following is necessarily true?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $k \ge 2^n$ & $\square$\ \textbf{(B)} $k \ge n$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $k \le n^2$ & $\square$\ \textbf{(D)} $k \le 2^n$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small By the subset construction algorithm, converting an $n$-state NFA to a DFA produces states that are subsets of the NFA states. Thus, the power set has $2^n$ possible states, ensuring that any equivalent minimal DFA has $k \le 2^n$ states.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.2} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q07\_v2}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The set of all recursively enumerable languages is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} closed under complementation. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} closed under intersection. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} a subset of the set of all context-sensitive languages. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} an uncountable set.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular and context-free languages, pumping lemma}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The set of recursively enumerable (RE) languages is closed under union, intersection, concatenation, and Kleene star, but not closed under complementation or set difference.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.3} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q35}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following languages:
+\begin{itemize}[leftmargin=*, nosep]
+    \item[I.] $\{a^m b^n c^p d^q \mid m + p = n + q, \text{ where } m, n, p, q \ge 0\}$
+    \item[II.] $\{a^m b^n c^p d^q \mid m = n \text{ and } p = q, \text{ where } m, n, p, q \ge 0\}$
+    \item[III.] $\{a^m b^n c^p d^q \mid m = p \text{ and } n = q, \text{ where } m, n, p, q \ge 0\}$
+    \item[IV.] $\{a^m b^n c^p d^q \mid m = q \text{ and } n = p, \text{ where } m, n, p, q \ge 0\}$
+\end{itemize}
+Which of the languages above are context-free?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} I and IV only & $\square$\ \textbf{(B)} I and II only \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} II and III only & $\square$\ \textbf{(D)} II and IV only
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Context-free grammars and push-down automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Language I has condition $m - n = q - p$, which can be checked by pushing $a$'s, popping for $b$'s, then pushing/popping for $c$ and $d$ on a single PDA stack (CFL). Language II is the concatenation of CFLs $L_1 = \{a^m b^m\}$ and $L_2 = \{c^p d^p\}$, hence a CFL. Languages III and IV require multi-variable dependencies across non-adjacent symbols simultaneously, which cannot be handled by a single stack (non-CFL).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.4} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q36}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following problems. $L(G)$ denotes the language generated by a grammar $G$. $L(M)$ denotes the language accepted by a machine $M$.
+\begin{enumerate}[label=\Roman*.]
+    \item For an unrestricted grammar $G$ and a string $w$, whether $w \in L(G)$
+    \item Given a Turing machine $M$, whether $L(M)$ is regular
+    \item Given two grammars $G_1$ and $G_2$, whether $L(G_1) = L(G_2)$
+    \item Given an NFA $N$ and a DPDA $D$, whether $L(N) = L(D)$
+\end{enumerate}
+Which of the above problems are UNDECIDABLE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} I and IV only & $\square$\ \textbf{(B)} II and III only \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} III and IV only & $\square$\ \textbf{(D)} I, II and III only
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Turing machines and undecidability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Problem I (membership for unrestricted grammars) is undecidable. Problem II (testing if a TM accepts a regular language) is undecidable by Rice's theorem. Problem III (equivalence of CFGs) is undecidable. Problem IV asks whether a regular language (NFA) equals a deterministic context-free language (DPDA), which is decidable. Hence, I, II, and III are undecidable.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.5} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q52}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Given a language $L$, define $L^i$ as $L^0 = \{\varepsilon\}$ and $L^i = L^{i-1} \cdot L$ for $i > 0$. The order of a language $L$ is defined as the smallest $k$ such that $L^k = L^{k+1}$. Consider the finite automaton accepting $L$ over $\{0\}$ where states accept strings of positive length. The order of language $L$ is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 2 to 2} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The given automaton on alphabet $\{0\}$ accepts $L = \{0, 00, 000, \dots\} = 0^+$. Its powers are $L^2 = \{0^k \mid k \ge 2\}$, $L^3 = \{0^k \mid k \ge 3\}$. For the language of strings accepted by the automaton, the smallest integer $k$ satisfying $L^k = L^{k+1}$ is 2.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.6} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q12}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which one of the following regular expressions correctly represents the language of the finite automaton given below?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $ab^*ba^* + ba^*ab^*$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $(ab^*b + ba^*a)^*(a + b)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $(ab^*b + ba^*a)^*(a^*b + b^*a)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $(ba^*a + ab^*b)^*(ab^* + ba^*)$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small From the start state, loops on intermediate states allow repeating patterns of $ba^*a$ and $ab^*b$ before moving to an accepting state via either $ab^*$ or $ba^*$. Factoring loop paths and exit transitions yields the regular expression $(ba^*a + ab^*b)^*(ab^* + ba^*)$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.7} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q23}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following statements is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Every subset of a recursively enumerable language is recursive. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} If a language $L$ and its complement $\overline{L}$ are both recursively enumerable, then $L$ must be recursive. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Complement of a context-free language must be recursive. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} If $L_1$ and $L_2$ are regular, then $L_1 \cap L_2$ must be deterministic context-free.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B,C,D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular and context-free languages, pumping lemma}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small If $L$ and $\overline{L}$ are both recursively enumerable, $L$ is recursive by Post's theorem (B is TRUE). Every CFL is recursive, and recursive languages are closed under complement, so $\overline{\text{CFL}}$ is recursive (C is TRUE). Regular languages are closed under intersection, and every regular language is a DCFL (D is TRUE). Subsets of RE languages need not be recursive (A is FALSE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.8} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q46}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following is/are undecidable?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Given two Turing machines $M_1$ and $M_2$, decide if $L(M_1) = L(M_2)$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Given a Turing machine $M$, decide if $L(M)$ is regular. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Given a Turing machine $M$, decide if $M$ accepts all strings. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Given a Turing machine $M$, decide if $M$ takes more than $10^{73}$ steps on every string.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A,B,C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Turing machines and undecidability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small By Rice's theorem, any non-trivial semantic property of Turing machine languages is undecidable, making equivalence $L(M_1) = L(M_2)$ (A), regularity of $L(M)$ (B), and totality $L(M) = \Sigma^*$ (C) undecidable. Deciding if $M$ takes $> 10^{73}$ steps is bounded and decidable by simulation (D is decidable).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.9} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q47}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following languages:
+\[ L\_1 = \{a^n w a^n \mid w \in \{a, b\}^*\} \]
+\[ L\_2 = \{w x w^R \mid w, x \in \{a, b\}^*, |w|, |x| > 0\} \]
+Note that $w^R$ is the reversal of the string $w$. Which of the following is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $L_1$ and $L_2$ are regular. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $L_1$ and $L_2$ are context-free. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $L_1$ is regular and $L_2$ is context-free. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $L_1$ and $L_2$ are context-free but not regular.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A,B,C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular and context-free languages, pumping lemma}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Setting $n=1$ in $L_1 = \{a^n w a^n\}$ shows that any string starting and ending with $a$ of length $\ge 2$ belongs to $L_1$, making $L_1 = a(a+b)^*a$ regular. For $L_2 = \{w x w^R \mid |w|, |x| > 0\}$, taking $|w|=1$ yields $a(a+b)^+ a + b(a+b)^+ b$, which is regular. Every regular language is context-free, so statements A, B, and C are all TRUE.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.10} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q48}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following languages:
+\[ L\_1 = \{w w \mid w \in \{a, b\}^*\} \]
+\[ L\_2 = \{a^n b^n c^m \mid m, n \ge 0\} \]
+\[ L\_3 = \{a^m b^n c^n \mid m, n \ge 0\} \]
+Which of the following statements is/are FALSE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $L_1$ is not context-free but $L_2$ and $L_3$ are deterministic context-free. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Neither $L_1$ nor $L_2$ is context-free. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $L_2$, $L_3$ and $L_2 \cap L_3$ all are context-free. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Neither $L_1$ nor its complement is context-free.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B,C,D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Context-free grammars and push-down automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Language $L_2 = \{a^n b^n c^m\}$ is a DCFL, so stating that neither $L_1$ nor $L_2$ is CFL is false (B is FALSE). $L_2 \cap L_3 = \{a^n b^n c^n\}$ is not context-free, so claiming all are context-free is false (C is FALSE). The complement $\overline{L_1}$ is a well-known context-free language, so D is FALSE. Thus, statements B, C, and D are FALSE.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.11} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q24}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following statements is/are CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The intersection of two regular languages is regular. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The intersection of two context-free languages is context-free. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The intersection of two recursive languages is recursive. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The intersection of two recursively enumerable languages is recursively enumerable.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A, C, D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular and context-free languages, pumping lemma}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Regular languages, recursive languages, and recursively enumerable languages are all closed under intersection (A, C, and D are CORRECT). Context-free languages are not closed under intersection; for example, $L_1 = \{a^n b^n c^m\}$ and $L_2 = \{a^m b^n c^n\}$ are both CFLs, but $L_1 \cap L_2 = \{a^n b^n c^n\}$ is not context-free.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.12} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q39}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the context-free grammar $G$ below:
+\begin{align*}
+S &\to aSb \mid X \\
+X &\to aX \mid Xb \mid a \mid b,
+\end{align*}
+where $S$ and $X$ are non-terminals, and $a$ and $b$ are terminal symbols. The starting non-terminal is $S$.
+Which one of the following statements is CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The language generated by $G$ is $(a + b)^*$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The language generated by $G$ is $a^*(a + b)b^*$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The language generated by $G$ is $a^*b^*(a + b)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The language generated by $G$ is not a regular language
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Context-free grammars and push-down automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The subgrammar $X \to aX \mid Xb \mid a \mid b$ derives all non-empty strings with any number of $a$'s followed by any number of $b$'s having at least one $a$ or $b$, described by $a^*(a+b)b^*$. Rule $S \to aSb \mid X$ prefixes $k$ $a$'s and suffixes $k$ $b$'s ($k \ge 0$), yielding $a^k a^*(a+b)b^* b^k = a^*(a+b)b^*$. Because this language is represented by a regular expression, it is a regular language.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.13} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q63}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the language $L$ over the alphabet $\{0, 1\}$, given below:
+\[ L = \{w \in \{0, 1\}^* \mid w \text{ does not contain three or more consecutive 1's}\}. \]
+The minimum number of states in a Deterministic Finite-State Automaton (DFA) for $L$ is \_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 4 to 4} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The language contains all binary strings not containing `111`. The minimal DFA tracks consecutive 1s: state $q_0$ (0 consecutive 1s, start), state $q_1$ (1 consecutive 1), state $q_2$ (2 consecutive 1s), and state $q_3$ (trap state reached on 3rd consecutive 1). States $q_0, q_1, q_2$ are accepting states. Thus, exactly 4 states are required.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.14} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q23}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $L_1, L_2$ be two regular languages and $L_3$ a language which is not regular. Which of the following statements is/are always TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $L_1 = L_2$ if and only if $L_1 \cap \overline{L_2} = \emptyset$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $L_1 \cup L_3$ is not regular \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\overline{L_3}$ is not regular \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\overline{L_1} \cup \overline{L_2}$ is regular
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C;D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular and context-free languages, pumping lemma}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Regular languages are closed under complementation and union; since $L_1, L_2$ are regular, $\overline{L_1}$ and $\overline{L_2}$ are regular, so $\overline{L_1} \cup \overline{L_2}$ is regular (D is TRUE). If $L_3$ is non-regular, its complement $\overline{L_3}$ must also be non-regular, because if $\overline{L_3}$ were regular, its complement $\overline{\overline{L_3}} = L_3$ would be regular, a contradiction (C is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.15} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q50}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the 5-state DFA $M$ accepting the language $L(M) \subset (0 + 1)^*$ shown below. For any string $w \in (0 + 1)^*$ let $n_0(w)$ be the number of 0's in $w$ and $n_1(w)$ be the number of 1's in $w$.
+Which of the following statements is/are FALSE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} States 2 and 4 are distinguishable in $M$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} States 3 and 4 are distinguishable in $M$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} States 2 and 5 are distinguishable in $M$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Any string $w$ with $n_0(w) = n_1(w)$ is in $L(M)$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small States $p$ and $q$ are distinguishable if there exists a string $w$ such that exactly one of $\delta(p, w)$ or $\delta(q, w)$ is an accepting state. In DFA $M$, states 3 and 4 have identical transition behavior and both are non-accepting, making them equivalent/indistinguishable, so claiming they are distinguishable is FALSE (B is FALSE). Similarly, states 2 and 5 are equivalent, so claiming they are distinguishable is FALSE (C is FALSE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.16} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q59}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $G = (V, \Sigma, S, P)$ be a context-free grammar in Chomsky Normal Form with $\Sigma = \{a, b, c\}$ and $V$ containing 10 variable symbols including the start symbol $S$. The string $w = a^{30}b^{30}c^{30}$ is derivable from $S$. The number of steps (application of rules) in the derivation $S \Rightarrow^* w$ is \_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 179 to 179} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Context-free grammars and push-down automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a Chomsky Normal Form (CNF) grammar, every production is either $A \to BC$ or $A \to a$. Deriving a string of length $n$ requires $n-1$ non-terminal splitting steps ($A \to BC$) followed by $n$ terminal production steps ($A \to a$), totaling $2n-1$ steps. For $w = a^{30}b^{30}c^{30}$, the length is $n = 90$, so the number of derivation steps is $2(90) - 1 = 179$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.17} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q61}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following two regular expressions over the alphabet $\{0,1\}$:
+\[ r = 0^* + 1^* \]
+\[ s = 01^* + 10^* \]
+The total number of strings of length less than or equal to 5, which are neither in $r$ nor in $s$, is \_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 44 to 44} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The total number of binary strings of length $\le 5$ is $\sum_{i=0}^5 2^i = 1+2+4+8+16+32 = 63$. Language $L(r) = 0^* + 1^*$ contains $\epsilon$ and $0^k, 1^k$ for each length $k \in \{1..5\}$ (11 strings). Language $L(s) = 01^* + 10^*$ contains $01^{k-1}$ and $10^{k-1}$ for each length $k \in \{1..5\}$. At $k=1$, $0$ and $1$ overlap with $L(r)$; for $k \in \{2..5\}$, the $4 \times 2 = 8$ strings are disjoint from $L(r)$. Thus, $|L(r) \cup L(s)| = 11 + 8 = 19$. The number of strings in neither language is $63 - 19 = 44$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.18} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q52}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a context-free grammar $G$ with the following 3 rules:
+\[ S \to aS \mid aSbS \mid c \]
+Let $w \in L(G)$. Let $n_a(w), n_b(w), n_c(w)$ denote the number of times $a, b, c$ occur in $w$, respectively. Which of the following statements is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $n_a(w) > n_b(w)$ & $\square$\ \textbf{(B)} $n_a(w) > n_c(w) - 2$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $n_c(w) = n_b(w) + 1$ & $\square$\ \textbf{(D)} $n_c(w) = n_b(w) * 2$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Context-free grammars and push-down automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Each application of $S \to aSbS$ consumes one $S$ and introduces two new $S$'s along with one $b$, effectively adding $+1$ to the count of $S$'s. Each termination $S \to c$ eliminates one $S$ and adds one $c$. Thus, the total number of $c$'s must equal the number of $b$'s plus 1: $n_c(w) = n_b(w) + 1$ (C is true). Also, every $b$ is accompanied by an $a$, and additional $a$'s can come from $S \to aS$, giving $n_a(w) \ge n_b(w) = n_c(w) - 1 > n_c(w) - 2$ (B is true).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.19} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q62}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $L_1$ be the language represented by the regular expression $b^* a b^* (a b^* a b^*)^*$ and $L_2 = \{ w \in (a + b)^* \mid |w| \le 4 \}$, where $|w|$ denotes the length of string $w$. The number of strings in $L_2$ which are also in $L_1$ is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 15 to 15} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small $L_1$ requires an odd number of $a$'s: strings containing either 1 or 3 $a$'s (since length $\le 4$). Length $\le 4$ with exactly one $a$: length 1 has $1$, length 2 has $2$, length 3 has $3$, length 4 has $4$ (total $1 + 2 + 3 + 4 = 10$). Length $\le 4$ with exactly three $a$'s: length 3 has $aaa$ ($1$), length 4 has $\binom{4}{3} = 4$. Total strings in $L_1 \cap L_2 = 10 + 1 + 4 = 15$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.20} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q19}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following context-free grammar $G$, where $S, A$, and $B$ are the variables (non-terminals), $a$ and $b$ are the terminal symbols, $S$ is the start variable, and the rules of $G$ are described as:
+\[ S \to aaB \mid Abb \]
+\[ A \to a \mid aA \]
+\[ B \to b \mid bB \]
+Which ONE of the languages $L(G)$ is accepted by $G$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $L(G) = \{a^2b^n \mid n \ge 1\} \cup \{a^nb^2 \mid n \ge 1\}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $L(G) = \{a^nb^{2n} \mid n \ge 1\} \cup \{a^{2n}b^n \mid n \ge 1\}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $L(G) = \{a^nb^n \mid n \ge 1\}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $L(G) = \{a^{2n}b^{2n} \mid n \ge 1\}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Context-free grammars and push-down automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small From the rules, $A$ generates $a^+$ (any $a^n$ with $n \ge 1$) and $B$ generates $b^+$ (any $b^n$ with $n \ge 1$). Thus, $aaB$ produces $a^2b^n$ ($n \ge 1$), and $Abb$ produces $a^nb^2$ ($n \ge 1$). Therefore, $L(G) = \{a^2b^n \mid n \ge 1\} \cup \{a^nb^2 \mid n \ge 1\}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.21} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q28}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A regular language $L$ is accepted by a non-deterministic finite automaton (NFA) with $n$ states. Which of the following statement(s) is/are FALSE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $L$ may have an accepting NFA with $< n$ states. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $L$ may have an accepting DFA with $< n$ states. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} There exists a DFA with $\le 2^n$ states that accepts $L$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Every DFA that accepts $L$ has $> 2^n$ states.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small By the standard subset construction algorithm, every $n$-state NFA can be converted into an equivalent deterministic finite automaton (DFA) having at most $2^n$ states. Statement D asserts that every DFA must have strictly more than $2^n$ states, which is directly false.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.22} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q44}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following two languages over the alphabet $\{a, b\}$:
+\[ L\_1 = \{ \alpha\beta\alpha \mid \alpha \in \{a, b\}^+ \text{ AND } \beta \in \{a, b\}^+ \} \]
+\[ L\_2 = \{ \alpha\beta\alpha \mid \alpha \in \{a\}^+ \text{ AND } \beta \in \{a, b\}^+ \} \]
+Which ONE of the following statements is CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Both $L_1$ and $L_2$ are regular languages. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $L_1$ is a regular language but $L_2$ is not a regular language. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $L_1$ is not a regular language but $L_2$ is a regular language. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Neither $L_1$ nor $L_2$ is a regular language.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular and context-free languages, pumping lemma}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For $L_2$, $\alpha = a^k$ ($k \ge 1$). A string belongs to $L_2$ if and only if it starts with $a$, ends with $a$, and has length at least 3 ($a(a+b)^+a$), which is clearly regular. For $L_1$, the prefix $\alpha$ and suffix $\alpha$ must match over $\{a, b\}^+$, which requires unbounded memory to verify matching arbitrary binary strings, making $L_1$ non-regular.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.23} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q45}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following two languages over the alphabet $\{a, b, c\}$, where $m$ and $n$ are natural numbers.
+\[ L\_1 = \{a^mb^mc^{m+n} \mid m, n \ge 1\} \]
+\[ L\_2 = \{a^mb^nc^{m+n} \mid m, n \ge 1\} \]
+Which ONE of the following statements is CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Both $L_1$ and $L_2$ are context-free languages. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $L_1$ is a context-free language but $L_2$ is not a context-free language. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $L_1$ is not a context-free language but $L_2$ is a context-free language. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Neither $L_1$ nor $L_2$ are context-free languages.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Context-free grammars and push-down automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In $L_2$, rewrite $c^{m+n} = c^n c^m$ or generate using PDA by pushing $a$'s and $b$'s and popping on $c$'s ($c$'s match total count of $a$'s and $b$'s), which requires a single stack, so $L_2$ is context-free. In $L_1$, $a^m b^m c^m c^n$ simultaneously requires equality between powers of $a$ and $b$, plus matching with $c$, requiring two independent stack comparisons, making $L_1$ non-CFL.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.24} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q50}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the deterministic finite automaton (DFA) defined over the alphabet $\Sigma = \{a, b\}$. Identify which of the following language(s) is/are accepted by the given DFA.
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The set of all strings containing an even number of $b$'s. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The set of all strings containing the pattern $bab$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The set of all strings ending with the pattern $bab$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The set of all strings not containing the pattern $aba$.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In the given DFA, the sequence of transitions leading to the unique accepting state $q_3$ corresponds precisely to recognizing the suffix $bab$. Any character following $q_3$ transitions back according to pattern matching prefixes of $bab$, accepting exactly strings ending with the pattern $bab$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.25} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q24}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which ONE of the following languages is accepted by a deterministic pushdown automaton?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Any regular language. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Any context-free language. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Any language accepted by a non-deterministic pushdown automaton. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Any decidable language.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Context-free grammars and push-down automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Every regular language is recognized by a Deterministic Finite Automaton (DFA), which can be directly simulated by a DPDA without using stack operations.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.26} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q25}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $G_1, G_2$ be Context Free Grammars (CFGs) and $R$ be a regular expression. For a grammar $G$, let $L(G)$ denote the language generated by $G$. Which ONE among the following questions is decidable?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Is $L(G_1) = L(G_2)$? \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Is $L(G_1) \cap L(G_2) = \emptyset$? \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Is $L(G_1) = L(R)$? \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Is $L(G_1) = \emptyset$?
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Turing machines and undecidability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For Context-Free Grammars, emptiness ($L(G) = \emptyset$) is decidable via finding generating non-terminals, whereas equivalence ($L(G_1) = L(G_2)$) and disjointness ($L(G_1) \cap L(G_2) = \emptyset$) are undecidable.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.27} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q30}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the two lists List I and List II given below:
+\par\medskip
+\begin{center}\small
+\begin{tabular}{ll}
+\toprule
+List I & List II \\
+\midrule
+(i) Context free languages & (a) Closed under union \\
+(ii) Recursive languages & (b) Not closed under complementation \\
+(iii) Regular languages & (c) Closed under intersection \\
+\bottomrule
+\end{tabular}\end{center}
+\par\medskip
+For matching of items in List I with those in List II, which of the following option(s) is/are CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} (i) – (a), (ii) – (b), and (iii) – (c) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} (i) – (b), (ii) – (a), and (iii) – (c) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (i) – (b), (ii) – (c), and (iii) – (a) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} (i) – (a), (ii) – (c), and (iii) – (b)
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular and context-free languages: closure properties}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Context-free languages are not closed under complementation (i - b) or intersection, but are closed under union. Recursive languages are closed under union and complementation and intersection (ii - a or c). Regular languages are closed under all three.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.28} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q52}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $\Sigma = \{a, b, c\}$. For $x \in \Sigma^*$, let $\#_\alpha(x)$ denote the number of occurrences of $\alpha$ in $x$. Which one or more of the following languages is/are regular?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\{a^m b^n \mid m, n \ge 0\}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\{a, b\}^* \cap \{a^m b^n c^{m-n} \mid m \ge n \ge 0\}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\{w \in \{a, b\}^* \mid \#_a(w) \equiv 2 \pmod 7 \text{ and } \#_b(w) \equiv 3 \pmod 9\}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\{w \in \{a, b\}^* \mid \#_a(w) \equiv 2 \pmod 7 \text{ and } \#_a(w) = \#_b(w)\}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata: regular languages}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Language A ($a^m b^n$) is generated by the regular expression $a^* b^*$. Language C counts occurrences modulo 7 and 9, which requires finite memory ($7 \times 9 = 63$ states) and is therefore regular.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.29} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q60}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $\Sigma = \{1, 2, 3, 4\}$. For $x \in \Sigma^*$, let $prod(x)$ be the product of symbols in $x$ modulo 7. The minimum number of states in a DFA accepting strings with $prod(x) = 1$ is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 6 to 6} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata: minimal DFA states}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The multiplicative group modulo 7 of units $\{1, 2, 3, 4, 5, 6\}$ is cyclic of order 6. Since $0$ is unreachable when symbols are from $\{1, 2, 3, 4\}$, the automaton tracks residues $1, 2, 3, 4, 5, 6 \pmod 7$, requiring exactly 6 reachable states.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\end{document}

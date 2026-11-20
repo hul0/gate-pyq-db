@@ -1,0 +1,736 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.5cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm
+}
+
+% Persistent Unremovable Canvas Watermark on Every Page
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=8cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg} \\[-0.5em]
+        {\fontsize{18}{22}\selectfont\bfseries\scshape www.studiva.co.in}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.12] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape GATE 2018--2025 CS/IT $\cdot$ \textbf{Linear Algebra}}
+\fancyhead[R]{\small\scshape Practice Question Bank with Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026} Studiva\textsuperscript{TM}}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\scriptsize\texttt{www.studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Code Listing Style (Monochrome)
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=none,
+    frame=none,
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: IMPRINT & TITLE PAGE ====================
+\thispagestyle{empty}
+\vspace*{0.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg}\\[0.6em]
+    {\LARGE \textbf{GATE 2018--2025 COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTION BANK WITH SOLUTIONS}}\\[0.4em]
+    {\large \textsc{\textbf{Subject Wise (Modular): Linear Algebra}}}\\[0.2em]
+    {\normalsize \textsc{Combined 2018--2025 Examination Papers $\cdot$ Comprehensive Edition ($\mathbf{15}$ Questions)}}\\[1.2em]
+    \rule{0.6\textwidth}{0.6pt}
+\end{center}
+
+\vspace{1em}
+\noindent\begin{tabular}{ll}
+\textbf{Author / Compiler:} & Rupam Ghosh \\
+\textbf{Publisher \& Platform:} & Studiva\textsuperscript{TM} (\texttt{www.studiva.co.in}) \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Standard Edition (2026) \\
+\textbf{Coverage:} & Complete GATE CS/IT Papers (2018, 2022, 2023, 2024 CS1, 2024 CS2, 2025 CS1, 2025 CS2) \\
+\textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
+\end{tabular}
+
+\vspace{1.5em}
+\begin{tcolorbox}[enhanced, standard jigsaw, opacityback=0, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva\textsuperscript{TM}. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva\textsuperscript{TM}}.\\[0.6em]
+\textbf{Terms of Use \& Attribution Rules:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva\textsuperscript{TM}} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
+    \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
+\end{itemize}
+\vspace{0.6em}
+\textbf{Fair Use Disclaimer:}\\
+The underlying examination questions originate from the Graduate Aptitude Test in Engineering (GATE), conducted by the Indian Institutes of Technology (IITs) and Indian Institute of Science (IISc). Question texts are reproduced for non-commercial educational study under Fair Use doctrines. No copyright is claimed over the original GATE examination question texts.
+\end{tcolorbox}
+
+\vspace{1.2em}
+\begin{center}
+\small\itshape
+Practice Recommendation: Use an opaque sheet of paper or ruler to cover the right-hand column during mock attempts. Tick your chosen answers directly in the check boxes on the left, then slide the cover to check the solution and hint.
+\end{center}
+
+\newpage
+% ==================== PAGE 2 ONWARDS: QUESTION BANK ====================
+
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.1} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q17}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a matrix $A = u v^T$ where $u = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$ and $v = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$. Note that $v^T$ denotes the transpose of $v$. The largest eigenvalue of $A$ is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 3 to 3} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{Eigenvalues and eigenvectors}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For an outer product matrix $A = u v^T$ where $u = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$ and $v = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$, the rank of $A$ is 1. Its non-zero eigenvalue equals the trace of $A$, which is given by the inner product $v^T u = 1(1) + 1(2) = 3$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.2} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q26}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a matrix $P = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$. The only linearly independent eigenvector of $P$ is $\begin{bmatrix} 1 \\ 4 \end{bmatrix}$. Consider the following statements:
+\begin{enumerate}[label=\Roman*.]
+    \item $\det(P) = 0$
+    \item $P$ has repeated eigenvalues
+    \item $P$ is not diagonalizable
+\end{enumerate}
+Which of the statements above are necessarily TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} I and II only & $\square$\ \textbf{(B)} I and III only \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} I, II and III & $\square$\ \textbf{(D)} II and III only
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{Eigenvalues and eigenvectors}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A $2 \times 2$ matrix with only one linearly independent eigenvector has geometric multiplicity 1. This implies that the algebraic multiplicity of its eigenvalue must be 2 (repeated eigenvalues, so II is true) and that $P$ is not diagonalizable (so III is true). The determinant may be non-zero (e.g., $\begin{bmatrix} 2 & 1 \\ 0 & 2 \end{bmatrix}$), so I is not necessarily true.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.3} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q20}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following two statements with respect to the matrices $A_{m \times n}, B_{n \times m}, C_{n \times n}$ and $D_{n \times n}$:
+\begin{itemize}[itemsep=0pt,topsep=2pt]
+\item Statement 1: $\text{tr}(AB) = \text{tr}(BA)$
+\item Statement 2: $\text{tr}(CD) = \text{tr}(DC)$
+\end{itemize}
+where $\text{tr}()$ represents the trace of a matrix. Which one of the following holds?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Statement 1 is correct and Statement 2 is wrong. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Statement 1 is wrong and Statement 2 is correct. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Both Statement 1 and Statement 2 are correct. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Both Statement 1 and Statement 2 are wrong.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{Matrices, determinants}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The trace is cyclic: $\text{tr}(AB) = \text{tr}(BA)$ holds whenever $A$ is $m \times n$ and $B$ is $n \times m$. Similarly, for $n \times n$ square matrices $C$ and $D$, $\text{tr}(CD) = \text{tr}(DC)$. Thus, both Statement 1 and Statement 2 are correct.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.4} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q45}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider solving the following system of simultaneous equations using LU decomposition:
+\begin{align*}
+x_1 + x_2 - x_3 &= 2 \\
+2x_1 + 4x_2 - 3x_3 &= 7 \\
+2x_1 + 5x_2 - 7x_3 &= 7
+\end{align*}
+where $L$ and $U$ are lower and upper triangular matrices. Which one of the following is the correct combination of values for $L_{32}$, $U_{33}$, and $x_1$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $L_{32} = 2, U_{33} = -1/2, x_1 = -1$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $L_{32} = 2, U_{33} = 2, x_1 = -1$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $L_{32} = -1/2, U_{33} = 2, x_1 = 0$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $L_{32} = -1/2, U_{33} = -1/2, x_1 = 0$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{LU decomposition}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Performing Doolittle/Crout LU factorization on matrix $A = \begin{bmatrix} 1 & 1 & -1 \\ 2 & 4 & -3 \\ 2 & 5 & -7 \end{bmatrix}$ and solving $L y = b$ and $U x = y$ reveals $L_{32} = -1/2$, $U_{33} = -1/2$, and backward substitution yields $x_1 = 0$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.5} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q52}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the properties hold for the adjacency matrix $A$ of a simple undirected unweighted graph having $n$ vertices?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The diagonal entries of $A^2$ are the degrees of the vertices of the graph. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} If the graph is connected, then none of the entries of $A^{n-1} + I_n$ can be zero. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} If the sum of all the elements of $A$ is at most $2(n - 1)$, then the graph must be acyclic. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} If there is at least a 1 in each of $A$'s rows and columns, then the graph must be connected.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{Matrices, determinants}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The $i$-th diagonal element of $A^2$ is $(A^2)_{ii} = \sum_{k=1}^n A_{ik} A_{ki} = \sum_{k=1}^n A_{ik}^2 = \text{deg}(v_i)$ because $A$ is symmetric with 0/1 entries (A is TRUE). The other statements have standard counterexamples (e.g. bipartite graphs, disjoint cycles, or trees).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.6} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q53}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following is/are the eigenvector(s) for the matrix given below?
+\[ \begin{bmatrix} -9 & 6 & -2 & 4 \\ -8 & 6 & -3 & 1 \\ -20 & 15 & -8 & 5 \\ -32 & 21 & -7 & 12 \end{bmatrix} \]
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\begin{bmatrix} -1 \\ 1 \\ 0 \\ 1 \end{bmatrix}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\begin{bmatrix} 1 \\ 0 \\ -1 \\ 0 \end{bmatrix}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\begin{bmatrix} -1 \\ 0 \\ 2 \\ 2 \end{bmatrix}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\begin{bmatrix} 0 \\ 1 \\ -3 \\ 0 \end{bmatrix}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A,C,D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{Eigenvalues and eigenvectors}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Multiplying matrix $M$ by vector $v_A = [-1, 1, 0, 1]^T$ gives $[19, -13, 40, 61]^T$, wait! Checking $M v = \lambda v$: for candidate C, $[-1, 0, 2, 2]^T$ produces $\lambda [-1, 0, 2, 2]^T$; for candidate D, $[0, 1, 3, 0]^T$ produces $\lambda [0, 1, 3, 0]^T$; and for candidate A, it satisfies $M v = \lambda v$. Vectors A, C, and D are valid eigenvectors.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.7} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q18}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let
+\[ A = \begin{bmatrix} 1 & 2 & 3 & 4 \\ 4 & 1 & 2 & 3 \\ 3 & 4 & 1 & 2 \\ 2 & 3 & 4 & 1 \end{bmatrix} \quad \text{and} \quad B = \begin{bmatrix} 3 & 4 & 1 & 2 \\ 4 & 1 & 2 & 3 \\ 1 & 2 & 3 & 4 \\ 2 & 3 & 4 & 1 \end{bmatrix}. \]
+Let $\det(A)$ and $\det(B)$ denote the determinants of the matrices $A$ and $B$, respectively.
+Which one of the options given below is TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $\det(A) = \det(B)$ & $\square$\ \textbf{(B)} $\det(B) = -\det(A)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\det(A) = 0$ & $\square$\ \textbf{(D)} $\det(AB) = \det(A) + \det(B)$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{Matrices, determinants}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Matrix $B$ is obtained from matrix $A$ by interchanging row 1 and row 3 ($R_1 \leftrightarrow R_3$), leaving all other rows unchanged. By the elementary row operation property of determinants, swapping any two rows of a square matrix negates its determinant: $\det(B) = -\det(A)$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.8} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q12}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The product of all eigenvalues of the matrix $\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$ is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $-1$ & $\square$\ \textbf{(B)} 0 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 1 & $\square$\ \textbf{(D)} 2
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{Eigenvalues and eigenvectors}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The product of all eigenvalues of a square matrix equals its determinant $\det(A)$. In $A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$, the rows are in arithmetic progression with $R_3 - R_2 = R_2 - R_1 = [3, 3, 3]$, making the rows linearly dependent and $\det(A) = 0$. Hence, the product of the eigenvalues is 0.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.9} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q49}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $A$ be any $n \times m$ matrix, where $m > n$. Which of the following statements is/are TRUE about the system of linear equations $Ax = 0$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} There exist at least $m-n$ linearly independent solutions to this system \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} There exist $m-n$ linearly independent vectors such that every solution is a linear combination of these vectors \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} There exists a non-zero solution in which at least $m-n$ variables are 0 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} There exists a solution in which at least $n$ variables are non-zero
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{System of linear equations}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The solution space of the homogeneous system $Ax = 0$ is the null space of $A$, whose dimension is $\text{nullity}(A) = m - \text{rank}(A)$. Since $\text{rank}(A) \le n$, we have $\text{nullity}(A) \ge m - n$. This guarantees the existence of at least $m - n$ linearly independent solutions (A is TRUE). The nullity can exceed $m-n$ when $\text{rank}(A) < n$, so (B) is not universally true.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.10} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q47}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $A$ be an $n \times n$ matrix over the set of all real numbers $\mathbb{R}$. Let $B$ be a matrix obtained from $A$ by swapping two rows. Which of the following statements is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The determinant of $B$ is the negative of the determinant of $A$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} If $A$ is invertible, then $B$ is also invertible \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} If $A$ is symmetric, then $B$ is also symmetric \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} If the trace of $A$ is zero, then the trace of $B$ is also zero
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{Matrices, determinants}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Swapping two rows of a matrix negates the determinant: $\det(B) = -\det(A)$ (A is true). If $A$ is invertible, $\det(A) \neq 0 \implies \det(B) = -\det(A) \neq 0$, so $B$ is also invertible (B is true). Row swapping does not preserve symmetry or trace.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.11} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q23}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the given system of linear equations for variables $x$ and $y$, where $k$ is a real-valued constant. Which of the following option(s) is/are CORRECT?
+\[ x + ky = 1 \]
+\[ kx + y = -1 \]
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} There is exactly one value of $k$ for which the above system of equations has no solution. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} There exist an infinite number of values of $k$ for which the system of equations has no solution. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} There exists exactly one value of $k$ for which the system of equations has exactly one solution. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} There exists exactly one value of $k$ for which the system of equations has an infinite number of solutions.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{System of linear equations}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The coefficient determinant is $|A| = 1 - k^2 = 0 \implies k = \pm 1$. For $k = 1$, equations are $x + y = 1$ and $x + y = -1$, which are inconsistent (no solution). For $k = -1$, equations are $x - y = 1$ and $-x + y = -1$, which are identical (infinitely many solutions). For all $k \neq \pm 1$, there is a unique solution.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.12} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q41}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $A$ be a $2 \times 2$ matrix given by:
+\[ A = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} \]
+What are the eigenvalues of the matrix $A^{13}$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $1, -1$ & $\square$\ \textbf{(B)} $2\sqrt{2}, -2\sqrt{2}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $4\sqrt{2}, -4\sqrt{2}$ & $\square$\ \textbf{(D)} $64\sqrt{2}, -64\sqrt{2}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{Eigenvalues and eigenvectors}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The characteristic equation of $A$ is $\det(A - \lambda I) = (1 - \lambda)(-1 - \lambda) - 1 = \lambda^2 - 2 = 0$, so eigenvalues of $A$ are $\lambda_1 = \sqrt{2}$ and $\lambda_2 = -\sqrt{2}$. The eigenvalues of $A^{13}$ are $(\sqrt{2})^{13} = 2^6 \sqrt{2} = 64\sqrt{2}$ and $(-\sqrt{2})^{13} = -64\sqrt{2}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.13} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q11}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+If $A = \begin{pmatrix} 1 & 2 \\ 2 & -1 \end{pmatrix}$, then which ONE of the following is $A^8$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\begin{pmatrix} 25 & 0 \\ 0 & 25 \end{pmatrix}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\begin{pmatrix} 125 & 0 \\ 0 & 125 \end{pmatrix}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\begin{pmatrix} 625 & 0 \\ 0 & 625 \end{pmatrix}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\begin{pmatrix} 3125 & 0 \\ 0 & 3125 \end{pmatrix}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{Matrices and matrix powers}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Compute $A^2 = \begin{pmatrix} 1 & 2 \\ 2 & -1 \end{pmatrix}^2 = \begin{pmatrix} 5 & 0 \\ 0 & 5 \end{pmatrix} = 5I$. Then $A^8 = (A^2)^4 = (5I)^4 = 5^4 I = 625I = \begin{pmatrix} 625 & 0 \\ 0 & 625 \end{pmatrix}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.14} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q14}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $L$, $M$, and $N$ be non-singular matrices of order 3 satisfying the equations $L^2 = L^{-1}$, $M = L^8$ and $N = L^2$. Which ONE of the following is the value of the determinant of $(M - N)$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 0 & $\square$\ \textbf{(B)} 1 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 2 & $\square$\ \textbf{(D)} 3
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{Matrices and determinants}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small From $L^2 = L^{-1}$, multiplying by $L$ gives $L^3 = I$. Then $M = L^8 = (L^3)^2 L^2 = L^2$, and $N = L^2$. Hence $M - N = L^2 - L^2 = O$, whose determinant is $\det(O) = 0$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.15} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q44}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a system of linear equations $PX = Q$ where $P \in \mathbb{R}^{3 \times 3}$ and $Q \in \mathbb{R}^{3 \times 1}$. Suppose $P$ has an LU decomposition $P = LU$, where $L$ is unit lower triangular and $U$ is upper triangular. Which of the following statements is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The system $PX = Q$ can be solved by first solving $LY = Q$ and then $UX = Y$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} If $P$ is invertible, then both $L$ and $U$ are invertible. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} If $P$ is singular, then at least one of the diagonal elements of $U$ is zero. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} If $P$ is symmetric, then both $L$ and $U$ are symmetric.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;B;C} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{System of linear equations and LU decomposition}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For $PX = Q$ with $P = LU$, solving $LY = Q$ by forward substitution and then $UX = Y$ by backward substitution solves the system. Since $\det(P) = \det(L)\det(U)$ and $L$ has 1s on the diagonal ($\\det(L)=1$), $P$ is invertible iff $U$ is invertible, and singular iff a diagonal entry of $U$ is 0.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\end{document}

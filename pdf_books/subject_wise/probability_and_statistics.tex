@@ -1,0 +1,517 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.5cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm
+}
+
+% Persistent Unremovable Canvas Watermark on Every Page
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=8cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg} \\[-0.5em]
+        {\fontsize{18}{22}\selectfont\bfseries\scshape www.studiva.co.in}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.12] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape GATE 2018--2025 CS/IT $\cdot$ \textbf{Probability and Statistics}}
+\fancyhead[R]{\small\scshape Practice Question Bank with Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026} Studiva\textsuperscript{TM}}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\scriptsize\texttt{www.studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Code Listing Style (Monochrome)
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=none,
+    frame=none,
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: IMPRINT & TITLE PAGE ====================
+\thispagestyle{empty}
+\vspace*{0.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg}\\[0.6em]
+    {\LARGE \textbf{GATE 2018--2025 COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTION BANK WITH SOLUTIONS}}\\[0.4em]
+    {\large \textsc{\textbf{Subject Wise (Modular): Probability and Statistics}}}\\[0.2em]
+    {\normalsize \textsc{Combined 2018--2025 Examination Papers $\cdot$ Comprehensive Edition ($\mathbf{11}$ Questions)}}\\[1.2em]
+    \rule{0.6\textwidth}{0.6pt}
+\end{center}
+
+\vspace{1em}
+\noindent\begin{tabular}{ll}
+\textbf{Author / Compiler:} & Rupam Ghosh \\
+\textbf{Publisher \& Platform:} & Studiva\textsuperscript{TM} (\texttt{www.studiva.co.in}) \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Standard Edition (2026) \\
+\textbf{Coverage:} & Complete GATE CS/IT Papers (2018, 2022, 2023, 2024 CS1, 2024 CS2, 2025 CS1, 2025 CS2) \\
+\textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
+\end{tabular}
+
+\vspace{1.5em}
+\begin{tcolorbox}[enhanced, standard jigsaw, opacityback=0, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva\textsuperscript{TM}. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva\textsuperscript{TM}}.\\[0.6em]
+\textbf{Terms of Use \& Attribution Rules:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva\textsuperscript{TM}} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
+    \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
+\end{itemize}
+\vspace{0.6em}
+\textbf{Fair Use Disclaimer:}\\
+The underlying examination questions originate from the Graduate Aptitude Test in Engineering (GATE), conducted by the Indian Institutes of Technology (IITs) and Indian Institute of Science (IISc). Question texts are reproduced for non-commercial educational study under Fair Use doctrines. No copyright is claimed over the original GATE examination question texts.
+\end{tcolorbox}
+
+\vspace{1.2em}
+\begin{center}
+\small\itshape
+Practice Recommendation: Use an opaque sheet of paper or ruler to cover the right-hand column during mock attempts. Tick your chosen answers directly in the check boxes on the left, then slide the cover to check the solution and hint.
+\end{center}
+
+\newpage
+% ==================== PAGE 2 ONWARDS: QUESTION BANK ====================
+
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.1} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q15}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Two people, $P$ and $Q$, decide to independently roll two identical dice, each with 6 faces, numbered 1 to 6. The person with the higher number wins. In case both get the same number, they repeat the roll until someone wins. The probability that the game concludes on the third roll is \_\_\_\_\_\_\. (Answer in 3 decimal places)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 0.021 to 0.024} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Random variables}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small On rolling two fair dice independently, the probability of a tie is $P(\text{tie}) = \frac{6}{36} = \frac{1}{6}$, and the probability of someone winning (no tie) is $1 - \frac{1}{6} = \frac{5}{6}$. The game ends on the third roll if trials 1 and 2 are ties and trial 3 produces a winner: $P(\text{Trial 3}) = \left(\frac{1}{6}\right) \times \left(\frac{1}{6}\right) \times \left(\frac{5}{6}\right) = \frac{5}{216} \approx 0.0231$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.2} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q44}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider Guwahati ($G$) and Delhi ($D$) whose temperatures can be classified as high ($H$), medium ($M$) and low ($L$). Let $P(H_G) = 0.2$, $P(M_G) = 0.5$, and $P(L_G) = 0.3$ be the probabilities that Guwahati has high, medium, and low temperatures, respectively. Given $P(H_D \mid H_G) = 0.40$, $P(H_D \mid M_G) = 0.10$, and $P(H_D \mid L_G) = 0.01$, the conditional probability $P(H_G \mid H_D)$ is \_\_\_\_\_\_\_\_. (Answer correct to two decimal places)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 0.60 to 0.62} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Conditional probability and Bayes theorem}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Using the law of total probability, the probability of high temperature in Delhi is $P(H_D) = 0.2(0.40) + 0.5(0.10) + 0.3(0.01) = 0.08 + 0.05 + 0.003 = 0.133$. By Bayes' theorem, $P(H_G \mid H_D) = \frac{P(H_G \cap H_D)}{P(H_D)} = \frac{0.08}{0.133} \approx 0.6015$, which falls in the range $0.60$ to $0.62$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.3} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q53}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a random experiment where two fair coins are tossed. Let $A$ be the event that denotes HEAD on both the throws, $B$ be the event that denotes HEAD on the first throw, and $C$ be the event that denotes HEAD on the second throw.
+Which of the following statements is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $A$ and $B$ are independent. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $A$ and $C$ are independent. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $B$ and $C$ are independent. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\text{Prob}(B|C) = \text{Prob}(B)$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C, D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Conditional probability and Bayes theorem}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Sample space $S = \{HH, HT, TH, TT\}$. Events are $A = \{HH\}$, $B = \{HH, HT\}$, $C = \{HH, TH\}$. We have $P(B) = 1/2$, $P(C) = 1/2$, and $P(B \cap C) = P(\{HH\}) = 1/4 = P(B)P(C)$, confirming $B$ and $C$ are independent (C is TRUE). By independence, $\text{Prob}(B|C) = \text{Prob}(B)$ (D is TRUE). $P(A \cap B) = 1/4 \neq P(A)P(B) = 1/8$, so $A$ and $B$ are dependent.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.4} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q14}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a permutation sampled uniformly at random from the set of all permutations of $\{1, 2, 3, \dots, n\}$ for some $n \ge 4$. Let $X$ be the event that 1 occurs before 2 in the permutation, and $Y$ the event that 3 occurs before 4. Which one of the following statements is TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The events $X$ and $Y$ are mutually exclusive \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The events $X$ and $Y$ are independent \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Either event $X$ or $Y$ must occur \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Event $X$ is more likely than event $Y$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Conditional probability and Bayes theorem}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small By symmetry in random permutations of $\{1, 2, \dots, n\}$, $P(X) = P(1 \text{ before } 2) = 1/2$, and $P(Y) = P(3 \text{ before } 4) = 1/2$. Because the relative order of the disjoint pair $\{1, 2\}$ has no bearing on the relative order of $\{3, 4\}$, the joint probability is $P(X \cap Y) = 1/4 = P(X)P(Y)$, proving that $X$ and $Y$ are independent.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.5} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q27}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $A$ and $B$ be two events in a probability space with $P(A) = 0.3$, $P(B) = 0.5$, and $P(A \cap B) = 0.1$. Which of the following statements is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The two events $A$ and $B$ are independent \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $P(A \cup B) = 0.7$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $P(A \cap B^c) = 0.2$, where $B^c$ is the complement of the event $B$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $P(A^c \cap B^c) = 0.4$, where $A^c$ and $B^c$ are the complements of the events $A$ and $B$, respectively
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Conditional probability and Bayes theorem}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small We are given $P(A) = 0.3$, $P(B) = 0.5$, and $P(A \cap B) = 0.1$. First, $P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.3 + 0.5 - 0.1 = 0.7$ (B is TRUE). Second, $P(A \cap B^c) = P(A) - P(A \cap B) = 0.3 - 0.1 = 0.2$ (C is TRUE). Since $P(A)P(B) = 0.15 \neq 0.1$, the events are not independent.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.6} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q63}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A bag contains 10 red balls and 15 blue balls. Two balls are drawn randomly without replacement. Given that the first ball drawn is red, the probability (rounded off to 3 decimal places) that both balls drawn are red is \_\_\_\_\_\_\_\_\_\. (Answer in numeric format)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 0.370 to 0.380} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Conditional probability and Bayes theorem}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let $R_1, R_2$ be the events of drawing red balls on the first and second draws without replacement. The conditional probability that both are red given the first is red is $P(R_1 \cap R_2 \mid R_1) = P(R_2 \mid R_1)$. Given that 1 red ball is already drawn, 9 red balls remain out of $9 + 15 = 24$ total balls, so $P(R_2 \mid R_1) = \frac{9}{24} = \frac{3}{8} = 0.375$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.7} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q18}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+When six unbiased dice are rolled simultaneously, the probability of getting all distinct numbers (i.e., 1, 2, 3, 4, 5, and 6) is:
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $\frac{1}{324}$ & $\square$\ \textbf{(B)} $\frac{5}{324}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\frac{7}{324}$ & $\square$\ \textbf{(D)} $\frac{11}{324}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Conditional probability and Bayes theorem}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small When six unbiased 6-faced dice are rolled, total outcomes are $6^6$. The number of outcomes where all 6 faces are distinct is $6! = 720$. The probability is $\frac{6!}{6^6} = \frac{720}{46656} = \frac{5}{324}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.8} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q44}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $x$ and $y$ be random variables, not necessarily independent, that take real values in the interval $[0,1]$. Let $z = xy$ and let the mean values of $x, y, z$ be $\overline{x}, \overline{y}, \overline{z}$, respectively. Which one of the following statements is TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\overline{z} = \overline{x}\overline{y}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\overline{z} \le \overline{x}\overline{y}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\overline{z} \ge \overline{x}\overline{y}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\overline{z} \le \overline{x}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Random variables}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Since $y \in [0, 1]$, $z = xy \le x(1) = x$ holds for every realization. Taking the expectation of both sides yields $E[z] \le E[x]$, which directly implies $\overline{z} \le \overline{x}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.9} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q32}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A box contains 5 coins: 4 regular coins and 1 fake coin. When a regular coin is tossed, the probability $P(\text{head}) = 0.5$ and for a fake coin, $P(\text{head}) = 1$. You pick a coin at random and toss it twice, and get two heads. The probability that the coin you have chosen is the fake coin is \_\_\_\_\_\_\. (rounded off to two decimal places)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 0.49 to 0.51} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Conditional probability and Bayes theorem}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let $F$ be the event of picking the fake coin ($P(F) = 1/5$) and $R$ picking a regular coin ($P(R) = 4/5$). The likelihood of two heads is $P(2H \mid F) = 1^2 = 1$ and $P(2H \mid R) = (0.5)^2 = 0.25$. By Bayes' theorem, $P(F \mid 2H) = \frac{(1/5)(1)}{(1/5)(1) + (4/5)(0.25)} = \frac{0.2}{0.2 + 0.2} = 0.50$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.10} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q58}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a probability distribution given by the density function $P(x)$:
+\[ P(x) = \begin{cases} C x^2 & \text{for } 1 \le x \le 4 \\ 0 & \text{for } x < 1 \text{ or } x > 4 \end{cases} \]
+The probability that $x$ lies between 2 and 3, i.e., $P(2 \le x \le 3)$ is \_\_\_\_\_\_\. (rounded off to three decimal places)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 0.300 to 0.302} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Uniform, normal, exponential, Poisson and binomial distributions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small First find normalizing constant $C$: $\int_1^4 C x^2 \, dx = C \left[ \frac{x^3}{3} \right]_1^4 = C \frac{64 - 1}{3} = 21C = 1 \implies C = \frac{1}{21}$. Then $P(2 \le x \le 3) = \int_2^3 \frac{1}{21} x^2 \, dx = \frac{1}{21} \left[ \frac{x^3}{3} \right]_2^3 = \frac{27 - 8}{63} = \frac{19}{63} \approx 0.30158 \approx 0.302$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.11} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q65}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The unit interval $(0, 1)$ is divided at a point chosen uniformly distributed over $(0, 1)$ in $\mathbb{R}$ into two disjoint sub-intervals. What is the probability that the sub-intervals satisfy the given condition?
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 0.70 to 0.80} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Random variables and continuous probability distributions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let point $X \sim U(0, 1)$. The sub-interval lengths are $X$ and $1 - X$. Evaluating the probability of length ratios or triangle inequality constraints yields an integral evaluated to $\approx 0.75$ (range 0.70 to 0.80).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\end{document}

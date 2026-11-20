@@ -1,0 +1,995 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.5cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm
+}
+
+% Persistent Unremovable Canvas Watermark on Every Page
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=8cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg} \\[-0.5em]
+        {\fontsize{18}{22}\selectfont\bfseries\scshape www.studiva.co.in}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.12] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape GATE 2018--2025 CS/IT $\cdot$ \textbf{Digital Logic}}
+\fancyhead[R]{\small\scshape Practice Question Bank with Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026} Studiva\textsuperscript{TM}}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\scriptsize\texttt{www.studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Code Listing Style (Monochrome)
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=none,
+    frame=none,
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: IMPRINT & TITLE PAGE ====================
+\thispagestyle{empty}
+\vspace*{0.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg}\\[0.6em]
+    {\LARGE \textbf{GATE 2018--2025 COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTION BANK WITH SOLUTIONS}}\\[0.4em]
+    {\large \textsc{\textbf{Subject Wise: Digital Logic}}}\\[0.2em]
+    {\normalsize \textsc{Combined 2018--2025 Examination Papers $\cdot$ Comprehensive Edition ($\mathbf{22}$ Questions)}}\\[1.2em]
+    \rule{0.6\textwidth}{0.6pt}
+\end{center}
+
+\vspace{1em}
+\noindent\begin{tabular}{ll}
+\textbf{Author / Compiler:} & Rupam Ghosh \\
+\textbf{Publisher \& Platform:} & Studiva\textsuperscript{TM} (\texttt{www.studiva.co.in}) \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Standard Edition (2026) \\
+\textbf{Coverage:} & Complete GATE CS/IT Papers (2018, 2022, 2023, 2024 CS1, 2024 CS2, 2025 CS1, 2025 CS2) \\
+\textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
+\end{tabular}
+
+\vspace{1.5em}
+\begin{tcolorbox}[enhanced, standard jigsaw, opacityback=0, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva\textsuperscript{TM}. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva\textsuperscript{TM}}.\\[0.6em]
+\textbf{Terms of Use \& Attribution Rules:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva\textsuperscript{TM}} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
+    \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
+\end{itemize}
+\vspace{0.6em}
+\textbf{Fair Use Disclaimer:}\\
+The underlying examination questions originate from the Graduate Aptitude Test in Engineering (GATE), conducted by the Indian Institutes of Technology (IITs) and Indian Institute of Science (IISc). Question texts are reproduced for non-commercial educational study under Fair Use doctrines. No copyright is claimed over the original GATE examination question texts.
+\end{tcolorbox}
+
+\vspace{1.2em}
+\begin{center}
+\small\itshape
+Practice Recommendation: Use an opaque sheet of paper or ruler to cover the right-hand column during mock attempts. Tick your chosen answers directly in the check boxes on the left, then slide the cover to check the solution and hint.
+\end{center}
+
+\newpage
+% ==================== PAGE 2 ONWARDS: QUESTION BANK ====================
+
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.1} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q04\_v2}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $\oplus$ and $\odot$ denote the Exclusive OR and Exclusive NOR operations, respectively. Which one of the following is NOT CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\overline{P \oplus Q} = P \odot Q$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\overline{P \odot Q} = P \oplus Q$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\overline{P} \oplus Q = P \odot Q$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $(P \oplus \overline{P}) \oplus Q = (P \odot \overline{P}) \odot \overline{Q}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Boolean algebra}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Recall that $P \oplus \overline{P} = 1$ and $1 \oplus Q = \overline{Q}$. On the right-hand side of (D), $P \odot \overline{P} = 0$, and $0 \odot \overline{Q} = \overline{0 \oplus \overline{Q}} = \overline{\overline{Q}} = Q$. Since $\overline{Q} \neq Q$, option (D) is NOT correct.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.2} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q33}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the unsigned 8-bit fixed point binary number representation below:
+\[ b\_7 b\_6 b\_5 b\_4 b\_3 \, . \, b\_2 b\_1 b\_0 \]
+where the position of the binary point is between $b_3$ and $b_2$. Which of the following decimal numbers can be represented exactly in this format?
+\begin{enumerate}[label=(\roman*)]
+    \item 0.500
+    \item 0.875
+    \item 0.100
+    \item 0.001
+\end{enumerate}
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} (i) and (ii) only & $\square$\ \textbf{(B)} (i) and (iii) only \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (i) and (ii) only & $\square$\ \textbf{(D)} (i), (ii) and (iii)
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Number representations and computer arithmetic (fixed and floating point)}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The fractional portion uses 3 bits ($b_2 b_1 b_0$), so the fractional precision is $2^{-3} = 0.125$. Any representable fraction must be an integer multiple of $0.125$: $0.500 = 4 \times 0.125$ (i) and $0.875 = 7 \times 0.125$ (ii) are exact multiples, while $0.100$ and $0.001$ are not.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.3} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q18}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $R_1$ and $R_2$ be two 4-bit registers that store numbers in 2's complement form. For the operation $R_1 + R_2$, which one of the following values of $R_1$ and $R_2$ gives an arithmetic overflow?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $R_1 = 1011$ and $R_2 = 1110$ & $\square$\ \textbf{(B)} $R_1 = 1100$ and $R_2 = 1010$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $R_1 = 0011$ and $R_2 = 0100$ & $\square$\ \textbf{(D)} $R_1 = 1001$ and $R_2 = 1111$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Number representations and computer arithmetic (fixed and floating point)}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a 4-bit 2's complement system, representable integers span $[-2^3, 2^3 - 1] = [-8, +7]$. For $R_1 = 1100_2 = -4$ and $R_2 = 1010_2 = -6$, their sum is $-4 + (-6) = -10$. Because $-10 < -8$, an arithmetic underflow (overflow in signed representation) occurs.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.4} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q41}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider three floating point numbers A, B and C stored in registers RA, RB and RC, respectively as per IEEE-754 single precision floating point format. The 32-bit content stored in these registers (in hexadecimal form) are as follows:
+\[ RA = \text{0xC1400000}, \quad RB = \text{0x42100000}, \quad RC = \text{0x41400000} \]
+Which one of the following is FALSE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $A + C = 0$ & $\square$\ \textbf{(B)} $C = A + B$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $B = 3C$ & $\square$\ \textbf{(D)} $(B - C) > 0$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Number representations and computer arithmetic (fixed and floating point)}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Decoding 32-bit IEEE-754: $RA = \text{0xC1400000} = -1.5 \times 2^{130-127} = -12.0$; $RB = \text{0x42100000} = +1.125 \times 2^{132-127} = +36.0$; $RC = \text{0x41400000} = +1.5 \times 2^{130-127} = +12.0$. Evaluating option B: $A + B = -12 + 36 = 24 \neq C = 12.0$, so statement B is FALSE.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.5} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q32}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A particular number is written as 132 in radix-4 representation. The same number in radix-5 representation is \_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 110 to 110} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Number representations and computer arithmetic (fixed and floating point)}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Converting $132_4$ to base 10: $1 \times 4^2 + 3 \times 4^1 + 2 \times 4^0 = 16 + 12 + 2 = 30_{10}$. Converting $30_{10}$ to radix 5: $30 = 6 \times 5 + 0$, $6 = 1 \times 5 + 1$, $1 = 0 \times 5 + 1$. Reading remainders from bottom to top yields $110_5$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.6} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q45}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the IEEE-754 single precision floating point numbers $P = \text{0xC1800000}$ and $Q = \text{0x3F5C2EF4}$.
+Which one of the following corresponds to the product of these numbers (i.e., $P \times Q$), represented in the IEEE-754 single precision format?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 0x404C2EF4 & $\square$\ \textbf{(B)} 0x405C2EF4 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 0xC15C2EF4 & $\square$\ \textbf{(D)} 0xC14C2EF4
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Number representations and computer arithmetic (fixed and floating point)}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Number $P = \text{0xC1800000}$ has sign bit 1, biased exponent $131$, actual exponent $131 - 127 = 4$, and mantissa $1.0$, so $P = -16.0 = -2^4$. Number $Q = \text{0x3F5C2EF4}$ is positive with biased exponent $126$ (exponent $-1$) and mantissa fraction `5C2EF4`. Multiplying $P \times Q$ flips the sign to negative (1), adds 4 to the exponent (biased exponent becomes $126 + 4 = 130 = \text{0x82}$), and retains the mantissa fraction, resulting in `0xC15C2EF4`.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.7} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q13}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a system that uses 5 bits for representing signed integers in 2's complement format. In this system, two integers $A$ and $B$ are represented as $A = 01010$ and $B = 11010$. Which one of the following operations will result in either an arithmetic overflow or an arithmetic underflow?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $A + B$ & $\square$\ \textbf{(B)} $A - B$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $B - A$ & $\square$\ \textbf{(D)} $2 * B$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Number representations and computer arithmetic (fixed and floating point)}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a 5-bit 2's complement representation, the range is $[-2^4, 2^4 - 1] = [-16, +15]$. Here, $A = 01010_2 = +10$ and $B = 11010_2 = -6$. The operation $A - B = 10 - (-6) = +16$, which exceeds $+15$, resulting in an arithmetic overflow.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.8} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q28}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the circuit shown below where the gates may have propagation delays. Assume that all signal transitions occur instantaneously and that wires have no delays. Which of the following statements about the circuit is/are CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} With no propagation delays, the output $Y$ is always logic Zero \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} With no propagation delays, the output $Y$ is always logic One \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} With propagation delays, the output $Y$ can have a transient logic One after $X$ transitions from logic Zero to logic One \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} With propagation delays, the output $Y$ can have a transient logic Zero after $X$ transitions from logic One to logic Zero
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Combinational and sequential circuits}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The circuit computes $Y = X \cdot \overline{X}$. In steady-state with no gate delays, $X \cdot \overline{X} = 0$, so $Y$ is always logic Zero (A is TRUE). When $X$ transitions from 0 to 1, if the inverter has a non-zero propagation delay, both inputs to the AND gate remain logic 1 for the duration of the inverter delay, producing a transient logic 1 glitch (C is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.9} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q47}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a Boolean expression given by $F(X, Y, Z) = \sum(3, 5, 6, 7)$. Which of the following statements is/are CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $F(X, Y, Z) = \prod(0, 1, 2, 4)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $F(X, Y, Z) = XY + YZ + XZ$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $F(X, Y, Z)$ is independent of input $Y$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $F(X, Y, Z)$ is independent of input $X$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Minimization}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The maxterm representation is the product of maxterms not in the minterm list: $\prod(0, 1, 2, 4)$ (A is TRUE). Grouping minterms $\Sigma(3, 5, 6, 7)$ on a 3-variable K-map: pairs are $(3, 7) \implies YZ$, $(5, 7) \implies XZ$, and $(6, 7) \implies XY$, giving minimal SOP $F(X, Y, Z) = XY + YZ + XZ$ (B is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.10} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q14}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The format of a single-precision floating-point number as per the IEEE 754 standard is:
+Sign (1 bit), Exponent (8 bits), Mantissa (23 bits).
+Choose the largest floating-point number among the following options.
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Sign: 0, Exponent: 0111 1111, Mantissa: 1111 1111 1111 1111 1111 111 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Sign: 0, Exponent: 1111 1110, Mantissa: 1111 1111 1111 1111 1111 111 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Sign: 0, Exponent: 1111 1111, Mantissa: 1111 1111 1111 1111 1111 111 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Sign: 0, Exponent: 0111 1111, Mantissa: 0000 0000 0000 0000 0000 000
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Number representations and computer arithmetic (fixed and floating point)}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In IEEE 754 single precision: sign bit 0 means positive. The exponent field 11111111 is reserved for $\pm\infty$ and NaN. The largest finite representable number has the maximum non-reserved biased exponent, which is $254 = 11111110_2$, with all mantissa bits set to 1 ($111\dots1$), corresponding to option B.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.11} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q30}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+For a Boolean variable $x$, which of the following statements is/are FALSE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $x \cdot 1 = x$ & $\square$\ \textbf{(B)} $x + 1 = x$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $x \cdot x = 0$ & $\square$\ \textbf{(D)} $x + \overline{x} = 1$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Boolean algebra}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In Boolean algebra: $x + 1 = 1$ (null element property of OR), so $x + 1 = x$ is FALSE (B is false). Also, $x \cdot x = x$ (idempotent property of AND), so $x \cdot x = 0$ is FALSE (C is false).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.12} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q49}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following is/are EQUAL to 224 in radix-5 (i.e., base-5) notation?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 64 in radix-10 & $\square$\ \textbf{(B)} 100 in radix-8 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 50 in radix-16 & $\square$\ \textbf{(D)} 121 in radix-7
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;B;D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Number representations and computer arithmetic (fixed and floating point)}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Convert $224_5$ to decimal: $2(5^2) + 2(5^1) + 4(5^0) = 50 + 10 + 4 = 64_{10}$ (A is true). In base 8: $64_{10} = 100_8$ (B is true). In base 16: $64_{10} = 40_{16} \neq 50_{16}$ (C is false). In base 7: $64_{10} = 1(7^2) + 2(7^1) + 1(7^0) = 121_7$ (D is true).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.13} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q24}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $X$ be a 3-variable Boolean function that produces output as `1' when at least two of the input variables are `1'. Which of the following statement(s) is/are CORRECT, where $a, b, c, d, e$ are Boolean variables?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $X(a, b, X(c, d, e)) = X(X(a, b, c), d, e)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $X(a, b, X(a, b, c)) = X(a, b, c)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $X(a, b, X(a, c, d)) = (X(a, b, a) \text{ AND } X(c, d, c))$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $X(a, b, c) = X(a, X(a, b, c), X(a, c, c))$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Boolean algebra}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The majority function is $X(a, b, c) = ab + bc + ca$. In (B), $X(a, b, M) = ab + bM + aM = ab + (a+b)M = ab + (a+b)(ab+bc+ca) = ab + bc + ca = X(a, b, c)$, so (B) holds. In (D), $X(a, c, c) = c$, giving $X(a, M, c) = aM + Mc + ca = (a+c)M + ac = (a+c)(ab+bc+ca) + ac = ab + bc + ca = X(a, b, c)$, so (D) holds.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.14} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q25}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The number $-6$ can be represented as $1010_2$ in 4-bit 2's complement representation. Which of the following is/are CORRECT 2's complement representation(s) of $-6$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 1000 1010 in 8-bits & $\square$\ \textbf{(B)} 1111 1010 in 8-bits \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 1000 0000 0000 1010 in 16-bits & $\square$\ \textbf{(D)} 1111 1111 1111 1010 in 16-bits
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Number representations and computer arithmetic (fixed and floating point)}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Sign extension in two's complement preserves the numerical value by replicating the most significant bit (sign bit). Since the 4-bit representation of $-6$ is $1010$ (sign bit 1), extending to 8 bits gives $1111\,1010$ and extending to 16 bits gives $1111\,1111\,1111\,1010$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.15} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q42}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following four variable Boolean function in sum-of-product form:
+\[ F(b\_3, b\_2, b\_1, b\_0) = \sum(0, 2, 4, 8, 10, 11, 12) \]
+where the value of the function is computed by considering $b_3b_2b_1b_0$ as a 4-bit binary number, where $b_3$ denotes the most significant bit and $b_0$ denotes the least significant bit. Note that there are no don't care terms. Which ONE of the following options is the CORRECT minimized expression?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\overline{b}_1\overline{b}_0 + \overline{b}_2\overline{b}_0 + b_1\overline{b}_2b_3$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\overline{b}_1\overline{b}_0 + \overline{b}_2\overline{b}_0$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\overline{b}_2\overline{b}_0 + b_1b_2b_3$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\overline{b}_0\overline{b}_2 + \overline{b}_3$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Minimization}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Grouping minterms on a 4-variable K-map: minterms $\{0, 2, 8, 10\}$ form a 4-cell group giving $\overline{b}_2\overline{b}_0$; minterms $\{0, 4, 8, 12\}$ form a 4-cell group giving $\overline{b}_1\overline{b}_0$; remaining minterm 11 combines with 10 to give $b_3\overline{b}_2b_1$. Combining these essential prime implicants yields $\overline{b}_1\overline{b}_0 + \overline{b}_2\overline{b}_0 + b_1\overline{b}_2b_3$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.16} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q59}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a finite state machine (FSM) with one input $X$ and one output $f$, represented by the given state transition table:
+\par\medskip
+\begin{tabular}{|c|cc|cc|}
+\hline
+\textbf{Present state} & \multicolumn{2}{c|}{\textbf{Next state}} & \multicolumn{2}{c|}{\textbf{Output } $f$} \\
+& $X=0$ & $X=1$ & $X=0$ & $X=1$ \\
+\hline
+A & F & B & 0 & 0 \\
+B & D & C & 0 & 0 \\
+C & F & E & 0 & 0 \\
+D & G & A & 1 & 0 \\
+E & D & C & 0 & 0 \\
+F & F & B & 1 & 1 \\
+G & G & H & 0 & 1 \\
+H & G & A & 1 & 0 \\
+\hline
+\end{tabular}
+\par\medskip
+The minimum number of states required to realize this FSM is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 5 to 5} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Combinational and sequential circuits}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Using state equivalence partitioning: initial partition by outputs groups states into $P_0 = \{(A, B, C, E), (D, H), (F), (G)\}$. Comparing transitions on $X=0, 1$: states $B$ and $E$ have identical transitions to $(D, C)$, while $A$ and $C$ transition to $(F, B)$ and $(F, E)$ (which are equivalent since $B \equiv E$). States $D$ and $H$ have identical next states $(G, A)$. Thus, equivalence classes are $\{A, C\}, \{B, E\}, \{D, H\}, \{F\}, \{G\}$, resulting in exactly 5 minimal states.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.17} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q60}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the given sequential circuit designed using D-Flip-flops. The circuit is initialized with some value (initial state). The number of distinct states the circuit will go through before returning back to the initial state is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 7 to 8} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Combinational and sequential circuits}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Tracing the characteristic shift register feedback transitions where the inputs to the D flip-flops are determined by logic feedback of the current state $(Q_3, Q_2, Q_1, Q_0)$, the state cycle length forms a closed loop of period 7 (or 8 depending on the initial valid cycle).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.18} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q31}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the logic circuit diagram for function $F$. Which is/are the CORRECT option(s) for the output function $F$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\overline{X \overline{Y}}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\overline{X} + \overline{Y} + X\overline{Y}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\overline{X \overline{Y}} + \overline{X} + X\overline{Y}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $X + \overline{Y}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;B;C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Combinational and sequential circuits: logic gates}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small From Boolean reduction, $\overline{X \cdot \overline{Y}} = \overline{X} + Y$. Applying consensus and absorption theorems yields equivalent representations including $\overline{X} + \overline{Y} + X\overline{Y}$ and $\overline{X \cdot \overline{Y}} + \overline{X} + X\overline{Y}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.19} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q34}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In a 4-bit ripple counter, if the period of the waveform at the last flip-flop is $64\,\mu\text{s}$, then the frequency of the ripple counter in kHz is \_\_\_\_\_\_\_\_. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 250 to 250} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Combinational and sequential circuits: ripple counters}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A 4-bit ripple counter divides the clock frequency by $2^4 = 16$. The clock period is $T_{clk} = \frac{T_{out}}{16} = \frac{64\,\mu\text{s}}{16} = 4\,\mu\text{s}$, giving clock frequency $f = \frac{1}{4\,\mu\text{s}} = 250\,\text{kHz}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.20} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q43}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Given the Karnaugh Map for a Boolean function $F(w, x, y, z)$, which one or more of the following Boolean expressions represent $F$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\overline{w}\overline{x}\overline{y}\overline{z} + w\overline{x}\overline{y}\overline{z} + \overline{w}\overline{x}y\overline{z} + w\overline{x}y\overline{z} + xz$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\overline{w}\overline{x}\overline{y}\overline{z} + \overline{w}\overline{x}y\overline{z} + w\overline{x}yz + xz$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\overline{w}\overline{x}\overline{y}\overline{z} + w\overline{x}\overline{y}\overline{z} + w\overline{x}\overline{y}z + xz$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\overline{x}\overline{z} + xz$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Boolean algebra and minimization: Karnaugh Map}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Grouping the 1s in the K-map: the four corners and the central groupings give prime implicants $\overline{x}\overline{z} + xz$. Both the expanded minterm expression and minimal SOP are valid representations.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.21} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q49}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Three floating point numbers $X, Y,$ and $Z$ are stored in three registers RX, RY, and RZ, respectively in IEEE 754 single-precision format. Which of the following relationships is/are CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $4(X+Y) + Z = 0$ & $\square$\ \textbf{(B)} $2Y - Z = 0$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $4X + 3Z = 0$ & $\square$\ \textbf{(D)} $X+Y+Z = 0$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;B;C} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Number representations and computer arithmetic: IEEE 754 floating point}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Decode the IEEE 754 representations in RX, RY, RZ into decimal values $X, Y, Z$. Verify algebraic linear combinations: checking equations $4(X+Y)+Z = 0$, $2Y - Z = 0$, and $4X + 3Z = 0$ reveals that A, B, and C all hold true.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.22} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q50}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following Boolean algebraic equation(s) is/are CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\overline{A}BC + A\overline{B}\overline{C} + \overline{A}\overline{B}\overline{C} + A\overline{B}C + ABC = BC + \overline{B}\overline{C} + \overline{A}\overline{B}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $AB + \overline{A}C + BC = AB + \overline{A}C$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $(A + C)(\overline{A} + B) = AB + \overline{A}C$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\overline{(A + \overline{B} + \overline{D})(C + D)(\overline{A} + C + D)(A + B + \overline{D})} = \overline{A}D + \overline{C}\overline{D}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C;D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Boolean algebra and minimization: identities and consensus theorem}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Equation B is the classic Consensus Theorem: $AB + \overline{A}C + BC = AB + \overline{A}C$. Equation C expands to $AB + \overline{A}C$, and Equation D simplifies via De Morgan's laws and complementation to $\overline{A}D + \overline{C}\overline{D}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\end{document}

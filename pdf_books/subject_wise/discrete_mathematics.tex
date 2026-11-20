@@ -1,0 +1,1497 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.5cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm
+}
+
+% Persistent Unremovable Canvas Watermark on Every Page
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=8cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg} \\[-0.5em]
+        {\fontsize{18}{22}\selectfont\bfseries\scshape www.studiva.co.in}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.12] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape GATE 2018--2025 CS/IT $\cdot$ \textbf{Discrete Mathematics}}
+\fancyhead[R]{\small\scshape Practice Question Bank with Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026} Studiva\textsuperscript{TM}}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\scriptsize\texttt{www.studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Code Listing Style (Monochrome)
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=none,
+    frame=none,
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: IMPRINT & TITLE PAGE ====================
+\thispagestyle{empty}
+\vspace*{0.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg}\\[0.6em]
+    {\LARGE \textbf{GATE 2018--2025 COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTION BANK WITH SOLUTIONS}}\\[0.4em]
+    {\large \textsc{\textbf{Subject Wise: Discrete Mathematics}}}\\[0.2em]
+    {\normalsize \textsc{Combined 2018--2025 Examination Papers $\cdot$ Comprehensive Edition ($\mathbf{35}$ Questions)}}\\[1.2em]
+    \rule{0.6\textwidth}{0.6pt}
+\end{center}
+
+\vspace{1em}
+\noindent\begin{tabular}{ll}
+\textbf{Author / Compiler:} & Rupam Ghosh \\
+\textbf{Publisher \& Platform:} & Studiva\textsuperscript{TM} (\texttt{www.studiva.co.in}) \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Standard Edition (2026) \\
+\textbf{Coverage:} & Complete GATE CS/IT Papers (2018, 2022, 2023, 2024 CS1, 2024 CS2, 2025 CS1, 2025 CS2) \\
+\textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
+\end{tabular}
+
+\vspace{1.5em}
+\begin{tcolorbox}[enhanced, standard jigsaw, opacityback=0, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva\textsuperscript{TM}. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva\textsuperscript{TM}}.\\[0.6em]
+\textbf{Terms of Use \& Attribution Rules:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva\textsuperscript{TM}} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
+    \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
+\end{itemize}
+\vspace{0.6em}
+\textbf{Fair Use Disclaimer:}\\
+The underlying examination questions originate from the Graduate Aptitude Test in Engineering (GATE), conducted by the Indian Institutes of Technology (IITs) and Indian Institute of Science (IISc). Question texts are reproduced for non-commercial educational study under Fair Use doctrines. No copyright is claimed over the original GATE examination question texts.
+\end{tcolorbox}
+
+\vspace{1.2em}
+\begin{center}
+\small\itshape
+Practice Recommendation: Use an opaque sheet of paper or ruler to cover the right-hand column during mock attempts. Tick your chosen answers directly in the check boxes on the left, then slide the cover to check the solution and hint.
+\end{center}
+
+\newpage
+% ==================== PAGE 2 ONWARDS: QUESTION BANK ====================
+
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.1} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q01\_v2}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which one of the following is a closed form expression for the generating function of the sequence $\{a_n\}$, where $a_n = 2n + 3$ for all $n = 0, 1, 2, \dots$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $\frac{3}{(1-x)^2}$ & $\square$\ \textbf{(B)} $\frac{3x}{(1-x)^2}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\frac{2-x}{(1-x)^2}$ & $\square$\ \textbf{(D)} $\frac{3-x}{(1-x)^2}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Combinatorics: counting, recurrence relations, generating functions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The generating function is $G(x) = \sum_{n=0}^\infty (2n + 3)x^n = 2\sum_{n=0}^\infty n x^n + 3\sum_{n=0}^\infty x^n$. Using the standard power series $\sum_{n=0}^\infty x^n = \frac{1}{1-x}$ and $\sum_{n=0}^\infty n x^n = \frac{x}{(1-x)^2}$, we obtain $G(x) = \frac{2x}{(1-x)^2} + \frac{3(1-x)}{(1-x)^2} = \frac{3 - x}{(1-x)^2}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.2} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q18}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The chromatic number of the graph containing a 7-cycle with a single cross-chord is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 3 to 3} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Graphs: connectivity, matching, colouring}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The given graph contains an odd cycle, which prevents it from being 2-colorable (bipartite), meaning $\chi(G) \ge 3$. A valid 3-coloring can be directly constructed without any conflicts between adjacent vertices, so $\chi(G) = 3$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.3} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q19}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $G$ be a finite group on 84 elements. The size of a largest possible proper subgroup of $G$ is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 42 to 42} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Monoids, Groups}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small By Lagrange's Theorem, the order of any subgroup $H$ of a finite group $G$ must divide $|G| = 84$. A proper subgroup cannot equal the whole group, so $|H| < 84$. The largest proper divisor of 84 is $\frac{84}{2} = 42$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.4} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q27}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $\mathbb{N}$ denote the set of all natural numbers and $\mathbb{Q}$ denote the set of all rational numbers. Consider the following sets:
+\begin{itemize}[leftmargin=*, nosep]
+    \item[$P$:] The set of all rational numbers between 0 and 1.
+    \item[$Q$:] The set of all functions from $\{0, 1\}$ to $\mathbb{N}$.
+    \item[$R$:] The set of all functions from $\mathbb{N}$ to $\{0, 1\}$.
+    \item[$S$:] The set of all finite subsets of $\mathbb{N}$.
+\end{itemize}
+Which of the sets above are countable?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $P$ and $Q$ only & $\square$\ \textbf{(B)} $Q$ and $R$ only \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $P$, $Q$ and $R$ only & $\square$\ \textbf{(D)} $P$, $Q$ and $S$ only
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Sets, relations, functions, partial orders and lattices}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Set $P$ (rationals) is countably infinite. Set $Q$ (functions $\{0, 1\} \to \mathbb{N}$) is equivalent to $\mathbb{N} \times \mathbb{N}$, which is countable. Set $S$ (finite subsets of $\mathbb{N}$) is countable. Set $R$ (functions $\mathbb{N} \to \{0, 1\}$) is equivalent to the power set $\mathcal{P}(\mathbb{N})$ and has cardinality $2^{\aleph_0}$, which is uncountable. Hence, $P$, $Q$, and $S$ are countable.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.5} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q28}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the first-order logic sentence
+\[ \varphi \equiv \exists s \, \exists t \, \exists u \, \forall v \, \forall w \, \forall x \, \forall y \; \psi(s, t, u, v, w, x, y) \]
+where $\psi(s, t, u, v, w, x, y)$ is a quantifier-free first-order logic formula using only predicate symbols and variables (no functions or constants). If $\varphi$ has a model with a universe of elements, then $\varphi$ is guaranteed to have a model of size at most
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 3 & $\square$\ \textbf{(B)} 4 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 7 & $\square$\ \textbf{(D)} $\infty$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Propositional and first order logic}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The sentence $\varphi$ has existential quantifiers for 3 variables ($s, t, u$) followed exclusively by universal quantifiers for the remaining variables. If a structure satisfies $\varphi$, the submodel formed by taking the domain as the elements corresponding to $s, t, u$ will itself satisfy the sentence because any elements evaluated under universal quantifiers are chosen from this 3-element domain.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.6} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q43}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $G$ be a graph with $100!$ vertices, with each vertex labelled by a distinct permutation of the numbers $1, 2, \dots, 100$. There is an edge between two vertices if and only if the permutation of one can be obtained by swapping two adjacent elements of the other. Let $y$ be the degree of a vertex in $G$ and $z$ be the number of connected components in $G$. Then $y + 10z =$ \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 109 to 109} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Graphs: connectivity, matching, colouring}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Each permutation of length 100 has 99 pairs of adjacent elements that can be swapped, so the degree of each vertex is $y = 99$. Adjacent transpositions generate the entire symmetric group $S_{100}$, meaning every permutation is reachable from any other; thus the graph is connected, giving $z = 1$ connected component. Hence $y + 10z = 99 + 10(1) = 109$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.7} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q27}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following statements is/are TRUE for a group $G$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} If for all $x, y \in G$, $(xy)^2 = x^2 y^2$, then $G$ is commutative. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} If for all $x \in G$, $x^2 = 1$, then $G$ is commutative. Here, 1 is the identity element of $G$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} If the order of $G$ is 2, then $G$ is commutative. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} If $G$ is commutative, then a subgroup of $G$ need not be commutative.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A,B,C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Monoids, Groups}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small If $(xy)^2 = x^2 y^2$, then $xyxy = xxyy \implies yx = xy$, so $G$ is commutative (A is TRUE). If $x^2 = 1$ for all $x$, every element is its own inverse, so $xy = (xy)^{-1} = y^{-1} x^{-1} = yx$ (B is TRUE). Any group of order 2 is isomorphic to $\mathbb{Z}_2$, which is cyclic and abelian (C is TRUE). Subgroups of abelian groups are always abelian (D is FALSE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.8} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q30}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a simple undirected graph of 10 vertices. If the graph is disconnected, then the maximum number of edges it can have is \_\_\_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 36 to 36} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Graphs: connectivity, matching, colouring}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A disconnected graph on $n = 10$ vertices with the maximum number of edges has one isolated vertex and one complete component $K_{n-1} = K_9$. The maximum number of edges is $\binom{9}{2} = \frac{9 \times 8}{2} = 36$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.9} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q32}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The number of arrangements of six identical balls in three identical bins is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 7 to 7} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Combinatorics: counting, recurrence relations, generating functions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Distributing 6 identical balls into 3 identical bins is equivalent to integer partitions of 6 into at most 3 parts: $6$, $5+1$, $4+2$, $3+3$, $4+1+1$, $3+2+1$, and $2+2+2$. There are exactly 7 such partitions.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.10} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q36}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which one of the following is the closed form for the generating function of the sequence $\{a_n\}_{n \ge 0}$ defined below?
+\[ a\_n = \begin{cases} n+1, & n \text{ is odd} \\ 1, & \text{otherwise} \end{cases} \]
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\frac{x(1+x^2)}{(1-x^2)^2} + \frac{1}{1-x}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\frac{x(3-x^2)}{(1-x^2)^2} + \frac{1}{1-x}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\frac{2x}{(1-x^2)^2} + \frac{1}{1-x}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\frac{x}{(1-x^2)^2} + \frac{1}{1-x}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Combinatorics: counting, recurrence relations, generating functions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The sequence $a_n$ is $1, 2, 1, 4, 1, 6, \dots$. Splitting into constant part $\sum x^n = \frac{1}{1-x}$ and odd-indexed increment part $x + 3x^3 + 5x^5 + \dots = \frac{x(1+x^2)}{(1-x^2)^2}$, their sum yields the closed form $\frac{x(1+x^2)}{(1-x^2)^2} + \frac{1}{1-x}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.11} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q50}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The following simple undirected graph is referred to as the Petersen graph. Which of the following statements is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The chromatic number of the graph is 3. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The graph has a Hamiltonian path. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The following graph is isomorphic to the Petersen graph. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The size of the largest independent set of the given graph is 3.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A,B,C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Graphs: connectivity, matching, colouring}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The Petersen graph has chromatic number $\chi(G) = 3$ (A is TRUE). While it is not Hamiltonian, it contains Hamiltonian paths (B is TRUE). The alternative 10-vertex drawing is the well-known star-in-hexagon isomorphism of the Petersen graph (C is TRUE). Its independence number is $\alpha(G) = 4$, not 3 (D is FALSE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.12} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q15}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The Lucas sequence $L_n$ is defined by the recurrence relation:
+\[ L\_n = L\_{n-1} + L\_{n-2}, \quad \text{for } n \ge 3, \]
+with $L_1 = 1$ and $L_2 = 3$.
+Which one of the options given is TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $L_n = \left(\frac{1+\sqrt{5}}{2}\right)^n + \left(\frac{1-\sqrt{5}}{2}\right)^n$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $L_n = \left(\frac{1+\sqrt{5}}{2}\right)^n - \left(\frac{1-\sqrt{5}}{3}\right)^n$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $L_n = \left(\frac{1+\sqrt{5}}{2}\right)^n + \left(\frac{1-\sqrt{5}}{3}\right)^n$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $L_n = \left(\frac{1+\sqrt{5}}{2}\right)^n - \left(\frac{1-\sqrt{5}}{2}\right)^n$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Combinatorics: counting, recurrence relations, generating functions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The recurrence $L_n = L_{n-1} + L_{n-2}$ has characteristic equation $r^2 - r - 1 = 0$, giving roots $r_1, r_2 = \frac{1 \pm \sqrt{5}}{2}$. The general solution is $L_n = c_1 \left(\frac{1+\sqrt{5}}{2}\right)^n + c_2 \left(\frac{1-\sqrt{5}}{2}\right)^n$. Substituting initial conditions $L_1 = 1$ and $L_2 = 3$ yields $c_1 = 1$ and $c_2 = 1$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.13} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q26}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Geetha has a conjecture about integers, which is of the form
+\[ \forall x \, [P(x) \implies \exists y \, Q(x, y)], \]
+where $P$ is a statement about integers, and $Q$ is a statement about pairs of integers. Which of the following (one or more) option(s) would imply Geetha's conjecture?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\exists x \, [P(x) \land \forall y \, Q(x, y)]$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\forall x \forall y \, Q(x, y)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\exists y \forall x \, [P(x) \implies Q(x, y)]$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\exists x \, [P(x) \land \exists y \, Q(x, y)]$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B, C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Propositional and first order logic}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Geetha's conjecture states $\forall x [P(x) \implies \exists y Q(x, y)]$. Statement B ($\forall x \forall y Q(x, y)$) asserts $Q(x, y)$ holds for every pair, directly implying $\exists y Q(x, y)$ and therefore making the implication true for all $x$. Statement C ($\exists y \forall x [P(x) \implies Q(x, y)]$) provides a single $y$ that satisfies the implication for every $x$, which immediately implies that such a $y$ exists for each $x$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.14} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q48}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $U = \{1, 2, \dots, n\}$, where $n$ is a large positive integer greater than 1000. Let $k$ be a positive integer less than $n$. Let $A, B$ be subsets of $U$ with $|A| = |B| = k$ and $A \cap B = \emptyset$. We say that a permutation of $U$ separates $A$ from $B$ if one of the following is true:
+\begin{itemize}[itemsep=0pt,topsep=2pt]
+\item All members of $A$ appear in the permutation before any of the members of $B$.
+\item All members of $B$ appear in the permutation before any of the members of $A$.
+\end{itemize}
+How many permutations of $U$ separate $A$ from $B$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $n!$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\binom{n}{2k} (n - 2k)!$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\binom{n}{2k} (n - 2k)! (k!)^2$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $2 \binom{n}{2k} (n - 2k)! (k!)^2$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Combinatorics: counting, recurrence relations, generating functions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small There are 2 orderings for which block appears first ($A$ before $B$ or $B$ before $A$). There are $\binom{n}{2k}$ ways to choose the positions in the permutation for elements of $A \cup B$. The first $k$ chosen positions must contain elements of the first set ($k!$ permutations) and the next $k$ positions contain elements of the second set ($k!$ permutations). The remaining $n - 2k$ elements can be arranged in any of the $(n - 2k)!$ remaining positions. Total valid permutations $= 2 \binom{n}{2k} (n - 2k)! (k!)^2$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.15} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q49}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $f : A \to B$ be an onto (or surjective) function, where $A$ and $B$ are nonempty sets. Define an equivalence relation $\sim$ on the set $A$ as
+\[ a\_1 \sim a\_2 \quad \text{if } f(a\_1) = f(a\_2), \]
+where $a_1, a_2 \in A$. Let $E = \{[x] : x \in A\}$ be the set of all the equivalence classes under $\sim$. Define a new mapping $F : E \to B$ as
+\[ F([x]) = f(x), \]
+for all the equivalence classes $[x]$ in $E$.
+Which of the following statements is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $F$ is NOT well-defined. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $F$ is an onto (or surjective) function. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $F$ is a one-to-one (or injective) function. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $F$ is a bijective function.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B, C, D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Sets, relations, functions, partial orders and lattices}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small By the fundamental theorem of equivalence relations and canonical function decomposition, $F([x]) = f(x)$ is well-defined and injective because $[x_1] = [x_2] \iff f(x_1) = f(x_2)$ (C is TRUE). Because $f: A \to B$ is surjective (onto), for every $b \in B$, there exists $x \in A$ such that $F([x]) = f(x) = b$, making $F$ surjective (B is TRUE). Since $F$ is both injective and surjective, it is a bijective function (D is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.16} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q51}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $X$ be a set and $2^X$ denote the powerset of $X$.
+Define a binary operation $\Delta$ on $2^X$ as follows:
+\[ A \Delta B = (A - B) \cup (B - A). \]
+Let $H = (2^X, \Delta)$. Which of the following statements about $H$ is/are correct?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $H$ is a group. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Every element in $H$ has an inverse, but $H$ is NOT a group. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} For every $A \in 2^X$, the inverse of $A$ is the complement of $A$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} For every $A \in 2^X$, the inverse of $A$ is $A$.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A, D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Monoids, Groups}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Symmetric difference $\Delta$ is associative on $2^X$. The identity element is the empty set $\emptyset$, since $A \Delta \emptyset = A$. Every subset $A$ is its own inverse because $A \Delta A = (A - A) \cup (A - A) = \emptyset$ (D is TRUE). Consequently, $(2^X, \Delta)$ satisfies all group axioms, forming an abelian group where every element is self-inverse (A is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.17} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q55}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $G$ be a simple, finite, undirected graph with vertex set $\{v_1, \dots, v_n\}$. Let $\Delta(G)$ denote the maximum degree of $G$ and let $\mathbb{N} = \{1, 2, \dots\}$ denote the set of all possible colors. Color the vertices of $G$ using the following greedy strategy:
+\begin{lstlisting}
+for i = 1, ..., n
+    color(vi) <- min{j in N : no neighbour of vi is colored j}
+\end{lstlisting}
+Which of the following statements is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} This procedure results in a proper vertex coloring of $G$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The number of colors used is at most $\Delta(G) + 1$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The number of colors used is at most $\Delta(G)$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The number of colors used is equal to the chromatic number of $G$.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A, B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Graphs: connectivity, matching, colouring}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The greedy coloring strategy assigns to each vertex the lowest index color not used by any already-colored neighbor, guaranteeing that adjacent vertices receive distinct colors (proper coloring, so A is TRUE). Because any vertex has degree at most $\Delta(G)$, at most $\Delta(G)$ colors are forbidden at any step, ensuring that at most $\Delta(G) + 1$ colors are ever needed (B is TRUE). Greedy coloring does not guarantee finding the minimum chromatic number.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.18} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q32}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $A$ and $B$ be non-empty finite sets such that there exist one-to-one and onto functions (i) from $A$ to $B$ and (ii) from $A \times A$ to $A \cup B$. The number of possible values of $|A|$ is \_\_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 2 to 2} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Sets, relations, functions, partial orders and lattices}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A bijection from $A$ to $B$ implies $|A| = |B| = n$. A bijection from $A \times A$ to $A \cup B$ implies $|A \times A| = |A \cup B|$. We have $|A \times A| = n^2$, and $n \le |A \cup B| \le 2n$. Thus $n \le n^2 \le 2n$. Since $A$ is non-empty ($n \ge 1$), dividing by $n$ gives $1 \le n \le 2$. This allows exactly two integer solutions: $n = 1$ (where $A = B$) and $n = 2$ (where $A \cap B = \emptyset$).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.19} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q34}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The number of spanning trees in a complete graph of 4 vertices labelled A, B, C, and D is \_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 16 to 16} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Combinatorics: counting, recurrence relations, generating functions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small By Cayley's theorem, the number of spanning trees in a complete labelled graph $K_n$ on $n$ vertices is given by $n^{n-2}$. For $n = 4$ labelled vertices A, B, C, D, the number of spanning trees is $4^{4-2} = 4^2 = 16$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.20} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q51}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The chromatic number of a graph is the minimum number of colours used in a proper colouring of the graph. Let $G$ be any graph with $n$ vertices and chromatic number $k$. Which of the following statements is/are always TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $G$ contains a complete subgraph with $k$ vertices \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $G$ contains an independent set of size at least $n/k$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $G$ contains at least $k(k-1)/2$ edges \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $G$ contains a vertex of degree at least $k$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Graphs: connectivity, matching, colouring}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A proper $k$-coloring partitions the $n$ vertices into $k$ independent sets. By the Pigeonhole Principle, at least one of these independent sets has size $\ge \lceil n/k \rceil \ge n/k$ (B is TRUE). In addition, every pair of color classes must have at least one edge between them (otherwise those two colors could be merged, yielding a $(k-1)$-coloring), requiring at least $\binom{k}{2} = \frac{k(k-1)}{2}$ edges (C is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.21} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q52}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the operators $\diamond$ and $\square$ defined by $a \diamond b = a + 2b$, $a \square b = ab$, for positive integers. Which of the following statements is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Operator $\diamond$ obeys the associative law \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Operator $\square$ obeys the associative law \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Operator $\diamond$ over the operator $\square$ obeys the distributive law \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Operator $\square$ over the operator $\diamond$ obeys the distributive law
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Monoids, Groups}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For $\square$: $a \square b = ab$, which is associative since $(ab)c = a(bc)$ (B is TRUE). Distributivity of $\square$ over $\diamond$: $a \square (b \diamond c) = a(b + 2c) = ab + 2ac$. Comparing with $(a \square b) \diamond (a \square c) = (ab) \diamond (ac) = ab + 2(ac) = ab + 2ac$; both sides match identically, so $\square$ distributes over $\diamond$ (D is TRUE). For $\diamond$: $(a \diamond b) \diamond c = a + 2b + 2c \neq a + 2b + 4c = a \diamond (b \diamond c)$, so $\diamond$ is not associative.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.22} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q60}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The number of edges present in the forest generated by the DFS traversal of an undirected graph $G$ with 100 vertices is 40. The number of connected components in $G$ is \_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 60 to 60} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Graphs: connectivity, matching, colouring}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A DFS traversal of an undirected graph with $V$ vertices and $k$ connected components produces a spanning forest containing $k$ trees. A tree with $v_i$ vertices contains $v_i - 1$ edges, so the total number of tree edges in the forest is $\sum (v_i - 1) = V - k$. Given $V = 100$ and $E = 40$, we have $40 = 100 - k \implies k = 60$ connected components.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.23} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q12}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $p$ and $q$ be the following propositions:
+$p$: Fail grade can be given.
+$q$: Student scores more than 50\% marks.
+Consider the statement: ``Fail grade cannot be given when student scores more than 50\% marks.''
+Which one of the following is the CORRECT representation of the above statement in propositional logic?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $q \to \neg p$ & $\square$\ \textbf{(B)} $q \to p$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $p \to q$ & $\square$\ \textbf{(D)} $\neg p \to q$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Propositional and first order logic}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The statement is: 'Fail grade cannot be given ($\neg p$) when student scores more than 50\% marks ($q$)', which means 'If $q$, then $\neg p$'. In propositional logic, this is directly formalized as $q \to \neg p$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.24} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q15}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $T(n)$ be the recurrence relation defined as follows:
+\[ T(0) = 1, \quad T(1) = 2, \quad \text{and} \quad T(n) = 5T(n-1) - 6T(n-2) \quad \text{for } n \ge 2 \]
+Which one of the following statements is TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $T(n) = \Theta(2^n)$ & $\square$\ \textbf{(B)} $T(n) = \Theta(n 2^n)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $T(n) = \Theta(3^n)$ & $\square$\ \textbf{(D)} $T(n) = \Theta(n 3^n)$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Combinatorics: counting, recurrence relations, generating functions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The characteristic equation is $r^2 - 5r + 6 = 0 \implies (r - 2)(r - 3) = 0$, with roots $r = 2, 3$. The general solution is $T(n) = c_1 2^n + c_2 3^n$. Using initial conditions $T(0) = 1, T(1) = 2$: $c_1 + c_2 = 1$ and $2c_1 + 3c_2 = 2 \implies c_1 = 1, c_2 = 0$. Thus, $T(n) = 2^n = \Theta(2^n)$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.25} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q17}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $A$ be the adjacency matrix of a simple undirected graph $G$. Suppose $A$ is its own inverse. Which one of the following statements is always TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $G$ is a cycle & $\square$\ \textbf{(B)} $G$ is a perfect matching \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $G$ is a complete graph & $\square$\ \textbf{(D)} There is no such graph $G$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Graphs: connectivity, matching, colouring}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small If $A = A^{-1}$, then $A^2 = I$. The $(i, j)$-th entry of $A^2$ is the number of walks of length 2 between vertex $i$ and vertex $j$. Thus $(A^2)_{ii} = \text{deg}(i) = 1$ for every vertex $i$, and $(A^2)_{ij} = 0$ for $i \neq j$. Every vertex has degree exactly 1, which defines a 1-regular graph, i.e., a perfect matching.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.26} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q34}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $P$ be the partial order defined on the set $\{1,2,3,4\}$ as follows:
+\[ P = \{(x, x) \mid x \in \{1,2,3,4\}\} \cup \{(1,2), (3,2), (3,4)\} \]
+The number of total orders on $\{1,2,3,4\}$ that contain $P$ is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 5 to 5} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Sets, relations, functions, partial orders and lattices}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The poset constraints are: $1 < 2$, $3 < 2$, and $3 < 4$. Any compatible total order is a linear extension of this DAG. Elements 1 and 3 must precede 2, while 3 must precede 4. Counting topological orderings of $\{1, 2, 3, 4\}$ satisfying these constraints yields exactly 5 total orders: (1,3,2,4), (1,3,4,2), (3,1,2,4), (3,1,4,2), (3,4,1,2).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.27} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q51}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $G$ be an undirected connected graph in which every edge has a positive integer weight. Suppose that every spanning tree in $G$ has even weight. Which of the following statements is/are TRUE for every such graph $G$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} All edges in $G$ have even weight \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} All edges in $G$ have even weight OR all edges in $G$ have odd weight \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} In each cycle $C$ in $G$, all edges in $C$ have even weight \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} In each cycle $C$ in $G$, either all edges in $C$ have even weight OR all edges in $C$ have odd weight
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Graphs: connectivity, matching, colouring}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let $T$ be a spanning tree of $G$. For any chord $e \notin T$ creating a fundamental cycle $C$ with path $P \subseteq T$, $T' = T \setminus \{e'\} \cup \{e\}$ is also a spanning tree. Since $w(T)$ and $w(T')$ are both even, $w(e) \equiv w(e') \pmod 2$ for every edge on $C$. Thus all edges in cycle $C$ must have the same parity (either all even or all odd).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.28} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q60}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The chromatic number of a graph is the minimum number of colours used in a proper colouring of the graph. The chromatic number of the given bipartite graph is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 2 to 2} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Graphs: connectivity, matching, colouring}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A graph has chromatic number 2 if and only if it is bipartite and contains at least one edge, which is equivalent to having no odd cycles. Inspection of the given graph verifies that it contains no odd-length cycles, meaning it can be properly colored with 2 colors.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.29} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q63}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $Z_n$ be the group of integers $\{0, 1, 2, \dots, n-1\}$ with addition modulo $n$ as the group operation. The number of elements in the group $Z_2 \times Z_3 \times Z_4$ that are their own inverses is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 4 to 4} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Monoids, Groups}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In an additive group, an element $x$ is its own inverse if $x + x \equiv 0 \pmod n \implies 2x \equiv 0 \pmod n$. In $\mathbb{Z}_2$, elements satisfying $2x \equiv 0$ are $\{0, 1\}$ (2 elements). In $\mathbb{Z}_3$, only $\{0\}$ satisfies $2x \equiv 0 \pmod 3$ (1 element). In $\mathbb{Z}_4$, $\{0, 2\}$ satisfy $2x \equiv 0 \pmod 4$ (2 elements). In the direct product group $\mathbb{Z}_2 \times \mathbb{Z}_3 \times \mathbb{Z}_4$, total self-inverse elements $= 2 \times 1 \times 2 = 4$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.30} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q17}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+$g(\cdot)$ is a function from $A$ to $B$, $f(\cdot)$ is a function from $B$ to $C$, and their composition defined as $f(g(\cdot))$ is a mapping from $A$ to $C$.
+If $f(\cdot)$ and $f(g(\cdot))$ are onto (surjective) functions, which ONE of the following is TRUE about the function $g(\cdot)$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $g(\cdot)$ must be an onto (surjective) function. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $g(\cdot)$ must be a one-to-one (injective) function. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $g(\cdot)$ must be a bijective function, that is, both one-to-one and onto. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $g(\cdot)$ is not required to be a one-to-one or onto function.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Sets, relations, functions, partial orders and lattices}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small If the composition $f \circ g: A \to C$ is surjective, $f$ must be surjective, but $g$ is not required to be either injective or surjective. For example, if $C$ is a singleton $\{c\}$ and $B = \{b_1, b_2\}$, $g$ can map all of $A$ to $b_1$ where $f(b_1) = c$, leaving $b_2$ uncovered (not onto) and having many collisions (not one-to-one).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.31} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q30}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $S$ be the set of all ternary strings defined over the alphabet $\{a, b, c\}$. Consider all strings in $S$ that contain at least one occurrence of two consecutive symbols, that is, ``aa'', ``bb'' or ``cc''. The number of such strings of length 5 that are possible is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 195 to 195} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Combinatorics: counting, recurrence relations, generating functions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The total number of ternary strings of length 5 is $3^5 = 243$. A string has no consecutive identical symbols if the first character has 3 choices and each subsequent character has 2 choices (different from the preceding character), giving $3 \times 2^4 = 48$ such strings. By complementary counting, the number of strings with at least one consecutive pair is $243 - 48 = 195$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.32} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q48}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following predicate logic formulae/formula is/are CORRECT representation(s) of the statement: ``Everyone has exactly one mother''?
+The meanings of the predicates used are:
+\begin{itemize}
+\item $mother(y, x)$: $y$ is the mother of $x$
+\item $noteq(x, y)$: $x$ and $y$ are not equal
+\end{itemize}
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\forall x \exists y \exists z (mother(y, x) \land \neg mother(z, x))$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\forall x \exists y [mother(y, x) \land \forall z (noteq(z, y) \to \neg mother(z, x))]$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\forall x \forall y [mother(y, x) \to \exists z (mother(z, x) \land \neg noteq(z, y))]$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\forall x \exists y [mother(y, x) \land \neg \exists z (noteq(z, y) \land mother(z, x))]$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Propositional and first order logic}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small ``Exactly one mother'' requires existence ($\exists y \, mother(y, x)$) and uniqueness (any $z \neq y$ cannot be a mother of $x$). Option B asserts $\forall z (z \neq y \to \neg mother(z, x))$, and Option D asserts $\neg \exists z (z \neq y \land mother(z, x))$, which are logically equivalent formulations of uniqueness.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.33} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q49}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+$A = \{0, 1, 2, 3, \dots \}$ is the set of non-negative integers. Let $\mathcal{F}$ be the set of functions from $A$ to itself. For any two functions $f_1, f_2 \in \mathcal{F}$, we define
+\[ (f\_1 \odot f\_2)(n) = f\_1(n) + f\_2(n) \]
+for every number $n$ in $A$. Which of the following is/are CORRECT about the mathematical structure $(\mathcal{F}, \odot)$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $(\mathcal{F}, \odot)$ is an Abelian group. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $(\mathcal{F}, \odot)$ is an Abelian monoid. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $(\mathcal{F}, \odot)$ is a non-Abelian group. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $(\mathcal{F}, \odot)$ is a non-Abelian monoid.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Monoids, Groups}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Addition on non-negative integers is closed, associative, and commutative, so $\odot$ is associative and commutative. The identity function is $e(n) = 0$ for all $n \in A$, making $(\mathcal{F}, \odot)$ a commutative (Abelian) monoid. Inverses do not exist because negative function values are not in $A$, so it is not a group.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.34} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q15}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $P(x)$ be an arbitrary predicate over the domain of natural numbers. Which ONE of the following statements is TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $(P(0) \land (\forall x [P(x) \implies P(x+1)])) \implies (\forall x P(x))$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $(P(0) \land (\forall x [P(x) \implies P(x-1)])) \implies (\forall x P(x))$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $(P(1000) \land (\forall x [P(x) \implies P(x-1)])) \implies (\forall x P(x))$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $(P(1000) \land (\forall x [P(x) \implies P(x+1)])) \implies (\forall x P(x))$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Propositional and first order logic: mathematical induction}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Option A is the formal statement of the Principle of Mathematical Induction over $\mathbb{N}$: if the base case $P(0)$ holds and for all $x$, $P(x) \implies P(x+1)$, then $\forall x, P(x)$ is true.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.35} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q42}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $\mathcal{F}$ be the set of all functions from $\{1, \dots, n\}$ to $\{0, 1\}$. Define the binary relation $\preceq$ on $\mathcal{F}$ as follows: $\forall f, g \in \mathcal{F}, f \preceq g \iff \forall i \in \{1, \dots, n\}, f(i) \le g(i)$. Which of the following is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\preceq$ is a symmetric relation \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $(\mathcal{F}, \preceq)$ is a partial order \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $(\mathcal{F}, \preceq)$ is a lattice \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\preceq$ is an equivalence relation
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Sets, relations, functions, partial orders and lattices}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The pointwise ordering $f \preceq g \iff \forall i, f(i) \le g(i)$ is reflexive, antisymmetric, and transitive, forming a partial order (poset). Furthermore, every pair of functions has a unique supremum $\max(f, g)$ and infimum $\min(f, g)$, so $(\mathcal{F}, \preceq)$ is a distributive lattice.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\end{document}

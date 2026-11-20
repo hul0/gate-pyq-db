@@ -1,0 +1,1313 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.5cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm
+}
+
+% Persistent Unremovable Canvas Watermark on Every Page
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=8cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg} \\[-0.5em]
+        {\fontsize{18}{22}\selectfont\bfseries\scshape www.studiva.co.in}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.12] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape GATE 2018--2025 CS/IT $\cdot$ \textbf{Quantitative Aptitude}}
+\fancyhead[R]{\small\scshape Practice Question Bank with Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026} Studiva\textsuperscript{TM}}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\scriptsize\texttt{www.studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Code Listing Style (Monochrome)
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=none,
+    frame=none,
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: IMPRINT & TITLE PAGE ====================
+\thispagestyle{empty}
+\vspace*{0.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg}\\[0.6em]
+    {\LARGE \textbf{GATE 2018--2025 COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTION BANK WITH SOLUTIONS}}\\[0.4em]
+    {\large \textsc{\textbf{Subject Wise (Modular): Quantitative Aptitude}}}\\[0.2em]
+    {\normalsize \textsc{Combined 2018--2025 Examination Papers $\cdot$ Comprehensive Edition ($\mathbf{30}$ Questions)}}\\[1.2em]
+    \rule{0.6\textwidth}{0.6pt}
+\end{center}
+
+\vspace{1em}
+\noindent\begin{tabular}{ll}
+\textbf{Author / Compiler:} & Rupam Ghosh \\
+\textbf{Publisher \& Platform:} & Studiva\textsuperscript{TM} (\texttt{www.studiva.co.in}) \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Standard Edition (2026) \\
+\textbf{Coverage:} & Complete GATE CS/IT Papers (2018, 2022, 2023, 2024 CS1, 2024 CS2, 2025 CS1, 2025 CS2) \\
+\textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
+\end{tabular}
+
+\vspace{1.5em}
+\begin{tcolorbox}[enhanced, standard jigsaw, opacityback=0, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva\textsuperscript{TM}. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva\textsuperscript{TM}}.\\[0.6em]
+\textbf{Terms of Use \& Attribution Rules:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva\textsuperscript{TM}} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
+    \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
+\end{itemize}
+\vspace{0.6em}
+\textbf{Fair Use Disclaimer:}\\
+The underlying examination questions originate from the Graduate Aptitude Test in Engineering (GATE), conducted by the Indian Institutes of Technology (IITs) and Indian Institute of Science (IISc). Question texts are reproduced for non-commercial educational study under Fair Use doctrines. No copyright is claimed over the original GATE examination question texts.
+\end{tcolorbox}
+
+\vspace{1.2em}
+\begin{center}
+\small\itshape
+Practice Recommendation: Use an opaque sheet of paper or ruler to cover the right-hand column during mock attempts. Tick your chosen answers directly in the check boxes on the left, then slide the cover to check the solution and hint.
+\end{center}
+
+\newpage
+% ==================== PAGE 2 ONWARDS: QUESTION BANK ====================
+
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.1} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q03}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The area of a square is $d$. What is the area of the circle which has the diagonal of the square as its diameter?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $\pi d$ & $\square$\ \textbf{(B)} $\pi d^2$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\frac{1}{4}\pi d^2$ & $\square$\ \textbf{(D)} $\frac{1}{2}\pi d$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Mensuration and geometry}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For a square of area $d$, the side length is $s = \sqrt{d}$ and its diagonal is $s\sqrt{2} = \sqrt{2d}$. Since this diagonal is the diameter of the circle, the radius is $r = \frac{\sqrt{2d}}{2} = \sqrt{\frac{d}{2}}$. Hence, the area of the circle is $\pi r^2 = \pi \left(\frac{d}{2}\right) = \frac{1}{2}\pi d$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.2} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q04}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+What would be the smallest natural number which when divided either by 20 or by 42 or by 76 leaves a remainder of 7 in each case?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 3047 & $\square$\ \textbf{(B)} 6047 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 7987 & $\square$\ \textbf{(D)} 63847
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The required number is $\text{LCM}(20, 42, 76) + 7$. Calculating prime factorizations: $20 = 2^2 \times 5$, $42 = 2 \times 3 \times 7$, $76 = 2^2 \times 19$. Thus $\text{LCM} = 2^2 \times 3 \times 5 \times 7 \times 19 = 7980$. Adding the remainder 7 gives $7980 + 7 = 7987$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.3} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q05}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+What is the missing number in the following sequence?
+\[ 2,\; 12,\; 60,\; 240,\; 720,\; 1440,\; \_\_\_\_\_,\; 0 \]
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 2880 & $\square$\ \textbf{(B)} 1440 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 720 & $\square$\ \textbf{(D)} 0
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Examining consecutive multipliers: $2 \times 6 = 12$, $12 \times 5 = 60$, $60 \times 4 = 240$, $240 \times 3 = 720$, $720 \times 2 = 1440$. Following this decreasing multiplier pattern, the next term is $1440 \times 1 = 1440$, and the term after is $1440 \times 0 = 0$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.4} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q06}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+An old man walks in a town to distribute old age pensions. There are 300 persons in the town who are eligible for the pension. The monthly pension is Rs. 750 for each eligible man and Rs. 1000 for each eligible woman. 8/9 of the eligible men and 2/3 of the eligible women claim the pension. The total pension claimed per month is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Rs. 1,50,000 & $\square$\ \textbf{(B)} Rs. 2,00,000 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Rs. 2,25,000 & $\square$\ \textbf{(D)} Cannot be determined
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let $M$ and $W$ be eligible men and women, with $M + W = 300$. Number claiming pension is $\frac{8}{9}M$ men and $\frac{2}{3}W$ women. Total pension claimed $= \frac{8}{9}M(750) + \frac{2}{3}W(1000) = \frac{2000}{3}M + \frac{2000}{3}W = \frac{2000}{3}(M + W) = \frac{2000}{3}(300) = 2{,}00{,}000$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.5} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q07}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+If $p^{-x} = \frac{1}{q}$, $q^{-y} = \frac{1}{r}$, and $r^{-z} = \frac{1}{p}$, what is the value of $xyz$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $-1$ & $\square$\ \textbf{(B)} 0 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 1 & $\square$\ \textbf{(D)} $pqr$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small From $p^{-x} = \frac{1}{q}$, we have $q = p^x$. Substituting into $q^{-y} = \frac{1}{r}$ gives $r = q^y = (p^x)^y = p^{xy}$. Then $r^{-z} = \frac{1}{p}$ gives $p = r^z = (p^{xy})^z = p^{xyz}$. Since $p > 0$ and $p \neq 1$, it follows that $xyz = 1$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.6} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q08}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In a party, 60\% of the invited guests are male and 40\% are female. 80\% of the invited guests attend the party. If all the invited female guests attend the party, what is the ratio of male guests who attended to the female guests who attended?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 2 : 3 & $\square$\ \textbf{(B)} 1 : 1 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 3 : 2 & $\square$\ \textbf{(D)} 2 : 1
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Out of 100 invited guests, 60 are male and 40 are female. Since 80 guests attend and all 40 invited females attend, the remaining $80 - 40 = 40$ attendees must be male. Thus, the ratio of attending males to attending females is $40 : 40 = 1 : 1$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.7} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q10}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A six sided unbiased die with four green faces and two red faces is rolled seven times. Which of the following combinations is the most likely outcome of the experiment?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Three green faces and four red faces \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Four green faces and three red faces \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Five green faces and two red faces \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Six green faces and one red face
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Elementary statistics and probability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The number of green faces $X$ follows a Binomial distribution $B(n=7, p=4/6=2/3)$. The mode of a binomial distribution is $\lfloor (n+1)p \rfloor = \lfloor 8 \times \frac{2}{3} \rfloor = \lfloor 5.33 \rfloor = 5$. Thus, the most likely outcome is 5 green faces and $7 - 5 = 2$ red faces.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.8} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_GA\_Q03}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $r$ be a root of the equation $x^2 + 2x + 6 = 0$.
+Then the value of the expression $(r+2)(r+3)(r+4)(r+5)$ is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 51 & $\square$\ \textbf{(B)} $-51$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 126 & $\square$\ \textbf{(D)} $-126$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Since $r$ is a root of $x^2 + 2x + 6 = 0$, we have $r^2 + 2r = -6$. Pairing terms in the expression: $[(r+2)(r+5)][(r+3)(r+4)] = [r^2 + 7r + 10][r^2 + 7r + 12]$. Substituting $r^2 = -2r - 6$ yields $(5r + 4)(5r + 6) = 25r^2 + 50r + 24 = 25(r^2 + 2r) + 24 = 25(-6) + 24 = -126$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.9} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_GA\_Q07}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In a recently conducted national entrance test, boys constituted 65\% of those who appeared for the test. Girls constituted the remaining candidates and they accounted for 60\% of the qualified candidates.
+Which one of the following is the correct logical inference based on the information provided in the above passage?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Equal number of boys and girls qualified \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Equal number of boys and girls appeared for the test \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The number of boys who appeared for the test is less than the number of girls who appeared \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The number of boys who qualified the test is less than the number of girls who qualified
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Among all candidates who qualified, girls accounted for 60\%, meaning boys accounted for the remaining $100\% - 60\% = 40\%$. Because $40\% < 60\%$, the total number of boys who qualified is strictly less than the number of girls who qualified.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.10} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_GA\_Q08}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A box contains five balls of same size and shape. Three of them are green coloured balls and two of them are orange coloured balls. Balls are drawn from the box one at a time. If a green ball is drawn, it is not replaced. If an orange ball is drawn, it is replaced with another orange ball.
+First ball is drawn. What is the probability of getting an orange ball in the next draw?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $1/2$ & $\square$\ \textbf{(B)} $8/25$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $19/50$ & $\square$\ \textbf{(D)} $23/50$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Elementary statistics and probability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Initially, there are 3 green and 2 orange balls (total 5). If a green ball is drawn ($P(G_1) = 3/5$), 2 green and 2 orange remain, so $P(O_2|G_1) = 2/4 = 1/2$. If an orange ball is drawn ($P(O_1) = 2/5$), it is replaced, so $P(O_2|O_1) = 2/5$. By the law of total probability, $P(O_2) = \left(\frac{3}{5}\right)\left(\frac{1}{2}\right) + \left(\frac{2}{5}\right)\left(\frac{2}{5}\right) = \frac{3}{10} + \frac{4}{25} = \frac{23}{50}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.11} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_GA\_Q03}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A series of natural numbers $F_1, F_2, F_3, F_4, F_5, F_6, F_7, \dots$ obeys $F_{n+1} = F_n + F_{n-1}$ for all integers $n \ge 2$.
+If $F_6 = 37$, and $F_7 = 60$, then what is $F_1$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 4 & $\square$\ \textbf{(B)} 5 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 8 & $\square$\ \textbf{(D)} 9
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The recurrence relation is $F_{n+1} = F_n + F_{n-1} \implies F_{n-1} = F_{n+1} - F_n$. Working backward from $F_7 = 60$ and $F_6 = 37$: $F_5 = 60 - 37 = 23$; $F_4 = 37 - 23 = 14$; $F_3 = 23 - 14 = 9$; $F_2 = 14 - 9 = 5$; and $F_1 = 9 - 5 = 4$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.12} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_GA\_Q04}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A survey for a certain year found that 90\% of pregnant women received medical care at least once before giving birth. Of these women, 60\% received medical care from doctors, while 40\% received medical care from other healthcare providers.
+Given this information, which one of the following statements can be inferred with certainty?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} More than half of the pregnant women received medical care at least once from a doctor. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Less than half of the pregnant women received medical care at least once from a doctor. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} More than half of the pregnant women received medical care at most once from a doctor. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Less than half of the pregnant women received medical care at most once from a doctor.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Out of all pregnant women, 90\% received medical care at least once. Among those who received medical care, 60\% received care from doctors. The percentage of all pregnant women who received care at least once from a doctor is $90\% \times 60\% = 54\%$, which is strictly greater than half ($> 50\%$).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.13} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_GA\_Q07}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider two functions of time ($t$),
+\[ f(t) = 0.01 t^2, \quad g(t) = 4 t \]
+where $0 < t < \infty$.
+Now consider the following two statements:
+\begin{enumerate}[label=(\roman*),itemsep=0pt,topsep=2pt]
+\item For some $t > 0$, $g(t) > f(t)$.
+\item There exists a $T$, such that $f(t) > g(t)$ for all $t > T$.
+\end{enumerate}
+Which one of the following options is TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} only (i) is correct & $\square$\ \textbf{(B)} only (ii) is correct \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} both (i) and (ii) are correct & $\square$\ \textbf{(D)} neither (i) nor (ii) is correct
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Setting $f(t) = g(t) \implies 0.01 t^2 = 4t \implies t = 400$. For any $0 < t < 400$ (e.g., $t = 10$), $g(10) = 40 > f(10) = 1$, making statement (i) correct. For all $t > 400$, the quadratic growth of $f(t)$ strictly dominates the linear growth of $g(t)$, so choosing $T = 400$ satisfies statement (ii). Hence, both statements are correct.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.14} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_GA\_Q09}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+$f(x)$ and $g(y)$ are functions of $x$ and $y$, respectively, and $f(x) = g(y)$ for all real values of $x$ and $y$. Which one of the following options is necessarily TRUE for all $x$ and $y$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $f(x) = 0$ and $g(y) = 0$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $f(x) = g(y) = \text{constant}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $f(x) \neq \text{constant}$ and $g(y) \neq \text{constant}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $f(x) + g(y) = f(x) - g(y)$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small We are given $f(x) = g(y)$ for all independent real variables $x$ and $y$. If $x$ varies while $y$ remains constant, $f(x)$ cannot change because $g(y)$ is fixed, meaning $f(x)$ must be a constant. Symmetrically, $g(y)$ must be identical to that same constant. Therefore, $f(x) = g(y) = \text{constant}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.15} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_GA\_Q02}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+If two distinct non-zero real variables $x$ and $y$ are such that $(x+y)$ is proportional to $(x-y)$ then the value of $\frac{x}{y}$
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} depends on $xy$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} depends only on $x$ and not on $y$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} depends only on $y$ and not on $x$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} is a constant
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small If $(x+y) \propto (x-y)$, then $x+y = k(x-y)$ for some non-zero constant $k \neq 1$. Rearranging terms gives $x(1-k) = -y(1+k) \implies \frac{x}{y} = \frac{k+1}{k-1}$, which is a constant independent of $x$ and $y$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.16} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_GA\_Q03}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following sample of numbers:
+\[ 9, 18, 11, 14, 15, 17, 10, 69, 11, 13 \]
+The median of the sample is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 13.5 & $\square$\ \textbf{(B)} 14 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 11 & $\square$\ \textbf{(D)} 18.7
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Elementary statistics and probability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Arranging the 10 sample values in ascending order: $9, 10, 11, 11, 13, 14, 15, 17, 18, 69$. Since the sample size $n = 10$ is even, the median is the arithmetic mean of the 5th and 6th values: $\frac{13 + 14}{2} = 13.5$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.17} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_GA\_Q04}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The number of coins of Rs.~1, Rs.~5, and Rs.~10 denominations that a person has are in the ratio $5:3:13$. Of the total amount, the percentage of money in Rs.~5 coins is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 21\% & $\square$\ \textbf{(B)} $14\frac{2}{7}\%$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 10\% & $\square$\ \textbf{(D)} 30\%
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let the number of Rs.~1, Rs.~5, and Rs.~10 coins be $5k$, $3k$, and $13k$ respectively. The total value is $1(5k) + 5(3k) + 10(13k) = 5k + 15k + 130k = 150k$. The percentage of money in Rs.~5 coins is $\frac{15k}{150k} \times 100\% = 10\%$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.18} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_GA\_Q05}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+For positive non-zero real variables $p$ and $q$, if
+\[ \log(p^2 + q^2) = \log p + \log q + 2\log 3, \]
+then, the value of $\frac{p^4+q^4}{p^2q^2}$ is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 79 & $\square$\ \textbf{(B)} 81 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 9 & $\square$\ \textbf{(D)} 83
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Using logarithm rules, $\log(p^2 + q^2) = \log p + \log q + 2\log 3 = \log(9pq) \implies p^2 + q^2 = 9pq$. Squaring both sides yields $(p^2+q^2)^2 = p^4 + q^4 + 2p^2q^2 = 81p^2q^2$, which gives $p^4 + q^4 = 79p^2q^2$. Hence, $\frac{p^4+q^4}{p^2q^2} = 79$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.19} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_GA\_Q07}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A rectangular paper sheet of dimensions $54\text{ cm} \times 4\text{ cm}$ is taken. The two longer edges of the sheet are joined together to create a cylindrical tube. A cube whose surface area is equal to the area of the sheet is also taken.
+Then, the ratio of the volume of the cylindrical tube to the volume of the cube is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $1/\pi$ & $\square$\ \textbf{(B)} $2/\pi$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $3/\pi$ & $\square$\ \textbf{(D)} $4/\pi$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Mensuration and geometry}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Joining the longer edges ($54\text{ cm}$) creates a cylinder with height $h = 54\text{ cm}$ and circumference $2\pi r = 4\text{ cm} \implies r = \frac{2}{\pi}$, giving volume $V_{\text{cyl}} = \pi r^2 h = \frac{216}{\pi}$. The sheet area is $54 \times 4 = 216\text{ cm}^2$. A cube with surface area $6a^2 = 216$ has edge $a = 6\text{ cm}$ and volume $V_{\text{cube}} = 6^3 = 216$. Thus $\frac{V_{\text{cyl}}}{V_{\text{cube}}} = \frac{216/\pi}{216} = \frac{1}{\pi}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.20} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_GA\_Q02}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Two wizards try to create a spell using all the four elements, water, air, fire, and earth. For this, they decide to mix all these elements in all possible orders. They also decide to work independently. After trying all possible combination of elements, they conclude that the spell does not work.
+How many attempts does each wizard make before coming to this conclusion, independently?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 24 & $\square$\ \textbf{(B)} 48 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 16 & $\square$\ \textbf{(D)} 12
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small There are 4 distinct elements (water, air, fire, earth). The number of distinct permutations/orderings of these 4 elements is $4! = 4 \times 3 \times 2 \times 1 = 24$. Since each wizard tries all possible orders independently, each wizard makes 24 attempts.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.21} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_GA\_Q03}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In an engineering college of 10,000 students, 1,500 like neither their core branches nor other branches. The number of students who like their core branches is 1/4th of the number of students who like other branches. The number of students who like both their core and other branches is 500.
+The number of students who like their core branches is:
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 1,800 & $\square$\ \textbf{(B)} 3,500 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 1,600 & $\square$\ \textbf{(D)} 1,500
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Data interpretation: data graphs (bar graphs, pie charts, and other graphs representing data), 2- and 3-dimensional plots, maps, and tables}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let $C$ and $O$ be sets of students liking core and other branches. Total students $N = 10000$, neither $= 1500$, so $|C \cup O| = 10000 - 1500 = 8500$. We are given $|C \cap O| = 500$ and $|C| = \frac{1}{4}|O| \implies |O| = 4|C|$. By inclusion-exclusion, $|C \cup O| = |C| + |O| - |C \cap O| \implies 8500 = |C| + 4|C| - 500 \implies 5|C| = 9000 \implies |C| = 1800$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.22} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_GA\_Q04}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+For positive non-zero real variables $x$ and $y$, if
+\[ \ln\left(\frac{x+y}{2}\right) = \frac{1}{2} [\ln(x) + \ln(y)] \]
+then, the value of $\frac{x}{y} + \frac{y}{x}$ is:
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 1 & $\square$\ \textbf{(B)} 1/2 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 2 & $\square$\ \textbf{(D)} 4
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small From $\ln\left(\frac{x+y}{2}\right) = \frac{1}{2}[\ln(x) + \ln(y)] = \ln(\sqrt{xy})$, we obtain $\frac{x+y}{2} = \sqrt{xy} \implies x + y = 2\sqrt{xy} \implies (\sqrt{x} - \sqrt{y})^2 = 0 \implies x = y$. Substituting $x = y$ gives $\frac{x}{y} + \frac{y}{x} = 1 + 1 = 2$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.23} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_GA\_Q05}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In the sequence 6, 9, 14, $x$, 30, 41, a possible value of $x$ is:
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 25 & $\square$\ \textbf{(B)} 21 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 18 & $\square$\ \textbf{(D)} 20
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Examine the consecutive differences: $9 - 6 = 3$, $14 - 9 = 5$, $x - 14 = d_3$, $30 - x = d_4$, $41 - 30 = 11$. The differences are consecutive odd numbers: $3, 5, 7, 9, 11$. For $d_3 = 7$, $x = 14 + 7 = 21$, and checking $d_4 = 30 - 21 = 9$ matches. Hence, $x = 21$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.24} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_GA\_Q07}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A person sold two different items at the same price. He made 10\% profit in one item, and 10\% loss in the other item. In selling these two items, the person made a total of:
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 1\% profit & $\square$\ \textbf{(B)} 2\% profit \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 1\% loss & $\square$\ \textbf{(D)} 2\% loss
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small When two items are sold at the same selling price $S$, one at a profit of $x\%$ and the other at a loss of $x\%$, there is always an overall net loss given by $\frac{x^2}{100}\%$. Here $x = 10$, so the net loss is $\frac{10^2}{100}\% = 1\%$ loss.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.25} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_GA\_Q03}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The average marks obtained by a class in an examination were calculated as 30.8. However, while checking the marks entered, the teacher found that the marks of one student were entered incorrectly as 24 instead of 42. After correcting the marks, the average becomes 31.4. How many students does the class have?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 25 & $\square$\ \textbf{(B)} 28 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 30 & $\square$\ \textbf{(D)} 32
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Elementary statistics and probability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let $n$ be the number of students. The total increase in marks after correction is $42 - 24 = 18$. The increase in average is $31.4 - 30.8 = 0.6$. Therefore, $0.6 \times n = 18$, giving $n = \frac{18}{0.6} = 30$ students.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.26} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_GA\_Q08}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A fair six-faced dice, with the faces labelled `1', `2', `3', `4', `5', and `6', is rolled thrice. What is the probability of rolling `6' exactly once?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $\frac{75}{216}$ & $\square$\ \textbf{(B)} $\frac{1}{6}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\frac{1}{18}$ & $\square$\ \textbf{(D)} $\frac{25}{216}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Elementary statistics and probability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The probability of rolling a 6 is $p = \frac{1}{6}$, and not rolling a 6 is $q = \frac{5}{6}$. Using the binomial distribution for $n = 3$ trials with $k = 1$ success, $P(X = 1) = \binom{3}{1} \left(\frac{1}{6}\right)^1 \left(\frac{5}{6}\right)^2 = 3 \times \frac{1}{6} \times \frac{25}{36} = \frac{75}{216}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.27} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_GA\_Q10}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A shop has 4 distinct flavors of ice-cream. One can purchase any number of scoops of any flavor. The order in which the scoops are purchased is inconsequential. If one wants to purchase 3 scoops of ice-cream, in how many ways can one make that purchase?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 4 & $\square$\ \textbf{(B)} 20 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 24 & $\square$\ \textbf{(D)} 48
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small This is a multichoose problem (combination with repetition), where $r = 3$ scoops are chosen from $n = 4$ flavors. The number of ways is given by the stars and bars formula $\binom{n + r - 1}{r} = \binom{4 + 3 - 1}{3} = \binom{6}{3} = \frac{6 \times 5 \times 4}{3 \times 2 \times 1} = 20$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.28} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_GA\_Q03}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+If $P e^x = Q e^{-x}$ for all real values of $x$, which one of the following statements is true?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $P = Q = 0$ & $\square$\ \textbf{(B)} $P = Q = 1$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $P = 1; Q = -1$ & $\square$\ \textbf{(D)} $\frac{P}{Q} = 0$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and functions: exponents and equations}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For $P e^x = Q e^{-x}$ to hold for all real $x$, multiply both sides by $e^x$ to get $P e^{2x} = Q$. Differentiating with respect to $x$ gives $2P e^{2x} = 0$, implying $P = 0$. Substituting $P = 0$ yields $Q = 0$, so $P = Q = 0$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.29} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_GA\_Q05}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $p_1$ and $p_2$ denote two arbitrary prime numbers. Which one of the following statements is correct for all values of $p_1$ and $p_2$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $p_1 + p_2$ is not a prime number. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $p_1 p_2$ is not a prime number. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $p_1 + p_2 + 1$ is a prime number. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $p_1 p_2 + 1$ is a prime number.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Elementary number theory and prime numbers}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For any two prime numbers $p_1$ and $p_2$, the product $p_1 p_2$ has at least three distinct positive divisors ($1, p_1, p_1 p_2$ when $p_1=p_2$, or $1, p_1, p_2, p_1 p_2$ when $p_1 \neq p_2$). Hence, $p_1 p_2$ can never be prime.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.30} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_GA\_Q08}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which one of the following options is correct for the given data in the table?
+\par\medskip
+\begin{center}\small
+\begin{tabular}{cccc}
+\toprule
+Iteration ($i$) & Input ($I$) & Output ($X$) & Output ($Y$) \\
+\midrule
+0 & 20 & 20 & 20 \\
+1 & $-4$ & 16 & $-80$ \\
+2 & 10 & 26 & $-800$ \\
+3 & 15 & 41 & $-12000$ \\
+\bottomrule
+\end{tabular}\end{center}
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $X(i) = X(i-1) + I(i); \; Y(i) = Y(i-1) I(i); \; i > 0$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $X(i) = X(i-1) I(i); \; Y(i) = Y(i-1) + I(i); \; i > 0$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $X(i) = X(i-1) I(i); \; Y(i) = Y(i-1) I(i); \; i > 0$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $X(i) = X(i-1) + I(i); \; Y(i) = Y(i-1) I(i-1); \; i > 0$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical reasoning and recurrence relations}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Check the sequence updates: $X(i) = X(i-1) + I(i)$ yields $20 + (-4) = 16, 16 + 10 = 26, 26 + 15 = 41$, and $Y(i) = Y(i-1) \cdot I(i)$ yields $20 \times (-4) = -80, -80 \times 10 = -800, -800 \times 15 = -12000$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\end{document}

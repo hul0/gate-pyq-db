@@ -1,0 +1,2514 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.5cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm
+}
+
+% Persistent Unremovable Canvas Watermark on Every Page
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=8cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg} \\[-0.5em]
+        {\fontsize{18}{22}\selectfont\bfseries\scshape www.studiva.co.in}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.12] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape GATE 2018--2025 CS/IT $\cdot$ \textbf{General Aptitude}}
+\fancyhead[R]{\small\scshape Practice Question Bank with Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026} Studiva\textsuperscript{TM}}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\scriptsize\texttt{www.studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Code Listing Style (Monochrome)
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=none,
+    frame=none,
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: IMPRINT & TITLE PAGE ====================
+\thispagestyle{empty}
+\vspace*{0.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg}\\[0.6em]
+    {\LARGE \textbf{GATE 2018--2025 COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTION BANK WITH SOLUTIONS}}\\[0.4em]
+    {\large \textsc{\textbf{Subject Wise: General Aptitude}}}\\[0.2em]
+    {\normalsize \textsc{Combined 2018--2025 Examination Papers $\cdot$ Comprehensive Edition ($\mathbf{59}$ Questions)}}\\[1.2em]
+    \rule{0.6\textwidth}{0.6pt}
+\end{center}
+
+\vspace{1em}
+\noindent\begin{tabular}{ll}
+\textbf{Author / Compiler:} & Rupam Ghosh \\
+\textbf{Publisher \& Platform:} & Studiva\textsuperscript{TM} (\texttt{www.studiva.co.in}) \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Standard Edition (2026) \\
+\textbf{Coverage:} & Complete GATE CS/IT Papers (2018, 2022, 2023, 2024 CS1, 2024 CS2, 2025 CS1, 2025 CS2) \\
+\textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
+\end{tabular}
+
+\vspace{1.5em}
+\begin{tcolorbox}[enhanced, standard jigsaw, opacityback=0, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva\textsuperscript{TM}. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva\textsuperscript{TM}}.\\[0.6em]
+\textbf{Terms of Use \& Attribution Rules:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva\textsuperscript{TM}} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
+    \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
+\end{itemize}
+\vspace{0.6em}
+\textbf{Fair Use Disclaimer:}\\
+The underlying examination questions originate from the Graduate Aptitude Test in Engineering (GATE), conducted by the Indian Institutes of Technology (IITs) and Indian Institute of Science (IISc). Question texts are reproduced for non-commercial educational study under Fair Use doctrines. No copyright is claimed over the original GATE examination question texts.
+\end{tcolorbox}
+
+\vspace{1.2em}
+\begin{center}
+\small\itshape
+Practice Recommendation: Use an opaque sheet of paper or ruler to cover the right-hand column during mock attempts. Tick your chosen answers directly in the check boxes on the left, then slide the cover to check the solution and hint.
+\end{center}
+
+\newpage
+% ==================== PAGE 2 ONWARDS: QUESTION BANK ====================
+
+\vspace{8pt}
+\subsection*{Quantitative Aptitude}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.1} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q03}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The area of a square is $d$. What is the area of the circle which has the diagonal of the square as its diameter?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $\pi d$ & $\square$\ \textbf{(B)} $\pi d^2$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\frac{1}{4}\pi d^2$ & $\square$\ \textbf{(D)} $\frac{1}{2}\pi d$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Mensuration and geometry}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For a square of area $d$, the side length is $s = \sqrt{d}$ and its diagonal is $s\sqrt{2} = \sqrt{2d}$. Since this diagonal is the diameter of the circle, the radius is $r = \frac{\sqrt{2d}}{2} = \sqrt{\frac{d}{2}}$. Hence, the area of the circle is $\pi r^2 = \pi \left(\frac{d}{2}\right) = \frac{1}{2}\pi d$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.2} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q04}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+What would be the smallest natural number which when divided either by 20 or by 42 or by 76 leaves a remainder of 7 in each case?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 3047 & $\square$\ \textbf{(B)} 6047 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 7987 & $\square$\ \textbf{(D)} 63847
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The required number is $\text{LCM}(20, 42, 76) + 7$. Calculating prime factorizations: $20 = 2^2 \times 5$, $42 = 2 \times 3 \times 7$, $76 = 2^2 \times 19$. Thus $\text{LCM} = 2^2 \times 3 \times 5 \times 7 \times 19 = 7980$. Adding the remainder 7 gives $7980 + 7 = 7987$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.3} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q05}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+What is the missing number in the following sequence?
+\[ 2,\; 12,\; 60,\; 240,\; 720,\; 1440,\; \_\_\_\_\_,\; 0 \]
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 2880 & $\square$\ \textbf{(B)} 1440 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 720 & $\square$\ \textbf{(D)} 0
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Examining consecutive multipliers: $2 \times 6 = 12$, $12 \times 5 = 60$, $60 \times 4 = 240$, $240 \times 3 = 720$, $720 \times 2 = 1440$. Following this decreasing multiplier pattern, the next term is $1440 \times 1 = 1440$, and the term after is $1440 \times 0 = 0$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.4} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q06}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+An old man walks in a town to distribute old age pensions. There are 300 persons in the town who are eligible for the pension. The monthly pension is Rs. 750 for each eligible man and Rs. 1000 for each eligible woman. 8/9 of the eligible men and 2/3 of the eligible women claim the pension. The total pension claimed per month is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Rs. 1,50,000 & $\square$\ \textbf{(B)} Rs. 2,00,000 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Rs. 2,25,000 & $\square$\ \textbf{(D)} Cannot be determined
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let $M$ and $W$ be eligible men and women, with $M + W = 300$. Number claiming pension is $\frac{8}{9}M$ men and $\frac{2}{3}W$ women. Total pension claimed $= \frac{8}{9}M(750) + \frac{2}{3}W(1000) = \frac{2000}{3}M + \frac{2000}{3}W = \frac{2000}{3}(M + W) = \frac{2000}{3}(300) = 2{,}00{,}000$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.5} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q07}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+If $p^{-x} = \frac{1}{q}$, $q^{-y} = \frac{1}{r}$, and $r^{-z} = \frac{1}{p}$, what is the value of $xyz$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $-1$ & $\square$\ \textbf{(B)} 0 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 1 & $\square$\ \textbf{(D)} $pqr$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small From $p^{-x} = \frac{1}{q}$, we have $q = p^x$. Substituting into $q^{-y} = \frac{1}{r}$ gives $r = q^y = (p^x)^y = p^{xy}$. Then $r^{-z} = \frac{1}{p}$ gives $p = r^z = (p^{xy})^z = p^{xyz}$. Since $p > 0$ and $p \neq 1$, it follows that $xyz = 1$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.6} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q08}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In a party, 60\% of the invited guests are male and 40\% are female. 80\% of the invited guests attend the party. If all the invited female guests attend the party, what is the ratio of male guests who attended to the female guests who attended?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 2 : 3 & $\square$\ \textbf{(B)} 1 : 1 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 3 : 2 & $\square$\ \textbf{(D)} 2 : 1
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Out of 100 invited guests, 60 are male and 40 are female. Since 80 guests attend and all 40 invited females attend, the remaining $80 - 40 = 40$ attendees must be male. Thus, the ratio of attending males to attending females is $40 : 40 = 1 : 1$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.7} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q10}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A six sided unbiased die with four green faces and two red faces is rolled seven times. Which of the following combinations is the most likely outcome of the experiment?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Three green faces and four red faces \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Four green faces and three red faces \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Five green faces and two red faces \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Six green faces and one red face
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Elementary statistics and probability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The number of green faces $X$ follows a Binomial distribution $B(n=7, p=4/6=2/3)$. The mode of a binomial distribution is $\lfloor (n+1)p \rfloor = \lfloor 8 \times \frac{2}{3} \rfloor = \lfloor 5.33 \rfloor = 5$. Thus, the most likely outcome is 5 green faces and $7 - 5 = 2$ red faces.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.8} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_GA\_Q03}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $r$ be a root of the equation $x^2 + 2x + 6 = 0$.
+Then the value of the expression $(r+2)(r+3)(r+4)(r+5)$ is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 51 & $\square$\ \textbf{(B)} $-51$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 126 & $\square$\ \textbf{(D)} $-126$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Since $r$ is a root of $x^2 + 2x + 6 = 0$, we have $r^2 + 2r = -6$. Pairing terms in the expression: $[(r+2)(r+5)][(r+3)(r+4)] = [r^2 + 7r + 10][r^2 + 7r + 12]$. Substituting $r^2 = -2r - 6$ yields $(5r + 4)(5r + 6) = 25r^2 + 50r + 24 = 25(r^2 + 2r) + 24 = 25(-6) + 24 = -126$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.9} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_GA\_Q07}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In a recently conducted national entrance test, boys constituted 65\% of those who appeared for the test. Girls constituted the remaining candidates and they accounted for 60\% of the qualified candidates.
+Which one of the following is the correct logical inference based on the information provided in the above passage?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Equal number of boys and girls qualified \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Equal number of boys and girls appeared for the test \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The number of boys who appeared for the test is less than the number of girls who appeared \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The number of boys who qualified the test is less than the number of girls who qualified
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Among all candidates who qualified, girls accounted for 60\%, meaning boys accounted for the remaining $100\% - 60\% = 40\%$. Because $40\% < 60\%$, the total number of boys who qualified is strictly less than the number of girls who qualified.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.10} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_GA\_Q08}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A box contains five balls of same size and shape. Three of them are green coloured balls and two of them are orange coloured balls. Balls are drawn from the box one at a time. If a green ball is drawn, it is not replaced. If an orange ball is drawn, it is replaced with another orange ball.
+First ball is drawn. What is the probability of getting an orange ball in the next draw?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $1/2$ & $\square$\ \textbf{(B)} $8/25$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $19/50$ & $\square$\ \textbf{(D)} $23/50$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Elementary statistics and probability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Initially, there are 3 green and 2 orange balls (total 5). If a green ball is drawn ($P(G_1) = 3/5$), 2 green and 2 orange remain, so $P(O_2|G_1) = 2/4 = 1/2$. If an orange ball is drawn ($P(O_1) = 2/5$), it is replaced, so $P(O_2|O_1) = 2/5$. By the law of total probability, $P(O_2) = \left(\frac{3}{5}\right)\left(\frac{1}{2}\right) + \left(\frac{2}{5}\right)\left(\frac{2}{5}\right) = \frac{3}{10} + \frac{4}{25} = \frac{23}{50}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.11} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_GA\_Q03}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A series of natural numbers $F_1, F_2, F_3, F_4, F_5, F_6, F_7, \dots$ obeys $F_{n+1} = F_n + F_{n-1}$ for all integers $n \ge 2$.
+If $F_6 = 37$, and $F_7 = 60$, then what is $F_1$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 4 & $\square$\ \textbf{(B)} 5 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 8 & $\square$\ \textbf{(D)} 9
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The recurrence relation is $F_{n+1} = F_n + F_{n-1} \implies F_{n-1} = F_{n+1} - F_n$. Working backward from $F_7 = 60$ and $F_6 = 37$: $F_5 = 60 - 37 = 23$; $F_4 = 37 - 23 = 14$; $F_3 = 23 - 14 = 9$; $F_2 = 14 - 9 = 5$; and $F_1 = 9 - 5 = 4$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.12} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_GA\_Q04}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A survey for a certain year found that 90\% of pregnant women received medical care at least once before giving birth. Of these women, 60\% received medical care from doctors, while 40\% received medical care from other healthcare providers.
+Given this information, which one of the following statements can be inferred with certainty?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} More than half of the pregnant women received medical care at least once from a doctor. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Less than half of the pregnant women received medical care at least once from a doctor. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} More than half of the pregnant women received medical care at most once from a doctor. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Less than half of the pregnant women received medical care at most once from a doctor.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Out of all pregnant women, 90\% received medical care at least once. Among those who received medical care, 60\% received care from doctors. The percentage of all pregnant women who received care at least once from a doctor is $90\% \times 60\% = 54\%$, which is strictly greater than half ($> 50\%$).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.13} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_GA\_Q07}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider two functions of time ($t$),
+\[ f(t) = 0.01 t^2, \quad g(t) = 4 t \]
+where $0 < t < \infty$.
+Now consider the following two statements:
+\begin{enumerate}[label=(\roman*),itemsep=0pt,topsep=2pt]
+\item For some $t > 0$, $g(t) > f(t)$.
+\item There exists a $T$, such that $f(t) > g(t)$ for all $t > T$.
+\end{enumerate}
+Which one of the following options is TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} only (i) is correct & $\square$\ \textbf{(B)} only (ii) is correct \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} both (i) and (ii) are correct & $\square$\ \textbf{(D)} neither (i) nor (ii) is correct
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Setting $f(t) = g(t) \implies 0.01 t^2 = 4t \implies t = 400$. For any $0 < t < 400$ (e.g., $t = 10$), $g(10) = 40 > f(10) = 1$, making statement (i) correct. For all $t > 400$, the quadratic growth of $f(t)$ strictly dominates the linear growth of $g(t)$, so choosing $T = 400$ satisfies statement (ii). Hence, both statements are correct.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.14} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_GA\_Q09}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+$f(x)$ and $g(y)$ are functions of $x$ and $y$, respectively, and $f(x) = g(y)$ for all real values of $x$ and $y$. Which one of the following options is necessarily TRUE for all $x$ and $y$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $f(x) = 0$ and $g(y) = 0$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $f(x) = g(y) = \text{constant}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $f(x) \neq \text{constant}$ and $g(y) \neq \text{constant}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $f(x) + g(y) = f(x) - g(y)$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small We are given $f(x) = g(y)$ for all independent real variables $x$ and $y$. If $x$ varies while $y$ remains constant, $f(x)$ cannot change because $g(y)$ is fixed, meaning $f(x)$ must be a constant. Symmetrically, $g(y)$ must be identical to that same constant. Therefore, $f(x) = g(y) = \text{constant}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.15} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_GA\_Q02}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+If two distinct non-zero real variables $x$ and $y$ are such that $(x+y)$ is proportional to $(x-y)$ then the value of $\frac{x}{y}$
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} depends on $xy$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} depends only on $x$ and not on $y$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} depends only on $y$ and not on $x$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} is a constant
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small If $(x+y) \propto (x-y)$, then $x+y = k(x-y)$ for some non-zero constant $k \neq 1$. Rearranging terms gives $x(1-k) = -y(1+k) \implies \frac{x}{y} = \frac{k+1}{k-1}$, which is a constant independent of $x$ and $y$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.16} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_GA\_Q03}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following sample of numbers:
+\[ 9, 18, 11, 14, 15, 17, 10, 69, 11, 13 \]
+The median of the sample is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 13.5 & $\square$\ \textbf{(B)} 14 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 11 & $\square$\ \textbf{(D)} 18.7
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Elementary statistics and probability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Arranging the 10 sample values in ascending order: $9, 10, 11, 11, 13, 14, 15, 17, 18, 69$. Since the sample size $n = 10$ is even, the median is the arithmetic mean of the 5th and 6th values: $\frac{13 + 14}{2} = 13.5$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.17} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_GA\_Q04}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The number of coins of Rs.~1, Rs.~5, and Rs.~10 denominations that a person has are in the ratio $5:3:13$. Of the total amount, the percentage of money in Rs.~5 coins is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 21\% & $\square$\ \textbf{(B)} $14\frac{2}{7}\%$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 10\% & $\square$\ \textbf{(D)} 30\%
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let the number of Rs.~1, Rs.~5, and Rs.~10 coins be $5k$, $3k$, and $13k$ respectively. The total value is $1(5k) + 5(3k) + 10(13k) = 5k + 15k + 130k = 150k$. The percentage of money in Rs.~5 coins is $\frac{15k}{150k} \times 100\% = 10\%$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.18} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_GA\_Q05}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+For positive non-zero real variables $p$ and $q$, if
+\[ \log(p^2 + q^2) = \log p + \log q + 2\log 3, \]
+then, the value of $\frac{p^4+q^4}{p^2q^2}$ is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 79 & $\square$\ \textbf{(B)} 81 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 9 & $\square$\ \textbf{(D)} 83
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Using logarithm rules, $\log(p^2 + q^2) = \log p + \log q + 2\log 3 = \log(9pq) \implies p^2 + q^2 = 9pq$. Squaring both sides yields $(p^2+q^2)^2 = p^4 + q^4 + 2p^2q^2 = 81p^2q^2$, which gives $p^4 + q^4 = 79p^2q^2$. Hence, $\frac{p^4+q^4}{p^2q^2} = 79$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.19} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_GA\_Q07}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A rectangular paper sheet of dimensions $54\text{ cm} \times 4\text{ cm}$ is taken. The two longer edges of the sheet are joined together to create a cylindrical tube. A cube whose surface area is equal to the area of the sheet is also taken.
+Then, the ratio of the volume of the cylindrical tube to the volume of the cube is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $1/\pi$ & $\square$\ \textbf{(B)} $2/\pi$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $3/\pi$ & $\square$\ \textbf{(D)} $4/\pi$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Mensuration and geometry}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Joining the longer edges ($54\text{ cm}$) creates a cylinder with height $h = 54\text{ cm}$ and circumference $2\pi r = 4\text{ cm} \implies r = \frac{2}{\pi}$, giving volume $V_{\text{cyl}} = \pi r^2 h = \frac{216}{\pi}$. The sheet area is $54 \times 4 = 216\text{ cm}^2$. A cube with surface area $6a^2 = 216$ has edge $a = 6\text{ cm}$ and volume $V_{\text{cube}} = 6^3 = 216$. Thus $\frac{V_{\text{cyl}}}{V_{\text{cube}}} = \frac{216/\pi}{216} = \frac{1}{\pi}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.20} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_GA\_Q02}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Two wizards try to create a spell using all the four elements, water, air, fire, and earth. For this, they decide to mix all these elements in all possible orders. They also decide to work independently. After trying all possible combination of elements, they conclude that the spell does not work.
+How many attempts does each wizard make before coming to this conclusion, independently?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 24 & $\square$\ \textbf{(B)} 48 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 16 & $\square$\ \textbf{(D)} 12
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small There are 4 distinct elements (water, air, fire, earth). The number of distinct permutations/orderings of these 4 elements is $4! = 4 \times 3 \times 2 \times 1 = 24$. Since each wizard tries all possible orders independently, each wizard makes 24 attempts.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.21} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_GA\_Q03}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In an engineering college of 10,000 students, 1,500 like neither their core branches nor other branches. The number of students who like their core branches is 1/4th of the number of students who like other branches. The number of students who like both their core and other branches is 500.
+The number of students who like their core branches is:
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 1,800 & $\square$\ \textbf{(B)} 3,500 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 1,600 & $\square$\ \textbf{(D)} 1,500
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Data interpretation: data graphs (bar graphs, pie charts, and other graphs representing data), 2- and 3-dimensional plots, maps, and tables}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let $C$ and $O$ be sets of students liking core and other branches. Total students $N = 10000$, neither $= 1500$, so $|C \cup O| = 10000 - 1500 = 8500$. We are given $|C \cap O| = 500$ and $|C| = \frac{1}{4}|O| \implies |O| = 4|C|$. By inclusion-exclusion, $|C \cup O| = |C| + |O| - |C \cap O| \implies 8500 = |C| + 4|C| - 500 \implies 5|C| = 9000 \implies |C| = 1800$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.22} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_GA\_Q04}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+For positive non-zero real variables $x$ and $y$, if
+\[ \ln\left(\frac{x+y}{2}\right) = \frac{1}{2} [\ln(x) + \ln(y)] \]
+then, the value of $\frac{x}{y} + \frac{y}{x}$ is:
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 1 & $\square$\ \textbf{(B)} 1/2 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 2 & $\square$\ \textbf{(D)} 4
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small From $\ln\left(\frac{x+y}{2}\right) = \frac{1}{2}[\ln(x) + \ln(y)] = \ln(\sqrt{xy})$, we obtain $\frac{x+y}{2} = \sqrt{xy} \implies x + y = 2\sqrt{xy} \implies (\sqrt{x} - \sqrt{y})^2 = 0 \implies x = y$. Substituting $x = y$ gives $\frac{x}{y} + \frac{y}{x} = 1 + 1 = 2$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.23} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_GA\_Q05}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In the sequence 6, 9, 14, $x$, 30, 41, a possible value of $x$ is:
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 25 & $\square$\ \textbf{(B)} 21 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 18 & $\square$\ \textbf{(D)} 20
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Examine the consecutive differences: $9 - 6 = 3$, $14 - 9 = 5$, $x - 14 = d_3$, $30 - x = d_4$, $41 - 30 = 11$. The differences are consecutive odd numbers: $3, 5, 7, 9, 11$. For $d_3 = 7$, $x = 14 + 7 = 21$, and checking $d_4 = 30 - 21 = 9$ matches. Hence, $x = 21$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.24} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_GA\_Q07}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A person sold two different items at the same price. He made 10\% profit in one item, and 10\% loss in the other item. In selling these two items, the person made a total of:
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 1\% profit & $\square$\ \textbf{(B)} 2\% profit \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 1\% loss & $\square$\ \textbf{(D)} 2\% loss
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small When two items are sold at the same selling price $S$, one at a profit of $x\%$ and the other at a loss of $x\%$, there is always an overall net loss given by $\frac{x^2}{100}\%$. Here $x = 10$, so the net loss is $\frac{10^2}{100}\% = 1\%$ loss.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.25} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_GA\_Q03}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The average marks obtained by a class in an examination were calculated as 30.8. However, while checking the marks entered, the teacher found that the marks of one student were entered incorrectly as 24 instead of 42. After correcting the marks, the average becomes 31.4. How many students does the class have?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 25 & $\square$\ \textbf{(B)} 28 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 30 & $\square$\ \textbf{(D)} 32
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Elementary statistics and probability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let $n$ be the number of students. The total increase in marks after correction is $42 - 24 = 18$. The increase in average is $31.4 - 30.8 = 0.6$. Therefore, $0.6 \times n = 18$, giving $n = \frac{18}{0.6} = 30$ students.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.26} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_GA\_Q08}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A fair six-faced dice, with the faces labelled `1', `2', `3', `4', `5', and `6', is rolled thrice. What is the probability of rolling `6' exactly once?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $\frac{75}{216}$ & $\square$\ \textbf{(B)} $\frac{1}{6}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\frac{1}{18}$ & $\square$\ \textbf{(D)} $\frac{25}{216}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Elementary statistics and probability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The probability of rolling a 6 is $p = \frac{1}{6}$, and not rolling a 6 is $q = \frac{5}{6}$. Using the binomial distribution for $n = 3$ trials with $k = 1$ success, $P(X = 1) = \binom{3}{1} \left(\frac{1}{6}\right)^1 \left(\frac{5}{6}\right)^2 = 3 \times \frac{1}{6} \times \frac{25}{36} = \frac{75}{216}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.27} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_GA\_Q10}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A shop has 4 distinct flavors of ice-cream. One can purchase any number of scoops of any flavor. The order in which the scoops are purchased is inconsequential. If one wants to purchase 3 scoops of ice-cream, in how many ways can one make that purchase?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 4 & $\square$\ \textbf{(B)} 20 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 24 & $\square$\ \textbf{(D)} 48
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small This is a multichoose problem (combination with repetition), where $r = 3$ scoops are chosen from $n = 4$ flavors. The number of ways is given by the stars and bars formula $\binom{n + r - 1}{r} = \binom{4 + 3 - 1}{3} = \binom{6}{3} = \frac{6 \times 5 \times 4}{3 \times 2 \times 1} = 20$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.28} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_GA\_Q03}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+If $P e^x = Q e^{-x}$ for all real values of $x$, which one of the following statements is true?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $P = Q = 0$ & $\square$\ \textbf{(B)} $P = Q = 1$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $P = 1; Q = -1$ & $\square$\ \textbf{(D)} $\frac{P}{Q} = 0$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and functions: exponents and equations}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For $P e^x = Q e^{-x}$ to hold for all real $x$, multiply both sides by $e^x$ to get $P e^{2x} = Q$. Differentiating with respect to $x$ gives $2P e^{2x} = 0$, implying $P = 0$. Substituting $P = 0$ yields $Q = 0$, so $P = Q = 0$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.29} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_GA\_Q05}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $p_1$ and $p_2$ denote two arbitrary prime numbers. Which one of the following statements is correct for all values of $p_1$ and $p_2$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $p_1 + p_2$ is not a prime number. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $p_1 p_2$ is not a prime number. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $p_1 + p_2 + 1$ is a prime number. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $p_1 p_2 + 1$ is a prime number.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Elementary number theory and prime numbers}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For any two prime numbers $p_1$ and $p_2$, the product $p_1 p_2$ has at least three distinct positive divisors ($1, p_1, p_1 p_2$ when $p_1=p_2$, or $1, p_1, p_2, p_1 p_2$ when $p_1 \neq p_2$). Hence, $p_1 p_2$ can never be prime.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.30} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_GA\_Q08}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which one of the following options is correct for the given data in the table?
+\par\medskip
+\begin{center}\small
+\begin{tabular}{cccc}
+\toprule
+Iteration ($i$) & Input ($I$) & Output ($X$) & Output ($Y$) \\
+\midrule
+0 & 20 & 20 & 20 \\
+1 & $-4$ & 16 & $-80$ \\
+2 & 10 & 26 & $-800$ \\
+3 & 15 & 41 & $-12000$ \\
+\bottomrule
+\end{tabular}\end{center}
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $X(i) = X(i-1) + I(i); \; Y(i) = Y(i-1) I(i); \; i > 0$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $X(i) = X(i-1) I(i); \; Y(i) = Y(i-1) + I(i); \; i > 0$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $X(i) = X(i-1) I(i); \; Y(i) = Y(i-1) I(i); \; i > 0$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $X(i) = X(i-1) + I(i); \; Y(i) = Y(i-1) I(i-1); \; i > 0$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical reasoning and recurrence relations}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Check the sequence updates: $X(i) = X(i-1) + I(i)$ yields $20 + (-4) = 16, 16 + 10 = 26, 26 + 15 = 41$, and $Y(i) = Y(i-1) \cdot I(i)$ yields $20 \times (-4) = -80, -80 \times 10 = -800, -800 \times 15 = -12000$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\vspace{8pt}
+\subsection*{Verbal Aptitude}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.31} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q01}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+``From where are they bringing their books? \_\_\_\_\_\_\_\_ bringing \_\_\_\_\_\_\_ books from \_\_\_\_\_.''
+\par\medskip
+The words that best fill the blanks in the above sentence are
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Their, they're, there & $\square$\ \textbf{(B)} They're, their, there \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} There, their, they're & $\square$\ \textbf{(D)} They're, there, there
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Vocabulary: words, idioms, and phrases in context}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small "They're" is the contraction for "they are", "their" is the possessive pronoun, and "there" refers to a place. Thus, the complete sentence is: "They're bringing their books from there."}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.32} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q02}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+``A \_\_\_\_\_\_\_\_\_ investigation can sometimes yield new facts, but typically organized ones are more successful.''
+\par\medskip
+The word that best fills the blank in the above sentence is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} meandering & $\square$\ \textbf{(B)} timely \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} consistent & $\square$\ \textbf{(D)} systematic
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Vocabulary: words, idioms, and phrases in context}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The sentence contrasts an erratic or wandering investigation with an "organized" one. "Meandering" means proceeding in a winding or circuitous course without a clear direction, which fits the context precisely.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.33} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_GA\_Q01}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The \_\_\_\_\_\_\_\_\_ is too high for it to be considered \_\_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} fair / fare & $\square$\ \textbf{(B)} faer / fair \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} fare / fare & $\square$\ \textbf{(D)} fare / fair
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Vocabulary: words, idioms, and phrases in context}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small 'Fare' denotes the price charged for a journey or conveyance, whereas 'fair' means reasonable or just. Therefore, 'The fare is too high for it to be considered fair.'}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.34} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_GA\_Q06}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Some people believe that ``what gets measured, improves''. Some others believe that ``what gets measured, gets gamed''. One possible reason for the difference in the beliefs is the work culture in organizations. In organizations with good work culture, metrics help improve outcomes. However, the same metrics are counterproductive in organizations with poor work culture.
+Which one of the following is the CORRECT logical inference based on the information in the above passage?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Metrics are useful in organizations with poor work culture \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Metrics are useful in organizations with good work culture \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Metrics are always counterproductive in organizations with good work culture \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Metrics are never useful in organizations with good work culture
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Reading and comprehension}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The passage explicitly notes that "In organizations with good work culture, metrics help improve outcomes." This directly implies that metrics are useful in organizations with good work culture.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.35} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_GA\_Q01}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+We reached the station late, and \_\_\_\_\_\_\_ missed the train.
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} near & $\square$\ \textbf{(B)} nearly \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} utterly & $\square$\ \textbf{(D)} mostly
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Basic English grammar: tenses, articles, adjectives, prepositions, conjunctions, verb-noun agreement}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The adverb 'nearly' means 'almost' and correctly modifies the past-tense verb 'missed'. 'Near' is an adjective/preposition, while 'utterly' and 'mostly' do not fit the intended semantic meaning of narrowly missing a train.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.36} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_GA\_Q02}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Kind : \_\_\_\_\_\_\_ : : Often : Frequently
+(By word meaning)
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Mean & $\square$\ \textbf{(B)} Type \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Cruel & $\square$\ \textbf{(D)} Kindly
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large MTA} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Vocabulary: words, idioms, and phrases in context}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small 'Often' and 'Frequently' are direct synonyms. 'Kind' can be a noun meaning 'Type' (category) or an adjective meaning benevolent/caring. Because of multiple ambiguous interpretations of 'Kind', GATE awarded Marks to All (MTA) for this question.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.37} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_GA\_Q06}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The country of Zombieland is in distress since more than 75\% of its working population is suffering from serious health issues. Studies conducted by competent health experts concluded that a complete lack of physical exercise among its working population was one of the leading causes of their health issues. As one of the measures to address the problem, the Government of Zombieland has decided to provide monetary incentives to those who ride bicycles to work.
+\par\medskip
+Based only on the information provided above, which one of the following statements can be logically inferred with certainty?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} All the working population of Zombieland will henceforth ride bicycles to work. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Riding bicycles will ensure that all of the working population of Zombieland is free of health issues. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The health experts suggested to the Government of Zombieland to declare riding bicycles as mandatory. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The Government of Zombieland believes that riding bicycles is a form of physical exercise.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Reading and comprehension}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The passage establishes that a complete lack of physical exercise is a primary cause of health issues, and in response, the government provides financial incentives to ride bicycles to work. This direct causal measure logically implies that the government views bicycle riding as a form of physical exercise.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.38} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_GA\_Q08}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which one of the following sentence sequences creates a coherent narrative?
+\begin{enumerate}[label=(\roman*),itemsep=0pt,topsep=2pt]
+\item Once on the terrace, on her way to her small room in the corner, she notices the man right away.
+\item She begins to pant by the time she has climbed all the stairs.
+\item Mina has bought vegetables and rice at the market, so her bags are heavy.
+\item He was leaning against the parapet, watching the traffic below.
+\end{enumerate}
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} (i), (ii), (iv), (iii) & $\square$\ \textbf{(B)} (ii), (iii), (i), (iv) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (iv), (ii), (i), (iii) & $\square$\ \textbf{(D)} (iii), (ii), (i), (iv)
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Narrative sequencing}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Sentence (iii) introduces the protagonist Mina carrying heavy market purchases. Sentence (ii) describes the resulting exertion as she climbs the stairs. Sentence (i) brings her onto the terrace where she spots a man. Sentence (iv) details the man's posture against the parapet. Thus, the coherent sequence is (iii), (ii), (i), (iv).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.39} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_GA\_Q01}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+If `$\to$' denotes increasing order of intensity, then the meaning of the words $[\text{dry} \to \text{arid} \to \text{parched}]$ is analogous to $[\text{diet} \to \text{fast} \to \text{\_\_\_\_\_\_\_\_}]$.
+Which one of the given options is appropriate to fill the blank?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} starve & $\square$\ \textbf{(B)} reject \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} feast & $\square$\ \textbf{(D)} deny
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Vocabulary: words, idioms, and phrases in context}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small 'dry $\to$ arid $\to$ parched' depicts an increasing scale of lack of moisture. Similarly, 'diet $\to$ fast $\to$ starve' depicts an increasing scale of food restriction/deprivation, where starving represents extreme lack of nourishment.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.40} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_GA\_Q06}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In the given text, the blanks are numbered (i)--(iv). Select the best match for all the blanks.
+\par\medskip
+Steve was advised to keep his head (i)\_\_\_\_ before heading (ii)\_\_\_\_ to bat; for, while he had a head (iii)\_\_\_\_ batting, he could only do so with a cool head (iv)\_\_\_\_ his shoulders.
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} (i) down (ii) down (iii) on (iv) for \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} (i) on (ii) down (iii) for (iv) on \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (i) down (ii) out (iii) for (iv) on \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} (i) on (ii) out (iii) on (iv) for
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Vocabulary: words, idioms, and phrases in context}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small 'Keep one's head down' means to stay focused and avoid trouble. 'Heading out' means going forth/departing. Having a 'head for' an activity signifies natural aptitude for it, and having a cool 'head on' one's shoulders means remaining calm and composed.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.41} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_GA\_Q01}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+If `$\to$' denotes increasing order of intensity, then the meaning of the words $[\text{walk} \to \text{jog} \to \text{sprint}]$ is analogous to $[\text{bothered} \to \text{\_\_\_\_\_\_\_\_} \to \text{daunted}]$.
+Which one of the given options is appropriate to fill the blank?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} phased & $\square$\ \textbf{(B)} phrased \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} fazed & $\square$\ \textbf{(D)} fused
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Vocabulary: words, idioms, and phrases in context}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small 'Walk -> jog -> sprint' depicts an increasing scale of physical speed/exertion. Similarly, 'bothered -> fazed -> daunted' depicts an increasing degree of perturbation/discouragement. 'Fazed' means disconcerted or perturbed, fitting between bothered and daunted.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.42} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_GA\_Q06}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Sequence the following sentences in a coherent passage.
+\begin{itemize}
+\item[P:] This fortuitous geological event generated a colossal amount of energy and heat that resulted in the rocks rising to an average height of 4 km across the contact zone.
+\item[Q:] Thus, the geophysicists tend to think of the Himalayas as an active geological event rather than as a static geological feature.
+\item[R:] The natural process of the cooling of this massive edifice absorbed large quantities of atmospheric carbon dioxide, altering the earth’s atmosphere and making it better suited for life.
+\item[S:] Many millennia ago, a breakaway chunk of bedrock from the Antarctic Plate collided with the massive Eurasian Plate.
+\end{itemize}
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} QPSR & $\square$\ \textbf{(B)} QSPR \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} SPRQ & $\square$\ \textbf{(D)} SRPQ
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Narrative sequencing}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Sentence S introduces the foundational historical premise (many millennia ago, Antarctic plate collided with Eurasian plate). Sentence P describes the immediate effect of this event (energy/heat rising to 4 km height). Sentence R details the subsequent cooling that altered the atmosphere. Sentence Q concludes with the geophysicists' resulting viewpoint. The logical sequence is SPRQ.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.43} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_GA\_Q01}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Ravi had \_\_\_\_\_\_ younger brother who taught at \_\_\_\_\_\_ university. He was widely regarded as \_\_\_\_\_\_ honorable man.
+Select the option with the correct sequence of articles to fill in the blanks.
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} a; a; an & $\square$\ \textbf{(B)} the; an; a \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} a; an; a & $\square$\ \textbf{(D)} an; an; a
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Basic English grammar: tenses, articles, adjectives, prepositions, conjunctions, verb-noun agreement}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small 'Younger' begins with a consonant sound (/j/), requiring the indefinite article 'a'. 'University' also begins with a consonant sound (/juː/), taking 'a'. 'Honorable' has a silent 'h' and begins with a vowel sound (/ɒ/), requiring 'an'. Hence, the sequence is a; a; an.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.44} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_GA\_Q02}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The CEO’s decision to downsize the workforce was considered myopic because it sacrificed long-term stability to accommodate short-term gains.
+Select the most appropriate option that can replace the word ``myopic'' without changing the meaning of the sentence.
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} visionary & $\square$\ \textbf{(B)} shortsighted \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} progressive & $\square$\ \textbf{(D)} innovative
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Vocabulary: words, idioms, and phrases in context}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small 'Myopic' literally means nearsighted, and metaphorically refers to lacking foresight or being shortsighted by focusing only on immediate considerations rather than long-term outcomes.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.45} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_GA\_Q06}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+``I put the brown paper in my pocket along with the chalks, and possibly other things. I suppose every one must have reflected how primeval and how poetical are the things that one carries in one's pocket: the pocket-knife, for instance the type of all human tools, the infant of the sword. Once I planned to write a book of poems entirely about the things in my pocket. But I found it would be too long: and the age of the great epics is past.''
+(From G.K. Chesterton's ``A Piece of Chalk'')
+\par\medskip
+Based only on the information provided in the above passage, which one of the following statements is true?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The author of the passage carries a mirror in his pocket to reflect upon things. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The author of the passage had decided to write a poem on epics. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The pocket-knife is described as the infant of the sword. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Epics are described as too inconvenient to write.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Reading and comprehension}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The passage explicitly states: 'the pocket-knife, for instance the type of all human tools, the infant of the sword.' Statement C directly reflects this verbatim description.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.46} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_GA\_Q01}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Despite his initial hesitation, Rehman’s \_\_\_\_\_\_\_\_\_ to contribute to the success of the project never wavered.
+Select the most appropriate option to complete the above sentence.
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} ambivalence & $\square$\ \textbf{(B)} satisfaction \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} resolve & $\square$\ \textbf{(D)} revolve
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Vocabulary: words, idioms, and phrases in context}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The sentence sets up a contrast between Rehman's initial hesitation and his continuing commitment. 'Resolve' denotes firm determination and perseverance, which fits the context accurately.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.47} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_GA\_Q02}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+$\text{Bird} : \text{Nest} :: \text{Bee} : \text{\_\_\_\_\_\_\_}$
+Select the correct option to complete the analogy.
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Kennel & $\square$\ \textbf{(B)} Hammock \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Hive & $\square$\ \textbf{(D)} Lair
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Vocabulary: word analogy and contextual relations}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small This is a habitat/dwelling analogy: a bird naturally lives in a nest, and similarly, a bee lives in a hive.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\vspace{8pt}
+\subsection*{Analytical Aptitude}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.48} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_GA\_Q04}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Given below are four statements:
+\begin{itemize}[itemsep=0pt,topsep=2pt]
+\item Statement 1: All students are inquisitive.
+\item Statement 2: Some students are inquisitive.
+\item Statement 3: No student is inquisitive.
+\item Statement 4: Some students are not inquisitive.
+\end{itemize}
+From the given four statements, find the two statements that CANNOT BE TRUE simultaneously, assuming that there is at least one student in the class.
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Statement 1 and Statement 3 & $\square$\ \textbf{(B)} Statement 1 and Statement 2 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Statement 2 and Statement 4 & $\square$\ \textbf{(D)} Statement 3 and Statement 4
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Analytical Aptitude \\
+\textbf{Subtopic:} \textit{Logic: deduction and induction}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Statement 1 ("All students are inquisitive") and Statement 3 ("No student is inquisitive") are universal affirmative and universal negative statements (contraries). In classical categorical logic with a non-empty class, both statements cannot be simultaneously true.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.49} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_GA\_Q10}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In a $4 \times 4$ array, each cell of the first three rows has either a cross (X) or a number. The number in a cell represents the count of the immediate neighboring cells (left, right, top, bottom, diagonals) NOT having a cross (X). Given that the last row has no crosses (X), the sum of the four numbers to be filled in the last row is:
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 11 & $\square$\ \textbf{(B)} 10 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 12 & $\square$\ \textbf{(D)} 9
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Analytical Aptitude \\
+\textbf{Subtopic:} \textit{Logic: deduction and induction}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Each number in a cell denotes how many neighboring cells do NOT contain an 'X'. With crosses determined from the first three rows, the count of non-cross neighbors for each of the 4 cells in the bottom row evaluates to values whose total sum is 11.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.50} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_GA\_Q04}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the relationships among P, Q, R, S, and T:
+\begin{itemize}
+\item P is the brother of Q.
+\item S is the daughter of Q.
+\item T is the sister of S.
+\item R is the mother of Q.
+\end{itemize}
+The following statements are made based on the relationships given above:
+(1) R is the grandmother of S.
+(2) P is the uncle of S and T.
+(3) R has only one son.
+(4) Q has only one daughter.
+Which one of the following options is correct?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Both (1) and (2) are true. & $\square$\ \textbf{(B)} Both (1) and (3) are true. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Only (3) is true. & $\square$\ \textbf{(D)} Only (4) is true.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Analytical Aptitude \\
+\textbf{Subtopic:} \textit{Logic: deduction and induction}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Since R is the mother of Q and S is the daughter of Q, R is definitely the grandmother of S (statement 1 is true). P is the brother of Q, so P is the maternal/paternal uncle of Q's children S and T (statement 2 is true). The genders and number of other children of R and Q are not specified, so (3) and (4) cannot be established.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.51} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_GA\_Q06}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Based only on the conversation below, identify the logically correct inference:
+``Even if I had known that you were in the hospital, I would not have gone there to see you'', Ramya told Josephine.
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Ramya knew that Josephine was in the hospital. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Ramya did not know that Josephine was in the hospital. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Ramya and Josephine were once close friends; but now, they are not. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Josephine was in the hospital due to an injury to her leg.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Analytical Aptitude \\
+\textbf{Subtopic:} \textit{Logic: deduction and conditional statements}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The subjunctive statement 'Even if I had known that you were in the hospital...' logically presupposes that the speaker did not know about Josephine's hospitalization at that time.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.52} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_GA\_Q07}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+If $\text{IMAGE}$ and $\text{FIELD}$ are coded as $\text{FHBNJ}$ and $\text{EMFJG}$ respectively then, which one among the given options is the most appropriate code for $\text{BEACH}$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} CEADP & $\square$\ \textbf{(B)} IDBFC \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} JGIBC & $\square$\ \textbf{(D)} IBCEC
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Analytical Aptitude \\
+\textbf{Subtopic:} \textit{Letter patterns, sequencing and coding-decoding}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The coding rule applies a $+1$ alphabetical shift to each character followed by string reversal. Shifting $\text{BEACH}$ by $+1$ gives $\text{CFBDI}$, and reversing this yields $\text{IDBFC}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\vspace{8pt}
+\subsection*{Spatial Aptitude}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.53} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_GA\_Q09}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The corners and mid-points of the sides of a triangle are named using the distinct letters P, Q, R, S, T and U, but not necessarily in the same order. Consider the following statements:
+\begin{itemize}[itemsep=0pt,topsep=2pt]
+\item The line joining P and R is parallel to the line joining Q and S.
+\item P is placed on the side opposite to the corner T.
+\item S and U cannot be placed on the same side.
+\end{itemize}
+Which one of the following statements is correct based on the above information?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} P cannot be placed at a corner \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} S cannot be placed at a corner \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} U cannot be placed at a mid-point \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} R cannot be placed at a corner
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Spatial Aptitude \\
+\textbf{Subtopic:} \textit{Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a triangle, a segment connecting two midpoints is parallel to the opposite side joining two vertices. Between segments $PR$ and $QS$, one must connect two corners and the other two midpoints. If $S$ were a corner, then $Q$ and $S$ would both be corners, leaving $P$ and $R$ as midpoints, which violates the condition that $S$ and $U$ cannot share a side while $P$ opposes corner $T$. Thus, $S$ cannot be placed at a corner.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.54} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_GA\_Q10}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A plot of land must be divided between four families. They want their individual plots to be similar in shape, not necessarily equal in area. The land has equally spaced poles, marked as dots in the figure. Two ropes, R1 and R2, are already present and cannot be moved.
+What is the least number of additional straight ropes needed to create the desired plots? A single rope can pass through three poles that are aligned in a straight line.
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 2 & $\square$\ \textbf{(B)} 4 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 5 & $\square$\ \textbf{(D)} 3
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Spatial Aptitude \\
+\textbf{Subtopic:} \textit{Paper folding, cutting, and patterns in 2 and 3 dimensions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small To partition the rectangular plot into four mutually similar subplots respecting the existing fixed ropes R1 and R2, exactly 3 additional collinear straight rope segments are needed to complete the congruent triangular and trapezoidal subdivisions.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.55} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_GA\_Q05}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Looking at the surface of a smooth 3-dimensional object from the outside, which one of the following options is TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The surface of the object must be concave everywhere. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The surface of the object must be convex everywhere. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The surface of the object may be concave in some places and convex in other places. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The object can have edges, but no corners.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Spatial Aptitude \\
+\textbf{Subtopic:} \textit{Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A smooth 3-dimensional object (such as a torus or a dumbbell shape) can possess regions of positive Gaussian curvature where it is locally convex, as well as regions of negative curvature (saddle-like regions) where it is locally concave. Hence, its surface may be concave in some places and convex in others.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.56} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_GA\_Q10}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which one of the options best describes the transformation of the 2-dimensional figure P to Q, and then to R, as shown?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Only S1 is TRUE. & $\square$\ \textbf{(B)} Only S1 and S2 are TRUE. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} S1, S2, and S3 are all TRUE. & $\square$\ \textbf{(D)} Only S1 and S3 are TRUE.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Spatial Aptitude \\
+\textbf{Subtopic:} \textit{Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Analyzing the rigid 2D planar transformations from figure P to Q and Q to R shows that statement S1 accurately describes the sequence of planar rotation and reflection, while statements S2 and S3 fail to match the observed geometric orientations. Hence, only S1 is TRUE.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.57} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_GA\_Q09}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A rectangular paper of $20\text{ cm} \times 8\text{ cm}$ is folded 3 times. Each fold is made along the line of symmetry, which is perpendicular to its long edge. The perimeter of the final folded sheet (in cm) is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 18 & $\square$\ \textbf{(B)} 24 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 20 & $\square$\ \textbf{(D)} 21
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Spatial Aptitude \\
+\textbf{Subtopic:} \textit{Paper folding, cutting, and patterns in 2 and 3 dimensions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Starting at $20 \times 8\text{ cm}$, the 1st fold perpendicular to the long edge yields $10 \times 8\text{ cm}$. The 2nd fold perpendicular to the new long edge ($10\text{ cm}$) yields $5 \times 8\text{ cm}$. The 3rd fold perpendicular to the new long edge ($8\text{ cm}$) yields $5 \times 4\text{ cm}$. The perimeter of this final folded sheet is $2(5 + 4) = 18\text{ cm}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.58} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_GA\_Q10}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The least number of squares to be added in the figure to make $AB$ a line of symmetry is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 6 & $\square$\ \textbf{(B)} 4 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 5 & $\square$\ \textbf{(D)} 7
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Spatial Aptitude \\
+\textbf{Subtopic:} \textit{Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Reflecting each shaded cell across the diagonal axis $AB$ reveals that exactly 6 asymmetric squares must be shaded on the opposing side to achieve bilateral reflectional symmetry about line $AB$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.59} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_GA\_Q09}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A cube is to be cut into 8 pieces of equal size and shape. Here, each cut should be straight and it should not stop till it reaches the other end of the cube.
+The minimum number of such cuts required is:
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 3 & $\square$\ \textbf{(B)} 4 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 7 & $\square$\ \textbf{(D)} 8
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Spatial Aptitude \\
+\textbf{Subtopic:} \textit{Paper folding, cutting, and patterns in 2 and 3 dimensions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A single full planar straight cut can at most double the number of pieces. With $k$ cuts through 3 orthogonal dimensions (1 cut parallel to $xy$-plane, 1 parallel to $yz$-plane, 1 parallel to $zx$-plane), the cube is divided into $2 \times 2 \times 2 = 8$ equal pieces. Thus, a minimum of 3 cuts is required.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\end{document}

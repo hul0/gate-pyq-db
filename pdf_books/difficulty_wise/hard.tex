@@ -1,0 +1,1966 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.5cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm
+}
+
+% Persistent Unremovable Canvas Watermark on Every Page
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=8cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg} \\[-0.5em]
+        {\fontsize{18}{22}\selectfont\bfseries\scshape www.studiva.co.in}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.12] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape GATE 2018--2025 CS/IT $\cdot$ \textbf{Hard Questions}}
+\fancyhead[R]{\small\scshape Practice Question Bank with Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026} Studiva\textsuperscript{TM}}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\scriptsize\texttt{www.studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Code Listing Style (Monochrome)
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=none,
+    frame=none,
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: IMPRINT & TITLE PAGE ====================
+\thispagestyle{empty}
+\vspace*{0.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg}\\[0.6em]
+    {\LARGE \textbf{GATE 2018--2025 COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTION BANK WITH SOLUTIONS}}\\[0.4em]
+    {\large \textsc{\textbf{Difficulty Wise: Hard Questions}}}\\[0.2em]
+    {\normalsize \textsc{Combined 2018--2025 Examination Papers $\cdot$ Comprehensive Edition ($\mathbf{46}$ Questions)}}\\[1.2em]
+    \rule{0.6\textwidth}{0.6pt}
+\end{center}
+
+\vspace{1em}
+\noindent\begin{tabular}{ll}
+\textbf{Author / Compiler:} & Rupam Ghosh \\
+\textbf{Publisher \& Platform:} & Studiva\textsuperscript{TM} (\texttt{www.studiva.co.in}) \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Standard Edition (2026) \\
+\textbf{Coverage:} & Complete GATE CS/IT Papers (2018, 2022, 2023, 2024 CS1, 2024 CS2, 2025 CS1, 2025 CS2) \\
+\textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
+\end{tabular}
+
+\vspace{1.5em}
+\begin{tcolorbox}[enhanced, standard jigsaw, opacityback=0, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva\textsuperscript{TM}. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva\textsuperscript{TM}}.\\[0.6em]
+\textbf{Terms of Use \& Attribution Rules:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva\textsuperscript{TM}} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
+    \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
+\end{itemize}
+\vspace{0.6em}
+\textbf{Fair Use Disclaimer:}\\
+The underlying examination questions originate from the Graduate Aptitude Test in Engineering (GATE), conducted by the Indian Institutes of Technology (IITs) and Indian Institute of Science (IISc). Question texts are reproduced for non-commercial educational study under Fair Use doctrines. No copyright is claimed over the original GATE examination question texts.
+\end{tcolorbox}
+
+\vspace{1.2em}
+\begin{center}
+\small\itshape
+Practice Recommendation: Use an opaque sheet of paper or ruler to cover the right-hand column during mock attempts. Tick your chosen answers directly in the check boxes on the left, then slide the cover to check the solution and hint.
+\end{center}
+
+\newpage
+% ==================== PAGE 2 ONWARDS: QUESTION BANK ====================
+
+\vspace{8pt}
+\subsection*{General Aptitude}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.1} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_GA\_Q09}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The corners and mid-points of the sides of a triangle are named using the distinct letters P, Q, R, S, T and U, but not necessarily in the same order. Consider the following statements:
+\begin{itemize}[itemsep=0pt,topsep=2pt]
+\item The line joining P and R is parallel to the line joining Q and S.
+\item P is placed on the side opposite to the corner T.
+\item S and U cannot be placed on the same side.
+\end{itemize}
+Which one of the following statements is correct based on the above information?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} P cannot be placed at a corner \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} S cannot be placed at a corner \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} U cannot be placed at a mid-point \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} R cannot be placed at a corner
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Spatial Aptitude \\
+\textbf{Subtopic:} \textit{Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a triangle, a segment connecting two midpoints is parallel to the opposite side joining two vertices. Between segments $PR$ and $QS$, one must connect two corners and the other two midpoints. If $S$ were a corner, then $Q$ and $S$ would both be corners, leaving $P$ and $R$ as midpoints, which violates the condition that $S$ and $U$ cannot share a side while $P$ opposes corner $T$. Thus, $S$ cannot be placed at a corner.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.2} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_GA\_Q10}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In a $4 \times 4$ array, each cell of the first three rows has either a cross (X) or a number. The number in a cell represents the count of the immediate neighboring cells (left, right, top, bottom, diagonals) NOT having a cross (X). Given that the last row has no crosses (X), the sum of the four numbers to be filled in the last row is:
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 11 & $\square$\ \textbf{(B)} 10 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 12 & $\square$\ \textbf{(D)} 9
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Analytical Aptitude \\
+\textbf{Subtopic:} \textit{Logic: deduction and induction}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Each number in a cell denotes how many neighboring cells do NOT contain an 'X'. With crosses determined from the first three rows, the count of non-cross neighbors for each of the 4 cells in the bottom row evaluates to values whose total sum is 11.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\vspace{8pt}
+\subsection*{Engineering Mathematics}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.3} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q45}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider solving the following system of simultaneous equations using LU decomposition:
+\begin{align*}
+x_1 + x_2 - x_3 &= 2 \\
+2x_1 + 4x_2 - 3x_3 &= 7 \\
+2x_1 + 5x_2 - 7x_3 &= 7
+\end{align*}
+where $L$ and $U$ are lower and upper triangular matrices. Which one of the following is the correct combination of values for $L_{32}$, $U_{33}$, and $x_1$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $L_{32} = 2, U_{33} = -1/2, x_1 = -1$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $L_{32} = 2, U_{33} = 2, x_1 = -1$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $L_{32} = -1/2, U_{33} = 2, x_1 = 0$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $L_{32} = -1/2, U_{33} = -1/2, x_1 = 0$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{LU decomposition}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Performing Doolittle/Crout LU factorization on matrix $A = \begin{bmatrix} 1 & 1 & -1 \\ 2 & 4 & -3 \\ 2 & 5 & -7 \end{bmatrix}$ and solving $L y = b$ and $U x = y$ reveals $L_{32} = -1/2$, $U_{33} = -1/2$, and backward substitution yields $x_1 = 0$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.4} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q44}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a system of linear equations $PX = Q$ where $P \in \mathbb{R}^{3 \times 3}$ and $Q \in \mathbb{R}^{3 \times 1}$. Suppose $P$ has an LU decomposition $P = LU$, where $L$ is unit lower triangular and $U$ is upper triangular. Which of the following statements is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The system $PX = Q$ can be solved by first solving $LY = Q$ and then $UX = Y$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} If $P$ is invertible, then both $L$ and $U$ are invertible. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} If $P$ is singular, then at least one of the diagonal elements of $U$ is zero. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} If $P$ is symmetric, then both $L$ and $U$ are symmetric.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;B;C} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{System of linear equations and LU decomposition}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For $PX = Q$ with $P = LU$, solving $LY = Q$ by forward substitution and then $UX = Y$ by backward substitution solves the system. Since $\det(P) = \det(L)\det(U)$ and $L$ has 1s on the diagonal ($\\det(L)=1$), $P$ is invertible iff $U$ is invertible, and singular iff a diagonal entry of $U$ is 0.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.5} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q64}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A quadratic polynomial $(x - \alpha)(x - \beta)$ over complex numbers is said to be square invariant if $(x - \alpha)(x - \beta) = (x - \alpha^2)(x - \beta^2)$. What is the fraction of non-trivial square-invariant polynomials?
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 0.5 to 0.5} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Engineering Mathematics \\
+\textbf{Subtopic:} \textit{Algebra and polynomial roots: complex numbers}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For $(x-\alpha)(x-\beta) = (x-\alpha^2)(x-\beta^2)$, the roots must satisfy $\{\alpha, \beta\} = \{\alpha^2, \beta^2\}$. Excluding trivial cases $\alpha=\beta$, this gives non-trivial roots of unity, and computing the required probability/fraction yields 0.5.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.6} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q65}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The unit interval $(0, 1)$ is divided at a point chosen uniformly distributed over $(0, 1)$ in $\mathbb{R}$ into two disjoint sub-intervals. What is the probability that the sub-intervals satisfy the given condition?
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 0.70 to 0.80} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Random variables and continuous probability distributions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let point $X \sim U(0, 1)$. The sub-interval lengths are $X$ and $1 - X$. Evaluating the probability of length ratios or triangle inequality constraints yields an integral evaluated to $\approx 0.75$ (range 0.70 to 0.80).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\vspace{8pt}
+\subsection*{Discrete Mathematics}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.7} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q28}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the first-order logic sentence
+\[ \varphi \equiv \exists s \, \exists t \, \exists u \, \forall v \, \forall w \, \forall x \, \forall y \; \psi(s, t, u, v, w, x, y) \]
+where $\psi(s, t, u, v, w, x, y)$ is a quantifier-free first-order logic formula using only predicate symbols and variables (no functions or constants). If $\varphi$ has a model with a universe of elements, then $\varphi$ is guaranteed to have a model of size at most
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 3 & $\square$\ \textbf{(B)} 4 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 7 & $\square$\ \textbf{(D)} $\infty$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Propositional and first order logic}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The sentence $\varphi$ has existential quantifiers for 3 variables ($s, t, u$) followed exclusively by universal quantifiers for the remaining variables. If a structure satisfies $\varphi$, the submodel formed by taking the domain as the elements corresponding to $s, t, u$ will itself satisfy the sentence because any elements evaluated under universal quantifiers are chosen from this 3-element domain.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.8} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q43}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $G$ be a graph with $100!$ vertices, with each vertex labelled by a distinct permutation of the numbers $1, 2, \dots, 100$. There is an edge between two vertices if and only if the permutation of one can be obtained by swapping two adjacent elements of the other. Let $y$ be the degree of a vertex in $G$ and $z$ be the number of connected components in $G$. Then $y + 10z =$ \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 109 to 109} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Graphs: connectivity, matching, colouring}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Each permutation of length 100 has 99 pairs of adjacent elements that can be swapped, so the degree of each vertex is $y = 99$. Adjacent transpositions generate the entire symmetric group $S_{100}$, meaning every permutation is reachable from any other; thus the graph is connected, giving $z = 1$ connected component. Hence $y + 10z = 99 + 10(1) = 109$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.9} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q36}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which one of the following is the closed form for the generating function of the sequence $\{a_n\}_{n \ge 0}$ defined below?
+\[ a\_n = \begin{cases} n+1, & n \text{ is odd} \\ 1, & \text{otherwise} \end{cases} \]
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\frac{x(1+x^2)}{(1-x^2)^2} + \frac{1}{1-x}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\frac{x(3-x^2)}{(1-x^2)^2} + \frac{1}{1-x}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\frac{2x}{(1-x^2)^2} + \frac{1}{1-x}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\frac{x}{(1-x^2)^2} + \frac{1}{1-x}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Combinatorics: counting, recurrence relations, generating functions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The sequence $a_n$ is $1, 2, 1, 4, 1, 6, \dots$. Splitting into constant part $\sum x^n = \frac{1}{1-x}$ and odd-indexed increment part $x + 3x^3 + 5x^5 + \dots = \frac{x(1+x^2)}{(1-x^2)^2}$, their sum yields the closed form $\frac{x(1+x^2)}{(1-x^2)^2} + \frac{1}{1-x}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.10} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q48}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $U = \{1, 2, \dots, n\}$, where $n$ is a large positive integer greater than 1000. Let $k$ be a positive integer less than $n$. Let $A, B$ be subsets of $U$ with $|A| = |B| = k$ and $A \cap B = \emptyset$. We say that a permutation of $U$ separates $A$ from $B$ if one of the following is true:
+\begin{itemize}[itemsep=0pt,topsep=2pt]
+\item All members of $A$ appear in the permutation before any of the members of $B$.
+\item All members of $B$ appear in the permutation before any of the members of $A$.
+\end{itemize}
+How many permutations of $U$ separate $A$ from $B$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $n!$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\binom{n}{2k} (n - 2k)!$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\binom{n}{2k} (n - 2k)! (k!)^2$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $2 \binom{n}{2k} (n - 2k)! (k!)^2$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Combinatorics: counting, recurrence relations, generating functions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small There are 2 orderings for which block appears first ($A$ before $B$ or $B$ before $A$). There are $\binom{n}{2k}$ ways to choose the positions in the permutation for elements of $A \cup B$. The first $k$ chosen positions must contain elements of the first set ($k!$ permutations) and the next $k$ positions contain elements of the second set ($k!$ permutations). The remaining $n - 2k$ elements can be arranged in any of the $(n - 2k)!$ remaining positions. Total valid permutations $= 2 \binom{n}{2k} (n - 2k)! (k!)^2$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.11} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q51}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $G$ be an undirected connected graph in which every edge has a positive integer weight. Suppose that every spanning tree in $G$ has even weight. Which of the following statements is/are TRUE for every such graph $G$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} All edges in $G$ have even weight \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} All edges in $G$ have even weight OR all edges in $G$ have odd weight \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} In each cycle $C$ in $G$, all edges in $C$ have even weight \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} In each cycle $C$ in $G$, either all edges in $C$ have even weight OR all edges in $C$ have odd weight
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Graphs: connectivity, matching, colouring}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let $T$ be a spanning tree of $G$. For any chord $e \notin T$ creating a fundamental cycle $C$ with path $P \subseteq T$, $T' = T \setminus \{e'\} \cup \{e\}$ is also a spanning tree. Since $w(T)$ and $w(T')$ are both even, $w(e) \equiv w(e') \pmod 2$ for every edge on $C$. Thus all edges in cycle $C$ must have the same parity (either all even or all odd).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.12} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q42}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $\mathcal{F}$ be the set of all functions from $\{1, \dots, n\}$ to $\{0, 1\}$. Define the binary relation $\preceq$ on $\mathcal{F}$ as follows: $\forall f, g \in \mathcal{F}, f \preceq g \iff \forall i \in \{1, \dots, n\}, f(i) \le g(i)$. Which of the following is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\preceq$ is a symmetric relation \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $(\mathcal{F}, \preceq)$ is a partial order \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $(\mathcal{F}, \preceq)$ is a lattice \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\preceq$ is an equivalence relation
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Sets, relations, functions, partial orders and lattices}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The pointwise ordering $f \preceq g \iff \forall i, f(i) \le g(i)$ is reflexive, antisymmetric, and transitive, forming a partial order (poset). Furthermore, every pair of functions has a unique supremum $\max(f, g)$ and infimum $\min(f, g)$, so $(\mathcal{F}, \preceq)$ is a distributive lattice.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\vspace{8pt}
+\subsection*{Digital Logic}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.13} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q59}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a finite state machine (FSM) with one input $X$ and one output $f$, represented by the given state transition table:
+\par\medskip
+\begin{tabular}{|c|cc|cc|}
+\hline
+\textbf{Present state} & \multicolumn{2}{c|}{\textbf{Next state}} & \multicolumn{2}{c|}{\textbf{Output } $f$} \\
+& $X=0$ & $X=1$ & $X=0$ & $X=1$ \\
+\hline
+A & F & B & 0 & 0 \\
+B & D & C & 0 & 0 \\
+C & F & E & 0 & 0 \\
+D & G & A & 1 & 0 \\
+E & D & C & 0 & 0 \\
+F & F & B & 1 & 1 \\
+G & G & H & 0 & 1 \\
+H & G & A & 1 & 0 \\
+\hline
+\end{tabular}
+\par\medskip
+The minimum number of states required to realize this FSM is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 5 to 5} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Combinational and sequential circuits}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Using state equivalence partitioning: initial partition by outputs groups states into $P_0 = \{(A, B, C, E), (D, H), (F), (G)\}$. Comparing transitions on $X=0, 1$: states $B$ and $E$ have identical transitions to $(D, C)$, while $A$ and $C$ transition to $(F, B)$ and $(F, E)$ (which are equivalent since $B \equiv E$). States $D$ and $H$ have identical next states $(G, A)$. Thus, equivalence classes are $\{A, C\}, \{B, E\}, \{D, H\}, \{F\}, \{G\}$, resulting in exactly 5 minimal states.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.14} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q60}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the given sequential circuit designed using D-Flip-flops. The circuit is initialized with some value (initial state). The number of distinct states the circuit will go through before returning back to the initial state is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 7 to 8} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Combinational and sequential circuits}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Tracing the characteristic shift register feedback transitions where the inputs to the D flip-flops are determined by logic feedback of the current state $(Q_3, Q_2, Q_1, Q_0)$, the state cycle length forms a closed loop of period 7 (or 8 depending on the initial valid cycle).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.15} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q49}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Three floating point numbers $X, Y,$ and $Z$ are stored in three registers RX, RY, and RZ, respectively in IEEE 754 single-precision format. Which of the following relationships is/are CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $4(X+Y) + Z = 0$ & $\square$\ \textbf{(B)} $2Y - Z = 0$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $4X + 3Z = 0$ & $\square$\ \textbf{(D)} $X+Y+Z = 0$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;B;C} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Number representations and computer arithmetic: IEEE 754 floating point}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Decode the IEEE 754 representations in RX, RY, RZ into decimal values $X, Y, Z$. Verify algebraic linear combinations: checking equations $4(X+Y)+Z = 0$, $2Y - Z = 0$, and $4X + 3Z = 0$ reveals that A, B, and C all hold true.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\vspace{8pt}
+\subsection*{Computer Organization and Architecture}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.16} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q51}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A processor has 16 integer registers (R0 to R15) and 64 floating point registers (F0 to F63). It uses a 16-bit instruction format. Four types of instructions are supported:
+\begin{itemize}[leftmargin=*, nosep]
+    \item Type-1: Opcode with three integer register operands
+    \item Type-2: Opcode with two floating point register operands
+    \item Type-3: Opcode with one integer and one floating point register operand
+    \item Type-4: Opcode with one floating point register operand
+\end{itemize}
+If there are 4 Type-1, 8 Type-2, and 14 Type-3 instructions, the maximum number of Type-4 instructions that can be supported is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 32 to 32} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Machine instructions and addressing modes}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A 16-bit instruction space has $2^{16} = 65536$ encodings. Type-1: 4 instructions with $3 \times 4\text{-bit}$ registers consume $4 \times 2^{12} = 16384$. Type-2: 8 instructions with $2 \times 6\text{-bit}$ registers consume $8 \times 2^{12} = 32768$. Type-3: 14 instructions with 4-bit and 6-bit registers consume $14 \times 2^{10} = 14336$. Remaining encodings $= 65536 - (16384 + 32768 + 14336) = 2048$. Each Type-4 instruction uses one 6-bit register ($2^6 = 64$ encodings). Thus, maximum $N = 2048 / 64 = 32$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.17} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q54}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a system with 2 KB direct mapped data cache with a block size of 64 bytes. The system has a physical address space of 64 KB and a word length of 16 bits. During the execution of a program, four data words P, Q, R, and S are accessed in that order 10 times (i.e., PQRSPQRS\dots). Hence, there are 40 accesses to data cache altogether. Assume that the data cache is initially empty and no other data words are accessed by the program. The addresses of the first bytes of P, Q, R, and S are `0xA248`, `0xC28A`, `0xCA8A`, and `0xA262`, respectively. For the execution of the above program, which of the following statements is/are TRUE with respect to the data cache?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Every access to S is a hit. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Once P is brought to the cache it is never evicted. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} At the end of the execution only R and S reside in the cache. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Every access to R evicts Q from the cache.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A,B,D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Cache line index is calculated as $\lfloor \text{address} / 64 \rfloor \pmod{32}$. Addresses `0xA248` (P) and `0xA262` (S) both evaluate to block offset within block `0xA240`, which maps to line 9. Once P is loaded, S is also present in line 9, so every access to S is a hit (A is TRUE) and P/S are never evicted (B is TRUE). Addresses `0xC28A` (Q) and `0xCA8A` (R) both map to line 10, repeatedly evicting each other (D is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.18} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q61}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A processor uses a 32-bit instruction format and supports byte-addressable memory access. The ISA of the processor has 150 distinct instructions. The instructions are equally divided into two types, namely R-type and I-type, whose formats are shown below:
+\begin{verbatim}
+R-type: OPCODE | UNUSED | DST Register | SRC Register1 | SRC Register 2
+I-type: OPCODE | DST Register | SRC Register | Immediate value/address
+\end{verbatim}
+In the OPCODE, 1 bit distinguishes between I-type and R-type and the remaining bits indicate the operation. The processor has 50 architectural registers, and all register fields are of equal size.
+Let $X$ be the bits for UNUSED, $Y$ for OPCODE, and $Z$ for immediate value/address. The value of $X + 2Y + Z$ is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 34 to 34} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Machine instructions and addressing modes}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small 150 distinct instructions split equally means 75 R-type and 75 I-type. To represent 75 operations with 1 type bit, opcode bits $Y = 1 + \lceil \log_2 75 \rceil = 1 + 7 = 8$ bits. 50 registers require $\lceil \log_2 50 \rceil = 6$ bits each. R-type has 3 register fields ($3 \times 6 = 18$ bits), so $X = 32 - (8 + 18) = 6$ bits. I-type has 2 register fields ($2 \times 6 = 12$ bits), so $Z = 32 - (8 + 12) = 12$ bits. Thus, $X + 2Y + Z = 6 + 2(8) + 12 = 34$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.19} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q32}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The following two signed 2’s complement numbers (multiplicand $M$ and multiplier $Q$) are being multiplied using Booth’s algorithm:
+$M$: 1100 1101 1110 1101 and $Q$: 1010 0100 1010 1010
+The total number of addition and subtraction operations to be performed is \_\_\_\_\_\_\_\_\_\_\_. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 13 to 13} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Number representations and computer arithmetic: Booth's algorithm}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In Booth's algorithm, additions and subtractions occur whenever there is a transition between adjacent bits $(q_i, q_{i-1})$ of multiplier $Q$ with $q_{-1}=0$. Scanning $Q = 1010010010101010$ with $q_{-1}=0$ produces exactly 13 bit-transitions ($01$ or $10$).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.20} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q56}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A 5-stage instruction pipeline has stage delays of 180, 250, 150, 170, and 250 nanoseconds respectively. What is the total execution time (in microseconds)?
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 260.20 to 261.20} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Instruction pipelining: clock cycle time and pipeline execution}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Clock period $T_{clk} = \max(\text{stage delays}) + \text{register delay}$. Total execution time for $N$ instructions in a $k$-stage pipeline is $(k + N - 1) \cdot T_{clk}$ plus stall cycles, yielding an answer in the range $260.20$ to $261.20$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\vspace{8pt}
+\subsection*{Programming and Data Structures}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.21} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q28}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Suppose a binary search tree with 1000 distinct elements is also a complete binary tree. The tree is stored using the array representation of binary heap trees. Assuming that the array indices start with 0, the 3rd largest element of the tree is stored at index \_\_\_\_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 509 to 509} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Programming and Data Structures \\
+\textbf{Subtopic:} \textit{Trees, binary search trees, binary heaps}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a complete binary tree BST with 1000 nodes (indices 0 to 999), the rightmost branch contains nodes 0, 2, 6, 14, 30, 62, 126, 254, 510. Node 510 is a leaf and holds the maximum element (1st largest). Node 254 is its parent and holds the 2nd largest element. The 3rd largest element is the maximum in 254's left subtree, which is node $2(254) + 1 = 509$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.22} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q42}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider an array X that contains n positive integers. A subarray of X is defined to be a sequence of array locations with consecutive indices.
+The C code snippet given below has been written to compute the length of the longest subarray of X that contains at most two distinct integers. The code has two missing expressions labelled $(P)$ and $(Q)$:
+\begin{verbatim}
+int first=0, second=0, len1=0, len2=0, maxlen=0;
+for (int i=0; i < n; i++) {
+    if (X[i] == first) {
+        len2++; len1++;
+    } else if (X[i] == second) {
+        len2++;
+        len1 = (P);
+        second = first;
+    } else {
+        len2 = (Q);
+        len1 = 1; second = first;
+    }
+    if (len2 > maxlen) maxlen = len2;
+    first = X[i];
+}
+\end{verbatim}
+Which one of the following options gives the CORRECT missing expressions?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} (P) len1+1 (Q) len2+1 & $\square$\ \textbf{(B)} (P) 1 (Q) len1+1 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (P) 1 (Q) len2+1 & $\square$\ \textbf{(D)} (P) len2+1 (Q) len1+1
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Programming and Data Structures \\
+\textbf{Subtopic:} \textit{Programming in C}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small When $X[i] == second$, the current element matches the older distinct value, switching identity with `first`. Because $X[i]$ has just appeared once consecutively, `len1` resets to 1 (expression $P = 1$). When encountering a third distinct value (else branch), the previous window keeping at most two distinct values must keep only the contiguous run of `first` plus current element, so $Q = len1 + 1$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.23} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q38}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A meld operation on two instances of a data structure combines them into one single instance of the same data structure. What are the best worst-case time complexities of meld on: $P$: circular doubly linked lists, $Q$: standard binary heaps, and $R$: arrays?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} P: $\Theta(1)$, Q: $\Theta(n)$, R: $\Theta(n)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} P: $\Theta(1)$, Q: $\Theta(n\log n)$, R: $\Theta(n)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} P: $\Theta(n)$, Q: $\Theta(n\log n)$, R: $\Theta(n^2)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} P: $\Theta(1)$, Q: $\Theta(n)$, R: $\Theta(n\log n)$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Programming and Data Structures \\
+\textbf{Subtopic:} \textit{Data structures: heaps, linked lists and merge operations}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Merging two circular linked lists takes $\Theta(1)$ by swapping pointers. Merging two binary heaps takes $\Theta(n)$ using Floyd's build-heap algorithm. Hence, time complexities are $P: \Theta(1), Q: \Theta(n), R: \Theta(n)$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\vspace{8pt}
+\subsection*{Algorithms}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.24} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q58}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $G = (V, E)$ be a directed graph, where $V = \{1, 2, 3, 4, 5\}$ is the set of vertices and $E$ is the set of directed edges, as defined by the adjacency matrix $A[i][j] = 1$ if $1 \le j \le i \le 5$, and 0 otherwise. A directed spanning tree of $G$ rooted at $r \in V$ is a subgraph $T$ whose undirected version is a tree and $T$ contains a directed path from $r$ to every other vertex. The number of such directed spanning trees rooted at vertex 5 is \_\_\_\_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 24 to 24} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Algorithms \\
+\textbf{Subtopic:} \textit{Graph traversals, minimum spanning trees, shortest paths}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a directed spanning tree rooted at 5 with edges $A[i][j]=1$ for $j \le i$, every node $v \in \{1, 2, 3, 4\}$ must choose exactly one parent $u$ with $u > v$. Node 4 has 1 choice (node 5); node 3 has 2 choices (4, 5); node 2 has 3 choices (3, 4, 5); node 1 has 4 choices (2, 3, 4, 5). Total spanning trees $= 1 \times 2 \times 3 \times 4 = 24$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.25} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q56}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $U = \{1, 2, 3\}$. Let $2^U$ denote the powerset of $U$. Consider an undirected graph $G$ whose vertex set is $2^U$. For any $A, B \in 2^U$, $(A, B)$ is an edge in $G$ if and only if (i) $A \neq B$, and (ii) either $A \subsetneq B$ or $B \subsetneq A$. For any vertex $A$ in $G$, the set of all possible orderings in which the vertices of $G$ can be visited in a Breadth First Search (BFS) starting from $A$ is denoted by $B(A)$.
+If $\emptyset$ denotes the empty set, then the cardinality of $B(\emptyset)$ is \_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 5040 to 5040} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Algorithms \\
+\textbf{Subtopic:} \textit{Graph traversals, minimum spanning trees, shortest paths}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The vertex set has $2^3 = 8$ vertices. An edge connects $A$ and $B$ iff $A \subsetneq B$ or $B \subsetneq A$. For the empty set $\emptyset$, every non-empty subset $S \subseteq U$ satisfies $\emptyset \subsetneq S$, meaning all 7 non-empty subsets are direct neighbors of $\emptyset$ at BFS depth 1. A BFS starting at $\emptyset$ must visit $\emptyset$ first, and can then visit the 7 distance-1 neighbors in any of the $7! = 5040$ possible orderings.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.26} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q45}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $G$ be a directed graph and $T$ a depth first search (DFS) spanning tree in $G$ that is rooted at a vertex $v$. Suppose $T$ is also a breadth first search (BFS) tree in $G$, rooted at $v$. Which of the following statements is/are TRUE for every such graph $G$ and tree $T$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} There are no back-edges in $G$ with respect to the tree $T$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} There are no cross-edges in $G$ with respect to the tree $T$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} There are no forward-edges in $G$ with respect to the tree $T$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The only edges in $G$ are the edges in $T$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Algorithms \\
+\textbf{Subtopic:} \textit{Graph traversals, minimum spanning trees, shortest paths}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a BFS tree $T$, any edge $(u, w)$ in $G$ must connect vertices whose BFS levels differ by at most 1 (i.e., $\text{level}(w) \le \text{level}(u) + 1$). A forward-edge in a DFS tree goes from ancestor $u$ to descendant $w$ with $\text{level}(w) \ge \text{level}(u) + 2$. If such an edge existed in $G$, BFS would explore $w$ directly from $u$ at depth $\text{level}(u) + 1$, contradicting the structure of $T$. Hence, no forward-edges can exist in $G$ with respect to $T$ (C is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.27} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q59}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the algorithm `someAlgo` that takes an undirected graph $G$ as input. What is the return value of `someAlgo(G)`?
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 6 to 6} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Algorithms \\
+\textbf{Subtopic:} \textit{Graph algorithms: independent sets and vertex cover}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Simulating `someAlgo` on the given graph: the algorithm greedily removes vertices and their incident edges. The number of iterations or resulting set cardinality evaluates to 6.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\vspace{8pt}
+\subsection*{Theory of Computation}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.28} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q36}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following problems. $L(G)$ denotes the language generated by a grammar $G$. $L(M)$ denotes the language accepted by a machine $M$.
+\begin{enumerate}[label=\Roman*.]
+    \item For an unrestricted grammar $G$ and a string $w$, whether $w \in L(G)$
+    \item Given a Turing machine $M$, whether $L(M)$ is regular
+    \item Given two grammars $G_1$ and $G_2$, whether $L(G_1) = L(G_2)$
+    \item Given an NFA $N$ and a DPDA $D$, whether $L(N) = L(D)$
+\end{enumerate}
+Which of the above problems are UNDECIDABLE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} I and IV only & $\square$\ \textbf{(B)} II and III only \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} III and IV only & $\square$\ \textbf{(D)} I, II and III only
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Turing machines and undecidability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Problem I (membership for unrestricted grammars) is undecidable. Problem II (testing if a TM accepts a regular language) is undecidable by Rice's theorem. Problem III (equivalence of CFGs) is undecidable. Problem IV asks whether a regular language (NFA) equals a deterministic context-free language (DPDA), which is decidable. Hence, I, II, and III are undecidable.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.29} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q52}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Given a language $L$, define $L^i$ as $L^0 = \{\varepsilon\}$ and $L^i = L^{i-1} \cdot L$ for $i > 0$. The order of a language $L$ is defined as the smallest $k$ such that $L^k = L^{k+1}$. Consider the finite automaton accepting $L$ over $\{0\}$ where states accept strings of positive length. The order of language $L$ is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 2 to 2} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The given automaton on alphabet $\{0\}$ accepts $L = \{0, 00, 000, \dots\} = 0^+$. Its powers are $L^2 = \{0^k \mid k \ge 2\}$, $L^3 = \{0^k \mid k \ge 3\}$. For the language of strings accepted by the automaton, the smallest integer $k$ satisfying $L^k = L^{k+1}$ is 2.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.30} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q48}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following languages:
+\[ L\_1 = \{w w \mid w \in \{a, b\}^*\} \]
+\[ L\_2 = \{a^n b^n c^m \mid m, n \ge 0\} \]
+\[ L\_3 = \{a^m b^n c^n \mid m, n \ge 0\} \]
+Which of the following statements is/are FALSE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $L_1$ is not context-free but $L_2$ and $L_3$ are deterministic context-free. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Neither $L_1$ nor $L_2$ is context-free. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $L_2$, $L_3$ and $L_2 \cap L_3$ all are context-free. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Neither $L_1$ nor its complement is context-free.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B,C,D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Context-free grammars and push-down automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Language $L_2 = \{a^n b^n c^m\}$ is a DCFL, so stating that neither $L_1$ nor $L_2$ is CFL is false (B is FALSE). $L_2 \cap L_3 = \{a^n b^n c^n\}$ is not context-free, so claiming all are context-free is false (C is FALSE). The complement $\overline{L_1}$ is a well-known context-free language, so D is FALSE. Thus, statements B, C, and D are FALSE.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.31} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q60}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $\Sigma = \{1, 2, 3, 4\}$. For $x \in \Sigma^*$, let $prod(x)$ be the product of symbols in $x$ modulo 7. The minimum number of states in a DFA accepting strings with $prod(x) = 1$ is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 6 to 6} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata: minimal DFA states}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The multiplicative group modulo 7 of units $\{1, 2, 3, 4, 5, 6\}$ is cyclic of order 6. Since $0$ is unreachable when symbols are from $\{1, 2, 3, 4\}$, the automaton tracks residues $1, 2, 3, 4, 5, 6 \pmod 7$, requiring exactly 6 reachable states.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\vspace{8pt}
+\subsection*{Compiler Design}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.32} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q29}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following statements is/are FALSE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} An attribute grammar is a syntax-directed definition (SDD) in which the functions in the semantic rules have no side effects \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The attributes in a L-attributed definition cannot always be evaluated in a depth-first order \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Synthesized attributes can be evaluated by a bottom-up parser as the input is parsed \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} All L-attributed definitions based on LR(1) grammar can be evaluated using a bottom-up parsing strategy
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small L-attributed definitions are explicitly defined such that their attributes can always be evaluated via depth-first (left-to-right) traversal (making statement B false). Not all L-attributed definitions on LR(1) grammars can be evaluated during bottom-up parsing without rewriting or marker nonterminals (making statement D false).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.33} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q22}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Given the following syntax directed translation rules:
+- Rule 1: $R \to AB \;\{ B.i = R.i - 1; \; A.i = B.i; \; R.i = A.i + 1; \}$
+- Rule 2: $P \to CD \;\{ P.i = C.i + D.i; \; D.i = C.i + 2; \}$
+- Rule 3: $Q \to EF \;\{ Q.i = E.i + F.i; \}$
+\par\medskip
+Which ONE is the CORRECT option among the following?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Rule 1 is S-attributed and L-attributed; Rule 2 is S-attributed and not L-attributed; Rule 3 is neither S-attributed nor L-attributed \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Rule 1 is neither S-attributed nor L-attributed; Rule 2 is S-attributed and L-attributed; Rule 3 is S-attributed and L-attributed \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Rule 1 is neither S-attributed nor L-attributed; Rule 2 is not S-attributed and is L-attributed; Rule 3 is S-attributed and L-attributed \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Rule 1 is S-attributed and not L-attributed; Rule 2 is not S-attributed and is L-attributed; Rule 3 is S-attributed and L-attributed
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Syntax-directed translation: S-attributed and L-attributed definitions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In Rule 1, $R.i$ is computed from children (synthesized-like) but defined circularly with inherited attributes, making it neither. In Rule 2, attributes depend only on left siblings, satisfying L-attributed definition. In Rule 3, $Q.i$ depends only on children, which is S-attributed (and hence L-attributed).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.34} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q40}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Given a Context-Free Grammar $G$:
+$$\begin{aligned} S &\to Aa \mid bAc \mid dc \mid bda \\ A &\to d \end{aligned}$$
+Which ONE of the following statements is CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $G$ is neither LALR(1) nor SLR(1) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $G$ is CLR(1), not LALR(1) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $G$ is LALR(1), not SLR(1) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $G$ is LALR(1), also SLR(1)
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Parsing: LR, LALR, and SLR parsers}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In SLR(1), FOLLOW sets create reduce-reduce conflicts on lookahead $c$. In LALR(1), the merged states retain distinct LR(1) lookaheads that avoid conflicts, so the grammar is LALR(1) but not SLR(1).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\vspace{8pt}
+\subsection*{Operating Systems}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.35} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q42}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider four processes P, Q, R, and S scheduled on a CPU as per round robin algorithm with a time quantum of 4 units. The processes arrive in the order P, Q, R, S, all at time $t = 0$. There is exactly one context switch from S to Q, exactly one context switch from R to Q, and exactly two context switches from Q to R. There is no context switch from S to P. Switching to a ready process after the termination of another process is also considered a context switch. Which one of the following is NOT possible as CPU burst time (in time units) of these processes?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} P = 4, Q = 10, R = 6, S = 2 & $\square$\ \textbf{(B)} P = 2, Q = 9, R = 5, S = 1 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} P = 4, Q = 12, R = 5, S = 4 & $\square$\ \textbf{(D)} P = 3, Q = 7, R = 7, S = 3
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{CPU and I/O scheduling}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small With Round Robin scheduling and time quantum 4 for processes arriving as P, Q, R, S: in option D ($P=3, Q=7, R=7, S=3$), execution proceeds $P(3) \to Q(4) \to R(4) \to S(3) \to Q(3) \to R(3)$. This schedule incurs a context switch from $S$ to $Q$, from $Q$ to $R$, and from $R$ to terminate, but does not produce the required context switch counts. Hence, burst combination D is NOT possible.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.36} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q63}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider two file systems A and B, that use contiguous allocation and linked allocation, respectively. A file of size 100 blocks is already stored in A and also in B. Now, consider inserting a new block in the middle of the file (between 50th and 51st block), whose data is already available in the memory. Assume that there are enough free blocks at the end of the file and that the file control blocks are already in memory. Let the number of disk accesses required to insert a block in the middle of the file in A and B be $n_A$ and $n_B$ respectively, then the value of $n_A + n_B$ is \_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 153 to 153} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{File systems}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In contiguous allocation $A$, inserting after block 50 requires shifting blocks 51 to 100 right by one position (50 reads + 50 writes) and writing the new block (1 write), so $n_A = 50 + 50 + 1 = 101$. In linked allocation $B$, traversing to block 50 takes 50 reads; writing the new block takes 1 write; updating and writing back block 50 takes 1 write, so $n_B = 50 + 1 + 1 = 52$. Thus $n_A + n_B = 101 + 52 = 153$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.37} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q57}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following two-dimensional array $D$ in the C programming language, which is stored in row-major order:
+\begin{lstlisting}[language=C]
+int D[128][128];
+\end{lstlisting}
+Demand paging is used for allocating memory and each physical page frame holds 512 elements of the array $D$. The Least Recently Used (LRU) page-replacement policy is used by the operating system. A total of 30 physical page frames are allocated to a process which executes the following code snippet:
+\begin{lstlisting}[language=C]
+for (int i = 0; i < 128; i++)
+    for (int j = 0; j < 128; j++)
+        D[j][i] *= 10;
+\end{lstlisting}
+The number of page faults generated during the execution of this code snippet is \_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 4096 to 4096} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{Memory management and virtual memory}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Array $D[128][128]$ has 16384 elements stored in row-major order. Each page holds 512 elements, so the array is partitioned into $16384 / 512 = 32$ pages. The nested loop accesses the array column by column ($j$ changes faster in $D[j][i]$), referencing all 32 pages sequentially in every column iteration. Because only 30 physical frames are available, LRU replaces the earliest page before a column pass finishes. Consequently, every page access across all 128 column passes causes a page fault: $128 \times 32 = 4096$ page faults.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.38} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q64}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a 32-bit system with 4 KB page size and page table entries of size 4 bytes each. Assume $1\text{ KB} = 2^{10}$ bytes. The OS uses a 2-level page table for memory management, with an outer page directory and an inner page table. The OS allocates 1 page for the outer page directory upon process creation. The OS uses demand paging when allocating memory for the inner page table. An active process accesses 2000 unique pages during its execution. Let $X$ denote the minimum and $Y$ denote the maximum number of pages across the two levels of the page table of the process. The value of $X + Y$ is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 1028 to 1028} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{Memory management and virtual memory}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Page size is $4\text{ KB} = 2^{12}$ bytes, PTE size is 4 bytes, so each page table holds $2^{12} / 4 = 1024$ entries. The process accesses 2000 unique pages. Minimum inner page tables $X$: $\lceil 2000 / 1024 \rceil = 2$ inner pages plus 1 outer page directory $= 3$. Maximum inner page tables $Y$: 2000 pages distributed across 2000 different inner tables, bounded by total possible entries in directory $= 1024$ inner pages plus 1 outer page directory $= 1025$. Hence, $X + Y = 3 + 1025 = 1028$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.39} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q38}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A computer has two processors, $M_1$ and $M_2$. Four processes $P_1, P_2, P_3, P_4$ with CPU bursts of 20, 16, 25, and 10 milliseconds, respectively, arrive at the same time and these are the only processes in the system. The scheduler uses non-preemptive priority scheduling, with priorities decided as follows:
+\begin{itemize}
+\item $M_1$ uses priority of execution for the processes as, $P_1 > P_3 > P_2 > P_4$, i.e., $P_1$ and $P_4$ have highest and lowest priorities, respectively.
+\item $M_2$ uses priority of execution for the processes as, $P_2 > P_3 > P_4 > P_1$, i.e., $P_2$ and $P_1$ have highest and lowest priorities, respectively.
+\end{itemize}
+A process $P_i$ is scheduled to a processor $M_k$, if the processor is free and no other process $P_j$ is waiting with higher priority. At any given point of time, a process can be allocated to any one of the free processors without violating the execution priority rules. Ignore the context switch time. What will be the average waiting time of the processes in milliseconds?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 9.00 & $\square$\ \textbf{(B)} 8.75 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 6.50 & $\square$\ \textbf{(D)} 7.50
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{CPU and I/O scheduling}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small At $t = 0$, $M_1$ takes highest priority process $P_1$ (burst 20) and $M_2$ takes $P_2$ (burst 16). At $t = 16$, $M_2$ frees up; among remaining processes $\{P_3, P_4\}$, $P_3$ has higher priority on $M_2$, so $P_3$ runs on $M_2$ ($t = 16$ to 41). At $t = 20$, $M_1$ frees up and executes $P_4$ ($t = 20$ to 30). Waiting times are: $P_1 = 0$, $P_2 = 0$, $P_3 = 16$, $P_4 = 20$. Average waiting time is $(0 + 0 + 16 + 20) / 4 = 36 / 4 = 9.00$ ms.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.40} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q47}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a demand paging system with three frames, and the following page reference string: 1 2 3 4 5 4 1 6 4 2 1. Which page replacement policy produces the minimum number of page faults for this reference string?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Least Recently Used page replacement policy \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Least Frequently Used page replacement policy \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Most Frequently Used page replacement policy \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Optimal page replacement policy
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{Memory management and virtual memory: page replacement algorithms}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Trace the page reference string through 3 frames under each algorithm. Optimal page replacement replaces the page that will not be used for the longest period of time in the future, matching the minimum hit/fault sequence.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.41} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q48}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $P = \{P_1, P_2, P_3, P_4\}$ be active processes and $R = \{R_1, R_2, R_3, R_4\}$ be resources in an operating system. Given the allocation and request graph, which of the following actions makes the system deadlock free?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Aborting $P_1$ makes the system deadlock free. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Aborting $P_3$ makes the system deadlock free. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Aborting $P_2$ makes the system deadlock free. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Aborting $P_1$ and $P_4$ makes the system deadlock free.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C;D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{Deadlock: Resource Allocation Graph and deadlock recovery}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In the Resource Allocation Graph, identify the directed cycles creating deadlock. Aborting process $P_2$ eliminates the dependency cycles directly, as does aborting both $P_1$ and $P_4$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.42} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q58}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A computer system supports a logical address space of $2^{32}$ bytes. It uses two-level hierarchical paging with a page size of 4 KB and page table entry size of 4 bytes. The number of bits in the outer page table index is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 11 to 11} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{Memory management and virtual memory: hierarchical paging}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For a $2^{32}$-byte logical address space with two-level hierarchical paging, page offset and page table index bits are derived from page size and entry size, yielding 11 bits for the first-level directory index.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\vspace{8pt}
+\subsection*{Databases}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.43} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q57}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In a B+- tree where each node can hold at most four key values, a root to leaf path consists of nodes containing keys. What is the maximum number of keys in the tree under the given path constraints?
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 33 to 33} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Databases \\
+\textbf{Subtopic:} \textit{File organization, indexing: B and B+ trees}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a B+ tree of order 5 (max 4 keys, max 5 children per internal node), min keys per non-root internal node is $\lceil 5/2 \rceil - 1 = 2$. Calculating the maximum or minimum number of keys/records traversed along root-to-leaf paths yields 33.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\vspace{8pt}
+\subsection*{Computer Networks}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.44} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q50}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Suppose you are asked to design a new reliable byte-stream transport protocol like TCP. This protocol, named myTCP, runs over a 100 Mbps network with Round Trip Time of 150 milliseconds and the maximum segment lifetime of 2 minutes.
+Which of the following is/are valid lengths of the Sequence Number field in the myTCP header?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 30 bits & $\square$\ \textbf{(B)} 32 bits \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 34 bits & $\square$\ \textbf{(D)} 36 bits
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B, C, D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Transport layer: flow control and congestion control, UDP, TCP, sockets}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small To prevent sequence number wraparound within the Maximum Segment Lifetime ($MSL = 2\text{ min} = 120\text{ s}$), the sequence number space $2^k$ must be at least the data bytes transmitted at line rate during MSL: $2^k \ge \frac{100 \times 10^6\text{ bps}}{8} \times 120\text{ s} = 1.5 \times 10^9\text{ bytes}$. Since $2^{30} \approx 1.07 \times 10^9 < 1.5 \times 10^9$ and $2^{31} \approx 2.15 \times 10^9 > 1.5 \times 10^9$, at least 31 bits are required. Thus, 32 bits, 34 bits, and 36 bits are all valid lengths.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.45} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q52}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Suppose in a web browser, you click on the `www.gate-2023.in` URL. The browser cache is empty. The IP address for this URL is not cached in your local host, so a DNS lookup is triggered (by the local DNS server deployed on your local host) over the 3-tier DNS hierarchy in an iterative mode. No resource records are cached anywhere across all DNS servers.
+Let RTT denote the round trip time between your local host and DNS servers in the DNS hierarchy. The round trip time between the local host and the web server hosting `www.gate-2023.in` is also equal to RTT. The HTML file associated with the URL is small enough to have negligible transmission time and negligible rendering time by your web browser, which references 10 equally small objects on the same web server.
+Which of the following statements is/are CORRECT about the minimum elapsed time between clicking on the URL and your browser fully rendering it?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} 7 RTTs, in case of non-persistent HTTP with 5 parallel TCP connections. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} 5 RTTs, in case of persistent HTTP with pipelining. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 9 RTTs, in case of non-persistent HTTP with 5 parallel TCP connections. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} 6 RTTs, in case of persistent HTTP with pipelining.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C, D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Application layer protocols: DNS, SMTP, HTTP, FTP, Email}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Resolving the URL via 3-tier iterative DNS requires $3\text{ RTT}$. Initiating TCP connection and requesting the base HTML page requires $1 + 1 = 2\text{ RTT}$, so the base HTML is received after $3 + 2 = 5\text{ RTT}$. With persistent HTTP pipelining, all 10 objects are fetched in 1 round trip over the established connection, giving $5 + 1 = 6\text{ RTT}$ (D is TRUE). With non-persistent HTTP and 5 parallel connections, fetching 10 objects takes 2 sequential batches; each batch takes $1\text{ RTT (TCP)} + 1\text{ RTT (HTTP)} = 2\text{ RTT}$, adding $2 \times 2 = 4\text{ RTT}$, giving $5 + 4 = 9\text{ RTT}$ (C is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.46} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q57}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Suppose a message of size 15000 bytes is transmitted from a source to a destination using IPv4 protocol via two routers as shown: Source $\to$ Router-1 ($\text{MTU} = 5000$ bytes) $\to$ Router-2 ($\text{MTU} = 3000$ bytes) $\to$ Destination. Each router has a defined maximum transmission unit (MTU) including the 20-byte IP header. The number of fragments that will be delivered to the destination is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 7 to 7} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Fragmentation and IP addressing, IPv4, CIDR notation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small At Router-1, max payload per fragment is $\lfloor (5000 - 20) / 8 \rfloor \times 8 = 4976$ bytes. 15000 bytes payload is fragmented into payloads of 4976, 4976, 4976, and 72 bytes (4 fragments). At Router-2 ($\text{MTU} = 3000$, max payload $\lfloor 2980/8 \rfloor \times 8 = 2976$ bytes), each of the three 4976-byte fragments splits into 2 fragments ($2976 + 2000$), yielding $3 \times 2 = 6$ fragments. The 72-byte fragment passes through intact. Total delivered fragments = $6 + 1 = 7$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\end{document}

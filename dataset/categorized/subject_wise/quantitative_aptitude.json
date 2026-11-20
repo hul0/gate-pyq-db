@@ -1,0 +1,1543 @@
+{
+  "category": "Subject Wise (Modular)",
+  "title": "Quantitative Aptitude",
+  "total_questions": 30,
+  "years_included": [
+    2018,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "questions": [
+    {
+      "id": "2018_CS_GA_Q03",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2018_CS",
+      "year": 2018,
+      "session": "CS",
+      "question_number": 3,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1,
+      "question_text": "The area of a square is \ud835\udc51. What is the area of the circle which has the diagonal of the\nsquare as its diameter?",
+      "options": {
+        "A": "\ud835\udf0b\ud835\udc51",
+        "B": "\ud835\udf0b\ud835\udc512",
+        "C": "1\n4 \ud835\udf0b\ud835\udc512",
+        "D": "1\n2 \ud835\udf0b\ud835\udc51"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Mensuration and geometry",
+      "difficulty_level": "Easy",
+      "explaination": "For a square of area $d$, the side length is $s = \\sqrt{d}$ and its diagonal is $s\\sqrt{2} = \\sqrt{2d}$. Since this diagonal is the diameter of the circle, the radius is $r = \\frac{\\sqrt{2d}}{2} = \\sqrt{\\frac{d}{2}}$. Hence, the area of the circle is $\\pi r^2 = \\pi \\left(\\frac{d}{2}\\right) = \\frac{1}{2}\\pi d$.",
+      "tags": [
+        "1_mark",
+        "2018",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "The area of a square is $d$. What is the area of the circle which has the diagonal of the square as its diameter?",
+      "options_latex": {
+        "A": "$\\pi d$",
+        "B": "$\\pi d^2$",
+        "C": "$\\frac{1}{4}\\pi d^2$",
+        "D": "$\\frac{1}{2}\\pi d$"
+      }
+    },
+    {
+      "id": "2018_CS_GA_Q04",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2018_CS",
+      "year": 2018,
+      "session": "CS",
+      "question_number": 4,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1,
+      "question_text": "What would be the smallest natural number which when divided either by 20 or by 42 or\nby 76 leaves a remainder of 7 in each case?",
+      "options": {
+        "A": "3047",
+        "B": "6047",
+        "C": "7987",
+        "D": "63847"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "The required number is $\\text{LCM}(20, 42, 76) + 7$. Calculating prime factorizations: $20 = 2^2 \\times 5$, $42 = 2 \\times 3 \\times 7$, $76 = 2^2 \\times 19$. Thus $\\text{LCM} = 2^2 \\times 3 \\times 5 \\times 7 \\times 19 = 7980$. Adding the remainder 7 gives $7980 + 7 = 7987$.",
+      "tags": [
+        "1_mark",
+        "2018",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "What would be the smallest natural number which when divided either by 20 or by 42 or by 76 leaves a remainder of 7 in each case?",
+      "options_latex": {
+        "A": "3047",
+        "B": "6047",
+        "C": "7987",
+        "D": "63847"
+      }
+    },
+    {
+      "id": "2018_CS_GA_Q05",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2018_CS",
+      "year": 2018,
+      "session": "CS",
+      "question_number": 5,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 2,
+      "question_text": "What is the missing number in the following sequence?\n2, 12, 60, 240, 720, 1440, _____, 0",
+      "options": {
+        "A": "2880",
+        "B": "1440",
+        "C": "720",
+        "D": "0"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Examining consecutive multipliers: $2 \\times 6 = 12$, $12 \\times 5 = 60$, $60 \\times 4 = 240$, $240 \\times 3 = 720$, $720 \\times 2 = 1440$. Following this decreasing multiplier pattern, the next term is $1440 \\times 1 = 1440$, and the term after is $1440 \\times 0 = 0$.",
+      "tags": [
+        "1_mark",
+        "2018",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "What is the missing number in the following sequence?\n\\[ 2,\\; 12,\\; 60,\\; 240,\\; 720,\\; 1440,\\; \\_\\_\\_\\_\\_,\\; 0 \\]",
+      "options_latex": {
+        "A": "2880",
+        "B": "1440",
+        "C": "720",
+        "D": "0"
+      }
+    },
+    {
+      "id": "2018_CS_GA_Q06",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2018_CS",
+      "year": 2018,
+      "session": "CS",
+      "question_number": 6,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2,
+      "question_text": "In appreciation of the social improvements completed in a town, a wealthy philanthropist\ndecided to gift Rs 750 to each male senior citizen in the town and Rs 1000 to each female\nsenior citizen. Altogether, there were 300 senior citizens eligible for this gift. However,\nonly 8/9th of the eligible men and 2/3rd of the eligible women claimed the gift. How much\nmoney (in Rupees) did the philanthropist give away in total?",
+      "options": {
+        "A": "1,50,000",
+        "B": "2,00,000",
+        "C": "1,75,000",
+        "D": "1,51,000"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Medium",
+      "explaination": "Let $M$ and $W$ be eligible men and women, with $M + W = 300$. Number claiming pension is $\\frac{8}{9}M$ men and $\\frac{2}{3}W$ women. Total pension claimed $= \\frac{8}{9}M(750) + \\frac{2}{3}W(1000) = \\frac{2000}{3}M + \\frac{2000}{3}W = \\frac{2000}{3}(M + W) = \\frac{2000}{3}(300) = 2{,}00{,}000$.",
+      "tags": [
+        "2018",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "An old man walks in a town to distribute old age pensions. There are 300 persons in the town who are eligible for the pension. The monthly pension is Rs. 750 for each eligible man and Rs. 1000 for each eligible woman. 8/9 of the eligible men and 2/3 of the eligible women claim the pension. The total pension claimed per month is",
+      "options_latex": {
+        "A": "Rs. 1,50,000",
+        "B": "Rs. 2,00,000",
+        "C": "Rs. 2,25,000",
+        "D": "Cannot be determined"
+      }
+    },
+    {
+      "id": "2018_CS_GA_Q07",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2018_CS",
+      "year": 2018,
+      "session": "CS",
+      "question_number": 7,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2,
+      "question_text": "If \ud835\udc5d\ud835\udc5e\ud835\udc5f\u22600 and \ud835\udc5d\u2212\ud835\udc65=\n1\n\ud835\udc5e, \ud835\udc5e\u2212\ud835\udc66=\n1\n\ud835\udc5f, \ud835\udc5f\u2212\ud835\udc67=\n1\n\ud835\udc5d , what is the value of the product \ud835\udc65\ud835\udc66\ud835\udc67?",
+      "options": {
+        "A": "\u22121",
+        "B": "1\n\ud835\udc5d\ud835\udc5e\ud835\udc5f",
+        "C": "1",
+        "D": "\ud835\udc5d\ud835\udc5e\ud835\udc5f"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "From $p^{-x} = \\frac{1}{q}$, we have $q = p^x$. Substituting into $q^{-y} = \\frac{1}{r}$ gives $r = q^y = (p^x)^y = p^{xy}$. Then $r^{-z} = \\frac{1}{p}$ gives $p = r^z = (p^{xy})^z = p^{xyz}$. Since $p > 0$ and $p \\neq 1$, it follows that $xyz = 1$.",
+      "tags": [
+        "2018",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "If $p^{-x} = \\frac{1}{q}$, $q^{-y} = \\frac{1}{r}$, and $r^{-z} = \\frac{1}{p}$, what is the value of $xyz$?",
+      "options_latex": {
+        "A": "$-1$",
+        "B": "0",
+        "C": "1",
+        "D": "$pqr$"
+      }
+    },
+    {
+      "id": "2018_CS_GA_Q08",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2018_CS",
+      "year": 2018,
+      "session": "CS",
+      "question_number": 8,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2,
+      "question_text": "In a party, 60% of the invited guests are male and 40% are female. If 80% of the invited\nguests attended the party and if all the invited female guests attended, what would be the\nratio of males to females among the attendees in the party?",
+      "options": {
+        "A": "2:3",
+        "B": "1:1",
+        "C": "3:2",
+        "D": "2:1"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Out of 100 invited guests, 60 are male and 40 are female. Since 80 guests attend and all 40 invited females attend, the remaining $80 - 40 = 40$ attendees must be male. Thus, the ratio of attending males to attending females is $40 : 40 = 1 : 1$.",
+      "tags": [
+        "2018",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "In a party, 60\\% of the invited guests are male and 40\\% are female. 80\\% of the invited guests attend the party. If all the invited female guests attend the party, what is the ratio of male guests who attended to the female guests who attended?",
+      "options_latex": {
+        "A": "2 : 3",
+        "B": "1 : 1",
+        "C": "3 : 2",
+        "D": "2 : 1"
+      }
+    },
+    {
+      "id": "2018_CS_GA_Q10",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2018_CS",
+      "year": 2018,
+      "session": "CS",
+      "question_number": 10,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 4,
+      "question_text": "A six sided unbiased die with four green faces and two red faces is rolled seven times.\nWhich of the following combinations is the most likely outcome of the experiment?",
+      "options": {
+        "A": "Three green faces and four red faces.",
+        "B": "Four green faces and three red faces.",
+        "C": "Five green faces and two red faces.",
+        "D": "Six green faces and one red face."
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Elementary statistics and probability",
+      "difficulty_level": "Medium",
+      "explaination": "The number of green faces $X$ follows a Binomial distribution $B(n=7, p=4/6=2/3)$. The mode of a binomial distribution is $\\lfloor (n+1)p \\rfloor = \\lfloor 8 \\times \\frac{2}{3} \\rfloor = \\lfloor 5.33 \\rfloor = 5$. Thus, the most likely outcome is 5 green faces and $7 - 5 = 2$ red faces.",
+      "tags": [
+        "2018",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "A six sided unbiased die with four green faces and two red faces is rolled seven times. Which of the following combinations is the most likely outcome of the experiment?",
+      "options_latex": {
+        "A": "Three green faces and four red faces",
+        "B": "Four green faces and three red faces",
+        "C": "Five green faces and two red faces",
+        "D": "Six green faces and one red face"
+      }
+    },
+    {
+      "id": "2022_CS_GA_Q03",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 3,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 4,
+      "question_text": "Let r be a root of the equation \ud835\udc65\u0b36+ 2\ud835\udc65+ 6 = 0.\nThen the value of the expression (\ud835\udc5f+ 2)(\ud835\udc5f+ 3)(\ud835\udc5f+ 4)(\ud835\udc5f+ 5) is",
+      "options": {
+        "A": "51",
+        "B": "\u221251",
+        "C": "126",
+        "D": "\u2212126"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Medium",
+      "explaination": "Since $r$ is a root of $x^2 + 2x + 6 = 0$, we have $r^2 + 2r = -6$. Pairing terms in the expression: $[(r+2)(r+5)][(r+3)(r+4)] = [r^2 + 7r + 10][r^2 + 7r + 12]$. Substituting $r^2 = -2r - 6$ yields $(5r + 4)(5r + 6) = 25r^2 + 50r + 24 = 25(r^2 + 2r) + 24 = 25(-6) + 24 = -126$.",
+      "tags": [
+        "1_mark",
+        "2022",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Let $r$ be a root of the equation $x^2 + 2x + 6 = 0$.\nThen the value of the expression $(r+2)(r+3)(r+4)(r+5)$ is",
+      "options_latex": {
+        "A": "51",
+        "B": "$-51$",
+        "C": "126",
+        "D": "$-126$"
+      }
+    },
+    {
+      "id": "2022_CS_GA_Q07",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 7,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 8,
+      "question_text": "In a recently conducted national entrance test, boys constituted 65% of those who\nappeared for the test. Girls constituted the remaining candidates and they\naccounted for 60% of the qualified candidates.\nWhich one of the following is the correct logical inference based on the\ninformation provided in the above passage?",
+      "options": {
+        "A": "Equal number of boys and girls qualified",
+        "B": "Equal number of boys and girls appeared for the test",
+        "C": "The number of boys who appeared for the test is less than the number of girls\nwho appeared",
+        "D": "The number of boys who qualified the test is less than the number of girls who\nqualified"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Among all candidates who qualified, girls accounted for 60%, meaning boys accounted for the remaining $100\\% - 60\\% = 40\\%$. Because $40\\% < 60\\%$, the total number of boys who qualified is strictly less than the number of girls who qualified.",
+      "tags": [
+        "2022",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "In a recently conducted national entrance test, boys constituted 65\\% of those who appeared for the test. Girls constituted the remaining candidates and they accounted for 60\\% of the qualified candidates.\nWhich one of the following is the correct logical inference based on the information provided in the above passage?",
+      "options_latex": {
+        "A": "Equal number of boys and girls qualified",
+        "B": "Equal number of boys and girls appeared for the test",
+        "C": "The number of boys who appeared for the test is less than the number of girls who appeared",
+        "D": "The number of boys who qualified the test is less than the number of girls who qualified"
+      }
+    },
+    {
+      "id": "2022_CS_GA_Q08",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 8,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 9,
+      "question_text": "A box contains five balls of same size and shape. Three of them are green\ncoloured balls and two of them are orange coloured balls. Balls are drawn from\nthe box one at a time. If a green ball is drawn, it is not replaced. If an orange ball\nis drawn, it is replaced with another orange ball.\nFirst ball is drawn. What is the probability of getting an orange ball in the next\ndraw?",
+      "options": {
+        "A": "1\n2",
+        "B": "8\n25",
+        "C": "19\n50",
+        "D": "23\n50"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Elementary statistics and probability",
+      "difficulty_level": "Medium",
+      "explaination": "Initially, there are 3 green and 2 orange balls (total 5). If a green ball is drawn ($P(G_1) = 3/5$), 2 green and 2 orange remain, so $P(O_2|G_1) = 2/4 = 1/2$. If an orange ball is drawn ($P(O_1) = 2/5$), it is replaced, so $P(O_2|O_1) = 2/5$. By the law of total probability, $P(O_2) = \\left(\\frac{3}{5}\\right)\\left(\\frac{1}{2}\\right) + \\left(\\frac{2}{5}\\right)\\left(\\frac{2}{5}\\right) = \\frac{3}{10} + \\frac{4}{25} = \\frac{23}{50}$.",
+      "tags": [
+        "2022",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "A box contains five balls of same size and shape. Three of them are green coloured balls and two of them are orange coloured balls. Balls are drawn from the box one at a time. If a green ball is drawn, it is not replaced. If an orange ball is drawn, it is replaced with another orange ball.\nFirst ball is drawn. What is the probability of getting an orange ball in the next draw?",
+      "options_latex": {
+        "A": "$1/2$",
+        "B": "$8/25$",
+        "C": "$19/50$",
+        "D": "$23/50$"
+      }
+    },
+    {
+      "id": "2023_CS_GA_Q03",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 3,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 3,
+      "question_text": "A series of natural numbers \ud835\udc391, \ud835\udc392, \ud835\udc393, \ud835\udc394, \ud835\udc395, \ud835\udc396, \ud835\udc397, \u2026 obeys \ud835\udc39\ud835\udc5b+1 = \ud835\udc39\ud835\udc5b+ \ud835\udc39\ud835\udc5b\u22121\nfor all integers \ud835\udc5b\u22652 .\nIf \ud835\udc396 = 37, and \ud835\udc397 = 60, then what is \ud835\udc391 ?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "8",
+        "D": "9"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "The recurrence relation is $F_{n+1} = F_n + F_{n-1} \\implies F_{n-1} = F_{n+1} - F_n$. Working backward from $F_7 = 60$ and $F_6 = 37$: $F_5 = 60 - 37 = 23$; $F_4 = 37 - 23 = 14$; $F_3 = 23 - 14 = 9$; $F_2 = 14 - 9 = 5$; and $F_1 = 9 - 5 = 4$.",
+      "tags": [
+        "1_mark",
+        "2023",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "A series of natural numbers $F_1, F_2, F_3, F_4, F_5, F_6, F_7, \\dots$ obeys $F_{n+1} = F_n + F_{n-1}$ for all integers $n \\ge 2$.\nIf $F_6 = 37$, and $F_7 = 60$, then what is $F_1$?",
+      "options_latex": {
+        "A": "4",
+        "B": "5",
+        "C": "8",
+        "D": "9"
+      }
+    },
+    {
+      "id": "2023_CS_GA_Q04",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 4,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 3,
+      "question_text": "A survey for a certain year found that 90% of pregnant women received medical\ncare at least once before giving birth. Of these women, 60% received medical care\nfrom doctors, while 40% received medical care from other healthcare providers.\nGiven this information, which one of the following statements can be inferred with\ncertainty?",
+      "options": {
+        "A": "More than half of the pregnant women received medical care at least once from a\ndoctor.",
+        "B": "Less than half of the pregnant women received medical care at least once from a\ndoctor.",
+        "C": "More than half of the pregnant women received medical care at most once from a\ndoctor.",
+        "D": "Less than half of the pregnant women received medical care at most once from a\ndoctor."
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Out of all pregnant women, 90% received medical care at least once. Among those who received medical care, 60% received care from doctors. The percentage of all pregnant women who received care at least once from a doctor is $90\\% \\times 60\\% = 54\\%$, which is strictly greater than half ($> 50\\%$).",
+      "tags": [
+        "1_mark",
+        "2023",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "A survey for a certain year found that 90\\% of pregnant women received medical care at least once before giving birth. Of these women, 60\\% received medical care from doctors, while 40\\% received medical care from other healthcare providers.\nGiven this information, which one of the following statements can be inferred with certainty?",
+      "options_latex": {
+        "A": "More than half of the pregnant women received medical care at least once from a doctor.",
+        "B": "Less than half of the pregnant women received medical care at least once from a doctor.",
+        "C": "More than half of the pregnant women received medical care at most once from a doctor.",
+        "D": "Less than half of the pregnant women received medical care at most once from a doctor."
+      }
+    },
+    {
+      "id": "2023_CS_GA_Q07",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 7,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 6,
+      "question_text": "Consider two functions of time (\ud835\udc61),\n\ud835\udc53(\ud835\udc61) = 0.01 \ud835\udc612\n\ud835\udc54(\ud835\udc61) = 4 \ud835\udc61\nwhere 0 < \ud835\udc61< \u221e.\nNow consider the following two statements:\n(i)\nFor some \ud835\udc61> 0, \ud835\udc54(\ud835\udc61) > \ud835\udc53(\ud835\udc61).\n(ii)\nThere exists a \ud835\udc47, such that \ud835\udc53(\ud835\udc61) > \ud835\udc54(\ud835\udc61) for all \ud835\udc61> \ud835\udc47.\nWhich one of the following options is TRUE?",
+      "options": {
+        "A": "only (i) is correct",
+        "B": "only (ii) is correct",
+        "C": "both (i) and (ii) are correct",
+        "D": "neither (i) nor (ii) is correct"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Setting $f(t) = g(t) \\implies 0.01 t^2 = 4t \\implies t = 400$. For any $0 < t < 400$ (e.g., $t = 10$), $g(10) = 40 > f(10) = 1$, making statement (i) correct. For all $t > 400$, the quadratic growth of $f(t)$ strictly dominates the linear growth of $g(t)$, so choosing $T = 400$ satisfies statement (ii). Hence, both statements are correct.",
+      "tags": [
+        "2023",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Consider two functions of time ($t$),\n\\[ f(t) = 0.01 t^2, \\quad g(t) = 4 t \\]\nwhere $0 < t < \\infty$.\nNow consider the following two statements:\n\\begin{enumerate}[label=(\\roman*),itemsep=0pt,topsep=2pt]\n\\item For some $t > 0$, $g(t) > f(t)$.\n\\item There exists a $T$, such that $f(t) > g(t)$ for all $t > T$.\n\\end{enumerate}\nWhich one of the following options is TRUE?",
+      "options_latex": {
+        "A": "only (i) is correct",
+        "B": "only (ii) is correct",
+        "C": "both (i) and (ii) are correct",
+        "D": "neither (i) nor (ii) is correct"
+      }
+    },
+    {
+      "id": "2023_CS_GA_Q09",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 9,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 7,
+      "question_text": "( )\nf x and ( )\ng y are functions of x and y, respectively, and\n( )\n( )\nf x\ng y\n=\nfor all real\nvalues of \ud835\udc65 and \ud835\udc66. Which one of the following options is necessarily TRUE for all\nx and y?",
+      "options": {
+        "A": "( )\n0\nf x =\nand ( )\n0\ng y =",
+        "B": "( )\n( )\nconstant\nf x\ng y\n=\n=",
+        "C": "( )\nconstant\nf x \u2260\nand ( )\nconstant\ng y \u2260",
+        "D": "( )\n( )\n( )\n( )\n=\n\nf x\ng y\nf x\ng y\n+\n\u2212"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "We are given $f(x) = g(y)$ for all independent real variables $x$ and $y$. If $x$ varies while $y$ remains constant, $f(x)$ cannot change because $g(y)$ is fixed, meaning $f(x)$ must be a constant. Symmetrically, $g(y)$ must be identical to that same constant. Therefore, $f(x) = g(y) = \\text{constant}$.",
+      "tags": [
+        "2023",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "$f(x)$ and $g(y)$ are functions of $x$ and $y$, respectively, and $f(x) = g(y)$ for all real values of $x$ and $y$. Which one of the following options is necessarily TRUE for all $x$ and $y$?",
+      "options_latex": {
+        "A": "$f(x) = 0$ and $g(y) = 0$",
+        "B": "$f(x) = g(y) = \\text{constant}$",
+        "C": "$f(x) \\neq \\text{constant}$ and $g(y) \\neq \\text{constant}$",
+        "D": "$f(x) + g(y) = f(x) - g(y)$"
+      }
+    },
+    {
+      "id": "2024_CS1_GA_Q02",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 2,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 2,
+      "question_text": "If two distinct non-zero real variables \ud835\udc65 and \ud835\udc66 are such that (\ud835\udc65+ \ud835\udc66) is proportional\nto (\ud835\udc65\u2212\ud835\udc66) then the value of\n\ud835\udc65\n\ud835\udc66",
+      "options": {
+        "A": "depends on \ud835\udc65\ud835\udc66",
+        "B": "depends only on \ud835\udc65 and not on \ud835\udc66",
+        "C": "depends only on \ud835\udc66 and not on \ud835\udc65",
+        "D": "is a constant"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "If $(x+y) \\propto (x-y)$, then $x+y = k(x-y)$ for some non-zero constant $k \\neq 1$. Rearranging terms gives $x(1-k) = -y(1+k) \\implies \\frac{x}{y} = \\frac{k+1}{k-1}$, which is a constant independent of $x$ and $y$.",
+      "tags": [
+        "1_mark",
+        "2024",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "If two distinct non-zero real variables $x$ and $y$ are such that $(x+y)$ is proportional to $(x-y)$ then the value of $\\frac{x}{y}$",
+      "options_latex": {
+        "A": "depends on $xy$",
+        "B": "depends only on $x$ and not on $y$",
+        "C": "depends only on $y$ and not on $x$",
+        "D": "is a constant"
+      }
+    },
+    {
+      "id": "2024_CS1_GA_Q03",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 3,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2,
+      "question_text": "Consider the following sample of numbers:\n9, 18, 11, 14, 15, 17, 10, 69, 11, 13\nThe median of the sample is",
+      "options": {
+        "A": "13.5",
+        "B": "14",
+        "C": "11",
+        "D": "18.7"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Elementary statistics and probability",
+      "difficulty_level": "Easy",
+      "explaination": "Arranging the 10 sample values in ascending order: $9, 10, 11, 11, 13, 14, 15, 17, 18, 69$. Since the sample size $n = 10$ is even, the median is the arithmetic mean of the 5th and 6th values: $\\frac{13 + 14}{2} = 13.5$.",
+      "tags": [
+        "1_mark",
+        "2024",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Consider the following sample of numbers:\n\\[ 9, 18, 11, 14, 15, 17, 10, 69, 11, 13 \\]\nThe median of the sample is",
+      "options_latex": {
+        "A": "13.5",
+        "B": "14",
+        "C": "11",
+        "D": "18.7"
+      }
+    },
+    {
+      "id": "2024_CS1_GA_Q04",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 4,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 3,
+      "question_text": "The number of coins of \u20b91, \u20b95, and \u20b910 denominations that a person has are in the\nratio 5:3:13. Of the total amount, the percentage of money in \u20b95 coins is",
+      "options": {
+        "A": "21%",
+        "B": "14\n2\n7%",
+        "C": "10%",
+        "D": "30%"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Let the number of Rs.~1, Rs.~5, and Rs.~10 coins be $5k$, $3k$, and $13k$ respectively. The total value is $1(5k) + 5(3k) + 10(13k) = 5k + 15k + 130k = 150k$. The percentage of money in Rs.~5 coins is $\\frac{15k}{150k} \\times 100\\% = 10\\%$.",
+      "tags": [
+        "1_mark",
+        "2024",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "The number of coins of Rs.~1, Rs.~5, and Rs.~10 denominations that a person has are in the ratio $5:3:13$. Of the total amount, the percentage of money in Rs.~5 coins is",
+      "options_latex": {
+        "A": "21\\%",
+        "B": "$14\\frac{2}{7}\\%$",
+        "C": "10\\%",
+        "D": "30\\%"
+      }
+    },
+    {
+      "id": "2024_CS1_GA_Q05",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 5,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 4,
+      "question_text": "For positive non-zero real variables \ud835\udc5d and \ud835\udc5e, if\nlog (\ud835\udc5d2 + \ud835\udc5e2) = log \ud835\udc5d+ log \ud835\udc5e+ 2 log 3 ,\nthen, the value of\n\ud835\udc5d4+\ud835\udc5e4\n\ud835\udc5d2\ud835\udc5e2 is",
+      "options": {
+        "A": "79",
+        "B": "81",
+        "C": "9",
+        "D": "83"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Medium",
+      "explaination": "Using logarithm rules, $\\log(p^2 + q^2) = \\log p + \\log q + 2\\log 3 = \\log(9pq) \\implies p^2 + q^2 = 9pq$. Squaring both sides yields $(p^2+q^2)^2 = p^4 + q^4 + 2p^2q^2 = 81p^2q^2$, which gives $p^4 + q^4 = 79p^2q^2$. Hence, $\\frac{p^4+q^4}{p^2q^2} = 79$.",
+      "tags": [
+        "1_mark",
+        "2024",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "For positive non-zero real variables $p$ and $q$, if\n\\[ \\log(p^2 + q^2) = \\log p + \\log q + 2\\log 3, \\]\nthen, the value of $\\frac{p^4+q^4}{p^2q^2}$ is",
+      "options_latex": {
+        "A": "79",
+        "B": "81",
+        "C": "9",
+        "D": "83"
+      }
+    },
+    {
+      "id": "2024_CS1_GA_Q07",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 7,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 6,
+      "question_text": "A rectangular paper sheet of dimensions 54 cm \u00d7 4 cm is taken. The two longer\nedges of the sheet are joined together to create a cylindrical tube. A cube whose\nsurface area is equal to the area of the sheet is also taken.\nThen, the ratio of the volume of the cylindrical tube to the volume of the cube is",
+      "options": {
+        "A": "1/\u03c0",
+        "B": "2/\u03c0",
+        "C": "3/\u03c0",
+        "D": "4/\u03c0"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Mensuration and geometry",
+      "difficulty_level": "Medium",
+      "explaination": "Joining the longer edges ($54\\text{ cm}$) creates a cylinder with height $h = 54\\text{ cm}$ and circumference $2\\pi r = 4\\text{ cm} \\implies r = \\frac{2}{\\pi}$, giving volume $V_{\\text{cyl}} = \\pi r^2 h = \\frac{216}{\\pi}$. The sheet area is $54 \\times 4 = 216\\text{ cm}^2$. A cube with surface area $6a^2 = 216$ has edge $a = 6\\text{ cm}$ and volume $V_{\\text{cube}} = 6^3 = 216$. Thus $\\frac{V_{\\text{cyl}}}{V_{\\text{cube}}} = \\frac{216/\\pi}{216} = \\frac{1}{\\pi}$.",
+      "tags": [
+        "2024",
+        "2_mark",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "A rectangular paper sheet of dimensions $54\\text{ cm} \\times 4\\text{ cm}$ is taken. The two longer edges of the sheet are joined together to create a cylindrical tube. A cube whose surface area is equal to the area of the sheet is also taken.\nThen, the ratio of the volume of the cylindrical tube to the volume of the cube is",
+      "options_latex": {
+        "A": "$1/\\pi$",
+        "B": "$2/\\pi$",
+        "C": "$3/\\pi$",
+        "D": "$4/\\pi$"
+      }
+    },
+    {
+      "id": "2024_CS2_GA_Q02",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS2",
+      "year": 2024,
+      "session": "CS2",
+      "question_number": 2,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 2,
+      "question_text": "Two wizards try to create a spell using all the four elements, water, air, fire, and\nearth. For this, they decide to mix all these elements in all possible orders. They\nalso decide to work independently. After trying all possible combination of\nelements, they conclude that the spell does not work.\nHow many attempts does each wizard make before coming to this conclusion,\nindependently?",
+      "options": {
+        "A": "24",
+        "B": "48",
+        "C": "16",
+        "D": "12\n\nOrganizing Institute: IISc, Bengaluru"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "There are 4 distinct elements (water, air, fire, earth). The number of distinct permutations/orderings of these 4 elements is $4! = 4 \\times 3 \\times 2 \\times 1 = 24$. Since each wizard tries all possible orders independently, each wizard makes 24 attempts.",
+      "tags": [
+        "1_mark",
+        "2024",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Two wizards try to create a spell using all the four elements, water, air, fire, and earth. For this, they decide to mix all these elements in all possible orders. They also decide to work independently. After trying all possible combination of elements, they conclude that the spell does not work.\nHow many attempts does each wizard make before coming to this conclusion, independently?",
+      "options_latex": {
+        "A": "24",
+        "B": "48",
+        "C": "16",
+        "D": "12"
+      }
+    },
+    {
+      "id": "2024_CS2_GA_Q03",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS2",
+      "year": 2024,
+      "session": "CS2",
+      "question_number": 3,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 2,
+      "question_text": "In an engineering college of 10,000 students, 1,500 like neither their core branches\nnor other branches. The number of students who like their core branches is 1/4th of\nthe number of students who like other branches. The number of students who like\nboth their core and other branches is 500.\nThe number of students who like their core branches is",
+      "options": {
+        "A": "1,800",
+        "B": "3,500",
+        "C": "1,600",
+        "D": "1,500"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Data interpretation: data graphs (bar graphs, pie charts, and other graphs representing data), 2- and 3-dimensional plots, maps, and tables",
+      "difficulty_level": "Medium",
+      "explaination": "Let $C$ and $O$ be sets of students liking core and other branches. Total students $N = 10000$, neither $= 1500$, so $|C \\cup O| = 10000 - 1500 = 8500$. We are given $|C \\cap O| = 500$ and $|C| = \\frac{1}{4}|O| \\implies |O| = 4|C|$. By inclusion-exclusion, $|C \\cup O| = |C| + |O| - |C \\cap O| \\implies 8500 = |C| + 4|C| - 500 \\implies 5|C| = 9000 \\implies |C| = 1800$.",
+      "tags": [
+        "1_mark",
+        "2024",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "In an engineering college of 10,000 students, 1,500 like neither their core branches nor other branches. The number of students who like their core branches is 1/4th of the number of students who like other branches. The number of students who like both their core and other branches is 500.\nThe number of students who like their core branches is:",
+      "options_latex": {
+        "A": "1,800",
+        "B": "3,500",
+        "C": "1,600",
+        "D": "1,500"
+      }
+    },
+    {
+      "id": "2024_CS2_GA_Q04",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS2",
+      "year": 2024,
+      "session": "CS2",
+      "question_number": 4,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 3,
+      "question_text": "For positive non-zero real variables \ud835\udc65 and \ud835\udc66, if\nln (\ud835\udc65+ \ud835\udc66\n2\n) = 1\n2 [ln\u2061(\ud835\udc65) + ln\u2061(\ud835\udc66)]\nthen, the value of\n\ud835\udc65\n\ud835\udc66+\n\ud835\udc66\n\ud835\udc65 is",
+      "options": {
+        "A": "1",
+        "B": "(C)\n2",
+        "D": "4\n\nOrganizing Institute: IISc, Bengaluru"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "From $\\ln\\left(\\frac{x+y}{2}\\right) = \\frac{1}{2}[\\ln(x) + \\ln(y)] = \\ln(\\sqrt{xy})$, we obtain $\\frac{x+y}{2} = \\sqrt{xy} \\implies x + y = 2\\sqrt{xy} \\implies (\\sqrt{x} - \\sqrt{y})^2 = 0 \\implies x = y$. Substituting $x = y$ gives $\\frac{x}{y} + \\frac{y}{x} = 1 + 1 = 2$.",
+      "tags": [
+        "1_mark",
+        "2024",
+        "3_options",
+        "cs2",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "For positive non-zero real variables $x$ and $y$, if\n\\[ \\ln\\left(\\frac{x+y}{2}\\right) = \\frac{1}{2} [\\ln(x) + \\ln(y)] \\]\nthen, the value of $\\frac{x}{y} + \\frac{y}{x}$ is:",
+      "options_latex": {
+        "A": "1",
+        "B": "1/2",
+        "C": "2",
+        "D": "4"
+      }
+    },
+    {
+      "id": "2024_CS2_GA_Q05",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS2",
+      "year": 2024,
+      "session": "CS2",
+      "question_number": 5,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 4,
+      "question_text": "In the sequence 6, 9, 14, x, 30, 41, a possible value of \ud835\udc65 is",
+      "options": {
+        "A": "25",
+        "B": "21",
+        "C": "18",
+        "D": "20\n\nOrganizing Institute: IISc, Bengaluru"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Examine the consecutive differences: $9 - 6 = 3$, $14 - 9 = 5$, $x - 14 = d_3$, $30 - x = d_4$, $41 - 30 = 11$. The differences are consecutive odd numbers: $3, 5, 7, 9, 11$. For $d_3 = 7$, $x = 14 + 7 = 21$, and checking $d_4 = 30 - 21 = 9$ matches. Hence, $x = 21$.",
+      "tags": [
+        "1_mark",
+        "2024",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "In the sequence 6, 9, 14, $x$, 30, 41, a possible value of $x$ is:",
+      "options_latex": {
+        "A": "25",
+        "B": "21",
+        "C": "18",
+        "D": "20"
+      }
+    },
+    {
+      "id": "2024_CS2_GA_Q07",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS2",
+      "year": 2024,
+      "session": "CS2",
+      "question_number": 7,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 6,
+      "question_text": "A person sold two different items at the same price. He made 10% profit in one\nitem, and 10% loss in the other item. In selling these two items, the person made a\ntotal of",
+      "options": {
+        "A": "1% profit",
+        "B": "2% profit",
+        "C": "1% loss",
+        "D": "2% loss\n\nOrganizing Institute: IISc, Bengaluru"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "When two items are sold at the same selling price $S$, one at a profit of $x\\%$ and the other at a loss of $x\\%$, there is always an overall net loss given by $\\frac{x^2}{100}\\%$. Here $x = 10$, so the net loss is $\\frac{10^2}{100}\\% = 1\\%$ loss.",
+      "tags": [
+        "2024",
+        "2_mark",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "A person sold two different items at the same price. He made 10\\% profit in one item, and 10\\% loss in the other item. In selling these two items, the person made a total of:",
+      "options_latex": {
+        "A": "1\\% profit",
+        "B": "2\\% profit",
+        "C": "1\\% loss",
+        "D": "2\\% loss"
+      }
+    },
+    {
+      "id": "2025_CS1_GA_Q03",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS1",
+      "year": 2025,
+      "session": "CS1",
+      "question_number": 3,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 4,
+      "question_text": "The average marks obtained by a class in an examination were calculated as 30.8.\nHowever, while checking the marks entered, the teacher found that the marks of one\nstudent were entered incorrectly as 24 instead of 42. After correcting the marks, the\naverage becomes 31.4. How many students does the class have?",
+      "options": {
+        "A": "25",
+        "B": "28",
+        "C": "30",
+        "D": "32\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Elementary statistics and probability",
+      "difficulty_level": "Easy",
+      "explaination": "Let $n$ be the number of students. The total increase in marks after correction is $42 - 24 = 18$. The increase in average is $31.4 - 30.8 = 0.6$. Therefore, $0.6 \\times n = 18$, giving $n = \\frac{18}{0.6} = 30$ students.",
+      "tags": [
+        "1_mark",
+        "2025",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "The average marks obtained by a class in an examination were calculated as 30.8. However, while checking the marks entered, the teacher found that the marks of one student were entered incorrectly as 24 instead of 42. After correcting the marks, the average becomes 31.4. How many students does the class have?",
+      "options_latex": {
+        "A": "25",
+        "B": "28",
+        "C": "30",
+        "D": "32"
+      }
+    },
+    {
+      "id": "2025_CS1_GA_Q08",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS1",
+      "year": 2025,
+      "session": "CS1",
+      "question_number": 8,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 9,
+      "question_text": "A fair six-faced dice, with the faces labelled \u20181\u2019, \u20182\u2019, \u20183\u2019, \u20184\u2019, \u20185\u2019, and \u20186\u2019, is rolled\nthrice. What is the probability of rolling \u20186\u2019 exactly once?",
+      "options": {
+        "A": "75\n216",
+        "B": "1\n6",
+        "C": "1\n18",
+        "D": "25\n216\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Elementary statistics and probability",
+      "difficulty_level": "Medium",
+      "explaination": "The probability of rolling a 6 is $p = \\frac{1}{6}$, and not rolling a 6 is $q = \\frac{5}{6}$. Using the binomial distribution for $n = 3$ trials with $k = 1$ success, $P(X = 1) = \\binom{3}{1} \\left(\\frac{1}{6}\\right)^1 \\left(\\frac{5}{6}\\right)^2 = 3 \\times \\frac{1}{6} \\times \\frac{25}{36} = \\frac{75}{216}$.",
+      "tags": [
+        "2025",
+        "2_mark",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "A fair six-faced dice, with the faces labelled `1', `2', `3', `4', `5', and `6', is rolled thrice. What is the probability of rolling `6' exactly once?",
+      "options_latex": {
+        "A": "$\\frac{75}{216}$",
+        "B": "$\\frac{1}{6}$",
+        "C": "$\\frac{1}{18}$",
+        "D": "$\\frac{25}{216}$"
+      }
+    },
+    {
+      "id": "2025_CS1_GA_Q10",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS1",
+      "year": 2025,
+      "session": "CS1",
+      "question_number": 10,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 10,
+      "question_text": "A shop has 4 distinct flavors of ice-cream. One can purchase any number of scoops\nof any flavor. The order in which the scoops are purchased is inconsequential.\nIf one wants to purchase 3 scoops of ice-cream, in how many ways can one make\nthat purchase?",
+      "options": {
+        "A": "4",
+        "B": "20",
+        "C": "24",
+        "D": "48"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "This is a multichoose problem (combination with repetition), where $r = 3$ scoops are chosen from $n = 4$ flavors. The number of ways is given by the stars and bars formula $\\binom{n + r - 1}{r} = \\binom{4 + 3 - 1}{3} = \\binom{6}{3} = \\frac{6 \\times 5 \\times 4}{3 \\times 2 \\times 1} = 20$.",
+      "tags": [
+        "2025",
+        "2_mark",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "A shop has 4 distinct flavors of ice-cream. One can purchase any number of scoops of any flavor. The order in which the scoops are purchased is inconsequential. If one wants to purchase 3 scoops of ice-cream, in how many ways can one make that purchase?",
+      "options_latex": {
+        "A": "4",
+        "B": "20",
+        "C": "24",
+        "D": "48"
+      }
+    },
+    {
+      "id": "2025_CS2_GA_Q03",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS2",
+      "year": 2025,
+      "session": "CS2",
+      "question_number": 3,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 4,
+      "question_text": "If \ud835\udc43\ud835\udc52\ud835\udc65= \ud835\udc44\ud835\udc52\u2212\ud835\udc65 for all real values of \ud835\udc65, which one of the following statements is\ntrue?",
+      "options": {
+        "A": "\ud835\udc43= \ud835\udc44= 0",
+        "B": "\ud835\udc43= \ud835\udc44= 1",
+        "C": "\ud835\udc43= 1; \ud835\udc44= \u22121",
+        "D": "\ud835\udc43\n\ud835\udc44= 0\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and functions: exponents and equations",
+      "difficulty_level": "Medium",
+      "explaination": "For $P e^x = Q e^{-x}$ to hold for all real $x$, multiply both sides by $e^x$ to get $P e^{2x} = Q$. Differentiating with respect to $x$ gives $2P e^{2x} = 0$, implying $P = 0$. Substituting $P = 0$ yields $Q = 0$, so $P = Q = 0$.",
+      "tags": [
+        "1_mark",
+        "2025",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "If $P e^x = Q e^{-x}$ for all real values of $x$, which one of the following statements is true?",
+      "options_latex": {
+        "A": "$P = Q = 0$",
+        "B": "$P = Q = 1$",
+        "C": "$P = 1; Q = -1$",
+        "D": "$\\frac{P}{Q} = 0$"
+      }
+    },
+    {
+      "id": "2025_CS2_GA_Q05",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS2",
+      "year": 2025,
+      "session": "CS2",
+      "question_number": 5,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 5,
+      "page_end": 6,
+      "question_text": "Let \ud835\udc5d1 and \ud835\udc5d2 denote two arbitrary prime numbers. Which one of the following\nstatements is correct for all values of \ud835\udc5d1 and \ud835\udc5d2?",
+      "options": {
+        "A": "\ud835\udc5d1 + \ud835\udc5d2 is not a prime number.",
+        "B": "\ud835\udc5d1\ud835\udc5d2 is not a prime number.",
+        "C": "\ud835\udc5d1 + \ud835\udc5d2 + 1 is a prime number.",
+        "D": "\ud835\udc5d1\ud835\udc5d2 + 1 is a prime number.\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Elementary number theory and prime numbers",
+      "difficulty_level": "Easy",
+      "explaination": "For any two prime numbers $p_1$ and $p_2$, the product $p_1 p_2$ has at least three distinct positive divisors ($1, p_1, p_1 p_2$ when $p_1=p_2$, or $1, p_1, p_2, p_1 p_2$ when $p_1 \\neq p_2$). Hence, $p_1 p_2$ can never be prime.",
+      "tags": [
+        "1_mark",
+        "2025",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Let $p_1$ and $p_2$ denote two arbitrary prime numbers. Which one of the following statements is correct for all values of $p_1$ and $p_2$?",
+      "options_latex": {
+        "A": "$p_1 + p_2$ is not a prime number.",
+        "B": "$p_1 p_2$ is not a prime number.",
+        "C": "$p_1 + p_2 + 1$ is a prime number.",
+        "D": "$p_1 p_2 + 1$ is a prime number."
+      }
+    },
+    {
+      "id": "2025_CS2_GA_Q08",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS2",
+      "year": 2025,
+      "session": "CS2",
+      "question_number": 8,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 9,
+      "question_text": "Which one of the following options is correct for the given data in the table?\nIteration (i)\n0\n1\n2\n3\nInput (I)\n20\n\u22124\n10\n15\nOutput (X)\n20\n16\n26\n41\nOutput (Y)\n20\n\u221280\n\u2212800\n\u221212000",
+      "options": {
+        "A": "\ud835\udc4b(\ud835\udc56) = \ud835\udc4b(\ud835\udc56\u22121) + \ud835\udc3c(\ud835\udc56); \ud835\udc4c(\ud835\udc56) = \ud835\udc4c(\ud835\udc56\u22121)\ud835\udc3c(\ud835\udc56); \ud835\udc56> 0",
+        "B": "\ud835\udc4b(\ud835\udc56) = \ud835\udc4b(\ud835\udc56\u22121)\ud835\udc3c(\ud835\udc56); \ud835\udc4c(\ud835\udc56) = \ud835\udc4c(\ud835\udc56\u22121) + \ud835\udc3c(\ud835\udc56); \ud835\udc56> 0",
+        "C": "\ud835\udc4b(\ud835\udc56) = \ud835\udc4b(\ud835\udc56\u22121)\ud835\udc3c(\ud835\udc56); \ud835\udc4c(\ud835\udc56) = \ud835\udc4c(\ud835\udc56\u22121)\ud835\udc3c(\ud835\udc56); \ud835\udc56> 0",
+        "D": "\ud835\udc4b(\ud835\udc56) = \ud835\udc4b(\ud835\udc56\u22121) + \ud835\udc3c(\ud835\udc56); \ud835\udc4c(\ud835\udc56) = \ud835\udc4c(\ud835\udc56\u22121)\ud835\udc3c(\ud835\udc56\u22121); \ud835\udc56> 0\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical reasoning and recurrence relations",
+      "difficulty_level": "Medium",
+      "explaination": "Check the sequence updates: $X(i) = X(i-1) + I(i)$ yields $20 + (-4) = 16, 16 + 10 = 26, 26 + 15 = 41$, and $Y(i) = Y(i-1) \\cdot I(i)$ yields $20 \\times (-4) = -80, -80 \\times 10 = -800, -800 \\times 15 = -12000$.",
+      "tags": [
+        "2025",
+        "2_mark",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Which one of the following options is correct for the given data in the table?\n\n| Iteration ($i$) | Input ($I$) | Output ($X$) | Output ($Y$) |\n| :---: | :---: | :---: | :---: |\n| 0 | 20 | 20 | 20 |\n| 1 | $-4$ | 16 | $-80$ |\n| 2 | 10 | 26 | $-800$ |\n| 3 | 15 | 41 | $-12000$ |",
+      "options_latex": {
+        "A": "$X(i) = X(i-1) + I(i); \\; Y(i) = Y(i-1) I(i); \\; i > 0$",
+        "B": "$X(i) = X(i-1) I(i); \\; Y(i) = Y(i-1) + I(i); \\; i > 0$",
+        "C": "$X(i) = X(i-1) I(i); \\; Y(i) = Y(i-1) I(i); \\; i > 0$",
+        "D": "$X(i) = X(i-1) + I(i); \\; Y(i) = Y(i-1) I(i-1); \\; i > 0$"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1258 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.5cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm
+}
+
+% Persistent Unremovable Canvas Watermark on Every Page
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=8cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg} \\[-0.5em]
+        {\fontsize{18}{22}\selectfont\bfseries\scshape www.studiva.co.in}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.12] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape GATE 2018--2025 CS/IT $\cdot$ \textbf{Compiler Design}}
+\fancyhead[R]{\small\scshape Practice Question Bank with Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026} Studiva\textsuperscript{TM}}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\scriptsize\texttt{www.studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Code Listing Style (Monochrome)
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=none,
+    frame=none,
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: IMPRINT & TITLE PAGE ====================
+\thispagestyle{empty}
+\vspace*{0.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg}\\[0.6em]
+    {\LARGE \textbf{GATE 2018--2025 COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTION BANK WITH SOLUTIONS}}\\[0.4em]
+    {\large \textsc{\textbf{Subject Wise: Compiler Design}}}\\[0.2em]
+    {\normalsize \textsc{Combined 2018--2025 Examination Papers $\cdot$ Comprehensive Edition ($\mathbf{25}$ Questions)}}\\[1.2em]
+    \rule{0.6\textwidth}{0.6pt}
+\end{center}
+
+\vspace{1em}
+\noindent\begin{tabular}{ll}
+\textbf{Author / Compiler:} & Rupam Ghosh \\
+\textbf{Publisher \& Platform:} & Studiva\textsuperscript{TM} (\texttt{www.studiva.co.in}) \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Standard Edition (2026) \\
+\textbf{Coverage:} & Complete GATE CS/IT Papers (2018, 2022, 2023, 2024 CS1, 2024 CS2, 2025 CS1, 2025 CS2) \\
+\textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
+\end{tabular}
+
+\vspace{1.5em}
+\begin{tcolorbox}[enhanced, standard jigsaw, opacityback=0, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva\textsuperscript{TM}. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva\textsuperscript{TM}}.\\[0.6em]
+\textbf{Terms of Use \& Attribution Rules:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva\textsuperscript{TM}} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
+    \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
+\end{itemize}
+\vspace{0.6em}
+\textbf{Fair Use Disclaimer:}\\
+The underlying examination questions originate from the Graduate Aptitude Test in Engineering (GATE), conducted by the Indian Institutes of Technology (IITs) and Indian Institute of Science (IISc). Question texts are reproduced for non-commercial educational study under Fair Use doctrines. No copyright is claimed over the original GATE examination question texts.
+\end{tcolorbox}
+
+\vspace{1.2em}
+\begin{center}
+\small\itshape
+Practice Recommendation: Use an opaque sheet of paper or ruler to cover the right-hand column during mock attempts. Tick your chosen answers directly in the check boxes on the left, then slide the cover to check the solution and hint.
+\end{center}
+
+\newpage
+% ==================== PAGE 2 ONWARDS: QUESTION BANK ====================
+
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.1} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q08\_v2}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which one of the following statements is FALSE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Context-free grammar can be used to specify both lexical and syntax rules. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Type checking is done before parsing. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} High-level language programs can be converted to intermediate code directly. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Arguments to a function can be passed using the program stack.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Type checking verifies semantic consistency according to language type rules and is performed during semantic analysis, which occurs after syntax analysis (parsing). Therefore, the statement that type checking is done during syntax analysis is FALSE.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.2} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q37}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A lexical analyzer uses the following patterns to recognize three tokens $T_1, T_2$, and $T_3$ over the alphabet $\{a, b, c\}$:
+\[ T\_1: a?(b|c)^*a \qquad T\_2: b?(a|c)^*b \qquad T\_3: c?(b|a)^*c \]
+Note that '?' means 0 or 1 occurrence of the preceding symbol. The analyzer matches the longest prefix of the remaining input. For the input string `bbaacabc`, the token sequence generated is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $T_1 T_2 T_3$ & $\square$\ \textbf{(B)} $T_1 T_3$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $T_2 T_1 T_3$ & $\square$\ \textbf{(D)} $T_3 T_3$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A lexical analyzer applies the longest match rule. For input `bbaacabc`, pattern $T_3 = c?(b|a)^*c$ matches prefix `bbaac` (starts without $c$, matches $(b|a)^* = bbaa$, ends with $c$), consuming `bbaac` as token $T_3$. The remaining string is `abc`, which also matches $T_3$ (starts without $c$, $(b|a)^* = ab$, ends with $c$). Hence the recognized sequence of tokens is $T_3 T_3$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.3} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q13}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which one of the following statements is TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The LALR(1) parser for a grammar G cannot have reduce-reduce conflict if the LR(1) parser for G does not have reduce-reduce conflict. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Symbol table is accessed only during the lexical analysis phase. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Data flow analysis is necessary for run-time memory management. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} LR(1) parsing is sufficient for deterministic context-free languages.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small LR(1) grammars describe exactly the family of Deterministic Context-Free Languages (DCFLs), meaning LR(1) parsing is both necessary and sufficient for any DCFL. LALR(1) can introduce reduce-reduce conflicts not present in LR(1), and symbol tables are accessed throughout compilation.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.4} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q29}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the augmented grammar with $\{+, *, (, ), id\}$ as the set of terminals:
+\begin{align*}
+S' &\to S \\
+S &\to S + R \mid R \\
+R &\to R * P \mid P \\
+P &\to ( S ) \mid id
+\end{align*}
+If $I_0$ is the set of two LR(0) items $\{[S' \to \bullet S], [S \to \bullet S + R]\}$, then $\text{goto}(\text{closure}(I_0), +)$ contains exactly \_\_\_\_\_\_\_\_\_\_ items. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 5 to 5} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small From item $[S \to S \bullet + R]$ in $\text{closure}(I_0)$, transitioning on symbol $+$ yields the kernel item $[S \to S + \bullet R]$. Computing its closure adds $[R \to \bullet R * P]$, $[R \to \bullet P]$, $[P \to \bullet ( S )]$, and $[P \to \bullet id]$, resulting in exactly 5 items.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.5} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q65}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following grammar along with translation rules:
+\begin{align*}
+S &\to S_1 \,\#\, T & S.val &= S_1.val * T.val \\
+S &\to T & S.val &= T.val \\
+T &\to T_1 \,\%\, R & T.val &= T_1.val \div R.val \\
+T &\to R & T.val &= R.val \\
+R &\to id & R.val &= id.val
+\end{align*}
+Here $\#$ and $\%$ are operators and $id$ is a token that represents an integer. Using this translation scheme, the computed value of $S.val$ for root of the parse tree for the expression `20\#10\%5\#8\%2\%2` is \_\_\_\_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 80 to 80} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The SDD implements left-associative operators with $\%$ at higher precedence than $\#$. In `20 \# 10 \% 5 \# 8 \% 2 \% 2`, we first evaluate subexpressions: $10 \% 5 = 10 / 5 = 2$, and $8 \% 2 \% 2 = (8 / 2) / 2 = 2$. Then the outer multiplication evaluates left-associatively: $(20 \times 2) \times 2 = 40 \times 2 = 80$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.6} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q36}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following program:
+\begin{lstlisting}[language=C]
+int main() {
+    f1();
+    f2(2);
+    f3();
+    return(0);
+}
+int f1() {
+    return(1);
+}
+int f2(int X) {
+    f3();
+    if (X == 1)
+        return f1();
+    else
+        return (X * f2(X - 1));
+}
+int f3() {
+    return(5);
+}
+\end{lstlisting}
+Which one of the following options represents the activation tree corresponding to the main function?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} main -> [f1, f2, f3]; where f2(2) -> [f3, f2(1)]; and f2(1) -> [f3, f1] \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} main -> [f2, f3]; where f2 -> [f1, f1, f3] \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} main -> [f2]; where f2 -> [f1, f3, f1] \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} main -> [f1, f2, f3]; where f2 -> [f3, f2, f1]
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Runtime environments}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In `main()`, the calls are `f1()`, `f2(2)`, and `f3()` as direct children. Inside `f2(2)`, it invokes `f3()` first, then because $X=2 \neq 1$, recursively invokes `f2(1)`. Inside `f2(1)`, it invokes `f3()` first, and then since $X=1$, invokes `f1()`. This call sequence maps directly to the tree structure in option A.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.7} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q60}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the syntax directed translation given by the following grammar and semantic rules. Here $N, I, F$ and $B$ are non-terminals. $N$ is the starting non-terminal, and $\#, 0$ and $1$ are lexical tokens corresponding to input letters ``\#'', ``0'' and ``1'', respectively. $X.val$ denotes the synthesized attribute (a numeric value) associated with a non-terminal $X$. $I_1$ and $F_1$ denote occurrences of $I$ and $F$ on the right hand side of a production, respectively. For the tokens 0 and 1, $0.val = 0$ and $1.val = 1$.
+\begin{align*}
+N &\to I \,\#\, F & N.val &= I.val + F.val \\
+I &\to I_1 B & I.val &= (2 \cdot I_1.val) + B.val \\
+I &\to B & I.val &= B.val \\
+F &\to B F_1 & F.val &= \frac{1}{2}(B.val + F_1.val) \\
+F &\to B & F.val &= \frac{1}{2}B.val \\
+B &\to 0 & B.val &= 0.val \\
+B &\to 1 & B.val &= 1.val
+\end{align*}
+The value computed by the translation scheme for the input string `10\#011` is \_\_\_\_\_\_\_\_\. (Rounded off to three decimal places)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 2.374 to 2.376} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For `10\#011`: integer part `10` evaluates as $I.val = 2(1) + 0 = 2$. Fraction part `011` with right-recursive rules: lowest $F_3 \to B(1) \implies F_3.val = 0.5$; middle $F_2 \to B(1) F_3 \implies F_2.val = \frac{1}{2}(1 + 0.5) = 0.75$; top $F \to B(0) F_2 \implies F.val = \frac{1}{2}(0 + 0.75) = 0.375$. Total value $N.val = I.val + F.val = 2 + 0.375 = 2.375$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.8} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q26}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following is/are Bottom-Up Parser(s)?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Shift-reduce Parser & $\square$\ \textbf{(B)} Predictive Parser \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} LL(1) Parser & $\square$\ \textbf{(D)} LR Parser
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Bottom-up parsers reduce an input string back to the start symbol by finding handles. Shift-reduce parsers and LR parsers (SLR, CLR, LALR) are bottom-up parsers. In contrast, Predictive and LL(1) parsers construct the derivation tree from the root downward and are top-down parsers.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.9} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q33}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the operator precedence and associativity rules for the integer arithmetic operators given in the table below:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Operator} & \textbf{Precedence} & \textbf{Associativity} \\
+\hline
+$+$ & Highest & Left \\
+$-$ & High & Right \\
+$*$ & Medium & Right \\
+$/$ & Low & Right \\
+\hline
+\end{tabular}
+\end{center}
+The value of the expression $3 + 1 + 5 * 2 / 7 + 2 - 4 - 7 - 6 / 2$ as per the above rules is \_\_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 6 to 6} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Precedence order is $+$ (highest, left-associative), then $-$ (right-associative), then $*$ (right-associative), then $/$ (lowest, right-associative). Evaluating $+$ first: $3+1+5 = 9$ and $7+2 = 9$. Expression becomes $9 * 2 / 9 - 4 - 7 - 6 / 2$. Evaluating $-$ right-associatively: $4 - (7 - 6) = 4 - 1 = 3$, giving $9 - 3 = 6$. The expression becomes $9 * 2 / 6 / 2$. Next $*$ gives $18 / 6 / 2$. Evaluating $/$ right-associatively: $6 / 2 = 3$, and $18 / 3 = 6$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.10} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q37}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following syntax-directed definition (SDD):
+\begin{align*}
+S &\to DHTU & \{ S.val = D.val + H.val + T.val + U.val; \} \\
+D &\to \text{``M''} D_1 & \{ D.val = 5 + D_1.val; \} \\
+D &\to \epsilon & \{ D.val = -5; \} \\
+H &\to \text{``L''} H_1 & \{ H.val = 5 * 10 + H_1.val; \} \\
+H &\to \epsilon & \{ H.val = -10; \} \\
+T &\to \text{``C''} T_1 & \{ T.val = 5 * 100 + T_1.val; \} \\
+T &\to \epsilon & \{ T.val = -5; \} \\
+U &\to \text{``K''} & \{ U.val = 5; \}
+\end{align*}
+Given ``MMLK'' as the input, which one of the following options is the CORRECT value computed by the SDD (in the attribute $S.val$)?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 45 & $\square$\ \textbf{(B)} 50 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 55 & $\square$\ \textbf{(D)} 65
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For input "MMLK" with production $S \to DHTU$: $D$ derives "MM" via $D \to \text{"M"} D_1 \to \text{"M"}\text{"M"} D_2 \to \text{"M"}\text{"M"}\epsilon$, giving $D.val = 5 + 5 - 5 = 5$. $H$ derives "L" via $H \to \text{"L"} H_1 \to \text{"L"}\epsilon$, giving $H.val = 50 - 10 = 40$. $T$ derives $\epsilon$, giving $T.val = -5$. $U$ derives "K", giving $U.val = 5$. Summing attribute values yields $S.val = 5 + 40 - 5 + 5 = 45$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.11} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q38}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following grammar $G$, with $S$ as the start symbol. The grammar $G$ has three incomplete productions denoted by (1), (2), and (3).
+\begin{align*}
+S &\to daT \mid (1) \\
+T &\to aS \mid bT \mid (2) \\
+R &\to (3) \mid \epsilon
+\end{align*}
+The set of terminals is $\{a, b, c, d, f\}$. The FIRST and FOLLOW sets of the different non-terminals are as follows:
+$$\text{FIRST}(S) = \{c, d, f\}, \quad \text{FIRST}(T) = \{a, b, \epsilon\}, \quad \text{FIRST}(R) = \{c, \epsilon\}$$
+$$\text{FOLLOW}(S) = \text{FOLLOW}(T) = \{c, f, \$\}, \quad \text{FOLLOW}(R) = \{f\}$$
+Which one of the following options CORRECTLY fills in the incomplete productions?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} (1) $S \to Rf$ (2) $T \to \epsilon$ (3) $R \to cTR$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} (1) $S \to fR$ (2) $T \to \epsilon$ (3) $R \to cTR$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (1) $S \to fR$ (2) $T \to cT$ (3) $R \to cR$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} (1) $S \to Rf$ (2) $T \to cT$ (3) $R \to cR$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Since $\text{FIRST}(S) = \{c, d, f\}$ and $S \to daT$ generates $d$, production (1) must generate $c$ and $f$. With (1) as $S \to Rf$ where $\text{FIRST}(R) = \{c, \epsilon\}$, $\text{FIRST}(Rf) = \{c, f\}$. Since $\epsilon \in \text{FIRST}(T)$, production (2) must be $T \to \epsilon$. Production (3) as $R \to cTR$ matches $\text{FIRST}(R) = \{c, \epsilon\}$ and $\text{FOLLOW}(R) = \{f\}$, matching option (A).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.12} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q39}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following pseudo-code:
+\begin{lstlisting}
+L1:  t1 = -1
+L2:  t2 = 0
+L3:  t3 = 0
+L4:  t4 = 4 * t3
+L5:  t5 = 4 * t2
+L6:  t6 = t5 * M
+L7:  t7 = t4 + t6
+L8:  t8 = a[t7]
+L9:  if t8 <= max goto L11
+L10: t1 = t8
+L11: t3 = t3 + 1
+L12: if t3 < M goto L4
+L13: t2 = t2 + 1
+L14: if t2 < N goto L3
+L15: max = t1
+\end{lstlisting}
+Which one of the following options CORRECTLY specifies the number of basic blocks and the number of instructions in the largest basic block, respectively?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 6 and 6 & $\square$\ \textbf{(B)} 6 and 7 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 7 and 7 & $\square$\ \textbf{(D)} 7 and 6
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Intermediate code generation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Leaders are instructions that start a basic block: $L_1$ (first instruction), targets of conditional/unconditional jumps ($L_4, L_{11}, L_3$), and instructions immediately following jumps ($L_{10}, L_{13}, L_{15}$). This gives 7 leaders: $\{L_1, L_4, L_{10}, L_{11}, L_3, L_{13}, L_{15}\}$, forming 7 basic blocks. The block starting at $L_4$ contains lines $L_4$ through $L_9$, which has 6 instructions, the maximum in any block.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.13} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q21}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following two sets:
+\par\medskip
+\begin{tabular}{ll}
+\textbf{Set X} & \textbf{Set Y} \\
+P. Lexical Analyzer & 1. Abstract Syntax Tree \\
+Q. Syntax Analyzer & 2. Token \\
+R. Intermediate Code Generator & 3. Parse Tree \\
+S. Code Optimizer & 4. Constant Folding
+\end{tabular}
+\par\medskip
+Which one of the following options is the CORRECT match from Set X to Set Y?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} P -- 4; Q -- 1; R -- 3; S -- 2 & $\square$\ \textbf{(B)} P -- 2; Q -- 3; R -- 1; S -- 4 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} P -- 2; Q -- 1; R -- 3; S -- 4 & $\square$\ \textbf{(D)} P -- 4; Q -- 3; R -- 2; S -- 1
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Lexical Analyzer outputs tokens (P - 2). Syntax Analyzer constructs parse trees (Q - 3). Intermediate Code Generator generates abstract syntax trees or intermediate representations (R - 1). Code Optimizer performs constant folding (S - 4). Thus, the correct matching is P - 2; Q - 3; R - 1; S - 4.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.14} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q29}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following statements is/are FALSE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} An attribute grammar is a syntax-directed definition (SDD) in which the functions in the semantic rules have no side effects \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The attributes in a L-attributed definition cannot always be evaluated in a depth-first order \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Synthesized attributes can be evaluated by a bottom-up parser as the input is parsed \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} All L-attributed definitions based on LR(1) grammar can be evaluated using a bottom-up parsing strategy
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small L-attributed definitions are explicitly defined such that their attributes can always be evaluated via depth-first (left-to-right) traversal (making statement B false). Not all L-attributed definitions on LR(1) grammars can be evaluated during bottom-up parsing without rewriting or marker nonterminals (making statement D false).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.15} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q40}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following context-free grammar where the start symbol is $S$ and the set of terminals is $\{a,b,c,d\}$:
+\[ S \to AaAb \mid BbBa \]
+\[ A \to cS \mid \epsilon \]
+\[ B \to dS \mid \epsilon \]
+The following is a partially-filled LL(1) parsing table:
+\par\medskip
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+& $a$ & $b$ & $c$ & $d$ & \$ \\
+\hline
+$S$ & $S \to AaAb$ & $S \to BbBa$ & (1) & (2) & \\
+$A$ & $A \to \epsilon$ & (3) & $A \to cS$ & & \\
+$B$ & (4) & $B \to \epsilon$ & & $B \to dS$ & \\
+\hline
+\end{tabular}
+\par\medskip
+Which one of the following options represents the CORRECT combination for the numbered cells in the parsing table?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} (1) $S \to AaAb$ (2) $S \to BbBa$ (3) $A \to \epsilon$ (4) $B \to \epsilon$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} (1) $S \to BbBa$ (2) $S \to AaAb$ (3) $A \to \epsilon$ (4) $B \to \epsilon$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (1) $S \to AaAb$ (2) $S \to BbBa$ (3) blank (4) blank \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} (1) $S \to BbBa$ (2) $S \to AaAb$ (3) blank (4) blank
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small FIRST(A) = {c, $\epsilon$} and FIRST(B) = {d, $\epsilon$}. For $S \to AaAb$, FIRST($AaAb$) = {c, a}, so entry $M[S, c]$ gets $S \to AaAb$ (cell 1). For $S \to BbBa$, FIRST($BbBa$) = {d, b}, so entry $M[S, d]$ gets $S \to BbBa$ (cell 2). FOLLOW(A) = {a, b}, so $A \to \epsilon$ appears on $a$ and $b$ (cell 3). FOLLOW(B) = {b, a}, so $B \to \epsilon$ appears on $b$ and $a$ (cell 4).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.16} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q43}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following expression: $x[i] = (p + r) * -s[i] + u / w$. The following sequence shows the list of triples representing the given expression, with entries missing for triples (1), (3), and (6):
+\begin{verbatim}
+(0) + p r
+(1)
+(2) uminus (1)
+(3)
+(4) / u w
+(5) + (3) (4)
+(6)
+(7) = (6) (5)
+\end{verbatim}
+Which one of the following options fills in the missing entries CORRECTLY?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} (1) =[] s i; (3) * (0) (2); (6) []= x i \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} (1) []= s i; (3) - (0) (2); (6) =[] x (5) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (1) =[] s i; (3) * (0) (2); (6) []= x (5) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} (1) []= s i; (3) - (0) (2); (6) =[] x i
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Intermediate code generation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In compiler triples for array references: array indexing $s[i]$ uses index operation `=[] s i` at triple (1). Triple (2) applies unary minus to (1): `uminus (1)`. Triple (3) multiplies $(p + r)$ at (0) with $-s[i]$ at (2): `* (0) (2)`. For assignment to array $x[i]$, triple (6) performs indexed target `[]= x i`, and triple (7) stores value (5) into (6).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.17} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q65}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following augmented grammar, which is to be parsed with a SLR parser. The set of terminals is $\{a,b,c,d,\#,@\}$:
+\[ S' \to S \]
+\[ S \to SS \mid Aa \mid bAc \mid Bc \mid bBa \]
+\[ A \to d\# \]
+\[ B \to @ \]
+Let $I_0 = \text{CLOSURE}(\{S' \to \bullet S\})$. The number of items in the set $\text{GOTO}(I_0, S)$ is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 9 to 9} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small From $I_0 = \text{CLOSURE}(\{S' \to \bullet S\})$, transitions on $S$ produce kernel items $\{S' \to S \bullet, S \to S \bullet S\}$. Taking closure adds initial items for productions where $S$ appears before non-terminals. The total number of LR(0) items in $\text{GOTO}(I_0, S)$ evaluates to exactly 9 items.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.18} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q12}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which ONE of the following statements is FALSE regarding the symbol table?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Symbol table is responsible for keeping track of the scope of variables. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Symbol table can be implemented using a binary search tree. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Symbol table is not required after the parsing phase. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Symbol table is created during the lexical analysis phase.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The symbol table is actively used throughout all phases of the compiler, including semantic analysis, intermediate code generation, code optimization, and target code generation for type checking, memory allocation, and address resolution. Thus, claiming it is not required after parsing is false.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.19} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q13}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which ONE of the following techniques used in compiler code optimization uses live variable analysis?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Run-time function call management \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Register assignment to variables \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Strength reduction \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Constant folding
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Data flow analyses: constant propagation, liveness analysis, common sub expression elimination}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Live variable analysis determines whether the value in a variable could be read along some execution path before being redefined. This information is directly used in register allocation and assignment to construct interference graphs and allocate registers efficiently.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.20} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q46}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following statement(s) is/are TRUE while computing First and Follow during top down parsing by a compiler?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} For a production $A \to \epsilon$, $\epsilon$ will be added to $First(A)$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} If there is any input right end marker, it will be added to $First(S)$, where $S$ is the start symbol. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} For a production $A \to \epsilon$, $\epsilon$ will be added to $Follow(A)$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} If there is any input right end marker, it will be added to $Follow(S)$, where $S$ is the start symbol.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small By definition of FIRST and FOLLOW: if $A \to \epsilon$, then $\epsilon \in \text{FIRST}(A)$ (A is true). $\epsilon$ can never belong to any FOLLOW set (C is false). The right end marker (\$) is placed into $\text{FOLLOW}(S)$ for the start symbol $S$ to mark the end of input (D is true, B is false).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.21} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q52}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Refer to the given 3-address code sequence. This code sequence is split into basic blocks. The number of basic blocks is \_\_\_\_\_\_\. (Answer in integer)
+\par\medskip
+\begin{verbatim}
+1001: i = 1
+1002: j = 1
+1003: t1 = 10*i
+1004: t2 = t1+j
+1005: t3 = 8*t2
+1006: t4 = t3-88
+1007: a[t4] = 0.0
+1008: j = j+1
+1009: if j <= 10 goto 1003
+1010: i = i+1
+1011: if i <= 10 goto 1002
+1012: i = 1
+1013: t5 = i-1
+1014: t6 = 88*t5
+1015: a[t6] = 1.0
+1016: i = i+1
+1017: if i <= 11 goto 1013
+\end{verbatim}
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 6 to 6} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Intermediate code generation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Leaders are: 1001 (first instruction), targets of jumps: 1003, 1002, 1013, and instructions immediately following jumps: 1010, 1012. Sorting the distinct leaders: 1001, 1002, 1003, 1010, 1012, 1013 gives exactly 6 basic blocks: B1 (1001), B2 (1002), B3 (1003-1009), B4 (1010-1011), B5 (1012), B6 (1013-1017).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.22} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q21}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following statements about the use of backpatching in a compiler for intermediate code generation:
+(I) Backpatching can be used to generate code for Boolean expression in one pass.
+(II) Backpatching can be used to generate code for flow-of-control statements in one pass.
+Which ONE of the following options is CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Only (I) is correct. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Only (II) is correct. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Both (I) and (II) are correct. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Neither (I) nor (II) is correct.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Intermediate code generation and backpatching}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Backpatching is a standard technique used in single-pass compilers to synthesize target labels for forward jumps in both Boolean expressions and flow-of-control statements.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.23} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q22}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Given the following syntax directed translation rules:
+- Rule 1: $R \to AB \;\{ B.i = R.i - 1; \; A.i = B.i; \; R.i = A.i + 1; \}$
+- Rule 2: $P \to CD \;\{ P.i = C.i + D.i; \; D.i = C.i + 2; \}$
+- Rule 3: $Q \to EF \;\{ Q.i = E.i + F.i; \}$
+\par\medskip
+Which ONE is the CORRECT option among the following?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Rule 1 is S-attributed and L-attributed; Rule 2 is S-attributed and not L-attributed; Rule 3 is neither S-attributed nor L-attributed \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Rule 1 is neither S-attributed nor L-attributed; Rule 2 is S-attributed and L-attributed; Rule 3 is S-attributed and L-attributed \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Rule 1 is neither S-attributed nor L-attributed; Rule 2 is not S-attributed and is L-attributed; Rule 3 is S-attributed and L-attributed \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Rule 1 is S-attributed and not L-attributed; Rule 2 is not S-attributed and is L-attributed; Rule 3 is S-attributed and L-attributed
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Syntax-directed translation: S-attributed and L-attributed definitions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In Rule 1, $R.i$ is computed from children (synthesized-like) but defined circularly with inherited attributes, making it neither. In Rule 2, attributes depend only on left siblings, satisfying L-attributed definition. In Rule 3, $Q.i$ depends only on children, which is S-attributed (and hence L-attributed).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.24} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q40}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Given a Context-Free Grammar $G$:
+$$\begin{aligned} S &\to Aa \mid bAc \mid dc \mid bda \\ A &\to d \end{aligned}$$
+Which ONE of the following statements is CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $G$ is neither LALR(1) nor SLR(1) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $G$ is CLR(1), not LALR(1) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $G$ is LALR(1), not SLR(1) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $G$ is LALR(1), also SLR(1)
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Parsing: LR, LALR, and SLR parsers}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In SLR(1), FOLLOW sets create reduce-reduce conflicts on lookahead $c$. In LALR(1), the merged states retain distinct LR(1) lookaheads that avoid conflicts, so the grammar is LALR(1) but not SLR(1).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.25} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q51}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider two grammars $G_1$ and $G_2$ with production rules for dangling-else conditional statements. Which of the following statements is/are CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $G_1$ is not $LL(1)$ and $G_2$ is $LL(1)$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $G_1$ is $LL(1)$ and $G_2$ is not $LL(1)$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $G_1$ and $G_2$ are not $LL(1)$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $G_1$ and $G_2$ are ambiguous.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C;D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Parsing: LL(1) grammars and ambiguity}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Both $G_1$ and $G_2$ exhibit the classic dangling-else ambiguity, generating two distinct parse trees for nested if-then-else statements. Since ambiguous grammars can never be $LL(1)$, both C and D are correct.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\end{document}

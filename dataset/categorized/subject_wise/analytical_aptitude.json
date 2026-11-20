@@ -1,0 +1,269 @@
+{
+  "category": "Subject Wise (Modular)",
+  "title": "Analytical Aptitude",
+  "total_questions": 5,
+  "years_included": [
+    2018,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "questions": [
+    {
+      "id": "2022_CS_GA_Q04",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 4,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 5,
+      "question_text": "Given below are four statements.\nStatement 1: All students are inquisitive.\nStatement 2: Some students are inquisitive.\nStatement 3: No student is inquisitive.\nStatement 4: Some students are not inquisitive.\nFrom the given four statements, find the two statements that CANNOT BE\nTRUE simultaneously, assuming that there is at least one student in the class.",
+      "options": {
+        "A": "Statement 1 and Statement 3",
+        "B": "Statement 1 and Statement 2",
+        "C": "Statement 2 and Statement 4",
+        "D": "Statement 3 and Statement 4"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Analytical Aptitude",
+      "subtopic": "Logic: deduction and induction",
+      "difficulty_level": "Easy",
+      "explaination": "Statement 1 (\"All students are inquisitive\") and Statement 3 (\"No student is inquisitive\") are universal affirmative and universal negative statements (contraries). In classical categorical logic with a non-empty class, both statements cannot be simultaneously true.",
+      "tags": [
+        "1_mark",
+        "2022",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Given below are four statements:\n\\begin{itemize}[itemsep=0pt,topsep=2pt]\n\\item Statement 1: All students are inquisitive.\n\\item Statement 2: Some students are inquisitive.\n\\item Statement 3: No student is inquisitive.\n\\item Statement 4: Some students are not inquisitive.\n\\end{itemize}\nFrom the given four statements, find the two statements that CANNOT BE TRUE simultaneously, assuming that there is at least one student in the class.",
+      "options_latex": {
+        "A": "Statement 1 and Statement 3",
+        "B": "Statement 1 and Statement 2",
+        "C": "Statement 2 and Statement 4",
+        "D": "Statement 3 and Statement 4"
+      }
+    },
+    {
+      "id": "2024_CS2_GA_Q10",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS2",
+      "year": 2024,
+      "session": "CS2",
+      "question_number": 10,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 8,
+      "page_end": 9,
+      "question_text": "In the 4 \u00d7 4 array shown below, each cell of the first three rows has either a\ncross (X) or a number.\nThe number in a cell represents the count of the immediate neighboring cells\n(left, right, top, bottom, diagonals) NOT having a cross (X). Given that the last row\nhas no crosses (X), the sum of the four numbers to be filled in the last row is",
+      "options": {
+        "A": "11",
+        "B": "10",
+        "C": "12",
+        "D": "9\n\nOrganizing Institute: IISc, Bengaluru"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Analytical Aptitude",
+      "subtopic": "Logic: deduction and induction",
+      "difficulty_level": "Hard",
+      "explaination": "Each number in a cell denotes how many neighboring cells do NOT contain an 'X'. With crosses determined from the first three rows, the count of non-cross neighbors for each of the 4 cells in the bottom row evaluates to values whose total sum is 11.",
+      "tags": [
+        "2024",
+        "2_mark",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "In a $4 \\times 4$ array, each cell of the first three rows has either a cross (X) or a number. The number in a cell represents the count of the immediate neighboring cells (left, right, top, bottom, diagonals) NOT having a cross (X). Given that the last row has no crosses (X), the sum of the four numbers to be filled in the last row is:",
+      "options_latex": {
+        "A": "11",
+        "B": "10",
+        "C": "12",
+        "D": "9"
+      }
+    },
+    {
+      "id": "2025_CS1_GA_Q04",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS1",
+      "year": 2025,
+      "session": "CS1",
+      "question_number": 4,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 5,
+      "question_text": "Consider the relationships among P, Q, R, S, and T:\n\u2022 P is the brother of Q.\n\u2022 S is the daughter of Q.\n\u2022 T is the sister of S.\n\u2022 R is the mother of Q.\nThe following statements are made based on the relationships given above.\n(1) R is the grandmother of S.\n(2) P is the uncle of S and T.\n(3) R has only one son.\n(4) Q has only one daughter.\nWhich one of the following options is correct?",
+      "options": {
+        "A": "Both (1) and (2) are true.",
+        "B": "Both (1) and (3) are true.",
+        "C": "Only (3) is true.",
+        "D": "Only (4) is true.\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Analytical Aptitude",
+      "subtopic": "Logic: deduction and induction",
+      "difficulty_level": "Easy",
+      "explaination": "Since R is the mother of Q and S is the daughter of Q, R is definitely the grandmother of S (statement 1 is true). P is the brother of Q, so P is the maternal/paternal uncle of Q's children S and T (statement 2 is true). The genders and number of other children of R and Q are not specified, so (3) and (4) cannot be established.",
+      "tags": [
+        "1_mark",
+        "2025",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Consider the relationships among P, Q, R, S, and T:\n\\begin{itemize}\n\\item P is the brother of Q.\n\\item S is the daughter of Q.\n\\item T is the sister of S.\n\\item R is the mother of Q.\n\\end{itemize}\nThe following statements are made based on the relationships given above:\n(1) R is the grandmother of S.\n(2) P is the uncle of S and T.\n(3) R has only one son.\n(4) Q has only one daughter.\nWhich one of the following options is correct?",
+      "options_latex": {
+        "A": "Both (1) and (2) are true.",
+        "B": "Both (1) and (3) are true.",
+        "C": "Only (3) is true.",
+        "D": "Only (4) is true."
+      }
+    },
+    {
+      "id": "2025_CS2_GA_Q06",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS2",
+      "year": 2025,
+      "session": "CS2",
+      "question_number": 6,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 7,
+      "question_text": "Based only on the conversation below, identify the logically correct inference:\n\u201cEven if I had known that you were in the hospital, I would not have gone there to\nsee you\u201d, Ramya told Josephine.",
+      "options": {
+        "A": "Ramya knew that Josephine was in the hospital.",
+        "B": "Ramya did not know that Josephine was in the hospital.",
+        "C": "Ramya and Josephine were once close friends; but now, they are not.",
+        "D": "Josephine was in the hospital due to an injury to her leg.\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Analytical Aptitude",
+      "subtopic": "Logic: deduction and conditional statements",
+      "difficulty_level": "Easy",
+      "explaination": "The subjunctive statement 'Even if I had known that you were in the hospital...' logically presupposes that the speaker did not know about Josephine's hospitalization at that time.",
+      "tags": [
+        "2025",
+        "2_mark",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Based only on the conversation below, identify the logically correct inference:\n``Even if I had known that you were in the hospital, I would not have gone there to see you'', Ramya told Josephine.",
+      "options_latex": {
+        "A": "Ramya knew that Josephine was in the hospital.",
+        "B": "Ramya did not know that Josephine was in the hospital.",
+        "C": "Ramya and Josephine were once close friends; but now, they are not.",
+        "D": "Josephine was in the hospital due to an injury to her leg."
+      }
+    },
+    {
+      "id": "2025_CS2_GA_Q07",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS2",
+      "year": 2025,
+      "session": "CS2",
+      "question_number": 7,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 8,
+      "question_text": "If IMAGE and FIELD are coded as FHBNJ and EMFJG respectively then, which\none among the given options is the most appropriate code for BEACH ?",
+      "options": {
+        "A": "CEADP",
+        "B": "IDBFC",
+        "C": "JGIBC",
+        "D": "IBCEC\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Analytical Aptitude",
+      "subtopic": "Letter patterns, sequencing and coding-decoding",
+      "difficulty_level": "Medium",
+      "explaination": "The coding rule applies a $+1$ alphabetical shift to each character followed by string reversal. Shifting $\\text{BEACH}$ by $+1$ gives $\\text{CFBDI}$, and reversing this yields $\\text{IDBFC}$.",
+      "tags": [
+        "2025",
+        "2_mark",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "If $\\text{IMAGE}$ and $\\text{FIELD}$ are coded as $\\text{FHBNJ}$ and $\\text{EMFJG}$ respectively then, which one among the given options is the most appropriate code for $\\text{BEACH}$?",
+      "options_latex": {
+        "A": "CEADP",
+        "B": "IDBFC",
+        "C": "JGIBC",
+        "D": "IBCEC"
+      }
+    }
+  ]
+}

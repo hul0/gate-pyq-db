@@ -1,0 +1,1504 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.5cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm
+}
+
+% Persistent Unremovable Canvas Watermark on Every Page
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=8cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg} \\[-0.5em]
+        {\fontsize{18}{22}\selectfont\bfseries\scshape www.studiva.co.in}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.12] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape GATE 2018--2025 CS/IT $\cdot$ \textbf{Computer Networks}}
+\fancyhead[R]{\small\scshape Practice Question Bank with Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026} Studiva\textsuperscript{TM}}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\scriptsize\texttt{www.studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Code Listing Style (Monochrome)
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=none,
+    frame=none,
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: IMPRINT & TITLE PAGE ====================
+\thispagestyle{empty}
+\vspace*{0.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg}\\[0.6em]
+    {\LARGE \textbf{GATE 2018--2025 COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTION BANK WITH SOLUTIONS}}\\[0.4em]
+    {\large \textsc{\textbf{Subject Wise: Computer Networks}}}\\[0.2em]
+    {\normalsize \textsc{Combined 2018--2025 Examination Papers $\cdot$ Comprehensive Edition ($\mathbf{35}$ Questions)}}\\[1.2em]
+    \rule{0.6\textwidth}{0.6pt}
+\end{center}
+
+\vspace{1em}
+\noindent\begin{tabular}{ll}
+\textbf{Author / Compiler:} & Rupam Ghosh \\
+\textbf{Publisher \& Platform:} & Studiva\textsuperscript{TM} (\texttt{www.studiva.co.in}) \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Standard Edition (2026) \\
+\textbf{Coverage:} & Complete GATE CS/IT Papers (2018, 2022, 2023, 2024 CS1, 2024 CS2, 2025 CS1, 2025 CS2) \\
+\textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
+\end{tabular}
+
+\vspace{1.5em}
+\begin{tcolorbox}[enhanced, standard jigsaw, opacityback=0, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva\textsuperscript{TM}. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva\textsuperscript{TM}}.\\[0.6em]
+\textbf{Terms of Use \& Attribution Rules:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva\textsuperscript{TM}} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
+    \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
+\end{itemize}
+\vspace{0.6em}
+\textbf{Fair Use Disclaimer:}\\
+The underlying examination questions originate from the Graduate Aptitude Test in Engineering (GATE), conducted by the Indian Institutes of Technology (IITs) and Indian Institute of Science (IISc). Question texts are reproduced for non-commercial educational study under Fair Use doctrines. No copyright is claimed over the original GATE examination question texts.
+\end{tcolorbox}
+
+\vspace{1.2em}
+\begin{center}
+\small\itshape
+Practice Recommendation: Use an opaque sheet of paper or ruler to cover the right-hand column during mock attempts. Tick your chosen answers directly in the check boxes on the left, then slide the cover to check the solution and hint.
+\end{center}
+
+\newpage
+% ==================== PAGE 2 ONWARDS: QUESTION BANK ====================
+
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.1} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q13}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Match the following:
+\begin{center}
+\begin{tabular}{ll@{\hspace{2cm}}ll}
+\textbf{Field} & & \textbf{Length in bits} & \\
+P. & UDP Header's Port Number & I. & 48 \\
+Q. & Ethernet MAC Address & II. & 8 \\
+R. & IPv6 Next Header & III. & 32 \\
+S. & TCP Header's Sequence Number & IV. & 16
+\end{tabular}
+\end{center}
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} P-III, Q-I, R-II, S-IV & $\square$\ \textbf{(B)} P-IV, Q-II, R-I, S-III \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} P-IV, Q-I, R-II, S-III & $\square$\ \textbf{(D)} P-I, Q-IV, R-II, S-III
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Concept of layering: OSI and TCP/IP Protocol Stacks}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small UDP port numbers are 16 bits long (P-IV). Ethernet MAC addresses are 48 bits long (Q-I). The IPv6 Next Header field is 8 bits long (R-II). TCP sequence numbers are 32 bits long (S-III). Hence the correct matching is P-IV, Q-I, R-II, S-III.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.2} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q14}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following statements regarding the slow start phase of the TCP congestion control algorithm. Note that $cwnd$ stands for the congestion window size and $MSS$ denotes the Maximum Segment Size.
+\begin{itemize}[leftmargin=*, nosep]
+    \item[(i)] The $cwnd$ increases by 2 $MSS$ on every successful acknowledgement.
+    \item[(ii)] The $cwnd$ increases by 1 $MSS$ on every successful acknowledgement.
+    \item[(iii)] The $cwnd$ increases by 1 $MSS$ every round trip time.
+    \item[(iv)] The $cwnd$ approximately doubles every round trip time.
+\end{itemize}
+Which of the following statements is/are CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} (i) and (iii) only & $\square$\ \textbf{(B)} (i) and (iv) only \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (ii) and (iv) only & $\square$\ \textbf{(D)} (ii) and (iii) only
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Transport layer: flow control and congestion control, UDP, TCP, sockets}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In TCP slow start, the congestion window (`cwnd`) increases by 1 MSS for each acknowledged segment. Consequently, when all segments in a flight are acknowledged, `cwnd` approximately doubles every round-trip time (RTT). Thus, statement (iv) is TRUE.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.3} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q25}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a 1 Gbps network with an MTU of 1500 bytes and a 32-bit sequence number space. The minimum time (in seconds, rounded to the nearest integer) after which the sequence numbers can wrap around is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 34 to 34} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Transport layer: flow control and congestion control, UDP, TCP, sockets}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A 32-bit sequence number space contains $2^{32} = 4{,}294{,}967{,}296$ bytes. At a transmission rate of $1\text{ Gbps} = \frac{10^9}{8} = 1.25 \times 10^8\text{ bytes/s}$, the wrap-around time is $\frac{2^{32}}{1.25 \times 10^8} = \frac{4294967296}{125000000} \approx 34.36$ seconds $\approx 34$ seconds.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.4} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q54}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider an IP packet with a length of 4,500 bytes that includes a 20-byte IPv4 header and a 40-byte TCP header. The packet is forwarded across an IP network with an MTU of 600 bytes. The value of the fragment offset field in the third fragment (in 8-byte units) is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 144 to 144} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Fragmentation and IP addressing, IPv4, CIDR notation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Total payload to fragment $= 4500 - 20 = 4480$ bytes. With $\text{MTU} = 600$, maximum payload per fragment must be a multiple of 8: $\lfloor (600 - 20) / 8 \rfloor \times 8 = 72 \times 8 = 576$ bytes. Fragment 1 carries bytes 0 to 575 (offset 0). Fragment 2 carries bytes 576 to 1151 (offset $576/8 = 72$). Fragment 3 carries bytes 1152 onwards, so its fragment offset field is $\frac{1152}{8} = 144$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.5} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q22}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider an enterprise network with two Ethernet segments, a web server and a firewall, connected via three routers. What is the number of subnets inside the enterprise network?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 3 & $\square$\ \textbf{(B)} 12 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 6 & $\square$\ \textbf{(D)} 8
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Concept of layering: OSI and TCP/IP Protocol Stacks}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In the enterprise topology, subnets are formed by distinct broadcast domains separated by router interfaces: 2 Ethernet LAN segments (2 subnets), 1 web server subnet (1 subnet), 1 internal firewall segment (1 subnet), and 2 point-to-point links between the routers (2 subnets), yielding a total of 6 subnets.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.6} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q35}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the resolution of the domain name `www.gate.org.in` by a DNS resolver. Assume that no resource records are cached anywhere across the DNS servers and that iterative query mechanism is used in the resolution. The number of DNS query-response pairs involved in completely resolving the domain name is \_\_\_\_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 4 to 4} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Application layer protocols: DNS, SMTP, HTTP, FTP, Email}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In an un-cached iterative resolution for `www.gate.org.in`: the resolver queries Root DNS server (1), `.in` TLD server (2), `.org.in` SLD server (3), and `gate.org.in` Authoritative server (4). Each query yields a response, totaling 4 query-response pairs.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.7} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q59}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a 100 Mbps link between an earth station (sender) and a satellite (receiver) at an altitude of 2100 km. The signal propagates at a speed of $3 \times 10^8\text{ m/s}$. The time taken (in milliseconds, rounded off to two decimal places) for the receiver to completely receive a packet of 1000 bytes transmitted by the sender is \_\_\_\_\_\_\_\_\_\. (Answer in numeric format)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 7.07 to 7.09} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Data link layer: framing, error detection, Medium Access Control, Ethernet bridging}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Propagation time is $T_{\text{prop}} = \frac{2100 \times 10^3\text{ m}}{3 \times 10^8\text{ m/s}} = 7.00\text{ ms}$. Transmission time is $T_{\text{trans}} = \frac{1000 \times 8\text{ bits}}{100 \times 10^6\text{ bps}} = 0.08\text{ ms}$. Total time to completely receive the packet is $T_{\text{prop}} + T_{\text{trans}} = 7.00 + 0.08 = 7.08\text{ ms}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.8} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q60}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the data transfer using TCP over a 1 Gbps link. Assuming that the maximum segment lifetime (MSL) is set to 60 seconds, the minimum number of bits required for the sequence number field of the TCP header, to prevent the sequence number space from wrapping around during the MSL is \_\_\_\_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 33 to 33} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Transport layer: flow control and congestion control, UDP, TCP, sockets}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Data transmitted at 1 Gbps line rate in $\text{MSL} = 60\text{ s}$ is $\frac{10^9\text{ bps}}{8} \times 60\text{ s} = 7.5 \times 10^9\text{ bytes}$. The sequence number space must satisfy $2^k \ge 7.5 \times 10^9$. Since $2^{32} \approx 4.29 \times 10^9 < 7.5 \times 10^9$ and $2^{33} \approx 8.59 \times 10^9 > 7.5 \times 10^9$, at least 33 bits are required.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.9} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q17}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Suppose two hosts are connected by a point-to-point link and they are configured to use Stop-and-Wait protocol for reliable data transfer. Identify in which one of the following scenarios, the utilization of the link is the lowest.
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Longer link length and lower transmission rate \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Longer link length and higher transmission rate \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Shorter link length and lower transmission rate \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Shorter link length and higher transmission rate
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Transport layer: flow control and congestion control, UDP, TCP, sockets}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Link utilization in Stop-and-Wait is $\eta = \frac{1}{1 + 2a}$, where $a = \frac{T_{\text{prop}}}{T_{\text{trans}}} = \frac{d/v}{L/B} = \frac{d \cdot B}{v \cdot L}$. Utilization $\eta$ is lowest when parameter $a$ is maximized, which occurs when the link length $d$ is longer (increasing propagation delay) and the transmission rate $B$ is higher (decreasing packet transmission time).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.10} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q25}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following statements is/are INCORRECT about the OSPF (Open Shortest Path First) routing protocol used in the Internet?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} OSPF implements Bellman-Ford algorithm to find shortest paths. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} OSPF uses Dijkstra's shortest path algorithm to implement least-cost path routing. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} OSPF is used as an inter-domain routing protocol. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} OSPF implements hierarchical routing.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A, C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Routing protocols: shortest path, flooding, distance vector and link state routing}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small OSPF is an intra-domain (Interior Gateway) routing protocol that uses Dijkstra's link-state algorithm (not Bellman-Ford, which is used by distance-vector protocols like RIP). Therefore, statement A (implements Bellman-Ford) and statement C (used as inter-domain) are INCORRECT, which are the required answers.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.11} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q50}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Suppose you are asked to design a new reliable byte-stream transport protocol like TCP. This protocol, named myTCP, runs over a 100 Mbps network with Round Trip Time of 150 milliseconds and the maximum segment lifetime of 2 minutes.
+Which of the following is/are valid lengths of the Sequence Number field in the myTCP header?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 30 bits & $\square$\ \textbf{(B)} 32 bits \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 34 bits & $\square$\ \textbf{(D)} 36 bits
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B, C, D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Transport layer: flow control and congestion control, UDP, TCP, sockets}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small To prevent sequence number wraparound within the Maximum Segment Lifetime ($MSL = 2\text{ min} = 120\text{ s}$), the sequence number space $2^k$ must be at least the data bytes transmitted at line rate during MSL: $2^k \ge \frac{100 \times 10^6\text{ bps}}{8} \times 120\text{ s} = 1.5 \times 10^9\text{ bytes}$. Since $2^{30} \approx 1.07 \times 10^9 < 1.5 \times 10^9$ and $2^{31} \approx 2.15 \times 10^9 > 1.5 \times 10^9$, at least 31 bits are required. Thus, 32 bits, 34 bits, and 36 bits are all valid lengths.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.12} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q52}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Suppose in a web browser, you click on the `www.gate-2023.in` URL. The browser cache is empty. The IP address for this URL is not cached in your local host, so a DNS lookup is triggered (by the local DNS server deployed on your local host) over the 3-tier DNS hierarchy in an iterative mode. No resource records are cached anywhere across all DNS servers.
+Let RTT denote the round trip time between your local host and DNS servers in the DNS hierarchy. The round trip time between the local host and the web server hosting `www.gate-2023.in` is also equal to RTT. The HTML file associated with the URL is small enough to have negligible transmission time and negligible rendering time by your web browser, which references 10 equally small objects on the same web server.
+Which of the following statements is/are CORRECT about the minimum elapsed time between clicking on the URL and your browser fully rendering it?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} 7 RTTs, in case of non-persistent HTTP with 5 parallel TCP connections. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} 5 RTTs, in case of persistent HTTP with pipelining. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 9 RTTs, in case of non-persistent HTTP with 5 parallel TCP connections. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} 6 RTTs, in case of persistent HTTP with pipelining.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C, D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Application layer protocols: DNS, SMTP, HTTP, FTP, Email}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Resolving the URL via 3-tier iterative DNS requires $3\text{ RTT}$. Initiating TCP connection and requesting the base HTML page requires $1 + 1 = 2\text{ RTT}$, so the base HTML is received after $3 + 2 = 5\text{ RTT}$. With persistent HTTP pipelining, all 10 objects are fetched in 1 round trip over the established connection, giving $5 + 1 = 6\text{ RTT}$ (D is TRUE). With non-persistent HTTP and 5 parallel connections, fetching 10 objects takes 2 sequential batches; each batch takes $1\text{ RTT (TCP)} + 1\text{ RTT (HTTP)} = 2\text{ RTT}$, adding $2 \times 2 = 4\text{ RTT}$, giving $5 + 4 = 9\text{ RTT}$ (C is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.13} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q65}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The forwarding table of a router is shown below:
+\begin{center}
+\begin{tabular}{|l|l|c|}
+\hline
+\textbf{Subnet Number} & \textbf{Subnet Mask} & \textbf{Interface ID} \\
+\hline
+200.150.0.0 & 255.255.0.0 & 1 \\
+200.150.64.0 & 255.255.224.0 & 2 \\
+200.150.68.0 & 255.255.255.0 & 3 \\
+200.150.68.64 & 255.255.255.224 & 4 \\
+Default & & 0 \\
+\hline
+\end{tabular}
+\end{center}
+A packet addressed to a destination address 200.150.68.118 arrives at the router. It will be forwarded to the interface with ID \_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 3 to 3} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Routing protocols: shortest path, flooding, distance vector and link state routing}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For destination 200.150.68.118: subnet /16 (prefix length 16) matches. Subnet 200.150.64.0/19 (mask 255.255.224.0) matches since $68 \& 224 = 64$. Subnet 200.150.68.0/24 (mask 255.255.255.0) matches since $68 = 68$. Subnet 200.150.68.64/27 (mask 255.255.255.224) does not match since $118 \& 224 = 96 \neq 64$. By the Longest Prefix Match rule, the /24 route (interface 3) is selected.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.14} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q16}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A user starts browsing a webpage hosted at a remote server. The browser opens a single TCP connection to fetch the entire webpage from the server. The webpage consists of a top-level index page with multiple embedded image objects. Assume that all caches (e.g., DNS cache, browser cache) are all initially empty. The following packets leave the user's computer in some order:
+\begin{enumerate}[label=(\roman*),itemsep=0pt,topsep=2pt]
+\item HTTP GET request for the index page
+\item DNS request to resolve the web server's name to its IP address
+\item HTTP GET request for an image object
+\item TCP SYN to open a connection to the web server
+\end{enumerate}
+Which one of the following is the CORRECT chronological order (earliest in time to latest) of the packets leaving the computer?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} (iv), (ii), (iii), (i) & $\square$\ \textbf{(B)} (ii), (iv), (iii), (i) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (ii), (iv), (i), (iii) & $\square$\ \textbf{(D)} (iv), (ii), (i), (iii)
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Concept of layering: OSI and TCP/IP Protocol Stacks}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Initially all caches are empty. The client must first send a DNS query (ii) to resolve the server hostname to an IP. Next, it establishes a TCP connection by sending TCP SYN (iv). Once connected, it sends an HTTP GET request for the index HTML page (i). After parsing the HTML and identifying embedded images, it sends HTTP GET requests for the images (iii).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.15} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q29}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+TCP client P successfully establishes a connection to TCP server Q. Let $N_P$ denote the sequence number in the SYN sent from P to Q. Let $N_Q$ denote the acknowledgement number in the SYN ACK from Q to P. Which of the following statements is/are CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The sequence number $N_P$ is chosen randomly by P \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The sequence number $N_P$ is always 0 for a new connection \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The acknowledgement number $N_Q$ is equal to $N_P$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The acknowledgement number $N_Q$ is equal to $N_P + 1$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Transport layer: flow control and congestion control, UDP, TCP, sockets}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small During TCP connection establishment, the initial sequence number $N_P$ is chosen pseudo-randomly to avoid cross-connection packet collisions and mitigate spoofing attacks (A is TRUE). Because a SYN packet consumes exactly 1 sequence number in the sequence space, server $Q$ acknowledges it with $N_Q = N_P + 1$ (D is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.16} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q31}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following fields is/are modified in the IP header of a packet going out of a network address translation (NAT) device from an internal network to an external network?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Source IP & $\square$\ \textbf{(B)} Destination IP \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Header Checksum & $\square$\ \textbf{(D)} Total Length
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Network Address Translation (NAT)}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small When a packet leaves a private subnet through an outbound NAT gateway, the router rewrites the private Source IP address to its public external IP address (A is modified). Because the IP header fields have changed, the IPv4 Header Checksum must be recalculated and replaced (C is modified). Destination IP and Total Length are unmodified.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.17} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q36}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a network path P---Q---R between nodes P and R via router Q. Node P sends a file of size $10^6$ bytes to R via this path by splitting the file into chunks of $10^3$ bytes each. Node P sends these chunks one after the other without any wait time between the successive chunk transmissions. Assume that the size of extra headers added to these chunks is negligible, and that the chunk size is less than the MTU.
+\par\medskip
+Each of the links P---Q and Q---R has a bandwidth of $10^6$ bits/sec, and negligible propagation latency. Router Q immediately transmits every packet it receives from P to R, with negligible processing and queueing delays. Router Q can simultaneously receive on link P---Q and transmit on link Q---R.
+\par\medskip
+Assume P starts transmitting the chunks at time $t = 0$.
+Which one of the following options gives the time (in seconds, rounded off to 3 decimal places) at which R receives all the chunks of the file?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 8.000 & $\square$\ \textbf{(B)} 8.008 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 15.992 & $\square$\ \textbf{(D)} 16.000
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Concept of layering: OSI and TCP/IP Protocol Stacks}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The file size is $10^6$ bytes split into 1000 chunks of $10^3$ bytes ($8000$ bits) each. Link transmission time for one chunk is $\frac{8000\text{ bits}}{10^6\text{ bps}} = 0.008\text{ s}$. Node P completes sending all 1000 chunks at $t = 1000 \times 0.008 = 8.000\text{ s}$. The last chunk arrives at router Q at $t = 8.000\text{ s}$ and takes another $0.008\text{ s}$ to reach R over link Q---R, completing at $8.008\text{ s}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.18} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q58}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the entries shown below in the forwarding table of an IP router. Each entry consists of an IP prefix and the corresponding next hop router for packets whose destination IP address matches the prefix. The notation ``/N'' in a prefix indicates a subnet mask with the most significant $N$ bits set to 1.
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Prefix} & \textbf{Next hop router} \\
+\hline
+10.1.1.0/24 & R1 \\
+10.1.1.128/25 & R2 \\
+10.1.1.64/26 & R3 \\
+10.1.1.192/26 & R4 \\
+\hline
+\end{tabular}
+\end{center}
+This router forwards 20 packets each to 5 hosts. The IP addresses of the hosts are 10.1.1.16, 10.1.1.72, 10.1.1.132, 10.1.1.191, and 10.1.1.205. The number of packets forwarded via the next hop router R2 is \_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 40 to 40} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Routing protocols: shortest path, flooding, distance vector and link state routing}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Using longest prefix match for each host address: 10.1.1.16 matches /24 (R1); 10.1.1.72 matches /24 and 10.1.1.64/26 (R3); 10.1.1.132 matches /24 and 10.1.1.128/25 (R2); 10.1.1.191 matches /24 and 10.1.1.128/25 (R2); 10.1.1.205 matches /24, /25, and 10.1.1.192/26 (R4). Thus, 2 hosts (10.1.1.132 and 10.1.1.191) match router R2. Total packets forwarded via R2 $= 2 \times 20 = 40$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.19} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q65}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider sending an IP datagram of size 1420 bytes (including 20 bytes of IP header) from a sender to a receiver over a path of two links with a router between them. The first link (sender to router) has an MTU (Maximum Transmission Unit) size of 542 bytes, while the second link (router to receiver) has an MTU size of 360 bytes. The number of fragments that would be delivered at the receiver is \_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 6 to 6} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Fragmentation and IP addressing, IPv4, CIDR notation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The datagram has 20 bytes IP header and 1400 bytes data. Link 1 has $\text{MTU} = 542$ bytes (max data per fragment is $\lfloor (542-20)/8 \rfloor \times 8 = 520$ bytes), producing 3 fragments with data sizes 520, 520, and 360 bytes. Link 2 has $\text{MTU} = 360$ bytes (max data is $\lfloor (360-20)/8 \rfloor \times 8 = 336$ bytes). At router Q, fragment 1 (520 bytes) is fragmented into 2 ($336 + 184$), fragment 2 (520 bytes) is fragmented into 2 ($336 + 184$), and fragment 3 (360 bytes) is fragmented into 2 ($336 + 24$). Total fragments delivered at the receiver $= 2 + 2 + 2 = 6$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.20} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q23}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Node X has a TCP connection open to node Y. The packets from X to Y go through an intermediate IP router R. Ethernet switch S is the first switch on the network path between X and R. Consider a packet sent from X to Y over this connection.
+Which of the following statements is/are TRUE about the destination addresses?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The destination IP address is the IP address of R \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The destination IP address is the IP address of Y \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The destination MAC address is the MAC address of S \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The destination MAC address is the MAC address of Y
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Concept of layering: OSI and TCP/IP Protocol Stacks}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In an end-to-end IP network, the destination IP address remains invariant throughout transit and is always the IP address of final host Y. The destination MAC address changes hop-by-hop and is set to the MAC address of the next-hop router R (not switch S, which operates transparently at Layer 2).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.21} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q28}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following statements about IPv4 fragmentation is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The fragmentation of an IP datagram is performed only at the source of the datagram \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The fragmentation of an IP datagram is performed at any IP router which finds that the size of the datagram is greater than the MTU of the outgoing link \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The reassembly of fragments is performed only at the destination of the datagram \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The reassembly of fragments is performed at all intermediate routers along the path from the source to destination
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Fragmentation and IP addressing, IPv4, CIDR notation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In IPv4, any intermediate router encountering a packet larger than the outgoing link MTU performs fragmentation (B). In contrast, fragment reassembly is performed strictly at the final destination host (C) to prevent re-fragmentation overhead and handle out-of-order routing.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.22} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q32}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following fields of an IP header is/are always modified by any router before it forwards the IP packet?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Source IP Address & $\square$\ \textbf{(B)} Protocol \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Time to Live (TTL) & $\square$\ \textbf{(D)} Header Checksum
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C;D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Fragmentation and IP addressing, IPv4, CIDR notation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Whenever an IP packet is processed by an intermediate router, its Time to Live (TTL) field is decremented by at least 1. Because the header content changes, the router must recompute and update the Header Checksum field. Source and Protocol remain unchanged.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.23} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q38}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which one of the following CIDR prefixes exactly represents the range of IP addresses 10.12.2.0 to 10.12.3.255?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 10.12.2.0/23 & $\square$\ \textbf{(B)} 10.12.2.0/24 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 10.12.0.0/22 & $\square$\ \textbf{(D)} 10.12.2.0/22
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Fragmentation and IP addressing, IPv4, CIDR notation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The address range spans from $10.12.2.0$ ($00000010_2$) to $10.12.3.255$ ($00000011_2$). The first 23 bits ($8 + 8 + 7 = 23$) are identical ($10.12.2$). Total addresses in range $= 2 \times 256 = 512 = 2^{32 - 23}$, which exactly matches CIDR prefix `10.12.2.0/23`.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.24} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q54}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a TCP connection operating at a point of time with the congestion window of size 12 MSS (Maximum Segment Size), when a timeout occurs due to packet loss. Assuming that all the segments transmitted in the next two RTTs (Round Trip Time) are acknowledged correctly, the congestion window size (in MSS) during the third RTT will be \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 4 to 4} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Transport layer: flow control and congestion control, UDP, TCP, sockets}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small When timeout occurs at $\text{cwnd} = 12\text{ MSS}$, slow start threshold is set to $\text{ssthresh} = \lfloor 12 / 2 \rfloor = 6\text{ MSS}$, and $\text{cwnd}$ resets to $1\text{ MSS}$ for the 1st RTT. After receiving ACKs in the 1st RTT, slow start doubles $\text{cwnd}$ to $2\text{ MSS}$ during the 2nd RTT. After receiving ACKs in the 2nd RTT, $\text{cwnd}$ doubles again to $4\text{ MSS}$ during the 3rd RTT.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.25} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q55}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider an Ethernet segment with a transmission speed of $10^8$ bits/sec and a maximum segment length of 500 meters. If the speed of propagation of the signal in the medium is $2 \times 10^8$ meters/sec, then the minimum frame size (in bits) required for collision detection is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 500 to 500} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Data link layer: framing, error detection, Medium Access Control, Ethernet bridging}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Propagation delay $T_p = \frac{\text{Distance}}{\text{Velocity}} = \frac{500}{2 \times 10^8} = 2.5 \times 10^{-6}\text{ s} = 2.5\,\mu\text{s}$. For collision detection in CSMA/CD, transmission time must satisfy $T_t \ge 2 T_p = 5\,\mu\text{s}$. Minimum frame size $L = 2 T_p \times B = (5 \times 10^{-6}\text{ s}) \times 10^8\text{ bps} = 500$ bits.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.26} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q16}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Identify the ONE CORRECT matching between the OSI layers and their corresponding functionalities as shown.
+\par\medskip
+\begin{tabular}{ll}
+\textbf{OSI Layers} & \textbf{Functionalities} \\
+(a) Network layer & (I) Packet routing \\
+(b) Transport layer & (II) Framing and error handling \\
+(c) Datalink layer & (III) Host to host communication
+\end{tabular}
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} (a)-(I), (b)-(II), (c)-(III) & $\square$\ \textbf{(B)} (a)-(I), (b)-(III), (c)-(II) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (a)-(II), (b)-(I), (c)-(III) & $\square$\ \textbf{(D)} (a)-(III), (b)-(II), (c)-(I)
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Concept of layering: OSI and TCP/IP Protocol Stacks}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The Network layer is responsible for packet routing across networks ((a)-(I)). The Transport layer provides end-to-end communication services between hosts ((b)-(III)). The Data Link layer handles framing, flow control, and physical error handling ((c)-(II)).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.27} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q22}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the 3-way handshaking protocol for TCP connection establishment. Let the three packets exchanged during the connection establishment be denoted as P1, P2, and P3, in order. Which of the following option(s) is/are TRUE with respect to TCP header flags that are set in the packets?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} P3: SYN = 1, ACK = 1 & $\square$\ \textbf{(B)} P2: SYN = 1, ACK = 1 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} P2: SYN = 0, ACK = 1 & $\square$\ \textbf{(D)} P1: SYN = 1
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Transport layer: flow control and congestion control, UDP, TCP, sockets}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In TCP 3-way handshaking: Packet 1 (Client to Server) sends a SYN segment with flag $[\text{SYN}=1, \text{ACK}=0]$; Packet 2 (Server to Client) responds with $[\text{SYN}=1, \text{ACK}=1]$; Packet 3 (Client to Server) completes setup with $[\text{SYN}=0, \text{ACK}=1]$. Hence, P1 has SYN = 1 and P2 has SYN = 1, ACK = 1.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.28} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q40}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A packet with the destination IP address 145.36.109.70 arrives at a router whose routing table is shown below:
+\par\medskip
+\begin{tabular}{|l|l|c|}
+\hline
+\textbf{Subnet Address} & \textbf{Subnet Mask (CIDR)} & \textbf{Interface} \\
+\hline
+145.36.0.0 & /16 & E1 \\
+145.36.128.0 & /17 & E2 \\
+145.36.64.0 & /18 & E3 \\
+145.36.255.0 & /24 & E4 \\
+Default & -- & E5 \\
+\hline
+\end{tabular}
+\par\medskip
+Which interface will the packet be forwarded to?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} E3 & $\square$\ \textbf{(B)} E1 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} E2 & $\square$\ \textbf{(D)} E5
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Routing protocols: shortest path, flooding, distance vector and link state routing}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The destination address has third octet $109 = 01101101_2$. For /16, $145.36.0.0$ matches. For /17 ($128 = 10000000_2$), the leading bit is 0, so /17 does not match. For /18 ($64 = 01000000_2$), the first two bits are $01_2$, which matches $109$ ($01101101_2$). For /24, 255 does not match. By Longest Prefix Match, /18 (interface E3) is chosen.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.29} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q56}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Suppose a 5-bit message is transmitted from a source to a destination through a noisy channel. The probability that a bit of the message gets flipped during transmission is 0.01. Flipping of each bit is independent of one another. The probability that the message is delivered error-free to the destination is \_\_\_\_\_\_\. (rounded off to three decimal places)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 0.949 to 0.952} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Data link layer: framing, error detection, Medium Access Control, Ethernet bridging}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For each bit, the probability of correct transmission without flipping is $1 - 0.01 = 0.99$. Since all 5 bit transmissions are mutually independent, the probability that all 5 bits are transmitted error-free is $(0.99)^5 = 0.95099 \approx 0.951$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.30} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q57}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Suppose a message of size 15000 bytes is transmitted from a source to a destination using IPv4 protocol via two routers as shown: Source $\to$ Router-1 ($\text{MTU} = 5000$ bytes) $\to$ Router-2 ($\text{MTU} = 3000$ bytes) $\to$ Destination. Each router has a defined maximum transmission unit (MTU) including the 20-byte IP header. The number of fragments that will be delivered to the destination is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 7 to 7} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Fragmentation and IP addressing, IPv4, CIDR notation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small At Router-1, max payload per fragment is $\lfloor (5000 - 20) / 8 \rfloor \times 8 = 4976$ bytes. 15000 bytes payload is fragmented into payloads of 4976, 4976, 4976, and 72 bytes (4 fragments). At Router-2 ($\text{MTU} = 3000$, max payload $\lfloor 2980/8 \rfloor \times 8 = 2976$ bytes), each of the three 4976-byte fragments splits into 2 fragments ($2976 + 2000$), yielding $3 \times 2 = 6$ fragments. The 72-byte fragment passes through intact. Total delivered fragments = $6 + 1 = 7$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.31} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q16}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following statements:
+(i) Address Resolution Protocol (ARP) provides a mapping from an IP address to the corresponding hardware (link-layer) address.
+(ii) A single TCP segment from a sender S to a receiver R cannot carry both data from S to R and acknowledgement for a segment from R to S.
+Which ONE of the following is CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Both (i) and (ii) are TRUE & $\square$\ \textbf{(B)} (i) is TRUE and (ii) is FALSE \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (i) is FALSE and (ii) is TRUE & $\square$\ \textbf{(D)} Both (i) and (ii) are FALSE
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Basics of IP support protocols: ARP and TCP headers}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small ARP resolves an IPv4 address to a physical MAC (link-layer) address, so (i) is true. A TCP segment supports piggybacking, where data and acknowledgement flags/numbers are sent in the same segment, so (ii) is false.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.32} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q17}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the routing protocols given in List I and the names given in List II:
+\par\medskip
+\begin{center}\small
+\begin{tabular}{ll}
+\toprule
+List I & List II \\
+\midrule
+(i) Distance vector routing & (a) Bellman-Ford \\
+(ii) Link state routing & (b) Dijkstra \\
+\bottomrule
+\end{tabular}\end{center}
+\par\medskip
+For matching of items in List I with those in List II, which ONE of the following options is CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} (i) – (a) and (ii) – (b) & $\square$\ \textbf{(B)} (i) – (a) and (ii) – (a) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (i) – (b) and (ii) – (a) & $\square$\ \textbf{(D)} (i) – (b) and (ii) – (b)
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Routing protocols: distance vector and link state}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Distance Vector routing is based on the distributed Bellman-Ford algorithm, whereas Link State routing uses Dijkstra's shortest path algorithm.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.33} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q18}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A machine receives an IPv4 datagram. The protocol field of the IPv4 header has the protocol number of a protocol X. Which ONE of the following is NOT a possible candidate for X?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Internet Control Message Protocol (ICMP) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Internet Group Management Protocol (IGMP) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Open Shortest Path First (OSPF) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Routing Information Protocol (RIP)
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Concept of layering: OSI and TCP/IP protocol stacks}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The IPv4 Protocol field identifies the payload carried directly in the IP datagram: ICMP (protocol 1), IGMP (protocol 2), and OSPF (protocol 89). In contrast, RIP runs as an application-layer process encapsulated inside UDP (port 520).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.34} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q23}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a network that uses Ethernet and IPv4. Assume that IPv4 headers do not use any options field. Each Ethernet frame can carry a maximum of 1500 bytes in its data field. A UDP segment is transmitted. The payload (data) in the UDP segment is 7488 bytes.
+Which ONE of the following choices has the CORRECT total number of fragments transmitted and the size of the last fragment including IPv4 header?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 5 fragments, 1488 bytes & $\square$\ \textbf{(B)} 6 fragments, 88 bytes \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 6 fragments, 108 bytes & $\square$\ \textbf{(D)} 6 fragments, 116 bytes
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Fragmentation and IP addressing}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small UDP payload is 7488 bytes + 8 bytes UDP header = 7496 bytes IP payload. Max IP payload per Ethernet fragment is $\lfloor(1500 - 20)/8\rfloor \times 8 = 1480$ bytes. Fragment sizes are 5 fragments of 1480 bytes ($5 \times 1480 = 7400$), leaving $7496 - 7400 = 96$ bytes for the 6th fragment, so total size is $96 + 20 = 116$ bytes.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.35} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q36}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Suppose we are transmitting frames between two nodes using Stop-and-Wait protocol. The frame size is 3000 bits. Which ONE of the following gives the efficiency of the channel?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 88.23 & $\square$\ \textbf{(B)} 93.75 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 85.44 & $\square$\ \textbf{(D)} 66.67
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Data link layer: flow control and Stop-and-Wait efficiency}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Efficiency in Stop-and-Wait is $\eta = \frac{T_t}{T_t + 2 T_p}$. Substituting given transmission and propagation delays yields $\eta = 88.23\%$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\end{document}

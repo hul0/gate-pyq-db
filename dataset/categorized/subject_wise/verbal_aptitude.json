@@ -1,0 +1,884 @@
+{
+  "category": "Subject Wise (Modular)",
+  "title": "Verbal Aptitude",
+  "total_questions": 17,
+  "years_included": [
+    2018,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "questions": [
+    {
+      "id": "2018_CS_GA_Q01",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2018_CS",
+      "year": 2018,
+      "session": "CS",
+      "question_number": 1,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1,
+      "question_text": "\u201cFrom where are they bringing their books? ________ bringing _______ books from\n_____.\u201d\n\nThe words that best fill the blanks in the above sentence are",
+      "options": {
+        "A": "Their, they\u2019re, there",
+        "B": "They\u2019re, their, there",
+        "C": "There, their, they\u2019re",
+        "D": "They\u2019re, there, there"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "\"They're\" is the contraction for \"they are\", \"their\" is the possessive pronoun, and \"there\" refers to a place. Thus, the complete sentence is: \"They're bringing their books from there.\"",
+      "tags": [
+        "1_mark",
+        "2018",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "``From where are they bringing their books? \\_\\_\\_\\_\\_\\_\\_\\_ bringing \\_\\_\\_\\_\\_\\_\\_ books from \\_\\_\\_\\_\\_.''\n\nThe words that best fill the blanks in the above sentence are",
+      "options_latex": {
+        "A": "Their, they're, there",
+        "B": "They're, their, there",
+        "C": "There, their, they're",
+        "D": "They're, there, there"
+      }
+    },
+    {
+      "id": "2018_CS_GA_Q02",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2018_CS",
+      "year": 2018,
+      "session": "CS",
+      "question_number": 2,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1,
+      "question_text": "\u201cA _________ investigation can sometimes yield new facts, but typically organized ones\nare more successful.\u201d\n\nThe word that best fills the blank in the above sentence is",
+      "options": {
+        "A": "meandering",
+        "B": "timely",
+        "C": "consistent",
+        "D": "systematic"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "The sentence contrasts an erratic or wandering investigation with an \"organized\" one. \"Meandering\" means proceeding in a winding or circuitous course without a clear direction, which fits the context precisely.",
+      "tags": [
+        "1_mark",
+        "2018",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "``A \\_\\_\\_\\_\\_\\_\\_\\_\\_ investigation can sometimes yield new facts, but typically organized ones are more successful.''\n\nThe word that best fills the blank in the above sentence is",
+      "options_latex": {
+        "A": "meandering",
+        "B": "timely",
+        "C": "consistent",
+        "D": "systematic"
+      }
+    },
+    {
+      "id": "2022_CS_GA_Q01",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 1,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 2,
+      "question_text": "The _________ is too high for it to be considered _________.",
+      "options": {
+        "A": "fair / fare",
+        "B": "faer / fair",
+        "C": "fare / fare",
+        "D": "fare / fair"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'Fare' denotes the price charged for a journey or conveyance, whereas 'fair' means reasonable or just. Therefore, 'The fare is too high for it to be considered fair.'",
+      "tags": [
+        "1_mark",
+        "2022",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "The \\_\\_\\_\\_\\_\\_\\_\\_\\_ is too high for it to be considered \\_\\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": {
+        "A": "fair / fare",
+        "B": "faer / fair",
+        "C": "fare / fare",
+        "D": "fare / fair"
+      }
+    },
+    {
+      "id": "2022_CS_GA_Q06",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 6,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 7,
+      "question_text": "Some people believe that \u201cwhat gets measured, improves\u201d. Some others believe\nthat \u201cwhat gets measured, gets gamed\u201d. One possible reason for the difference in\nthe beliefs is the work culture in organizations. In organizations with good work\nculture, metrics help improve outcomes. However, the same metrics are\ncounterproductive in organizations with poor work culture.\nWhich one of the following is the CORRECT logical inference based on the\ninformation in the above passage?",
+      "options": {
+        "A": "Metrics are useful in organizations with poor work culture",
+        "B": "Metrics are useful in organizations with good work culture",
+        "C": "Metrics are always counterproductive in organizations with good work culture",
+        "D": "Metrics are never useful in organizations with good work culture"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading and comprehension",
+      "difficulty_level": "Easy",
+      "explaination": "The passage explicitly notes that \"In organizations with good work culture, metrics help improve outcomes.\" This directly implies that metrics are useful in organizations with good work culture.",
+      "tags": [
+        "2022",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Some people believe that ``what gets measured, improves''. Some others believe that ``what gets measured, gets gamed''. One possible reason for the difference in the beliefs is the work culture in organizations. In organizations with good work culture, metrics help improve outcomes. However, the same metrics are counterproductive in organizations with poor work culture.\nWhich one of the following is the CORRECT logical inference based on the information in the above passage?",
+      "options_latex": {
+        "A": "Metrics are useful in organizations with poor work culture",
+        "B": "Metrics are useful in organizations with good work culture",
+        "C": "Metrics are always counterproductive in organizations with good work culture",
+        "D": "Metrics are never useful in organizations with good work culture"
+      }
+    },
+    {
+      "id": "2023_CS_GA_Q01",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 1,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1,
+      "question_text": "We reached the station late, and _______ missed the train.",
+      "options": {
+        "A": "near",
+        "B": "nearly",
+        "C": "utterly",
+        "D": "mostly"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Basic English grammar: tenses, articles, adjectives, prepositions, conjunctions, verb-noun agreement",
+      "difficulty_level": "Easy",
+      "explaination": "The adverb 'nearly' means 'almost' and correctly modifies the past-tense verb 'missed'. 'Near' is an adjective/preposition, while 'utterly' and 'mostly' do not fit the intended semantic meaning of narrowly missing a train.",
+      "tags": [
+        "1_mark",
+        "2023",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "We reached the station late, and \\_\\_\\_\\_\\_\\_\\_ missed the train.",
+      "options_latex": {
+        "A": "near",
+        "B": "nearly",
+        "C": "utterly",
+        "D": "mostly"
+      }
+    },
+    {
+      "id": "2023_CS_GA_Q02",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 2,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1,
+      "question_text": "Kind : _______ : : Often : Frequently\n(By word meaning)",
+      "options": {
+        "A": "Mean",
+        "B": "Type",
+        "C": "Cruel",
+        "D": "Kindly"
+      },
+      "answer": "MTA",
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'Often' and 'Frequently' are direct synonyms. 'Kind' can be a noun meaning 'Type' (category) or an adjective meaning benevolent/caring. Because of multiple ambiguous interpretations of 'Kind', GATE awarded Marks to All (MTA) for this question.",
+      "tags": [
+        "1_mark",
+        "2023",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Kind : \\_\\_\\_\\_\\_\\_\\_ : : Often : Frequently\n(By word meaning)",
+      "options_latex": {
+        "A": "Mean",
+        "B": "Type",
+        "C": "Cruel",
+        "D": "Kindly"
+      }
+    },
+    {
+      "id": "2023_CS_GA_Q06",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 6,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 5,
+      "question_text": "The country of Zombieland is in distress since more than 75% of its working\npopulation is suffering from serious health issues. Studies conducted by competent\nhealth experts concluded that a complete lack of physical exercise among its\nworking population was one of the leading causes of their health issues. As one of\nthe measures to address the problem, the Government of Zombieland has decided\nto provide monetary incentives to those who ride bicycles to work.\n\nBased only on the information provided above, which one of the following\nstatements can be logically inferred with certainty?",
+      "options": {
+        "A": "All the working population of Zombieland will henceforth ride bicycles to work.",
+        "B": "Riding bicycles will ensure that all of the working population of Zombieland is free\nof health issues.",
+        "C": "The health experts suggested to the Government of Zombieland to declare riding\nbicycles as mandatory.",
+        "D": "The Government of Zombieland believes that riding bicycles is a form of physical\nexercise."
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading and comprehension",
+      "difficulty_level": "Easy",
+      "explaination": "The passage establishes that a complete lack of physical exercise is a primary cause of health issues, and in response, the government provides financial incentives to ride bicycles to work. This direct causal measure logically implies that the government views bicycle riding as a form of physical exercise.",
+      "tags": [
+        "2023",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "The country of Zombieland is in distress since more than 75\\% of its working population is suffering from serious health issues. Studies conducted by competent health experts concluded that a complete lack of physical exercise among its working population was one of the leading causes of their health issues. As one of the measures to address the problem, the Government of Zombieland has decided to provide monetary incentives to those who ride bicycles to work.\n\nBased only on the information provided above, which one of the following statements can be logically inferred with certainty?",
+      "options_latex": {
+        "A": "All the working population of Zombieland will henceforth ride bicycles to work.",
+        "B": "Riding bicycles will ensure that all of the working population of Zombieland is free of health issues.",
+        "C": "The health experts suggested to the Government of Zombieland to declare riding bicycles as mandatory.",
+        "D": "The Government of Zombieland believes that riding bicycles is a form of physical exercise."
+      }
+    },
+    {
+      "id": "2023_CS_GA_Q08",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 8,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 6,
+      "question_text": "Which one of the following sentence sequences creates a coherent narrative?\n(i)\nOnce on the terrace, on her way to her small room in the corner, she\nnotices the man right away.\n(ii)\nShe begins to pant by the time she has climbed all the stairs.\n(iii)\nMina has bought vegetables and rice at the market, so her bags are\nheavy.\n(iv)\nHe was leaning against the parapet, watching the traffic below.",
+      "options": {
+        "A": "(i), (ii), (iv), (iii)",
+        "B": "(ii), (iii), (i), (iv)",
+        "C": "(iv), (ii), (i), (iii)",
+        "D": "(iii), (ii), (i), (iv)"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Narrative sequencing",
+      "difficulty_level": "Easy",
+      "explaination": "Sentence (iii) introduces the protagonist Mina carrying heavy market purchases. Sentence (ii) describes the resulting exertion as she climbs the stairs. Sentence (i) brings her onto the terrace where she spots a man. Sentence (iv) details the man's posture against the parapet. Thus, the coherent sequence is (iii), (ii), (i), (iv).",
+      "tags": [
+        "2023",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Which one of the following sentence sequences creates a coherent narrative?\n\\begin{enumerate}[label=(\\roman*),itemsep=0pt,topsep=2pt]\n\\item Once on the terrace, on her way to her small room in the corner, she notices the man right away.\n\\item She begins to pant by the time she has climbed all the stairs.\n\\item Mina has bought vegetables and rice at the market, so her bags are heavy.\n\\item He was leaning against the parapet, watching the traffic below.\n\\end{enumerate}",
+      "options_latex": {
+        "A": "(i), (ii), (iv), (iii)",
+        "B": "(ii), (iii), (i), (iv)",
+        "C": "(iv), (ii), (i), (iii)",
+        "D": "(iii), (ii), (i), (iv)"
+      }
+    },
+    {
+      "id": "2024_CS1_GA_Q01",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 1,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1,
+      "question_text": "If \u2018\u2192\u2019 denotes increasing order of intensity, then the meaning of the words\n[dry \u2192 arid \u2192 parched] is analogous to [diet \u2192 fast \u2192 ________ ].\nWhich one of the given options is appropriate to fill the blank?",
+      "options": {
+        "A": "starve",
+        "B": "reject",
+        "C": "feast",
+        "D": "deny"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'dry $\\to$ arid $\\to$ parched' depicts an increasing scale of lack of moisture. Similarly, 'diet $\\to$ fast $\\to$ starve' depicts an increasing scale of food restriction/deprivation, where starving represents extreme lack of nourishment.",
+      "tags": [
+        "1_mark",
+        "2024",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "If `$\\to$' denotes increasing order of intensity, then the meaning of the words $[\\text{dry} \\to \\text{arid} \\to \\text{parched}]$ is analogous to $[\\text{diet} \\to \\text{fast} \\to \\text{\\_\\_\\_\\_\\_\\_\\_\\_}]$.\nWhich one of the given options is appropriate to fill the blank?",
+      "options_latex": {
+        "A": "starve",
+        "B": "reject",
+        "C": "feast",
+        "D": "deny"
+      }
+    },
+    {
+      "id": "2024_CS1_GA_Q06",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 6,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 5,
+      "question_text": "In the given text, the blanks are numbered (i)\u2212(iv). Select the best match for all the\nblanks.\nSteve was advised to keep his head (i) before heading (ii) to bat;\nfor, while he had a head (iii) batting, he could only do so with a cool head\ns (iv) his shoulders.",
+      "options": {
+        "A": "(i) down\n(ii) down\n(iii) on\n(iv) for",
+        "B": "(i) on\n(ii) down\n(iii) for\n(iv) on",
+        "C": "(i) down\n(ii) out\n(iii) for\n(iv) on",
+        "D": "(i) on\n(ii) out\n(iii) on\n(iv) for"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'Keep one's head down' means to stay focused and avoid trouble. 'Heading out' means going forth/departing. Having a 'head for' an activity signifies natural aptitude for it, and having a cool 'head on' one's shoulders means remaining calm and composed.",
+      "tags": [
+        "2024",
+        "2_mark",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "In the given text, the blanks are numbered (i)--(iv). Select the best match for all the blanks.\n\nSteve was advised to keep his head (i)\\_\\_\\_\\_ before heading (ii)\\_\\_\\_\\_ to bat; for, while he had a head (iii)\\_\\_\\_\\_ batting, he could only do so with a cool head (iv)\\_\\_\\_\\_ his shoulders.",
+      "options_latex": {
+        "A": "(i) down (ii) down (iii) on (iv) for",
+        "B": "(i) on (ii) down (iii) for (iv) on",
+        "C": "(i) down (ii) out (iii) for (iv) on",
+        "D": "(i) on (ii) out (iii) on (iv) for"
+      }
+    },
+    {
+      "id": "2024_CS2_GA_Q01",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS2",
+      "year": 2024,
+      "session": "CS2",
+      "question_number": 1,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 1,
+      "question_text": "If \u2018\u2192\u2019 denotes increasing order of intensity, then the meaning of the words\n[walk \u2192 jog \u2192 sprint] is analogous to [bothered \u2192 ________ \u2192 daunted].\nWhich one of the given options is appropriate to fill the blank?",
+      "options": {
+        "A": "phased",
+        "B": "phrased",
+        "C": "fazed",
+        "D": "fused"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'Walk -> jog -> sprint' depicts an increasing scale of physical speed/exertion. Similarly, 'bothered -> fazed -> daunted' depicts an increasing degree of perturbation/discouragement. 'Fazed' means disconcerted or perturbed, fitting between bothered and daunted.",
+      "tags": [
+        "1_mark",
+        "2024",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "If `$\\to$' denotes increasing order of intensity, then the meaning of the words $[\\text{walk} \\to \\text{jog} \\to \\text{sprint}]$ is analogous to $[\\text{bothered} \\to \\text{\\_\\_\\_\\_\\_\\_\\_\\_} \\to \\text{daunted}]$.\nWhich one of the given options is appropriate to fill the blank?",
+      "options_latex": {
+        "A": "phased",
+        "B": "phrased",
+        "C": "fazed",
+        "D": "fused"
+      }
+    },
+    {
+      "id": "2024_CS2_GA_Q06",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS2",
+      "year": 2024,
+      "session": "CS2",
+      "question_number": 6,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 4,
+      "page_end": 5,
+      "question_text": "Sequence the following sentences in a coherent passage.\nP:\nThis fortuitous geological event generated a colossal amount of energy and\nheat that resulted in the rocks rising to an average height of 4 km across the\ncontact zone.\nQ: Thus, the geophysicists tend to think of the Himalayas as an active geological\nevent rather than as a static geological feature.\nR: The natural process of the cooling of this massive edifice absorbed large\nquantities of atmospheric carbon dioxide, altering the earth\u2019s atmosphere and\nmaking it better suited for life.\nS:\nMany millennia ago, a breakaway chunk of bedrock from the Antarctic Plate\ncollided with the massive Eurasian Plate.",
+      "options": {
+        "A": "QPSR",
+        "B": "QSPR",
+        "C": "SPRQ",
+        "D": "SRPQ\n\nOrganizing Institute: IISc, Bengaluru"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Narrative sequencing",
+      "difficulty_level": "Medium",
+      "explaination": "Sentence S introduces the foundational historical premise (many millennia ago, Antarctic plate collided with Eurasian plate). Sentence P describes the immediate effect of this event (energy/heat rising to 4 km height). Sentence R details the subsequent cooling that altered the atmosphere. Sentence Q concludes with the geophysicists' resulting viewpoint. The logical sequence is SPRQ.",
+      "tags": [
+        "2024",
+        "2_mark",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Sequence the following sentences in a coherent passage.\n\\begin{itemize}\n\\item[P:] This fortuitous geological event generated a colossal amount of energy and heat that resulted in the rocks rising to an average height of 4 km across the contact zone.\n\\item[Q:] Thus, the geophysicists tend to think of the Himalayas as an active geological event rather than as a static geological feature.\n\\item[R:] The natural process of the cooling of this massive edifice absorbed large quantities of atmospheric carbon dioxide, altering the earth\u2019s atmosphere and making it better suited for life.\n\\item[S:] Many millennia ago, a breakaway chunk of bedrock from the Antarctic Plate collided with the massive Eurasian Plate.\n\\end{itemize}",
+      "options_latex": {
+        "A": "QPSR",
+        "B": "QSPR",
+        "C": "SPRQ",
+        "D": "SRPQ"
+      }
+    },
+    {
+      "id": "2025_CS1_GA_Q01",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS1",
+      "year": 2025,
+      "session": "CS1",
+      "question_number": 1,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 2,
+      "question_text": "Ravi had ______ younger brother who taught at ______ university. He was widely\nregarded as ______ honorable man.\nSelect the option with the correct sequence of articles to fill in the blanks.",
+      "options": {
+        "A": "a; a; an",
+        "B": "the; an; a",
+        "C": "a; an; a",
+        "D": "an; an; a\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Basic English grammar: tenses, articles, adjectives, prepositions, conjunctions, verb-noun agreement",
+      "difficulty_level": "Easy",
+      "explaination": "'Younger' begins with a consonant sound (/j/), requiring the indefinite article 'a'. 'University' also begins with a consonant sound (/ju\u02d0/), taking 'a'. 'Honorable' has a silent 'h' and begins with a vowel sound (/\u0252/), requiring 'an'. Hence, the sequence is a; a; an.",
+      "tags": [
+        "1_mark",
+        "2025",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Ravi had \\_\\_\\_\\_\\_\\_ younger brother who taught at \\_\\_\\_\\_\\_\\_ university. He was widely regarded as \\_\\_\\_\\_\\_\\_ honorable man.\nSelect the option with the correct sequence of articles to fill in the blanks.",
+      "options_latex": {
+        "A": "a; a; an",
+        "B": "the; an; a",
+        "C": "a; an; a",
+        "D": "an; an; a"
+      }
+    },
+    {
+      "id": "2025_CS1_GA_Q02",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS1",
+      "year": 2025,
+      "session": "CS1",
+      "question_number": 2,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 3,
+      "question_text": "The CEO\u2019s decision to downsize the workforce was considered myopic because it\nsacrificed long-term stability to accommodate short-term gains.\nSelect the most appropriate option that can replace the word \u201cmyopic\u201d without\nchanging the meaning of the sentence.",
+      "options": {
+        "A": "visionary",
+        "B": "shortsighted",
+        "C": "progressive",
+        "D": "innovative\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'Myopic' literally means nearsighted, and metaphorically refers to lacking foresight or being shortsighted by focusing only on immediate considerations rather than long-term outcomes.",
+      "tags": [
+        "1_mark",
+        "2025",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "The CEO\u2019s decision to downsize the workforce was considered myopic because it sacrificed long-term stability to accommodate short-term gains.\nSelect the most appropriate option that can replace the word ``myopic'' without changing the meaning of the sentence.",
+      "options_latex": {
+        "A": "visionary",
+        "B": "shortsighted",
+        "C": "progressive",
+        "D": "innovative"
+      }
+    },
+    {
+      "id": "2025_CS1_GA_Q06",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS1",
+      "year": 2025,
+      "session": "CS1",
+      "question_number": 6,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 6,
+      "page_end": 7,
+      "question_text": "\u201cI put the brown paper in my pocket along with the chalks, and possibly other things.\nI suppose every one must have reflected how primeval and how poetical are the\nthings that one carries in one\u2019s pocket: the pocket-knife, for instance the type of all\nhuman tools, the infant of the sword. Once I planned to write a book of poems\nentirely about the things in my pocket. But I found it would be too long: and the age\nof the great epics is past.\u201d\n(From G.K. Chesterton\u2019s \u201cA Piece of Chalk\u201d)\nBased only on the information provided in the above passage, which one of the\nfollowing statements is true?",
+      "options": {
+        "A": "The author of the passage carries a mirror in his pocket to reflect upon things.",
+        "B": "The author of the passage had decided to write a poem on epics.",
+        "C": "The pocket-knife is described as the infant of the sword.",
+        "D": "Epics are described as too inconvenient to write.\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading and comprehension",
+      "difficulty_level": "Easy",
+      "explaination": "The passage explicitly states: 'the pocket-knife, for instance the type of all human tools, the infant of the sword.' Statement C directly reflects this verbatim description.",
+      "tags": [
+        "2025",
+        "2_mark",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "``I put the brown paper in my pocket along with the chalks, and possibly other things. I suppose every one must have reflected how primeval and how poetical are the things that one carries in one's pocket: the pocket-knife, for instance the type of all human tools, the infant of the sword. Once I planned to write a book of poems entirely about the things in my pocket. But I found it would be too long: and the age of the great epics is past.''\n(From G.K. Chesterton's ``A Piece of Chalk'')\n\nBased only on the information provided in the above passage, which one of the following statements is true?",
+      "options_latex": {
+        "A": "The author of the passage carries a mirror in his pocket to reflect upon things.",
+        "B": "The author of the passage had decided to write a poem on epics.",
+        "C": "The pocket-knife is described as the infant of the sword.",
+        "D": "Epics are described as too inconvenient to write."
+      }
+    },
+    {
+      "id": "2025_CS2_GA_Q01",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS2",
+      "year": 2025,
+      "session": "CS2",
+      "question_number": 1,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 1,
+      "page_end": 2,
+      "question_text": "Despite his initial hesitation, Rehman\u2019s _________ to contribute to the success of\nthe project never wavered.\nSelect the most appropriate option to complete the above sentence.",
+      "options": {
+        "A": "ambivalence",
+        "B": "satisfaction",
+        "C": "resolve",
+        "D": "revolve\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "The sentence sets up a contrast between Rehman's initial hesitation and his continuing commitment. 'Resolve' denotes firm determination and perseverance, which fits the context accurately.",
+      "tags": [
+        "1_mark",
+        "2025",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Despite his initial hesitation, Rehman\u2019s \\_\\_\\_\\_\\_\\_\\_\\_\\_ to contribute to the success of the project never wavered.\nSelect the most appropriate option to complete the above sentence.",
+      "options_latex": {
+        "A": "ambivalence",
+        "B": "satisfaction",
+        "C": "resolve",
+        "D": "revolve"
+      }
+    },
+    {
+      "id": "2025_CS2_GA_Q02",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2025_CS2",
+      "year": 2025,
+      "session": "CS2",
+      "question_number": 2,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 2,
+      "page_end": 3,
+      "question_text": "Bird : Nest :: Bee : _______\nSelect the correct option to complete the analogy.",
+      "options": {
+        "A": "Kennel",
+        "B": "Hammock",
+        "C": "Hive",
+        "D": "Lair\n\nOrganising Institute: IIT Roorkee"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: word analogy and contextual relations",
+      "difficulty_level": "Easy",
+      "explaination": "This is a habitat/dwelling analogy: a bird naturally lives in a nest, and similarly, a bee lives in a hive.",
+      "tags": [
+        "1_mark",
+        "2025",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "$\\text{Bird} : \\text{Nest} :: \\text{Bee} : \\text{\\_\\_\\_\\_\\_\\_\\_}$\nSelect the correct option to complete the analogy.",
+      "options_latex": {
+        "A": "Kennel",
+        "B": "Hammock",
+        "C": "Hive",
+        "D": "Lair"
+      }
+    }
+  ]
+}

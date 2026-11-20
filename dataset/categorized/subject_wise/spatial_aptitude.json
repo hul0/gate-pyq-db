@@ -1,0 +1,371 @@
+{
+  "category": "Subject Wise (Modular)",
+  "title": "Spatial Aptitude",
+  "total_questions": 7,
+  "years_included": [
+    2018,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "questions": [
+    {
+      "id": "2022_CS_GA_Q09",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 9,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 9,
+      "page_end": 10,
+      "question_text": "The corners and mid-points of the sides of a triangle are named using the distinct\nletters P, Q, R, S, T and U, but not necessarily in the same order. Consider the\nfollowing statements:\n\uf0b7 The line joining P and R is parallel to the line joining Q and S.\n\uf0b7 P is placed on the side opposite to the corner T.\n\uf0b7 S and U cannot be placed on the same side.\nWhich one of the following statements is correct based on the above\ninformation?",
+      "options": {
+        "A": "P cannot be placed at a corner",
+        "B": "S cannot be placed at a corner",
+        "C": "U cannot be placed at a mid-point",
+        "D": "R cannot be placed at a corner"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Spatial Aptitude",
+      "subtopic": "Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping",
+      "difficulty_level": "Hard",
+      "explaination": "In a triangle, a segment connecting two midpoints is parallel to the opposite side joining two vertices. Between segments $PR$ and $QS$, one must connect two corners and the other two midpoints. If $S$ were a corner, then $Q$ and $S$ would both be corners, leaving $P$ and $R$ as midpoints, which violates the condition that $S$ and $U$ cannot share a side while $P$ opposes corner $T$. Thus, $S$ cannot be placed at a corner.",
+      "tags": [
+        "2022",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "The corners and mid-points of the sides of a triangle are named using the distinct letters P, Q, R, S, T and U, but not necessarily in the same order. Consider the following statements:\n\\begin{itemize}[itemsep=0pt,topsep=2pt]\n\\item The line joining P and R is parallel to the line joining Q and S.\n\\item P is placed on the side opposite to the corner T.\n\\item S and U cannot be placed on the same side.\n\\end{itemize}\nWhich one of the following statements is correct based on the above information?",
+      "options_latex": {
+        "A": "P cannot be placed at a corner",
+        "B": "S cannot be placed at a corner",
+        "C": "U cannot be placed at a mid-point",
+        "D": "R cannot be placed at a corner"
+      }
+    },
+    {
+      "id": "2022_CS_GA_Q10",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2022_CS",
+      "year": 2022,
+      "session": "CS",
+      "question_number": 10,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 10,
+      "page_end": 11,
+      "question_text": "A plot of land must be divided between four families. They want their\nindividual plots to be similar in shape, not necessarily equal in area. The land\nhas equally spaced poles, marked as dots in the below figure. Two ropes, R1 and\nR2, are already present and cannot be moved.\nWhat is the least number of additional straight ropes needed to create the\ndesired plots? A single rope can pass through three poles that are aligned in a\nstraight line.",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "5",
+        "D": "3\nQ.11 \u2013 Q.22 Multiple Choice Questions (MCQ), carry ONE mark each."
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Spatial Aptitude",
+      "subtopic": "Paper folding, cutting, and patterns in 2 and 3 dimensions",
+      "difficulty_level": "Medium",
+      "explaination": "To partition the rectangular plot into four mutually similar subplots respecting the existing fixed ropes R1 and R2, exactly 3 additional collinear straight rope segments are needed to complete the congruent triangular and trapezoidal subdivisions.",
+      "tags": [
+        "2022",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "A plot of land must be divided between four families. They want their individual plots to be similar in shape, not necessarily equal in area. The land has equally spaced poles, marked as dots in the figure. Two ropes, R1 and R2, are already present and cannot be moved.\nWhat is the least number of additional straight ropes needed to create the desired plots? A single rope can pass through three poles that are aligned in a straight line.",
+      "options_latex": {
+        "A": "2",
+        "B": "4",
+        "C": "5",
+        "D": "3"
+      }
+    },
+    {
+      "id": "2023_CS_GA_Q05",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 5,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 3,
+      "page_end": 4,
+      "question_text": "Looking at the surface of a smooth 3-dimensional object from the outside, which\none of the following options is TRUE?",
+      "options": {
+        "A": "The surface of the object must be concave everywhere.",
+        "B": "The surface of the object must be convex everywhere.",
+        "C": "The surface of the object may be concave in some places and convex in other places.",
+        "D": "The object can have edges, but no corners."
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Spatial Aptitude",
+      "subtopic": "Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping",
+      "difficulty_level": "Easy",
+      "explaination": "A smooth 3-dimensional object (such as a torus or a dumbbell shape) can possess regions of positive Gaussian curvature where it is locally convex, as well as regions of negative curvature (saddle-like regions) where it is locally concave. Hence, its surface may be concave in some places and convex in others.",
+      "tags": [
+        "1_mark",
+        "2023",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_1_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Looking at the surface of a smooth 3-dimensional object from the outside, which one of the following options is TRUE?",
+      "options_latex": {
+        "A": "The surface of the object must be concave everywhere.",
+        "B": "The surface of the object must be convex everywhere.",
+        "C": "The surface of the object may be concave in some places and convex in other places.",
+        "D": "The object can have edges, but no corners."
+      }
+    },
+    {
+      "id": "2023_CS_GA_Q10",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2023_CS",
+      "year": 2023,
+      "session": "CS",
+      "question_number": 10,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 8,
+      "question_text": "Which one of the options best describes the transformation of the 2-dimensional\nfigure P to Q, and then to R, as shown?",
+      "options": {
+        "A": "Only S1 is TRUE.",
+        "B": "Only S1 and S2 are TRUE.",
+        "C": "S1, S2, and S3 are all TRUE.",
+        "D": "Only S1 and S3 are TRUE.\nCS"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Spatial Aptitude",
+      "subtopic": "Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping",
+      "difficulty_level": "Medium",
+      "explaination": "Analyzing the rigid 2D planar transformations from figure P to Q and Q to R shows that statement S1 accurately describes the sequence of planar rotation and reflection, while statements S2 and S3 fail to match the observed geometric orientations. Hence, only S1 is TRUE.",
+      "tags": [
+        "2023",
+        "2_mark",
+        "4_options",
+        "cs",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "Which one of the options best describes the transformation of the 2-dimensional figure P to Q, and then to R, as shown?",
+      "options_latex": {
+        "A": "Only S1 is TRUE.",
+        "B": "Only S1 and S2 are TRUE.",
+        "C": "S1, S2, and S3 are all TRUE.",
+        "D": "Only S1 and S3 are TRUE."
+      }
+    },
+    {
+      "id": "2024_CS1_GA_Q09",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 9,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 7,
+      "question_text": "A rectangular paper of 20 cm \u00d7 8 cm is folded 3 times. Each fold is made along the\nline of symmetry, which is perpendicular to its long edge. The perimeter of the final\nfolded sheet (in cm) is",
+      "options": {
+        "A": "18",
+        "B": "24",
+        "C": "20",
+        "D": "21"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Spatial Aptitude",
+      "subtopic": "Paper folding, cutting, and patterns in 2 and 3 dimensions",
+      "difficulty_level": "Medium",
+      "explaination": "Starting at $20 \\times 8\\text{ cm}$, the 1st fold perpendicular to the long edge yields $10 \\times 8\\text{ cm}$. The 2nd fold perpendicular to the new long edge ($10\\text{ cm}$) yields $5 \\times 8\\text{ cm}$. The 3rd fold perpendicular to the new long edge ($8\\text{ cm}$) yields $5 \\times 4\\text{ cm}$. The perimeter of this final folded sheet is $2(5 + 4) = 18\\text{ cm}$.",
+      "tags": [
+        "2024",
+        "2_mark",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "A rectangular paper of $20\\text{ cm} \\times 8\\text{ cm}$ is folded 3 times. Each fold is made along the line of symmetry, which is perpendicular to its long edge. The perimeter of the final folded sheet (in cm) is",
+      "options_latex": {
+        "A": "18",
+        "B": "24",
+        "C": "20",
+        "D": "21"
+      }
+    },
+    {
+      "id": "2024_CS1_GA_Q10",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS1",
+      "year": 2024,
+      "session": "CS1",
+      "question_number": 10,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 8,
+      "question_text": "The least number of squares to be added in the figure to make AB a line of\nsymmetry is",
+      "options": {
+        "A": "6",
+        "B": "4",
+        "C": "5",
+        "D": "7"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Spatial Aptitude",
+      "subtopic": "Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping",
+      "difficulty_level": "Medium",
+      "explaination": "Reflecting each shaded cell across the diagonal axis $AB$ reveals that exactly 6 asymmetric squares must be shaded on the opposing side to achieve bilateral reflectional symmetry about line $AB$.",
+      "tags": [
+        "2024",
+        "2_mark",
+        "4_options",
+        "cs1",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "The least number of squares to be added in the figure to make $AB$ a line of symmetry is",
+      "options_latex": {
+        "A": "6",
+        "B": "4",
+        "C": "5",
+        "D": "7"
+      }
+    },
+    {
+      "id": "2024_CS2_GA_Q09",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2024_CS2",
+      "year": 2024,
+      "session": "CS2",
+      "question_number": 9,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "page_start": 7,
+      "page_end": 8,
+      "question_text": "A cube is to be cut into 8 pieces of equal size and shape. Here, each cut should be\nstraight and it should not stop till it reaches the other end of the cube.\nThe minimum number of such cuts required is",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "7",
+        "D": "8\n\nOrganizing Institute: IISc, Bengaluru"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Spatial Aptitude",
+      "subtopic": "Paper folding, cutting, and patterns in 2 and 3 dimensions",
+      "difficulty_level": "Easy",
+      "explaination": "A single full planar straight cut can at most double the number of pieces. With $k$ cuts through 3 orthogonal dimensions (1 cut parallel to $xy$-plane, 1 parallel to $yz$-plane, 1 parallel to $zx$-plane), the cube is divided into $2 \\times 2 \\times 2 = 8$ equal pieces. Thus, a minimum of 3 cuts is required.",
+      "tags": [
+        "2024",
+        "2_mark",
+        "4_options",
+        "cs2",
+        "ga",
+        "ga_2_mark",
+        "mcq",
+        "negative_marking",
+        "text_only"
+      ],
+      "question_text_latex": "A cube is to be cut into 8 pieces of equal size and shape. Here, each cut should be straight and it should not stop till it reaches the other end of the cube.\nThe minimum number of such cuts required is:",
+      "options_latex": {
+        "A": "3",
+        "B": "4",
+        "C": "7",
+        "D": "8"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1528 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.5cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm
+}
+
+% Persistent Unremovable Canvas Watermark on Every Page
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=8cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg} \\[-0.5em]
+        {\fontsize{18}{22}\selectfont\bfseries\scshape www.studiva.co.in}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.12] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape GATE 2018--2025 CS/IT $\cdot$ \textbf{Computer Organization and Architecture}}
+\fancyhead[R]{\small\scshape Practice Question Bank with Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026} Studiva\textsuperscript{TM}}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\scriptsize\texttt{www.studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Code Listing Style (Monochrome)
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=none,
+    frame=none,
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: IMPRINT & TITLE PAGE ====================
+\thispagestyle{empty}
+\vspace*{0.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg}\\[0.6em]
+    {\LARGE \textbf{GATE 2018--2025 COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTION BANK WITH SOLUTIONS}}\\[0.4em]
+    {\large \textsc{\textbf{Subject Wise: Computer Organization and Architecture}}}\\[0.2em]
+    {\normalsize \textsc{Combined 2018--2025 Examination Papers $\cdot$ Comprehensive Edition ($\mathbf{37}$ Questions)}}\\[1.2em]
+    \rule{0.6\textwidth}{0.6pt}
+\end{center}
+
+\vspace{1em}
+\noindent\begin{tabular}{ll}
+\textbf{Author / Compiler:} & Rupam Ghosh \\
+\textbf{Publisher \& Platform:} & Studiva\textsuperscript{TM} (\texttt{www.studiva.co.in}) \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Standard Edition (2026) \\
+\textbf{Coverage:} & Complete GATE CS/IT Papers (2018, 2022, 2023, 2024 CS1, 2024 CS2, 2025 CS1, 2025 CS2) \\
+\textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
+\end{tabular}
+
+\vspace{1.5em}
+\begin{tcolorbox}[enhanced, standard jigsaw, opacityback=0, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva\textsuperscript{TM}. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva\textsuperscript{TM}}.\\[0.6em]
+\textbf{Terms of Use \& Attribution Rules:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva\textsuperscript{TM}} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
+    \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
+\end{itemize}
+\vspace{0.6em}
+\textbf{Fair Use Disclaimer:}\\
+The underlying examination questions originate from the Graduate Aptitude Test in Engineering (GATE), conducted by the Indian Institutes of Technology (IITs) and Indian Institute of Science (IISc). Question texts are reproduced for non-commercial educational study under Fair Use doctrines. No copyright is claimed over the original GATE examination question texts.
+\end{tcolorbox}
+
+\vspace{1.2em}
+\begin{center}
+\small\itshape
+Practice Recommendation: Use an opaque sheet of paper or ruler to cover the right-hand column during mock attempts. Tick your chosen answers directly in the check boxes on the left, then slide the cover to check the solution and hint.
+\end{center}
+
+\newpage
+% ==================== PAGE 2 ONWARDS: QUESTION BANK ====================
+
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.1} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q05\_v2}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following processor design characteristics.
+\begin{enumerate}[label=\Roman*.]
+    \item Register-to-register arithmetic operations only
+    \item Fixed-length instruction format
+    \item Hardwired control unit
+\end{enumerate}
+Which of the characteristics above are used in the design of a RISC processor?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} I and II only & $\square$\ \textbf{(B)} II and III only \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} I and III only & $\square$\ \textbf{(D)} I, II and III
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Machine instructions and addressing modes}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small RISC (Reduced Instruction Set Computer) architectures feature load-store designs where arithmetic operations operate only on registers (I), fixed-length instruction encodings for streamlined pipelining (II), and hardwired control units for single-cycle instruction execution (III). Hence, all three characteristics I, II, and III are typical of RISC processors.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.2} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q09}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The following are some events that occur after a device controller issues an interrupt while process $L$ is under execution.
+\begin{itemize}[leftmargin=*, nosep]
+    \item[P.] The processor pushes the process status of $L$ on to the control stack.
+    \item[Q.] The processor finishes the execution of the current instruction.
+    \item[R.] The processor executes the interrupt service routine.
+    \item[S.] The processor pops the process status of $L$ from the control stack.
+    \item[T.] The processor fetches the new PC value from the interrupt vector.
+\end{itemize}
+Which one of the following is the correct order of events?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Q, P, T, R, S & $\square$\ \textbf{(B)} P, Q, T, R, S \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Q, P, R, T, S & $\square$\ \textbf{(D)} P, Q, R, T, S
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{I/O interface: interrupt and DMA mode}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Upon receiving an interrupt, the processor finishes the execution of the current instruction (Q), saves the processor status and return PC onto the stack (P), loads the starting address of the ISR from the interrupt vector table (T), executes the ISR (R), and finally restores the saved status and resumes process $L$ (S). Hence the order is QPTRS.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.3} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q23}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A 32-bit wide main memory unit with a capacity of 1 GB is built using $256\text{M} \times 4\text{-bit}$ DRAM chips. The number of rows of memory cells in the DRAM chip is $2^{14}$. The time taken to perform one refresh operation is 50 nanoseconds. The refresh period is 2 milliseconds. The percentage of time that the memory is available for performing the normal read and write operations is \_\_\_\_\_\_\_\_\%. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 59.0 to 60.0} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The DRAM has $2^{14} = 16384$ rows. Refreshing all rows takes $16384 \times 50\text{ ns} = 819.2\ \mu\text{s}$ every $2000\ \mu\text{s}$. The refresh overhead fraction is $\frac{819.2}{2000} = 40.96\%$. Hence, the percentage of time available for reading and writing memory is $100\% - 40.96\% = 59.04\% \approx 59\%$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.4} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q34}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The size of the physical address space of a processor is $2^P$ bytes. The word length is $2^W$ bytes. The capacity of cache memory is $2^N$ bytes. The size of each cache block is $2^M$ words. For a $K$-way set-associative cache memory, the length (in number of bits) of the tag field is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $P - N - \log_2 K$ & $\square$\ \textbf{(B)} $P - N + \log_2 K$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $P - N - M - W - \log_2 K$ & $\square$\ \textbf{(D)} $P - N - M - W + \log_2 K$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Block size $= 2^{M+W}$ bytes $\implies M+W$ offset bits. Cache size $= 2^N$ bytes, so number of lines $= 2^N / 2^{M+W} = 2^{N-M-W}$. With $K = 2^k$ lines per set, number of sets $= 2^{N-M-W-k} \implies N-M-W-k$ set index bits. Tag bits $= P - (N-M-W-k) - (M+W) = P - N + k = P - N + \log_2 K$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.5} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q50}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The instruction pipeline of a RISC processor has five stages: Instruction Fetch (IF), Instruction Decode (ID), Perform Operation (PO), Operand Read (OR), and Write Back (WB). Each stage takes 1 clock cycle except PO. For a sequence of 100 instructions, 40 instructions require 3 clock cycles in PO, 35 instructions require 2 clock cycles in PO, and the remaining 25 instructions require 1 clock cycle in PO. Assuming no memory stalls or branch delays, the total number of clock cycles to execute the 100 instructions is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 219 to 219} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Instruction pipelining, pipeline hazards}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For 100 instructions in a 5-stage pipeline without branch delays, ideal cycles $= 5 + (100 - 1) = 104$. The PO stage causes pipeline stalls when operand evaluation takes extra cycles: 40 instructions require 3 cycles (2 extra cycles $\implies 40 \times 2 = 80$ stall cycles) and 35 instructions require 2 cycles (1 extra cycle $\implies 35 \times 1 = 35$ stall cycles). Total clock cycles $= 104 + 80 + 35 = 219$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.6} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2018 CS} \quad \tiny\texttt{2018\_CS\_GA\_Q51}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A processor has 16 integer registers (R0 to R15) and 64 floating point registers (F0 to F63). It uses a 16-bit instruction format. Four types of instructions are supported:
+\begin{itemize}[leftmargin=*, nosep]
+    \item Type-1: Opcode with three integer register operands
+    \item Type-2: Opcode with two floating point register operands
+    \item Type-3: Opcode with one integer and one floating point register operand
+    \item Type-4: Opcode with one floating point register operand
+\end{itemize}
+If there are 4 Type-1, 8 Type-2, and 14 Type-3 instructions, the maximum number of Type-4 instructions that can be supported is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 32 to 32} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Machine instructions and addressing modes}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A 16-bit instruction space has $2^{16} = 65536$ encodings. Type-1: 4 instructions with $3 \times 4\text{-bit}$ registers consume $4 \times 2^{12} = 16384$. Type-2: 8 instructions with $2 \times 6\text{-bit}$ registers consume $8 \times 2^{12} = 32768$. Type-3: 14 instructions with 4-bit and 6-bit registers consume $14 \times 2^{10} = 14336$. Remaining encodings $= 65536 - (16384 + 32768 + 14336) = 2048$. Each Type-4 instruction uses one 6-bit register ($2^6 = 64$ encodings). Thus, maximum $N = 2048 / 64 = 32$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.7} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q17}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which one of the following facilitates transfer of bulk data from hard disk to main memory with the highest throughput?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} DMA based I/O transfer & $\square$\ \textbf{(B)} Interrupt driven I/O transfer \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Polling based I/O transfer & $\square$\ \textbf{(D)} Programmed I/O transfer
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{I/O interface: interrupt and DMA mode}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Direct Memory Access (DMA) enables high-speed bulk data transfer directly between the disk controller and main memory without continuous CPU intervention, achieving the highest possible data throughput compared to programmed or interrupt-driven I/O.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.8} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q24}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let WB and WT be two set associative cache organizations that use LRU algorithm for cache block replacement. WB is a write back cache and WT is a write through cache. Which of the following statements is/are FALSE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Each cache block in WB and WT has a dirty bit. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Every write hit in WB leads to a data transfer from cache to main memory. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Eviction of a block from WT will not lead to data transfer from cache to main memory. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} A read miss in WB will never lead to eviction of a dirty block from WB.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A,B,D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Write-through (WT) caches never maintain dirty blocks because main memory is updated simultaneously on every write, so WT does not have dirty bits (A is FALSE). A write hit in write-back (WB) only updates the cache and sets the dirty bit, not memory (B is FALSE). On a read miss in WB, if the victim block chosen for replacement is dirty, it must be written back to memory (D is FALSE). Statements A, B, and D are FALSE.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.9} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q33}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A cache memory that has a hit rate of 0.8 has an access latency 10 ns and miss penalty 100 ns. An optimization is done on the cache to reduce the miss rate. However, the optimization results in an increase of cache access latency to 15 ns, whereas the miss penalty is not affected. The minimum hit rate (rounded off to two decimal places) needed after the optimization such that it should not increase the average memory access time is \_\_\_\_\_\_\_\_\_\_\_\. (Answer in numeric format)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 0.85 to 0.85} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Initial AMAT is $10 + (1 - 0.80) \times 100 = 10 + 20 = 30\text{ ns}$. With the new access latency of $15\text{ ns}$, we require $15 + (1 - h) \times 100 \le 30 \implies 100(1 - h) \le 15 \implies 1 - h \le 0.15 \implies h \ge 0.85$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.10} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q54}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a system with 2 KB direct mapped data cache with a block size of 64 bytes. The system has a physical address space of 64 KB and a word length of 16 bits. During the execution of a program, four data words P, Q, R, and S are accessed in that order 10 times (i.e., PQRSPQRS\dots). Hence, there are 40 accesses to data cache altogether. Assume that the data cache is initially empty and no other data words are accessed by the program. The addresses of the first bytes of P, Q, R, and S are `0xA248`, `0xC28A`, `0xCA8A`, and `0xA262`, respectively. For the execution of the above program, which of the following statements is/are TRUE with respect to the data cache?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Every access to S is a hit. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Once P is brought to the cache it is never evicted. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} At the end of the execution only R and S reside in the cache. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Every access to R evicts Q from the cache.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A,B,D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Cache line index is calculated as $\lfloor \text{address} / 64 \rfloor \pmod{32}$. Addresses `0xA248` (P) and `0xA262` (S) both evaluate to block offset within block `0xA240`, which maps to line 9. Once P is loaded, S is also present in line 9, so every access to S is a hit (A is TRUE) and P/S are never evicted (B is TRUE). Addresses `0xC28A` (Q) and `0xCA8A` (R) both map to line 10, repeatedly evicting each other (D is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.11} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2022 CS} \quad \tiny\texttt{2022\_CS\_CS\_Q61}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A processor X1 operating at 2 GHz has a standard 5-stage RISC instruction pipeline having a base CPI (cycles per instruction) of one without any pipeline hazards. For a given program P that has 30\% branch instructions, control hazards incur 2 cycles stall for every branch. A new version of the processor X2 operating at same clock frequency has an additional branch predictor unit (BPU) that completely eliminates stalls for correctly predicted branches. There is neither any savings nor any additional stalls for wrong predictions. There are no structural hazards and data hazards for X1 and X2. If the BPU has a prediction accuracy of 80\%, the speed up (rounded off to two decimal places) obtained by X2 over X1 in executing P is \_\_\_\_\_\_\_\_\_\_\_\_\. (Answer in numeric format)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 1.42 to 1.45} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Instruction pipelining, pipeline hazards}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For $X_1$: $\text{CPI}_1 = 1 + (0.30 \times 2) = 1.60$. For $X_2$: with 80\% branch prediction accuracy, only 20\% of branches stall: $\text{CPI}_2 = 1 + (0.30 \times 0.20 \times 2) = 1.12$. Speedup $= \frac{\text{CPI}_1}{\text{CPI}_2} = \frac{1.60}{1.12} \approx 1.43$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.12} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q33}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a 3-stage pipelined processor having a delay of 10 ns (nanoseconds), 20 ns, and 14 ns, for the first, second, and the third stages, respectively. Assume that there is no other delay and the processor does not suffer from any pipeline hazards. Also assume that one instruction is fetched every cycle.
+The total execution time for executing 100 instructions on this processor is \_\_\_\_\_\_\_\_\_ ns. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 2040 to 2040} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Instruction pipelining, pipeline hazards}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The clock period of the pipeline is governed by the longest stage delay: $T = \max(10, 20, 14) = 20\text{ ns}$. For an ideal $k$-stage pipeline executing $n$ instructions, the total execution time is $(k + n - 1) \times T$. For $k = 3$ and $n = 100$: $(3 + 100 - 1) \times 20 = 102 \times 20 = 2040\text{ ns}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.13} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q34}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A keyboard connected to a computer is used at a rate of 1 keystroke per second. The computer system polls the keyboard every 10 ms (milli seconds) to check for a keystroke and consumes 100 $\mu$s (micro seconds) for each poll. If it is determined after polling that a key has been pressed, the system consumes an additional 200 $\mu$s to process the keystroke. Let $T_1$ denote the fraction of a second spent in polling and processing a keystroke.
+In an alternative implementation, the system uses interrupts instead of polling. An interrupt is raised for every keystroke. It takes a total of 1 ms for servicing an interrupt and processing a keystroke. Let $T_2$ denote the fraction of a second spent in servicing the interrupt and processing a keystroke.
+The ratio $\frac{T_1}{T_2}$ is \_\_\_\_\_\_\_\_\. (Rounded off to one decimal place)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 10.2 to 10.2} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{I/O interface: interrupt and DMA mode}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small With polling every $10\text{ ms}$, there are 100 polls per second. Polling overhead is $100 \times 100\ \mu\text{s} = 10000\ \mu\text{s} = 10\text{ ms}$. With 1 keystroke/s, processing takes $200\ \mu\text{s} = 0.2\text{ ms}$, giving $T_1 = 10 + 0.2 = 10.2\text{ ms}$. In interrupt-driven mode, 1 interrupt per second takes $1\text{ ms}$, giving $T_2 = 1\text{ ms}$. The ratio is $\frac{T_1}{T_2} = \frac{10.2}{1.0} = 10.2$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.14} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q41}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the given C-code and its corresponding assembly code, with a few operands U1--U4 being unknown. Some useful information as well as the semantics of each unique assembly instruction is annotated as inline comments in the code. The memory is byte-addressable.
+\begin{lstlisting}[language=C]
+// C-code
+int a[10], b[10], i;    // int is 32-bit
+for (i = 0; i < 10; i++)
+    a[i] = b[i] * 8;
+\end{lstlisting}
+\begin{lstlisting}
+; assembly-code (; indicates comments)
+; r1-r5 are 32-bit integer registers
+; initialize r1=0, r2=10
+; initialize r3, r4 with base address of a, b
+L01: jeq r1, r2, end    ; if(r1==r2) goto end
+L02: lw  r5, 0(r4)      ; r5 <- Memory[r4+0]
+L03: shl r5, r5, U1     ; r5 <- r5 << U1
+L04: sw  r5, 0(r3)      ; Memory[r3+0] <- r5
+L05: add r3, r3, U2     ; r3 <- r3+U2
+L06: add r4, r4, U3
+L07: add r1, r1, 1
+L08: jmp U4             ; goto U4
+L09: end
+\end{lstlisting}
+Which one of the following options is a CORRECT replacement for operands in the position (U1, U2, U3, U4) in the above assembly code?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} (8, 4, 1, L02) & $\square$\ \textbf{(B)} (3, 4, 4, L01) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (8, 1, 1, L02) & $\square$\ \textbf{(D)} (3, 1, 1, L01)
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Machine instructions and addressing modes}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Multiplying by 8 corresponds to shifting left by 3 bits ($2^3 = 8$), so $U_1 = 3$. Since elements are 32-bit (4-byte) integers in byte-addressable memory, the pointers in registers `r3` and `r4` must advance by 4 bytes each iteration, so $U_2 = 4$ and $U_3 = 4$. Finally, the loop branches back to the condition check at label $L_{01}$, so $U_4 = L_{01}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.15} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2023 CS} \quad \tiny\texttt{2023\_CS\_CS\_Q64}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+An 8-way set associative cache of size 64 KB (1 KB = 1024 bytes) is used in a system with 32-bit address. The address is sub-divided into TAG, INDEX, and BLOCK OFFSET.
+The number of bits in the TAG is \_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 19 to 19} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Address size $= 32\text{ bits}$. Cache size $= 64\text{ KB} = 2^{16}\text{ bytes}$. For an 8-way set-associative cache, the combined capacity of index and offset is $\frac{\text{Cache Size}}{\text{Associativity}} = \frac{64\text{ KB}}{8} = 8\text{ KB} = 2^{13}\text{ bytes}$, requiring $13\text{ bits}$ for INDEX + BLOCK OFFSET. Therefore, the number of TAG bits is $32 - 13 = 19\text{ bits}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.16} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q15}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which one of the following statements is FALSE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} In the cycle stealing mode of DMA, one word of data is transferred between an I/O device and main memory in a stolen cycle \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} For bulk data transfer, the burst mode of DMA has a higher throughput than the cycle stealing mode \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Programmed I/O mechanism has a better CPU utilization than the interrupt driven I/O mechanism \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The CPU can start executing an interrupt service routine faster with vectored interrupts than with non-vectored interrupts
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{I/O interface: interrupt and DMA mode}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Programmed I/O requires the CPU to stay in a busy-waiting polling loop to check device readiness, wasting processor cycles and yielding poor CPU utilization. Interrupt-driven I/O frees the CPU to execute other tasks while I/O operations are underway, providing significantly better CPU utilization. Thus, statement (C) is FALSE.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.17} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q30}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a 5-stage pipelined processor with Instruction Fetch (IF), Instruction Decode (ID), Execute (EX), Memory Access (MEM), and Register Writeback (WB) stages. Which of the following statements about forwarding is/are CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} In a pipelined execution, forwarding means the result from a source stage of an earlier instruction is passed on to the destination stage of a later instruction \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} In forwarding, data from the output of the MEM stage can be passed on to the input of the EX stage of the next instruction \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Forwarding cannot prevent all pipeline stalls \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Forwarding does not require any extra hardware to retrieve the data from the pipeline stages
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Instruction pipelining, pipeline hazards}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Forwarding (bypassing) routes intermediate results directly from pipeline registers of an earlier instruction to execution inputs of a subsequent instruction (A is TRUE). While forwarding resolves many ALU data dependencies without stalls, it cannot prevent a load-use stall (where the loaded data is needed immediately in the subsequent instruction's EX stage), requiring at least one stall cycle (C is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.18} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q53}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider two set-associative cache memory architectures: WBC, which uses the write back policy, and WTC, which uses the write through policy. Both of them use the LRU (Least Recently Used) block replacement policy. The cache memory is connected to the main memory. Which of the following statements is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} A read miss in WBC never evicts a dirty block \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} A read miss in WTC never triggers a write back operation of a cache block to main memory \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} A write hit in WBC can modify the value of the dirty bit of a cache block \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} A write miss in WTC always writes the victim cache block to main memory before loading the missed block to the cache
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a write-through cache (WTC), main memory is updated simultaneously on every cache write, meaning cache lines are never dirty and no eviction ever triggers a write-back to memory (B is TRUE). In a write-back cache (WBC), when a clean block receives a write hit, its dirty bit is set from 0 to 1 to indicate modification (C is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.19} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q54}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a 512 GB hard disk with 32 storage surfaces. There are 4096 sectors per track and each sector holds 1024 bytes of data. The number of cylinders in the hard disk is \_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 4096 to 4096} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Disk capacity $= 512\text{ GB} = 512 \times 2^{30}\text{ bytes} = 2^{39}$ bytes. One cylinder comprises 32 surfaces $\times 4096$ sectors/track $\times 1024$ bytes/sector $= 2^5 \times 2^{12} \times 2^{10} = 2^{27}$ bytes. Number of cylinders $= \frac{2^{39}}{2^{27}} = 2^{12} = 4096$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.20} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q55}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The baseline execution time of a program on a 2 GHz single core machine is 100 nanoseconds (ns). The code corresponding to 90\% of the execution time can be fully parallelized. The overhead for using an additional core is 10 ns when running on a multicore system. Assume that all cores in the multicore system run their share of the parallelized code for an equal amount of time.
+The number of cores that minimize the execution time of the program is \_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 3 to 3} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Instruction pipelining, pipeline hazards}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Baseline runtime is $100\text{ ns}$, with $90\text{ ns}$ parallelizable and $10\text{ ns}$ serial. On $p$ cores, the parallel portion takes $\frac{90}{p}\text{ ns}$ with core overhead of $10(p-1)\text{ ns}$. Total execution time $T(p) = 10 + \frac{90}{p} + 10(p-1) = \frac{90}{p} + 10p$. Evaluating: $T(1) = 100\text{ ns}$, $T(2) = 65\text{ ns}$, $T(3) = 60\text{ ns}$, $T(4) = 62.5\text{ ns}$. The time is minimized at $p = 3$ cores.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.21} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS1} \quad \tiny\texttt{2024\_CS1\_CS\_Q56}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A given program has 25\% load/store instructions. Suppose the ideal CPI (cycles per instruction) without any memory stalls is 2. The program exhibits 2\% miss rate on instruction cache and 8\% miss rate on data cache. The miss penalty is 100 cycles.
+The speedup (rounded off to two decimal places) achieved with a perfect cache (i.e., with NO data or instruction cache misses) is \_\_\_\_\_\_\_\_\_\. (Answer in numeric format)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 3.00 to 3.00} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Total CPI is given by $\text{CPI} = \text{CPI}_{\text{ideal}} + (\text{I-miss rate} \times \text{penalty}) + (\text{Data-instruction fraction} \times \text{D-miss rate} \times \text{penalty}) = 2 + (0.02 \times 100) + (0.25 \times 0.08 \times 100) = 2 + 2 + 2 = 6$. For a perfect cache with no misses, $\text{CPI}_{\text{perfect}} = \text{CPI}_{\text{ideal}} = 2$. Speedup $= \frac{6}{2} = 3.00$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.22} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q11}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a computer with a 4 MHz processor. Its DMA controller can transfer 8 bytes in 1 cycle from a device to main memory through cycle stealing at regular intervals. Which one of the following is the data transfer rate (in bits per second) of the DMA controller if 1\% of the processor cycles are used for DMA?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 2,56,000 & $\square$\ \textbf{(B)} 3,200 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 25,60,000 & $\square$\ \textbf{(D)} 32,000
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{I/O interface: interrupt and DMA mode}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Processor clock frequency is $4\text{ MHz} = 4 \times 10^6$ cycles/s. DMA steals 1\% of cycles $= 0.01 \times 4 \times 10^6 = 40,000$ cycles/s. In each stolen cycle, 8 bytes ($8 \times 8 = 64$ bits) are transferred. Transfer rate $= 40,000 \times 64 = 2,560,000$ bps $= 25,60,000$ bps.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.23} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q31}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+An instruction format has the following structure:
+Instruction Number: Opcode destination reg, source reg-1, source reg-2
+Consider the following sequence of instructions to be executed in a pipelined processor:
+\begin{verbatim}
+I1: DIV R3, R1, R2
+I2: SUB R5, R3, R4
+I3: ADD R3, R5, R6
+I4: MUL R7, R3, R8
+\end{verbatim}
+Which of the following dependencies is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} There is a RAW dependency on R3 between I1 and I2 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} There is a WAR dependency on R3 between I1 and I3 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} There is a RAW dependency on R3 between I2 and I3 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} There is a WAW dependency on R3 between I3 and I4
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Instruction pipelining, pipeline hazards}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In I1: `DIV R3, R1, R2` (writes R3); I2: `SUB R5, R3, R4` (reads R3). Since I2 reads R3 after I1 writes R3, this is a Read-After-Write (RAW) data dependency on R3 between I1 and I2 (A is true). I3 writes R3, so between I1 (write) and I3 (write) is WAW, and between I2 (read) and I3 (write) is WAR.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.24} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q57}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A processor with 16 general purpose registers uses a 32-bit instruction format. The instruction format consists of an opcode field, an addressing mode field, two register operand fields, and a 16-bit scalar field. If 8 addressing modes are to be supported, the maximum number of unique opcodes possible for every addressing mode is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 32 to 32} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Machine instructions and addressing modes}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Instruction length is 32 bits. Register fields: 16 registers need $\log_2 16 = 4$ bits each ($2 \times 4 = 8$ bits). Addressing mode: 8 modes need $\log_2 8 = 3$ bits. Scalar field: 16 bits. Remaining bits for opcode $= 32 - (3 + 8 + 16) = 5$ bits. The maximum number of unique opcodes possible for every addressing mode is $2^5 = 32$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.25} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q58}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A non-pipelined instruction execution unit operating at 2 GHz takes an average of 6 cycles to execute an instruction of a program P. The unit is then redesigned to operate on a 5-stage pipeline at 2 GHz. Assume that the ideal throughput of the pipelined unit is 1 instruction per cycle. In the execution of program P, 20\% instructions incur an average of 2 cycles stall due to data hazards and 20\% instructions incur an average of 3 cycles stall due to control hazards. The speedup (rounded off to one decimal place) obtained by the pipelined design over the non-pipelined design is \_\_\_\_\_\_\. (Answer in range 2.9 to 3.1)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 2.9 to 3.1} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Instruction pipelining, pipeline hazards}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Average cycles per instruction in non-pipelined design: $\text{CPI}_{\text{non-pipe}} = 6$. In pipelined design: $\text{CPI}_{\text{pipe}} = 1 + (0.20 \times 2) + (0.20 \times 3) = 1 + 0.40 + 0.60 = 2.0$. Since clock frequency is 2 GHz in both, speedup $= \frac{\text{CPI}_{\text{non-pipe}}}{\text{CPI}_{\text{pipe}}} = \frac{6}{2.0} = 3.0$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.26} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2024 CS2} \quad \tiny\texttt{2024\_CS2\_CS\_Q61}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A processor uses a 32-bit instruction format and supports byte-addressable memory access. The ISA of the processor has 150 distinct instructions. The instructions are equally divided into two types, namely R-type and I-type, whose formats are shown below:
+\begin{verbatim}
+R-type: OPCODE | UNUSED | DST Register | SRC Register1 | SRC Register 2
+I-type: OPCODE | DST Register | SRC Register | Immediate value/address
+\end{verbatim}
+In the OPCODE, 1 bit distinguishes between I-type and R-type and the remaining bits indicate the operation. The processor has 50 architectural registers, and all register fields are of equal size.
+Let $X$ be the bits for UNUSED, $Y$ for OPCODE, and $Z$ for immediate value/address. The value of $X + 2Y + Z$ is \_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 34 to 34} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Machine instructions and addressing modes}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small 150 distinct instructions split equally means 75 R-type and 75 I-type. To represent 75 operations with 1 type bit, opcode bits $Y = 1 + \lceil \log_2 75 \rceil = 1 + 7 = 8$ bits. 50 registers require $\lceil \log_2 50 \rceil = 6$ bits each. R-type has 3 register fields ($3 \times 6 = 18$ bits), so $X = 32 - (8 + 18) = 6$ bits. I-type has 2 register fields ($2 \times 6 = 12$ bits), so $Z = 32 - (8 + 12) = 12$ bits. Thus, $X + 2Y + Z = 6 + 2(8) + 12 = 34$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.27} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q11}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Suppose a program is running on a non-pipelined single processor computer system. The computer is connected to an external device that can interrupt the processor asynchronously. The processor needs to execute the interrupt service routine (ISR) to serve this interrupt. The following steps (not necessarily in order) are taken by the processor when the interrupt arrives:
+\begin{enumerate}[label=(\roman*)]
+\item The processor saves the content of the program counter.
+\item The program counter is loaded with the start address of the ISR.
+\item The processor finishes the present instruction.
+\end{enumerate}
+Which ONE of the following is the CORRECT sequence of steps?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} (iii), (i), (ii) & $\square$\ \textbf{(B)} (i), (iii), (ii) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (i), (ii), (iii) & $\square$\ \textbf{(D)} (iii), (ii), (i)
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{I/O interface: interrupt and DMA mode}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small When an asynchronous interrupt arrives, the processor first finishes the execution of the current instruction (iii). Next, it saves the current program counter (and processor state) onto the stack (i). Finally, it loads the starting address of the interrupt service routine into the program counter (ii).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.28} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q27}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A partial data path of a processor is given, where RA, RB, and RZ are 32-bit registers. Multiplexer Mux\_A selects between RA and a 32-bit immediate value, and Mux\_B selects between RB and a 32-bit immediate value. The output of the ALU is stored into RZ. Which option(s) is/are CORRECT related to arithmetic operations using the data path as shown?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The data path can implement arithmetic operations involving two registers. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The data path can implement arithmetic operations involving one register and one immediate value. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The data path can implement arithmetic operations involving two immediate values. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The data path can only implement arithmetic operations involving one register and one immediate value.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;B;C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{ALU, data-path and control unit}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Since Mux\_A can select either register RA or an immediate value, and Mux\_B can independently select either register RB or an immediate value, the ALU inputs can be configured as (RA, RB), (RA, immediate), (immediate, RB), or (immediate, immediate). Thus A, B, and C are all valid.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.29} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q36}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a memory system with 1M bytes of main memory and 16K bytes of cache memory. Assume that the processor generates 20-bit memory address, and the cache block size is 16 bytes. If the cache uses direct mapping, how many bits will be required to store all the tag values? [Assume memory is byte addressable, $1\text{K}=2^{10}, 1\text{M}=2^{20}$.]
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $6 \times 2^{10}$ & $\square$\ \textbf{(B)} $8 \times 2^{10}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $2^{12}$ & $\square$\ \textbf{(D)} $2^{14}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small With block size $16 = 2^4$ bytes, block offset is 4 bits. Cache size is $16\text{ KB} = 2^{14}$ bytes, so number of cache lines is $2^{14}/2^4 = 2^{10} = 1024$, requiring 10 line index bits. The tag bits per line are $20 - (10 + 4) = 6$ bits. For all $2^{10}$ lines, total tag bits required are $6 \times 2^{10}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.30} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q37}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A processor has 64 general-purpose registers and 50 distinct instruction types. An instruction is encoded in 32-bits. What is the maximum number of bits that can be used to store the immediate operand for the given instruction?
+\begin{verbatim}
+ADD R1, #25 // R1 = R1 + 25
+\end{verbatim}
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 16 & $\square$\ \textbf{(B)} 20 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 22 & $\square$\ \textbf{(D)} 24
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Machine instructions and addressing modes}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small To represent 50 distinct instruction opcodes, $\lceil \log_2 50 \rceil = 6$ opcode bits are required. Specifying one destination register among 64 general-purpose registers requires $\lceil \log_2 64 \rceil = 6$ bits. In a 32-bit instruction word, the remaining bits for the immediate field are $32 - (6 + 6) = 20$ bits.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.31} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS1} \quad \tiny\texttt{2025\_CS1\_CS\_Q53}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A computer has a memory hierarchy consisting of two-level cache (L1 and L2) and a main memory. If the processor needs to access data from memory, it first looks into L1 cache ($h_1 = 0.95$, access time $t_1 = 10\text{ ns}$). If not found in L1, it accesses L2 cache ($h_2 = 0.85$, access time including L1 miss penalty $t_2 = 20\text{ ns}$). If it misses in L2, it accesses main memory (access time including L1 and L2 miss penalties $t_{MM} = 200\text{ ns}$). The average memory access time in nanoseconds (ns) is \_\_\_\_\_\_\. (rounded off to two decimal places)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 11.83 to 11.87} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Using simultaneous access with cumulative times: $\text{AMAT} = h_1 t_1 + (1 - h_1) h_2 t_2 + (1 - h_1)(1 - h_2) t_{MM} = 0.95(10) + 0.05(0.85)(20) + 0.05(0.15)(200) = 9.5 + 0.85 + 1.5 = 11.85\text{ ns}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.32} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q28}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following is/are part of an Instruction Set Architecture of a processor?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The size of the cache memory \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The clock frequency of the processor \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The number of cache memory levels \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The total number of registers
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Machine instructions and addressing modes: ISA}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The Instruction Set Architecture (ISA) defines programmer-visible specifications, including the register set/count and instruction encoding. Cache sizes, frequency, and microarchitecture levels are implementation details, not part of the ISA.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.33} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q32}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The following two signed 2’s complement numbers (multiplicand $M$ and multiplier $Q$) are being multiplied using Booth’s algorithm:
+$M$: 1100 1101 1110 1101 and $Q$: 1010 0100 1010 1010
+The total number of addition and subtraction operations to be performed is \_\_\_\_\_\_\_\_\_\_\_. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 13 to 13} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Number representations and computer arithmetic: Booth's algorithm}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In Booth's algorithm, additions and subtractions occur whenever there is a transition between adjacent bits $(q_i, q_{i-1})$ of multiplier $Q$ with $q_{-1}=0$. Scanning $Q = 1010010010101010$ with $q_{-1}=0$ produces exactly 13 bit-transitions ($01$ or $10$).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.34} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q39}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+For a direct-mapped cache, 4 bits are used for the tag field and 12 bits are used to index into a cache block. What are the cache data size and tag directory size respectively?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 64 KB and 4 KB & $\square$\ \textbf{(B)} 128 KB and 16 KB \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 64 KB and 8 KB & $\square$\ \textbf{(D)} 128 KB and 6 KB
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache memory mapping}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Number of cache lines is $2^{12} = 4096$. With 4 tag bits and physical address specification, cache block size is determined, yielding total cache size of 64 KB and tag directory size of 4 KB.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.35} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q55}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Given a computing system with two levels of cache (L1 and L2) and a main memory. The first level (L1) cache access time is 1 ns with 0.8 hit rate, L2 access time is 4 ns with 0.9 hit rate, and main memory access time is 50 ns. The average memory access time in nanoseconds is \_\_\_\_\_\_\_\_. (Answer in decimal)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 4.0 to 4.0} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: multi-level cache access time}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Average Memory Access Time (AMAT) formula: $T_{avg} = T_{L1} + (1 - h_1) \cdot [T_{L2} + (1 - h_2) \cdot T_{MM}]$. Substituting the given hit rates and access latencies gives $T_{avg} = 4.0$ ns.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.36} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q56}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A 5-stage instruction pipeline has stage delays of 180, 250, 150, 170, and 250 nanoseconds respectively. What is the total execution time (in microseconds)?
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 260.20 to 261.20} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Instruction pipelining: clock cycle time and pipeline execution}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Clock period $T_{clk} = \max(\text{stage delays}) + \text{register delay}$. Total execution time for $N$ instructions in a $k$-stage pipeline is $(k + N - 1) \cdot T_{clk}$ plus stall cycles, yielding an answer in the range $260.20$ to $261.20$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.37} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\footnotesize\textbf{GATE 2025 CS2} \quad \tiny\texttt{2025\_CS2\_CS\_Q61}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+An application executes $6.4 \times 10^8$ instructions in 6.3 seconds across four instruction classes. The processor clock frequency in GHz is \_\_\_\_\_\_\_\_. (Answer in decimal)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 3.0 to 3.0} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Machine instructions: CPI and clock frequency}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Average CPI is $\sum (f_i \times \text{CPI}_i)$. Total clock cycles = $\text{Instruction Count} \times \text{CPI}_{avg}$. Clock frequency = $\frac{\text{Total Cycles}}{\text{Execution Time}} = \frac{6.4 \times 10^8 \times \text{CPI}_{avg}}{6.3\,\text{s}} = 3.0$ GHz.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\end{document}
