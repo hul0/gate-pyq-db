@@ -758,9 +758,7 @@ def main():
     assets_dir = root_dir / "assets"
 
     # Use JPEG icon to optimize document size as requested
-    logo_jpeg = assets_dir / "studiva_butterfly_icon_transparent.jpeg"
-    if not logo_jpeg.exists():
-        logo_jpeg = assets_dir / "studiva-butterfly-icon.jpg"
+    logo_jpeg = assets_dir / "studiva-butterfly-icon.jpg"
 
     # Chronological paper ordering
     paper_ids = [

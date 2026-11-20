@@ -291,7 +291,7 @@ def generate_latex_document(paper_data, abs_logo_path):
 \fancyhead[R]{\small\scshape Practice Question Bank with Solutions}
 \fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026} Studiva\textsuperscript{TM}}
 \fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
-\fancyfoot[R]{\raisebox{-0.2em}{\includegraphics[height=1.0em]{""" + logo_path_latex + r"""}}\hspace{0.35em}\scriptsize\texttt{www.studiva.co.in}}
+\fancyfoot[R]{\scriptsize\texttt{www.studiva.co.in}}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
@@ -459,24 +459,15 @@ def main():
         print(f"full_paper.json not found in {paper_dir}. Running generate_full_paper_json.py...")
         subprocess.run([sys.executable, os.path.join(root_dir, "scripts", "generate_full_paper_json.py"), paper_id], check=True)
 
-    # Ensure PNG logo exists from webp
+    # Use JPEG icon to optimize document size
     assets_dir = os.path.join(root_dir, "assets")
-    png_logo_path = os.path.join(assets_dir, "studiva_butterfly_icon_transparent.png")
-    webp_logo_path = os.path.join(assets_dir, "studiva_butterfly_icon_transparent.webp")
-    if not os.path.exists(png_logo_path) and os.path.exists(webp_logo_path):
-        try:
-            from PIL import Image
-            im = Image.open(webp_logo_path)
-            im.save(png_logo_path)
-            print(f"Converted {webp_logo_path} to {png_logo_path}")
-        except Exception as e:
-            print(f"Notice: Pillow conversion warning: {e}")
+    logo_path = os.path.join(assets_dir, "studiva-butterfly-icon.jpg")
 
     with open(full_paper_path, "r", encoding="utf-8") as f:
         paper_data = json.load(f)
 
     print(f"Generating LaTeX source for {paper_id} ({len(paper_data.get('questions', []))} questions)...")
-    tex_content = generate_latex_document(paper_data, png_logo_path)
+    tex_content = generate_latex_document(paper_data, logo_path)
 
     file_basename = f"{paper_id}_textbook"
     pdf_path = compile_latex_to_pdf(tex_content, paper_dir, file_basename)
