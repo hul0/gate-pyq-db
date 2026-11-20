@@ -33,10 +33,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees, binary search trees, binary heaps",
+      "difficulty_level": "Easy",
+      "explaination": "In a 1-indexed max-heap, every node at index $i$ must satisfy $A[i] \\ge A[2i]$ and $A[i] \\ge A[2i+1]$. For sequence B $[23, 17, 14, 7, 13, 10, 1, 5, 6, 12]$: $A[1]=23 \\ge A[2]=17, A[3]=14$; $A[2]=17 \\ge A[4]=7, A[5]=13$; $A[3]=14 \\ge A[6]=10, A[7]=1$; $A[4]=7 \\ge A[8]=5, A[9]=6$; $A[5]=13 \\ge A[10]=12$. Every parent is greater than or equal to its children, forming a valid max-heap.",
       "tags": [
         "1_mark",
         "2023",
@@ -46,7 +46,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one of the following sequences when stored in an array at locations $A[1], \\dots, A[10]$ forms a max-heap?",
+      "options_latex": {
+        "A": "23, 17, 10, 6, 13, 14, 1, 5, 7, 12",
+        "B": "23, 17, 14, 7, 13, 10, 1, 5, 6, 12",
+        "C": "23, 17, 14, 6, 13, 10, 1, 5, 7, 15",
+        "D": "23, 14, 17, 1, 10, 13, 16, 12, 7, 5"
+      }
     },
     {
       "id": "2023_CS_CS_Q13",
@@ -76,10 +83,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Arrays, stacks, queues, linked lists",
+      "difficulty_level": "Easy",
+      "explaination": "In a singly-linked list, deleting a given node requires finding its predecessor node to bypass it, requiring an $\\mathcal{O}(n)$ traversal from the head in the worst case. In a doubly-linked list, each node directly points to its predecessor (`node->prev`), allowing immediate pointer adjustments in $\\mathcal{O}(1)$ time.",
       "tags": [
         "1_mark",
         "2023",
@@ -89,7 +96,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let `SLLdel` be a function that deletes a node in a singly-linked list given a pointer to the node and a pointer to the head of the list. Similarly, let `DLLdel` be another function that deletes a node in a doubly-linked list given a pointer to the node and a pointer to the head of the list.\nLet $n$ denote the number of nodes in each of the linked lists. Which one of the following choices is TRUE about the worst-case time complexity of `SLLdel` and `DLLdel`?",
+      "options_latex": {
+        "A": "`SLLdel` is $\\mathcal{O}(1)$ and `DLLdel` is $\\mathcal{O}(n)$",
+        "B": "Both `SLLdel` and `DLLdel` are $\\mathcal{O}(\\log n)$",
+        "C": "Both `SLLdel` and `DLLdel` are $\\mathcal{O}(1)$",
+        "D": "`SLLdel` is $\\mathcal{O}(n)$ and `DLLdel` is $\\mathcal{O}(1)$"
+      }
     },
     {
       "id": "2023_CS_CS_Q15",
@@ -119,10 +133,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Combinatorics: counting, recurrence relations, generating functions",
+      "difficulty_level": "Medium",
+      "explaination": "The recurrence $L_n = L_{n-1} + L_{n-2}$ has characteristic equation $r^2 - r - 1 = 0$, giving roots $r_1, r_2 = \\frac{1 \\pm \\sqrt{5}}{2}$. The general solution is $L_n = c_1 \\left(\\frac{1+\\sqrt{5}}{2}\\right)^n + c_2 \\left(\\frac{1-\\sqrt{5}}{2}\\right)^n$. Substituting initial conditions $L_1 = 1$ and $L_2 = 3$ yields $c_1 = 1$ and $c_2 = 1$.",
       "tags": [
         "1_mark",
         "2023",
@@ -132,7 +146,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The Lucas sequence $L_n$ is defined by the recurrence relation:\n\\[ L_n = L_{n-1} + L_{n-2}, \\quad \\text{for } n \\ge 3, \\]\nwith $L_1 = 1$ and $L_2 = 3$.\nWhich one of the options given is TRUE?",
+      "options_latex": {
+        "A": "$L_n = \\left(\\frac{1+\\sqrt{5}}{2}\\right)^n + \\left(\\frac{1-\\sqrt{5}}{2}\\right)^n$",
+        "B": "$L_n = \\left(\\frac{1+\\sqrt{5}}{2}\\right)^n - \\left(\\frac{1-\\sqrt{5}}{3}\\right)^n$",
+        "C": "$L_n = \\left(\\frac{1+\\sqrt{5}}{2}\\right)^n + \\left(\\frac{1-\\sqrt{5}}{3}\\right)^n$",
+        "D": "$L_n = \\left(\\frac{1+\\sqrt{5}}{2}\\right)^n - \\left(\\frac{1-\\sqrt{5}}{2}\\right)^n$"
+      }
     },
     {
       "id": "2023_CS_CS_Q16",
@@ -162,10 +183,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Relational model: relational algebra, tuple calculus, SQL",
+      "difficulty_level": "Easy",
+      "explaination": "In relational database theory, the degree (or arity) of a relation is defined as the number of attributes (columns) in its relation schema, whereas the cardinality of a relation is the number of tuples (rows).",
       "tags": [
         "1_mark",
         "2023",
@@ -175,7 +196,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one of the options given below refers to the degree (or arity) of a relation in relational database systems?",
+      "options_latex": {
+        "A": "Number of attributes of its relation schema.",
+        "B": "Number of tuples stored in the relation.",
+        "C": "Number of entries in the relation.",
+        "D": "Number of distinct domains of its relation schema."
+      }
     },
     {
       "id": "2023_CS_CS_Q17",
@@ -205,10 +233,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Transport layer: flow control and congestion control, UDP, TCP, sockets",
+      "difficulty_level": "Medium",
+      "explaination": "Link utilization in Stop-and-Wait is $\\eta = \\frac{1}{1 + 2a}$, where $a = \\frac{T_{\\text{prop}}}{T_{\\text{trans}}} = \\frac{d/v}{L/B} = \\frac{d \\cdot B}{v \\cdot L}$. Utilization $\\eta$ is lowest when parameter $a$ is maximized, which occurs when the link length $d$ is longer (increasing propagation delay) and the transmission rate $B$ is higher (decreasing packet transmission time).",
       "tags": [
         "1_mark",
         "2023",
@@ -218,7 +246,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Suppose two hosts are connected by a point-to-point link and they are configured to use Stop-and-Wait protocol for reliable data transfer. Identify in which one of the following scenarios, the utilization of the link is the lowest.",
+      "options_latex": {
+        "A": "Longer link length and lower transmission rate",
+        "B": "Longer link length and higher transmission rate",
+        "C": "Shorter link length and lower transmission rate",
+        "D": "Shorter link length and higher transmission rate"
+      }
     },
     {
       "id": "2023_CS_CS_Q18",
@@ -248,10 +283,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Linear Algebra",
+      "subtopic": "Matrices, determinants",
+      "difficulty_level": "Easy",
+      "explaination": "Matrix $B$ is obtained from matrix $A$ by interchanging row 1 and row 3 ($R_1 \\leftrightarrow R_3$), leaving all other rows unchanged. By the elementary row operation property of determinants, swapping any two rows of a square matrix negates its determinant: $\\det(B) = -\\det(A)$.",
       "tags": [
         "1_mark",
         "2023",
@@ -261,7 +296,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let\n\\[ A = \\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 4 & 1 & 2 & 3 \\\\ 3 & 4 & 1 & 2 \\\\ 2 & 3 & 4 & 1 \\end{bmatrix} \\quad \\text{and} \\quad B = \\begin{bmatrix} 3 & 4 & 1 & 2 \\\\ 4 & 1 & 2 & 3 \\\\ 1 & 2 & 3 & 4 \\\\ 2 & 3 & 4 & 1 \\end{bmatrix}. \\]\nLet $\\det(A)$ and $\\det(B)$ denote the determinants of the matrices $A$ and $B$, respectively.\nWhich one of the options given below is TRUE?",
+      "options_latex": {
+        "A": "$\\det(A) = \\det(B)$",
+        "B": "$\\det(B) = -\\det(A)$",
+        "C": "$\\det(A) = 0$",
+        "D": "$\\det(AB) = \\det(A) + \\det(B)$"
+      }
     },
     {
       "id": "2023_CS_CS_Q20",
@@ -291,10 +333,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Searching, sorting, hashing",
+      "difficulty_level": "Easy",
+      "explaination": "In universal hashing, the hash function is chosen uniformly at random from a carefully designed universal collection of hash functions independently of the keys. Because the adversary cannot predict which function will be selected at runtime, any fixed choice of malicious keys cannot guarantee worst-case collision behavior.",
       "tags": [
         "1_mark",
         "2023",
@@ -304,7 +346,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "An algorithm has to store several keys generated by an adversary in a hash table. The adversary is malicious who tries to maximize the number of collisions. Let $k$ be the number of keys, $m$ be the number of slots in the hash table, and $k > m$.\nWhich one of the following is the best hashing strategy to counteract the adversary?",
+      "options_latex": {
+        "A": "Division method, i.e., use the hash function $h(k) = k \\bmod m$.",
+        "B": "Multiplication method, i.e., use the hash function $h(k) = \\lfloor m(kA - \\lfloor kA \\rfloor)\\rfloor$, where $A$ is a carefully chosen constant.",
+        "C": "Universal hashing method.",
+        "D": "If $k$ is a prime number, use Division method. Otherwise, use Multiplication method."
+      }
     },
     {
       "id": "2023_CS_CS_Q22",
@@ -336,10 +385,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "System calls, processes, threads, inter-process communication",
+      "difficulty_level": "Easy",
+      "explaination": "Threads of the same process share the process address space, open files, and the page table base register (PTBR is not switched). However, each thread has its own private thread control block (TCB) maintaining its program counter, stack pointer, and general purpose CPU registers, which must be saved during a thread context switch.",
       "tags": [
         "1_mark",
         "2023",
@@ -349,7 +398,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one or more of the following need to be saved on a context switch from one thread (T1) of a process to another thread (T2) of the same process?",
+      "options_latex": {
+        "A": "Page table base register",
+        "B": "Stack pointer",
+        "C": "Program counter",
+        "D": "General purpose registers"
+      }
     },
     {
       "id": "2023_CS_CS_Q23",
@@ -380,10 +436,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "System calls, processes, threads, inter-process communication",
+      "difficulty_level": "Easy",
+      "explaination": "A transition to kernel mode is triggered by traps, exceptions, or hardware interrupts. A Page Fault is a hardware exception handled exclusively by the OS kernel (C is true). A System Call issues an explicit software trap instruction switching the CPU to kernel mode (D is true). Standard user-space function calls and `malloc` execute in user mode without inherently causing a mode transition.",
       "tags": [
         "1_mark",
         "2023",
@@ -393,7 +449,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one or more of the following options guarantee that a computer system will transition from user mode to kernel mode?",
+      "options_latex": {
+        "A": "Function Call",
+        "B": "`malloc` Call",
+        "C": "Page Fault",
+        "D": "System Call"
+      }
     },
     {
       "id": "2023_CS_CS_Q24",
@@ -425,10 +488,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular and context-free languages, pumping lemma",
+      "difficulty_level": "Easy",
+      "explaination": "Regular languages, recursive languages, and recursively enumerable languages are all closed under intersection (A, C, and D are CORRECT). Context-free languages are not closed under intersection; for example, $L_1 = \\{a^n b^n c^m\\}$ and $L_2 = \\{a^m b^n c^n\\}$ are both CFLs, but $L_1 \\cap L_2 = \\{a^n b^n c^n\\}$ is not context-free.",
       "tags": [
         "1_mark",
         "2023",
@@ -438,7 +501,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statements is/are CORRECT?",
+      "options_latex": {
+        "A": "The intersection of two regular languages is regular.",
+        "B": "The intersection of two context-free languages is context-free.",
+        "C": "The intersection of two recursive languages is recursive.",
+        "D": "The intersection of two recursively enumerable languages is recursively enumerable."
+      }
     },
     {
       "id": "2023_CS_CS_Q25",
@@ -469,10 +539,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Routing protocols: shortest path, flooding, distance vector and link state routing",
+      "difficulty_level": "Easy",
+      "explaination": "OSPF is an intra-domain (Interior Gateway) routing protocol that uses Dijkstra's link-state algorithm (not Bellman-Ford, which is used by distance-vector protocols like RIP). Therefore, statement A (implements Bellman-Ford) and statement C (used as inter-domain) are INCORRECT, which are the required answers.",
       "tags": [
         "1_mark",
         "2023",
@@ -482,7 +552,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statements is/are INCORRECT about the OSPF (Open Shortest Path First) routing protocol used in the Internet?",
+      "options_latex": {
+        "A": "OSPF implements Bellman-Ford algorithm to find shortest paths.",
+        "B": "OSPF uses Dijkstra's shortest path algorithm to implement least-cost path routing.",
+        "C": "OSPF is used as an inter-domain routing protocol.",
+        "D": "OSPF implements hierarchical routing."
+      }
     },
     {
       "id": "2023_CS_CS_Q26",
@@ -513,10 +590,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Propositional and first order logic",
+      "difficulty_level": "Medium",
+      "explaination": "Geetha's conjecture states $\\forall x [P(x) \\implies \\exists y Q(x, y)]$. Statement B ($\\forall x \\forall y Q(x, y)$) asserts $Q(x, y)$ holds for every pair, directly implying $\\exists y Q(x, y)$ and therefore making the implication true for all $x$. Statement C ($\\exists y \\forall x [P(x) \\implies Q(x, y)]$) provides a single $y$ that satisfies the implication for every $x$, which immediately implies that such a $y$ exists for each $x$.",
       "tags": [
         "1_mark",
         "2023",
@@ -526,7 +603,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Geetha has a conjecture about integers, which is of the form\n\\[ \\forall x \\, [P(x) \\implies \\exists y \\, Q(x, y)], \\]\nwhere $P$ is a statement about integers, and $Q$ is a statement about pairs of integers. Which of the following (one or more) option(s) would imply Geetha's conjecture?",
+      "options_latex": {
+        "A": "$\\exists x \\, [P(x) \\land \\forall y \\, Q(x, y)]$",
+        "B": "$\\forall x \\forall y \\, Q(x, y)$",
+        "C": "$\\exists y \\forall x \\, [P(x) \\implies Q(x, y)]$",
+        "D": "$\\exists x \\, [P(x) \\land \\exists y \\, Q(x, y)]$"
+      }
     },
     {
       "id": "2023_CS_CS_Q27",
@@ -558,10 +642,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "CPU and I/O scheduling",
+      "difficulty_level": "Easy",
+      "explaination": "Priority Scheduling can cause starvation for low-priority processes if higher-priority processes arrive continuously (C). Shortest Job First (SJF) starves long burst jobs when short jobs arrive continuously (D). Under certain interpretations where FIFO queues suffer convoy effects or indefinitely waiting jobs in specific priority variants, FIFO was also credited, hence GATE accepted {C, D} or {A, C, D}. Round Robin provides bounded waiting and prevents starvation.",
       "tags": [
         "1_mark",
         "2023",
@@ -571,7 +655,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one or more of the following CPU scheduling algorithms can potentially cause starvation?",
+      "options_latex": {
+        "A": "First-in First-Out",
+        "B": "Round Robin",
+        "C": "Priority Scheduling",
+        "D": "Shortest Job First"
+      }
     },
     {
       "id": "2023_CS_CS_Q28",
@@ -602,10 +693,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Calculus",
+      "subtopic": "Maxima and minima",
+      "difficulty_level": "Easy",
+      "explaination": "Setting $f'(x) = 3x^2 + 30x - 33 = 3(x+11)(x-1) = 0$ yields critical points $x = -11$ and $x = 1$. The second derivative is $f''(x) = 6x + 30$. Since $f''(-11) = -36 < 0$, $x = -11$ is a local maximum (B is TRUE). Since $f''(1) = 36 > 0$, $x = 1$ is a local minimum (D is TRUE).",
       "tags": [
         "1_mark",
         "2023",
@@ -615,7 +706,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let\n\\[ f(x) = x^3 + 15x^2 - 33x - 36 \\]\nbe a real-valued function.\nWhich of the following statements is/are TRUE?",
+      "options_latex": {
+        "A": "$f(x)$ does not have a local maximum.",
+        "B": "$f(x)$ has a local maximum.",
+        "C": "$f(x)$ does not have a local minimum.",
+        "D": "$f(x)$ has a local minimum."
+      }
     },
     {
       "id": "2023_CS_CS_Q29",
@@ -646,10 +744,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Asymptotic worst case time and space complexity",
+      "difficulty_level": "Easy",
+      "explaination": "For $f(n) = n$ and $g(n) = n^2$, we evaluate $\\lim_{n \\to \\infty} \\frac{f(n)}{g(n)} = \\lim_{n \\to \\infty} \\frac{1}{n} = 0$. By definition, if the limit is 0, $f(n) \\in o(g(n))$, which strictly implies $f(n) \\in \\mathcal{O}(g(n))$. Hence, both A and C are TRUE.",
       "tags": [
         "1_mark",
         "2023",
@@ -659,7 +757,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $f$ and $g$ be functions of natural numbers given by $f(n) = n$ and $g(n) = n^2$.\nWhich of the following statements is/are TRUE?",
+      "options_latex": {
+        "A": "$f \\in \\mathcal{O}(g)$",
+        "B": "$f \\in \\Omega(g)$",
+        "C": "$f \\in o(g)$",
+        "D": "$f \\in \\Theta(g)$"
+      }
     },
     {
       "id": "2023_CS_CS_Q31",
@@ -685,10 +790,10 @@
         "min": 0.0,
         "max": 0.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Calculus",
+      "subtopic": "Integration",
+      "difficulty_level": "Easy",
+      "explaination": "The integral splits into $\\int_{-3}^3 \\int_{-2}^2 \\int_{-1}^1 4x^2 y \\, dz \\, dy \\, dx - \\int_{-3}^3 \\int_{-2}^2 \\int_{-1}^1 z^3 \\, dz \\, dy \\, dx$. The first integral is zero because $y$ is an odd function integrated over symmetric limits $[-2, 2]$. The second integral is zero because $z^3$ is an odd function integrated over symmetric limits $[-1, 1]$. Thus, the total value is $0 - 0 = 0$.",
       "tags": [
         "1_mark",
         "2023",
@@ -697,7 +802,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The value of the definite integral\n\\[ \\int_{-3}^3 \\int_{-2}^2 \\int_{-1}^1 (4x^2 y - z^3) \\, dz \\, dy \\, dx \\]\nis \\_\\_\\_\\_\\_\\_\\_\\_\\. (Rounded off to the nearest integer)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q32",
@@ -723,10 +830,10 @@
         "min": 110.0,
         "max": 110.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Number representations and computer arithmetic (fixed and floating point)",
+      "difficulty_level": "Easy",
+      "explaination": "Converting $132_4$ to base 10: $1 \\times 4^2 + 3 \\times 4^1 + 2 \\times 4^0 = 16 + 12 + 2 = 30_{10}$. Converting $30_{10}$ to radix 5: $30 = 6 \\times 5 + 0$, $6 = 1 \\times 5 + 1$, $1 = 0 \\times 5 + 1$. Reading remainders from bottom to top yields $110_5$.",
       "tags": [
         "1_mark",
         "2023",
@@ -735,7 +842,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A particular number is written as 132 in radix-4 representation. The same number in radix-5 representation is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q33",
@@ -761,10 +870,10 @@
         "min": 2040.0,
         "max": 2040.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Instruction pipelining, pipeline hazards",
+      "difficulty_level": "Easy",
+      "explaination": "The clock period of the pipeline is governed by the longest stage delay: $T = \\max(10, 20, 14) = 20\\text{ ns}$. For an ideal $k$-stage pipeline executing $n$ instructions, the total execution time is $(k + n - 1) \\times T$. For $k = 3$ and $n = 100$: $(3 + 100 - 1) \\times 20 = 102 \\times 20 = 2040\\text{ ns}$.",
       "tags": [
         "1_mark",
         "2023",
@@ -773,7 +882,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a 3-stage pipelined processor having a delay of 10 ns (nanoseconds), 20 ns, and 14 ns, for the first, second, and the third stages, respectively. Assume that there is no other delay and the processor does not suffer from any pipeline hazards. Also assume that one instruction is fetched every cycle.\nThe total execution time for executing 100 instructions on this processor is \\_\\_\\_\\_\\_\\_\\_\\_\\_ ns. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q34",
@@ -799,10 +910,10 @@
         "min": 10.2,
         "max": 10.2
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "I/O interface: interrupt and DMA mode",
+      "difficulty_level": "Medium",
+      "explaination": "With polling every $10\\text{ ms}$, there are 100 polls per second. Polling overhead is $100 \\times 100\\ \\mu\\text{s} = 10000\\ \\mu\\text{s} = 10\\text{ ms}$. With 1 keystroke/s, processing takes $200\\ \\mu\\text{s} = 0.2\\text{ ms}$, giving $T_1 = 10 + 0.2 = 10.2\\text{ ms}$. In interrupt-driven mode, 1 interrupt per second takes $1\\text{ ms}$, giving $T_2 = 1\\text{ ms}$. The ratio is $\\frac{T_1}{T_2} = \\frac{10.2}{1.0} = 10.2$.",
       "tags": [
         "1_mark",
         "2023",
@@ -811,7 +922,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A keyboard connected to a computer is used at a rate of 1 keystroke per second. The computer system polls the keyboard every 10 ms (milli seconds) to check for a keystroke and consumes 100 $\\mu$s (micro seconds) for each poll. If it is determined after polling that a key has been pressed, the system consumes an additional 200 $\\mu$s to process the keystroke. Let $T_1$ denote the fraction of a second spent in polling and processing a keystroke.\nIn an alternative implementation, the system uses interrupts instead of polling. An interrupt is raised for every keystroke. It takes a total of 1 ms for servicing an interrupt and processing a keystroke. Let $T_2$ denote the fraction of a second spent in servicing the interrupt and processing a keystroke.\nThe ratio $\\frac{T_1}{T_2}$ is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Rounded off to one decimal place)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q35",
@@ -837,10 +950,10 @@
         "min": 7.0,
         "max": 7.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Easy",
+      "explaination": "In `funcp()`, the static variable $x$ persists across invocations. On first call `x = funcp()`, static $x$ increments from 1 to 2 and returns 2, setting local $x = 2$. In `y = funcp() + x`, `funcp()` increments static $x$ from 2 to 3 and returns 3, so $y = 3 + 2 = 5$. Finally, `printf` prints $x + y = 2 + 5 = 7$.",
       "tags": [
         "1_mark",
         "2023",
@@ -849,7 +962,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The integer value printed by the ANSI-C program given below is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)\n\\begin{lstlisting}[language=C]\n#include <stdio.h>\nint funcp() {\n    static int x = 1;\n    x++;\n    return x;\n}\nint main() {\n    int x, y;\n    x = funcp();\n    y = funcp() + x;\n    printf(\"%d\\n\", (x + y));\n    return 0;\n}\n\\end{lstlisting}",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q36",
@@ -879,10 +994,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Runtime environments",
+      "difficulty_level": "Medium",
+      "explaination": "In `main()`, the calls are `f1()`, `f2(2)`, and `f3()` as direct children. Inside `f2(2)`, it invokes `f3()` first, then because $X=2 \\neq 1$, recursively invokes `f2(1)`. Inside `f2(1)`, it invokes `f3()` first, and then since $X=1$, invokes `f1()`. This call sequence maps directly to the tree structure in option A.",
       "tags": [
         "1_mark",
         "2023",
@@ -892,7 +1007,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following program:\n\\begin{lstlisting}[language=C]\nint main() {\n    f1();\n    f2(2);\n    f3();\n    return(0);\n}\nint f1() {\n    return(1);\n}\nint f2(int X) {\n    f3();\n    if (X == 1)\n        return f1();\n    else\n        return (X * f2(X - 1));\n}\nint f3() {\n    return(5);\n}\n\\end{lstlisting}\nWhich one of the following options represents the activation tree corresponding to the main function?",
+      "options_latex": {
+        "A": "main -> [f1, f2, f3]; where f2(2) -> [f3, f2(1)]; and f2(1) -> [f3, f1]",
+        "B": "main -> [f2, f3]; where f2 -> [f1, f1, f3]",
+        "C": "main -> [f2]; where f2 -> [f1, f3, f1]",
+        "D": "main -> [f1, f2, f3]; where f2 -> [f3, f2, f1]"
+      }
     }
   ]
 }

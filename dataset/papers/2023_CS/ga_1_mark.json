@@ -33,10 +33,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Basic English grammar: tenses, articles, adjectives, prepositions, conjunctions, verb-noun agreement",
+      "difficulty_level": "Easy",
+      "explaination": "The adverb 'nearly' means 'almost' and correctly modifies the past-tense verb 'missed'. 'Near' is an adjective/preposition, while 'utterly' and 'mostly' do not fit the intended semantic meaning of narrowly missing a train.",
       "tags": [
         "1_mark",
         "2023",
@@ -47,7 +47,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "We reached the station late, and \\_\\_\\_\\_\\_\\_\\_ missed the train.",
+      "options_latex": {
+        "A": "near",
+        "B": "nearly",
+        "C": "utterly",
+        "D": "mostly"
+      }
     },
     {
       "id": "2023_CS_GA_Q02",
@@ -80,10 +87,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'Often' and 'Frequently' are direct synonyms. 'Kind' can be a noun meaning 'Type' (category) or an adjective meaning benevolent/caring. Because of multiple ambiguous interpretations of 'Kind', GATE awarded Marks to All (MTA) for this question.",
       "tags": [
         "1_mark",
         "2023",
@@ -94,7 +101,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Kind : \\_\\_\\_\\_\\_\\_\\_ : : Often : Frequently\n(By word meaning)",
+      "options_latex": {
+        "A": "Mean",
+        "B": "Type",
+        "C": "Cruel",
+        "D": "Kindly"
+      }
     },
     {
       "id": "2023_CS_GA_Q03",
@@ -124,10 +138,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "The recurrence relation is $F_{n+1} = F_n + F_{n-1} \\implies F_{n-1} = F_{n+1} - F_n$. Working backward from $F_7 = 60$ and $F_6 = 37$: $F_5 = 60 - 37 = 23$; $F_4 = 37 - 23 = 14$; $F_3 = 23 - 14 = 9$; $F_2 = 14 - 9 = 5$; and $F_1 = 9 - 5 = 4$.",
       "tags": [
         "1_mark",
         "2023",
@@ -138,7 +152,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A series of natural numbers $F_1, F_2, F_3, F_4, F_5, F_6, F_7, \\dots$ obeys $F_{n+1} = F_n + F_{n-1}$ for all integers $n \\ge 2$.\nIf $F_6 = 37$, and $F_7 = 60$, then what is $F_1$?",
+      "options_latex": {
+        "A": "4",
+        "B": "5",
+        "C": "8",
+        "D": "9"
+      }
     },
     {
       "id": "2023_CS_GA_Q04",
@@ -168,10 +189,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Out of all pregnant women, 90% received medical care at least once. Among those who received medical care, 60% received care from doctors. The percentage of all pregnant women who received care at least once from a doctor is $90\\% \\times 60\\% = 54\\%$, which is strictly greater than half ($> 50\\%$).",
       "tags": [
         "1_mark",
         "2023",
@@ -182,7 +203,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A survey for a certain year found that 90\\% of pregnant women received medical care at least once before giving birth. Of these women, 60\\% received medical care from doctors, while 40\\% received medical care from other healthcare providers.\nGiven this information, which one of the following statements can be inferred with certainty?",
+      "options_latex": {
+        "A": "More than half of the pregnant women received medical care at least once from a doctor.",
+        "B": "Less than half of the pregnant women received medical care at least once from a doctor.",
+        "C": "More than half of the pregnant women received medical care at most once from a doctor.",
+        "D": "Less than half of the pregnant women received medical care at most once from a doctor."
+      }
     },
     {
       "id": "2023_CS_GA_Q05",
@@ -212,10 +240,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Spatial Aptitude",
+      "subtopic": "Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping",
+      "difficulty_level": "Easy",
+      "explaination": "A smooth 3-dimensional object (such as a torus or a dumbbell shape) can possess regions of positive Gaussian curvature where it is locally convex, as well as regions of negative curvature (saddle-like regions) where it is locally concave. Hence, its surface may be concave in some places and convex in others.",
       "tags": [
         "1_mark",
         "2023",
@@ -226,7 +254,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Looking at the surface of a smooth 3-dimensional object from the outside, which one of the following options is TRUE?",
+      "options_latex": {
+        "A": "The surface of the object must be concave everywhere.",
+        "B": "The surface of the object must be convex everywhere.",
+        "C": "The surface of the object may be concave in some places and convex in other places.",
+        "D": "The object can have edges, but no corners."
+      }
     }
   ]
 }

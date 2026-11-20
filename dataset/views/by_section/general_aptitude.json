@@ -17304,10 +17304,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Basic English grammar: tenses, articles, adjectives, prepositions, conjunctions, verb-noun agreement",
+      "difficulty_level": "Easy",
+      "explaination": "The adverb 'nearly' means 'almost' and correctly modifies the past-tense verb 'missed'. 'Near' is an adjective/preposition, while 'utterly' and 'mostly' do not fit the intended semantic meaning of narrowly missing a train.",
       "tags": [
         "1_mark",
         "2023",
@@ -17318,7 +17318,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "We reached the station late, and \\_\\_\\_\\_\\_\\_\\_ missed the train.",
+      "options_latex": {
+        "A": "near",
+        "B": "nearly",
+        "C": "utterly",
+        "D": "mostly"
+      }
     },
     {
       "id": "2023_CS_GA_Q02",
@@ -17351,10 +17358,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'Often' and 'Frequently' are direct synonyms. 'Kind' can be a noun meaning 'Type' (category) or an adjective meaning benevolent/caring. Because of multiple ambiguous interpretations of 'Kind', GATE awarded Marks to All (MTA) for this question.",
       "tags": [
         "1_mark",
         "2023",
@@ -17365,7 +17372,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Kind : \\_\\_\\_\\_\\_\\_\\_ : : Often : Frequently\n(By word meaning)",
+      "options_latex": {
+        "A": "Mean",
+        "B": "Type",
+        "C": "Cruel",
+        "D": "Kindly"
+      }
     },
     {
       "id": "2023_CS_GA_Q03",
@@ -17395,10 +17409,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "The recurrence relation is $F_{n+1} = F_n + F_{n-1} \\implies F_{n-1} = F_{n+1} - F_n$. Working backward from $F_7 = 60$ and $F_6 = 37$: $F_5 = 60 - 37 = 23$; $F_4 = 37 - 23 = 14$; $F_3 = 23 - 14 = 9$; $F_2 = 14 - 9 = 5$; and $F_1 = 9 - 5 = 4$.",
       "tags": [
         "1_mark",
         "2023",
@@ -17409,7 +17423,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A series of natural numbers $F_1, F_2, F_3, F_4, F_5, F_6, F_7, \\dots$ obeys $F_{n+1} = F_n + F_{n-1}$ for all integers $n \\ge 2$.\nIf $F_6 = 37$, and $F_7 = 60$, then what is $F_1$?",
+      "options_latex": {
+        "A": "4",
+        "B": "5",
+        "C": "8",
+        "D": "9"
+      }
     },
     {
       "id": "2023_CS_GA_Q04",
@@ -17439,10 +17460,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Out of all pregnant women, 90% received medical care at least once. Among those who received medical care, 60% received care from doctors. The percentage of all pregnant women who received care at least once from a doctor is $90\\% \\times 60\\% = 54\\%$, which is strictly greater than half ($> 50\\%$).",
       "tags": [
         "1_mark",
         "2023",
@@ -17453,7 +17474,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A survey for a certain year found that 90\\% of pregnant women received medical care at least once before giving birth. Of these women, 60\\% received medical care from doctors, while 40\\% received medical care from other healthcare providers.\nGiven this information, which one of the following statements can be inferred with certainty?",
+      "options_latex": {
+        "A": "More than half of the pregnant women received medical care at least once from a doctor.",
+        "B": "Less than half of the pregnant women received medical care at least once from a doctor.",
+        "C": "More than half of the pregnant women received medical care at most once from a doctor.",
+        "D": "Less than half of the pregnant women received medical care at most once from a doctor."
+      }
     },
     {
       "id": "2023_CS_GA_Q05",
@@ -17483,10 +17511,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Spatial Aptitude",
+      "subtopic": "Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping",
+      "difficulty_level": "Easy",
+      "explaination": "A smooth 3-dimensional object (such as a torus or a dumbbell shape) can possess regions of positive Gaussian curvature where it is locally convex, as well as regions of negative curvature (saddle-like regions) where it is locally concave. Hence, its surface may be concave in some places and convex in others.",
       "tags": [
         "1_mark",
         "2023",
@@ -17497,7 +17525,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Looking at the surface of a smooth 3-dimensional object from the outside, which one of the following options is TRUE?",
+      "options_latex": {
+        "A": "The surface of the object must be concave everywhere.",
+        "B": "The surface of the object must be convex everywhere.",
+        "C": "The surface of the object may be concave in some places and convex in other places.",
+        "D": "The object can have edges, but no corners."
+      }
     },
     {
       "id": "2023_CS_GA_Q06",
@@ -17527,10 +17562,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading and comprehension",
+      "difficulty_level": "Easy",
+      "explaination": "The passage establishes that a complete lack of physical exercise is a primary cause of health issues, and in response, the government provides financial incentives to ride bicycles to work. This direct causal measure logically implies that the government views bicycle riding as a form of physical exercise.",
       "tags": [
         "2023",
         "2_mark",
@@ -17541,7 +17576,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The country of Zombieland is in distress since more than 75\\% of its working population is suffering from serious health issues. Studies conducted by competent health experts concluded that a complete lack of physical exercise among its working population was one of the leading causes of their health issues. As one of the measures to address the problem, the Government of Zombieland has decided to provide monetary incentives to those who ride bicycles to work.\n\nBased only on the information provided above, which one of the following statements can be logically inferred with certainty?",
+      "options_latex": {
+        "A": "All the working population of Zombieland will henceforth ride bicycles to work.",
+        "B": "Riding bicycles will ensure that all of the working population of Zombieland is free of health issues.",
+        "C": "The health experts suggested to the Government of Zombieland to declare riding bicycles as mandatory.",
+        "D": "The Government of Zombieland believes that riding bicycles is a form of physical exercise."
+      }
     },
     {
       "id": "2023_CS_GA_Q07",
@@ -17571,10 +17613,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Setting $f(t) = g(t) \\implies 0.01 t^2 = 4t \\implies t = 400$. For any $0 < t < 400$ (e.g., $t = 10$), $g(10) = 40 > f(10) = 1$, making statement (i) correct. For all $t > 400$, the quadratic growth of $f(t)$ strictly dominates the linear growth of $g(t)$, so choosing $T = 400$ satisfies statement (ii). Hence, both statements are correct.",
       "tags": [
         "2023",
         "2_mark",
@@ -17585,7 +17627,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider two functions of time ($t$),\n\\[ f(t) = 0.01 t^2, \\quad g(t) = 4 t \\]\nwhere $0 < t < \\infty$.\nNow consider the following two statements:\n\\begin{enumerate}[label=(\\roman*),itemsep=0pt,topsep=2pt]\n\\item For some $t > 0$, $g(t) > f(t)$.\n\\item There exists a $T$, such that $f(t) > g(t)$ for all $t > T$.\n\\end{enumerate}\nWhich one of the following options is TRUE?",
+      "options_latex": {
+        "A": "only (i) is correct",
+        "B": "only (ii) is correct",
+        "C": "both (i) and (ii) are correct",
+        "D": "neither (i) nor (ii) is correct"
+      }
     },
     {
       "id": "2023_CS_GA_Q08",
@@ -17615,10 +17664,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Narrative sequencing",
+      "difficulty_level": "Easy",
+      "explaination": "Sentence (iii) introduces the protagonist Mina carrying heavy market purchases. Sentence (ii) describes the resulting exertion as she climbs the stairs. Sentence (i) brings her onto the terrace where she spots a man. Sentence (iv) details the man's posture against the parapet. Thus, the coherent sequence is (iii), (ii), (i), (iv).",
       "tags": [
         "2023",
         "2_mark",
@@ -17629,7 +17678,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one of the following sentence sequences creates a coherent narrative?\n\\begin{enumerate}[label=(\\roman*),itemsep=0pt,topsep=2pt]\n\\item Once on the terrace, on her way to her small room in the corner, she notices the man right away.\n\\item She begins to pant by the time she has climbed all the stairs.\n\\item Mina has bought vegetables and rice at the market, so her bags are heavy.\n\\item He was leaning against the parapet, watching the traffic below.\n\\end{enumerate}",
+      "options_latex": {
+        "A": "(i), (ii), (iv), (iii)",
+        "B": "(ii), (iii), (i), (iv)",
+        "C": "(iv), (ii), (i), (iii)",
+        "D": "(iii), (ii), (i), (iv)"
+      }
     },
     {
       "id": "2023_CS_GA_Q09",
@@ -17659,10 +17715,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "We are given $f(x) = g(y)$ for all independent real variables $x$ and $y$. If $x$ varies while $y$ remains constant, $f(x)$ cannot change because $g(y)$ is fixed, meaning $f(x)$ must be a constant. Symmetrically, $g(y)$ must be identical to that same constant. Therefore, $f(x) = g(y) = \\text{constant}$.",
       "tags": [
         "2023",
         "2_mark",
@@ -17673,7 +17729,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "$f(x)$ and $g(y)$ are functions of $x$ and $y$, respectively, and $f(x) = g(y)$ for all real values of $x$ and $y$. Which one of the following options is necessarily TRUE for all $x$ and $y$?",
+      "options_latex": {
+        "A": "$f(x) = 0$ and $g(y) = 0$",
+        "B": "$f(x) = g(y) = \\text{constant}$",
+        "C": "$f(x) \\neq \\text{constant}$ and $g(y) \\neq \\text{constant}$",
+        "D": "$f(x) + g(y) = f(x) - g(y)$"
+      }
     },
     {
       "id": "2023_CS_GA_Q10",
@@ -17703,10 +17766,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Spatial Aptitude",
+      "subtopic": "Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping",
+      "difficulty_level": "Medium",
+      "explaination": "Analyzing the rigid 2D planar transformations from figure P to Q and Q to R shows that statement S1 accurately describes the sequence of planar rotation and reflection, while statements S2 and S3 fail to match the observed geometric orientations. Hence, only S1 is TRUE.",
       "tags": [
         "2023",
         "2_mark",
@@ -17717,7 +17780,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one of the options best describes the transformation of the 2-dimensional figure P to Q, and then to R, as shown?",
+      "options_latex": {
+        "A": "Only S1 is TRUE.",
+        "B": "Only S1 and S2 are TRUE.",
+        "C": "S1, S2, and S3 are all TRUE.",
+        "D": "Only S1 and S3 are TRUE."
+      }
     },
     {
       "id": "2024_CS1_GA_Q01",

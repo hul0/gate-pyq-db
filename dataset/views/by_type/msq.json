@@ -658,10 +658,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "System calls, processes, threads, inter-process communication",
+      "difficulty_level": "Easy",
+      "explaination": "Threads of the same process share the process address space, open files, and the page table base register (PTBR is not switched). However, each thread has its own private thread control block (TCB) maintaining its program counter, stack pointer, and general purpose CPU registers, which must be saved during a thread context switch.",
       "tags": [
         "1_mark",
         "2023",
@@ -671,7 +671,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one or more of the following need to be saved on a context switch from one thread (T1) of a process to another thread (T2) of the same process?",
+      "options_latex": {
+        "A": "Page table base register",
+        "B": "Stack pointer",
+        "C": "Program counter",
+        "D": "General purpose registers"
+      }
     },
     {
       "id": "2023_CS_CS_Q23",
@@ -702,10 +709,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "System calls, processes, threads, inter-process communication",
+      "difficulty_level": "Easy",
+      "explaination": "A transition to kernel mode is triggered by traps, exceptions, or hardware interrupts. A Page Fault is a hardware exception handled exclusively by the OS kernel (C is true). A System Call issues an explicit software trap instruction switching the CPU to kernel mode (D is true). Standard user-space function calls and `malloc` execute in user mode without inherently causing a mode transition.",
       "tags": [
         "1_mark",
         "2023",
@@ -715,7 +722,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one or more of the following options guarantee that a computer system will transition from user mode to kernel mode?",
+      "options_latex": {
+        "A": "Function Call",
+        "B": "`malloc` Call",
+        "C": "Page Fault",
+        "D": "System Call"
+      }
     },
     {
       "id": "2023_CS_CS_Q24",
@@ -747,10 +761,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular and context-free languages, pumping lemma",
+      "difficulty_level": "Easy",
+      "explaination": "Regular languages, recursive languages, and recursively enumerable languages are all closed under intersection (A, C, and D are CORRECT). Context-free languages are not closed under intersection; for example, $L_1 = \\{a^n b^n c^m\\}$ and $L_2 = \\{a^m b^n c^n\\}$ are both CFLs, but $L_1 \\cap L_2 = \\{a^n b^n c^n\\}$ is not context-free.",
       "tags": [
         "1_mark",
         "2023",
@@ -760,7 +774,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statements is/are CORRECT?",
+      "options_latex": {
+        "A": "The intersection of two regular languages is regular.",
+        "B": "The intersection of two context-free languages is context-free.",
+        "C": "The intersection of two recursive languages is recursive.",
+        "D": "The intersection of two recursively enumerable languages is recursively enumerable."
+      }
     },
     {
       "id": "2023_CS_CS_Q25",
@@ -791,10 +812,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Routing protocols: shortest path, flooding, distance vector and link state routing",
+      "difficulty_level": "Easy",
+      "explaination": "OSPF is an intra-domain (Interior Gateway) routing protocol that uses Dijkstra's link-state algorithm (not Bellman-Ford, which is used by distance-vector protocols like RIP). Therefore, statement A (implements Bellman-Ford) and statement C (used as inter-domain) are INCORRECT, which are the required answers.",
       "tags": [
         "1_mark",
         "2023",
@@ -804,7 +825,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statements is/are INCORRECT about the OSPF (Open Shortest Path First) routing protocol used in the Internet?",
+      "options_latex": {
+        "A": "OSPF implements Bellman-Ford algorithm to find shortest paths.",
+        "B": "OSPF uses Dijkstra's shortest path algorithm to implement least-cost path routing.",
+        "C": "OSPF is used as an inter-domain routing protocol.",
+        "D": "OSPF implements hierarchical routing."
+      }
     },
     {
       "id": "2023_CS_CS_Q26",
@@ -835,10 +863,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Propositional and first order logic",
+      "difficulty_level": "Medium",
+      "explaination": "Geetha's conjecture states $\\forall x [P(x) \\implies \\exists y Q(x, y)]$. Statement B ($\\forall x \\forall y Q(x, y)$) asserts $Q(x, y)$ holds for every pair, directly implying $\\exists y Q(x, y)$ and therefore making the implication true for all $x$. Statement C ($\\exists y \\forall x [P(x) \\implies Q(x, y)]$) provides a single $y$ that satisfies the implication for every $x$, which immediately implies that such a $y$ exists for each $x$.",
       "tags": [
         "1_mark",
         "2023",
@@ -848,7 +876,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Geetha has a conjecture about integers, which is of the form\n\\[ \\forall x \\, [P(x) \\implies \\exists y \\, Q(x, y)], \\]\nwhere $P$ is a statement about integers, and $Q$ is a statement about pairs of integers. Which of the following (one or more) option(s) would imply Geetha's conjecture?",
+      "options_latex": {
+        "A": "$\\exists x \\, [P(x) \\land \\forall y \\, Q(x, y)]$",
+        "B": "$\\forall x \\forall y \\, Q(x, y)$",
+        "C": "$\\exists y \\forall x \\, [P(x) \\implies Q(x, y)]$",
+        "D": "$\\exists x \\, [P(x) \\land \\exists y \\, Q(x, y)]$"
+      }
     },
     {
       "id": "2023_CS_CS_Q27",
@@ -880,10 +915,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "CPU and I/O scheduling",
+      "difficulty_level": "Easy",
+      "explaination": "Priority Scheduling can cause starvation for low-priority processes if higher-priority processes arrive continuously (C). Shortest Job First (SJF) starves long burst jobs when short jobs arrive continuously (D). Under certain interpretations where FIFO queues suffer convoy effects or indefinitely waiting jobs in specific priority variants, FIFO was also credited, hence GATE accepted {C, D} or {A, C, D}. Round Robin provides bounded waiting and prevents starvation.",
       "tags": [
         "1_mark",
         "2023",
@@ -893,7 +928,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one or more of the following CPU scheduling algorithms can potentially cause starvation?",
+      "options_latex": {
+        "A": "First-in First-Out",
+        "B": "Round Robin",
+        "C": "Priority Scheduling",
+        "D": "Shortest Job First"
+      }
     },
     {
       "id": "2023_CS_CS_Q28",
@@ -924,10 +966,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Calculus",
+      "subtopic": "Maxima and minima",
+      "difficulty_level": "Easy",
+      "explaination": "Setting $f'(x) = 3x^2 + 30x - 33 = 3(x+11)(x-1) = 0$ yields critical points $x = -11$ and $x = 1$. The second derivative is $f''(x) = 6x + 30$. Since $f''(-11) = -36 < 0$, $x = -11$ is a local maximum (B is TRUE). Since $f''(1) = 36 > 0$, $x = 1$ is a local minimum (D is TRUE).",
       "tags": [
         "1_mark",
         "2023",
@@ -937,7 +979,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let\n\\[ f(x) = x^3 + 15x^2 - 33x - 36 \\]\nbe a real-valued function.\nWhich of the following statements is/are TRUE?",
+      "options_latex": {
+        "A": "$f(x)$ does not have a local maximum.",
+        "B": "$f(x)$ has a local maximum.",
+        "C": "$f(x)$ does not have a local minimum.",
+        "D": "$f(x)$ has a local minimum."
+      }
     },
     {
       "id": "2023_CS_CS_Q29",
@@ -968,10 +1017,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Asymptotic worst case time and space complexity",
+      "difficulty_level": "Easy",
+      "explaination": "For $f(n) = n$ and $g(n) = n^2$, we evaluate $\\lim_{n \\to \\infty} \\frac{f(n)}{g(n)} = \\lim_{n \\to \\infty} \\frac{1}{n} = 0$. By definition, if the limit is 0, $f(n) \\in o(g(n))$, which strictly implies $f(n) \\in \\mathcal{O}(g(n))$. Hence, both A and C are TRUE.",
       "tags": [
         "1_mark",
         "2023",
@@ -981,7 +1030,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $f$ and $g$ be functions of natural numbers given by $f(n) = n$ and $g(n) = n^2$.\nWhich of the following statements is/are TRUE?",
+      "options_latex": {
+        "A": "$f \\in \\mathcal{O}(g)$",
+        "B": "$f \\in \\Omega(g)$",
+        "C": "$f \\in o(g)$",
+        "D": "$f \\in \\Theta(g)$"
+      }
     },
     {
       "id": "2023_CS_CS_Q49",
@@ -1013,10 +1069,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Sets, relations, functions, partial orders and lattices",
+      "difficulty_level": "Medium",
+      "explaination": "By the fundamental theorem of equivalence relations and canonical function decomposition, $F([x]) = f(x)$ is well-defined and injective because $[x_1] = [x_2] \\iff f(x_1) = f(x_2)$ (C is TRUE). Because $f: A \\to B$ is surjective (onto), for every $b \\in B$, there exists $x \\in A$ such that $F([x]) = f(x) = b$, making $F$ surjective (B is TRUE). Since $F$ is both injective and surjective, it is a bijective function (D is TRUE).",
       "tags": [
         "2023",
         "2_mark",
@@ -1026,7 +1082,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $f : A \\to B$ be an onto (or surjective) function, where $A$ and $B$ are nonempty sets. Define an equivalence relation $\\sim$ on the set $A$ as\n\\[ a_1 \\sim a_2 \\quad \\text{if } f(a_1) = f(a_2), \\]\nwhere $a_1, a_2 \\in A$. Let $E = \\{[x] : x \\in A\\}$ be the set of all the equivalence classes under $\\sim$. Define a new mapping $F : E \\to B$ as\n\\[ F([x]) = f(x), \\]\nfor all the equivalence classes $[x]$ in $E$.\nWhich of the following statements is/are TRUE?",
+      "options_latex": {
+        "A": "$F$ is NOT well-defined.",
+        "B": "$F$ is an onto (or surjective) function.",
+        "C": "$F$ is a one-to-one (or injective) function.",
+        "D": "$F$ is a bijective function."
+      }
     },
     {
       "id": "2023_CS_CS_Q50",
@@ -1058,10 +1121,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Transport layer: flow control and congestion control, UDP, TCP, sockets",
+      "difficulty_level": "Hard",
+      "explaination": "To prevent sequence number wraparound within the Maximum Segment Lifetime ($MSL = 2\\text{ min} = 120\\text{ s}$), the sequence number space $2^k$ must be at least the data bytes transmitted at line rate during MSL: $2^k \\ge \\frac{100 \\times 10^6\\text{ bps}}{8} \\times 120\\text{ s} = 1.5 \\times 10^9\\text{ bytes}$. Since $2^{30} \\approx 1.07 \\times 10^9 < 1.5 \\times 10^9$ and $2^{31} \\approx 2.15 \\times 10^9 > 1.5 \\times 10^9$, at least 31 bits are required. Thus, 32 bits, 34 bits, and 36 bits are all valid lengths.",
       "tags": [
         "2023",
         "2_mark",
@@ -1071,7 +1134,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Suppose you are asked to design a new reliable byte-stream transport protocol like TCP. This protocol, named myTCP, runs over a 100 Mbps network with Round Trip Time of 150 milliseconds and the maximum segment lifetime of 2 minutes.\nWhich of the following is/are valid lengths of the Sequence Number field in the myTCP header?",
+      "options_latex": {
+        "A": "30 bits",
+        "B": "32 bits",
+        "C": "34 bits",
+        "D": "36 bits"
+      }
     },
     {
       "id": "2023_CS_CS_Q51",
@@ -1102,10 +1172,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Monoids, Groups",
+      "difficulty_level": "Medium",
+      "explaination": "Symmetric difference $\\Delta$ is associative on $2^X$. The identity element is the empty set $\\emptyset$, since $A \\Delta \\emptyset = A$. Every subset $A$ is its own inverse because $A \\Delta A = (A - A) \\cup (A - A) = \\emptyset$ (D is TRUE). Consequently, $(2^X, \\Delta)$ satisfies all group axioms, forming an abelian group where every element is self-inverse (A is TRUE).",
       "tags": [
         "2023",
         "2_mark",
@@ -1115,7 +1185,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $X$ be a set and $2^X$ denote the powerset of $X$.\nDefine a binary operation $\\Delta$ on $2^X$ as follows:\n\\[ A \\Delta B = (A - B) \\cup (B - A). \\]\nLet $H = (2^X, \\Delta)$. Which of the following statements about $H$ is/are correct?",
+      "options_latex": {
+        "A": "$H$ is a group.",
+        "B": "Every element in $H$ has an inverse, but $H$ is NOT a group.",
+        "C": "For every $A \\in 2^X$, the inverse of $A$ is the complement of $A$.",
+        "D": "For every $A \\in 2^X$, the inverse of $A$ is $A$."
+      }
     },
     {
       "id": "2023_CS_CS_Q52",
@@ -1146,10 +1223,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Application layer protocols: DNS, SMTP, HTTP, FTP, Email",
+      "difficulty_level": "Hard",
+      "explaination": "Resolving the URL via 3-tier iterative DNS requires $3\\text{ RTT}$. Initiating TCP connection and requesting the base HTML page requires $1 + 1 = 2\\text{ RTT}$, so the base HTML is received after $3 + 2 = 5\\text{ RTT}$. With persistent HTTP pipelining, all 10 objects are fetched in 1 round trip over the established connection, giving $5 + 1 = 6\\text{ RTT}$ (D is TRUE). With non-persistent HTTP and 5 parallel connections, fetching 10 objects takes 2 sequential batches; each batch takes $1\\text{ RTT (TCP)} + 1\\text{ RTT (HTTP)} = 2\\text{ RTT}$, adding $2 \\times 2 = 4\\text{ RTT}$, giving $5 + 4 = 9\\text{ RTT}$ (C is TRUE).",
       "tags": [
         "2023",
         "2_mark",
@@ -1159,7 +1236,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Suppose in a web browser, you click on the `www.gate-2023.in` URL. The browser cache is empty. The IP address for this URL is not cached in your local host, so a DNS lookup is triggered (by the local DNS server deployed on your local host) over the 3-tier DNS hierarchy in an iterative mode. No resource records are cached anywhere across all DNS servers.\nLet RTT denote the round trip time between your local host and DNS servers in the DNS hierarchy. The round trip time between the local host and the web server hosting `www.gate-2023.in` is also equal to RTT. The HTML file associated with the URL is small enough to have negligible transmission time and negligible rendering time by your web browser, which references 10 equally small objects on the same web server.\nWhich of the following statements is/are CORRECT about the minimum elapsed time between clicking on the URL and your browser fully rendering it?",
+      "options_latex": {
+        "A": "7 RTTs, in case of non-persistent HTTP with 5 parallel TCP connections.",
+        "B": "5 RTTs, in case of persistent HTTP with pipelining.",
+        "C": "9 RTTs, in case of non-persistent HTTP with 5 parallel TCP connections.",
+        "D": "6 RTTs, in case of persistent HTTP with pipelining."
+      }
     },
     {
       "id": "2023_CS_CS_Q53",
@@ -1190,10 +1274,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Probability and Statistics",
+      "subtopic": "Conditional probability and Bayes theorem",
+      "difficulty_level": "Easy",
+      "explaination": "Sample space $S = \\{HH, HT, TH, TT\\}$. Events are $A = \\{HH\\}$, $B = \\{HH, HT\\}$, $C = \\{HH, TH\\}$. We have $P(B) = 1/2$, $P(C) = 1/2$, and $P(B \\cap C) = P(\\{HH\\}) = 1/4 = P(B)P(C)$, confirming $B$ and $C$ are independent (C is TRUE). By independence, $\\text{Prob}(B|C) = \\text{Prob}(B)$ (D is TRUE). $P(A \\cap B) = 1/4 \\neq P(A)P(B) = 1/8$, so $A$ and $B$ are dependent.",
       "tags": [
         "2023",
         "2_mark",
@@ -1203,7 +1287,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a random experiment where two fair coins are tossed. Let $A$ be the event that denotes HEAD on both the throws, $B$ be the event that denotes HEAD on the first throw, and $C$ be the event that denotes HEAD on the second throw.\nWhich of the following statements is/are TRUE?",
+      "options_latex": {
+        "A": "$A$ and $B$ are independent.",
+        "B": "$A$ and $C$ are independent.",
+        "C": "$B$ and $C$ are independent.",
+        "D": "$\\text{Prob}(B|C) = \\text{Prob}(B)$"
+      }
     },
     {
       "id": "2023_CS_CS_Q54",
@@ -1234,10 +1325,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Asymptotic worst case time and space complexity",
+      "difficulty_level": "Easy",
+      "explaination": "In Function 1, the inner loop executes $n + \\lfloor n/2 \\rfloor + \\lfloor n/4 \\rfloor + \\dots \\approx 2n$ times, which gives $f_1(n) = \\Theta(n)$. In Function 2, the loop runs $100n$ times, which gives $f_2(n) = \\Theta(n)$. Because both functions have exact linear asymptotic growth, $f_1(n) \\in \\Theta(f_2(n))$ (A is TRUE) and $f_1(n) \\in \\mathcal{O}(n)$ (D is TRUE).",
       "tags": [
         "2023",
         "2_mark",
@@ -1247,7 +1338,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider functions Function 1 and Function 2 expressed in pseudocode as follows:\n\\begin{lstlisting}\n// Function 1\nwhile n > 1 do\n    for i = 1 to n do\n        x = x + 1;\n    end for\n    n = floor(n / 2);\nend while\n\n// Function 2\nfor i = 1 to 100 * n do\n    x = x + 1;\nend for\n\\end{lstlisting}\nLet $f_1(n)$ and $f_2(n)$ denote the number of times the statement ``$x = x + 1$'' is executed in Function 1 and Function 2, respectively.\nWhich of the following statements is/are TRUE?",
+      "options_latex": {
+        "A": "$f_1(n) \\in \\Theta(f_2(n))$",
+        "B": "$f_1(n) \\in o(f_2(n))$",
+        "C": "$f_1(n) \\in \\omega(f_2(n))$",
+        "D": "$f_1(n) \\in \\mathcal{O}(n)$"
+      }
     },
     {
       "id": "2023_CS_CS_Q55",
@@ -1278,10 +1376,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Graphs: connectivity, matching, colouring",
+      "difficulty_level": "Medium",
+      "explaination": "The greedy coloring strategy assigns to each vertex the lowest index color not used by any already-colored neighbor, guaranteeing that adjacent vertices receive distinct colors (proper coloring, so A is TRUE). Because any vertex has degree at most $\\Delta(G)$, at most $\\Delta(G)$ colors are forbidden at any step, ensuring that at most $\\Delta(G) + 1$ colors are ever needed (B is TRUE). Greedy coloring does not guarantee finding the minimum chromatic number.",
       "tags": [
         "2023",
         "2_mark",
@@ -1291,7 +1389,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $G$ be a simple, finite, undirected graph with vertex set $\\{v_1, \\dots, v_n\\}$. Let $\\Delta(G)$ denote the maximum degree of $G$ and let $\\mathbb{N} = \\{1, 2, \\dots\\}$ denote the set of all possible colors. Color the vertices of $G$ using the following greedy strategy:\n\\begin{lstlisting}\nfor i = 1, ..., n\n    color(vi) <- min{j in N : no neighbour of vi is colored j}\n\\end{lstlisting}\nWhich of the following statements is/are TRUE?",
+      "options_latex": {
+        "A": "This procedure results in a proper vertex coloring of $G$.",
+        "B": "The number of colors used is at most $\\Delta(G) + 1$.",
+        "C": "The number of colors used is at most $\\Delta(G)$.",
+        "D": "The number of colors used is equal to the chromatic number of $G$."
+      }
     },
     {
       "id": "2024_CS1_CS_Q22",

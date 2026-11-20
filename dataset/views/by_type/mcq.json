@@ -27072,10 +27072,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees, binary search trees, binary heaps",
+      "difficulty_level": "Easy",
+      "explaination": "In a 1-indexed max-heap, every node at index $i$ must satisfy $A[i] \\ge A[2i]$ and $A[i] \\ge A[2i+1]$. For sequence B $[23, 17, 14, 7, 13, 10, 1, 5, 6, 12]$: $A[1]=23 \\ge A[2]=17, A[3]=14$; $A[2]=17 \\ge A[4]=7, A[5]=13$; $A[3]=14 \\ge A[6]=10, A[7]=1$; $A[4]=7 \\ge A[8]=5, A[9]=6$; $A[5]=13 \\ge A[10]=12$. Every parent is greater than or equal to its children, forming a valid max-heap.",
       "tags": [
         "1_mark",
         "2023",
@@ -27085,7 +27085,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one of the following sequences when stored in an array at locations $A[1], \\dots, A[10]$ forms a max-heap?",
+      "options_latex": {
+        "A": "23, 17, 10, 6, 13, 14, 1, 5, 7, 12",
+        "B": "23, 17, 14, 7, 13, 10, 1, 5, 6, 12",
+        "C": "23, 17, 14, 6, 13, 10, 1, 5, 7, 15",
+        "D": "23, 14, 17, 1, 10, 13, 16, 12, 7, 5"
+      }
     },
     {
       "id": "2023_CS_CS_Q13",
@@ -27115,10 +27122,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Arrays, stacks, queues, linked lists",
+      "difficulty_level": "Easy",
+      "explaination": "In a singly-linked list, deleting a given node requires finding its predecessor node to bypass it, requiring an $\\mathcal{O}(n)$ traversal from the head in the worst case. In a doubly-linked list, each node directly points to its predecessor (`node->prev`), allowing immediate pointer adjustments in $\\mathcal{O}(1)$ time.",
       "tags": [
         "1_mark",
         "2023",
@@ -27128,7 +27135,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let `SLLdel` be a function that deletes a node in a singly-linked list given a pointer to the node and a pointer to the head of the list. Similarly, let `DLLdel` be another function that deletes a node in a doubly-linked list given a pointer to the node and a pointer to the head of the list.\nLet $n$ denote the number of nodes in each of the linked lists. Which one of the following choices is TRUE about the worst-case time complexity of `SLLdel` and `DLLdel`?",
+      "options_latex": {
+        "A": "`SLLdel` is $\\mathcal{O}(1)$ and `DLLdel` is $\\mathcal{O}(n)$",
+        "B": "Both `SLLdel` and `DLLdel` are $\\mathcal{O}(\\log n)$",
+        "C": "Both `SLLdel` and `DLLdel` are $\\mathcal{O}(1)$",
+        "D": "`SLLdel` is $\\mathcal{O}(n)$ and `DLLdel` is $\\mathcal{O}(1)$"
+      }
     },
     {
       "id": "2023_CS_CS_Q15",
@@ -27158,10 +27172,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Combinatorics: counting, recurrence relations, generating functions",
+      "difficulty_level": "Medium",
+      "explaination": "The recurrence $L_n = L_{n-1} + L_{n-2}$ has characteristic equation $r^2 - r - 1 = 0$, giving roots $r_1, r_2 = \\frac{1 \\pm \\sqrt{5}}{2}$. The general solution is $L_n = c_1 \\left(\\frac{1+\\sqrt{5}}{2}\\right)^n + c_2 \\left(\\frac{1-\\sqrt{5}}{2}\\right)^n$. Substituting initial conditions $L_1 = 1$ and $L_2 = 3$ yields $c_1 = 1$ and $c_2 = 1$.",
       "tags": [
         "1_mark",
         "2023",
@@ -27171,7 +27185,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The Lucas sequence $L_n$ is defined by the recurrence relation:\n\\[ L_n = L_{n-1} + L_{n-2}, \\quad \\text{for } n \\ge 3, \\]\nwith $L_1 = 1$ and $L_2 = 3$.\nWhich one of the options given is TRUE?",
+      "options_latex": {
+        "A": "$L_n = \\left(\\frac{1+\\sqrt{5}}{2}\\right)^n + \\left(\\frac{1-\\sqrt{5}}{2}\\right)^n$",
+        "B": "$L_n = \\left(\\frac{1+\\sqrt{5}}{2}\\right)^n - \\left(\\frac{1-\\sqrt{5}}{3}\\right)^n$",
+        "C": "$L_n = \\left(\\frac{1+\\sqrt{5}}{2}\\right)^n + \\left(\\frac{1-\\sqrt{5}}{3}\\right)^n$",
+        "D": "$L_n = \\left(\\frac{1+\\sqrt{5}}{2}\\right)^n - \\left(\\frac{1-\\sqrt{5}}{2}\\right)^n$"
+      }
     },
     {
       "id": "2023_CS_CS_Q16",
@@ -27201,10 +27222,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Relational model: relational algebra, tuple calculus, SQL",
+      "difficulty_level": "Easy",
+      "explaination": "In relational database theory, the degree (or arity) of a relation is defined as the number of attributes (columns) in its relation schema, whereas the cardinality of a relation is the number of tuples (rows).",
       "tags": [
         "1_mark",
         "2023",
@@ -27214,7 +27235,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one of the options given below refers to the degree (or arity) of a relation in relational database systems?",
+      "options_latex": {
+        "A": "Number of attributes of its relation schema.",
+        "B": "Number of tuples stored in the relation.",
+        "C": "Number of entries in the relation.",
+        "D": "Number of distinct domains of its relation schema."
+      }
     },
     {
       "id": "2023_CS_CS_Q17",
@@ -27244,10 +27272,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Transport layer: flow control and congestion control, UDP, TCP, sockets",
+      "difficulty_level": "Medium",
+      "explaination": "Link utilization in Stop-and-Wait is $\\eta = \\frac{1}{1 + 2a}$, where $a = \\frac{T_{\\text{prop}}}{T_{\\text{trans}}} = \\frac{d/v}{L/B} = \\frac{d \\cdot B}{v \\cdot L}$. Utilization $\\eta$ is lowest when parameter $a$ is maximized, which occurs when the link length $d$ is longer (increasing propagation delay) and the transmission rate $B$ is higher (decreasing packet transmission time).",
       "tags": [
         "1_mark",
         "2023",
@@ -27257,7 +27285,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Suppose two hosts are connected by a point-to-point link and they are configured to use Stop-and-Wait protocol for reliable data transfer. Identify in which one of the following scenarios, the utilization of the link is the lowest.",
+      "options_latex": {
+        "A": "Longer link length and lower transmission rate",
+        "B": "Longer link length and higher transmission rate",
+        "C": "Shorter link length and lower transmission rate",
+        "D": "Shorter link length and higher transmission rate"
+      }
     },
     {
       "id": "2023_CS_CS_Q18",
@@ -27287,10 +27322,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Linear Algebra",
+      "subtopic": "Matrices, determinants",
+      "difficulty_level": "Easy",
+      "explaination": "Matrix $B$ is obtained from matrix $A$ by interchanging row 1 and row 3 ($R_1 \\leftrightarrow R_3$), leaving all other rows unchanged. By the elementary row operation property of determinants, swapping any two rows of a square matrix negates its determinant: $\\det(B) = -\\det(A)$.",
       "tags": [
         "1_mark",
         "2023",
@@ -27300,7 +27335,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let\n\\[ A = \\begin{bmatrix} 1 & 2 & 3 & 4 \\\\ 4 & 1 & 2 & 3 \\\\ 3 & 4 & 1 & 2 \\\\ 2 & 3 & 4 & 1 \\end{bmatrix} \\quad \\text{and} \\quad B = \\begin{bmatrix} 3 & 4 & 1 & 2 \\\\ 4 & 1 & 2 & 3 \\\\ 1 & 2 & 3 & 4 \\\\ 2 & 3 & 4 & 1 \\end{bmatrix}. \\]\nLet $\\det(A)$ and $\\det(B)$ denote the determinants of the matrices $A$ and $B$, respectively.\nWhich one of the options given below is TRUE?",
+      "options_latex": {
+        "A": "$\\det(A) = \\det(B)$",
+        "B": "$\\det(B) = -\\det(A)$",
+        "C": "$\\det(A) = 0$",
+        "D": "$\\det(AB) = \\det(A) + \\det(B)$"
+      }
     },
     {
       "id": "2023_CS_CS_Q20",
@@ -27330,10 +27372,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Searching, sorting, hashing",
+      "difficulty_level": "Easy",
+      "explaination": "In universal hashing, the hash function is chosen uniformly at random from a carefully designed universal collection of hash functions independently of the keys. Because the adversary cannot predict which function will be selected at runtime, any fixed choice of malicious keys cannot guarantee worst-case collision behavior.",
       "tags": [
         "1_mark",
         "2023",
@@ -27343,7 +27385,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "An algorithm has to store several keys generated by an adversary in a hash table. The adversary is malicious who tries to maximize the number of collisions. Let $k$ be the number of keys, $m$ be the number of slots in the hash table, and $k > m$.\nWhich one of the following is the best hashing strategy to counteract the adversary?",
+      "options_latex": {
+        "A": "Division method, i.e., use the hash function $h(k) = k \\bmod m$.",
+        "B": "Multiplication method, i.e., use the hash function $h(k) = \\lfloor m(kA - \\lfloor kA \\rfloor)\\rfloor$, where $A$ is a carefully chosen constant.",
+        "C": "Universal hashing method.",
+        "D": "If $k$ is a prime number, use Division method. Otherwise, use Multiplication method."
+      }
     },
     {
       "id": "2023_CS_CS_Q36",
@@ -27373,10 +27422,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Runtime environments",
+      "difficulty_level": "Medium",
+      "explaination": "In `main()`, the calls are `f1()`, `f2(2)`, and `f3()` as direct children. Inside `f2(2)`, it invokes `f3()` first, then because $X=2 \\neq 1$, recursively invokes `f2(1)`. Inside `f2(1)`, it invokes `f3()` first, and then since $X=1$, invokes `f1()`. This call sequence maps directly to the tree structure in option A.",
       "tags": [
         "1_mark",
         "2023",
@@ -27386,7 +27435,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following program:\n\\begin{lstlisting}[language=C]\nint main() {\n    f1();\n    f2(2);\n    f3();\n    return(0);\n}\nint f1() {\n    return(1);\n}\nint f2(int X) {\n    f3();\n    if (X == 1)\n        return f1();\n    else\n        return (X * f2(X - 1));\n}\nint f3() {\n    return(5);\n}\n\\end{lstlisting}\nWhich one of the following options represents the activation tree corresponding to the main function?",
+      "options_latex": {
+        "A": "main -> [f1, f2, f3]; where f2(2) -> [f3, f2(1)]; and f2(1) -> [f3, f1]",
+        "B": "main -> [f2, f3]; where f2 -> [f1, f1, f3]",
+        "C": "main -> [f2]; where f2 -> [f1, f3, f1]",
+        "D": "main -> [f1, f2, f3]; where f2 -> [f3, f2, f1]"
+      }
     },
     {
       "id": "2023_CS_CS_Q38",
@@ -27416,10 +27472,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Concurrency and synchronization",
+      "difficulty_level": "Medium",
+      "explaination": "With binary semaphore $s=1$ (I-1), mutual exclusion guarantees serialized critical section access, yielding net change $+5 - 3 = +2 \\implies V_1 = 10 + 2 = 12$. With counting semaphore $s=2$ (I-2), two threads can enter simultaneously; a decrement thread can read $X=10$, be preempted while all 5 increments and 2 decrements complete, and then write back $10-1 = 9$, repeatedly clobbering increments to achieve minimum $V_2 = 10 - 3 = 7$.",
       "tags": [
         "2023",
         "2_mark",
@@ -27429,7 +27485,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the two functions `incr` and `decr` shown below:\n\\begin{lstlisting}[language=C]\nincr() {\n    wait(s);\n    X = X + 1;\n    signal(s);\n}\ndecr() {\n    wait(s);\n    X = X - 1;\n    signal(s);\n}\n\\end{lstlisting}\nThere are 5 threads each invoking `incr` once, and 3 threads each invoking `decr` once, on the same shared variable $X$. The initial value of $X$ is 10.\nSuppose there are two implementations of the semaphore $s$, as follows:\n\\begin{itemize}[itemsep=0pt,topsep=2pt]\n\\item I-1: $s$ is a binary semaphore initialized to 1.\n\\item I-2: $s$ is a counting semaphore initialized to 2.\n\\end{itemize}\nLet $V_1, V_2$ be the values of $X$ at the end of execution of all the threads with implementations I-1, I-2, respectively.\nWhich one of the following choices corresponds to the minimum possible values of $V_1, V_2$, respectively?",
+      "options_latex": {
+        "A": "15, 7",
+        "B": "7, 7",
+        "C": "12, 7",
+        "D": "12, 8"
+      }
     },
     {
       "id": "2023_CS_CS_Q39",
@@ -27459,10 +27522,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Context-free grammars and push-down automata",
+      "difficulty_level": "Medium",
+      "explaination": "The subgrammar $X \\to aX \\mid Xb \\mid a \\mid b$ derives all non-empty strings with any number of $a$'s followed by any number of $b$'s having at least one $a$ or $b$, described by $a^*(a+b)b^*$. Rule $S \\to aSb \\mid X$ prefixes $k$ $a$'s and suffixes $k$ $b$'s ($k \\ge 0$), yielding $a^k a^*(a+b)b^* b^k = a^*(a+b)b^*$. Because this language is represented by a regular expression, it is a regular language.",
       "tags": [
         "2023",
         "2_mark",
@@ -27472,7 +27535,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the context-free grammar $G$ below:\n\\begin{align*}\nS &\\to aSb \\mid X \\\\\nX &\\to aX \\mid Xb \\mid a \\mid b,\n\\end{align*}\nwhere $S$ and $X$ are non-terminals, and $a$ and $b$ are terminal symbols. The starting non-terminal is $S$.\nWhich one of the following statements is CORRECT?",
+      "options_latex": {
+        "A": "The language generated by $G$ is $(a + b)^*$",
+        "B": "The language generated by $G$ is $a^*(a + b)b^*$",
+        "C": "The language generated by $G$ is $a^*b^*(a + b)$",
+        "D": "The language generated by $G$ is not a regular language"
+      }
     },
     {
       "id": "2023_CS_CS_Q41",
@@ -27502,10 +27572,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Machine instructions and addressing modes",
+      "difficulty_level": "Medium",
+      "explaination": "Multiplying by 8 corresponds to shifting left by 3 bits ($2^3 = 8$), so $U_1 = 3$. Since elements are 32-bit (4-byte) integers in byte-addressable memory, the pointers in registers `r3` and `r4` must advance by 4 bytes each iteration, so $U_2 = 4$ and $U_3 = 4$. Finally, the loop branches back to the condition check at label $L_{01}$, so $U_4 = L_{01}$.",
       "tags": [
         "2023",
         "2_mark",
@@ -27515,7 +27585,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the given C-code and its corresponding assembly code, with a few operands U1--U4 being unknown. Some useful information as well as the semantics of each unique assembly instruction is annotated as inline comments in the code. The memory is byte-addressable.\n\\begin{lstlisting}[language=C]\n// C-code\nint a[10], b[10], i;    // int is 32-bit\nfor (i = 0; i < 10; i++)\n    a[i] = b[i] * 8;\n\\end{lstlisting}\n\\begin{lstlisting}\n; assembly-code (; indicates comments)\n; r1-r5 are 32-bit integer registers\n; initialize r1=0, r2=10\n; initialize r3, r4 with base address of a, b\nL01: jeq r1, r2, end    ; if(r1==r2) goto end\nL02: lw  r5, 0(r4)      ; r5 <- Memory[r4+0]\nL03: shl r5, r5, U1     ; r5 <- r5 << U1\nL04: sw  r5, 0(r3)      ; Memory[r3+0] <- r5\nL05: add r3, r3, U2     ; r3 <- r3+U2\nL06: add r4, r4, U3\nL07: add r1, r1, 1\nL08: jmp U4             ; goto U4\nL09: end\n\\end{lstlisting}\nWhich one of the following options is a CORRECT replacement for operands in the position (U1, U2, U3, U4) in the above assembly code?",
+      "options_latex": {
+        "A": "(8, 4, 1, L02)",
+        "B": "(3, 4, 4, L01)",
+        "C": "(8, 1, 1, L02)",
+        "D": "(3, 1, 1, L01)"
+      }
     },
     {
       "id": "2023_CS_CS_Q45",
@@ -27545,10 +27622,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Number representations and computer arithmetic (fixed and floating point)",
+      "difficulty_level": "Medium",
+      "explaination": "Number $P = \\text{0xC1800000}$ has sign bit 1, biased exponent $131$, actual exponent $131 - 127 = 4$, and mantissa $1.0$, so $P = -16.0 = -2^4$. Number $Q = \\text{0x3F5C2EF4}$ is positive with biased exponent $126$ (exponent $-1$) and mantissa fraction `5C2EF4`. Multiplying $P \\times Q$ flips the sign to negative (1), adds 4 to the exponent (biased exponent becomes $126 + 4 = 130 = \\text{0x82}$), and retains the mantissa fraction, resulting in `0xC15C2EF4`.",
       "tags": [
         "2023",
         "2_mark",
@@ -27558,7 +27635,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the IEEE-754 single precision floating point numbers $P = \\text{0xC1800000}$ and $Q = \\text{0x3F5C2EF4}$.\nWhich one of the following corresponds to the product of these numbers (i.e., $P \\times Q$), represented in the IEEE-754 single precision format?",
+      "options_latex": {
+        "A": "0x404C2EF4",
+        "B": "0x405C2EF4",
+        "C": "0xC15C2EF4",
+        "D": "0xC14C2EF4"
+      }
     },
     {
       "id": "2023_CS_CS_Q46",
@@ -27588,10 +27672,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees, binary search trees, binary heaps",
+      "difficulty_level": "Easy",
+      "explaination": "In a binary max-heap of $n$ elements, `Extract-Max` replaces the root with the last element and performs `maxHeapify` downward along the height $\\lfloor \\log_2 n \\rfloor$, running in $\\mathcal{O}(\\log n)$ worst-case time. `Insert` places the new key at the next leaf position and sifts upward along the height, also running in $\\mathcal{O}(\\log n)$ worst-case time.",
       "tags": [
         "2023",
         "2_mark",
@@ -27601,7 +27685,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $A$ be a priority queue for maintaining a set of elements. Suppose $A$ is implemented using a max-heap data structure. The operation $\\text{Extract-Max}(A)$ extracts and deletes the maximum element from $A$. The operation $\\text{Insert}(A, \\text{key})$ inserts a new element $\\text{key}$ in $A$. The properties of a max-heap are preserved at the end of each of these operations.\nWhen $A$ contains $n$ elements, which one of the following statements about the worst case running time of these two operations is TRUE?",
+      "options_latex": {
+        "A": "Both `Extract-Max(A)` and `Insert(A,key)` run in $\\mathcal{O}(1)$.",
+        "B": "Both `Extract-Max(A)` and `Insert(A,key)` run in $\\mathcal{O}(\\log n)$.",
+        "C": "`Extract-Max(A)` runs in $\\mathcal{O}(1)$ whereas `Insert(A,key)` runs in $\\mathcal{O}(n)$.",
+        "D": "`Extract-Max(A)` runs in $\\mathcal{O}(1)$ whereas `Insert(A,key)` runs in $\\mathcal{O}(\\log n)$."
+      }
     },
     {
       "id": "2023_CS_CS_Q47",
@@ -27631,10 +27722,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Recursion",
+      "difficulty_level": "Medium",
+      "explaination": "Function `foo` performs post-order traversal, recursively summing `p->val + foo(p->left) + foo(p->right)` and printing each subtree sum. Leaf 3 prints 3; leaf 8 prints 8; node 5 sums $5 + 3 + 8 = 16$ (prints 16); leaf 13 prints 13; node 11 sums $11 + 0 + 13 = 24$ (prints 24); root 10 sums $10 + 16 + 24 = 50$ (prints 50). The printed output sequence is 3 8 16 13 24 50.",
       "tags": [
         "2023",
         "2_mark",
@@ -27644,7 +27735,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the C function `foo` and the binary tree shown:\n\\begin{lstlisting}[language=C]\ntypedef struct node {\n    int val;\n    struct node *left, *right;\n} node;\nint foo(node *p) {\n    int retval;\n    if (p == NULL)\n        return 0;\n    else {\n        retval = p->val + foo(p->left) + foo(p->right);\n        printf(\"%d \", retval);\n        return retval;\n    }\n}\n\\end{lstlisting}\nIn the binary tree, root is 10; its left child is 5 with children 3 and 8; its right child is 11 with right child 13.\nWhen `foo` is called with a pointer to the root node of the given binary tree, what will it print?",
+      "options_latex": {
+        "A": "3 8 5 13 11 10",
+        "B": "3 5 8 10 11 13",
+        "C": "3 8 16 13 24 50",
+        "D": "3 16 8 50 24 13"
+      }
     },
     {
       "id": "2023_CS_CS_Q48",
@@ -27674,10 +27772,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Combinatorics: counting, recurrence relations, generating functions",
+      "difficulty_level": "Hard",
+      "explaination": "There are 2 orderings for which block appears first ($A$ before $B$ or $B$ before $A$). There are $\\binom{n}{2k}$ ways to choose the positions in the permutation for elements of $A \\cup B$. The first $k$ chosen positions must contain elements of the first set ($k!$ permutations) and the next $k$ positions contain elements of the second set ($k!$ permutations). The remaining $n - 2k$ elements can be arranged in any of the $(n - 2k)!$ remaining positions. Total valid permutations $= 2 \\binom{n}{2k} (n - 2k)! (k!)^2$.",
       "tags": [
         "2023",
         "2_mark",
@@ -27687,7 +27785,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $U = \\{1, 2, \\dots, n\\}$, where $n$ is a large positive integer greater than 1000. Let $k$ be a positive integer less than $n$. Let $A, B$ be subsets of $U$ with $|A| = |B| = k$ and $A \\cap B = \\emptyset$. We say that a permutation of $U$ separates $A$ from $B$ if one of the following is true:\n\\begin{itemize}[itemsep=0pt,topsep=2pt]\n\\item All members of $A$ appear in the permutation before any of the members of $B$.\n\\item All members of $B$ appear in the permutation before any of the members of $A$.\n\\end{itemize}\nHow many permutations of $U$ separate $A$ from $B$?",
+      "options_latex": {
+        "A": "$n!$",
+        "B": "$\\binom{n}{2k} (n - 2k)!$",
+        "C": "$\\binom{n}{2k} (n - 2k)! (k!)^2$",
+        "D": "$2 \\binom{n}{2k} (n - 2k)! (k!)^2$"
+      }
     },
     {
       "id": "2023_CS_GA_Q01",
@@ -27717,10 +27822,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Basic English grammar: tenses, articles, adjectives, prepositions, conjunctions, verb-noun agreement",
+      "difficulty_level": "Easy",
+      "explaination": "The adverb 'nearly' means 'almost' and correctly modifies the past-tense verb 'missed'. 'Near' is an adjective/preposition, while 'utterly' and 'mostly' do not fit the intended semantic meaning of narrowly missing a train.",
       "tags": [
         "1_mark",
         "2023",
@@ -27731,7 +27836,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "We reached the station late, and \\_\\_\\_\\_\\_\\_\\_ missed the train.",
+      "options_latex": {
+        "A": "near",
+        "B": "nearly",
+        "C": "utterly",
+        "D": "mostly"
+      }
     },
     {
       "id": "2023_CS_GA_Q02",
@@ -27764,10 +27876,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'Often' and 'Frequently' are direct synonyms. 'Kind' can be a noun meaning 'Type' (category) or an adjective meaning benevolent/caring. Because of multiple ambiguous interpretations of 'Kind', GATE awarded Marks to All (MTA) for this question.",
       "tags": [
         "1_mark",
         "2023",
@@ -27778,7 +27890,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Kind : \\_\\_\\_\\_\\_\\_\\_ : : Often : Frequently\n(By word meaning)",
+      "options_latex": {
+        "A": "Mean",
+        "B": "Type",
+        "C": "Cruel",
+        "D": "Kindly"
+      }
     },
     {
       "id": "2023_CS_GA_Q03",
@@ -27808,10 +27927,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "The recurrence relation is $F_{n+1} = F_n + F_{n-1} \\implies F_{n-1} = F_{n+1} - F_n$. Working backward from $F_7 = 60$ and $F_6 = 37$: $F_5 = 60 - 37 = 23$; $F_4 = 37 - 23 = 14$; $F_3 = 23 - 14 = 9$; $F_2 = 14 - 9 = 5$; and $F_1 = 9 - 5 = 4$.",
       "tags": [
         "1_mark",
         "2023",
@@ -27822,7 +27941,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A series of natural numbers $F_1, F_2, F_3, F_4, F_5, F_6, F_7, \\dots$ obeys $F_{n+1} = F_n + F_{n-1}$ for all integers $n \\ge 2$.\nIf $F_6 = 37$, and $F_7 = 60$, then what is $F_1$?",
+      "options_latex": {
+        "A": "4",
+        "B": "5",
+        "C": "8",
+        "D": "9"
+      }
     },
     {
       "id": "2023_CS_GA_Q04",
@@ -27852,10 +27978,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Out of all pregnant women, 90% received medical care at least once. Among those who received medical care, 60% received care from doctors. The percentage of all pregnant women who received care at least once from a doctor is $90\\% \\times 60\\% = 54\\%$, which is strictly greater than half ($> 50\\%$).",
       "tags": [
         "1_mark",
         "2023",
@@ -27866,7 +27992,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A survey for a certain year found that 90\\% of pregnant women received medical care at least once before giving birth. Of these women, 60\\% received medical care from doctors, while 40\\% received medical care from other healthcare providers.\nGiven this information, which one of the following statements can be inferred with certainty?",
+      "options_latex": {
+        "A": "More than half of the pregnant women received medical care at least once from a doctor.",
+        "B": "Less than half of the pregnant women received medical care at least once from a doctor.",
+        "C": "More than half of the pregnant women received medical care at most once from a doctor.",
+        "D": "Less than half of the pregnant women received medical care at most once from a doctor."
+      }
     },
     {
       "id": "2023_CS_GA_Q05",
@@ -27896,10 +28029,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Spatial Aptitude",
+      "subtopic": "Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping",
+      "difficulty_level": "Easy",
+      "explaination": "A smooth 3-dimensional object (such as a torus or a dumbbell shape) can possess regions of positive Gaussian curvature where it is locally convex, as well as regions of negative curvature (saddle-like regions) where it is locally concave. Hence, its surface may be concave in some places and convex in others.",
       "tags": [
         "1_mark",
         "2023",
@@ -27910,7 +28043,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Looking at the surface of a smooth 3-dimensional object from the outside, which one of the following options is TRUE?",
+      "options_latex": {
+        "A": "The surface of the object must be concave everywhere.",
+        "B": "The surface of the object must be convex everywhere.",
+        "C": "The surface of the object may be concave in some places and convex in other places.",
+        "D": "The object can have edges, but no corners."
+      }
     },
     {
       "id": "2023_CS_GA_Q06",
@@ -27940,10 +28080,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading and comprehension",
+      "difficulty_level": "Easy",
+      "explaination": "The passage establishes that a complete lack of physical exercise is a primary cause of health issues, and in response, the government provides financial incentives to ride bicycles to work. This direct causal measure logically implies that the government views bicycle riding as a form of physical exercise.",
       "tags": [
         "2023",
         "2_mark",
@@ -27954,7 +28094,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The country of Zombieland is in distress since more than 75\\% of its working population is suffering from serious health issues. Studies conducted by competent health experts concluded that a complete lack of physical exercise among its working population was one of the leading causes of their health issues. As one of the measures to address the problem, the Government of Zombieland has decided to provide monetary incentives to those who ride bicycles to work.\n\nBased only on the information provided above, which one of the following statements can be logically inferred with certainty?",
+      "options_latex": {
+        "A": "All the working population of Zombieland will henceforth ride bicycles to work.",
+        "B": "Riding bicycles will ensure that all of the working population of Zombieland is free of health issues.",
+        "C": "The health experts suggested to the Government of Zombieland to declare riding bicycles as mandatory.",
+        "D": "The Government of Zombieland believes that riding bicycles is a form of physical exercise."
+      }
     },
     {
       "id": "2023_CS_GA_Q07",
@@ -27984,10 +28131,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Setting $f(t) = g(t) \\implies 0.01 t^2 = 4t \\implies t = 400$. For any $0 < t < 400$ (e.g., $t = 10$), $g(10) = 40 > f(10) = 1$, making statement (i) correct. For all $t > 400$, the quadratic growth of $f(t)$ strictly dominates the linear growth of $g(t)$, so choosing $T = 400$ satisfies statement (ii). Hence, both statements are correct.",
       "tags": [
         "2023",
         "2_mark",
@@ -27998,7 +28145,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider two functions of time ($t$),\n\\[ f(t) = 0.01 t^2, \\quad g(t) = 4 t \\]\nwhere $0 < t < \\infty$.\nNow consider the following two statements:\n\\begin{enumerate}[label=(\\roman*),itemsep=0pt,topsep=2pt]\n\\item For some $t > 0$, $g(t) > f(t)$.\n\\item There exists a $T$, such that $f(t) > g(t)$ for all $t > T$.\n\\end{enumerate}\nWhich one of the following options is TRUE?",
+      "options_latex": {
+        "A": "only (i) is correct",
+        "B": "only (ii) is correct",
+        "C": "both (i) and (ii) are correct",
+        "D": "neither (i) nor (ii) is correct"
+      }
     },
     {
       "id": "2023_CS_GA_Q08",
@@ -28028,10 +28182,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Narrative sequencing",
+      "difficulty_level": "Easy",
+      "explaination": "Sentence (iii) introduces the protagonist Mina carrying heavy market purchases. Sentence (ii) describes the resulting exertion as she climbs the stairs. Sentence (i) brings her onto the terrace where she spots a man. Sentence (iv) details the man's posture against the parapet. Thus, the coherent sequence is (iii), (ii), (i), (iv).",
       "tags": [
         "2023",
         "2_mark",
@@ -28042,7 +28196,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one of the following sentence sequences creates a coherent narrative?\n\\begin{enumerate}[label=(\\roman*),itemsep=0pt,topsep=2pt]\n\\item Once on the terrace, on her way to her small room in the corner, she notices the man right away.\n\\item She begins to pant by the time she has climbed all the stairs.\n\\item Mina has bought vegetables and rice at the market, so her bags are heavy.\n\\item He was leaning against the parapet, watching the traffic below.\n\\end{enumerate}",
+      "options_latex": {
+        "A": "(i), (ii), (iv), (iii)",
+        "B": "(ii), (iii), (i), (iv)",
+        "C": "(iv), (ii), (i), (iii)",
+        "D": "(iii), (ii), (i), (iv)"
+      }
     },
     {
       "id": "2023_CS_GA_Q09",
@@ -28072,10 +28233,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "We are given $f(x) = g(y)$ for all independent real variables $x$ and $y$. If $x$ varies while $y$ remains constant, $f(x)$ cannot change because $g(y)$ is fixed, meaning $f(x)$ must be a constant. Symmetrically, $g(y)$ must be identical to that same constant. Therefore, $f(x) = g(y) = \\text{constant}$.",
       "tags": [
         "2023",
         "2_mark",
@@ -28086,7 +28247,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "$f(x)$ and $g(y)$ are functions of $x$ and $y$, respectively, and $f(x) = g(y)$ for all real values of $x$ and $y$. Which one of the following options is necessarily TRUE for all $x$ and $y$?",
+      "options_latex": {
+        "A": "$f(x) = 0$ and $g(y) = 0$",
+        "B": "$f(x) = g(y) = \\text{constant}$",
+        "C": "$f(x) \\neq \\text{constant}$ and $g(y) \\neq \\text{constant}$",
+        "D": "$f(x) + g(y) = f(x) - g(y)$"
+      }
     },
     {
       "id": "2023_CS_GA_Q10",
@@ -28116,10 +28284,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Spatial Aptitude",
+      "subtopic": "Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping",
+      "difficulty_level": "Medium",
+      "explaination": "Analyzing the rigid 2D planar transformations from figure P to Q and Q to R shows that statement S1 accurately describes the sequence of planar rotation and reflection, while statements S2 and S3 fail to match the observed geometric orientations. Hence, only S1 is TRUE.",
       "tags": [
         "2023",
         "2_mark",
@@ -28130,7 +28298,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one of the options best describes the transformation of the 2-dimensional figure P to Q, and then to R, as shown?",
+      "options_latex": {
+        "A": "Only S1 is TRUE.",
+        "B": "Only S1 and S2 are TRUE.",
+        "C": "S1, S2, and S3 are all TRUE.",
+        "D": "Only S1 and S3 are TRUE."
+      }
     },
     {
       "id": "2024_CS1_CS_Q11",

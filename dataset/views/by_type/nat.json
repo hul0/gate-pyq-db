@@ -5586,10 +5586,10 @@
         "min": 0.0,
         "max": 0.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Calculus",
+      "subtopic": "Integration",
+      "difficulty_level": "Easy",
+      "explaination": "The integral splits into $\\int_{-3}^3 \\int_{-2}^2 \\int_{-1}^1 4x^2 y \\, dz \\, dy \\, dx - \\int_{-3}^3 \\int_{-2}^2 \\int_{-1}^1 z^3 \\, dz \\, dy \\, dx$. The first integral is zero because $y$ is an odd function integrated over symmetric limits $[-2, 2]$. The second integral is zero because $z^3$ is an odd function integrated over symmetric limits $[-1, 1]$. Thus, the total value is $0 - 0 = 0$.",
       "tags": [
         "1_mark",
         "2023",
@@ -5598,7 +5598,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The value of the definite integral\n\\[ \\int_{-3}^3 \\int_{-2}^2 \\int_{-1}^1 (4x^2 y - z^3) \\, dz \\, dy \\, dx \\]\nis \\_\\_\\_\\_\\_\\_\\_\\_\\. (Rounded off to the nearest integer)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q32",
@@ -5624,10 +5626,10 @@
         "min": 110.0,
         "max": 110.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Number representations and computer arithmetic (fixed and floating point)",
+      "difficulty_level": "Easy",
+      "explaination": "Converting $132_4$ to base 10: $1 \\times 4^2 + 3 \\times 4^1 + 2 \\times 4^0 = 16 + 12 + 2 = 30_{10}$. Converting $30_{10}$ to radix 5: $30 = 6 \\times 5 + 0$, $6 = 1 \\times 5 + 1$, $1 = 0 \\times 5 + 1$. Reading remainders from bottom to top yields $110_5$.",
       "tags": [
         "1_mark",
         "2023",
@@ -5636,7 +5638,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A particular number is written as 132 in radix-4 representation. The same number in radix-5 representation is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q33",
@@ -5662,10 +5666,10 @@
         "min": 2040.0,
         "max": 2040.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Instruction pipelining, pipeline hazards",
+      "difficulty_level": "Easy",
+      "explaination": "The clock period of the pipeline is governed by the longest stage delay: $T = \\max(10, 20, 14) = 20\\text{ ns}$. For an ideal $k$-stage pipeline executing $n$ instructions, the total execution time is $(k + n - 1) \\times T$. For $k = 3$ and $n = 100$: $(3 + 100 - 1) \\times 20 = 102 \\times 20 = 2040\\text{ ns}$.",
       "tags": [
         "1_mark",
         "2023",
@@ -5674,7 +5678,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a 3-stage pipelined processor having a delay of 10 ns (nanoseconds), 20 ns, and 14 ns, for the first, second, and the third stages, respectively. Assume that there is no other delay and the processor does not suffer from any pipeline hazards. Also assume that one instruction is fetched every cycle.\nThe total execution time for executing 100 instructions on this processor is \\_\\_\\_\\_\\_\\_\\_\\_\\_ ns. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q34",
@@ -5700,10 +5706,10 @@
         "min": 10.2,
         "max": 10.2
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "I/O interface: interrupt and DMA mode",
+      "difficulty_level": "Medium",
+      "explaination": "With polling every $10\\text{ ms}$, there are 100 polls per second. Polling overhead is $100 \\times 100\\ \\mu\\text{s} = 10000\\ \\mu\\text{s} = 10\\text{ ms}$. With 1 keystroke/s, processing takes $200\\ \\mu\\text{s} = 0.2\\text{ ms}$, giving $T_1 = 10 + 0.2 = 10.2\\text{ ms}$. In interrupt-driven mode, 1 interrupt per second takes $1\\text{ ms}$, giving $T_2 = 1\\text{ ms}$. The ratio is $\\frac{T_1}{T_2} = \\frac{10.2}{1.0} = 10.2$.",
       "tags": [
         "1_mark",
         "2023",
@@ -5712,7 +5718,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A keyboard connected to a computer is used at a rate of 1 keystroke per second. The computer system polls the keyboard every 10 ms (milli seconds) to check for a keystroke and consumes 100 $\\mu$s (micro seconds) for each poll. If it is determined after polling that a key has been pressed, the system consumes an additional 200 $\\mu$s to process the keystroke. Let $T_1$ denote the fraction of a second spent in polling and processing a keystroke.\nIn an alternative implementation, the system uses interrupts instead of polling. An interrupt is raised for every keystroke. It takes a total of 1 ms for servicing an interrupt and processing a keystroke. Let $T_2$ denote the fraction of a second spent in servicing the interrupt and processing a keystroke.\nThe ratio $\\frac{T_1}{T_2}$ is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Rounded off to one decimal place)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q35",
@@ -5738,10 +5746,10 @@
         "min": 7.0,
         "max": 7.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Easy",
+      "explaination": "In `funcp()`, the static variable $x$ persists across invocations. On first call `x = funcp()`, static $x$ increments from 1 to 2 and returns 2, setting local $x = 2$. In `y = funcp() + x`, `funcp()` increments static $x$ from 2 to 3 and returns 3, so $y = 3 + 2 = 5$. Finally, `printf` prints $x + y = 2 + 5 = 7$.",
       "tags": [
         "1_mark",
         "2023",
@@ -5750,7 +5758,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The integer value printed by the ANSI-C program given below is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)\n\\begin{lstlisting}[language=C]\n#include <stdio.h>\nint funcp() {\n    static int x = 1;\n    x++;\n    return x;\n}\nint main() {\n    int x, y;\n    x = funcp();\n    y = funcp() + x;\n    printf(\"%d\\n\", (x + y));\n    return 0;\n}\n\\end{lstlisting}",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q56",
@@ -5776,10 +5786,10 @@
         "min": 5040.0,
         "max": 5040.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Graph traversals, minimum spanning trees, shortest paths",
+      "difficulty_level": "Hard",
+      "explaination": "The vertex set has $2^3 = 8$ vertices. An edge connects $A$ and $B$ iff $A \\subsetneq B$ or $B \\subsetneq A$. For the empty set $\\emptyset$, every non-empty subset $S \\subseteq U$ satisfies $\\emptyset \\subsetneq S$, meaning all 7 non-empty subsets are direct neighbors of $\\emptyset$ at BFS depth 1. A BFS starting at $\\emptyset$ must visit $\\emptyset$ first, and can then visit the 7 distance-1 neighbors in any of the $7! = 5040$ possible orderings.",
       "tags": [
         "2023",
         "2_mark",
@@ -5788,7 +5798,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $U = \\{1, 2, 3\\}$. Let $2^U$ denote the powerset of $U$. Consider an undirected graph $G$ whose vertex set is $2^U$. For any $A, B \\in 2^U$, $(A, B)$ is an edge in $G$ if and only if (i) $A \\neq B$, and (ii) either $A \\subsetneq B$ or $B \\subsetneq A$. For any vertex $A$ in $G$, the set of all possible orderings in which the vertices of $G$ can be visited in a Breadth First Search (BFS) starting from $A$ is denoted by $B(A)$.\nIf $\\emptyset$ denotes the empty set, then the cardinality of $B(\\emptyset)$ is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q57",
@@ -5814,10 +5826,10 @@
         "min": 4096.0,
         "max": 4096.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Memory management and virtual memory",
+      "difficulty_level": "Hard",
+      "explaination": "Array $D[128][128]$ has 16384 elements stored in row-major order. Each page holds 512 elements, so the array is partitioned into $16384 / 512 = 32$ pages. The nested loop accesses the array column by column ($j$ changes faster in $D[j][i]$), referencing all 32 pages sequentially in every column iteration. Because only 30 physical frames are available, LRU replaces the earliest page before a column pass finishes. Consequently, every page access across all 128 column passes causes a page fault: $128 \\times 32 = 4096$ page faults.",
       "tags": [
         "2023",
         "2_mark",
@@ -5826,7 +5838,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following two-dimensional array $D$ in the C programming language, which is stored in row-major order:\n\\begin{lstlisting}[language=C]\nint D[128][128];\n\\end{lstlisting}\nDemand paging is used for allocating memory and each physical page frame holds 512 elements of the array $D$. The Least Recently Used (LRU) page-replacement policy is used by the operating system. A total of 30 physical page frames are allocated to a process which executes the following code snippet:\n\\begin{lstlisting}[language=C]\nfor (int i = 0; i < 128; i++)\n    for (int j = 0; j < 128; j++)\n        D[j][i] *= 10;\n\\end{lstlisting}\nThe number of page faults generated during the execution of this code snippet is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q58",
@@ -5852,10 +5866,10 @@
         "min": 5.0,
         "max": 5.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Memory management and virtual memory",
+      "difficulty_level": "Medium",
+      "explaination": "Page size is $4\\text{ KB} = 2^{12}\\text{ bytes}$, which leaves $57 - 12 = 45\\text{ bits}$ for the page table hierarchy. Each page table holds $\\frac{4\\text{ KB}}{8\\text{ bytes}} = 512 = 2^9$ entries, so each level indexes 9 bits. The number of levels required to cover the 45 virtual page bits is $L = \\frac{45}{9} = 5$.",
       "tags": [
         "2023",
         "2_mark",
@@ -5864,7 +5878,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a computer system with 57-bit virtual addressing using multi-level tree-structured page tables with $L$ levels for virtual to physical address translation. The page size is 4 KB (1 KB = 1024 B) and a page table entry at any of the levels occupies 8 bytes.\nThe value of $L$ is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q59",
@@ -5890,10 +5906,10 @@
         "min": 8.0,
         "max": 8.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Arrays, stacks, queues, linked lists",
+      "difficulty_level": "Medium",
+      "explaination": "Operations trace: Push $[1, 5, 7, 8, 9, 2]$ to $S$ (top=2); enqueue $[1, 5, 7, 8, 9, 2]$ to $Q$ (front=1). Pop 2 from $S$ ($S=[1,5,7,8,9]$), dequeue 1 from $Q$ ($Q=[5,7,8,9,2]$); pop 9 from $S$ ($S=[1,5,7,8]$), dequeue 5 from $Q$ ($Q=[7,8,9,2]$). Repeating dequeue from $Q$ and push to $S$ 4 times moves $7, 8, 9, 2$ into $S$, making $S=[1,5,7,8,7,8,9,2]$. Finally, two pops remove 2 and 9, leaving 8 at the top of $S$.",
       "tags": [
         "2023",
         "2_mark",
@@ -5902,7 +5918,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a sequence $a$ of elements $a_0 = 1, a_1 = 5, a_2 = 7, a_3 = 8, a_4 = 9$, and $a_5 = 2$. The following operations are performed on a stack $S$ and a queue $Q$, both of which are initially empty:\n\\begin{enumerate}[label=\\Roman*.,itemsep=0pt,topsep=2pt]\n\\item push the elements of $a$ from $a_0$ to $a_5$ in that order into $S$.\n\\item enqueue the elements of $a$ from $a_0$ to $a_5$ in that order into $Q$.\n\\item pop an element from $S$.\n\\item dequeue an element from $Q$.\n\\item pop an element from $S$.\n\\item dequeue an element from $Q$.\n\\item dequeue an element from $Q$ and push the same element into $S$.\n\\item Repeat operation VII three times.\n\\item pop an element from $S$.\n\\item pop an element from $S$.\n\\end{enumerate}\nThe top element of $S$ after executing the above operations is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q60",
@@ -5928,10 +5946,10 @@
         "min": 2.374,
         "max": 2.376
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Medium",
+      "explaination": "For `10#011`: integer part `10` evaluates as $I.val = 2(1) + 0 = 2$. Fraction part `011` with right-recursive rules: lowest $F_3 \\to B(1) \\implies F_3.val = 0.5$; middle $F_2 \\to B(1) F_3 \\implies F_2.val = \\frac{1}{2}(1 + 0.5) = 0.75$; top $F \\to B(0) F_2 \\implies F.val = \\frac{1}{2}(0 + 0.75) = 0.375$. Total value $N.val = I.val + F.val = 2 + 0.375 = 2.375$.",
       "tags": [
         "2023",
         "2_mark",
@@ -5940,7 +5958,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the syntax directed translation given by the following grammar and semantic rules. Here $N, I, F$ and $B$ are non-terminals. $N$ is the starting non-terminal, and $\\#, 0$ and $1$ are lexical tokens corresponding to input letters ``\\#'', ``0'' and ``1'', respectively. $X.val$ denotes the synthesized attribute (a numeric value) associated with a non-terminal $X$. $I_1$ and $F_1$ denote occurrences of $I$ and $F$ on the right hand side of a production, respectively. For the tokens 0 and 1, $0.val = 0$ and $1.val = 1$.\n\\begin{align*}\nN &\\to I \\,\\#\\, F & N.val &= I.val + F.val \\\\\nI &\\to I_1 B & I.val &= (2 \\cdot I_1.val) + B.val \\\\\nI &\\to B & I.val &= B.val \\\\\nF &\\to B F_1 & F.val &= \\frac{1}{2}(B.val + F_1.val) \\\\\nF &\\to B & F.val &= \\frac{1}{2}B.val \\\\\nB &\\to 0 & B.val &= 0.val \\\\\nB &\\to 1 & B.val &= 1.val\n\\end{align*}\nThe value computed by the translation scheme for the input string `10#011` is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Rounded off to three decimal places)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q61",
@@ -5966,10 +5986,10 @@
         "min": 2.0,
         "max": 2.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Relational model: relational algebra, tuple calculus, SQL",
+      "difficulty_level": "Easy",
+      "explaination": "The query evaluates the WHERE clause condition `gender = 'F' AND marks > 65`. Among female students: Aliya (rollNum 2, marks 70) and Aliya (rollNum 3, marks 80) satisfy both conditions, whereas Swati (rollNum 5, marks 65) fails the strict inequality. Thus, exactly 2 rows are returned.",
       "tags": [
         "2023",
         "2_mark",
@@ -5978,7 +5998,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following table named `Student` in a relational database. The primary key of this table is `rollNum`.\n\\begin{center}\n\\begin{tabular}{|c|c|c|c|}\n\\hline\n\\textbf{rollNum} & \\textbf{name} & \\textbf{gender} & \\textbf{marks} \\\\\n\\hline\n1 & Naman & M & 62 \\\\\n2 & Aliya & F & 70 \\\\\n3 & Aliya & F & 80 \\\\\n4 & James & M & 82 \\\\\n5 & Swati & F & 65 \\\\\n\\hline\n\\end{tabular}\n\\end{center}\nThe SQL query below is executed on this database:\n\\begin{lstlisting}[language=SQL]\nSELECT *\nFROM Student\nWHERE gender = 'F' AND marks > 65;\n\\end{lstlisting}\nThe number of rows returned by the query is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q63",
@@ -6004,10 +6026,10 @@
         "min": 4.0,
         "max": 4.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular expressions and finite automata",
+      "difficulty_level": "Easy",
+      "explaination": "The language contains all binary strings not containing `111`. The minimal DFA tracks consecutive 1s: state $q_0$ (0 consecutive 1s, start), state $q_1$ (1 consecutive 1), state $q_2$ (2 consecutive 1s), and state $q_3$ (trap state reached on 3rd consecutive 1). States $q_0, q_1, q_2$ are accepting states. Thus, exactly 4 states are required.",
       "tags": [
         "2023",
         "2_mark",
@@ -6016,7 +6038,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the language $L$ over the alphabet $\\{0, 1\\}$, given below:\n\\[ L = \\{w \\in \\{0, 1\\}^* \\mid w \\text{ does not contain three or more consecutive 1's}\\}. \\]\nThe minimum number of states in a Deterministic Finite-State Automaton (DFA) for $L$ is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q64",
@@ -6042,10 +6066,10 @@
         "min": 19.0,
         "max": 19.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory hierarchy: cache, main memory and secondary storage",
+      "difficulty_level": "Easy",
+      "explaination": "Address size $= 32\\text{ bits}$. Cache size $= 64\\text{ KB} = 2^{16}\\text{ bytes}$. For an 8-way set-associative cache, the combined capacity of index and offset is $\\frac{\\text{Cache Size}}{\\text{Associativity}} = \\frac{64\\text{ KB}}{8} = 8\\text{ KB} = 2^{13}\\text{ bytes}$, requiring $13\\text{ bits}$ for INDEX + BLOCK OFFSET. Therefore, the number of TAG bits is $32 - 13 = 19\\text{ bits}$.",
       "tags": [
         "2023",
         "2_mark",
@@ -6054,7 +6078,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "An 8-way set associative cache of size 64 KB (1 KB = 1024 bytes) is used in a system with 32-bit address. The address is sub-divided into TAG, INDEX, and BLOCK OFFSET.\nThe number of bits in the TAG is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q65",
@@ -6080,10 +6106,10 @@
         "min": 3.0,
         "max": 3.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Routing protocols: shortest path, flooding, distance vector and link state routing",
+      "difficulty_level": "Medium",
+      "explaination": "For destination 200.150.68.118: subnet /16 (prefix length 16) matches. Subnet 200.150.64.0/19 (mask 255.255.224.0) matches since $68 \\& 224 = 64$. Subnet 200.150.68.0/24 (mask 255.255.255.0) matches since $68 = 68$. Subnet 200.150.68.64/27 (mask 255.255.255.224) does not match since $118 \\& 224 = 96 \\neq 64$. By the Longest Prefix Match rule, the /24 route (interface 3) is selected.",
       "tags": [
         "2023",
         "2_mark",
@@ -6092,7 +6118,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The forwarding table of a router is shown below:\n\\begin{center}\n\\begin{tabular}{|l|l|c|}\n\\hline\n\\textbf{Subnet Number} & \\textbf{Subnet Mask} & \\textbf{Interface ID} \\\\\n\\hline\n200.150.0.0 & 255.255.0.0 & 1 \\\\\n200.150.64.0 & 255.255.224.0 & 2 \\\\\n200.150.68.0 & 255.255.255.0 & 3 \\\\\n200.150.68.64 & 255.255.255.224 & 4 \\\\\nDefault & & 0 \\\\\n\\hline\n\\end{tabular}\n\\end{center}\nA packet addressed to a destination address 200.150.68.118 arrives at the router. It will be forwarded to the interface with ID \\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q32",
