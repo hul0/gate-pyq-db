@@ -6118,10 +6118,10 @@
         "min": 2.0,
         "max": 2.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Sets, relations, functions, partial orders and lattices",
+      "difficulty_level": "Medium",
+      "explaination": "A bijection from $A$ to $B$ implies $|A| = |B| = n$. A bijection from $A \\times A$ to $A \\cup B$ implies $|A \\times A| = |A \\cup B|$. We have $|A \\times A| = n^2$, and $n \\le |A \\cup B| \\le 2n$. Thus $n \\le n^2 \\le 2n$. Since $A$ is non-empty ($n \\ge 1$), dividing by $n$ gives $1 \\le n \\le 2$. This allows exactly two integer solutions: $n = 1$ (where $A = B$) and $n = 2$ (where $A \\cap B = \\emptyset$).",
       "tags": [
         "1_mark",
         "2024",
@@ -6131,7 +6131,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $A$ and $B$ be non-empty finite sets such that there exist one-to-one and onto functions (i) from $A$ to $B$ and (ii) from $A \\times A$ to $A \\cup B$. The number of possible values of $|A|$ is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q33",
@@ -6157,10 +6159,10 @@
         "min": 6.0,
         "max": 6.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Medium",
+      "explaination": "Precedence order is $+$ (highest, left-associative), then $-$ (right-associative), then $*$ (right-associative), then $/$ (lowest, right-associative). Evaluating $+$ first: $3+1+5 = 9$ and $7+2 = 9$. Expression becomes $9 * 2 / 9 - 4 - 7 - 6 / 2$. Evaluating $-$ right-associatively: $4 - (7 - 6) = 4 - 1 = 3$, giving $9 - 3 = 6$. The expression becomes $9 * 2 / 6 / 2$. Next $*$ gives $18 / 6 / 2$. Evaluating $/$ right-associatively: $6 / 2 = 3$, and $18 / 3 = 6$.",
       "tags": [
         "1_mark",
         "2024",
@@ -6170,7 +6172,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the operator precedence and associativity rules for the integer arithmetic operators given in the table below:\n\\begin{center}\n\\begin{tabular}{|c|c|c|}\n\\hline\n\\textbf{Operator} & \\textbf{Precedence} & \\textbf{Associativity} \\\\\n\\hline\n$+$ & Highest & Left \\\\\n$-$ & High & Right \\\\\n$*$ & Medium & Right \\\\\n$/$ & Low & Right \\\\\n\\hline\n\\end{tabular}\n\\end{center}\nThe value of the expression $3 + 1 + 5 * 2 / 7 + 2 - 4 - 7 - 6 / 2$ as per the above rules is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q34",
@@ -6196,10 +6200,10 @@
         "min": 16.0,
         "max": 16.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Combinatorics: counting, recurrence relations, generating functions",
+      "difficulty_level": "Easy",
+      "explaination": "By Cayley's theorem, the number of spanning trees in a complete labelled graph $K_n$ on $n$ vertices is given by $n^{n-2}$. For $n = 4$ labelled vertices A, B, C, D, the number of spanning trees is $4^{4-2} = 4^2 = 16$.",
       "tags": [
         "1_mark",
         "2024",
@@ -6209,7 +6213,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The number of spanning trees in a complete graph of 4 vertices labelled A, B, C, and D is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q35",
@@ -6235,10 +6241,10 @@
         "min": 2.0,
         "max": 2.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Relational model: relational algebra, tuple calculus, SQL",
+      "difficulty_level": "Easy",
+      "explaination": "Joining $R(A,B)$ and $S(A,C)$ on $R.A = S.A$ yields: $(10, 20, 90)$ for $A=10$, and $(30, 40, 45)$, $(30, 50, 45)$ for $A=30$. Applying selection $\\sigma_{B < C}$: $20 < 90$ is true (tuple $(10, 20, 90)$), $40 < 45$ is true (tuple $(30, 40, 45)$), and $50 < 45$ is false. Thus, exactly 2 tuples satisfy the condition.",
       "tags": [
         "1_mark",
         "2024",
@@ -6248,7 +6254,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following two relations, $R(A,B)$ and $S(A,C)$:\n\\begin{center}\n\\begin{tabular}{|c|c|}\n\\multicolumn{2}{c}{$R$} \\\\\n\\hline\n$A$ & $B$ \\\\\n\\hline\n10 & 20 \\\\\n20 & 30 \\\\\n30 & 40 \\\\\n30 & 50 \\\\\n\\hline\n\\end{tabular}\n\\qquad\n\\begin{tabular}{|c|c|}\n\\multicolumn{2}{c}{$S$} \\\\\n\\hline\n$A$ & $C$ \\\\\n\\hline\n10 & 90 \\\\\n30 & 45 \\\\\n40 & 80 \\\\\n50 & 95 \\\\\n\\hline\n\\end{tabular}\n\\end{center}\nThe total number of tuples obtained by evaluating the following expression\n\\[ \\sigma_{B < C}(R \\bowtie_{R.A = S.A} S) \\]\nis \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q54",
@@ -6274,10 +6282,10 @@
         "min": 4096.0,
         "max": 4096.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory hierarchy: cache, main memory and secondary storage",
+      "difficulty_level": "Easy",
+      "explaination": "Disk capacity $= 512\\text{ GB} = 512 \\times 2^{30}\\text{ bytes} = 2^{39}$ bytes. One cylinder comprises 32 surfaces $\\times 4096$ sectors/track $\\times 1024$ bytes/sector $= 2^5 \\times 2^{12} \\times 2^{10} = 2^{27}$ bytes. Number of cylinders $= \\frac{2^{39}}{2^{27}} = 2^{12} = 4096$.",
       "tags": [
         "2024",
         "2_mark",
@@ -6287,7 +6295,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a 512 GB hard disk with 32 storage surfaces. There are 4096 sectors per track and each sector holds 1024 bytes of data. The number of cylinders in the hard disk is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q55",
@@ -6313,10 +6323,10 @@
         "min": 3.0,
         "max": 3.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Instruction pipelining, pipeline hazards",
+      "difficulty_level": "Medium",
+      "explaination": "Baseline runtime is $100\\text{ ns}$, with $90\\text{ ns}$ parallelizable and $10\\text{ ns}$ serial. On $p$ cores, the parallel portion takes $\\frac{90}{p}\\text{ ns}$ with core overhead of $10(p-1)\\text{ ns}$. Total execution time $T(p) = 10 + \\frac{90}{p} + 10(p-1) = \\frac{90}{p} + 10p$. Evaluating: $T(1) = 100\\text{ ns}$, $T(2) = 65\\text{ ns}$, $T(3) = 60\\text{ ns}$, $T(4) = 62.5\\text{ ns}$. The time is minimized at $p = 3$ cores.",
       "tags": [
         "2024",
         "2_mark",
@@ -6326,7 +6336,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The baseline execution time of a program on a 2 GHz single core machine is 100 nanoseconds (ns). The code corresponding to 90\\% of the execution time can be fully parallelized. The overhead for using an additional core is 10 ns when running on a multicore system. Assume that all cores in the multicore system run their share of the parallelized code for an equal amount of time.\nThe number of cores that minimize the execution time of the program is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q56",
@@ -6352,10 +6364,10 @@
         "min": 3.0,
         "max": 3.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory hierarchy: cache, main memory and secondary storage",
+      "difficulty_level": "Medium",
+      "explaination": "Total CPI is given by $\\text{CPI} = \\text{CPI}_{\\text{ideal}} + (\\text{I-miss rate} \\times \\text{penalty}) + (\\text{Data-instruction fraction} \\times \\text{D-miss rate} \\times \\text{penalty}) = 2 + (0.02 \\times 100) + (0.25 \\times 0.08 \\times 100) = 2 + 2 + 2 = 6$. For a perfect cache with no misses, $\\text{CPI}_{\\text{perfect}} = \\text{CPI}_{\\text{ideal}} = 2$. Speedup $= \\frac{6}{2} = 3.00$.",
       "tags": [
         "2024",
         "2_mark",
@@ -6365,7 +6377,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A given program has 25\\% load/store instructions. Suppose the ideal CPI (cycles per instruction) without any memory stalls is 2. The program exhibits 2\\% miss rate on instruction cache and 8\\% miss rate on data cache. The miss penalty is 100 cycles.\nThe speedup (rounded off to two decimal places) achieved with a perfect cache (i.e., with NO data or instruction cache misses) is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in numeric format)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q57",
@@ -6391,10 +6405,10 @@
         "min": 14.0,
         "max": 14.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "System calls, processes, threads, inter-process communication",
+      "difficulty_level": "Medium",
+      "explaination": "Initially 1 process with $x=3$. Iteration 1 ($x=3$): `fork()` creates 1 child (total 2 processes); both print \"hello\" (2 prints) and decrement $x$ to 2. Iteration 2 ($x=2$): each of the 2 processes forks (total 4 processes); all 4 print \"hello\" (4 prints) and decrement $x$ to 1. Iteration 3 ($x=1$): each of the 4 processes forks (total 8 processes); all 8 print \"hello\" (8 prints) and decrement $x$ to 0, whereupon the loop ends. Total prints $= 2 + 4 + 8 = 14$.",
       "tags": [
         "2024",
         "2_mark",
@@ -6404,7 +6418,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following code snippet using the `fork()` and `wait()` system calls. Assume that the code compiles and runs correctly, and that the system calls run successfully without any errors.\n\\begin{lstlisting}[language=C]\nint x = 3;\nwhile(x > 0) {\n    fork();\n    printf(\"hello\");\n    wait(NULL);\n    x--;\n}\n\\end{lstlisting}\nThe total number of times the `printf` statement is executed is \\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q58",
@@ -6430,10 +6446,10 @@
         "min": 40.0,
         "max": 40.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Routing protocols: shortest path, flooding, distance vector and link state routing",
+      "difficulty_level": "Medium",
+      "explaination": "Using longest prefix match for each host address: 10.1.1.16 matches /24 (R1); 10.1.1.72 matches /24 and 10.1.1.64/26 (R3); 10.1.1.132 matches /24 and 10.1.1.128/25 (R2); 10.1.1.191 matches /24 and 10.1.1.128/25 (R2); 10.1.1.205 matches /24, /25, and 10.1.1.192/26 (R4). Thus, 2 hosts (10.1.1.132 and 10.1.1.191) match router R2. Total packets forwarded via R2 $= 2 \\times 20 = 40$.",
       "tags": [
         "2024",
         "2_mark",
@@ -6443,7 +6459,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the entries shown below in the forwarding table of an IP router. Each entry consists of an IP prefix and the corresponding next hop router for packets whose destination IP address matches the prefix. The notation ``/N'' in a prefix indicates a subnet mask with the most significant $N$ bits set to 1.\n\\begin{center}\n\\begin{tabular}{|l|c|}\n\\hline\n\\textbf{Prefix} & \\textbf{Next hop router} \\\\\n\\hline\n10.1.1.0/24 & R1 \\\\\n10.1.1.128/25 & R2 \\\\\n10.1.1.64/26 & R3 \\\\\n10.1.1.192/26 & R4 \\\\\n\\hline\n\\end{tabular}\n\\end{center}\nThis router forwards 20 packets each to 5 hosts. The IP addresses of the hosts are 10.1.1.16, 10.1.1.72, 10.1.1.132, 10.1.1.191, and 10.1.1.205. The number of packets forwarded via the next hop router R2 is \\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q59",
@@ -6469,10 +6487,10 @@
         "min": 179.0,
         "max": 179.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Context-free grammars and push-down automata",
+      "difficulty_level": "Medium",
+      "explaination": "In a Chomsky Normal Form (CNF) grammar, every production is either $A \\to BC$ or $A \\to a$. Deriving a string of length $n$ requires $n-1$ non-terminal splitting steps ($A \\to BC$) followed by $n$ terminal production steps ($A \\to a$), totaling $2n-1$ steps. For $w = a^{30}b^{30}c^{30}$, the length is $n = 90$, so the number of derivation steps is $2(90) - 1 = 179$.",
       "tags": [
         "2024",
         "2_mark",
@@ -6482,7 +6500,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $G = (V, \\Sigma, S, P)$ be a context-free grammar in Chomsky Normal Form with $\\Sigma = \\{a, b, c\\}$ and $V$ containing 10 variable symbols including the start symbol $S$. The string $w = a^{30}b^{30}c^{30}$ is derivable from $S$. The number of steps (application of rules) in the derivation $S \\Rightarrow^* w$ is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q60",
@@ -6508,10 +6528,10 @@
         "min": 60.0,
         "max": 60.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Graphs: connectivity, matching, colouring",
+      "difficulty_level": "Easy",
+      "explaination": "A DFS traversal of an undirected graph with $V$ vertices and $k$ connected components produces a spanning forest containing $k$ trees. A tree with $v_i$ vertices contains $v_i - 1$ edges, so the total number of tree edges in the forest is $\\sum (v_i - 1) = V - k$. Given $V = 100$ and $E = 40$, we have $40 = 100 - k \\implies k = 60$ connected components.",
       "tags": [
         "2024",
         "2_mark",
@@ -6521,7 +6541,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The number of edges present in the forest generated by the DFS traversal of an undirected graph $G$ with 100 vertices is 40. The number of connected components in $G$ is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q61",
@@ -6547,10 +6569,10 @@
         "min": 44.0,
         "max": 44.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular expressions and finite automata",
+      "difficulty_level": "Medium",
+      "explaination": "The total number of binary strings of length $\\le 5$ is $\\sum_{i=0}^5 2^i = 1+2+4+8+16+32 = 63$. Language $L(r) = 0^* + 1^*$ contains $\\epsilon$ and $0^k, 1^k$ for each length $k \\in \\{1..5\\}$ (11 strings). Language $L(s) = 01^* + 10^*$ contains $01^{k-1}$ and $10^{k-1}$ for each length $k \\in \\{1..5\\}$. At $k=1$, $0$ and $1$ overlap with $L(r)$; for $k \\in \\{2..5\\}$, the $4 \\times 2 = 8$ strings are disjoint from $L(r)$. Thus, $|L(r) \\cup L(s)| = 11 + 8 = 19$. The number of strings in neither language is $63 - 19 = 44$.",
       "tags": [
         "2024",
         "2_mark",
@@ -6560,7 +6582,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following two regular expressions over the alphabet $\\{0,1\\}$:\n\\[ r = 0^* + 1^* \\]\n\\[ s = 01^* + 10^* \\]\nThe total number of strings of length less than or equal to 5, which are neither in $r$ nor in $s$, is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q62",
@@ -6586,10 +6610,10 @@
         "min": 6596.0,
         "max": 6596.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Memory management and virtual memory",
+      "difficulty_level": "Easy",
+      "explaination": "With page size $2\\text{ KB} = 2048\\text{ bytes}$, virtual address $2500$ has virtual page number $\\lfloor 2500 / 2048 \\rfloor = 1$ and offset $2500 \\pmod{2048} = 452$. Page 1 maps to frame 3. The physical address is $(\\text{frame } 3 \\times 2048) + \\text{offset } 452 = 6144 + 452 = 6596$.",
       "tags": [
         "2024",
         "2_mark",
@@ -6599,7 +6623,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a memory management system that uses a page size of 2 KB. Assume that both the physical and virtual addresses start from 0. Assume that the pages 0, 1, 2, and 3 are stored in the page frames 1, 3, 2, and 0, respectively. The physical address (in decimal format) corresponding to the virtual address 2500 (in decimal format) is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q63",
@@ -6625,10 +6651,10 @@
         "min": 0.37,
         "max": 0.38
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Probability and Statistics",
+      "subtopic": "Conditional probability and Bayes theorem",
+      "difficulty_level": "Easy",
+      "explaination": "Let $R_1, R_2$ be the events of drawing red balls on the first and second draws without replacement. The conditional probability that both are red given the first is red is $P(R_1 \\cap R_2 \\mid R_1) = P(R_2 \\mid R_1)$. Given that 1 red ball is already drawn, 9 red balls remain out of $9 + 15 = 24$ total balls, so $P(R_2 \\mid R_1) = \\frac{9}{24} = \\frac{3}{8} = 0.375$.",
       "tags": [
         "2024",
         "2_mark",
@@ -6638,7 +6664,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A bag contains 10 red balls and 15 blue balls. Two balls are drawn randomly without replacement. Given that the first ball drawn is red, the probability (rounded off to 3 decimal places) that both balls drawn are red is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in numeric format)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q65",
@@ -6664,10 +6692,10 @@
         "min": 6.0,
         "max": 6.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Fragmentation and IP addressing, IPv4, CIDR notation",
+      "difficulty_level": "Medium",
+      "explaination": "The datagram has 20 bytes IP header and 1400 bytes data. Link 1 has $\\text{MTU} = 542$ bytes (max data per fragment is $\\lfloor (542-20)/8 \\rfloor \\times 8 = 520$ bytes), producing 3 fragments with data sizes 520, 520, and 360 bytes. Link 2 has $\\text{MTU} = 360$ bytes (max data is $\\lfloor (360-20)/8 \\rfloor \\times 8 = 336$ bytes). At router Q, fragment 1 (520 bytes) is fragmented into 2 ($336 + 184$), fragment 2 (520 bytes) is fragmented into 2 ($336 + 184$), and fragment 3 (360 bytes) is fragmented into 2 ($336 + 24$). Total fragments delivered at the receiver $= 2 + 2 + 2 = 6$.",
       "tags": [
         "2024",
         "2_mark",
@@ -6677,7 +6705,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider sending an IP datagram of size 1420 bytes (including 20 bytes of IP header) from a sender to a receiver over a path of two links with a router between them. The first link (sender to router) has an MTU (Maximum Transmission Unit) size of 542 bytes, while the second link (router to receiver) has an MTU size of 360 bytes. The number of fragments that would be delivered at the receiver is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS2_CS_Q34",

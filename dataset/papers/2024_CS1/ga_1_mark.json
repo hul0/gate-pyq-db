@@ -33,10 +33,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'dry $\\to$ arid $\\to$ parched' depicts an increasing scale of lack of moisture. Similarly, 'diet $\\to$ fast $\\to$ starve' depicts an increasing scale of food restriction/deprivation, where starving represents extreme lack of nourishment.",
       "tags": [
         "1_mark",
         "2024",
@@ -47,7 +47,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "If `$\\to$' denotes increasing order of intensity, then the meaning of the words $[\\text{dry} \\to \\text{arid} \\to \\text{parched}]$ is analogous to $[\\text{diet} \\to \\text{fast} \\to \\text{\\_\\_\\_\\_\\_\\_\\_\\_}]$.\nWhich one of the given options is appropriate to fill the blank?",
+      "options_latex": {
+        "A": "starve",
+        "B": "reject",
+        "C": "feast",
+        "D": "deny"
+      }
     },
     {
       "id": "2024_CS1_GA_Q02",
@@ -77,10 +84,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "If $(x+y) \\propto (x-y)$, then $x+y = k(x-y)$ for some non-zero constant $k \\neq 1$. Rearranging terms gives $x(1-k) = -y(1+k) \\implies \\frac{x}{y} = \\frac{k+1}{k-1}$, which is a constant independent of $x$ and $y$.",
       "tags": [
         "1_mark",
         "2024",
@@ -91,7 +98,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "If two distinct non-zero real variables $x$ and $y$ are such that $(x+y)$ is proportional to $(x-y)$ then the value of $\\frac{x}{y}$",
+      "options_latex": {
+        "A": "depends on $xy$",
+        "B": "depends only on $x$ and not on $y$",
+        "C": "depends only on $y$ and not on $x$",
+        "D": "is a constant"
+      }
     },
     {
       "id": "2024_CS1_GA_Q03",
@@ -121,10 +135,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Elementary statistics and probability",
+      "difficulty_level": "Easy",
+      "explaination": "Arranging the 10 sample values in ascending order: $9, 10, 11, 11, 13, 14, 15, 17, 18, 69$. Since the sample size $n = 10$ is even, the median is the arithmetic mean of the 5th and 6th values: $\\frac{13 + 14}{2} = 13.5$.",
       "tags": [
         "1_mark",
         "2024",
@@ -135,7 +149,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following sample of numbers:\n\\[ 9, 18, 11, 14, 15, 17, 10, 69, 11, 13 \\]\nThe median of the sample is",
+      "options_latex": {
+        "A": "13.5",
+        "B": "14",
+        "C": "11",
+        "D": "18.7"
+      }
     },
     {
       "id": "2024_CS1_GA_Q04",
@@ -165,10 +186,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Let the number of Rs.~1, Rs.~5, and Rs.~10 coins be $5k$, $3k$, and $13k$ respectively. The total value is $1(5k) + 5(3k) + 10(13k) = 5k + 15k + 130k = 150k$. The percentage of money in Rs.~5 coins is $\\frac{15k}{150k} \\times 100\\% = 10\\%$.",
       "tags": [
         "1_mark",
         "2024",
@@ -179,7 +200,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The number of coins of Rs.~1, Rs.~5, and Rs.~10 denominations that a person has are in the ratio $5:3:13$. Of the total amount, the percentage of money in Rs.~5 coins is",
+      "options_latex": {
+        "A": "21\\%",
+        "B": "$14\\frac{2}{7}\\%$",
+        "C": "10\\%",
+        "D": "30\\%"
+      }
     },
     {
       "id": "2024_CS1_GA_Q05",
@@ -209,10 +237,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Medium",
+      "explaination": "Using logarithm rules, $\\log(p^2 + q^2) = \\log p + \\log q + 2\\log 3 = \\log(9pq) \\implies p^2 + q^2 = 9pq$. Squaring both sides yields $(p^2+q^2)^2 = p^4 + q^4 + 2p^2q^2 = 81p^2q^2$, which gives $p^4 + q^4 = 79p^2q^2$. Hence, $\\frac{p^4+q^4}{p^2q^2} = 79$.",
       "tags": [
         "1_mark",
         "2024",
@@ -223,7 +251,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "For positive non-zero real variables $p$ and $q$, if\n\\[ \\log(p^2 + q^2) = \\log p + \\log q + 2\\log 3, \\]\nthen, the value of $\\frac{p^4+q^4}{p^2q^2}$ is",
+      "options_latex": {
+        "A": "79",
+        "B": "81",
+        "C": "9",
+        "D": "83"
+      }
     }
   ]
 }

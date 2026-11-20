@@ -18693,10 +18693,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Concept of layering: OSI and TCP/IP Protocol Stacks",
+      "difficulty_level": "Medium",
+      "explaination": "The file size is $10^6$ bytes split into 1000 chunks of $10^3$ bytes ($8000$ bits) each. Link transmission time for one chunk is $\\frac{8000\\text{ bits}}{10^6\\text{ bps}} = 0.008\\text{ s}$. Node P completes sending all 1000 chunks at $t = 1000 \\times 0.008 = 8.000\\text{ s}$. The last chunk arrives at router Q at $t = 8.000\\text{ s}$ and takes another $0.008\\text{ s}$ to reach R over link Q---R, completing at $8.008\\text{ s}$.",
       "tags": [
         "2024",
         "2_mark",
@@ -18707,7 +18707,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a network path P---Q---R between nodes P and R via router Q. Node P sends a file of size $10^6$ bytes to R via this path by splitting the file into chunks of $10^3$ bytes each. Node P sends these chunks one after the other without any wait time between the successive chunk transmissions. Assume that the size of extra headers added to these chunks is negligible, and that the chunk size is less than the MTU.\n\nEach of the links P---Q and Q---R has a bandwidth of $10^6$ bits/sec, and negligible propagation latency. Router Q immediately transmits every packet it receives from P to R, with negligible processing and queueing delays. Router Q can simultaneously receive on link P---Q and transmit on link Q---R.\n\nAssume P starts transmitting the chunks at time $t = 0$.\nWhich one of the following options gives the time (in seconds, rounded off to 3 decimal places) at which R receives all the chunks of the file?",
+      "options_latex": {
+        "A": "8.000",
+        "B": "8.008",
+        "C": "15.992",
+        "D": "16.000"
+      }
     },
     {
       "id": "2024_CS1_CS_Q37",
@@ -18737,10 +18744,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Medium",
+      "explaination": "For input \"MMLK\" with production $S \\to DHTU$: $D$ derives \"MM\" via $D \\to \\text{\"M\"} D_1 \\to \\text{\"M\"}\\text{\"M\"} D_2 \\to \\text{\"M\"}\\text{\"M\"}\\epsilon$, giving $D.val = 5 + 5 - 5 = 5$. $H$ derives \"L\" via $H \\to \\text{\"L\"} H_1 \\to \\text{\"L\"}\\epsilon$, giving $H.val = 50 - 10 = 40$. $T$ derives $\\epsilon$, giving $T.val = -5$. $U$ derives \"K\", giving $U.val = 5$. Summing attribute values yields $S.val = 5 + 40 - 5 + 5 = 45$.",
       "tags": [
         "2024",
         "2_mark",
@@ -18751,7 +18758,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following syntax-directed definition (SDD):\n\\begin{align*}\nS &\\to DHTU & \\{ S.val = D.val + H.val + T.val + U.val; \\} \\\\\nD &\\to \\text{``M''} D_1 & \\{ D.val = 5 + D_1.val; \\} \\\\\nD &\\to \\epsilon & \\{ D.val = -5; \\} \\\\\nH &\\to \\text{``L''} H_1 & \\{ H.val = 5 * 10 + H_1.val; \\} \\\\\nH &\\to \\epsilon & \\{ H.val = -10; \\} \\\\\nT &\\to \\text{``C''} T_1 & \\{ T.val = 5 * 100 + T_1.val; \\} \\\\\nT &\\to \\epsilon & \\{ T.val = -5; \\} \\\\\nU &\\to \\text{``K''} & \\{ U.val = 5; \\}\n\\end{align*}\nGiven ``MMLK'' as the input, which one of the following options is the CORRECT value computed by the SDD (in the attribute $S.val$)?",
+      "options_latex": {
+        "A": "45",
+        "B": "50",
+        "C": "55",
+        "D": "65"
+      }
     },
     {
       "id": "2024_CS1_CS_Q38",
@@ -18781,10 +18795,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Medium",
+      "explaination": "Since $\\text{FIRST}(S) = \\{c, d, f\\}$ and $S \\to daT$ generates $d$, production (1) must generate $c$ and $f$. With (1) as $S \\to Rf$ where $\\text{FIRST}(R) = \\{c, \\epsilon\\}$, $\\text{FIRST}(Rf) = \\{c, f\\}$. Since $\\epsilon \\in \\text{FIRST}(T)$, production (2) must be $T \\to \\epsilon$. Production (3) as $R \\to cTR$ matches $\\text{FIRST}(R) = \\{c, \\epsilon\\}$ and $\\text{FOLLOW}(R) = \\{f\\}$, matching option (A).",
       "tags": [
         "2024",
         "2_mark",
@@ -18795,7 +18809,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following grammar $G$, with $S$ as the start symbol. The grammar $G$ has three incomplete productions denoted by (1), (2), and (3).\n\\begin{align*}\nS &\\to daT \\mid (1) \\\\\nT &\\to aS \\mid bT \\mid (2) \\\\\nR &\\to (3) \\mid \\epsilon\n\\end{align*}\nThe set of terminals is $\\{a, b, c, d, f\\}$. The FIRST and FOLLOW sets of the different non-terminals are as follows:\n$$\\text{FIRST}(S) = \\{c, d, f\\}, \\quad \\text{FIRST}(T) = \\{a, b, \\epsilon\\}, \\quad \\text{FIRST}(R) = \\{c, \\epsilon\\}$$\n$$\\text{FOLLOW}(S) = \\text{FOLLOW}(T) = \\{c, f, \\$\\}, \\quad \\text{FOLLOW}(R) = \\{f\\}$$\nWhich one of the following options CORRECTLY fills in the incomplete productions?",
+      "options_latex": {
+        "A": "(1) $S \\to Rf$ (2) $T \\to \\epsilon$ (3) $R \\to cTR$",
+        "B": "(1) $S \\to fR$ (2) $T \\to \\epsilon$ (3) $R \\to cTR$",
+        "C": "(1) $S \\to fR$ (2) $T \\to cT$ (3) $R \\to cR$",
+        "D": "(1) $S \\to Rf$ (2) $T \\to cT$ (3) $R \\to cR$"
+      }
     },
     {
       "id": "2024_CS1_CS_Q39",
@@ -18825,10 +18846,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Intermediate code generation",
+      "difficulty_level": "Medium",
+      "explaination": "Leaders are instructions that start a basic block: $L_1$ (first instruction), targets of conditional/unconditional jumps ($L_4, L_{11}, L_3$), and instructions immediately following jumps ($L_{10}, L_{13}, L_{15}$). This gives 7 leaders: $\\{L_1, L_4, L_{10}, L_{11}, L_3, L_{13}, L_{15}\\}$, forming 7 basic blocks. The block starting at $L_4$ contains lines $L_4$ through $L_9$, which has 6 instructions, the maximum in any block.",
       "tags": [
         "2024",
         "2_mark",
@@ -18839,7 +18860,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following pseudo-code:\n\\begin{lstlisting}\nL1:  t1 = -1\nL2:  t2 = 0\nL3:  t3 = 0\nL4:  t4 = 4 * t3\nL5:  t5 = 4 * t2\nL6:  t6 = t5 * M\nL7:  t7 = t4 + t6\nL8:  t8 = a[t7]\nL9:  if t8 <= max goto L11\nL10: t1 = t8\nL11: t3 = t3 + 1\nL12: if t3 < M goto L4\nL13: t2 = t2 + 1\nL14: if t2 < N goto L3\nL15: max = t1\n\\end{lstlisting}\nWhich one of the following options CORRECTLY specifies the number of basic blocks and the number of instructions in the largest basic block, respectively?",
+      "options_latex": {
+        "A": "6 and 6",
+        "B": "6 and 7",
+        "C": "7 and 7",
+        "D": "7 and 6"
+      }
     },
     {
       "id": "2024_CS1_CS_Q40",
@@ -18869,10 +18897,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Concurrency and synchronization",
+      "difficulty_level": "Medium",
+      "explaination": "Initially $a=b=1$. Let statements be $T_1: [S_1: a=a+1, S_2: b=b+1]$ and $T_2: [S_3: b=2b, S_4: a=2a]$. Executing $T_1$ then $T_2$ yields $a=2, b=2 \\to b=4, a=4 \\implies (4, 4)$. Executing $T_2$ then $T_1$ yields $b=2, a=2 \\to a=3, b=3 \\implies (3, 3)$. Executing $S_1, S_3, S_4, S_2$ yields $a=2 \\to b=2 \\to a=4 \\to b=3 \\implies (4, 3)$. No valid interleaving can produce $(a=3, b=4)$.",
       "tags": [
         "2024",
         "2_mark",
@@ -18883,7 +18911,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following two threads T1 and T2 that update two shared variables `a` and `b`. Assume that initially $a = b = 1$. Though context switching between threads can happen at any time, each statement of T1 or T2 is executed atomically without interruption.\n\\begin{center}\n\\begin{tabular}{p{4cm}p{4cm}}\n\\textbf{T1} & \\textbf{T2} \\\\\n\\texttt{a = a + 1;} & \\texttt{b = 2 * b;} \\\\\n\\texttt{b = b + 1;} & \\texttt{a = 2 * a;}\n\\end{tabular}\n\\end{center}\nWhich one of the following options lists all the possible combinations of values of `a` and `b` after both T1 and T2 finish execution?",
+      "options_latex": {
+        "A": "$(a = 4, b = 4)$; $(a = 3, b = 3)$; $(a = 4, b = 3)$",
+        "B": "$(a = 3, b = 4)$; $(a = 4, b = 3)$; $(a = 3, b = 3)$",
+        "C": "$(a = 4, b = 4)$; $(a = 4, b = 3)$; $(a = 3, b = 4)$",
+        "D": "$(a = 2, b = 2)$; $(a = 2, b = 3)$; $(a = 3, b = 4)$"
+      }
     },
     {
       "id": "2024_CS1_CS_Q41",
@@ -18913,10 +18948,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees, binary search trees, binary heaps",
+      "difficulty_level": "Medium",
+      "explaination": "Applying standard bottom-up max-heap construction (Floyd's algorithm) to $[82, 101, 90, 11, 111, 75, 33, 131, 44, 93]$ of length 10: non-leaf nodes are heapified from index 5 down to 1. The maximum element 131 bubbles up to index 1 (root), its left child becomes 111 (index 2), and right child becomes 90 (index 3).",
       "tags": [
         "2024",
         "2_mark",
@@ -18927,7 +18962,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "An array $[82, 101, 90, 11, 111, 75, 33, 131, 44, 93]$ is heapified. Which one of the following options represents the first three elements in the heapified array?",
+      "options_latex": {
+        "A": "82, 90, 101",
+        "B": "82, 11, 93",
+        "C": "131, 11, 93",
+        "D": "131, 111, 90"
+      }
     },
     {
       "id": "2024_CS1_CS_Q42",
@@ -18957,10 +18999,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Asymptotic worst case time and space complexity",
+      "difficulty_level": "Medium",
+      "explaination": "Dividing $T(n) = \\sqrt{n} T(\\sqrt{n}) + n$ by $n$ gives $\\frac{T(n)}{n} = \\frac{T(\\sqrt{n})}{\\sqrt{n}} + 1$. Defining $S(n) = \\frac{T(n)}{n}$ yields $S(n) = S(\\sqrt{n}) + 1$. Substituting $n = 2^{2^k}$ gives $S(2^{2^k}) = S(2^{2^{k-1}}) + 1 = \\Theta(k) = \\Theta(\\log \\log n)$. Therefore, $T(n) = n S(n) = \\Theta(n \\log \\log n)$.",
       "tags": [
         "2024",
         "2_mark",
@@ -18971,7 +19013,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following recurrence relation:\n\\[ T(n) = \\begin{cases} \\sqrt{n} T(\\sqrt{n}) + n & \\text{for } n > 1, \\\\ 1 & \\text{for } n = 1. \\end{cases} \\]\nWhich one of the following options is CORRECT?",
+      "options_latex": {
+        "A": "$T(n) = \\Theta(n \\log \\log n)$",
+        "B": "$T(n) = \\Theta(n \\log n)$",
+        "C": "$T(n) = \\Theta(n^2 \\log n)$",
+        "D": "$T(n) = \\Theta(n^2 \\log \\log n)$"
+      }
     },
     {
       "id": "2024_CS1_CS_Q43",
@@ -19001,10 +19050,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees, binary search trees, binary heaps",
+      "difficulty_level": "Medium",
+      "explaination": "In a binary min-heap, every parent is strictly smaller than its children, so the maximum element cannot be an internal node and must reside at one of the leaf nodes. In a complete binary tree of $n = 105$ nodes, the number of leaf nodes is $\\lceil n/2 \\rceil = \\lceil 105/2 \\rceil = 53$. Hence, there are 53 possible index locations for the maximum element.",
       "tags": [
         "2024",
         "2_mark",
@@ -19015,7 +19064,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a binary min-heap containing 105 distinct elements. Let $k$ be the index (in the underlying array) of the maximum element stored in the heap. The number of possible values of $k$ is",
+      "options_latex": {
+        "A": "53",
+        "B": "52",
+        "C": "27",
+        "D": "1"
+      }
     },
     {
       "id": "2024_CS1_CS_Q44",
@@ -19047,10 +19103,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Integrity constraints, normal forms",
+      "difficulty_level": "Medium",
+      "explaination": "By Armstrong's decomposition axiom, $(X, Y) \\to (Z, W)$ implies $(X, Y) \\to Z$ (B is TRUE). By Armstrong's transitivity axiom, $X \\to Y$ and $Y \\to Z$ implies $X \\to Z$ (D is TRUE). By pseudotransitivity, $(X, Y) \\to Z$ and $W \\to Y$ implies $(X, W) \\to Z$ (C is TRUE). Decomposing the left-hand side determinant is invalid in general (A is FALSE).",
       "tags": [
         "2024",
         "2_mark",
@@ -19061,7 +19117,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The symbol $\\to$ indicates functional dependency in the context of a relational database. Which of the following options is/are TRUE?",
+      "options_latex": {
+        "A": "$(X, Y) \\to (Z, W)$ implies $X \\to (Z, W)$",
+        "B": "$(X, Y) \\to (Z, W)$ implies $(X, Y) \\to Z$",
+        "C": "$((X, Y) \\to Z \\text{ and } W \\to Y)$ implies $(X, W) \\to Z$",
+        "D": "$(X \\to Y \\text{ and } Y \\to Z)$ implies $X \\to Z$"
+      }
     },
     {
       "id": "2024_CS1_CS_Q45",
@@ -19091,10 +19154,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Graph traversals, minimum spanning trees, shortest paths",
+      "difficulty_level": "Hard",
+      "explaination": "In a BFS tree $T$, any edge $(u, w)$ in $G$ must connect vertices whose BFS levels differ by at most 1 (i.e., $\\text{level}(w) \\le \\text{level}(u) + 1$). A forward-edge in a DFS tree goes from ancestor $u$ to descendant $w$ with $\\text{level}(w) \\ge \\text{level}(u) + 2$. If such an edge existed in $G$, BFS would explore $w$ directly from $u$ at depth $\\text{level}(u) + 1$, contradicting the structure of $T$. Hence, no forward-edges can exist in $G$ with respect to $T$ (C is TRUE).",
       "tags": [
         "2024",
         "2_mark",
@@ -19105,7 +19168,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $G$ be a directed graph and $T$ a depth first search (DFS) spanning tree in $G$ that is rooted at a vertex $v$. Suppose $T$ is also a breadth first search (BFS) tree in $G$, rooted at $v$. Which of the following statements is/are TRUE for every such graph $G$ and tree $T$?",
+      "options_latex": {
+        "A": "There are no back-edges in $G$ with respect to the tree $T$",
+        "B": "There are no cross-edges in $G$ with respect to the tree $T$",
+        "C": "There are no forward-edges in $G$ with respect to the tree $T$",
+        "D": "The only edges in $G$ are the edges in $T$"
+      }
     },
     {
       "id": "2024_CS1_CS_Q46",
@@ -19137,10 +19207,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty_level": "Medium",
+      "explaination": "Examining data item conflicts: on item $y$, $w_3(y)$ in $T_3$ precedes both $r_2(y)$ and $w_2(y)$ in $T_2$, creating a precedence conflict edge $T_3 \\to T_2$. Transaction $T_1$ only accesses $z$ and has no conflicting operations with $T_2$ or $T_3$. Any serial schedule preserving $T_3$ before $T_2$ is conflict equivalent to $S$, namely $T_1 T_3 T_2$, $T_3 T_1 T_2$, and $T_3 T_2 T_1$.",
       "tags": [
         "2024",
         "2_mark",
@@ -19151,7 +19221,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following read-write schedule $S$ over three transactions $T_1, T_2$, and $T_3$, where the subscripts in the schedule indicate transaction IDs:\n\\[ S: r_1(z); w_1(z); r_2(x); r_3(y); w_3(y); r_2(y); w_2(x); w_2(y); \\]\nWhich of the following transaction schedules is/are conflict equivalent to $S$?",
+      "options_latex": {
+        "A": "$T_1 T_2 T_3$",
+        "B": "$T_1 T_3 T_2$",
+        "C": "$T_3 T_2 T_1$",
+        "D": "$T_3 T_1 T_2$"
+      }
     },
     {
       "id": "2024_CS1_CS_Q47",
@@ -19182,10 +19259,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Minimization",
+      "difficulty_level": "Easy",
+      "explaination": "The maxterm representation is the product of maxterms not in the minterm list: $\\prod(0, 1, 2, 4)$ (A is TRUE). Grouping minterms $\\Sigma(3, 5, 6, 7)$ on a 3-variable K-map: pairs are $(3, 7) \\implies YZ$, $(5, 7) \\implies XZ$, and $(6, 7) \\implies XY$, giving minimal SOP $F(X, Y, Z) = XY + YZ + XZ$ (B is TRUE).",
       "tags": [
         "2024",
         "2_mark",
@@ -19196,7 +19273,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a Boolean expression given by $F(X, Y, Z) = \\sum(3, 5, 6, 7)$. Which of the following statements is/are CORRECT?",
+      "options_latex": {
+        "A": "$F(X, Y, Z) = \\prod(0, 1, 2, 4)$",
+        "B": "$F(X, Y, Z) = XY + YZ + XZ$",
+        "C": "$F(X, Y, Z)$ is independent of input $Y$",
+        "D": "$F(X, Y, Z)$ is independent of input $X$"
+      }
     },
     {
       "id": "2024_CS1_CS_Q48",
@@ -19227,10 +19311,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Medium",
+      "explaination": "In each loop iteration, $x_{k+1} = 2x_k + y$. Solving this linear recurrence yields $x_y = 2^y x_0 + y(2^y - 1) = 2^y(x_0 + y) - y$. For $x=20, y=20$: $x_{20} = 2^{20}(40) - 20 > 2^{20}$ (B is TRUE). For $x=10, y=20$: $x_{20} = 2^{20}(30) - 20 > 2^{20}$ (D is TRUE). For $y=10, x=20$: $x_{10} = 2^{10}(30) - 10 = 30710 > 2^{10}$, so (A) and (C) are false.",
       "tags": [
         "2024",
         "2_mark",
@@ -19241,7 +19325,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C function definition:\n\\begin{lstlisting}[language=C]\nint f(int x, int y) {\n    for (int i = 0; i < y; i++) {\n        x = x + x + y;\n    }\n    return x;\n}\n\\end{lstlisting}\nWhich of the following statements is/are TRUE about the above function?",
+      "options_latex": {
+        "A": "If the inputs are $x=20, y=10$, then the return value is greater than $2^{20}$",
+        "B": "If the inputs are $x=20, y=20$, then the return value is greater than $2^{20}$",
+        "C": "If the inputs are $x=20, y=10$, then the return value is less than $2^{10}$",
+        "D": "If the inputs are $x=10, y=20$, then the return value is greater than $2^{20}$"
+      }
     },
     {
       "id": "2024_CS1_CS_Q49",
@@ -19271,10 +19362,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Linear Algebra",
+      "subtopic": "System of linear equations",
+      "difficulty_level": "Medium",
+      "explaination": "The solution space of the homogeneous system $Ax = 0$ is the null space of $A$, whose dimension is $\\text{nullity}(A) = m - \\text{rank}(A)$. Since $\\text{rank}(A) \\le n$, we have $\\text{nullity}(A) \\ge m - n$. This guarantees the existence of at least $m - n$ linearly independent solutions (A is TRUE). The nullity can exceed $m-n$ when $\\text{rank}(A) < n$, so (B) is not universally true.",
       "tags": [
         "2024",
         "2_mark",
@@ -19285,7 +19376,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $A$ be any $n \\times m$ matrix, where $m > n$. Which of the following statements is/are TRUE about the system of linear equations $Ax = 0$?",
+      "options_latex": {
+        "A": "There exist at least $m-n$ linearly independent solutions to this system",
+        "B": "There exist $m-n$ linearly independent vectors such that every solution is a linear combination of these vectors",
+        "C": "There exists a non-zero solution in which at least $m-n$ variables are 0",
+        "D": "There exists a solution in which at least $n$ variables are non-zero"
+      }
     },
     {
       "id": "2024_CS1_CS_Q50",
@@ -19316,10 +19414,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular expressions and finite automata",
+      "difficulty_level": "Medium",
+      "explaination": "States $p$ and $q$ are distinguishable if there exists a string $w$ such that exactly one of $\\delta(p, w)$ or $\\delta(q, w)$ is an accepting state. In DFA $M$, states 3 and 4 have identical transition behavior and both are non-accepting, making them equivalent/indistinguishable, so claiming they are distinguishable is FALSE (B is FALSE). Similarly, states 2 and 5 are equivalent, so claiming they are distinguishable is FALSE (C is FALSE).",
       "tags": [
         "2024",
         "2_mark",
@@ -19330,7 +19428,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the 5-state DFA $M$ accepting the language $L(M) \\subset (0 + 1)^*$ shown below. For any string $w \\in (0 + 1)^*$ let $n_0(w)$ be the number of 0's in $w$ and $n_1(w)$ be the number of 1's in $w$.\nWhich of the following statements is/are FALSE?",
+      "options_latex": {
+        "A": "States 2 and 4 are distinguishable in $M$",
+        "B": "States 3 and 4 are distinguishable in $M$",
+        "C": "States 2 and 5 are distinguishable in $M$",
+        "D": "Any string $w$ with $n_0(w) = n_1(w)$ is in $L(M)$"
+      }
     },
     {
       "id": "2024_CS1_CS_Q51",
@@ -19361,10 +19466,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Graphs: connectivity, matching, colouring",
+      "difficulty_level": "Medium",
+      "explaination": "A proper $k$-coloring partitions the $n$ vertices into $k$ independent sets. By the Pigeonhole Principle, at least one of these independent sets has size $\\ge \\lceil n/k \\rceil \\ge n/k$ (B is TRUE). In addition, every pair of color classes must have at least one edge between them (otherwise those two colors could be merged, yielding a $(k-1)$-coloring), requiring at least $\\binom{k}{2} = \\frac{k(k-1)}{2}$ edges (C is TRUE).",
       "tags": [
         "2024",
         "2_mark",
@@ -19375,7 +19480,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The chromatic number of a graph is the minimum number of colours used in a proper colouring of the graph. Let $G$ be any graph with $n$ vertices and chromatic number $k$. Which of the following statements is/are always TRUE?",
+      "options_latex": {
+        "A": "$G$ contains a complete subgraph with $k$ vertices",
+        "B": "$G$ contains an independent set of size at least $n/k$",
+        "C": "$G$ contains at least $k(k-1)/2$ edges",
+        "D": "$G$ contains a vertex of degree at least $k$"
+      }
     },
     {
       "id": "2024_CS1_CS_Q52",
@@ -19406,10 +19518,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Monoids, Groups",
+      "difficulty_level": "Medium",
+      "explaination": "For $\\square$: $a \\square b = ab$, which is associative since $(ab)c = a(bc)$ (B is TRUE). Distributivity of $\\square$ over $\\diamond$: $a \\square (b \\diamond c) = a(b + 2c) = ab + 2ac$. Comparing with $(a \\square b) \\diamond (a \\square c) = (ab) \\diamond (ac) = ab + 2(ac) = ab + 2ac$; both sides match identically, so $\\square$ distributes over $\\diamond$ (D is TRUE). For $\\diamond$: $(a \\diamond b) \\diamond c = a + 2b + 2c \\neq a + 2b + 4c = a \\diamond (b \\diamond c)$, so $\\diamond$ is not associative.",
       "tags": [
         "2024",
         "2_mark",
@@ -19420,7 +19532,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the operators $\\diamond$ and $\\square$ defined by $a \\diamond b = a + 2b$, $a \\square b = ab$, for positive integers. Which of the following statements is/are TRUE?",
+      "options_latex": {
+        "A": "Operator $\\diamond$ obeys the associative law",
+        "B": "Operator $\\square$ obeys the associative law",
+        "C": "Operator $\\diamond$ over the operator $\\square$ obeys the distributive law",
+        "D": "Operator $\\square$ over the operator $\\diamond$ obeys the distributive law"
+      }
     },
     {
       "id": "2024_CS1_CS_Q53",
@@ -19451,10 +19570,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory hierarchy: cache, main memory and secondary storage",
+      "difficulty_level": "Medium",
+      "explaination": "In a write-through cache (WTC), main memory is updated simultaneously on every cache write, meaning cache lines are never dirty and no eviction ever triggers a write-back to memory (B is TRUE). In a write-back cache (WBC), when a clean block receives a write hit, its dirty bit is set from 0 to 1 to indicate modification (C is TRUE).",
       "tags": [
         "2024",
         "2_mark",
@@ -19465,7 +19584,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider two set-associative cache memory architectures: WBC, which uses the write back policy, and WTC, which uses the write through policy. Both of them use the LRU (Least Recently Used) block replacement policy. The cache memory is connected to the main memory. Which of the following statements is/are TRUE?",
+      "options_latex": {
+        "A": "A read miss in WBC never evicts a dirty block",
+        "B": "A read miss in WTC never triggers a write back operation of a cache block to main memory",
+        "C": "A write hit in WBC can modify the value of the dirty bit of a cache block",
+        "D": "A write miss in WTC always writes the victim cache block to main memory before loading the missed block to the cache"
+      }
     },
     {
       "id": "2024_CS1_CS_Q54",
@@ -19491,10 +19617,10 @@
         "min": 4096.0,
         "max": 4096.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory hierarchy: cache, main memory and secondary storage",
+      "difficulty_level": "Easy",
+      "explaination": "Disk capacity $= 512\\text{ GB} = 512 \\times 2^{30}\\text{ bytes} = 2^{39}$ bytes. One cylinder comprises 32 surfaces $\\times 4096$ sectors/track $\\times 1024$ bytes/sector $= 2^5 \\times 2^{12} \\times 2^{10} = 2^{27}$ bytes. Number of cylinders $= \\frac{2^{39}}{2^{27}} = 2^{12} = 4096$.",
       "tags": [
         "2024",
         "2_mark",
@@ -19504,7 +19630,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a 512 GB hard disk with 32 storage surfaces. There are 4096 sectors per track and each sector holds 1024 bytes of data. The number of cylinders in the hard disk is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q55",
@@ -19530,10 +19658,10 @@
         "min": 3.0,
         "max": 3.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Instruction pipelining, pipeline hazards",
+      "difficulty_level": "Medium",
+      "explaination": "Baseline runtime is $100\\text{ ns}$, with $90\\text{ ns}$ parallelizable and $10\\text{ ns}$ serial. On $p$ cores, the parallel portion takes $\\frac{90}{p}\\text{ ns}$ with core overhead of $10(p-1)\\text{ ns}$. Total execution time $T(p) = 10 + \\frac{90}{p} + 10(p-1) = \\frac{90}{p} + 10p$. Evaluating: $T(1) = 100\\text{ ns}$, $T(2) = 65\\text{ ns}$, $T(3) = 60\\text{ ns}$, $T(4) = 62.5\\text{ ns}$. The time is minimized at $p = 3$ cores.",
       "tags": [
         "2024",
         "2_mark",
@@ -19543,7 +19671,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The baseline execution time of a program on a 2 GHz single core machine is 100 nanoseconds (ns). The code corresponding to 90\\% of the execution time can be fully parallelized. The overhead for using an additional core is 10 ns when running on a multicore system. Assume that all cores in the multicore system run their share of the parallelized code for an equal amount of time.\nThe number of cores that minimize the execution time of the program is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q56",
@@ -19569,10 +19699,10 @@
         "min": 3.0,
         "max": 3.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory hierarchy: cache, main memory and secondary storage",
+      "difficulty_level": "Medium",
+      "explaination": "Total CPI is given by $\\text{CPI} = \\text{CPI}_{\\text{ideal}} + (\\text{I-miss rate} \\times \\text{penalty}) + (\\text{Data-instruction fraction} \\times \\text{D-miss rate} \\times \\text{penalty}) = 2 + (0.02 \\times 100) + (0.25 \\times 0.08 \\times 100) = 2 + 2 + 2 = 6$. For a perfect cache with no misses, $\\text{CPI}_{\\text{perfect}} = \\text{CPI}_{\\text{ideal}} = 2$. Speedup $= \\frac{6}{2} = 3.00$.",
       "tags": [
         "2024",
         "2_mark",
@@ -19582,7 +19712,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A given program has 25\\% load/store instructions. Suppose the ideal CPI (cycles per instruction) without any memory stalls is 2. The program exhibits 2\\% miss rate on instruction cache and 8\\% miss rate on data cache. The miss penalty is 100 cycles.\nThe speedup (rounded off to two decimal places) achieved with a perfect cache (i.e., with NO data or instruction cache misses) is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in numeric format)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q57",
@@ -19608,10 +19740,10 @@
         "min": 14.0,
         "max": 14.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "System calls, processes, threads, inter-process communication",
+      "difficulty_level": "Medium",
+      "explaination": "Initially 1 process with $x=3$. Iteration 1 ($x=3$): `fork()` creates 1 child (total 2 processes); both print \"hello\" (2 prints) and decrement $x$ to 2. Iteration 2 ($x=2$): each of the 2 processes forks (total 4 processes); all 4 print \"hello\" (4 prints) and decrement $x$ to 1. Iteration 3 ($x=1$): each of the 4 processes forks (total 8 processes); all 8 print \"hello\" (8 prints) and decrement $x$ to 0, whereupon the loop ends. Total prints $= 2 + 4 + 8 = 14$.",
       "tags": [
         "2024",
         "2_mark",
@@ -19621,7 +19753,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following code snippet using the `fork()` and `wait()` system calls. Assume that the code compiles and runs correctly, and that the system calls run successfully without any errors.\n\\begin{lstlisting}[language=C]\nint x = 3;\nwhile(x > 0) {\n    fork();\n    printf(\"hello\");\n    wait(NULL);\n    x--;\n}\n\\end{lstlisting}\nThe total number of times the `printf` statement is executed is \\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q58",
@@ -19647,10 +19781,10 @@
         "min": 40.0,
         "max": 40.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Routing protocols: shortest path, flooding, distance vector and link state routing",
+      "difficulty_level": "Medium",
+      "explaination": "Using longest prefix match for each host address: 10.1.1.16 matches /24 (R1); 10.1.1.72 matches /24 and 10.1.1.64/26 (R3); 10.1.1.132 matches /24 and 10.1.1.128/25 (R2); 10.1.1.191 matches /24 and 10.1.1.128/25 (R2); 10.1.1.205 matches /24, /25, and 10.1.1.192/26 (R4). Thus, 2 hosts (10.1.1.132 and 10.1.1.191) match router R2. Total packets forwarded via R2 $= 2 \\times 20 = 40$.",
       "tags": [
         "2024",
         "2_mark",
@@ -19660,7 +19794,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the entries shown below in the forwarding table of an IP router. Each entry consists of an IP prefix and the corresponding next hop router for packets whose destination IP address matches the prefix. The notation ``/N'' in a prefix indicates a subnet mask with the most significant $N$ bits set to 1.\n\\begin{center}\n\\begin{tabular}{|l|c|}\n\\hline\n\\textbf{Prefix} & \\textbf{Next hop router} \\\\\n\\hline\n10.1.1.0/24 & R1 \\\\\n10.1.1.128/25 & R2 \\\\\n10.1.1.64/26 & R3 \\\\\n10.1.1.192/26 & R4 \\\\\n\\hline\n\\end{tabular}\n\\end{center}\nThis router forwards 20 packets each to 5 hosts. The IP addresses of the hosts are 10.1.1.16, 10.1.1.72, 10.1.1.132, 10.1.1.191, and 10.1.1.205. The number of packets forwarded via the next hop router R2 is \\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q59",
@@ -19686,10 +19822,10 @@
         "min": 179.0,
         "max": 179.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Context-free grammars and push-down automata",
+      "difficulty_level": "Medium",
+      "explaination": "In a Chomsky Normal Form (CNF) grammar, every production is either $A \\to BC$ or $A \\to a$. Deriving a string of length $n$ requires $n-1$ non-terminal splitting steps ($A \\to BC$) followed by $n$ terminal production steps ($A \\to a$), totaling $2n-1$ steps. For $w = a^{30}b^{30}c^{30}$, the length is $n = 90$, so the number of derivation steps is $2(90) - 1 = 179$.",
       "tags": [
         "2024",
         "2_mark",
@@ -19699,7 +19835,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $G = (V, \\Sigma, S, P)$ be a context-free grammar in Chomsky Normal Form with $\\Sigma = \\{a, b, c\\}$ and $V$ containing 10 variable symbols including the start symbol $S$. The string $w = a^{30}b^{30}c^{30}$ is derivable from $S$. The number of steps (application of rules) in the derivation $S \\Rightarrow^* w$ is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q60",
@@ -19725,10 +19863,10 @@
         "min": 60.0,
         "max": 60.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Graphs: connectivity, matching, colouring",
+      "difficulty_level": "Easy",
+      "explaination": "A DFS traversal of an undirected graph with $V$ vertices and $k$ connected components produces a spanning forest containing $k$ trees. A tree with $v_i$ vertices contains $v_i - 1$ edges, so the total number of tree edges in the forest is $\\sum (v_i - 1) = V - k$. Given $V = 100$ and $E = 40$, we have $40 = 100 - k \\implies k = 60$ connected components.",
       "tags": [
         "2024",
         "2_mark",
@@ -19738,7 +19876,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The number of edges present in the forest generated by the DFS traversal of an undirected graph $G$ with 100 vertices is 40. The number of connected components in $G$ is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q61",
@@ -19764,10 +19904,10 @@
         "min": 44.0,
         "max": 44.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular expressions and finite automata",
+      "difficulty_level": "Medium",
+      "explaination": "The total number of binary strings of length $\\le 5$ is $\\sum_{i=0}^5 2^i = 1+2+4+8+16+32 = 63$. Language $L(r) = 0^* + 1^*$ contains $\\epsilon$ and $0^k, 1^k$ for each length $k \\in \\{1..5\\}$ (11 strings). Language $L(s) = 01^* + 10^*$ contains $01^{k-1}$ and $10^{k-1}$ for each length $k \\in \\{1..5\\}$. At $k=1$, $0$ and $1$ overlap with $L(r)$; for $k \\in \\{2..5\\}$, the $4 \\times 2 = 8$ strings are disjoint from $L(r)$. Thus, $|L(r) \\cup L(s)| = 11 + 8 = 19$. The number of strings in neither language is $63 - 19 = 44$.",
       "tags": [
         "2024",
         "2_mark",
@@ -19777,7 +19917,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following two regular expressions over the alphabet $\\{0,1\\}$:\n\\[ r = 0^* + 1^* \\]\n\\[ s = 01^* + 10^* \\]\nThe total number of strings of length less than or equal to 5, which are neither in $r$ nor in $s$, is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q62",
@@ -19803,10 +19945,10 @@
         "min": 6596.0,
         "max": 6596.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Memory management and virtual memory",
+      "difficulty_level": "Easy",
+      "explaination": "With page size $2\\text{ KB} = 2048\\text{ bytes}$, virtual address $2500$ has virtual page number $\\lfloor 2500 / 2048 \\rfloor = 1$ and offset $2500 \\pmod{2048} = 452$. Page 1 maps to frame 3. The physical address is $(\\text{frame } 3 \\times 2048) + \\text{offset } 452 = 6144 + 452 = 6596$.",
       "tags": [
         "2024",
         "2_mark",
@@ -19816,7 +19958,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a memory management system that uses a page size of 2 KB. Assume that both the physical and virtual addresses start from 0. Assume that the pages 0, 1, 2, and 3 are stored in the page frames 1, 3, 2, and 0, respectively. The physical address (in decimal format) corresponding to the virtual address 2500 (in decimal format) is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q63",
@@ -19842,10 +19986,10 @@
         "min": 0.37,
         "max": 0.38
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Probability and Statistics",
+      "subtopic": "Conditional probability and Bayes theorem",
+      "difficulty_level": "Easy",
+      "explaination": "Let $R_1, R_2$ be the events of drawing red balls on the first and second draws without replacement. The conditional probability that both are red given the first is red is $P(R_1 \\cap R_2 \\mid R_1) = P(R_2 \\mid R_1)$. Given that 1 red ball is already drawn, 9 red balls remain out of $9 + 15 = 24$ total balls, so $P(R_2 \\mid R_1) = \\frac{9}{24} = \\frac{3}{8} = 0.375$.",
       "tags": [
         "2024",
         "2_mark",
@@ -19855,7 +19999,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A bag contains 10 red balls and 15 blue balls. Two balls are drawn randomly without replacement. Given that the first ball drawn is red, the probability (rounded off to 3 decimal places) that both balls drawn are red is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in numeric format)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q65",
@@ -19881,10 +20027,10 @@
         "min": 6.0,
         "max": 6.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Fragmentation and IP addressing, IPv4, CIDR notation",
+      "difficulty_level": "Medium",
+      "explaination": "The datagram has 20 bytes IP header and 1400 bytes data. Link 1 has $\\text{MTU} = 542$ bytes (max data per fragment is $\\lfloor (542-20)/8 \\rfloor \\times 8 = 520$ bytes), producing 3 fragments with data sizes 520, 520, and 360 bytes. Link 2 has $\\text{MTU} = 360$ bytes (max data is $\\lfloor (360-20)/8 \\rfloor \\times 8 = 336$ bytes). At router Q, fragment 1 (520 bytes) is fragmented into 2 ($336 + 184$), fragment 2 (520 bytes) is fragmented into 2 ($336 + 184$), and fragment 3 (360 bytes) is fragmented into 2 ($336 + 24$). Total fragments delivered at the receiver $= 2 + 2 + 2 = 6$.",
       "tags": [
         "2024",
         "2_mark",
@@ -19894,7 +20040,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider sending an IP datagram of size 1420 bytes (including 20 bytes of IP header) from a sender to a receiver over a path of two links with a router between them. The first link (sender to router) has an MTU (Maximum Transmission Unit) size of 542 bytes, while the second link (router to receiver) has an MTU size of 360 bytes. The number of fragments that would be delivered at the receiver is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_GA_Q06",
@@ -19924,10 +20072,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'Keep one's head down' means to stay focused and avoid trouble. 'Heading out' means going forth/departing. Having a 'head for' an activity signifies natural aptitude for it, and having a cool 'head on' one's shoulders means remaining calm and composed.",
       "tags": [
         "2024",
         "2_mark",
@@ -19938,7 +20086,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In the given text, the blanks are numbered (i)--(iv). Select the best match for all the blanks.\n\nSteve was advised to keep his head (i)\\_\\_\\_\\_ before heading (ii)\\_\\_\\_\\_ to bat; for, while he had a head (iii)\\_\\_\\_\\_ batting, he could only do so with a cool head (iv)\\_\\_\\_\\_ his shoulders.",
+      "options_latex": {
+        "A": "(i) down (ii) down (iii) on (iv) for",
+        "B": "(i) on (ii) down (iii) for (iv) on",
+        "C": "(i) down (ii) out (iii) for (iv) on",
+        "D": "(i) on (ii) out (iii) on (iv) for"
+      }
     },
     {
       "id": "2024_CS1_GA_Q07",
@@ -19968,10 +20123,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Mensuration and geometry",
+      "difficulty_level": "Medium",
+      "explaination": "Joining the longer edges ($54\\text{ cm}$) creates a cylinder with height $h = 54\\text{ cm}$ and circumference $2\\pi r = 4\\text{ cm} \\implies r = \\frac{2}{\\pi}$, giving volume $V_{\\text{cyl}} = \\pi r^2 h = \\frac{216}{\\pi}$. The sheet area is $54 \\times 4 = 216\\text{ cm}^2$. A cube with surface area $6a^2 = 216$ has edge $a = 6\\text{ cm}$ and volume $V_{\\text{cube}} = 6^3 = 216$. Thus $\\frac{V_{\\text{cyl}}}{V_{\\text{cube}}} = \\frac{216/\\pi}{216} = \\frac{1}{\\pi}$.",
       "tags": [
         "2024",
         "2_mark",
@@ -19982,7 +20137,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A rectangular paper sheet of dimensions $54\\text{ cm} \\times 4\\text{ cm}$ is taken. The two longer edges of the sheet are joined together to create a cylindrical tube. A cube whose surface area is equal to the area of the sheet is also taken.\nThen, the ratio of the volume of the cylindrical tube to the volume of the cube is",
+      "options_latex": {
+        "A": "$1/\\pi$",
+        "B": "$2/\\pi$",
+        "C": "$3/\\pi$",
+        "D": "$4/\\pi$"
+      }
     },
     {
       "id": "2024_CS1_GA_Q09",
@@ -20012,10 +20174,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Spatial Aptitude",
+      "subtopic": "Paper folding, cutting, and patterns in 2 and 3 dimensions",
+      "difficulty_level": "Medium",
+      "explaination": "Starting at $20 \\times 8\\text{ cm}$, the 1st fold perpendicular to the long edge yields $10 \\times 8\\text{ cm}$. The 2nd fold perpendicular to the new long edge ($10\\text{ cm}$) yields $5 \\times 8\\text{ cm}$. The 3rd fold perpendicular to the new long edge ($8\\text{ cm}$) yields $5 \\times 4\\text{ cm}$. The perimeter of this final folded sheet is $2(5 + 4) = 18\\text{ cm}$.",
       "tags": [
         "2024",
         "2_mark",
@@ -20026,7 +20188,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A rectangular paper of $20\\text{ cm} \\times 8\\text{ cm}$ is folded 3 times. Each fold is made along the line of symmetry, which is perpendicular to its long edge. The perimeter of the final folded sheet (in cm) is",
+      "options_latex": {
+        "A": "18",
+        "B": "24",
+        "C": "20",
+        "D": "21"
+      }
     },
     {
       "id": "2024_CS1_GA_Q10",
@@ -20056,10 +20225,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Spatial Aptitude",
+      "subtopic": "Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping",
+      "difficulty_level": "Medium",
+      "explaination": "Reflecting each shaded cell across the diagonal axis $AB$ reveals that exactly 6 asymmetric squares must be shaded on the opposing side to achieve bilateral reflectional symmetry about line $AB$.",
       "tags": [
         "2024",
         "2_mark",
@@ -20070,7 +20239,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The least number of squares to be added in the figure to make $AB$ a line of symmetry is",
+      "options_latex": {
+        "A": "6",
+        "B": "4",
+        "C": "5",
+        "D": "7"
+      }
     },
     {
       "id": "2024_CS2_CS_Q36",

@@ -1,0 +1,2716 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.5cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm
+}
+
+% Persistent Unremovable Canvas Watermark on Every Page (Shared XObject)
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=8cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.png} \\[-0.5em]
+        {\fontsize{18}{22}\selectfont\bfseries\scshape www.studiva.co.in}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.12] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape GATE 2024 Computer Science and Information Technology (CS1)}
+\fancyhead[R]{\small\scshape Practice Question Bank with Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026} Studiva\textsuperscript{TM}}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\raisebox{-0.2em}{\includegraphics[height=1.0em]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.png}}\hspace{0.35em}\scriptsize\texttt{www.studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Code Listing Style (Monochrome, clean)
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=none,
+    frame=none,
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: DEDICATED IMPRINT & COPYRIGHT PAGE ====================
+\thispagestyle{empty}
+\vspace*{0.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.png}\\[0.6em]
+    {\LARGE \textbf{GATE 2024 COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTION BANK WITH SOLUTIONS}}\\[0.2em]
+    {\normalsize \textsc{Session CS1 $\cdot$ Examination Year 2024}}\\[1.2em]
+    \rule{0.6\textwidth}{0.6pt}
+\end{center}
+
+\vspace{1em}
+\noindent\begin{tabular}{ll}
+\textbf{Author / Compiler:} & Rupam Ghosh \\
+\textbf{Publisher \& Platform:} & Studiva\textsuperscript{TM} (\texttt{www.studiva.co.in}) \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Standard Edition (2026) \\
+\textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
+\end{tabular}
+
+\vspace{1.5em}
+\begin{tcolorbox}[enhanced, standard jigsaw, opacityback=0, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva\textsuperscript{TM}. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva\textsuperscript{TM}}.\\[0.6em]
+\textbf{Terms of Use \& Attribution Rules:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva\textsuperscript{TM}} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
+    \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
+\end{itemize}
+\vspace{0.6em}
+\textbf{Fair Use Disclaimer:}\\
+The underlying examination questions originate from the Graduate Aptitude Test in Engineering (GATE), conducted by the Indian Institutes of Technology (IITs) and Indian Institute of Science (IISc). Question texts are reproduced for non-commercial educational study under Fair Use doctrines. No copyright is claimed over the original GATE examination question texts.
+\end{tcolorbox}
+
+\vspace{1.2em}
+\begin{center}
+\small\itshape
+Practice Recommendation: Use an opaque sheet of paper or ruler to cover the right-hand column during mock attempts. Tick your chosen answers directly in the check boxes on the left, then slide the cover to check the solution and hint.
+\end{center}
+
+\newpage
+% ==================== PAGE 2 ONWARDS: QUESTION BANK WITH SOLUTIONS ====================
+
+\vspace{6pt}
+\subsection*{General Aptitude}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.1} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2024\_CS1\_GA\_Q01}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+If `$\to$' denotes increasing order of intensity, then the meaning of the words $[\text{dry} \to \text{arid} \to \text{parched}]$ is analogous to $[\text{diet} \to \text{fast} \to \text{\_\_\_\_\_\_\_\_}]$.
+Which one of the given options is appropriate to fill the blank?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} starve & $\square$\ \textbf{(B)} reject \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} feast & $\square$\ \textbf{(D)} deny
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Vocabulary: words, idioms, and phrases in context}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small 'dry $\to$ arid $\to$ parched' depicts an increasing scale of lack of moisture. Similarly, 'diet $\to$ fast $\to$ starve' depicts an increasing scale of food restriction/deprivation, where starving represents extreme lack of nourishment.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.2} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2024\_CS1\_GA\_Q02}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+If two distinct non-zero real variables $x$ and $y$ are such that $(x+y)$ is proportional to $(x-y)$ then the value of $\frac{x}{y}$
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} depends on $xy$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} depends only on $x$ and not on $y$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} depends only on $y$ and not on $x$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} is a constant
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small If $(x+y) \propto (x-y)$, then $x+y = k(x-y)$ for some non-zero constant $k \neq 1$. Rearranging terms gives $x(1-k) = -y(1+k) \implies \frac{x}{y} = \frac{k+1}{k-1}$, which is a constant independent of $x$ and $y$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.3} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2024\_CS1\_GA\_Q03}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following sample of numbers:
+\[ 9, 18, 11, 14, 15, 17, 10, 69, 11, 13 \]
+The median of the sample is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 13.5 & $\square$\ \textbf{(B)} 14 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 11 & $\square$\ \textbf{(D)} 18.7
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Elementary statistics and probability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Arranging the 10 sample values in ascending order: $9, 10, 11, 11, 13, 14, 15, 17, 18, 69$. Since the sample size $n = 10$ is even, the median is the arithmetic mean of the 5th and 6th values: $\frac{13 + 14}{2} = 13.5$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.4} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2024\_CS1\_GA\_Q04}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The number of coins of Rs.~1, Rs.~5, and Rs.~10 denominations that a person has are in the ratio $5:3:13$. Of the total amount, the percentage of money in Rs.~5 coins is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 21\% & $\square$\ \textbf{(B)} $14\frac{2}{7}\%$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 10\% & $\square$\ \textbf{(D)} 30\%
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let the number of Rs.~1, Rs.~5, and Rs.~10 coins be $5k$, $3k$, and $13k$ respectively. The total value is $1(5k) + 5(3k) + 10(13k) = 5k + 15k + 130k = 150k$. The percentage of money in Rs.~5 coins is $\frac{15k}{150k} \times 100\% = 10\%$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.5} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2024\_CS1\_GA\_Q05}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+For positive non-zero real variables $p$ and $q$, if
+\[ \log(p^2 + q^2) = \log p + \log q + 2\log 3, \]
+then, the value of $\frac{p^4+q^4}{p^2q^2}$ is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 79 & $\square$\ \textbf{(B)} 81 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 9 & $\square$\ \textbf{(D)} 83
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Using logarithm rules, $\log(p^2 + q^2) = \log p + \log q + 2\log 3 = \log(9pq) \implies p^2 + q^2 = 9pq$. Squaring both sides yields $(p^2+q^2)^2 = p^4 + q^4 + 2p^2q^2 = 81p^2q^2$, which gives $p^4 + q^4 = 79p^2q^2$. Hence, $\frac{p^4+q^4}{p^2q^2} = 79$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.6} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2024\_CS1\_GA\_Q06}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In the given text, the blanks are numbered (i)--(iv). Select the best match for all the blanks.
+\par\medskip
+Steve was advised to keep his head (i)\_\_\_\_ before heading (ii)\_\_\_\_ to bat; for, while he had a head (iii)\_\_\_\_ batting, he could only do so with a cool head (iv)\_\_\_\_ his shoulders.
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} (i) down (ii) down (iii) on (iv) for \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} (i) on (ii) down (iii) for (iv) on \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (i) down (ii) out (iii) for (iv) on \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} (i) on (ii) out (iii) on (iv) for
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Vocabulary: words, idioms, and phrases in context}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small 'Keep one's head down' means to stay focused and avoid trouble. 'Heading out' means going forth/departing. Having a 'head for' an activity signifies natural aptitude for it, and having a cool 'head on' one's shoulders means remaining calm and composed.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.7} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2024\_CS1\_GA\_Q07}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A rectangular paper sheet of dimensions $54\text{ cm} \times 4\text{ cm}$ is taken. The two longer edges of the sheet are joined together to create a cylindrical tube. A cube whose surface area is equal to the area of the sheet is also taken.
+Then, the ratio of the volume of the cylindrical tube to the volume of the cube is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $1/\pi$ & $\square$\ \textbf{(B)} $2/\pi$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $3/\pi$ & $\square$\ \textbf{(D)} $4/\pi$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Mensuration and geometry}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Joining the longer edges ($54\text{ cm}$) creates a cylinder with height $h = 54\text{ cm}$ and circumference $2\pi r = 4\text{ cm} \implies r = \frac{2}{\pi}$, giving volume $V_{\text{cyl}} = \pi r^2 h = \frac{216}{\pi}$. The sheet area is $54 \times 4 = 216\text{ cm}^2$. A cube with surface area $6a^2 = 216$ has edge $a = 6\text{ cm}$ and volume $V_{\text{cube}} = 6^3 = 216$. Thus $\frac{V_{\text{cyl}}}{V_{\text{cube}}} = \frac{216/\pi}{216} = \frac{1}{\pi}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.9} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2024\_CS1\_GA\_Q09}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A rectangular paper of $20\text{ cm} \times 8\text{ cm}$ is folded 3 times. Each fold is made along the line of symmetry, which is perpendicular to its long edge. The perimeter of the final folded sheet (in cm) is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 18 & $\square$\ \textbf{(B)} 24 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 20 & $\square$\ \textbf{(D)} 21
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Spatial Aptitude \\
+\textbf{Subtopic:} \textit{Paper folding, cutting, and patterns in 2 and 3 dimensions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Starting at $20 \times 8\text{ cm}$, the 1st fold perpendicular to the long edge yields $10 \times 8\text{ cm}$. The 2nd fold perpendicular to the new long edge ($10\text{ cm}$) yields $5 \times 8\text{ cm}$. The 3rd fold perpendicular to the new long edge ($8\text{ cm}$) yields $5 \times 4\text{ cm}$. The perimeter of this final folded sheet is $2(5 + 4) = 18\text{ cm}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.10} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2024\_CS1\_GA\_Q10}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The least number of squares to be added in the figure to make $AB$ a line of symmetry is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 6 & $\square$\ \textbf{(B)} 4 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 5 & $\square$\ \textbf{(D)} 7
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Spatial Aptitude \\
+\textbf{Subtopic:} \textit{Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Reflecting each shaded cell across the diagonal axis $AB$ reveals that exactly 6 asymmetric squares must be shaded on the opposing side to achieve bilateral reflectional symmetry about line $AB$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\vspace{6pt}
+\subsection*{Computer Science and Information Technology}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.11} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q11}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $f: \mathbb{R} \to \mathbb{R}$ be a function such that $f(x) = \max\{x, x^3\}$, where $\mathbb{R}$ is the set of all real numbers. The set of all points where $f(x)$ is NOT differentiable is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $\{-1, 1, 2\}$ & $\square$\ \textbf{(B)} $\{-2, -1, 1\}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\{0, 1\}$ & $\square$\ \textbf{(D)} $\{-1, 0, 1\}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Calculus \\
+\textbf{Subtopic:} \textit{Limits, continuity and differentiability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The functions $y = x$ and $y = x^3$ intersect at $x^3 - x = 0 \implies x \in \{-1, 0, 1\}$. The maximum function $f(x) = \max\{x, x^3\}$ switches between $x$ and $x^3$ at each of these three intersection points. Because the left and right derivatives at each transition point differ ($f'(-1^-) = 3 \neq 1 = f'(-1^+)$, $f'(0^-) = 1 \neq 0 = f'(0^+)$, $f'(1^-) = 1 \neq 3 = f'(1^+)$), $f(x)$ is not differentiable at $\{-1, 0, 1\}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.12} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q12}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The product of all eigenvalues of the matrix $\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$ is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $-1$ & $\square$\ \textbf{(B)} 0 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 1 & $\square$\ \textbf{(D)} 2
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{Eigenvalues and eigenvectors}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The product of all eigenvalues of a square matrix equals its determinant $\det(A)$. In $A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$, the rows are in arithmetic progression with $R_3 - R_2 = R_2 - R_1 = [3, 3, 3]$, making the rows linearly dependent and $\det(A) = 0$. Hence, the product of the eigenvalues is 0.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.13} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q13}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a system that uses 5 bits for representing signed integers in 2's complement format. In this system, two integers $A$ and $B$ are represented as $A = 01010$ and $B = 11010$. Which one of the following operations will result in either an arithmetic overflow or an arithmetic underflow?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $A + B$ & $\square$\ \textbf{(B)} $A - B$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $B - A$ & $\square$\ \textbf{(D)} $2 * B$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Number representations and computer arithmetic (fixed and floating point)}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a 5-bit 2's complement representation, the range is $[-2^4, 2^4 - 1] = [-16, +15]$. Here, $A = 01010_2 = +10$ and $B = 11010_2 = -6$. The operation $A - B = 10 - (-6) = +16$, which exceeds $+15$, resulting in an arithmetic overflow.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.14} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q14}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a permutation sampled uniformly at random from the set of all permutations of $\{1, 2, 3, \dots, n\}$ for some $n \ge 4$. Let $X$ be the event that 1 occurs before 2 in the permutation, and $Y$ the event that 3 occurs before 4. Which one of the following statements is TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The events $X$ and $Y$ are mutually exclusive \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The events $X$ and $Y$ are independent \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Either event $X$ or $Y$ must occur \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Event $X$ is more likely than event $Y$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Conditional probability and Bayes theorem}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small By symmetry in random permutations of $\{1, 2, \dots, n\}$, $P(X) = P(1 \text{ before } 2) = 1/2$, and $P(Y) = P(3 \text{ before } 4) = 1/2$. Because the relative order of the disjoint pair $\{1, 2\}$ has no bearing on the relative order of $\{3, 4\}$, the joint probability is $P(X \cap Y) = 1/4 = P(X)P(Y)$, proving that $X$ and $Y$ are independent.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.15} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q15}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which one of the following statements is FALSE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} In the cycle stealing mode of DMA, one word of data is transferred between an I/O device and main memory in a stolen cycle \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} For bulk data transfer, the burst mode of DMA has a higher throughput than the cycle stealing mode \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Programmed I/O mechanism has a better CPU utilization than the interrupt driven I/O mechanism \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The CPU can start executing an interrupt service routine faster with vectored interrupts than with non-vectored interrupts
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{I/O interface: interrupt and DMA mode}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Programmed I/O requires the CPU to stay in a busy-waiting polling loop to check device readiness, wasting processor cycles and yielding poor CPU utilization. Interrupt-driven I/O frees the CPU to execute other tasks while I/O operations are underway, providing significantly better CPU utilization. Thus, statement (C) is FALSE.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.16} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q16}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A user starts browsing a webpage hosted at a remote server. The browser opens a single TCP connection to fetch the entire webpage from the server. The webpage consists of a top-level index page with multiple embedded image objects. Assume that all caches (e.g., DNS cache, browser cache) are all initially empty. The following packets leave the user's computer in some order:
+\begin{enumerate}[label=(\roman*),itemsep=0pt,topsep=2pt]
+\item HTTP GET request for the index page
+\item DNS request to resolve the web server's name to its IP address
+\item HTTP GET request for an image object
+\item TCP SYN to open a connection to the web server
+\end{enumerate}
+Which one of the following is the CORRECT chronological order (earliest in time to latest) of the packets leaving the computer?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} (iv), (ii), (iii), (i) & $\square$\ \textbf{(B)} (ii), (iv), (iii), (i) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (ii), (iv), (i), (iii) & $\square$\ \textbf{(D)} (iv), (ii), (i), (iii)
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Concept of layering: OSI and TCP/IP Protocol Stacks}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Initially all caches are empty. The client must first send a DNS query (ii) to resolve the server hostname to an IP. Next, it establishes a TCP connection by sending TCP SYN (iv). Once connected, it sends an HTTP GET request for the index HTML page (i). After parsing the HTML and identifying embedded images, it sends HTTP GET requests for the images (iii).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.17} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q17}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Given an integer array of size $N$, we want to check if the array is sorted (in either ascending or descending order). An algorithm solves this problem by making a single pass through the array and comparing each element of the array only with its adjacent elements. The worst-case time complexity of this algorithm is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} both $\mathcal{O}(N)$ and $\Omega(N)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\mathcal{O}(N)$ but not $\Omega(N)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\Omega(N)$ but not $\mathcal{O}(N)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} neither $\mathcal{O}(N)$ nor $\Omega(N)$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Algorithms \\
+\textbf{Subtopic:} \textit{Asymptotic worst case time and space complexity}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In the worst case (such as when the array is sorted or the disorder occurs at the very end), a single-pass algorithm that compares adjacent elements must traverse the entire array, performing $N-1$ comparisons. The worst-case runtime is asymptotically tight at $\Theta(N)$, meaning it is both $\mathcal{O}(N)$ and $\Omega(N)$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.18} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q18}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following C program:
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+int main() {
+    int a = 6;
+    int b = 0;
+    while(a < 10) {
+        a = a / 12 + 1;
+        a += b;
+    }
+    printf("%d", a);
+    return 0;
+}
+\end{lstlisting}
+Which one of the following statements is CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The program prints 9 as output \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The program prints 10 as output \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The program gets stuck in an infinite loop \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The program prints 6 as output
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Programming and Data Structures \\
+\textbf{Subtopic:} \textit{Programming in C}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Initially $a = 6, b = 0$. In the loop, integer division $a/12 = 6/12 = 0$, so $a = 0 + 1 = 1$, and $a += b \implies a = 1$. In subsequent iterations, $a=1 < 10$, $1/12 + 1 = 1$, so $a$ remains 1 in every iteration. The loop condition $a < 10$ remains true indefinitely, causing an infinite loop.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.19} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q19}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following C program:
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+void fX();
+int main() {
+    fX();
+    return 0;
+}
+void fX() {
+    char a;
+    if((a = getchar()) != '\n')
+        fX();
+    if(a != '\n')
+        putchar(a);
+}
+\end{lstlisting}
+Assume that the input to the program from the command line is `1234` followed by a newline character. Which one of the following statements is CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The program will not terminate \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The program will terminate with no output \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The program will terminate with 4321 as output \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The program will terminate with 1234 as output
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Programming and Data Structures \\
+\textbf{Subtopic:} \textit{Recursion}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The function `fX()` recursively reads each character before printing. As each character (`'1'`, `'2'`, `'3'`, `'4'`) is read, it is saved on the call stack before `fX()` recurses. When `\n` is reached, recursion terminates and the characters are printed during stack unwinding in reverse (LIFO) order as `4321`.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.20} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q20}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $S$ be the specification: ``Instructors teach courses. Students register for courses. Courses are allocated classrooms. Instructors guide students.'' Which one of the following ER diagrams CORRECTLY represents $S$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} (i) & $\square$\ \textbf{(B)} (ii) \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (iii) & $\square$\ \textbf{(D)} (iv)
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Databases \\
+\textbf{Subtopic:} \textit{ER-model}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Specification $S$ describes four distinct binary relationships among entities: Instructors teach courses, Students register for courses, Courses are allocated classrooms, and Instructors guide students. In standard ER modeling, entity sets are represented by rectangles and relationships by diamond diamonds connecting them; diagram (iv) correctly captures all four relationship sets.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.21} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q21}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In a $\text{B}^+$ tree, the requirement of at least half-full (50\%) node occupancy is relaxed for which one of the following cases?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Only the root node & $\square$\ \textbf{(B)} All leaf nodes \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} All internal nodes & $\square$\ \textbf{(D)} Only the leftmost leaf node
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Databases \\
+\textbf{Subtopic:} \textit{File organization, indexing (e.g., B and B+ trees)}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a $\text{B}^+$ tree, every node except the root node must satisfy the minimum occupancy constraint of being at least half full ($	ext{at least } \lceil p/2 \rceil$ child pointers). The root node is the sole exception, and is permitted to hold as few as two pointers (or one key) when non-leaf, and one key when leaf.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.22} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q22}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following statements about a relation $R$ in first normal form (1NF) is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $R$ can have a multi-attribute key \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $R$ cannot have a foreign key \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $R$ cannot have a composite attribute \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $R$ cannot have more than one candidate key
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Databases \\
+\textbf{Subtopic:} \textit{Integrity constraints, normal forms}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A relation is in 1NF if and only if all attribute values are atomic, which explicitly forbids composite or multi-valued attributes (making (C) TRUE). 1NF places no limitation on candidate keys having multiple attributes (multi-attribute keys are fully permitted, making (A) TRUE) or the presence of foreign keys.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.23} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q23}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $L_1, L_2$ be two regular languages and $L_3$ a language which is not regular. Which of the following statements is/are always TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $L_1 = L_2$ if and only if $L_1 \cap \overline{L_2} = \emptyset$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $L_1 \cup L_3$ is not regular \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\overline{L_3}$ is not regular \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\overline{L_1} \cup \overline{L_2}$ is regular
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C;D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular and context-free languages, pumping lemma}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Regular languages are closed under complementation and union; since $L_1, L_2$ are regular, $\overline{L_1}$ and $\overline{L_2}$ are regular, so $\overline{L_1} \cup \overline{L_2}$ is regular (D is TRUE). If $L_3$ is non-regular, its complement $\overline{L_3}$ must also be non-regular, because if $\overline{L_3}$ were regular, its complement $\overline{\overline{L_3}} = L_3$ would be regular, a contradiction (C is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.24} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q24}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following statements about threads is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Threads can only be implemented in kernel space \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Each thread has its own file descriptor table for open files \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} All the threads belonging to a process share a common stack \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Threads belonging to a process are by default not protected from each other
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{System calls, processes, threads, inter-process communication}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small All threads of a single process share the same address space (code, global data, heap) and open files. Because they run within the same virtual address space without memory protection barriers between them, one thread can corrupt another thread's memory; hence they are by default not protected from each other (D is TRUE). Each thread maintains its own private stack and registers.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.25} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q25}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following process state transitions is/are NOT possible?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Running to Ready & $\square$\ \textbf{(B)} Waiting to Running \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Ready to Waiting & $\square$\ \textbf{(D)} Running to Terminated
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{System calls, processes, threads, inter-process communication}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In the standard process state model, a process in the Waiting (Blocked) state transitions to Ready upon event/I/O completion; it cannot transition directly to Running without CPU dispatch (B is impossible). Similarly, only a Running process can initiate an I/O request and transition to Waiting; a Ready process cannot transition directly to Waiting (C is impossible).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.26} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q26}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following is/are Bottom-Up Parser(s)?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Shift-reduce Parser & $\square$\ \textbf{(B)} Predictive Parser \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} LL(1) Parser & $\square$\ \textbf{(D)} LR Parser
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Bottom-up parsers reduce an input string back to the start symbol by finding handles. Shift-reduce parsers and LR parsers (SLR, CLR, LALR) are bottom-up parsers. In contrast, Predictive and LL(1) parsers construct the derivation tree from the root downward and are top-down parsers.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.27} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q27}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $A$ and $B$ be two events in a probability space with $P(A) = 0.3$, $P(B) = 0.5$, and $P(A \cap B) = 0.1$. Which of the following statements is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The two events $A$ and $B$ are independent \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $P(A \cup B) = 0.7$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $P(A \cap B^c) = 0.2$, where $B^c$ is the complement of the event $B$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $P(A^c \cap B^c) = 0.4$, where $A^c$ and $B^c$ are the complements of the events $A$ and $B$, respectively
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Conditional probability and Bayes theorem}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small We are given $P(A) = 0.3$, $P(B) = 0.5$, and $P(A \cap B) = 0.1$. First, $P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.3 + 0.5 - 0.1 = 0.7$ (B is TRUE). Second, $P(A \cap B^c) = P(A) - P(A \cap B) = 0.3 - 0.1 = 0.2$ (C is TRUE). Since $P(A)P(B) = 0.15 \neq 0.1$, the events are not independent.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.28} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q28}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the circuit shown below where the gates may have propagation delays. Assume that all signal transitions occur instantaneously and that wires have no delays. Which of the following statements about the circuit is/are CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} With no propagation delays, the output $Y$ is always logic Zero \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} With no propagation delays, the output $Y$ is always logic One \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} With propagation delays, the output $Y$ can have a transient logic One after $X$ transitions from logic Zero to logic One \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} With propagation delays, the output $Y$ can have a transient logic Zero after $X$ transitions from logic One to logic Zero
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Combinational and sequential circuits}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The circuit computes $Y = X \cdot \overline{X}$. In steady-state with no gate delays, $X \cdot \overline{X} = 0$, so $Y$ is always logic Zero (A is TRUE). When $X$ transitions from 0 to 1, if the inverter has a non-zero propagation delay, both inputs to the AND gate remain logic 1 for the duration of the inverter delay, producing a transient logic 1 glitch (C is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.29} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q29}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+TCP client P successfully establishes a connection to TCP server Q. Let $N_P$ denote the sequence number in the SYN sent from P to Q. Let $N_Q$ denote the acknowledgement number in the SYN ACK from Q to P. Which of the following statements is/are CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} The sequence number $N_P$ is chosen randomly by P \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} The sequence number $N_P$ is always 0 for a new connection \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} The acknowledgement number $N_Q$ is equal to $N_P$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The acknowledgement number $N_Q$ is equal to $N_P + 1$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Transport layer: flow control and congestion control, UDP, TCP, sockets}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small During TCP connection establishment, the initial sequence number $N_P$ is chosen pseudo-randomly to avoid cross-connection packet collisions and mitigate spoofing attacks (A is TRUE). Because a SYN packet consumes exactly 1 sequence number in the sequence space, server $Q$ acknowledges it with $N_Q = N_P + 1$ (D is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.30} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q30}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a 5-stage pipelined processor with Instruction Fetch (IF), Instruction Decode (ID), Execute (EX), Memory Access (MEM), and Register Writeback (WB) stages. Which of the following statements about forwarding is/are CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} In a pipelined execution, forwarding means the result from a source stage of an earlier instruction is passed on to the destination stage of a later instruction \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} In forwarding, data from the output of the MEM stage can be passed on to the input of the EX stage of the next instruction \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Forwarding cannot prevent all pipeline stalls \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Forwarding does not require any extra hardware to retrieve the data from the pipeline stages
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Instruction pipelining, pipeline hazards}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Forwarding (bypassing) routes intermediate results directly from pipeline registers of an earlier instruction to execution inputs of a subsequent instruction (A is TRUE). While forwarding resolves many ALU data dependencies without stalls, it cannot prevent a load-use stall (where the loaded data is needed immediately in the subsequent instruction's EX stage), requiring at least one stall cycle (C is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.31} \quad {\footnotesize\textsc{[MSQ $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q31}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which of the following fields is/are modified in the IP header of a packet going out of a network address translation (NAT) device from an internal network to an external network?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Source IP & $\square$\ \textbf{(B)} Destination IP \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Header Checksum & $\square$\ \textbf{(D)} Total Length
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Network Address Translation (NAT)}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small When a packet leaves a private subnet through an outbound NAT gateway, the router rewrites the private Source IP address to its public external IP address (A is modified). Because the IP header fields have changed, the IPv4 Header Checksum must be recalculated and replaced (C is modified). Destination IP and Total Length are unmodified.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.32} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q32}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $A$ and $B$ be non-empty finite sets such that there exist one-to-one and onto functions (i) from $A$ to $B$ and (ii) from $A \times A$ to $A \cup B$. The number of possible values of $|A|$ is \_\_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 2 to 2} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Sets, relations, functions, partial orders and lattices}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A bijection from $A$ to $B$ implies $|A| = |B| = n$. A bijection from $A \times A$ to $A \cup B$ implies $|A \times A| = |A \cup B|$. We have $|A \times A| = n^2$, and $n \le |A \cup B| \le 2n$. Thus $n \le n^2 \le 2n$. Since $A$ is non-empty ($n \ge 1$), dividing by $n$ gives $1 \le n \le 2$. This allows exactly two integer solutions: $n = 1$ (where $A = B$) and $n = 2$ (where $A \cap B = \emptyset$).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.33} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q33}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the operator precedence and associativity rules for the integer arithmetic operators given in the table below:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Operator} & \textbf{Precedence} & \textbf{Associativity} \\
+\hline
+$+$ & Highest & Left \\
+$-$ & High & Right \\
+$*$ & Medium & Right \\
+$/$ & Low & Right \\
+\hline
+\end{tabular}
+\end{center}
+The value of the expression $3 + 1 + 5 * 2 / 7 + 2 - 4 - 7 - 6 / 2$ as per the above rules is \_\_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 6 to 6} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Precedence order is $+$ (highest, left-associative), then $-$ (right-associative), then $*$ (right-associative), then $/$ (lowest, right-associative). Evaluating $+$ first: $3+1+5 = 9$ and $7+2 = 9$. Expression becomes $9 * 2 / 9 - 4 - 7 - 6 / 2$. Evaluating $-$ right-associatively: $4 - (7 - 6) = 4 - 1 = 3$, giving $9 - 3 = 6$. The expression becomes $9 * 2 / 6 / 2$. Next $*$ gives $18 / 6 / 2$. Evaluating $/$ right-associatively: $6 / 2 = 3$, and $18 / 3 = 6$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.34} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q34}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The number of spanning trees in a complete graph of 4 vertices labelled A, B, C, and D is \_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 16 to 16} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Combinatorics: counting, recurrence relations, generating functions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small By Cayley's theorem, the number of spanning trees in a complete labelled graph $K_n$ on $n$ vertices is given by $n^{n-2}$. For $n = 4$ labelled vertices A, B, C, D, the number of spanning trees is $4^{4-2} = 4^2 = 16$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.35} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q35}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following two relations, $R(A,B)$ and $S(A,C)$:
+\begin{center}
+\begin{tabular}{|c|c|}
+\multicolumn{2}{c}{$R$} \\
+\hline
+$A$ & $B$ \\
+\hline
+10 & 20 \\
+20 & 30 \\
+30 & 40 \\
+30 & 50 \\
+\hline
+\end{tabular}
+\qquad
+\begin{tabular}{|c|c|}
+\multicolumn{2}{c}{$S$} \\
+\hline
+$A$ & $C$ \\
+\hline
+10 & 90 \\
+30 & 45 \\
+40 & 80 \\
+50 & 95 \\
+\hline
+\end{tabular}
+\end{center}
+The total number of tuples obtained by evaluating the following expression
+\[ \sigma\_{B < C}(R \bowtie\_{R.A = S.A} S) \]
+is \_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 2 to 2} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Databases \\
+\textbf{Subtopic:} \textit{Relational model: relational algebra, tuple calculus, SQL}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Joining $R(A,B)$ and $S(A,C)$ on $R.A = S.A$ yields: $(10, 20, 90)$ for $A=10$, and $(30, 40, 45)$, $(30, 50, 45)$ for $A=30$. Applying selection $\sigma_{B < C}$: $20 < 90$ is true (tuple $(10, 20, 90)$), $40 < 45$ is true (tuple $(30, 40, 45)$), and $50 < 45$ is false. Thus, exactly 2 tuples satisfy the condition.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.36} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q36}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a network path P---Q---R between nodes P and R via router Q. Node P sends a file of size $10^6$ bytes to R via this path by splitting the file into chunks of $10^3$ bytes each. Node P sends these chunks one after the other without any wait time between the successive chunk transmissions. Assume that the size of extra headers added to these chunks is negligible, and that the chunk size is less than the MTU.
+\par\medskip
+Each of the links P---Q and Q---R has a bandwidth of $10^6$ bits/sec, and negligible propagation latency. Router Q immediately transmits every packet it receives from P to R, with negligible processing and queueing delays. Router Q can simultaneously receive on link P---Q and transmit on link Q---R.
+\par\medskip
+Assume P starts transmitting the chunks at time $t = 0$.
+Which one of the following options gives the time (in seconds, rounded off to 3 decimal places) at which R receives all the chunks of the file?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 8.000 & $\square$\ \textbf{(B)} 8.008 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 15.992 & $\square$\ \textbf{(D)} 16.000
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Concept of layering: OSI and TCP/IP Protocol Stacks}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The file size is $10^6$ bytes split into 1000 chunks of $10^3$ bytes ($8000$ bits) each. Link transmission time for one chunk is $\frac{8000\text{ bits}}{10^6\text{ bps}} = 0.008\text{ s}$. Node P completes sending all 1000 chunks at $t = 1000 \times 0.008 = 8.000\text{ s}$. The last chunk arrives at router Q at $t = 8.000\text{ s}$ and takes another $0.008\text{ s}$ to reach R over link Q---R, completing at $8.008\text{ s}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.37} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q37}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following syntax-directed definition (SDD):
+\begin{align*}
+S &\to DHTU & \{ S.val = D.val + H.val + T.val + U.val; \} \\
+D &\to \text{``M''} D_1 & \{ D.val = 5 + D_1.val; \} \\
+D &\to \epsilon & \{ D.val = -5; \} \\
+H &\to \text{``L''} H_1 & \{ H.val = 5 * 10 + H_1.val; \} \\
+H &\to \epsilon & \{ H.val = -10; \} \\
+T &\to \text{``C''} T_1 & \{ T.val = 5 * 100 + T_1.val; \} \\
+T &\to \epsilon & \{ T.val = -5; \} \\
+U &\to \text{``K''} & \{ U.val = 5; \}
+\end{align*}
+Given ``MMLK'' as the input, which one of the following options is the CORRECT value computed by the SDD (in the attribute $S.val$)?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 45 & $\square$\ \textbf{(B)} 50 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 55 & $\square$\ \textbf{(D)} 65
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For input "MMLK" with production $S \to DHTU$: $D$ derives "MM" via $D \to \text{"M"} D_1 \to \text{"M"}\text{"M"} D_2 \to \text{"M"}\text{"M"}\epsilon$, giving $D.val = 5 + 5 - 5 = 5$. $H$ derives "L" via $H \to \text{"L"} H_1 \to \text{"L"}\epsilon$, giving $H.val = 50 - 10 = 40$. $T$ derives $\epsilon$, giving $T.val = -5$. $U$ derives "K", giving $U.val = 5$. Summing attribute values yields $S.val = 5 + 40 - 5 + 5 = 45$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.38} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q38}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following grammar $G$, with $S$ as the start symbol. The grammar $G$ has three incomplete productions denoted by (1), (2), and (3).
+\begin{align*}
+S &\to daT \mid (1) \\
+T &\to aS \mid bT \mid (2) \\
+R &\to (3) \mid \epsilon
+\end{align*}
+The set of terminals is $\{a, b, c, d, f\}$. The FIRST and FOLLOW sets of the different non-terminals are as follows:
+$$\text{FIRST}(S) = \{c, d, f\}, \quad \text{FIRST}(T) = \{a, b, \epsilon\}, \quad \text{FIRST}(R) = \{c, \epsilon\}$$
+$$\text{FOLLOW}(S) = \text{FOLLOW}(T) = \{c, f, \$\}, \quad \text{FOLLOW}(R) = \{f\}$$
+Which one of the following options CORRECTLY fills in the incomplete productions?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} (1) $S \to Rf$ (2) $T \to \epsilon$ (3) $R \to cTR$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} (1) $S \to fR$ (2) $T \to \epsilon$ (3) $R \to cTR$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (1) $S \to fR$ (2) $T \to cT$ (3) $R \to cR$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} (1) $S \to Rf$ (2) $T \to cT$ (3) $R \to cR$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Since $\text{FIRST}(S) = \{c, d, f\}$ and $S \to daT$ generates $d$, production (1) must generate $c$ and $f$. With (1) as $S \to Rf$ where $\text{FIRST}(R) = \{c, \epsilon\}$, $\text{FIRST}(Rf) = \{c, f\}$. Since $\epsilon \in \text{FIRST}(T)$, production (2) must be $T \to \epsilon$. Production (3) as $R \to cTR$ matches $\text{FIRST}(R) = \{c, \epsilon\}$ and $\text{FOLLOW}(R) = \{f\}$, matching option (A).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.39} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q39}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following pseudo-code:
+\begin{lstlisting}
+L1:  t1 = -1
+L2:  t2 = 0
+L3:  t3 = 0
+L4:  t4 = 4 * t3
+L5:  t5 = 4 * t2
+L6:  t6 = t5 * M
+L7:  t7 = t4 + t6
+L8:  t8 = a[t7]
+L9:  if t8 <= max goto L11
+L10: t1 = t8
+L11: t3 = t3 + 1
+L12: if t3 < M goto L4
+L13: t2 = t2 + 1
+L14: if t2 < N goto L3
+L15: max = t1
+\end{lstlisting}
+Which one of the following options CORRECTLY specifies the number of basic blocks and the number of instructions in the largest basic block, respectively?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 6 and 6 & $\square$\ \textbf{(B)} 6 and 7 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 7 and 7 & $\square$\ \textbf{(D)} 7 and 6
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Intermediate code generation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Leaders are instructions that start a basic block: $L_1$ (first instruction), targets of conditional/unconditional jumps ($L_4, L_{11}, L_3$), and instructions immediately following jumps ($L_{10}, L_{13}, L_{15}$). This gives 7 leaders: $\{L_1, L_4, L_{10}, L_{11}, L_3, L_{13}, L_{15}\}$, forming 7 basic blocks. The block starting at $L_4$ contains lines $L_4$ through $L_9$, which has 6 instructions, the maximum in any block.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.40} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q40}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following two threads T1 and T2 that update two shared variables `a` and `b`. Assume that initially $a = b = 1$. Though context switching between threads can happen at any time, each statement of T1 or T2 is executed atomically without interruption.
+\begin{center}
+\begin{tabular}{p{4cm}p{4cm}}
+\textbf{T1} & \textbf{T2} \\
+\texttt{a = a + 1;} & \texttt{b = 2 * b;} \\
+\texttt{b = b + 1;} & \texttt{a = 2 * a;}
+\end{tabular}
+\end{center}
+Which one of the following options lists all the possible combinations of values of `a` and `b` after both T1 and T2 finish execution?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $(a = 4, b = 4)$; $(a = 3, b = 3)$; $(a = 4, b = 3)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $(a = 3, b = 4)$; $(a = 4, b = 3)$; $(a = 3, b = 3)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $(a = 4, b = 4)$; $(a = 4, b = 3)$; $(a = 3, b = 4)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $(a = 2, b = 2)$; $(a = 2, b = 3)$; $(a = 3, b = 4)$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{Concurrency and synchronization}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Initially $a=b=1$. Let statements be $T_1: [S_1: a=a+1, S_2: b=b+1]$ and $T_2: [S_3: b=2b, S_4: a=2a]$. Executing $T_1$ then $T_2$ yields $a=2, b=2 \to b=4, a=4 \implies (4, 4)$. Executing $T_2$ then $T_1$ yields $b=2, a=2 \to a=3, b=3 \implies (3, 3)$. Executing $S_1, S_3, S_4, S_2$ yields $a=2 \to b=2 \to a=4 \to b=3 \implies (4, 3)$. No valid interleaving can produce $(a=3, b=4)$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.41} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q41}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+An array $[82, 101, 90, 11, 111, 75, 33, 131, 44, 93]$ is heapified. Which one of the following options represents the first three elements in the heapified array?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 82, 90, 101 & $\square$\ \textbf{(B)} 82, 11, 93 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 131, 11, 93 & $\square$\ \textbf{(D)} 131, 111, 90
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Programming and Data Structures \\
+\textbf{Subtopic:} \textit{Trees, binary search trees, binary heaps}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Applying standard bottom-up max-heap construction (Floyd's algorithm) to $[82, 101, 90, 11, 111, 75, 33, 131, 44, 93]$ of length 10: non-leaf nodes are heapified from index 5 down to 1. The maximum element 131 bubbles up to index 1 (root), its left child becomes 111 (index 2), and right child becomes 90 (index 3).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.42} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q42}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following recurrence relation:
+\[ T(n) = \begin{cases} \sqrt{n} T(\sqrt{n}) + n & \text{for } n > 1, \\ 1 & \text{for } n = 1. \end{cases} \]
+Which one of the following options is CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $T(n) = \Theta(n \log \log n)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $T(n) = \Theta(n \log n)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $T(n) = \Theta(n^2 \log n)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $T(n) = \Theta(n^2 \log \log n)$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Algorithms \\
+\textbf{Subtopic:} \textit{Asymptotic worst case time and space complexity}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Dividing $T(n) = \sqrt{n} T(\sqrt{n}) + n$ by $n$ gives $\frac{T(n)}{n} = \frac{T(\sqrt{n})}{\sqrt{n}} + 1$. Defining $S(n) = \frac{T(n)}{n}$ yields $S(n) = S(\sqrt{n}) + 1$. Substituting $n = 2^{2^k}$ gives $S(2^{2^k}) = S(2^{2^{k-1}}) + 1 = \Theta(k) = \Theta(\log \log n)$. Therefore, $T(n) = n S(n) = \Theta(n \log \log n)$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.43} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q43}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a binary min-heap containing 105 distinct elements. Let $k$ be the index (in the underlying array) of the maximum element stored in the heap. The number of possible values of $k$ is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 53 & $\square$\ \textbf{(B)} 52 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 27 & $\square$\ \textbf{(D)} 1
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Programming and Data Structures \\
+\textbf{Subtopic:} \textit{Trees, binary search trees, binary heaps}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a binary min-heap, every parent is strictly smaller than its children, so the maximum element cannot be an internal node and must reside at one of the leaf nodes. In a complete binary tree of $n = 105$ nodes, the number of leaf nodes is $\lceil n/2 \rceil = \lceil 105/2 \rceil = 53$. Hence, there are 53 possible index locations for the maximum element.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.44} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q44}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The symbol $\to$ indicates functional dependency in the context of a relational database. Which of the following options is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $(X, Y) \to (Z, W)$ implies $X \to (Z, W)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $(X, Y) \to (Z, W)$ implies $(X, Y) \to Z$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $((X, Y) \to Z \text{ and } W \to Y)$ implies $(X, W) \to Z$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $(X \to Y \text{ and } Y \to Z)$ implies $X \to Z$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C;D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Databases \\
+\textbf{Subtopic:} \textit{Integrity constraints, normal forms}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small By Armstrong's decomposition axiom, $(X, Y) \to (Z, W)$ implies $(X, Y) \to Z$ (B is TRUE). By Armstrong's transitivity axiom, $X \to Y$ and $Y \to Z$ implies $X \to Z$ (D is TRUE). By pseudotransitivity, $(X, Y) \to Z$ and $W \to Y$ implies $(X, W) \to Z$ (C is TRUE). Decomposing the left-hand side determinant is invalid in general (A is FALSE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.45} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q45}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $G$ be a directed graph and $T$ a depth first search (DFS) spanning tree in $G$ that is rooted at a vertex $v$. Suppose $T$ is also a breadth first search (BFS) tree in $G$, rooted at $v$. Which of the following statements is/are TRUE for every such graph $G$ and tree $T$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} There are no back-edges in $G$ with respect to the tree $T$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} There are no cross-edges in $G$ with respect to the tree $T$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} There are no forward-edges in $G$ with respect to the tree $T$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} The only edges in $G$ are the edges in $T$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Algorithms \\
+\textbf{Subtopic:} \textit{Graph traversals, minimum spanning trees, shortest paths}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a BFS tree $T$, any edge $(u, w)$ in $G$ must connect vertices whose BFS levels differ by at most 1 (i.e., $\text{level}(w) \le \text{level}(u) + 1$). A forward-edge in a DFS tree goes from ancestor $u$ to descendant $w$ with $\text{level}(w) \ge \text{level}(u) + 2$. If such an edge existed in $G$, BFS would explore $w$ directly from $u$ at depth $\text{level}(u) + 1$, contradicting the structure of $T$. Hence, no forward-edges can exist in $G$ with respect to $T$ (C is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.46} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q46}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following read-write schedule $S$ over three transactions $T_1, T_2$, and $T_3$, where the subscripts in the schedule indicate transaction IDs:
+\[ S: r\_1(z); w\_1(z); r\_2(x); r\_3(y); w\_3(y); r\_2(y); w\_2(x); w\_2(y); \]
+Which of the following transaction schedules is/are conflict equivalent to $S$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $T_1 T_2 T_3$ & $\square$\ \textbf{(B)} $T_1 T_3 T_2$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $T_3 T_2 T_1$ & $\square$\ \textbf{(D)} $T_3 T_1 T_2$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C;D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Databases \\
+\textbf{Subtopic:} \textit{Transactions and concurrency control}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Examining data item conflicts: on item $y$, $w_3(y)$ in $T_3$ precedes both $r_2(y)$ and $w_2(y)$ in $T_2$, creating a precedence conflict edge $T_3 \to T_2$. Transaction $T_1$ only accesses $z$ and has no conflicting operations with $T_2$ or $T_3$. Any serial schedule preserving $T_3$ before $T_2$ is conflict equivalent to $S$, namely $T_1 T_3 T_2$, $T_3 T_1 T_2$, and $T_3 T_2 T_1$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.47} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q47}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a Boolean expression given by $F(X, Y, Z) = \sum(3, 5, 6, 7)$. Which of the following statements is/are CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $F(X, Y, Z) = \prod(0, 1, 2, 4)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $F(X, Y, Z) = XY + YZ + XZ$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $F(X, Y, Z)$ is independent of input $Y$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $F(X, Y, Z)$ is independent of input $X$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A;B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Minimization}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The maxterm representation is the product of maxterms not in the minterm list: $\prod(0, 1, 2, 4)$ (A is TRUE). Grouping minterms $\Sigma(3, 5, 6, 7)$ on a 3-variable K-map: pairs are $(3, 7) \implies YZ$, $(5, 7) \implies XZ$, and $(6, 7) \implies XY$, giving minimal SOP $F(X, Y, Z) = XY + YZ + XZ$ (B is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.48} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q48}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following C function definition:
+\begin{lstlisting}[language=C]
+int f(int x, int y) {
+    for (int i = 0; i < y; i++) {
+        x = x + x + y;
+    }
+    return x;
+}
+\end{lstlisting}
+Which of the following statements is/are TRUE about the above function?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} If the inputs are $x=20, y=10$, then the return value is greater than $2^{20}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} If the inputs are $x=20, y=20$, then the return value is greater than $2^{20}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} If the inputs are $x=20, y=10$, then the return value is less than $2^{10}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} If the inputs are $x=10, y=20$, then the return value is greater than $2^{20}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Programming and Data Structures \\
+\textbf{Subtopic:} \textit{Programming in C}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In each loop iteration, $x_{k+1} = 2x_k + y$. Solving this linear recurrence yields $x_y = 2^y x_0 + y(2^y - 1) = 2^y(x_0 + y) - y$. For $x=20, y=20$: $x_{20} = 2^{20}(40) - 20 > 2^{20}$ (B is TRUE). For $x=10, y=20$: $x_{20} = 2^{20}(30) - 20 > 2^{20}$ (D is TRUE). For $y=10, x=20$: $x_{10} = 2^{10}(30) - 10 = 30710 > 2^{10}$, so (A) and (C) are false.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.49} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q49}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $A$ be any $n \times m$ matrix, where $m > n$. Which of the following statements is/are TRUE about the system of linear equations $Ax = 0$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} There exist at least $m-n$ linearly independent solutions to this system \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} There exist $m-n$ linearly independent vectors such that every solution is a linear combination of these vectors \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} There exists a non-zero solution in which at least $m-n$ variables are 0 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} There exists a solution in which at least $n$ variables are non-zero
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{System of linear equations}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The solution space of the homogeneous system $Ax = 0$ is the null space of $A$, whose dimension is $\text{nullity}(A) = m - \text{rank}(A)$. Since $\text{rank}(A) \le n$, we have $\text{nullity}(A) \ge m - n$. This guarantees the existence of at least $m - n$ linearly independent solutions (A is TRUE). The nullity can exceed $m-n$ when $\text{rank}(A) < n$, so (B) is not universally true.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.50} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q50}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the 5-state DFA $M$ accepting the language $L(M) \subset (0 + 1)^*$ shown below. For any string $w \in (0 + 1)^*$ let $n_0(w)$ be the number of 0's in $w$ and $n_1(w)$ be the number of 1's in $w$.
+Which of the following statements is/are FALSE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} States 2 and 4 are distinguishable in $M$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} States 3 and 4 are distinguishable in $M$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} States 2 and 5 are distinguishable in $M$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Any string $w$ with $n_0(w) = n_1(w)$ is in $L(M)$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small States $p$ and $q$ are distinguishable if there exists a string $w$ such that exactly one of $\delta(p, w)$ or $\delta(q, w)$ is an accepting state. In DFA $M$, states 3 and 4 have identical transition behavior and both are non-accepting, making them equivalent/indistinguishable, so claiming they are distinguishable is FALSE (B is FALSE). Similarly, states 2 and 5 are equivalent, so claiming they are distinguishable is FALSE (C is FALSE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.51} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q51}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The chromatic number of a graph is the minimum number of colours used in a proper colouring of the graph. Let $G$ be any graph with $n$ vertices and chromatic number $k$. Which of the following statements is/are always TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $G$ contains a complete subgraph with $k$ vertices \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $G$ contains an independent set of size at least $n/k$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $G$ contains at least $k(k-1)/2$ edges \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $G$ contains a vertex of degree at least $k$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Graphs: connectivity, matching, colouring}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A proper $k$-coloring partitions the $n$ vertices into $k$ independent sets. By the Pigeonhole Principle, at least one of these independent sets has size $\ge \lceil n/k \rceil \ge n/k$ (B is TRUE). In addition, every pair of color classes must have at least one edge between them (otherwise those two colors could be merged, yielding a $(k-1)$-coloring), requiring at least $\binom{k}{2} = \frac{k(k-1)}{2}$ edges (C is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.52} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q52}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the operators $\diamond$ and $\square$ defined by $a \diamond b = a + 2b$, $a \square b = ab$, for positive integers. Which of the following statements is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Operator $\diamond$ obeys the associative law \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Operator $\square$ obeys the associative law \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Operator $\diamond$ over the operator $\square$ obeys the distributive law \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Operator $\square$ over the operator $\diamond$ obeys the distributive law
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Monoids, Groups}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For $\square$: $a \square b = ab$, which is associative since $(ab)c = a(bc)$ (B is TRUE). Distributivity of $\square$ over $\diamond$: $a \square (b \diamond c) = a(b + 2c) = ab + 2ac$. Comparing with $(a \square b) \diamond (a \square c) = (ab) \diamond (ac) = ab + 2(ac) = ab + 2ac$; both sides match identically, so $\square$ distributes over $\diamond$ (D is TRUE). For $\diamond$: $(a \diamond b) \diamond c = a + 2b + 2c \neq a + 2b + 4c = a \diamond (b \diamond c)$, so $\diamond$ is not associative.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.53} \quad {\footnotesize\textsc{[MSQ $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q53}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider two set-associative cache memory architectures: WBC, which uses the write back policy, and WTC, which uses the write through policy. Both of them use the LRU (Least Recently Used) block replacement policy. The cache memory is connected to the main memory. Which of the following statements is/are TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} A read miss in WBC never evicts a dirty block \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} A read miss in WTC never triggers a write back operation of a cache block to main memory \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} A write hit in WBC can modify the value of the dirty bit of a cache block \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} A write miss in WTC always writes the victim cache block to main memory before loading the missed block to the cache
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B;C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a write-through cache (WTC), main memory is updated simultaneously on every cache write, meaning cache lines are never dirty and no eviction ever triggers a write-back to memory (B is TRUE). In a write-back cache (WBC), when a clean block receives a write hit, its dirty bit is set from 0 to 1 to indicate modification (C is TRUE).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.54} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q54}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a 512 GB hard disk with 32 storage surfaces. There are 4096 sectors per track and each sector holds 1024 bytes of data. The number of cylinders in the hard disk is \_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 4096 to 4096} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Disk capacity $= 512\text{ GB} = 512 \times 2^{30}\text{ bytes} = 2^{39}$ bytes. One cylinder comprises 32 surfaces $\times 4096$ sectors/track $\times 1024$ bytes/sector $= 2^5 \times 2^{12} \times 2^{10} = 2^{27}$ bytes. Number of cylinders $= \frac{2^{39}}{2^{27}} = 2^{12} = 4096$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.55} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q55}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The baseline execution time of a program on a 2 GHz single core machine is 100 nanoseconds (ns). The code corresponding to 90\% of the execution time can be fully parallelized. The overhead for using an additional core is 10 ns when running on a multicore system. Assume that all cores in the multicore system run their share of the parallelized code for an equal amount of time.
+The number of cores that minimize the execution time of the program is \_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 3 to 3} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Instruction pipelining, pipeline hazards}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Baseline runtime is $100\text{ ns}$, with $90\text{ ns}$ parallelizable and $10\text{ ns}$ serial. On $p$ cores, the parallel portion takes $\frac{90}{p}\text{ ns}$ with core overhead of $10(p-1)\text{ ns}$. Total execution time $T(p) = 10 + \frac{90}{p} + 10(p-1) = \frac{90}{p} + 10p$. Evaluating: $T(1) = 100\text{ ns}$, $T(2) = 65\text{ ns}$, $T(3) = 60\text{ ns}$, $T(4) = 62.5\text{ ns}$. The time is minimized at $p = 3$ cores.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.56} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q56}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A given program has 25\% load/store instructions. Suppose the ideal CPI (cycles per instruction) without any memory stalls is 2. The program exhibits 2\% miss rate on instruction cache and 8\% miss rate on data cache. The miss penalty is 100 cycles.
+The speedup (rounded off to two decimal places) achieved with a perfect cache (i.e., with NO data or instruction cache misses) is \_\_\_\_\_\_\_\_\_\. (Answer in numeric format)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 3.00 to 3.00} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Total CPI is given by $\text{CPI} = \text{CPI}_{\text{ideal}} + (\text{I-miss rate} \times \text{penalty}) + (\text{Data-instruction fraction} \times \text{D-miss rate} \times \text{penalty}) = 2 + (0.02 \times 100) + (0.25 \times 0.08 \times 100) = 2 + 2 + 2 = 6$. For a perfect cache with no misses, $\text{CPI}_{\text{perfect}} = \text{CPI}_{\text{ideal}} = 2$. Speedup $= \frac{6}{2} = 3.00$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.57} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q57}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following code snippet using the `fork()` and `wait()` system calls. Assume that the code compiles and runs correctly, and that the system calls run successfully without any errors.
+\begin{lstlisting}[language=C]
+int x = 3;
+while(x > 0) {
+    fork();
+    printf("hello");
+    wait(NULL);
+    x--;
+}
+\end{lstlisting}
+The total number of times the `printf` statement is executed is \_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 14 to 14} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{System calls, processes, threads, inter-process communication}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Initially 1 process with $x=3$. Iteration 1 ($x=3$): `fork()` creates 1 child (total 2 processes); both print "hello" (2 prints) and decrement $x$ to 2. Iteration 2 ($x=2$): each of the 2 processes forks (total 4 processes); all 4 print "hello" (4 prints) and decrement $x$ to 1. Iteration 3 ($x=1$): each of the 4 processes forks (total 8 processes); all 8 print "hello" (8 prints) and decrement $x$ to 0, whereupon the loop ends. Total prints $= 2 + 4 + 8 = 14$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.58} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q58}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the entries shown below in the forwarding table of an IP router. Each entry consists of an IP prefix and the corresponding next hop router for packets whose destination IP address matches the prefix. The notation ``/N'' in a prefix indicates a subnet mask with the most significant $N$ bits set to 1.
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Prefix} & \textbf{Next hop router} \\
+\hline
+10.1.1.0/24 & R1 \\
+10.1.1.128/25 & R2 \\
+10.1.1.64/26 & R3 \\
+10.1.1.192/26 & R4 \\
+\hline
+\end{tabular}
+\end{center}
+This router forwards 20 packets each to 5 hosts. The IP addresses of the hosts are 10.1.1.16, 10.1.1.72, 10.1.1.132, 10.1.1.191, and 10.1.1.205. The number of packets forwarded via the next hop router R2 is \_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 40 to 40} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Routing protocols: shortest path, flooding, distance vector and link state routing}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Using longest prefix match for each host address: 10.1.1.16 matches /24 (R1); 10.1.1.72 matches /24 and 10.1.1.64/26 (R3); 10.1.1.132 matches /24 and 10.1.1.128/25 (R2); 10.1.1.191 matches /24 and 10.1.1.128/25 (R2); 10.1.1.205 matches /24, /25, and 10.1.1.192/26 (R4). Thus, 2 hosts (10.1.1.132 and 10.1.1.191) match router R2. Total packets forwarded via R2 $= 2 \times 20 = 40$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.59} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q59}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $G = (V, \Sigma, S, P)$ be a context-free grammar in Chomsky Normal Form with $\Sigma = \{a, b, c\}$ and $V$ containing 10 variable symbols including the start symbol $S$. The string $w = a^{30}b^{30}c^{30}$ is derivable from $S$. The number of steps (application of rules) in the derivation $S \Rightarrow^* w$ is \_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 179 to 179} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Context-free grammars and push-down automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a Chomsky Normal Form (CNF) grammar, every production is either $A \to BC$ or $A \to a$. Deriving a string of length $n$ requires $n-1$ non-terminal splitting steps ($A \to BC$) followed by $n$ terminal production steps ($A \to a$), totaling $2n-1$ steps. For $w = a^{30}b^{30}c^{30}$, the length is $n = 90$, so the number of derivation steps is $2(90) - 1 = 179$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.60} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q60}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The number of edges present in the forest generated by the DFS traversal of an undirected graph $G$ with 100 vertices is 40. The number of connected components in $G$ is \_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 60 to 60} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Graphs: connectivity, matching, colouring}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A DFS traversal of an undirected graph with $V$ vertices and $k$ connected components produces a spanning forest containing $k$ trees. A tree with $v_i$ vertices contains $v_i - 1$ edges, so the total number of tree edges in the forest is $\sum (v_i - 1) = V - k$. Given $V = 100$ and $E = 40$, we have $40 = 100 - k \implies k = 60$ connected components.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.61} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q61}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following two regular expressions over the alphabet $\{0,1\}$:
+\[ r = 0^* + 1^* \]
+\[ s = 01^* + 10^* \]
+The total number of strings of length less than or equal to 5, which are neither in $r$ nor in $s$, is \_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 44 to 44} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The total number of binary strings of length $\le 5$ is $\sum_{i=0}^5 2^i = 1+2+4+8+16+32 = 63$. Language $L(r) = 0^* + 1^*$ contains $\epsilon$ and $0^k, 1^k$ for each length $k \in \{1..5\}$ (11 strings). Language $L(s) = 01^* + 10^*$ contains $01^{k-1}$ and $10^{k-1}$ for each length $k \in \{1..5\}$. At $k=1$, $0$ and $1$ overlap with $L(r)$; for $k \in \{2..5\}$, the $4 \times 2 = 8$ strings are disjoint from $L(r)$. Thus, $|L(r) \cup L(s)| = 11 + 8 = 19$. The number of strings in neither language is $63 - 19 = 44$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.62} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q62}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a memory management system that uses a page size of 2 KB. Assume that both the physical and virtual addresses start from 0. Assume that the pages 0, 1, 2, and 3 are stored in the page frames 1, 3, 2, and 0, respectively. The physical address (in decimal format) corresponding to the virtual address 2500 (in decimal format) is \_\_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 6596 to 6596} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{Memory management and virtual memory}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small With page size $2\text{ KB} = 2048\text{ bytes}$, virtual address $2500$ has virtual page number $\lfloor 2500 / 2048 \rfloor = 1$ and offset $2500 \pmod{2048} = 452$. Page 1 maps to frame 3. The physical address is $(\text{frame } 3 \times 2048) + \text{offset } 452 = 6144 + 452 = 6596$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.63} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q63}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A bag contains 10 red balls and 15 blue balls. Two balls are drawn randomly without replacement. Given that the first ball drawn is red, the probability (rounded off to 3 decimal places) that both balls drawn are red is \_\_\_\_\_\_\_\_\_\. (Answer in numeric format)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 0.370 to 0.380} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Conditional probability and Bayes theorem}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let $R_1, R_2$ be the events of drawing red balls on the first and second draws without replacement. The conditional probability that both are red given the first is red is $P(R_1 \cap R_2 \mid R_1) = P(R_2 \mid R_1)$. Given that 1 red ball is already drawn, 9 red balls remain out of $9 + 15 = 24$ total balls, so $P(R_2 \mid R_1) = \frac{9}{24} = \frac{3}{8} = 0.375$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.65} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2024\_CS1\_CS\_Q65}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider sending an IP datagram of size 1420 bytes (including 20 bytes of IP header) from a sender to a receiver over a path of two links with a router between them. The first link (sender to router) has an MTU (Maximum Transmission Unit) size of 542 bytes, while the second link (router to receiver) has an MTU size of 360 bytes. The number of fragments that would be delivered at the receiver is \_\_\_\_\_\_\_\_\. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 6 to 6} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Fragmentation and IP addressing, IPv4, CIDR notation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The datagram has 20 bytes IP header and 1400 bytes data. Link 1 has $\text{MTU} = 542$ bytes (max data per fragment is $\lfloor (542-20)/8 \rfloor \times 8 = 520$ bytes), producing 3 fragments with data sizes 520, 520, and 360 bytes. Link 2 has $\text{MTU} = 360$ bytes (max data is $\lfloor (360-20)/8 \rfloor \times 8 = 336$ bytes). At router Q, fragment 1 (520 bytes) is fragmented into 2 ($336 + 184$), fragment 2 (520 bytes) is fragmented into 2 ($336 + 184$), and fragment 3 (360 bytes) is fragmented into 2 ($336 + 24$). Total fragments delivered at the receiver $= 2 + 2 + 2 = 6$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\end{document}

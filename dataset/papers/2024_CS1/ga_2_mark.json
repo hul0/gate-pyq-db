@@ -33,10 +33,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'Keep one's head down' means to stay focused and avoid trouble. 'Heading out' means going forth/departing. Having a 'head for' an activity signifies natural aptitude for it, and having a cool 'head on' one's shoulders means remaining calm and composed.",
       "tags": [
         "2024",
         "2_mark",
@@ -47,7 +47,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In the given text, the blanks are numbered (i)--(iv). Select the best match for all the blanks.\n\nSteve was advised to keep his head (i)\\_\\_\\_\\_ before heading (ii)\\_\\_\\_\\_ to bat; for, while he had a head (iii)\\_\\_\\_\\_ batting, he could only do so with a cool head (iv)\\_\\_\\_\\_ his shoulders.",
+      "options_latex": {
+        "A": "(i) down (ii) down (iii) on (iv) for",
+        "B": "(i) on (ii) down (iii) for (iv) on",
+        "C": "(i) down (ii) out (iii) for (iv) on",
+        "D": "(i) on (ii) out (iii) on (iv) for"
+      }
     },
     {
       "id": "2024_CS1_GA_Q07",
@@ -77,10 +84,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Mensuration and geometry",
+      "difficulty_level": "Medium",
+      "explaination": "Joining the longer edges ($54\\text{ cm}$) creates a cylinder with height $h = 54\\text{ cm}$ and circumference $2\\pi r = 4\\text{ cm} \\implies r = \\frac{2}{\\pi}$, giving volume $V_{\\text{cyl}} = \\pi r^2 h = \\frac{216}{\\pi}$. The sheet area is $54 \\times 4 = 216\\text{ cm}^2$. A cube with surface area $6a^2 = 216$ has edge $a = 6\\text{ cm}$ and volume $V_{\\text{cube}} = 6^3 = 216$. Thus $\\frac{V_{\\text{cyl}}}{V_{\\text{cube}}} = \\frac{216/\\pi}{216} = \\frac{1}{\\pi}$.",
       "tags": [
         "2024",
         "2_mark",
@@ -91,7 +98,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A rectangular paper sheet of dimensions $54\\text{ cm} \\times 4\\text{ cm}$ is taken. The two longer edges of the sheet are joined together to create a cylindrical tube. A cube whose surface area is equal to the area of the sheet is also taken.\nThen, the ratio of the volume of the cylindrical tube to the volume of the cube is",
+      "options_latex": {
+        "A": "$1/\\pi$",
+        "B": "$2/\\pi$",
+        "C": "$3/\\pi$",
+        "D": "$4/\\pi$"
+      }
     },
     {
       "id": "2024_CS1_GA_Q09",
@@ -121,10 +135,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Spatial Aptitude",
+      "subtopic": "Paper folding, cutting, and patterns in 2 and 3 dimensions",
+      "difficulty_level": "Medium",
+      "explaination": "Starting at $20 \\times 8\\text{ cm}$, the 1st fold perpendicular to the long edge yields $10 \\times 8\\text{ cm}$. The 2nd fold perpendicular to the new long edge ($10\\text{ cm}$) yields $5 \\times 8\\text{ cm}$. The 3rd fold perpendicular to the new long edge ($8\\text{ cm}$) yields $5 \\times 4\\text{ cm}$. The perimeter of this final folded sheet is $2(5 + 4) = 18\\text{ cm}$.",
       "tags": [
         "2024",
         "2_mark",
@@ -135,7 +149,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A rectangular paper of $20\\text{ cm} \\times 8\\text{ cm}$ is folded 3 times. Each fold is made along the line of symmetry, which is perpendicular to its long edge. The perimeter of the final folded sheet (in cm) is",
+      "options_latex": {
+        "A": "18",
+        "B": "24",
+        "C": "20",
+        "D": "21"
+      }
     },
     {
       "id": "2024_CS1_GA_Q10",
@@ -165,10 +186,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Spatial Aptitude",
+      "subtopic": "Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping",
+      "difficulty_level": "Medium",
+      "explaination": "Reflecting each shaded cell across the diagonal axis $AB$ reveals that exactly 6 asymmetric squares must be shaded on the opposing side to achieve bilateral reflectional symmetry about line $AB$.",
       "tags": [
         "2024",
         "2_mark",
@@ -179,7 +200,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The least number of squares to be added in the figure to make $AB$ a line of symmetry is",
+      "options_latex": {
+        "A": "6",
+        "B": "4",
+        "C": "5",
+        "D": "7"
+      }
     }
   ]
 }

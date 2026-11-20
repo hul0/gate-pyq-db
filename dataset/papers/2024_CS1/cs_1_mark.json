@@ -33,10 +33,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Calculus",
+      "subtopic": "Limits, continuity and differentiability",
+      "difficulty_level": "Medium",
+      "explaination": "The functions $y = x$ and $y = x^3$ intersect at $x^3 - x = 0 \\implies x \\in \\{-1, 0, 1\\}$. The maximum function $f(x) = \\max\\{x, x^3\\}$ switches between $x$ and $x^3$ at each of these three intersection points. Because the left and right derivatives at each transition point differ ($f'(-1^-) = 3 \\neq 1 = f'(-1^+)$, $f'(0^-) = 1 \\neq 0 = f'(0^+)$, $f'(1^-) = 1 \\neq 3 = f'(1^+)$), $f(x)$ is not differentiable at $\\{-1, 0, 1\\}$.",
       "tags": [
         "1_mark",
         "2024",
@@ -47,7 +47,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $f: \\mathbb{R} \\to \\mathbb{R}$ be a function such that $f(x) = \\max\\{x, x^3\\}$, where $\\mathbb{R}$ is the set of all real numbers. The set of all points where $f(x)$ is NOT differentiable is",
+      "options_latex": {
+        "A": "$\\{-1, 1, 2\\}$",
+        "B": "$\\{-2, -1, 1\\}$",
+        "C": "$\\{0, 1\\}$",
+        "D": "$\\{-1, 0, 1\\}$"
+      }
     },
     {
       "id": "2024_CS1_CS_Q12",
@@ -77,10 +84,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Linear Algebra",
+      "subtopic": "Eigenvalues and eigenvectors",
+      "difficulty_level": "Easy",
+      "explaination": "The product of all eigenvalues of a square matrix equals its determinant $\\det(A)$. In $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{bmatrix}$, the rows are in arithmetic progression with $R_3 - R_2 = R_2 - R_1 = [3, 3, 3]$, making the rows linearly dependent and $\\det(A) = 0$. Hence, the product of the eigenvalues is 0.",
       "tags": [
         "1_mark",
         "2024",
@@ -91,7 +98,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The product of all eigenvalues of the matrix $\\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{bmatrix}$ is",
+      "options_latex": {
+        "A": "$-1$",
+        "B": "0",
+        "C": "1",
+        "D": "2"
+      }
     },
     {
       "id": "2024_CS1_CS_Q13",
@@ -121,10 +135,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Number representations and computer arithmetic (fixed and floating point)",
+      "difficulty_level": "Medium",
+      "explaination": "In a 5-bit 2's complement representation, the range is $[-2^4, 2^4 - 1] = [-16, +15]$. Here, $A = 01010_2 = +10$ and $B = 11010_2 = -6$. The operation $A - B = 10 - (-6) = +16$, which exceeds $+15$, resulting in an arithmetic overflow.",
       "tags": [
         "1_mark",
         "2024",
@@ -135,7 +149,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a system that uses 5 bits for representing signed integers in 2's complement format. In this system, two integers $A$ and $B$ are represented as $A = 01010$ and $B = 11010$. Which one of the following operations will result in either an arithmetic overflow or an arithmetic underflow?",
+      "options_latex": {
+        "A": "$A + B$",
+        "B": "$A - B$",
+        "C": "$B - A$",
+        "D": "$2 * B$"
+      }
     },
     {
       "id": "2024_CS1_CS_Q14",
@@ -165,10 +186,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Probability and Statistics",
+      "subtopic": "Conditional probability and Bayes theorem",
+      "difficulty_level": "Medium",
+      "explaination": "By symmetry in random permutations of $\\{1, 2, \\dots, n\\}$, $P(X) = P(1 \\text{ before } 2) = 1/2$, and $P(Y) = P(3 \\text{ before } 4) = 1/2$. Because the relative order of the disjoint pair $\\{1, 2\\}$ has no bearing on the relative order of $\\{3, 4\\}$, the joint probability is $P(X \\cap Y) = 1/4 = P(X)P(Y)$, proving that $X$ and $Y$ are independent.",
       "tags": [
         "1_mark",
         "2024",
@@ -179,7 +200,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a permutation sampled uniformly at random from the set of all permutations of $\\{1, 2, 3, \\dots, n\\}$ for some $n \\ge 4$. Let $X$ be the event that 1 occurs before 2 in the permutation, and $Y$ the event that 3 occurs before 4. Which one of the following statements is TRUE?",
+      "options_latex": {
+        "A": "The events $X$ and $Y$ are mutually exclusive",
+        "B": "The events $X$ and $Y$ are independent",
+        "C": "Either event $X$ or $Y$ must occur",
+        "D": "Event $X$ is more likely than event $Y$"
+      }
     },
     {
       "id": "2024_CS1_CS_Q15",
@@ -209,10 +237,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "I/O interface: interrupt and DMA mode",
+      "difficulty_level": "Easy",
+      "explaination": "Programmed I/O requires the CPU to stay in a busy-waiting polling loop to check device readiness, wasting processor cycles and yielding poor CPU utilization. Interrupt-driven I/O frees the CPU to execute other tasks while I/O operations are underway, providing significantly better CPU utilization. Thus, statement (C) is FALSE.",
       "tags": [
         "1_mark",
         "2024",
@@ -223,7 +251,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one of the following statements is FALSE?",
+      "options_latex": {
+        "A": "In the cycle stealing mode of DMA, one word of data is transferred between an I/O device and main memory in a stolen cycle",
+        "B": "For bulk data transfer, the burst mode of DMA has a higher throughput than the cycle stealing mode",
+        "C": "Programmed I/O mechanism has a better CPU utilization than the interrupt driven I/O mechanism",
+        "D": "The CPU can start executing an interrupt service routine faster with vectored interrupts than with non-vectored interrupts"
+      }
     },
     {
       "id": "2024_CS1_CS_Q16",
@@ -253,10 +288,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Concept of layering: OSI and TCP/IP Protocol Stacks",
+      "difficulty_level": "Easy",
+      "explaination": "Initially all caches are empty. The client must first send a DNS query (ii) to resolve the server hostname to an IP. Next, it establishes a TCP connection by sending TCP SYN (iv). Once connected, it sends an HTTP GET request for the index HTML page (i). After parsing the HTML and identifying embedded images, it sends HTTP GET requests for the images (iii).",
       "tags": [
         "1_mark",
         "2024",
@@ -267,7 +302,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A user starts browsing a webpage hosted at a remote server. The browser opens a single TCP connection to fetch the entire webpage from the server. The webpage consists of a top-level index page with multiple embedded image objects. Assume that all caches (e.g., DNS cache, browser cache) are all initially empty. The following packets leave the user's computer in some order:\n\\begin{enumerate}[label=(\\roman*),itemsep=0pt,topsep=2pt]\n\\item HTTP GET request for the index page\n\\item DNS request to resolve the web server's name to its IP address\n\\item HTTP GET request for an image object\n\\item TCP SYN to open a connection to the web server\n\\end{enumerate}\nWhich one of the following is the CORRECT chronological order (earliest in time to latest) of the packets leaving the computer?",
+      "options_latex": {
+        "A": "(iv), (ii), (iii), (i)",
+        "B": "(ii), (iv), (iii), (i)",
+        "C": "(ii), (iv), (i), (iii)",
+        "D": "(iv), (ii), (i), (iii)"
+      }
     },
     {
       "id": "2024_CS1_CS_Q17",
@@ -297,10 +339,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Asymptotic worst case time and space complexity",
+      "difficulty_level": "Easy",
+      "explaination": "In the worst case (such as when the array is sorted or the disorder occurs at the very end), a single-pass algorithm that compares adjacent elements must traverse the entire array, performing $N-1$ comparisons. The worst-case runtime is asymptotically tight at $\\Theta(N)$, meaning it is both $\\mathcal{O}(N)$ and $\\Omega(N)$.",
       "tags": [
         "1_mark",
         "2024",
@@ -311,7 +353,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Given an integer array of size $N$, we want to check if the array is sorted (in either ascending or descending order). An algorithm solves this problem by making a single pass through the array and comparing each element of the array only with its adjacent elements. The worst-case time complexity of this algorithm is",
+      "options_latex": {
+        "A": "both $\\mathcal{O}(N)$ and $\\Omega(N)$",
+        "B": "$\\mathcal{O}(N)$ but not $\\Omega(N)$",
+        "C": "$\\Omega(N)$ but not $\\mathcal{O}(N)$",
+        "D": "neither $\\mathcal{O}(N)$ nor $\\Omega(N)$"
+      }
     },
     {
       "id": "2024_CS1_CS_Q18",
@@ -341,10 +390,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Easy",
+      "explaination": "Initially $a = 6, b = 0$. In the loop, integer division $a/12 = 6/12 = 0$, so $a = 0 + 1 = 1$, and $a += b \\implies a = 1$. In subsequent iterations, $a=1 < 10$, $1/12 + 1 = 1$, so $a$ remains 1 in every iteration. The loop condition $a < 10$ remains true indefinitely, causing an infinite loop.",
       "tags": [
         "1_mark",
         "2024",
@@ -355,7 +404,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C program:\n\\begin{lstlisting}[language=C]\n#include <stdio.h>\nint main() {\n    int a = 6;\n    int b = 0;\n    while(a < 10) {\n        a = a / 12 + 1;\n        a += b;\n    }\n    printf(\"%d\", a);\n    return 0;\n}\n\\end{lstlisting}\nWhich one of the following statements is CORRECT?",
+      "options_latex": {
+        "A": "The program prints 9 as output",
+        "B": "The program prints 10 as output",
+        "C": "The program gets stuck in an infinite loop",
+        "D": "The program prints 6 as output"
+      }
     },
     {
       "id": "2024_CS1_CS_Q19",
@@ -385,10 +441,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Recursion",
+      "difficulty_level": "Easy",
+      "explaination": "The function `fX()` recursively reads each character before printing. As each character (`'1'`, `'2'`, `'3'`, `'4'`) is read, it is saved on the call stack before `fX()` recurses. When `\\n` is reached, recursion terminates and the characters are printed during stack unwinding in reverse (LIFO) order as `4321`.",
       "tags": [
         "1_mark",
         "2024",
@@ -399,7 +455,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C program:\n\\begin{lstlisting}[language=C]\n#include <stdio.h>\nvoid fX();\nint main() {\n    fX();\n    return 0;\n}\nvoid fX() {\n    char a;\n    if((a = getchar()) != '\\n')\n        fX();\n    if(a != '\\n')\n        putchar(a);\n}\n\\end{lstlisting}\nAssume that the input to the program from the command line is `1234` followed by a newline character. Which one of the following statements is CORRECT?",
+      "options_latex": {
+        "A": "The program will not terminate",
+        "B": "The program will terminate with no output",
+        "C": "The program will terminate with 4321 as output",
+        "D": "The program will terminate with 1234 as output"
+      }
     },
     {
       "id": "2024_CS1_CS_Q20",
@@ -429,10 +492,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "ER-model",
+      "difficulty_level": "Medium",
+      "explaination": "Specification $S$ describes four distinct binary relationships among entities: Instructors teach courses, Students register for courses, Courses are allocated classrooms, and Instructors guide students. In standard ER modeling, entity sets are represented by rectangles and relationships by diamond diamonds connecting them; diagram (iv) correctly captures all four relationship sets.",
       "tags": [
         "1_mark",
         "2024",
@@ -443,7 +506,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $S$ be the specification: ``Instructors teach courses. Students register for courses. Courses are allocated classrooms. Instructors guide students.'' Which one of the following ER diagrams CORRECTLY represents $S$?",
+      "options_latex": {
+        "A": "(i)",
+        "B": "(ii)",
+        "C": "(iii)",
+        "D": "(iv)"
+      }
     },
     {
       "id": "2024_CS1_CS_Q21",
@@ -473,10 +543,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "File organization, indexing (e.g., B and B+ trees)",
+      "difficulty_level": "Easy",
+      "explaination": "In a $\\text{B}^+$ tree, every node except the root node must satisfy the minimum occupancy constraint of being at least half full ($\text{at least } \\lceil p/2 \\rceil$ child pointers). The root node is the sole exception, and is permitted to hold as few as two pointers (or one key) when non-leaf, and one key when leaf.",
       "tags": [
         "1_mark",
         "2024",
@@ -487,7 +557,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In a $\\text{B}^+$ tree, the requirement of at least half-full (50\\%) node occupancy is relaxed for which one of the following cases?",
+      "options_latex": {
+        "A": "Only the root node",
+        "B": "All leaf nodes",
+        "C": "All internal nodes",
+        "D": "Only the leftmost leaf node"
+      }
     },
     {
       "id": "2024_CS1_CS_Q22",
@@ -518,10 +595,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Integrity constraints, normal forms",
+      "difficulty_level": "Easy",
+      "explaination": "A relation is in 1NF if and only if all attribute values are atomic, which explicitly forbids composite or multi-valued attributes (making (C) TRUE). 1NF places no limitation on candidate keys having multiple attributes (multi-attribute keys are fully permitted, making (A) TRUE) or the presence of foreign keys.",
       "tags": [
         "1_mark",
         "2024",
@@ -532,7 +609,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statements about a relation $R$ in first normal form (1NF) is/are TRUE?",
+      "options_latex": {
+        "A": "$R$ can have a multi-attribute key",
+        "B": "$R$ cannot have a foreign key",
+        "C": "$R$ cannot have a composite attribute",
+        "D": "$R$ cannot have more than one candidate key"
+      }
     },
     {
       "id": "2024_CS1_CS_Q23",
@@ -563,10 +647,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular and context-free languages, pumping lemma",
+      "difficulty_level": "Medium",
+      "explaination": "Regular languages are closed under complementation and union; since $L_1, L_2$ are regular, $\\overline{L_1}$ and $\\overline{L_2}$ are regular, so $\\overline{L_1} \\cup \\overline{L_2}$ is regular (D is TRUE). If $L_3$ is non-regular, its complement $\\overline{L_3}$ must also be non-regular, because if $\\overline{L_3}$ were regular, its complement $\\overline{\\overline{L_3}} = L_3$ would be regular, a contradiction (C is TRUE).",
       "tags": [
         "1_mark",
         "2024",
@@ -577,7 +661,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $L_1, L_2$ be two regular languages and $L_3$ a language which is not regular. Which of the following statements is/are always TRUE?",
+      "options_latex": {
+        "A": "$L_1 = L_2$ if and only if $L_1 \\cap \\overline{L_2} = \\emptyset$",
+        "B": "$L_1 \\cup L_3$ is not regular",
+        "C": "$\\overline{L_3}$ is not regular",
+        "D": "$\\overline{L_1} \\cup \\overline{L_2}$ is regular"
+      }
     },
     {
       "id": "2024_CS1_CS_Q24",
@@ -607,10 +698,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "System calls, processes, threads, inter-process communication",
+      "difficulty_level": "Easy",
+      "explaination": "All threads of a single process share the same address space (code, global data, heap) and open files. Because they run within the same virtual address space without memory protection barriers between them, one thread can corrupt another thread's memory; hence they are by default not protected from each other (D is TRUE). Each thread maintains its own private stack and registers.",
       "tags": [
         "1_mark",
         "2024",
@@ -621,7 +712,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statements about threads is/are TRUE?",
+      "options_latex": {
+        "A": "Threads can only be implemented in kernel space",
+        "B": "Each thread has its own file descriptor table for open files",
+        "C": "All the threads belonging to a process share a common stack",
+        "D": "Threads belonging to a process are by default not protected from each other"
+      }
     },
     {
       "id": "2024_CS1_CS_Q25",
@@ -652,10 +750,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "System calls, processes, threads, inter-process communication",
+      "difficulty_level": "Easy",
+      "explaination": "In the standard process state model, a process in the Waiting (Blocked) state transitions to Ready upon event/I/O completion; it cannot transition directly to Running without CPU dispatch (B is impossible). Similarly, only a Running process can initiate an I/O request and transition to Waiting; a Ready process cannot transition directly to Waiting (C is impossible).",
       "tags": [
         "1_mark",
         "2024",
@@ -666,7 +764,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following process state transitions is/are NOT possible?",
+      "options_latex": {
+        "A": "Running to Ready",
+        "B": "Waiting to Running",
+        "C": "Ready to Waiting",
+        "D": "Running to Terminated"
+      }
     },
     {
       "id": "2024_CS1_CS_Q26",
@@ -697,10 +802,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Easy",
+      "explaination": "Bottom-up parsers reduce an input string back to the start symbol by finding handles. Shift-reduce parsers and LR parsers (SLR, CLR, LALR) are bottom-up parsers. In contrast, Predictive and LL(1) parsers construct the derivation tree from the root downward and are top-down parsers.",
       "tags": [
         "1_mark",
         "2024",
@@ -711,7 +816,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following is/are Bottom-Up Parser(s)?",
+      "options_latex": {
+        "A": "Shift-reduce Parser",
+        "B": "Predictive Parser",
+        "C": "LL(1) Parser",
+        "D": "LR Parser"
+      }
     },
     {
       "id": "2024_CS1_CS_Q27",
@@ -742,10 +854,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Probability and Statistics",
+      "subtopic": "Conditional probability and Bayes theorem",
+      "difficulty_level": "Easy",
+      "explaination": "We are given $P(A) = 0.3$, $P(B) = 0.5$, and $P(A \\cap B) = 0.1$. First, $P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = 0.3 + 0.5 - 0.1 = 0.7$ (B is TRUE). Second, $P(A \\cap B^c) = P(A) - P(A \\cap B) = 0.3 - 0.1 = 0.2$ (C is TRUE). Since $P(A)P(B) = 0.15 \\neq 0.1$, the events are not independent.",
       "tags": [
         "1_mark",
         "2024",
@@ -756,7 +868,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $A$ and $B$ be two events in a probability space with $P(A) = 0.3$, $P(B) = 0.5$, and $P(A \\cap B) = 0.1$. Which of the following statements is/are TRUE?",
+      "options_latex": {
+        "A": "The two events $A$ and $B$ are independent",
+        "B": "$P(A \\cup B) = 0.7$",
+        "C": "$P(A \\cap B^c) = 0.2$, where $B^c$ is the complement of the event $B$",
+        "D": "$P(A^c \\cap B^c) = 0.4$, where $A^c$ and $B^c$ are the complements of the events $A$ and $B$, respectively"
+      }
     },
     {
       "id": "2024_CS1_CS_Q28",
@@ -787,10 +906,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Combinational and sequential circuits",
+      "difficulty_level": "Medium",
+      "explaination": "The circuit computes $Y = X \\cdot \\overline{X}$. In steady-state with no gate delays, $X \\cdot \\overline{X} = 0$, so $Y$ is always logic Zero (A is TRUE). When $X$ transitions from 0 to 1, if the inverter has a non-zero propagation delay, both inputs to the AND gate remain logic 1 for the duration of the inverter delay, producing a transient logic 1 glitch (C is TRUE).",
       "tags": [
         "1_mark",
         "2024",
@@ -801,7 +920,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the circuit shown below where the gates may have propagation delays. Assume that all signal transitions occur instantaneously and that wires have no delays. Which of the following statements about the circuit is/are CORRECT?",
+      "options_latex": {
+        "A": "With no propagation delays, the output $Y$ is always logic Zero",
+        "B": "With no propagation delays, the output $Y$ is always logic One",
+        "C": "With propagation delays, the output $Y$ can have a transient logic One after $X$ transitions from logic Zero to logic One",
+        "D": "With propagation delays, the output $Y$ can have a transient logic Zero after $X$ transitions from logic One to logic Zero"
+      }
     },
     {
       "id": "2024_CS1_CS_Q29",
@@ -832,10 +958,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Transport layer: flow control and congestion control, UDP, TCP, sockets",
+      "difficulty_level": "Easy",
+      "explaination": "During TCP connection establishment, the initial sequence number $N_P$ is chosen pseudo-randomly to avoid cross-connection packet collisions and mitigate spoofing attacks (A is TRUE). Because a SYN packet consumes exactly 1 sequence number in the sequence space, server $Q$ acknowledges it with $N_Q = N_P + 1$ (D is TRUE).",
       "tags": [
         "1_mark",
         "2024",
@@ -846,7 +972,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "TCP client P successfully establishes a connection to TCP server Q. Let $N_P$ denote the sequence number in the SYN sent from P to Q. Let $N_Q$ denote the acknowledgement number in the SYN ACK from Q to P. Which of the following statements is/are CORRECT?",
+      "options_latex": {
+        "A": "The sequence number $N_P$ is chosen randomly by P",
+        "B": "The sequence number $N_P$ is always 0 for a new connection",
+        "C": "The acknowledgement number $N_Q$ is equal to $N_P$",
+        "D": "The acknowledgement number $N_Q$ is equal to $N_P + 1$"
+      }
     },
     {
       "id": "2024_CS1_CS_Q30",
@@ -877,10 +1010,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Instruction pipelining, pipeline hazards",
+      "difficulty_level": "Easy",
+      "explaination": "Forwarding (bypassing) routes intermediate results directly from pipeline registers of an earlier instruction to execution inputs of a subsequent instruction (A is TRUE). While forwarding resolves many ALU data dependencies without stalls, it cannot prevent a load-use stall (where the loaded data is needed immediately in the subsequent instruction's EX stage), requiring at least one stall cycle (C is TRUE).",
       "tags": [
         "1_mark",
         "2024",
@@ -891,7 +1024,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a 5-stage pipelined processor with Instruction Fetch (IF), Instruction Decode (ID), Execute (EX), Memory Access (MEM), and Register Writeback (WB) stages. Which of the following statements about forwarding is/are CORRECT?",
+      "options_latex": {
+        "A": "In a pipelined execution, forwarding means the result from a source stage of an earlier instruction is passed on to the destination stage of a later instruction",
+        "B": "In forwarding, data from the output of the MEM stage can be passed on to the input of the EX stage of the next instruction",
+        "C": "Forwarding cannot prevent all pipeline stalls",
+        "D": "Forwarding does not require any extra hardware to retrieve the data from the pipeline stages"
+      }
     },
     {
       "id": "2024_CS1_CS_Q31",
@@ -922,10 +1062,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Network Address Translation (NAT)",
+      "difficulty_level": "Easy",
+      "explaination": "When a packet leaves a private subnet through an outbound NAT gateway, the router rewrites the private Source IP address to its public external IP address (A is modified). Because the IP header fields have changed, the IPv4 Header Checksum must be recalculated and replaced (C is modified). Destination IP and Total Length are unmodified.",
       "tags": [
         "1_mark",
         "2024",
@@ -936,7 +1076,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following fields is/are modified in the IP header of a packet going out of a network address translation (NAT) device from an internal network to an external network?",
+      "options_latex": {
+        "A": "Source IP",
+        "B": "Destination IP",
+        "C": "Header Checksum",
+        "D": "Total Length"
+      }
     },
     {
       "id": "2024_CS1_CS_Q32",
@@ -962,10 +1109,10 @@
         "min": 2.0,
         "max": 2.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Sets, relations, functions, partial orders and lattices",
+      "difficulty_level": "Medium",
+      "explaination": "A bijection from $A$ to $B$ implies $|A| = |B| = n$. A bijection from $A \\times A$ to $A \\cup B$ implies $|A \\times A| = |A \\cup B|$. We have $|A \\times A| = n^2$, and $n \\le |A \\cup B| \\le 2n$. Thus $n \\le n^2 \\le 2n$. Since $A$ is non-empty ($n \\ge 1$), dividing by $n$ gives $1 \\le n \\le 2$. This allows exactly two integer solutions: $n = 1$ (where $A = B$) and $n = 2$ (where $A \\cap B = \\emptyset$).",
       "tags": [
         "1_mark",
         "2024",
@@ -975,7 +1122,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $A$ and $B$ be non-empty finite sets such that there exist one-to-one and onto functions (i) from $A$ to $B$ and (ii) from $A \\times A$ to $A \\cup B$. The number of possible values of $|A|$ is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q33",
@@ -1001,10 +1150,10 @@
         "min": 6.0,
         "max": 6.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Medium",
+      "explaination": "Precedence order is $+$ (highest, left-associative), then $-$ (right-associative), then $*$ (right-associative), then $/$ (lowest, right-associative). Evaluating $+$ first: $3+1+5 = 9$ and $7+2 = 9$. Expression becomes $9 * 2 / 9 - 4 - 7 - 6 / 2$. Evaluating $-$ right-associatively: $4 - (7 - 6) = 4 - 1 = 3$, giving $9 - 3 = 6$. The expression becomes $9 * 2 / 6 / 2$. Next $*$ gives $18 / 6 / 2$. Evaluating $/$ right-associatively: $6 / 2 = 3$, and $18 / 3 = 6$.",
       "tags": [
         "1_mark",
         "2024",
@@ -1014,7 +1163,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the operator precedence and associativity rules for the integer arithmetic operators given in the table below:\n\\begin{center}\n\\begin{tabular}{|c|c|c|}\n\\hline\n\\textbf{Operator} & \\textbf{Precedence} & \\textbf{Associativity} \\\\\n\\hline\n$+$ & Highest & Left \\\\\n$-$ & High & Right \\\\\n$*$ & Medium & Right \\\\\n$/$ & Low & Right \\\\\n\\hline\n\\end{tabular}\n\\end{center}\nThe value of the expression $3 + 1 + 5 * 2 / 7 + 2 - 4 - 7 - 6 / 2$ as per the above rules is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q34",
@@ -1040,10 +1191,10 @@
         "min": 16.0,
         "max": 16.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Combinatorics: counting, recurrence relations, generating functions",
+      "difficulty_level": "Easy",
+      "explaination": "By Cayley's theorem, the number of spanning trees in a complete labelled graph $K_n$ on $n$ vertices is given by $n^{n-2}$. For $n = 4$ labelled vertices A, B, C, D, the number of spanning trees is $4^{4-2} = 4^2 = 16$.",
       "tags": [
         "1_mark",
         "2024",
@@ -1053,7 +1204,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The number of spanning trees in a complete graph of 4 vertices labelled A, B, C, and D is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2024_CS1_CS_Q35",
@@ -1079,10 +1232,10 @@
         "min": 2.0,
         "max": 2.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Relational model: relational algebra, tuple calculus, SQL",
+      "difficulty_level": "Easy",
+      "explaination": "Joining $R(A,B)$ and $S(A,C)$ on $R.A = S.A$ yields: $(10, 20, 90)$ for $A=10$, and $(30, 40, 45)$, $(30, 50, 45)$ for $A=30$. Applying selection $\\sigma_{B < C}$: $20 < 90$ is true (tuple $(10, 20, 90)$), $40 < 45$ is true (tuple $(30, 40, 45)$), and $50 < 45$ is false. Thus, exactly 2 tuples satisfy the condition.",
       "tags": [
         "1_mark",
         "2024",
@@ -1092,7 +1245,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following two relations, $R(A,B)$ and $S(A,C)$:\n\\begin{center}\n\\begin{tabular}{|c|c|}\n\\multicolumn{2}{c}{$R$} \\\\\n\\hline\n$A$ & $B$ \\\\\n\\hline\n10 & 20 \\\\\n20 & 30 \\\\\n30 & 40 \\\\\n30 & 50 \\\\\n\\hline\n\\end{tabular}\n\\qquad\n\\begin{tabular}{|c|c|}\n\\multicolumn{2}{c}{$S$} \\\\\n\\hline\n$A$ & $C$ \\\\\n\\hline\n10 & 90 \\\\\n30 & 45 \\\\\n40 & 80 \\\\\n50 & 95 \\\\\n\\hline\n\\end{tabular}\n\\end{center}\nThe total number of tuples obtained by evaluating the following expression\n\\[ \\sigma_{B < C}(R \\bowtie_{R.A = S.A} S) \\]\nis \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     }
   ]
 }
