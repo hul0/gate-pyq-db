@@ -424,7 +424,7 @@ def generate_paper_latex(paper_data):
     """
     year = paper_data.get("year", 2025)
     session = paper_data.get("session", "CS")
-    subject = paper_data.get("subject", "Computer Science and Information Technology")
+    subject = paper_data.get("subject", "Computer Science and IT")
     paper_id = paper_data.get("paper_id", f"{year}_{session}")
     raw_questions = paper_data.get("questions", [])
 
@@ -584,7 +584,7 @@ def generate_master_book_latex(papers_data, abs_logo_path):
 \fancyhf{}
 \fancyhead[C]{\small\textbf{Studiva GATE Question Bank}}
 \fancyhead[LE]{\small\textit{Computer Science \& IT (2011--2025)}}
-\fancyhead[RO]{\small\textit{Studiva Education}}
+\fancyhead[RO]{\small\textit{Studiva}}
 \fancyfoot[LE,RO]{\scriptsize\textbf{Studiva} $\cdot$ \texttt{www.studiva.co.in}}
 \fancyfoot[C]{\small\textbf{Page \thepage\ of \pageref{LastPage}}}
 \fancyfoot[RE,LO]{\scriptsize\texttt{contact@studiva.co.in}}

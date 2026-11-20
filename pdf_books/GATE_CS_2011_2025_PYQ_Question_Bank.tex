@@ -35,7 +35,7 @@
 \newsavebox{\watermarkbox}
 \sbox{\watermarkbox}{%
     \begin{tabular}{c}
-        \includegraphics[width=6.0cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.jpeg} \\[-0.2em]
+        \includegraphics[width=6.0cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg} \\[-0.2em]
         {\fontsize{14}{17}\selectfont\bfseries Studiva}
     \end{tabular}%
 }
@@ -50,7 +50,7 @@
 \fancyhf{}
 \fancyhead[C]{\small\textbf{Studiva GATE Question Bank}}
 \fancyhead[LE]{\small\textit{Computer Science \& IT (2011--2025)}}
-\fancyhead[RO]{\small\textit{Studiva Education}}
+\fancyhead[RO]{\small\textit{Studiva}}
 \fancyfoot[LE,RO]{\scriptsize\textbf{Studiva} $\cdot$ \texttt{www.studiva.co.in}}
 \fancyfoot[C]{\small\textbf{Page \thepage\ of \pageref{LastPage}}}
 \fancyfoot[RE,LO]{\scriptsize\texttt{contact@studiva.co.in}}
@@ -74,7 +74,7 @@
 \thispagestyle{empty}
 \vspace*{1.5cm}
 \begin{center}
-    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.jpeg}\\[1.5em]
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva-butterfly-icon.jpg}\\[1.5em]
     {\fontsize{24}{28}\selectfont\textbf{GATE COMPUTER SCIENCE \& IT}}\\[0.5em]
     {\fontsize{16}{20}\selectfont\textbf{PREVIOUS YEARS QUESTION BANK (2011 -- 2025)}}\\[0.6em]
     {\normalsize Detailed Examination Papers with Complete Official Answer Keys}\\[2.0em]
@@ -6289,48 +6289,37 @@ The fragmentation offset value stored in the third fragment is \_\_\_\_\_\_\_. \
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.2} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries A function y(x) is defined in the interval [0, 1] on the $x$-axis as
-$y$($x$) =
-⎩
-⎪
-⎨
-⎪
-⎧
-2 if 0 $\le$$x$< 1
-3
-3 if 1
-3 $\le$$x$< 3
-4
-1 if 3
-4 $\le$$x$$\le$1
-Which one of the following is the area under the curve for the interval [0, 1] on
-the $x$-axis? \par}
+{\bfseries A function $y(x)$ is defined in the interval $[0, 1]$ on the $x$-axis as
+\[ y(x) = \begin{cases} 2 & \text{if } 0 \le x < \frac{1}{3} \\ 3 & \text{if } \frac{1}{3} \le x < \frac{3}{4} \\ 1 & \text{if } \frac{3}{4} \le x \le 1 \end{cases} \]
+Which one of the following is the area under the curve for the interval $[0, 1]$ on the $x$-axis? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~5 \newline 6\par\vspace{2pt}\noindent
-\textbf{(B)}~6 \newline 5\par\vspace{2pt}\noindent
-\textbf{(C)}~13 \newline 6\par\vspace{2pt}\noindent
-\textbf{(D)}~6 \newline 13
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~$5/6$ & \textbf{(B)}~$6/5$ \\
+\addlinespace[2pt]
+\textbf{(C)}~$13/6$ & \textbf{(D)}~$6/13$
+\end{tabular*}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.3} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Let r be a root of the equation $x$$^2$+ 2$x$+ 6 = 0.
-Then the value of the expression ($r$+ 2)($r$+ 3)($r$+ 4)($r$+ 5) is \par}
+{\bfseries Let $r$ be a root of the equation $x^2 + 2x + 6 = 0$.
+Then the value of the expression $(r+2)(r+3)(r+4)(r+5)$ is \par}
 \par\vspace{2pt}\noindent
 \begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
-\textbf{(A)}~51 & \textbf{(B)}~−51 \\
+\textbf{(A)}~51 & \textbf{(B)}~$-51$ \\
 \addlinespace[2pt]
-\textbf{(C)}~126 & \textbf{(D)}~−126
+\textbf{(C)}~126 & \textbf{(D)}~$-126$
 \end{tabular*}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.4} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Given below are four statements.
-Statement 1: All students are inquisitive.
-Statement 2: Some students are inquisitive.
-Statement 3: No student is inquisitive.
-Statement 4: Some students are not inquisitive.
-From the given four statements, find the two statements that CANNOT BE
-TRUE simultaneously, assuming that there is at least one student in the class. \par}
+{\bfseries Given below are four statements:
+\begin{itemize}[itemsep=0pt,topsep=2pt]
+\item Statement 1: All students are inquisitive.
+\item Statement 2: Some students are inquisitive.
+\item Statement 3: No student is inquisitive.
+\item Statement 4: Some students are not inquisitive.
+\end{itemize}
+From the given four statements, find the two statements that CANNOT BE TRUE simultaneously, assuming that there is at least one student in the class. \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~Statement 1 and Statement 3\par\vspace{2pt}\noindent
 \textbf{(B)}~Statement 1 and Statement 2\par\vspace{2pt}\noindent
@@ -6344,13 +6333,8 @@ TRUE simultaneously, assuming that there is at least one student in the class. \
 
 \noindent\textbf{Q.6} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Some people believe that ``what gets measured, improves''. Some others believe
-that ``what gets measured, gets gamed''. One possible reason for the difference in
-the beliefs is the work culture in organizations. In organizations with good work
-culture, metrics help improve outcomes. However, the same metrics are
-counterproductive in organizations with poor work culture.
-Which one of the following is the CORRECT logical inference based on the
-information in the above passage? \par}
+{\bfseries Some people believe that ``what gets measured, improves''. Some others believe that ``what gets measured, gets gamed''. One possible reason for the difference in the beliefs is the work culture in organizations. In organizations with good work culture, metrics help improve outcomes. However, the same metrics are counterproductive in organizations with poor work culture.
+Which one of the following is the CORRECT logical inference based on the information in the above passage? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~Metrics are useful in organizations with poor work culture\par\vspace{2pt}\noindent
 \textbf{(B)}~Metrics are useful in organizations with good work culture\par\vspace{2pt}\noindent
@@ -6359,41 +6343,34 @@ information in the above passage? \par}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.7} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries In a recently conducted national entrance test, boys constituted 65\% of those who
-appeared for the test. Girls constituted the remaining candidates and they
-accounted for 60\% of the qualified candidates.
-Which one of the following is the correct logical inference based on the
-information provided in the above passage? \par}
+{\bfseries In a recently conducted national entrance test, boys constituted 65\% of those who appeared for the test. Girls constituted the remaining candidates and they accounted for 60\% of the qualified candidates.
+Which one of the following is the correct logical inference based on the information provided in the above passage? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~Equal number of boys and girls qualified\par\vspace{2pt}\noindent
 \textbf{(B)}~Equal number of boys and girls appeared for the test\par\vspace{2pt}\noindent
-\textbf{(C)}~The number of boys who appeared for the test is less than the number of girls \newline who appeared\par\vspace{2pt}\noindent
-\textbf{(D)}~The number of boys who qualified the test is less than the number of girls who \newline qualified
+\textbf{(C)}~The number of boys who appeared for the test is less than the number of girls who appeared\par\vspace{2pt}\noindent
+\textbf{(D)}~The number of boys who qualified the test is less than the number of girls who qualified
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.8} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries A box contains five balls of same size and shape. Three of them are green
-coloured balls and two of them are orange coloured balls. Balls are drawn from
-the box one at a time. If a green ball is drawn, it is not replaced. If an orange ball
-is drawn, it is replaced with another orange ball.
-First ball is drawn. What is the probability of getting an orange ball in the next
-draw? \par}
+{\bfseries A box contains five balls of same size and shape. Three of them are green coloured balls and two of them are orange coloured balls. Balls are drawn from the box one at a time. If a green ball is drawn, it is not replaced. If an orange ball is drawn, it is replaced with another orange ball.
+First ball is drawn. What is the probability of getting an orange ball in the next draw? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~1 \newline 2\par\vspace{2pt}\noindent
-\textbf{(B)}~8 \newline 25\par\vspace{2pt}\noindent
-\textbf{(C)}~19 \newline 50\par\vspace{2pt}\noindent
-\textbf{(D)}~23 \newline 50
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~$1/2$ & \textbf{(B)}~$8/25$ \\
+\addlinespace[2pt]
+\textbf{(C)}~$19/50$ & \textbf{(D)}~$23/50$
+\end{tabular*}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.9} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries The corners and mid-points of the sides of a triangle are named using the distinct
-letters P, Q, R, S, T and U, but not necessarily in the same order. Consider the
-following statements:
- The line joining P and R is parallel to the line joining Q and S.
- P is placed on the side opposite to the corner T.
- S and U cannot be placed on the same side.
-Which one of the following statements is correct based on the above
-information? \par}
+{\bfseries The corners and mid-points of the sides of a triangle are named using the distinct letters P, Q, R, S, T and U, but not necessarily in the same order. Consider the following statements:
+\begin{itemize}[itemsep=0pt,topsep=2pt]
+\item The line joining P and R is parallel to the line joining Q and S.
+\item P is placed on the side opposite to the corner T.
+\item S and U cannot be placed on the same side.
+\end{itemize}
+Which one of the following statements is correct based on the above information? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~P cannot be placed at a corner\par\vspace{2pt}\noindent
 \textbf{(B)}~S cannot be placed at a corner\par\vspace{2pt}\noindent
@@ -6402,18 +6379,14 @@ information? \par}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.10} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries A plot of land must be divided between four families. They want their
-individual plots to be similar in shape, not necessarily equal in area. The land
-has equally spaced poles, marked as dots in the below figure. Two ropes, R1 and
-R2, are already present and cannot be moved.
-What is the least number of additional straight ropes needed to create the
-desired plots? A single rope can pass through three poles that are aligned in a
-straight line. \par}
+{\bfseries A plot of land must be divided between four families. They want their individual plots to be similar in shape, not necessarily equal in area. The land has equally spaced poles, marked as dots in the figure. Two ropes, R1 and R2, are already present and cannot be moved.
+What is the least number of additional straight ropes needed to create the desired plots? A single rope can pass through three poles that are aligned in a straight line. \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~2\par\vspace{2pt}\noindent
-\textbf{(B)}~4\par\vspace{2pt}\noindent
-\textbf{(C)}~5\par\vspace{2pt}\noindent
-\textbf{(D)}~3 \newline Q.11 -- Q.22 Multiple Choice Questions (MCQ), carry ONE mark each.
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~2 & \textbf{(B)}~4 \\
+\addlinespace[2pt]
+\textbf{(C)}~5 & \textbf{(D)}~3
+\end{tabular*}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 
 \vspace{8pt}
@@ -6423,33 +6396,30 @@ straight line. \par}
 
 \noindent\textbf{Q.11} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Which one of the following statements is TRUE for all positive functions
-( )
-f n ? \par}
+{\bfseries Which one of the following statements is TRUE for all positive functions $f(n)$? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~2 \newline 2 \newline ( \newline ) \newline ( ( ) ), \newline f n \newline f n \newline $\theta$ \newline = \newline when \newline ( ) \newline f n is a polynomial\par\vspace{2pt}\noindent
-\textbf{(B)}~2 \newline 2 \newline ( \newline ) \newline ( ( ) ) \newline f n \newline o f n \newline =\par\vspace{2pt}\noindent
-\textbf{(C)}~2 \newline 2 \newline ( \newline ) \newline ( ( ) ), \newline f n \newline O f n \newline = \newline when \newline ( ) \newline f n is an exponential function\par\vspace{2pt}\noindent
-\textbf{(D)}~2 \newline 2 \newline ( \newline ) \newline ( ( ) ) \newline f n \newline f n \newline =$\Omega$
+\textbf{(A)}~$f(n^2) = \Theta((f(n))^2)$, when $f(n)$ is a polynomial\par\vspace{2pt}\noindent
+\textbf{(B)}~$f(n^2) = o((f(n))^2)$\par\vspace{2pt}\noindent
+\textbf{(C)}~$f(n^2) = \mathcal{O}((f(n))^2)$, when $f(n)$ is an exponential function\par\vspace{2pt}\noindent
+\textbf{(D)}~$f(n^2) = \Omega((f(n))^2)$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.12} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Which one of the following regular expressions correctly represents the language
-of the finite automaton given below? \par}
+{\bfseries Which one of the following regular expressions correctly represents the language of the finite automaton given below? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~* \newline * \newline * \newline * \newline ab bab \newline ba aba \newline \par\vspace{2pt}\noindent
-\textbf{(B)}~* \newline * \newline * \newline * \newline * \newline * \newline ( \newline ) \newline ( \newline ) \newline ab b ab \newline ba a ba \newline \par\vspace{2pt}\noindent
-\textbf{(C)}~* \newline * \newline * \newline * \newline * \newline ( \newline ) ( \newline ) \newline ab b \newline ba a \newline a \newline b \newline  \newline \par\vspace{2pt}\noindent
-\textbf{(D)}~* \newline * \newline * \newline * \newline * \newline ( \newline ) ( \newline ) \newline ba a \newline ab b \newline ab \newline ba \newline  \newline 
+\textbf{(A)}~$ab^*ba^* + ba^*ab^*$\par\vspace{2pt}\noindent
+\textbf{(B)}~$(ab^*b + ba^*a)^*(a + b)$\par\vspace{2pt}\noindent
+\textbf{(C)}~$(ab^*b + ba^*a)^*(a^*b + b^*a)$\par\vspace{2pt}\noindent
+\textbf{(D)}~$(ba^*a + ab^*b)^*(ab^* + ba^*)$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.13} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
 {\bfseries Which one of the following statements is TRUE? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~The \newline (1) \newline LALR \newline parser for a grammar G cannot have reduce-reduce conflict if the \newline (1) \newline LR \newline parser for G does not have reduce-reduce conflict.\par\vspace{2pt}\noindent
+\textbf{(A)}~The LALR(1) parser for a grammar G cannot have reduce-reduce conflict if the LR(1) parser for G does not have reduce-reduce conflict.\par\vspace{2pt}\noindent
 \textbf{(B)}~Symbol table is accessed only during the lexical analysis phase.\par\vspace{2pt}\noindent
 \textbf{(C)}~Data flow analysis is necessary for run-time memory management.\par\vspace{2pt}\noindent
-\textbf{(D)}~(1) \newline LR \newline parsing is sufficient for deterministic context-free languages.
+\textbf{(D)}~LR(1) parsing is sufficient for deterministic context-free languages.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.14} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
@@ -6462,39 +6432,26 @@ of the finite automaton given below? \par}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.15} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Consider the problem of reversing a singly linked list. To take an example, given
-the linked list below,
-the reversed linked list should look like
-Which one of the following statements is TRUE about the time complexity of
-algorithms that solve the above problem in
-(1)
-O
-space? \par}
+{\bfseries Consider the problem of reversing a singly linked list. Which one of the following statements is TRUE about the time complexity of algorithms that solve the above problem in $\mathcal{O}(1)$ space? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~The best algorithm for the problem takes ( ) \newline n \newline $\theta$ \newline time in the worst case.\par\vspace{2pt}\noindent
-\textbf{(B)}~The best algorithm for the problem takes ( log ) \newline n \newline n \newline $\theta$ \newline time in the worst case.\par\vspace{2pt}\noindent
-\textbf{(C)}~The best algorithm for the problem takes \newline 2 \newline ( \newline ) \newline n \newline $\theta$ \newline time in the worst case.\par\vspace{2pt}\noindent
-\textbf{(D)}~It is not possible to reverse a singly linked list in \newline (1) \newline O \newline space.
+\textbf{(A)}~The best algorithm for the problem takes $\Theta(n)$ time in the worst case.\par\vspace{2pt}\noindent
+\textbf{(B)}~The best algorithm for the problem takes $\Theta(n \log n)$ time in the worst case.\par\vspace{2pt}\noindent
+\textbf{(C)}~The best algorithm for the problem takes $\Theta(n^2)$ time in the worst case.\par\vspace{2pt}\noindent
+\textbf{(D)}~It is not possible to reverse a singly linked list in $\mathcal{O}(1)$ space.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.16} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Suppose we are given n keys, m hash table slots, and two simple uniform hash
-functions
-1h and
-2h . Further suppose our hashing scheme uses
-1h for the odd keys
-and
-2h for the even keys. What is the expected number of keys in a slot? \par}
+{\bfseries Suppose we are given $n$ keys, $m$ hash table slots, and two simple uniform hash functions $h_1$ and $h_2$. Further suppose our hashing scheme uses $h_1$ for the odd keys and $h_2$ for the even keys. What is the expected number of keys in a slot? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~m \newline n\par\vspace{2pt}\noindent
-\textbf{(B)}~n \newline m\par\vspace{2pt}\noindent
-\textbf{(C)}~2n \newline m\par\vspace{2pt}\noindent
-\textbf{(D)}~2 \newline n \newline m
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~$m/n$ & \textbf{(B)}~$n/m$ \\
+\addlinespace[2pt]
+\textbf{(C)}~$2n/m$ & \textbf{(D)}~$n / (2m)$
+\end{tabular*}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.17} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Which one of the following facilitates transfer of bulk data from hard disk to main
-memory with the highest throughput? \par}
+{\bfseries Which one of the following facilitates transfer of bulk data from hard disk to main memory with the highest throughput? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~DMA based I/O transfer\par\vspace{2pt}\noindent
 \textbf{(B)}~Interrupt driven I/O transfer\par\vspace{2pt}\noindent
@@ -6503,58 +6460,40 @@ memory with the highest throughput? \par}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.18} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Let R1 and R2 be two 4-bit registers that store numbers in 2's complement form.
-For the operation R1+R2, which one of the following values of R1 and R2 gives an
-arithmetic overflow? \par}
+{\bfseries Let $R_1$ and $R_2$ be two 4-bit registers that store numbers in 2's complement form. For the operation $R_1 + R_2$, which one of the following values of $R_1$ and $R_2$ gives an arithmetic overflow? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~R1 = 1011 and R2 = 1110\par\vspace{2pt}\noindent
-\textbf{(B)}~R1 = 1100 and R2 = 1010\par\vspace{2pt}\noindent
-\textbf{(C)}~R1 = 0011 and R2 = 0100\par\vspace{2pt}\noindent
-\textbf{(D)}~R1 = 1001 and R2 = 1111
+\textbf{(A)}~$R_1 = 1011$ and $R_2 = 1110$\par\vspace{2pt}\noindent
+\textbf{(B)}~$R_1 = 1100$ and $R_2 = 1010$\par\vspace{2pt}\noindent
+\textbf{(C)}~$R_1 = 0011$ and $R_2 = 0100$\par\vspace{2pt}\noindent
+\textbf{(D)}~$R_1 = 1001$ and $R_2 = 1111$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.19} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Consider the following threads, T1, T2, and T3 executing on a single processor,
-synchronized using three binary semaphore variables, S1, S2, and S3, operated upon
-using standard wait() and signal(). The threads can be context switched in
-any order and at any time.
-T1
-T2
-T3
-while(true)\{
-wait(S3);
-print(``C'');
-signal(S2); \}
-while(true)\{
-wait(S1);
-print(``B'');
-signal(S3); \}
-while(true)\{
-wait(S2);
-print(``A'');
-signal(S1); \}
-Which initialization of the semaphores would print the sequence BCABCABCA….? \par}
+{\bfseries Consider the following threads, T1, T2, and T3 executing on a single processor, synchronized using three binary semaphore variables, S1, S2, and S3, operated upon using standard `wait()` and `signal()`:
+\begin{center}
+\begin{tabular}{p{3.5cm}p{3.5cm}p{3.5cm}}
+\textbf{T1} & \textbf{T2} & \textbf{T3} \\
+\texttt{while(true)\{} & \texttt{while(true)\{} & \texttt{while(true)\{} \\
+\texttt{\ \ wait(S3);} & \texttt{\ \ wait(S1);} & \texttt{\ \ wait(S2);} \\
+\texttt{\ \ print("C");} & \texttt{\ \ print("B");} & \texttt{\ \ print("A");} \\
+\texttt{\ \ signal(S2);\}} & \texttt{\ \ signal(S3);\}} & \texttt{\ \ signal(S1);\}}
+\end{tabular}
+\end{center}
+Which initialization of the semaphores would print the sequence BCABCABCA\dots? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~S1 = 1; S2 = 1; S3 = 1\par\vspace{2pt}\noindent
-\textbf{(B)}~S1 = 1; S2 = 1; S3 = 0\par\vspace{2pt}\noindent
-\textbf{(C)}~S1 = 1; S2 = 0; S3 = 0\par\vspace{2pt}\noindent
-\textbf{(D)}~S1 = 0; S2 = 1; S3 = 1
+\textbf{(A)}~$S_1 = 1; S_2 = 1; S_3 = 1$\par\vspace{2pt}\noindent
+\textbf{(B)}~$S_1 = 1; S_2 = 1; S_3 = 0$\par\vspace{2pt}\noindent
+\textbf{(C)}~$S_1 = 1; S_2 = 0; S_3 = 0$\par\vspace{2pt}\noindent
+\textbf{(D)}~$S_1 = 0; S_2 = 1; S_3 = 1$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.20} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Consider the following two statements with respect to the matrices
-m n
-A $\times$,
-n m
-B $\times$,
-n n
-C $\times$ and
-.
-n n
-D $\times$
-Statement 1: tr(AB) = tr(BA)
-Statement 2: tr(CD) = tr(DC)
-where tr() represents the trace of a matrix. Which one of the following holds? \par}
+{\bfseries Consider the following two statements with respect to the matrices $A_{m \times n}, B_{n \times m}, C_{n \times n}$ and $D_{n \times n}$:
+\begin{itemize}[itemsep=0pt,topsep=2pt]
+\item Statement 1: $\text{tr}(AB) = \text{tr}(BA)$
+\item Statement 2: $\text{tr}(CD) = \text{tr}(DC)$
+\end{itemize}
+where $\text{tr}()$ represents the trace of a matrix. Which one of the following holds? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~Statement 1 is correct and Statement 2 is wrong.\par\vspace{2pt}\noindent
 \textbf{(B)}~Statement 1 is wrong and Statement 2 is correct.\par\vspace{2pt}\noindent
@@ -6564,18 +6503,19 @@ where tr() represents the trace of a matrix. Which one of the following holds? \
 \noindent\textbf{Q.21} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
 {\bfseries What is printed by the following ANSI C program?
-\#include<stdio.h>
-int main(int argc, char *argv[])
-\{
-int x = 1, z[2] = \{10, 11\};
-int *p = NULL;
-p = \&x;
-*p = 10;
-p = \&z[1];
-*(\&z[0] + 1) += 3;
-printf("\%d, \%d, \%d\n", x, z[0], z[1]);
-return 0;
-\} \par}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+int main(int argc, char *argv[]) {
+    int x = 1, z[2] = {10, 11};
+    int *p = NULL;
+    p = &x;
+    *p = 10;
+    p = &z[1];
+    *(&z[0] + 1) += 3;
+    printf("%d, %d, %d\n", x, z[0], z[1]);
+    return 0;
+}
+\end{lstlisting} \par}
 \par\vspace{2pt}\noindent
 \begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
 \textbf{(A)}~1, 10, 11 & \textbf{(B)}~1, 10, 14 \\
@@ -6585,196 +6525,109 @@ return 0;
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.22} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Consider an enterprise network with two Ethernet segments, a web server and a
-firewall, connected via three routers as shown below.
-What is the number of subnets inside the enterprise network? \par}
+{\bfseries Consider an enterprise network with two Ethernet segments, a web server and a firewall, connected via three routers. What is the number of subnets inside the enterprise network? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~3\par\vspace{2pt}\noindent
-\textbf{(B)}~12\par\vspace{2pt}\noindent
-\textbf{(C)}~6\par\vspace{2pt}\noindent
-\textbf{(D)}~8 \newline Q.23 -- Q.27 Multiple Select Questions (MSQ), carry ONE mark each.
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~3 & \textbf{(B)}~12 \\
+\addlinespace[2pt]
+\textbf{(C)}~6 & \textbf{(D)}~8
+\end{tabular*}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.23} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
 {\bfseries Which of the following statements is/are TRUE? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~Every subset of a recursively enumerable language is recursive.\par\vspace{2pt}\noindent
-\textbf{(B)}~If a language L and its complement L are both recursively enumerable, then L \newline must be recursive.\par\vspace{2pt}\noindent
+\textbf{(B)}~If a language $L$ and its complement $\overline{L}$ are both recursively enumerable, then $L$ must be recursive.\par\vspace{2pt}\noindent
 \textbf{(C)}~Complement of a context-free language must be recursive.\par\vspace{2pt}\noindent
-\textbf{(D)}~If \newline 1L and \newline 2L are regular, then \newline 1 \newline 2 \newline L \newline L \newline $\cap$ \newline must be deterministic context-free.
+\textbf{(D)}~If $L_1$ and $L_2$ are regular, then $L_1 \cap L_2$ must be deterministic context-free.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.24} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Let WB and WT be two set associative cache organizations that use LRU algorithm
-for cache block replacement. WB is a write back cache and WT is a write through
-cache. Which of the following statements is/are FALSE? \par}
+{\bfseries Let WB and WT be two set associative cache organizations that use LRU algorithm for cache block replacement. WB is a write back cache and WT is a write through cache. Which of the following statements is/are FALSE? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~Each cache block in WB and WT has a dirty bit.\par\vspace{2pt}\noindent
 \textbf{(B)}~Every write hit in WB leads to a data transfer from cache to main memory.\par\vspace{2pt}\noindent
-\textbf{(C)}~Eviction of a block from WT will not lead to data transfer from cache to main \newline memory.\par\vspace{2pt}\noindent
+\textbf{(C)}~Eviction of a block from WT will not lead to data transfer from cache to main memory.\par\vspace{2pt}\noindent
 \textbf{(D)}~A read miss in WB will never lead to eviction of a dirty block from WB.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.25} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Consider the following three relations in a relational database.
-(
-,
-),
-Employee eId Name
-(
-,
-),
-Brand bId bName
-\par\smallskip
-(
-,
-)
-Own eId bId
-Which of the following relational algebra expressions return the set of eIds
-who own all the brands? \par}
+{\bfseries Consider the following three relations in a relational database:
+\[ \text{Employee}(eId, Name), \quad \text{Brand}(bId, bName), \quad \text{Own}(eId, bId) \]
+Which of the following relational algebra expressions return the set of $eIds$ who own all the brands? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~, \newline ( \newline ( \newline ) / \newline ( \newline )) \newline eId \newline eId bId \newline bId \newline Own \newline Brand \newline $\Pi$ \newline $\Pi$ \newline $\Pi$\par\vspace{2pt}\noindent
-\textbf{(B)}~( \newline ) \newline , \newline ( \newline ) \newline ( \newline ( \newline ) \newline ( \newline )) \newline ( \newline ) \newline eId \newline eId \newline eId \newline bId \newline eId bId \newline Own \newline Own \newline Brand \newline Own \newline $\Pi$ \newline −$\Pi$ \newline $\Pi$ \newline $\times$$\Pi$ \newline −$\Pi$\par\vspace{2pt}\noindent
-\textbf{(C)}~, \newline ( \newline ( \newline ) / \newline ( \newline )) \newline eId \newline eId bId \newline bId \newline Own \newline Own \newline $\Pi$ \newline $\Pi$ \newline $\Pi$\par\vspace{2pt}\noindent
-\textbf{(D)}~( \newline ) \newline ( \newline ( \newline ) \newline ( \newline )) / \newline ( \newline ) \newline eId \newline eId \newline bId \newline bId \newline Own \newline Own \newline Brand \newline $\Pi$ \newline $\Pi$ \newline $\times$$\Pi$ \newline $\Pi$
+\textbf{(A)}~$\Pi_{eId}(\Pi_{eId, bId}(Own) / \Pi_{bId}(Brand))$\par\vspace{2pt}\noindent
+\textbf{(B)}~$\Pi_{eId}(Own) - \Pi_{eId}((\Pi_{eId}(Own) \times \Pi_{bId}(Brand)) - Own)$\par\vspace{2pt}\noindent
+\textbf{(C)}~$\Pi_{eId}(\Pi_{eId, bId}(Own) / \Pi_{bId}(Own))$\par\vspace{2pt}\noindent
+\textbf{(D)}~$\Pi_{eId}((\Pi_{eId}(Own) \times \Pi_{bId}(Brand)) / \Pi_{bId}(Own))$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.26} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
 {\bfseries Which of the following statements is/are TRUE with respect to deadlocks? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~Circular wait is a necessary condition for the formation of deadlock.\par\vspace{2pt}\noindent
-\textbf{(B)}~In a system where each resource has more than one instance, a cycle in its wait-for \newline graph indicates the presence of a deadlock.\par\vspace{2pt}\noindent
-\textbf{(C)}~If the current allocation of resources to processes leads the system to unsafe state, \newline then deadlock will necessarily occur.\par\vspace{2pt}\noindent
-\textbf{(D)}~In the resource-allocation graph of a system, if every edge is an assignment edge, \newline then the system is not in deadlock state.
+\textbf{(B)}~In a system where each resource has more than one instance, a cycle in its wait-for graph indicates the presence of a deadlock.\par\vspace{2pt}\noindent
+\textbf{(C)}~If the current allocation of resources to processes leads the system to unsafe state, then deadlock will necessarily occur.\par\vspace{2pt}\noindent
+\textbf{(D)}~In the resource-allocation graph of a system, if every edge is an assignment edge, then the system is not in deadlock state.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.27} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Which of the following statements is/are TRUE for a group
-?
-G \par}
+{\bfseries Which of the following statements is/are TRUE for a group $G$? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~If for all ,x y \newline G \newline $\in$ \newline , \newline 2 \newline 2 \newline 2 \newline ( \newline ) \newline , \newline xy \newline x y \newline = \newline then G is commutative.\par\vspace{2pt}\noindent
-\textbf{(B)}~If for all x \newline G \newline $\in$ \newline , \newline 2 \newline 1, \newline x = \newline thenG is commutative. Here, 1 is the identity element of \newline . \newline G\par\vspace{2pt}\noindent
-\textbf{(C)}~If the order of G is 2, then G is commutative.\par\vspace{2pt}\noindent
-\textbf{(D)}~If G is commutative, then a subgroup of G need not be commutative. \newline Q.28 -- Q.35 Numerical Answer Type (NAT), carry ONE mark each.
+\textbf{(A)}~If for all $x, y \in G$, $(xy)^2 = x^2 y^2$, then $G$ is commutative.\par\vspace{2pt}\noindent
+\textbf{(B)}~If for all $x \in G$, $x^2 = 1$, then $G$ is commutative. Here, 1 is the identity element of $G$.\par\vspace{2pt}\noindent
+\textbf{(C)}~If the order of $G$ is 2, then $G$ is commutative.\par\vspace{2pt}\noindent
+\textbf{(D)}~If $G$ is commutative, then a subgroup of $G$ need not be commutative.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.28} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Suppose a binary search tree with 1000 distinct elements is also a complete binary
-tree. The tree is stored using the array representation of binary heap trees. Assuming
-that the array indices start with 0, the 3rd largest element of the tree is stored at
-index\_\_\_\_\_\_\_\_\_\_\_\_\_. \par}
+{\bfseries Suppose a binary search tree with 1000 distinct elements is also a complete binary tree. The tree is stored using the array representation of binary heap trees. Assuming that the array indices start with 0, the 3rd largest element of the tree is stored at index \_\_\_\_\_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.29} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider the augmented grammar with \{ , *, (, ),
-\}
-id
-
-as the set of terminals.
-S
-S
-′$\to$
-|
-S
-S
-R R
-$\to$
-
-*
-|
-R
-R
-P P
-$\to$
-( ) |
-P
-S
-id
-$\to$
-If
-0I is the set of two
-(0)
-LR
-items
-•
-•
-\{[
-],[
-]\}
-S
-S
-S
-S
-R
-′$\to$
-$\to$
-
-, then
-0
-(
-( ), )
-goto closure I
- contains exactly \_\_\_\_\_\_\_\_\_\_ items. \par}
+{\bfseries Consider the augmented grammar with $\{+, *, (, ), id\}$ as the set of terminals:
+\begin{align*}
+S' &\to S \\
+S &\to S + R \mid R \\
+R &\to R * P \mid P \\
+P &\to ( S ) \mid id
+\end{align*}
+If $I_0$ is the set of two LR(0) items $\{[S' \to \bullet S], [S \to \bullet S + R]\}$, then $\text{goto}(\text{closure}(I_0), +)$ contains exactly \_\_\_\_\_\_\_\_\_\_ items. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.30} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider a simple undirected graph of 10 vertices. If the graph is disconnected, then
-the maximum number of edges it can have is \_\_\_\_\_\_\_\_\_\_\_\_. \par}
+{\bfseries Consider a simple undirected graph of 10 vertices. If the graph is disconnected, then the maximum number of edges it can have is \_\_\_\_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.31} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider a relation
-( ,
-,
-,
-,
-)
-R A B C D E with the following three functional
-dependencies.
-𝐴𝐵$\to$𝐶; 𝐵𝐶$\to$𝐷; 𝐶$\to$𝐸;
-The number of superkeys in the relation R is \_\_\_\_\_\_\_\_\_\_\_\_\_. \par}
+{\bfseries Consider a relation $R(A, B, C, D, E)$ with the following three functional dependencies:
+\[ AB \to C; \quad BC \to D; \quad C \to E; \]
+The number of superkeys in the relation $R$ is \_\_\_\_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.32} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries The number of arrangements of six identical balls in three identical bins is\_\_\_\_\_\_. \par}
+{\bfseries The number of arrangements of six identical balls in three identical bins is \_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.33} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries A cache memory that has a hit rate of 0.8 has an access latency 10 ns and miss
-penalty 100 ns. An optimization is done on the cache to reduce the miss rate.
-However, the optimization results in an increase of cache access latency to 15 ns,
-whereas the miss penalty is not affected. The minimum hit rate (rounded off to two
-decimal places) needed after the optimization such that it should not increase the
-average memory access time is \_\_\_\_\_\_\_\_\_\_\_\_\_. \par}
+{\bfseries A cache memory that has a hit rate of 0.8 has an access latency 10 ns and miss penalty 100 ns. An optimization is done on the cache to reduce the miss rate. However, the optimization results in an increase of cache access latency to 15 ns, whereas the miss penalty is not affected. The minimum hit rate (rounded off to two decimal places) needed after the optimization such that it should not increase the average memory access time is \_\_\_\_\_\_\_\_\_\_\_\. (Answer in numeric format) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.34} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries The value of the following limit is \_\_\_\_\_\_\_\_\_\_\_\_\_.
-2
-0 1
-x
-x
-x
-lim
-e
-$\to$− \par}
+{\bfseries The value of the following limit is \_\_\_\_\_\_\_\_\_\_\_\_\. (Answer in numeric format)
+\[ \lim\_{x \to 0^+} \frac{x}{1 - e^{2x}} \] \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.35} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider the resolution of the domain name www.gate.org.in by a DNS
-resolver. Assume that no resource records are cached anywhere across the DNS
-servers and that iterative query mechanism is used in the resolution. The number
-of DNS query-response pairs involved in completely resolving the domain name
-is\_\_\_\_\_\_\_\_\_\_\_\_\_.
-Q.36 -- Q.45 Multiple Choice Questions (MCQ), carry TWO marks each. \par}
+{\bfseries Consider the resolution of the domain name `www.gate.org.in` by a DNS resolver. Assume that no resource records are cached anywhere across the DNS servers and that iterative query mechanism is used in the resolution. The number of DNS query-response pairs involved in completely resolving the domain name is \_\_\_\_\_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 
@@ -6784,113 +6637,59 @@ Q.36 -- Q.45 Multiple Choice Questions (MCQ), carry TWO marks each. \par}
 
 \noindent\textbf{Q.36} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Which one of the following is the closed form for the generating function of the
-sequence
-0
-\{
-\}
-n
-n
-a
-$\ge$
-defined below?
-1,
-is odd
-1,
-otherwise
-n
-n
-n
-a
-
-
-=
- \par}
+{\bfseries Which one of the following is the closed form for the generating function of the sequence $\{a_n\}_{n \ge 0}$ defined below?
+\[ a\_n = \begin{cases} n+1, & n \text{ is odd} \\ 1, & \text{otherwise} \end{cases} \] \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~( \newline ) \newline ( \newline ) \newline 2 \newline 2 \newline 2 \newline 1 \newline 1 \newline 1 \newline 1 \newline x \newline x \newline x \newline x \newline  \newline − \newline −\par\vspace{2pt}\noindent
-\textbf{(B)}~( \newline ) \newline 2 \newline 2 \newline 2 \newline (3 \newline ) \newline 1 \newline 1 \newline 1 \newline x \newline x \newline x \newline x \newline − \newline − \newline −\par\vspace{2pt}\noindent
-\textbf{(C)}~( \newline ) \newline 2 \newline 2 \newline 2 \newline 1 \newline 1 \newline 1 \newline x \newline x \newline x \newline − \newline −\par\vspace{2pt}\noindent
-\textbf{(D)}~2 \newline 2 \newline 1 \newline (1 \newline ) \newline 1 \newline x \newline x \newline x \newline  \newline − \newline −
+\textbf{(A)}~$\frac{x(1+x^2)}{(1-x^2)^2} + \frac{1}{1-x}$\par\vspace{2pt}\noindent
+\textbf{(B)}~$\frac{x(3-x^2)}{(1-x^2)^2} + \frac{1}{1-x}$\par\vspace{2pt}\noindent
+\textbf{(C)}~$\frac{2x}{(1-x^2)^2} + \frac{1}{1-x}$\par\vspace{2pt}\noindent
+\textbf{(D)}~$\frac{x}{(1-x^2)^2} + \frac{1}{1-x}$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.37} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Consider a simple undirected unweighted graph with at least three vertices. If A is
-the adjacency matrix of the graph, then the number of 3-cycles in the graph is given
-by the trace of \par}
+{\bfseries Consider a simple undirected unweighted graph with at least three vertices. If $A$ is the adjacency matrix of the graph, then the number of 3-cycles in the graph is given by the trace of \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~3 \newline A\par\vspace{2pt}\noindent
-\textbf{(B)}~3 \newline A divided by 2\par\vspace{2pt}\noindent
-\textbf{(C)}~3 \newline A divided by 3\par\vspace{2pt}\noindent
-\textbf{(D)}~3 \newline A divided by 6
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~$A^3$ & \textbf{(B)}~$A^3$ divided by 2 \\
+\addlinespace[2pt]
+\textbf{(C)}~$A^3$ divided by 3 & \textbf{(D)}~$A^3$ divided by 6
+\end{tabular*}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.38} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
 {\bfseries Which one of the following statements is FALSE? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~The TLB performs an associative search in parallel on all its valid entries using page \newline number of incoming virtual address.\par\vspace{2pt}\noindent
-\textbf{(B)}~If the virtual address of a word given by CPU has a TLB hit, but the subsequent \newline search for the word results in a cache miss, then the word will always be present in \newline the main memory.\par\vspace{2pt}\noindent
-\textbf{(C)}~The memory access time using a given inverted page table is always same for all \newline incoming virtual addresses.\par\vspace{2pt}\noindent
-\textbf{(D)}~In a system that uses hashed page tables, if two distinct virtual addresses V1 and V2 \newline map to the same value while hashing, then the memory access time of these \newline addresses will not be the same.
+\textbf{(A)}~The TLB performs an associative search in parallel on all its valid entries using page number of incoming virtual address.\par\vspace{2pt}\noindent
+\textbf{(B)}~If the virtual address of a word given by CPU has a TLB hit, but the subsequent search for the word results in a cache miss, then the word will always be present in the main memory.\par\vspace{2pt}\noindent
+\textbf{(C)}~The memory access time using a given inverted page table is always same for all incoming virtual addresses.\par\vspace{2pt}\noindent
+\textbf{(D)}~In a system that uses hashed page tables, if two distinct virtual addresses V1 and V2 map to the same value while hashing, then the memory access time of these addresses will not be the same.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.39} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Let
-( )
-iR z and
-( )
-i
-W z denote read and write operations on a data element z by a
-transaction
-iT , respectively. Consider the schedule S with four transactions.
-S:
-4
-2
-3
-1
-1
-2
-3
-4
-( )
-( )
-( )
-( )
-( )
-( )
-( )
-( )
-R x R x R x R y W y W x W y R y
-Which one of the following serial schedules is conflict equivalent to S? \par}
+{\bfseries Let $R_i(z)$ and $W_i(z)$ denote read and write operations on a data element $z$ by a transaction $T_i$, respectively. Consider the schedule $S$ with four transactions:
+\[ S: R\_4(x) R\_2(x) R\_3(x) R\_1(y) W\_1(y) W\_2(x) W\_3(y) R\_4(y) \]
+Which one of the following serial schedules is conflict equivalent to $S$? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~𝑇ଵ$\to$𝑇ଷ$\to$𝑇ସ$\to$𝑇$^2$\par\vspace{2pt}\noindent
-\textbf{(B)}~𝑇ଵ$\to$𝑇ସ$\to$𝑇ଷ$\to$𝑇$^2$\par\vspace{2pt}\noindent
-\textbf{(C)}~𝑇ସ$\to$𝑇ଵ$\to$𝑇ଷ$\to$𝑇$^2$\par\vspace{2pt}\noindent
-\textbf{(D)}~𝑇ଷ$\to$𝑇ଵ$\to$𝑇ସ$\to$𝑇$^2$
+\textbf{(A)}~$T_1 \to T_3 \to T_4 \to T_2$\par\vspace{2pt}\noindent
+\textbf{(B)}~$T_1 \to T_4 \to T_3 \to T_2$\par\vspace{2pt}\noindent
+\textbf{(C)}~$T_4 \to T_1 \to T_3 \to T_2$\par\vspace{2pt}\noindent
+\textbf{(D)}~$T_3 \to T_1 \to T_4 \to T_2$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.41} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Consider three floating point numbers A, B and C stored in registers RA, RB and
-RC, respectively as per IEEE-754 single precision floating point format. The 32-bit
-content stored in these registers (in hexadecimal form) are as follows.
-RA= 0xC1400000
-RB = 0x42100000
-RC = 0x41400000
+{\bfseries Consider three floating point numbers A, B and C stored in registers RA, RB and RC, respectively as per IEEE-754 single precision floating point format. The 32-bit content stored in these registers (in hexadecimal form) are as follows:
+\[ RA = \text{0xC1400000}, \quad RB = \text{0x42100000}, \quad RC = \text{0x41400000} \]
 Which one of the following is FALSE? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~0 \newline A \newline C \newline  \newline =\par\vspace{2pt}\noindent
-\textbf{(B)}~C \newline A \newline B \newline = \newline \par\vspace{2pt}\noindent
-\textbf{(C)}~3 \newline B \newline C \newline =\par\vspace{2pt}\noindent
-\textbf{(D)}~( \newline ) \newline 0 \newline B \newline C \newline − \newline >
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~$A + C = 0$ & \textbf{(B)}~$C = A + B$ \\
+\addlinespace[2pt]
+\textbf{(C)}~$B = 3C$ & \textbf{(D)}~$(B - C) > 0$
+\end{tabular*}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.42} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Consider four processes P, Q, R, and S scheduled on a CPU as per round robin
-algorithm with a time quantum of 4 units. The processes arrive in the order P, Q, R,
-S, all at time t = 0. There is exactly one context switch from S to Q, exactly one
-context switch from R to Q, and exactly two context switches from Q to R. There is
-no context switch from S to P. Switching to a ready process after the termination of
-another process is also considered a context switch. Which one of the following is
-NOT possible as CPU burst time (in time units) of these processes? \par}
+{\bfseries Consider four processes P, Q, R, and S scheduled on a CPU as per round robin algorithm with a time quantum of 4 units. The processes arrive in the order P, Q, R, S, all at time $t = 0$. There is exactly one context switch from S to Q, exactly one context switch from R to Q, and exactly two context switches from Q to R. There is no context switch from S to P. Switching to a ready process after the termination of another process is also considered a context switch. Which one of the following is NOT possible as CPU burst time (in time units) of these processes? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~P = 4, Q = 10, R = 6, S = 2\par\vspace{2pt}\noindent
 \textbf{(B)}~P = 2, Q = 9, R = 5, S = 1\par\vspace{2pt}\noindent
@@ -6900,41 +6699,44 @@ NOT possible as CPU burst time (in time units) of these processes? \par}
 \noindent\textbf{Q.43} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
 {\bfseries What is printed by the following ANSI C program?
-\#include<stdio.h>
-int main(int argc, char *argv[])
-\{
-int a[3][3][3] =
-\{\{1, 2, 3, 4, 5, 6, 7, 8, 9\},
-\{10, 11, 12, 13, 14, 15, 16, 17, 18\},
-\{19, 20, 21, 22, 23, 24, 25, 26, 27\}\};
-int i = 0, j = 0, k = 0;
-for( i = 0; i < 3; i++ )\{
-for(k = 0; k < 3; k++ )
-printf("\%d ", a[i][j][k]);
-printf("\n");
-\}
-return 0;
-\} \par}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+int main(int argc, char *argv[]) {
+    int a[3][3][3] = {
+        {1, 2, 3, 4, 5, 6, 7, 8, 9},
+        {10, 11, 12, 13, 14, 15, 16, 17, 18},
+        {19, 20, 21, 22, 23, 24, 25, 26, 27}
+    };
+    int i = 0, j = 0, k = 0;
+    for(i = 0; i < 3; i++) {
+        for(k = 0; k < 3; k++)
+            printf("%d ", a[i][j][k]);
+        printf("\n");
+    }
+    return 0;
+}
+\end{lstlisting} \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~1 2 3 \newline 10 11 12 \newline 19 20 21\par\vspace{2pt}\noindent
-\textbf{(B)}~1 4 7 \newline 10 13 16 \newline 19 22 25\par\vspace{2pt}\noindent
-\textbf{(C)}~1 2 3 \newline 4 5 6 \newline 7 8 9\par\vspace{2pt}\noindent
-\textbf{(D)}~1 2 3 \newline 13 14 15 \newline 25 26 27
+\textbf{(A)}~1 2 3 \\ 10 11 12 \\ 19 20 21\par\vspace{2pt}\noindent
+\textbf{(B)}~1 4 7 \\ 10 13 16 \\ 19 22 25\par\vspace{2pt}\noindent
+\textbf{(C)}~1 2 3 \\ 4 5 6 \\ 7 8 9\par\vspace{2pt}\noindent
+\textbf{(D)}~1 2 3 \\ 13 14 15 \\ 25 26 27
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.44} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
 {\bfseries What is printed by the following ANSI C program?
-\#include<stdio.h>
-int main(int argc, char *argv[])\{
-char a = 'P';
-char b = 'x';
-char c = (a \& b) + '*';
-char d = (a | b) - '-';
-char e = (a\^{}\{b\}) + '+';
-printf("\%c \%c \%c\n", c, d, e);
-return 0;
-\}
-ASCII encoding for relevant characters is given below \par}
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+int main(int argc, char *argv[]) {
+    char a = 'P';
+    char b = 'x';
+    char c = (a & b) + '*';
+    char d = (a | b) - '-';
+    char e = (a ^ b) + '+';
+    printf("%c %c %c\n", c, d, e);
+    return 0;
+}
+\end{lstlisting} \par}
 \par\vspace{2pt}\noindent
 \begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
 \textbf{(A)}~z K S & \textbf{(B)}~122 75 83 \\
@@ -6944,339 +6746,106 @@ ASCII encoding for relevant characters is given below \par}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.45} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Consider solving the following system of simultaneous equations using
-LU decomposition.
-1
-2
-3
-1
-2
-3
-1
-2
-3
-2
-4
-3
-7
-2
-5
-7
-x
-x
-x
-x
-x
-x
-x
-x
-x
-
-−
-=
-
-−
-=
-
-−
-=
-where L and U are denoted as
-11
-21
-22
-31
-32
-33
-0
-0
-0
-L
-L
-L
-L
-L
-L
-L
-
-
-
-
-=
-
-
-
-
-
-,
-11
-12
-13
-22
-23
-33
-0
-0
-0
-U
-U
-U
-U
-U
-U
-U
-
-
-
-
-
-
-
-
-=
-
-Which one of the following is the correct combination of values for
-32
-L ,
-33,
-U
-and
-1?
-x \par}
+{\bfseries Consider solving the following system of simultaneous equations using LU decomposition:
+\begin{align*}
+x_1 + x_2 - x_3 &= 2 \\
+2x_1 + 4x_2 - 3x_3 &= 7 \\
+2x_1 + 5x_2 - 7x_3 &= 7
+\end{align*}
+where $L$ and $U$ are lower and upper triangular matrices. Which one of the following is the correct combination of values for $L_{32}$, $U_{33}$, and $x_1$? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~32 \newline 33 \newline 1 \newline 1 \newline 2, \newline , \newline 1 \newline 2 \newline L \newline U \newline x \newline = \newline =− \newline =−\par\vspace{2pt}\noindent
-\textbf{(B)}~32 \newline 33 \newline 1 \newline 2, \newline 2, \newline 1 \newline L \newline U \newline x \newline = \newline = \newline =−\par\vspace{2pt}\noindent
-\textbf{(C)}~32 \newline 33 \newline 1 \newline 1 , \newline 2, \newline 0 \newline 2 \newline L \newline U \newline x \newline =− \newline = \newline =\par\vspace{2pt}\noindent
-\textbf{(D)}~32 \newline 33 \newline 1 \newline 1 \newline 1 \newline , \newline , \newline 0 \newline 2 \newline 2 \newline L \newline U \newline x \newline =− \newline =− \newline = \newline Q.46 -- Q.555 Multiple Select Questions (MSQ), carry TWO marks each.
+\textbf{(A)}~$L_{32} = 2, U_{33} = -1/2, x_1 = -1$\par\vspace{2pt}\noindent
+\textbf{(B)}~$L_{32} = 2, U_{33} = 2, x_1 = -1$\par\vspace{2pt}\noindent
+\textbf{(C)}~$L_{32} = -1/2, U_{33} = 2, x_1 = 0$\par\vspace{2pt}\noindent
+\textbf{(D)}~$L_{32} = -1/2, U_{33} = -1/2, x_1 = 0$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.46} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
 {\bfseries Which of the following is/are undecidable? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~Given two Turing machines \newline 1 \newline 2 \newline and \newline , \newline M \newline M \newline decide if \newline 1 \newline 2 \newline ( \newline ) \newline ( \newline ). \newline L M \newline L M \newline =\par\vspace{2pt}\noindent
-\textbf{(B)}~Given a Turing machine \newline , \newline M decide if ( \newline ) \newline L M is regular.\par\vspace{2pt}\noindent
-\textbf{(C)}~Given a Turing machine \newline , \newline M decide if M accepts all strings.\par\vspace{2pt}\noindent
-\textbf{(D)}~Given a Turing machine \newline , \newline M decide if M takes more than 1073 steps on every \newline string.
+\textbf{(A)}~Given two Turing machines $M_1$ and $M_2$, decide if $L(M_1) = L(M_2)$.\par\vspace{2pt}\noindent
+\textbf{(B)}~Given a Turing machine $M$, decide if $L(M)$ is regular.\par\vspace{2pt}\noindent
+\textbf{(C)}~Given a Turing machine $M$, decide if $M$ accepts all strings.\par\vspace{2pt}\noindent
+\textbf{(D)}~Given a Turing machine $M$, decide if $M$ takes more than $10^{73}$ steps on every string.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.47} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
 {\bfseries Consider the following languages:
-*
-1
-\{
-|
-\{ , \} \}
-n
-n
-L
-a wa
-w
-a b
-=
-$\in$
-*
-2
-\{
-|
-,
-\{ , \} ,|
-|,|
-| 0\}
-R
-L
-wxw
-w x
-a b
-w
-x
-=
-$\in$
->
-\par\smallskip
-Note that
-R
-w is the reversal of the string .
-w Which of the following is/are TRUE? \par}
+\[ L\_1 = \{a^n w a^n \mid w \in \{a, b\}^*\} \]
+\[ L\_2 = \{w x w^R \mid w, x \in \{a, b\}^*, |w|, |x| > 0\} \]
+Note that $w^R$ is the reversal of the string $w$. Which of the following is/are TRUE? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~1L and \newline 2L are regular.\par\vspace{2pt}\noindent
-\textbf{(B)}~1L and \newline 2L are context-free.\par\vspace{2pt}\noindent
-\textbf{(C)}~1L is regular and \newline 2L is context-free.\par\vspace{2pt}\noindent
-\textbf{(D)}~1L and \newline 2L are context-free but not regular.
+\textbf{(A)}~$L_1$ and $L_2$ are regular.\par\vspace{2pt}\noindent
+\textbf{(B)}~$L_1$ and $L_2$ are context-free.\par\vspace{2pt}\noindent
+\textbf{(C)}~$L_1$ is regular and $L_2$ is context-free.\par\vspace{2pt}\noindent
+\textbf{(D)}~$L_1$ and $L_2$ are context-free but not regular.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.48} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
 {\bfseries Consider the following languages:
-*
-1
-\{
-|
-\{ , \} \}
-L
-ww w
-a b
-=
-$\in$
-2
-\{
-|
-,
-0\}
-n
-n
-m
-L
-a b c
-m n
-=
-$\ge$
-3
-\{
-|
-,
-0\}
-m
-n
-n
-L
-a b c
-m n
-=
-$\ge$
+\[ L\_1 = \{w w \mid w \in \{a, b\}^*\} \]
+\[ L\_2 = \{a^n b^n c^m \mid m, n \ge 0\} \]
+\[ L\_3 = \{a^m b^n c^n \mid m, n \ge 0\} \]
 Which of the following statements is/are FALSE? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~1L is not context-free but \newline 2L and \newline 3L are deterministic context-free.\par\vspace{2pt}\noindent
-\textbf{(B)}~Neither \newline 1L nor \newline 2L is context-free.\par\vspace{2pt}\noindent
-\textbf{(C)}~2L , \newline 3L and \newline 2 \newline 3 \newline L \newline L \newline $\cap$ \newline all are context-free.\par\vspace{2pt}\noindent
-\textbf{(D)}~Neither \newline 1L nor its complement is context-free.
+\textbf{(A)}~$L_1$ is not context-free but $L_2$ and $L_3$ are deterministic context-free.\par\vspace{2pt}\noindent
+\textbf{(B)}~Neither $L_1$ nor $L_2$ is context-free.\par\vspace{2pt}\noindent
+\textbf{(C)}~$L_2$, $L_3$ and $L_2 \cap L_3$ all are context-free.\par\vspace{2pt}\noindent
+\textbf{(D)}~Neither $L_1$ nor its complement is context-free.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.49} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Consider a simple undirected weighted graph
-,
-G all of whose edge weights are
-distinct. Which of the following statements about the minimum spanning trees of
-G is/are TRUE? \par}
+{\bfseries Consider a simple undirected weighted graph $G$, all of whose edge weights are distinct. Which of the following statements about the minimum spanning trees of $G$ is/are TRUE? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~The edge with the second smallest weight is always part of any minimum spanning \newline tree of G .\par\vspace{2pt}\noindent
-\textbf{(B)}~One or both of the edges with the third smallest and the fourth smallest weights are \newline part of any minimum spanning tree of G .\par\vspace{2pt}\noindent
-\textbf{(C)}~Suppose S \newline V \newline $\subset$ \newline be such that S \newline  \newline $\ne$ \newline and S \newline V \newline $\ne$ \newline . Consider the edge with the minimum \newline weight such that one of its vertices is in S and the other in V \ S . Such an edge will \newline always be part of any minimum spanning tree of G .\par\vspace{2pt}\noindent
-\textbf{(D)}~G can have multiple minimum spanning trees.
+\textbf{(A)}~The edge with the second smallest weight is always part of any minimum spanning tree of $G$.\par\vspace{2pt}\noindent
+\textbf{(B)}~One or both of the edges with the third smallest and the fourth smallest weights are part of any minimum spanning tree of $G$.\par\vspace{2pt}\noindent
+\textbf{(C)}~Suppose $S \subset V$ be such that $S \neq \emptyset$ and $S \neq V$. Consider the edge with the minimum weight such that one of its vertices is in $S$ and the other in $V \setminus S$. Such an edge will always be part of any minimum spanning tree of $G$.\par\vspace{2pt}\noindent
+\textbf{(D)}~$G$ can have multiple minimum spanning trees.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.50} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries The following simple undirected graph is referred to as the Peterson graph.
-Which of the following statements is/are TRUE? \par}
+{\bfseries The following simple undirected graph is referred to as the Petersen graph. Which of the following statements is/are TRUE? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~The chromatic number of the graph is 3.\par\vspace{2pt}\noindent
 \textbf{(B)}~The graph has a Hamiltonian path.\par\vspace{2pt}\noindent
-\textbf{(C)}~The following graph is isomorphic to the Peterson graph.\par\vspace{2pt}\noindent
-\textbf{(D)}~The size of the largest independent set of the given graph is 3. (A subset of vertices \newline of a graph form an independent set if no two vertices of the subset are adjacent.)
+\textbf{(C)}~The following graph is isomorphic to the Petersen graph.\par\vspace{2pt}\noindent
+\textbf{(D)}~The size of the largest independent set of the given graph is 3.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.51} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
 {\bfseries Consider the following recurrence:
-(1)
-1;
-(2 )
-2 ( )
-1,
-for
-1;
-(2
-1)
-2 ( )
-1,
-for
-1.
-f
-f
-n
-f n
-n
-f
-n
-f n
-n
-=
-=
-−
-$\ge$
-
-=
-
-$\ge$
+\[ f(1) = 1; \]
+\[ f(2n) = 2f(n) - 1, \quad \text{for } n \ge 1; \]
+\[ f(2n+1) = 2f(n) + 1, \quad \text{for } n \ge 1. \]
 Then, which of the following statements is/are TRUE? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~(2 \newline 1) \newline 2 \newline 1 \newline n \newline n \newline f \newline − \newline = \newline −\par\vspace{2pt}\noindent
-\textbf{(B)}~(2 ) \newline 1 \newline n \newline f \newline =\par\vspace{2pt}\noindent
-\textbf{(C)}~1 \newline (5 2 ) \newline 2 \newline 1 \newline n \newline n \newline f \newline  \newline  \newline = \newline \par\vspace{2pt}\noindent
-\textbf{(D)}~(2 \newline 1) \newline 2 \newline 1 \newline n \newline n \newline f \newline  \newline = \newline 
+\textbf{(A)}~$f(2^n - 1) = 2^n - 1$\par\vspace{2pt}\noindent
+\textbf{(B)}~$f(2^n) = 1$\par\vspace{2pt}\noindent
+\textbf{(C)}~$f(5 \cdot 2^n) = 2^{n+1} + 1$\par\vspace{2pt}\noindent
+\textbf{(D)}~$f(2^n + 1) = 2^n + 1$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.52} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Which of the properties hold for the adjacency matrix A of a simple undirected
-unweighted graph having n vertices? \par}
+{\bfseries Which of the properties hold for the adjacency matrix $A$ of a simple undirected unweighted graph having $n$ vertices? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~The diagonal entries of \newline 2 \newline A are the degrees of the vertices of the graph.\par\vspace{2pt}\noindent
-\textbf{(B)}~If the graph is connected, then none of the entries of \newline 1 \newline n \newline n \newline A \newline I \newline − \newline can be zero.\par\vspace{2pt}\noindent
-\textbf{(C)}~If the sum of all the elements of A is at most 2( \newline 1), \newline n − \newline then the graph must be \newline acyclic.\par\vspace{2pt}\noindent
-\textbf{(D)}~If there is at least a 1 in each of A's rows and columns, then the graph must be \newline connected.
+\textbf{(A)}~The diagonal entries of $A^2$ are the degrees of the vertices of the graph.\par\vspace{2pt}\noindent
+\textbf{(B)}~If the graph is connected, then none of the entries of $A^{n-1} + I_n$ can be zero.\par\vspace{2pt}\noindent
+\textbf{(C)}~If the sum of all the elements of $A$ is at most $2(n - 1)$, then the graph must be acyclic.\par\vspace{2pt}\noindent
+\textbf{(D)}~If there is at least a 1 in each of $A$'s rows and columns, then the graph must be connected.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.53} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
 {\bfseries Which of the following is/are the eigenvector(s) for the matrix given below?
-9
-6
-2
-4
-8
-6
-3
-1
-20
-15
-8
-5
-32
-21
-7
-12
-−
-−
-−
-−
-
-
-
-
-−
-−
-−
-−
-
-
-
-
-
-
-
- \par}
+\[ \begin{bmatrix} -9 & 6 & -2 & 4 \\ -8 & 6 & -3 & 1 \\ -20 & 15 & -8 & 5 \\ -32 & 21 & -7 & 12 \end{bmatrix} \] \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~1 \newline 1 \newline 0 \newline 1 \newline − \newline  \newline  \newline  \newline  \newline  \newline  \newline  \newline  \newline  \newline  \newline  \newline \par\vspace{2pt}\noindent
-\textbf{(B)}~1 \newline 0 \newline 1 \newline 0 \newline  \newline  \newline  \newline  \newline  \newline  \newline  \newline  \newline − \newline  \newline  \newline  \newline \par\vspace{2pt}\noindent
-\textbf{(C)}~1 \newline 0 \newline 2 \newline 2 \newline − \newline  \newline  \newline  \newline  \newline  \newline  \newline  \newline  \newline  \newline  \newline  \newline \par\vspace{2pt}\noindent
-\textbf{(D)}~0 \newline 1 \newline 3 \newline 0 \newline  \newline  \newline  \newline  \newline  \newline  \newline  \newline  \newline − \newline  \newline  \newline  \newline 
+\textbf{(A)}~$\begin{bmatrix} -1 \\ 1 \\ 0 \\ 1 \end{bmatrix}$\par\vspace{2pt}\noindent
+\textbf{(B)}~$\begin{bmatrix} 1 \\ 0 \\ -1 \\ 0 \end{bmatrix}$\par\vspace{2pt}\noindent
+\textbf{(C)}~$\begin{bmatrix} -1 \\ 0 \\ 2 \\ 2 \end{bmatrix}$\par\vspace{2pt}\noindent
+\textbf{(D)}~$\begin{bmatrix} 0 \\ 1 \\ -3 \\ 0 \end{bmatrix}$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.54} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Consider a system with 2 KB direct mapped data cache with a block size of 64 bytes.
-The system has a physical address space of 64 KB and a word length of 16 bits.
-During the execution of a program, four data words P, Q, R, and S are accessed in
-that order 10 times (i.e., PQRSPQRS…). Hence, there are 40 accesses to data cache
-altogether. Assume that the data cache is initially empty and no other data words are
-accessed by the program. The addresses of the first bytes of P, Q, R, and S are
-0xA248, 0xC28A, 0xCA8A, and 0xA262, respectively. For the execution of the
-above program, which of the following statements is/are TRUE with respect to the
-data cache? \par}
+{\bfseries Consider a system with 2 KB direct mapped data cache with a block size of 64 bytes. The system has a physical address space of 64 KB and a word length of 16 bits. During the execution of a program, four data words P, Q, R, and S are accessed in that order 10 times (i.e., PQRSPQRS\dots). Hence, there are 40 accesses to data cache altogether. Assume that the data cache is initially empty and no other data words are accessed by the program. The addresses of the first bytes of P, Q, R, and S are `0xA248`, `0xC28A`, `0xCA8A`, and `0xA262`, respectively. For the execution of the above program, which of the following statements is/are TRUE with respect to the data cache? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~Every access to S is a hit.\par\vspace{2pt}\noindent
 \textbf{(B)}~Once P is brought to the cache it is never evicted.\par\vspace{2pt}\noindent
@@ -7285,222 +6854,65 @@ data cache? \par}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.56} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider the relational database with the following four schemas and their
-respective instances.
-Student(sNo, sName, dNo) Dept(dNo, dName)
-Course(cNo, cName, dNo) Register(sNo, cNo)
-SQL Query:
-\par\smallskip
-SELECT * FROM Student AS S WHERE NOT EXIST
-(SELECT cNo FROM Course WHERE dNo = ``D01''
-\par\smallskip
-EXCEPT
-SELECT cNo FROM Register WHERE sNo = S.sNo)
-The number of rows returned by the above SQL query is\_\_\_\_\_\_\_\_\_\_\_. \par}
+{\bfseries Consider the relational database with the following four schemas and their respective instances:
+\[ \text{Student}(sNo, sName, dNo), \quad \text{Dept}(dNo, dName), \quad \text{Course}(cNo, cName, dNo), \quad \text{Register}(sNo, cNo) \]
+\begin{lstlisting}[language=SQL]
+SELECT * FROM Student AS S WHERE NOT EXISTS
+    (SELECT cNo FROM Course WHERE dNo = 'D01'
+     EXCEPT
+     SELECT cNo FROM Register WHERE sNo = S.sNo)
+\end{lstlisting}
+The number of rows returned by the above SQL query is \_\_\_\_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.58} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Let
-( ,
-)
-G V E be a directed graph, where
-\{1,2,3,4,5\}
-V =
-is the set of vertices and
-E is the set of directed edges, as defined by the following adjacency matrix
-.
-A
-𝐴[$i$][$j$] = ൜1, 1 $\le$$j$$\le$$i$$\le$5
-0, 𝑜𝑡ℎ𝑒$r$𝑤$i$𝑠𝑒
-𝐴[$i$][$j$] = 1 indicates a directed edge from node i to node .j A directed spanning
-tree of
-,
-G rooted at
-,
-r
-V
-$\in$
-is defined as a subgraph T of G such that the undirected
-version of T is a tree, and T contains a directed path from r to every other vertex
-in
-.
-V The number of such directed spanning trees rooted at vertex 5
-is\_\_\_\_\_\_\_\_\_\_\_\_\_. \par}
+{\bfseries Let $G = (V, E)$ be a directed graph, where $V = \{1, 2, 3, 4, 5\}$ is the set of vertices and $E$ is the set of directed edges, as defined by the adjacency matrix $A[i][j] = 1$ if $1 \le j \le i \le 5$, and 0 otherwise. A directed spanning tree of $G$ rooted at $r \in V$ is a subgraph $T$ whose undirected version is a tree and $T$ contains a directed path from $r$ to every other vertex. The number of such directed spanning trees rooted at vertex 5 is \_\_\_\_\_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.59} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider a 100 Mbps link between an earth station (sender) and a satellite (receiver)
-at an altitude of 2100 km. The signal propagates at a speed of 3x108 m/s. The time
-taken (in milliseconds, rounded off to two decimal places) for the receiver to
-completely receive a packet of 1000 bytes transmitted by the sender is\_\_\_\_\_\_\_\_\_. \par}
+{\bfseries Consider a 100 Mbps link between an earth station (sender) and a satellite (receiver) at an altitude of 2100 km. The signal propagates at a speed of $3 \times 10^8\text{ m/s}$. The time taken (in milliseconds, rounded off to two decimal places) for the receiver to completely receive a packet of 1000 bytes transmitted by the sender is \_\_\_\_\_\_\_\_\_\. (Answer in numeric format) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.60} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider the data transfer using TCP over a 1 Gbps link. Assuming that the
-maximum segment lifetime (MSL) is set to 60 seconds, the minimum number of
-bits required for the sequence number field of the TCP header, to prevent the
-sequence number space from wrapping around during the MSL is\_\_\_\_\_\_\_\_\_\_\_\_. \par}
+{\bfseries Consider the data transfer using TCP over a 1 Gbps link. Assuming that the maximum segment lifetime (MSL) is set to 60 seconds, the minimum number of bits required for the sequence number field of the TCP header, to prevent the sequence number space from wrapping around during the MSL is \_\_\_\_\_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.61} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries A processor X1 operating at 2 GHz has a standard 5-stage RISC instruction pipeline
-having a base CPI (cycles per instruction) of one without any pipeline hazards.
-For a given program P that has 30\% branch instructions, control hazards incur 2
-cycles stall for every branch. A new version of the processor X2 operating at same
-clock frequency has an additional branch predictor unit (BPU) that completely
-eliminates stalls for correctly predicted branches. There is neither any savings nor
-any additional stalls for wrong predictions. There are no structural hazards and data
-hazards for X1 and X2. If the BPU has a prediction accuracy of 80\%, the speed up
-(rounded off to two decimal places) obtained by X2 over X1 in executing
-P is\_\_\_\_\_\_\_\_\_\_\_\_. \par}
+{\bfseries A processor X1 operating at 2 GHz has a standard 5-stage RISC instruction pipeline having a base CPI (cycles per instruction) of one without any pipeline hazards. For a given program P that has 30\% branch instructions, control hazards incur 2 cycles stall for every branch. A new version of the processor X2 operating at same clock frequency has an additional branch predictor unit (BPU) that completely eliminates stalls for correctly predicted branches. There is neither any savings nor any additional stalls for wrong predictions. There are no structural hazards and data hazards for X1 and X2. If the BPU has a prediction accuracy of 80\%, the speed up (rounded off to two decimal places) obtained by X2 over X1 in executing P is \_\_\_\_\_\_\_\_\_\_\_\_\. (Answer in numeric format) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.62} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider the queues
-1
-Q containing four elements and
-2
-Q containing none (shown
-as the Initial State in the figure). The only operations allowed on these two queues
-are Enqueue(Q,element) and Dequeue(Q). The minimum number of
-Enqueue operations on
-1
-Q required to place the elements of
-1
-Q in
-2
-Q in reverse
-order (shown as the Final State in the figure) without using any additional storage
-is\_\_\_\_\_\_\_\_\_\_\_. \par}
+{\bfseries Consider the queues $Q_1$ containing four elements and $Q_2$ containing none. The only operations allowed on these two queues are `Enqueue(Q, element)` and `Dequeue(Q)`. The minimum number of `Enqueue` operations on $Q_1$ required to place the elements of $Q_1$ in $Q_2$ in reverse order without using any additional storage is \_\_\_\_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.63} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider two files systems A and B , that use contiguous allocation and linked
-allocation, respectively. A file of size 100 blocks is already stored in A and also in
-B. Now, consider inserting a new block in the middle of the file (between 50th and
-51st block), whose data is already available in the memory. Assume that there are
-enough free blocks at the end of the file and that the file control blocks are already
-in memory. Let the number of disk accesses required to insert a block in the middle
-of the file in A and B are
-A
-n and
-,
-B
-n respectively, then the value of
-A
-B
-n
-n
-
-is\_\_\_\_\_\_\_\_\_. \par}
+{\bfseries Consider two file systems A and B, that use contiguous allocation and linked allocation, respectively. A file of size 100 blocks is already stored in A and also in B. Now, consider inserting a new block in the middle of the file (between 50th and 51st block), whose data is already available in the memory. Assume that there are enough free blocks at the end of the file and that the file control blocks are already in memory. Let the number of disk accesses required to insert a block in the middle of the file in A and B be $n_A$ and $n_B$ respectively, then the value of $n_A + n_B$ is \_\_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.64} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider a demand paging system with four page frames (initially empty) and LRU
-page replacement policy. For the following page reference string
-7,2,7,3,2,5,3,4,6,7,7,1,5,6,1
-the page fault rate, defined as the ratio of number of page faults to the number of
-memory accesses (rounded off to one decimal place) is\_\_\_\_\_\_\_\_\_. \par}
+{\bfseries Consider a demand paging system with four page frames (initially empty) and LRU page replacement policy. For the following page reference string
+\[ 7, 2, 7, 3, 2, 5, 3, 4, 6, 7, 7, 1, 5, 6, 1 \]
+the page fault rate, defined as the ratio of number of page faults to the number of memory accesses (rounded off to one decimal place) is \_\_\_\_\_\_\_\_\_\. (Answer in numeric format) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.65} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider the following grammar along with translation rules.
-1
-1
-•
-•
-•
-\#
-\{
-*
-\}
-val
-val
-val
-S
-S
-T
-S
-S
-T
-$\to$
-=
-•
-•
-\{
-\}
-val
-val
-S
-T
-S
-T
-$\to$
-=
-1
-•
-1•
-•
-\%
-\{
-\}
-val
-val
-val
-T
-T
-R
-T
-T
-R
-$\div$
-$\to$
-=
-•
-•
-\{
-\}
-val
-val
-T
-R
-T
-R
-$\to$
-=
-•
-•
-\{
-\}
-val
-val
-R
-id
-R
-id
-$\to$
-=
-Here \# and \% are operators and id is a token that represents an integer and
-•val
-id
-\par\smallskip
-represents the corresponding integer value. The set of non-terminals is \{ , ,
-, \}
-S T R P
-and a subscripted non-terminal indicates an instance of the non-terminal.
-Using this translation scheme, the computed value of
-•val
-S
-for root of the parse tree
-for the expression 20\#10\%5\#8\%2\%2 is \_\_\_\_\_\_\_\_\_\_\_\_\_. \par}
+{\bfseries Consider the following grammar along with translation rules:
+\begin{align*}
+S &\to S_1 \,\#\, T & S.val &= S_1.val * T.val \\
+S &\to T & S.val &= T.val \\
+T &\to T_1 \,\%\, R & T.val &= T_1.val \div R.val \\
+T &\to R & T.val &= R.val \\
+R &\to id & R.val &= id.val
+\end{align*}
+Here $\#$ and $\%$ are operators and $id$ is a token that represents an integer. Using this translation scheme, the computed value of $S.val$ for root of the parse tree for the expression `20\#10\%5\#8\%2\%2` is \_\_\_\_\_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \end{multicols}
@@ -7589,9 +7001,8 @@ for the expression 20\#10\%5\#8\%2\%2 is \_\_\_\_\_\_\_\_\_\_\_\_\_. \par}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.3} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries A series of natural numbers 𝐹1, 𝐹2, 𝐹3, 𝐹4, 𝐹5, 𝐹6, 𝐹7, … obeys 𝐹$n$+1 = 𝐹$n$+ 𝐹$n$−1
-for all integers $n$$\ge$2 .
-If 𝐹6 = 37, and 𝐹7 = 60, then what is 𝐹1 ? \par}
+{\bfseries A series of natural numbers $F_1, F_2, F_3, F_4, F_5, F_6, F_7, \dots$ obeys $F_{n+1} = F_n + F_{n-1}$ for all integers $n \ge 2$.
+If $F_6 = 37$, and $F_7 = 60$, then what is $F_1$? \par}
 \par\vspace{2pt}\noindent
 \begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
 \textbf{(A)}~4 & \textbf{(B)}~5 \\
@@ -7601,21 +7012,17 @@ If 𝐹6 = 37, and 𝐹7 = 60, then what is 𝐹1 ? \par}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.4} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries A survey for a certain year found that 90\% of pregnant women received medical
-care at least once before giving birth. Of these women, 60\% received medical care
-from doctors, while 40\% received medical care from other healthcare providers.
-Given this information, which one of the following statements can be inferred with
-certainty? \par}
+{\bfseries A survey for a certain year found that 90\% of pregnant women received medical care at least once before giving birth. Of these women, 60\% received medical care from doctors, while 40\% received medical care from other healthcare providers.
+Given this information, which one of the following statements can be inferred with certainty? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~More than half of the pregnant women received medical care at least once from a \newline doctor.\par\vspace{2pt}\noindent
-\textbf{(B)}~Less than half of the pregnant women received medical care at least once from a \newline doctor.\par\vspace{2pt}\noindent
-\textbf{(C)}~More than half of the pregnant women received medical care at most once from a \newline doctor.\par\vspace{2pt}\noindent
-\textbf{(D)}~Less than half of the pregnant women received medical care at most once from a \newline doctor.
+\textbf{(A)}~More than half of the pregnant women received medical care at least once from a doctor.\par\vspace{2pt}\noindent
+\textbf{(B)}~Less than half of the pregnant women received medical care at least once from a doctor.\par\vspace{2pt}\noindent
+\textbf{(C)}~More than half of the pregnant women received medical care at most once from a doctor.\par\vspace{2pt}\noindent
+\textbf{(D)}~Less than half of the pregnant women received medical care at most once from a doctor.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.5} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Looking at the surface of a smooth 3-dimensional object from the outside, which
-one of the following options is TRUE? \par}
+{\bfseries Looking at the surface of a smooth 3-dimensional object from the outside, which one of the following options is TRUE? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~The surface of the object must be concave everywhere.\par\vspace{2pt}\noindent
 \textbf{(B)}~The surface of the object must be convex everywhere.\par\vspace{2pt}\noindent
@@ -7629,32 +7036,25 @@ one of the following options is TRUE? \par}
 
 \noindent\textbf{Q.6} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries The country of Zombieland is in distress since more than 75\% of its working
-population is suffering from serious health issues. Studies conducted by competent
-health experts concluded that a complete lack of physical exercise among its
-working population was one of the leading causes of their health issues. As one of
-the measures to address the problem, the Government of Zombieland has decided
-to provide monetary incentives to those who ride bicycles to work.
+{\bfseries The country of Zombieland is in distress since more than 75\% of its working population is suffering from serious health issues. Studies conducted by competent health experts concluded that a complete lack of physical exercise among its working population was one of the leading causes of their health issues. As one of the measures to address the problem, the Government of Zombieland has decided to provide monetary incentives to those who ride bicycles to work.
 \par\smallskip
-Based only on the information provided above, which one of the following
-statements can be logically inferred with certainty? \par}
+Based only on the information provided above, which one of the following statements can be logically inferred with certainty? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~All the working population of Zombieland will henceforth ride bicycles to work.\par\vspace{2pt}\noindent
-\textbf{(B)}~Riding bicycles will ensure that all of the working population of Zombieland is free \newline of health issues.\par\vspace{2pt}\noindent
-\textbf{(C)}~The health experts suggested to the Government of Zombieland to declare riding \newline bicycles as mandatory.\par\vspace{2pt}\noindent
-\textbf{(D)}~The Government of Zombieland believes that riding bicycles is a form of physical \newline exercise.
+\textbf{(B)}~Riding bicycles will ensure that all of the working population of Zombieland is free of health issues.\par\vspace{2pt}\noindent
+\textbf{(C)}~The health experts suggested to the Government of Zombieland to declare riding bicycles as mandatory.\par\vspace{2pt}\noindent
+\textbf{(D)}~The Government of Zombieland believes that riding bicycles is a form of physical exercise.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.7} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Consider two functions of time (𝑡),
-𝑓(𝑡) = 0.01 𝑡2
-𝑔(𝑡) = 4 𝑡
-where 0 < 𝑡< $\infty$.
+{\bfseries Consider two functions of time ($t$),
+\[ f(t) = 0.01 t^2, \quad g(t) = 4 t \]
+where $0 < t < \infty$.
 Now consider the following two statements:
-(i)
-For some 𝑡> 0, 𝑔(𝑡) > 𝑓(𝑡).
-(ii)
-There exists a 𝑇, such that 𝑓(𝑡) > 𝑔(𝑡) for all 𝑡> 𝑇.
+\begin{enumerate}[label=(\roman*),itemsep=0pt,topsep=2pt]
+\item For some $t > 0$, $g(t) > f(t)$.
+\item There exists a $T$, such that $f(t) > g(t)$ for all $t > T$.
+\end{enumerate}
 Which one of the following options is TRUE? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~only (i) is correct\par\vspace{2pt}\noindent
@@ -7665,16 +7065,12 @@ Which one of the following options is TRUE? \par}
 \noindent\textbf{Q.8} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
 {\bfseries Which one of the following sentence sequences creates a coherent narrative?
-(i)
-Once on the terrace, on her way to her small room in the corner, she
-notices the man right away.
-(ii)
-She begins to pant by the time she has climbed all the stairs.
-(iii)
-Mina has bought vegetables and rice at the market, so her bags are
-heavy.
-(iv)
-He was leaning against the parapet, watching the traffic below. \par}
+\begin{enumerate}[label=(\roman*),itemsep=0pt,topsep=2pt]
+\item Once on the terrace, on her way to her small room in the corner, she notices the man right away.
+\item She begins to pant by the time she has climbed all the stairs.
+\item Mina has bought vegetables and rice at the market, so her bags are heavy.
+\item He was leaning against the parapet, watching the traffic below.
+\end{enumerate} \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~(i), (ii), (iv), (iii)\par\vspace{2pt}\noindent
 \textbf{(B)}~(ii), (iii), (i), (iv)\par\vspace{2pt}\noindent
@@ -7683,32 +7079,21 @@ He was leaning against the parapet, watching the traffic below. \par}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.9} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries ( )
-f x and ( )
-g y are functions of x and y, respectively, and
-( )
-( )
-f x
-g y
-=
-for all real
-values of $x$ and $y$. Which one of the following options is necessarily TRUE for all
-x and y? \par}
+{\bfseries $f(x)$ and $g(y)$ are functions of $x$ and $y$, respectively, and $f(x) = g(y)$ for all real values of $x$ and $y$. Which one of the following options is necessarily TRUE for all $x$ and $y$? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~( ) \newline 0 \newline f x = \newline and ( ) \newline 0 \newline g y =\par\vspace{2pt}\noindent
-\textbf{(B)}~( ) \newline ( ) \newline constant \newline f x \newline g y \newline = \newline =\par\vspace{2pt}\noindent
-\textbf{(C)}~( ) \newline constant \newline f x $\ne$ \newline and ( ) \newline constant \newline g y $\ne$\par\vspace{2pt}\noindent
-\textbf{(D)}~( ) \newline ( ) \newline ( ) \newline ( ) \newline = \newline  \newline f x \newline g y \newline f x \newline g y \newline + \newline −
+\textbf{(A)}~$f(x) = 0$ and $g(y) = 0$\par\vspace{2pt}\noindent
+\textbf{(B)}~$f(x) = g(y) = \text{constant}$\par\vspace{2pt}\noindent
+\textbf{(C)}~$f(x) \neq \text{constant}$ and $g(y) \neq \text{constant}$\par\vspace{2pt}\noindent
+\textbf{(D)}~$f(x) + g(y) = f(x) - g(y)$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.10} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Which one of the options best describes the transformation of the 2-dimensional
-figure P to Q, and then to R, as shown? \par}
+{\bfseries Which one of the options best describes the transformation of the 2-dimensional figure P to Q, and then to R, as shown? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~Only S1 is TRUE.\par\vspace{2pt}\noindent
 \textbf{(B)}~Only S1 and S2 are TRUE.\par\vspace{2pt}\noindent
 \textbf{(C)}~S1, S2, and S3 are all TRUE.\par\vspace{2pt}\noindent
-\textbf{(D)}~Only S1 and S3 are TRUE. \newline CS
+\textbf{(D)}~Only S1 and S3 are TRUE.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 
 \vspace{8pt}
@@ -7718,152 +7103,93 @@ figure P to Q, and then to R, as shown? \par}
 
 \noindent\textbf{Q.12} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Which one of the following sequences when stored in an array at locations
-A[1], . . . , A[10] forms a max-heap? \par}
+{\bfseries Which one of the following sequences when stored in an array at locations $A[1], \dots, A[10]$ forms a max-heap? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~23, 17, 10, 6, 13, 14, 1, 5, 7, 12\par\vspace{2pt}\noindent
 \textbf{(B)}~23, 17, 14, 7, 13, 10, 1, 5, 6, 12\par\vspace{2pt}\noindent
 \textbf{(C)}~23, 17, 14, 6, 13, 10, 1, 5, 7, 15\par\vspace{2pt}\noindent
-\textbf{(D)}~23, 14, 17, 1, 10, 13, 16, 12, 7, 5 \newline CS
+\textbf{(D)}~23, 14, 17, 1, 10, 13, 16, 12, 7, 5
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.13} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Let SLLdel be a function that deletes a node in a singly-linked list given a pointer
-to the node and a pointer to the head of the list. Similarly, let DLLdel be another
-function that deletes a node in a doubly-linked list given a pointer to the node and
-a pointer to the head of the list.
-Let n denote the number of nodes in each of the linked lists. Which one of the
-following choices is TRUE about the worst-case time complexity of SLLdel and
-DLLdel? \par}
+{\bfseries Let `SLLdel` be a function that deletes a node in a singly-linked list given a pointer to the node and a pointer to the head of the list. Similarly, let `DLLdel` be another function that deletes a node in a doubly-linked list given a pointer to the node and a pointer to the head of the list.
+Let $n$ denote the number of nodes in each of the linked lists. Which one of the following choices is TRUE about the worst-case time complexity of `SLLdel` and `DLLdel`? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~SLLdel is O(1) and DLLdel is O(n)\par\vspace{2pt}\noindent
-\textbf{(B)}~Both SLLdel and DLLdel are O(log(n))\par\vspace{2pt}\noindent
-\textbf{(C)}~Both SLLdel and DLLdel are O(1)\par\vspace{2pt}\noindent
-\textbf{(D)}~SLLdel is O(n) and DLLdel is O(1) \newline CS
+\textbf{(A)}~`SLLdel` is $\mathcal{O}(1)$ and `DLLdel` is $\mathcal{O}(n)$\par\vspace{2pt}\noindent
+\textbf{(B)}~Both `SLLdel` and `DLLdel` are $\mathcal{O}(\log n)$\par\vspace{2pt}\noindent
+\textbf{(C)}~Both `SLLdel` and `DLLdel` are $\mathcal{O}(1)$\par\vspace{2pt}\noindent
+\textbf{(D)}~`SLLdel` is $\mathcal{O}(n)$ and `DLLdel` is $\mathcal{O}(1)$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.15} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries The Lucas sequence Ln is deﬁned by the recurrence relation:
-Ln = Ln−1 + Ln−2,
-for
-n $\ge$3,
-with L1 = 1 and L2 = 3.
+{\bfseries The Lucas sequence $L_n$ is defined by the recurrence relation:
+\[ L\_n = L\_{n-1} + L\_{n-2}, \quad \text{for } n \ge 3, \]
+with $L_1 = 1$ and $L_2 = 3$.
 Which one of the options given is TRUE? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~Ln = \newline  \newline 1 + \newline $\sqrt{\vphantom{x}}$ \newline 5 \newline 2 \newline n \newline + \newline  \newline 1 − \newline $\sqrt{\vphantom{x}}$ \newline 5 \newline 2 \newline n\par\vspace{2pt}\noindent
-\textbf{(B)}~Ln = \newline  \newline 1 + \newline $\sqrt{\vphantom{x}}$ \newline 5 \newline 2 \newline n \newline − \newline  \newline 1 − \newline $\sqrt{\vphantom{x}}$ \newline 5 \newline 3 \newline n\par\vspace{2pt}\noindent
-\textbf{(C)}~Ln = \newline  \newline 1 + \newline $\sqrt{\vphantom{x}}$ \newline 5 \newline 2 \newline n \newline + \newline  \newline 1 − \newline $\sqrt{\vphantom{x}}$ \newline 5 \newline 3 \newline n\par\vspace{2pt}\noindent
-\textbf{(D)}~Ln = \newline  \newline 1 + \newline $\sqrt{\vphantom{x}}$ \newline 5 \newline 2 \newline n \newline − \newline  \newline 1 − \newline $\sqrt{\vphantom{x}}$ \newline 5 \newline 2 \newline n \newline CS
+\textbf{(A)}~$L_n = \left(\frac{1+\sqrt{5}}{2}\right)^n + \left(\frac{1-\sqrt{5}}{2}\right)^n$\par\vspace{2pt}\noindent
+\textbf{(B)}~$L_n = \left(\frac{1+\sqrt{5}}{2}\right)^n - \left(\frac{1-\sqrt{5}}{3}\right)^n$\par\vspace{2pt}\noindent
+\textbf{(C)}~$L_n = \left(\frac{1+\sqrt{5}}{2}\right)^n + \left(\frac{1-\sqrt{5}}{3}\right)^n$\par\vspace{2pt}\noindent
+\textbf{(D)}~$L_n = \left(\frac{1+\sqrt{5}}{2}\right)^n - \left(\frac{1-\sqrt{5}}{2}\right)^n$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.16} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Which one of the options given below refers to the degree (or arity) of a relation in
-relational database systems? \par}
+{\bfseries Which one of the options given below refers to the degree (or arity) of a relation in relational database systems? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~Number of attributes of its relation schema.\par\vspace{2pt}\noindent
 \textbf{(B)}~Number of tuples stored in the relation.\par\vspace{2pt}\noindent
 \textbf{(C)}~Number of entries in the relation.\par\vspace{2pt}\noindent
-\textbf{(D)}~Number of distinct domains of its relation schema. \newline CS
+\textbf{(D)}~Number of distinct domains of its relation schema.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.17} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Suppose two hosts are connected by a point-to-point link and they are conﬁgured
-to use Stop-and-Wait protocol for reliable data transfer. Identify in which one of
-the following scenarios, the utilization of the link is the lowest. \par}
+{\bfseries Suppose two hosts are connected by a point-to-point link and they are configured to use Stop-and-Wait protocol for reliable data transfer. Identify in which one of the following scenarios, the utilization of the link is the lowest. \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~Longer link length and lower transmission rate\par\vspace{2pt}\noindent
 \textbf{(B)}~Longer link length and higher transmission rate\par\vspace{2pt}\noindent
 \textbf{(C)}~Shorter link length and lower transmission rate\par\vspace{2pt}\noindent
-\textbf{(D)}~Shorter link length and higher transmission rate \newline CS
+\textbf{(D)}~Shorter link length and higher transmission rate
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.18} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
 {\bfseries Let
-A =
-⎡
-⎢⎢⎣
-1
-2
-3
-4
-4
-1
-2
-3
-3
-4
-1
-2
-2
-3
-4
-1
-⎤
-⎥⎥⎦
-and
-B =
-⎡
-⎢⎢⎣
-3
-4
-1
-2
-4
-1
-2
-3
-1
-2
-3
-4
-2
-3
-4
-1
-⎤
-⎥⎥⎦.
-Let det(A) and det(B) denote the determinants of the matrices A and B,
-respectively.
+\[ A = \begin{bmatrix} 1 & 2 & 3 & 4 \\ 4 & 1 & 2 & 3 \\ 3 & 4 & 1 & 2 \\ 2 & 3 & 4 & 1 \end{bmatrix} \quad \text{and} \quad B = \begin{bmatrix} 3 & 4 & 1 & 2 \\ 4 & 1 & 2 & 3 \\ 1 & 2 & 3 & 4 \\ 2 & 3 & 4 & 1 \end{bmatrix}. \]
+Let $\det(A)$ and $\det(B)$ denote the determinants of the matrices $A$ and $B$, respectively.
 Which one of the options given below is TRUE? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~det(A) = det(B)\par\vspace{2pt}\noindent
-\textbf{(B)}~det(B) = −det(A)\par\vspace{2pt}\noindent
-\textbf{(C)}~det(A) = 0\par\vspace{2pt}\noindent
-\textbf{(D)}~det(AB) = det(A) + det(B) \newline CS
+\textbf{(A)}~$\det(A) = \det(B)$\par\vspace{2pt}\noindent
+\textbf{(B)}~$\det(B) = -\det(A)$\par\vspace{2pt}\noindent
+\textbf{(C)}~$\det(A) = 0$\par\vspace{2pt}\noindent
+\textbf{(D)}~$\det(AB) = \det(A) + \det(B)$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.20} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries CS
-\par\smallskip
-An algorithm has to store several keys generated by an adversary in a hash
-table. The adversary is malicious who tries to maximize the number of collisions.
-Let k be the number of keys, m be the number of slots in the hash table, and k > m.
+{\bfseries An algorithm has to store several keys generated by an adversary in a hash table. The adversary is malicious who tries to maximize the number of collisions. Let $k$ be the number of keys, $m$ be the number of slots in the hash table, and $k > m$.
 Which one of the following is the best hashing strategy to counteract the adversary? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~Division method, i.e., use the hash function h(k) = k mod m.\par\vspace{2pt}\noindent
-\textbf{(B)}~Multiplication method, i.e., use the hash function h(k) = ⌊m(kA −⌊kA⌋)⌋, where \newline A is a carefully chosen constant.\par\vspace{2pt}\noindent
+\textbf{(A)}~Division method, i.e., use the hash function $h(k) = k \bmod m$.\par\vspace{2pt}\noindent
+\textbf{(B)}~Multiplication method, i.e., use the hash function $h(k) = \lfloor m(kA - \lfloor kA \rfloor)\rfloor$, where $A$ is a carefully chosen constant.\par\vspace{2pt}\noindent
 \textbf{(C)}~Universal hashing method.\par\vspace{2pt}\noindent
-\textbf{(D)}~If k is a prime number, use Division method. Otherwise, use Multiplication method. \newline CS
+\textbf{(D)}~If $k$ is a prime number, use Division method. Otherwise, use Multiplication method.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.22} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Which one or more of the following need to be saved on a context switch from one
-thread (T1) of a process to another thread (T2) of the same process? \par}
+{\bfseries Which one or more of the following need to be saved on a context switch from one thread (T1) of a process to another thread (T2) of the same process? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~Page table base register\par\vspace{2pt}\noindent
 \textbf{(B)}~Stack pointer\par\vspace{2pt}\noindent
 \textbf{(C)}~Program counter\par\vspace{2pt}\noindent
-\textbf{(D)}~General purpose registers \newline CS
+\textbf{(D)}~General purpose registers
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.23} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Which one or more of the following options guarantee that a computer system will
-transition from user mode to kernel mode? \par}
+{\bfseries Which one or more of the following options guarantee that a computer system will transition from user mode to kernel mode? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~Function Call\par\vspace{2pt}\noindent
-\textbf{(B)}~malloc Call\par\vspace{2pt}\noindent
-\textbf{(C)}~Page Fault\par\vspace{2pt}\noindent
-\textbf{(D)}~System Call \newline CS
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~Function Call & \textbf{(B)}~`malloc` Call \\
+\addlinespace[2pt]
+\textbf{(C)}~Page Fault & \textbf{(D)}~System Call
+\end{tabular*}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.24} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
@@ -7872,173 +7198,135 @@ transition from user mode to kernel mode? \par}
 \textbf{(A)}~The intersection of two regular languages is regular.\par\vspace{2pt}\noindent
 \textbf{(B)}~The intersection of two context-free languages is context-free.\par\vspace{2pt}\noindent
 \textbf{(C)}~The intersection of two recursive languages is recursive.\par\vspace{2pt}\noindent
-\textbf{(D)}~The intersection of two recursively enumerable languages is recursively enumerable. \newline CS
+\textbf{(D)}~The intersection of two recursively enumerable languages is recursively enumerable.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.25} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Which of the following statements is/are INCORRECT about
-the OSPF (Open Shortest Path First) routing protocol used in the Internet? \par}
+{\bfseries Which of the following statements is/are INCORRECT about the OSPF (Open Shortest Path First) routing protocol used in the Internet? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~OSPF implements Bellman-Ford algorithm to ﬁnd shortest paths.\par\vspace{2pt}\noindent
+\textbf{(A)}~OSPF implements Bellman-Ford algorithm to find shortest paths.\par\vspace{2pt}\noindent
 \textbf{(B)}~OSPF uses Dijkstra's shortest path algorithm to implement least-cost path routing.\par\vspace{2pt}\noindent
 \textbf{(C)}~OSPF is used as an inter-domain routing protocol.\par\vspace{2pt}\noindent
-\textbf{(D)}~OSPF implements hierarchical routing. \newline CS
+\textbf{(D)}~OSPF implements hierarchical routing.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.26} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
 {\bfseries Geetha has a conjecture about integers, which is of the form
-∀x
-P(x) =$\implies$∃yQ(x, y)
-,
-where P is a statement about integers, and Q is a statement about pairs of integers.
-Which of the following (one or more) option(s) would imply Geetha's conjecture? \par}
+\[ \forall x \, [P(x) \implies \exists y \, Q(x, y)], \]
+where $P$ is a statement about integers, and $Q$ is a statement about pairs of integers. Which of the following (one or more) option(s) would imply Geetha's conjecture? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~∃x \newline P(x) ∧∀yQ(x, y)\par\vspace{2pt}\noindent
-\textbf{(B)}~∀x∀yQ(x, y)\par\vspace{2pt}\noindent
-\textbf{(C)}~∃y∀x \newline P(x) =$\implies$Q(x, y)\par\vspace{2pt}\noindent
-\textbf{(D)}~∃x \newline P(x) ∧∃yQ(x, y) \newline CS
+\textbf{(A)}~$\exists x \, [P(x) \land \forall y \, Q(x, y)]$\par\vspace{2pt}\noindent
+\textbf{(B)}~$\forall x \forall y \, Q(x, y)$\par\vspace{2pt}\noindent
+\textbf{(C)}~$\exists y \forall x \, [P(x) \implies Q(x, y)]$\par\vspace{2pt}\noindent
+\textbf{(D)}~$\exists x \, [P(x) \land \exists y \, Q(x, y)]$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.27} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Which one or more of the following CPU scheduling algorithms can potentially
-cause starvation? \par}
+{\bfseries Which one or more of the following CPU scheduling algorithms can potentially cause starvation? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~First-in First-Out\par\vspace{2pt}\noindent
-\textbf{(B)}~Round Robin\par\vspace{2pt}\noindent
-\textbf{(C)}~Priority Scheduling\par\vspace{2pt}\noindent
-\textbf{(D)}~Shortest Job First \newline CS
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~First-in First-Out & \textbf{(B)}~Round Robin \\
+\addlinespace[2pt]
+\textbf{(C)}~Priority Scheduling & \textbf{(D)}~Shortest Job First
+\end{tabular*}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.28} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
 {\bfseries Let
-f(x) = x3 + 15x2 −33x −36
+\[ f(x) = x^3 + 15x^2 - 33x - 36 \]
 be a real-valued function.
 Which of the following statements is/are TRUE? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~f(x) does not have a local maximum.\par\vspace{2pt}\noindent
-\textbf{(B)}~f(x) has a local maximum.\par\vspace{2pt}\noindent
-\textbf{(C)}~f(x) does not have a local minimum.\par\vspace{2pt}\noindent
-\textbf{(D)}~f(x) has a local minimum. \newline CS
+\textbf{(A)}~$f(x)$ does not have a local maximum.\par\vspace{2pt}\noindent
+\textbf{(B)}~$f(x)$ has a local maximum.\par\vspace{2pt}\noindent
+\textbf{(C)}~$f(x)$ does not have a local minimum.\par\vspace{2pt}\noindent
+\textbf{(D)}~$f(x)$ has a local minimum.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.29} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Let f and g be functions of natural numbers given by f(n) = n and g(n) = n2.
+{\bfseries Let $f$ and $g$ be functions of natural numbers given by $f(n) = n$ and $g(n) = n^2$.
 Which of the following statements is/are TRUE? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~f $\in$O(g)\par\vspace{2pt}\noindent
-\textbf{(B)}~f $\in$$\Omega$(g)\par\vspace{2pt}\noindent
-\textbf{(C)}~f $\in$o(g)\par\vspace{2pt}\noindent
-\textbf{(D)}~f $\in$Θ(g) \newline CS
+\textbf{(A)}~$f \in \mathcal{O}(g)$\par\vspace{2pt}\noindent
+\textbf{(B)}~$f \in \Omega(g)$\par\vspace{2pt}\noindent
+\textbf{(C)}~$f \in o(g)$\par\vspace{2pt}\noindent
+\textbf{(D)}~$f \in \Theta(g)$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.31} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries The value of the deﬁnite integral
-3
-−3
-2
-−2
-1
-−1
-4x2y −z3
-dz dy dx
-is
-. (Rounded oﬀto the nearest integer)
-CS \par}
+{\bfseries The value of the definite integral
+\[ \int\_{-3}^3 \int\_{-2}^2 \int\_{-1}^1 (4x^2 y - z^3) \, dz \, dy \, dx \]
+is \_\_\_\_\_\_\_\_\. (Rounded off to the nearest integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.32} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries A particular number is written as 132 in radix-4 representation. The same number
-in radix-5 representation is
-.
-CS \par}
+{\bfseries A particular number is written as 132 in radix-4 representation. The same number in radix-5 representation is \_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.33} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider a 3-stage pipelined processor having a delay of 10 ns (nanoseconds),
-20 ns, and 14 ns, for the ﬁrst, second, and the third stages, respectively. Assume
-that there is no other delay and the processor does not suﬀer from any pipeline
-hazards. Also assume that one instruction is fetched every cycle.
-The total execution time for executing 100 instructions on this processor is
-ns.
-CS \par}
+{\bfseries Consider a 3-stage pipelined processor having a delay of 10 ns (nanoseconds), 20 ns, and 14 ns, for the first, second, and the third stages, respectively. Assume that there is no other delay and the processor does not suffer from any pipeline hazards. Also assume that one instruction is fetched every cycle.
+The total execution time for executing 100 instructions on this processor is \_\_\_\_\_\_\_\_\_ ns. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.34} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries A keyboard connected to a computer is used at a rate of 1 keystroke per second.
-The computer system polls the keyboard every 10 ms (milli seconds) to check for
-a keystroke and consumes 100 $\mu$s (micro seconds) for each poll. If it is determined
-after polling that a key has been pressed, the system consumes an additional 200
-$\mu$s to process the keystroke. Let T1 denote the fraction of a second spent in polling
-and processing a keystroke.
-In an alternative implementation, the system uses interrupts instead of polling.
-An interrupt is raised for every keystroke. It takes a total of 1 ms for servicing an
-interrupt and processing a keystroke. Let T2 denote the fraction of a second spent
-in servicing the interrupt and processing a keystroke.
-The ratio T1
-T2
-is
-. (Rounded oﬀto one decimal place)
-CS \par}
+{\bfseries A keyboard connected to a computer is used at a rate of 1 keystroke per second. The computer system polls the keyboard every 10 ms (milli seconds) to check for a keystroke and consumes 100 $\mu$s (micro seconds) for each poll. If it is determined after polling that a key has been pressed, the system consumes an additional 200 $\mu$s to process the keystroke. Let $T_1$ denote the fraction of a second spent in polling and processing a keystroke.
+In an alternative implementation, the system uses interrupts instead of polling. An interrupt is raised for every keystroke. It takes a total of 1 ms for servicing an interrupt and processing a keystroke. Let $T_2$ denote the fraction of a second spent in servicing the interrupt and processing a keystroke.
+The ratio $\frac{T_1}{T_2}$ is \_\_\_\_\_\_\_\_\. (Rounded off to one decimal place) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.35} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries The integer value printed by the ANSI-C program given below is
-.
-\#include<stdio.h>
-int funcp()\{
-static int x = 1;
-x++;
-return x;
-\}
-int main()\{
-int x,y;
-x = funcp();
-y = funcp()+x;
-printf("\%d\n", (x+y));
-return 0;
-\}
-CS \par}
+{\bfseries The integer value printed by the ANSI-C program given below is \_\_\_\_\_\_\_\_\_\_\. (Answer in integer)
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+int funcp() {
+    static int x = 1;
+    x++;
+    return x;
+}
+int main() {
+    int x, y;
+    x = funcp();
+    y = funcp() + x;
+    printf("%d\n", (x + y));
+    return 0;
+}
+\end{lstlisting} \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.36} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries CS
-\par\smallskip
-Consider the following program:
-int main()
-\{
-f1();
-f2(2);
-f3();
-return(0);
-\}
-int f1()
-\{
-return(1);
-\}
-int f2(int X)
-\{
-f3();
-if (X==1)
-return f1();
-else
-return (X*f2(X-1));
-\}
-int f3()
-\{
-return(5);
-\}
-Which one of the following options represents the activation tree corresponding to
-the main function? \par}
+{\bfseries Consider the following program:
+\begin{lstlisting}[language=C]
+int main() {
+    f1();
+    f2(2);
+    f3();
+    return(0);
+}
+int f1() {
+    return(1);
+}
+int f2(int X) {
+    f3();
+    if (X == 1)
+        return f1();
+    else
+        return (X * f2(X - 1));
+}
+int f3() {
+    return(5);
+}
+\end{lstlisting}
+Which one of the following options represents the activation tree corresponding to the main function? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~main \newline f1 f2 f3 \newline f3 \newline f2 \newline f3 \newline f1\par\vspace{2pt}\noindent
-\textbf{(B)}~main \newline f2 f3 \newline f1 \newline f1 \newline f3\par\vspace{2pt}\noindent
-\textbf{(C)}~main \newline f2 \newline f1 \newline f3 \newline f1\par\vspace{2pt}\noindent
-\textbf{(D)}~main \newline f1 f2 f3 \newline f3 \newline f2 \newline f1 \newline CS
+\textbf{(A)}~main -> [f1, f2, f3]; where f2(2) -> [f3, f2(1)]; and f2(1) -> [f3, f1]\par\vspace{2pt}\noindent
+\textbf{(B)}~main -> [f2, f3]; where f2 -> [f1, f1, f3]\par\vspace{2pt}\noindent
+\textbf{(C)}~main -> [f2]; where f2 -> [f1, f3, f1]\par\vspace{2pt}\noindent
+\textbf{(D)}~main -> [f1, f2, f3]; where f2 -> [f3, f2, f1]
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 
 \vspace{6pt}
@@ -8047,471 +7335,356 @@ the main function? \par}
 
 \noindent\textbf{Q.38} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries CS
-\par\smallskip
-Consider the two functions incr and decr shown below.
-incr()\{
-wait(s);
-X = X+1;
-signal(s);
-\}
-decr()\{
-wait(s);
-X = X-1;
-signal(s);
-\}
-There are 5 threads each invoking incr once, and 3 threads each invoking decr
-once, on the same shared variable X. The initial value of X is 10.
-Suppose there are two implementations of the semaphore s, as follows:
-I-1: s is a binary semaphore initialized to 1.
-I-2: s is a counting semaphore initialized to 2.
-Let V1, V2 be the values of X at the end of execution of all the threads with
-implementations I-1, I-2, respectively.
-Which one of the following choices corresponds to the minimum possible values of
-V1, V2, respectively? \par}
+{\bfseries Consider the two functions `incr` and `decr` shown below:
+\begin{lstlisting}[language=C]
+incr() {
+    wait(s);
+    X = X + 1;
+    signal(s);
+}
+decr() {
+    wait(s);
+    X = X - 1;
+    signal(s);
+}
+\end{lstlisting}
+There are 5 threads each invoking `incr` once, and 3 threads each invoking `decr` once, on the same shared variable $X$. The initial value of $X$ is 10.
+Suppose there are two implementations of the semaphore $s$, as follows:
+\begin{itemize}[itemsep=0pt,topsep=2pt]
+\item I-1: $s$ is a binary semaphore initialized to 1.
+\item I-2: $s$ is a counting semaphore initialized to 2.
+\end{itemize}
+Let $V_1, V_2$ be the values of $X$ at the end of execution of all the threads with implementations I-1, I-2, respectively.
+Which one of the following choices corresponds to the minimum possible values of $V_1, V_2$, respectively? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~15, 7\par\vspace{2pt}\noindent
-\textbf{(B)}~7, 7\par\vspace{2pt}\noindent
-\textbf{(C)}~12, 7\par\vspace{2pt}\noindent
-\textbf{(D)}~12, 8 \newline CS
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~15, 7 & \textbf{(B)}~7, 7 \\
+\addlinespace[2pt]
+\textbf{(C)}~12, 7 & \textbf{(D)}~12, 8
+\end{tabular*}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.39} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Consider the context-free grammar G below
-S
-$\to$
-aSb | X
-X
-$\to$
-aX | Xb | a | b ,
-where S and X are non-terminals, and a and b are terminal symbols. The starting
-non-terminal is S.
+{\bfseries Consider the context-free grammar $G$ below:
+\begin{align*}
+S &\to aSb \mid X \\
+X &\to aX \mid Xb \mid a \mid b,
+\end{align*}
+where $S$ and $X$ are non-terminals, and $a$ and $b$ are terminal symbols. The starting non-terminal is $S$.
 Which one of the following statements is CORRECT? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~The language generated by G is (a + b)∗\par\vspace{2pt}\noindent
-\textbf{(B)}~The language generated by G is a∗(a + b)b∗\par\vspace{2pt}\noindent
-\textbf{(C)}~The language generated by G is a∗b∗(a + b)\par\vspace{2pt}\noindent
-\textbf{(D)}~The language generated by G is not a regular language \newline CS
+\textbf{(A)}~The language generated by $G$ is $(a + b)^*$\par\vspace{2pt}\noindent
+\textbf{(B)}~The language generated by $G$ is $a^*(a + b)b^*$\par\vspace{2pt}\noindent
+\textbf{(C)}~The language generated by $G$ is $a^*b^*(a + b)$\par\vspace{2pt}\noindent
+\textbf{(D)}~The language generated by $G$ is not a regular language
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.41} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Consider the given C-code and its corresponding assembly code, with a few
-operands U1--U4 being unknown. Some useful information as well as the semantics
-of each unique assembly instruction is annotated as inline comments in the code.
-The memory is byte-addressable.
-//C-code
-int a[10], b[10], i;
-// int is 32-bit
-for (i=0; i<10;i++)
-a[i] = b[i] * 8;
-;assembly-code (; indicates comments)
-;r1-r5 are 32-bit integer registers
-;initialize r1=0, r2=10
-;initialize r3, r4 with base address of a, b
-L01: jeq r1, r2, end
-;if(r1==r2) goto end
-L02: lw
-r5, 0(r4)
-;r5 <- Memory[r4+0]
-L03: shl r5, r5, U1
-;r5 <- r5 << U1
-L04: sw
-r5, 0(r3)
-;Memory[r3+0] <- r5
-L05: add r3, r3, U2
-;r3 <- r3+U2
+{\bfseries Consider the given C-code and its corresponding assembly code, with a few operands U1--U4 being unknown. Some useful information as well as the semantics of each unique assembly instruction is annotated as inline comments in the code. The memory is byte-addressable.
+\begin{lstlisting}[language=C]
+// C-code
+int a[10], b[10], i;    // int is 32-bit
+for (i = 0; i < 10; i++)
+    a[i] = b[i] * 8;
+\end{lstlisting}
+\begin{lstlisting}
+; assembly-code (; indicates comments)
+; r1-r5 are 32-bit integer registers
+; initialize r1=0, r2=10
+; initialize r3, r4 with base address of a, b
+L01: jeq r1, r2, end    ; if(r1==r2) goto end
+L02: lw  r5, 0(r4)      ; r5 <- Memory[r4+0]
+L03: shl r5, r5, U1     ; r5 <- r5 << U1
+L04: sw  r5, 0(r3)      ; Memory[r3+0] <- r5
+L05: add r3, r3, U2     ; r3 <- r3+U2
 L06: add r4, r4, U3
 L07: add r1, r1, 1
-L08: jmp U4
-;goto U4
+L08: jmp U4             ; goto U4
 L09: end
-Which one of the following options is a CORRECT replacement for operands in
-the position (U1, U2, U3, U4) in the above assembly code? \par}
+\end{lstlisting}
+Which one of the following options is a CORRECT replacement for operands in the position (U1, U2, U3, U4) in the above assembly code? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~(8, 4, 1, L02)\par\vspace{2pt}\noindent
-\textbf{(B)}~(3, 4, 4, L01)\par\vspace{2pt}\noindent
-\textbf{(C)}~(8, 1, 1, L02)\par\vspace{2pt}\noindent
-\textbf{(D)}~(3, 1, 1, L01) \newline CS
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~(8, 4, 1, L02) & \textbf{(B)}~(3, 4, 4, L01) \\
+\addlinespace[2pt]
+\textbf{(C)}~(8, 1, 1, L02) & \textbf{(D)}~(3, 1, 1, L01)
+\end{tabular*}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.45} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries CS
-\par\smallskip
-Consider the IEEE-754 single precision ﬂoating point numbers
-P=0xC1800000 and Q=0x3F5C2EF4.
-Which one of the following corresponds to the product of these numbers
-(i.e., P $\times$ Q), represented in the IEEE-754 single precision format? \par}
+{\bfseries Consider the IEEE-754 single precision floating point numbers $P = \text{0xC1800000}$ and $Q = \text{0x3F5C2EF4}$.
+Which one of the following corresponds to the product of these numbers (i.e., $P \times Q$), represented in the IEEE-754 single precision format? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~0x404C2EF4\par\vspace{2pt}\noindent
-\textbf{(B)}~0x405C2EF4\par\vspace{2pt}\noindent
-\textbf{(C)}~0xC15C2EF4\par\vspace{2pt}\noindent
-\textbf{(D)}~0xC14C2EF4 \newline CS
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~0x404C2EF4 & \textbf{(B)}~0x405C2EF4 \\
+\addlinespace[2pt]
+\textbf{(C)}~0xC15C2EF4 & \textbf{(D)}~0xC14C2EF4
+\end{tabular*}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.46} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Let A be a priority queue for maintaining a set of elements.
-Suppose A is
-implemented using a max-heap data structure. The operation Extract-Max(A)
-extracts and deletes the maximum element from A. The operation Insert(A,key)
-inserts a new element key in A. The properties of a max-heap are preserved at the
-end of each of these operations.
-When A contains n elements, which one of the following statements about the worst
-case running time of these two operations is TRUE? \par}
+{\bfseries Let $A$ be a priority queue for maintaining a set of elements. Suppose $A$ is implemented using a max-heap data structure. The operation $\text{Extract-Max}(A)$ extracts and deletes the maximum element from $A$. The operation $\text{Insert}(A, \text{key})$ inserts a new element $\text{key}$ in $A$. The properties of a max-heap are preserved at the end of each of these operations.
+When $A$ contains $n$ elements, which one of the following statements about the worst case running time of these two operations is TRUE? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~Both Extract-Max(A) and Insert(A,key) run in O(1).\par\vspace{2pt}\noindent
-\textbf{(B)}~Both Extract-Max(A) and Insert(A,key) run in O(log(n)).\par\vspace{2pt}\noindent
-\textbf{(C)}~Extract-Max(A) runs in O(1) whereas Insert(A,key) runs in O(n).\par\vspace{2pt}\noindent
-\textbf{(D)}~Extract-Max(A) runs in O(1) whereas Insert(A,key) runs in O(log(n)). \newline CS
+\textbf{(A)}~Both `Extract-Max(A)` and `Insert(A,key)` run in $\mathcal{O}(1)$.\par\vspace{2pt}\noindent
+\textbf{(B)}~Both `Extract-Max(A)` and `Insert(A,key)` run in $\mathcal{O}(\log n)$.\par\vspace{2pt}\noindent
+\textbf{(C)}~`Extract-Max(A)` runs in $\mathcal{O}(1)$ whereas `Insert(A,key)` runs in $\mathcal{O}(n)$.\par\vspace{2pt}\noindent
+\textbf{(D)}~`Extract-Max(A)` runs in $\mathcal{O}(1)$ whereas `Insert(A,key)` runs in $\mathcal{O}(\log n)$.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.47} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Consider the C function foo and the binary tree shown.
-typedef struct node \{
-int val;
-struct node *left, *right;
-\} node;
-int foo(node *p) \{
-int retval;
-if (p == NULL)
-return 0;
-else \{
-retval = p->val + foo(p->left) + foo(p->right);
-printf("\%d ", retval);
-return retval;
-\}
-\}
-10
-5
-3
-8
-11
-13
-When foo is called with a pointer to the root node of the given binary tree, what
-will it print? \par}
+{\bfseries Consider the C function `foo` and the binary tree shown:
+\begin{lstlisting}[language=C]
+typedef struct node {
+    int val;
+    struct node *left, *right;
+} node;
+int foo(node *p) {
+    int retval;
+    if (p == NULL)
+        return 0;
+    else {
+        retval = p->val + foo(p->left) + foo(p->right);
+        printf("%d ", retval);
+        return retval;
+    }
+}
+\end{lstlisting}
+In the binary tree, root is 10; its left child is 5 with children 3 and 8; its right child is 11 with right child 13.
+When `foo` is called with a pointer to the root node of the given binary tree, what will it print? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~3 8 5 13 11 10\par\vspace{2pt}\noindent
-\textbf{(B)}~3 5 8 10 11 13\par\vspace{2pt}\noindent
-\textbf{(C)}~3 8 16 13 24 50\par\vspace{2pt}\noindent
-\textbf{(D)}~3 16 8 50 24 13 \newline CS
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~3 8 5 13 11 10 & \textbf{(B)}~3 5 8 10 11 13 \\
+\addlinespace[2pt]
+\textbf{(C)}~3 8 16 13 24 50 & \textbf{(D)}~3 16 8 50 24 13
+\end{tabular*}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.48} \hfill {\footnotesize\textsf{[MCQ]}}
 \par\vspace{2pt}
-{\bfseries Let U = \{1, 2, . . . , n\}, where n is a large positive integer greater than 1000. Let
-k be a positive integer less than n. Let A, B be subsets of U with |A| = |B| = k
-and A $\cap$B = ∅. We say that a permutation of U separates A from B if one of the
-following is true.
-- All members of A appear in the permutation before any of the members of B.
-- All members of B appear in the permutation before any of the members of A.
-How many permutations of U separate A from B? \par}
+{\bfseries Let $U = \{1, 2, \dots, n\}$, where $n$ is a large positive integer greater than 1000. Let $k$ be a positive integer less than $n$. Let $A, B$ be subsets of $U$ with $|A| = |B| = k$ and $A \cap B = \emptyset$. We say that a permutation of $U$ separates $A$ from $B$ if one of the following is true:
+\begin{itemize}[itemsep=0pt,topsep=2pt]
+\item All members of $A$ appear in the permutation before any of the members of $B$.
+\item All members of $B$ appear in the permutation before any of the members of $A$.
+\end{itemize}
+How many permutations of $U$ separate $A$ from $B$? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~n!\par\vspace{2pt}\noindent
-\textbf{(B)}~ n \newline 2k \newline  \newline (n −2k)!\par\vspace{2pt}\noindent
-\textbf{(C)}~ n \newline 2k \newline  \newline (n −2k)! (k!)2\par\vspace{2pt}\noindent
-\textbf{(D)}~2 \newline  n \newline 2k \newline  \newline (n −2k)! (k!)2 \newline CS
+\textbf{(A)}~$n!$\par\vspace{2pt}\noindent
+\textbf{(B)}~$\binom{n}{2k} (n - 2k)!$\par\vspace{2pt}\noindent
+\textbf{(C)}~$\binom{n}{2k} (n - 2k)! (k!)^2$\par\vspace{2pt}\noindent
+\textbf{(D)}~$2 \binom{n}{2k} (n - 2k)! (k!)^2$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.49} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Let f : A $\to$B be an onto (or surjective) function, where A and B are nonempty
-sets. Deﬁne an equivalence relation ∼on the set A as
-a1 ∼a2 if f(a1) = f(a2) ,
-where a1, a2 $\in$A. Let E = \{[x] : x $\in$A\} be the set of all the equivalence classes
-under ∼. Deﬁne a new mapping F : E $\to$B as
-F([x]) = f(x),
-for all the equivalence classes [x] in E.
+{\bfseries Let $f : A \to B$ be an onto (or surjective) function, where $A$ and $B$ are nonempty sets. Define an equivalence relation $\sim$ on the set $A$ as
+\[ a\_1 \sim a\_2 \quad \text{if } f(a\_1) = f(a\_2), \]
+where $a_1, a_2 \in A$. Let $E = \{[x] : x \in A\}$ be the set of all the equivalence classes under $\sim$. Define a new mapping $F : E \to B$ as
+\[ F([x]) = f(x), \]
+for all the equivalence classes $[x]$ in $E$.
 Which of the following statements is/are TRUE? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~F is NOT well-deﬁned.\par\vspace{2pt}\noindent
-\textbf{(B)}~F is an onto (or surjective) function.\par\vspace{2pt}\noindent
-\textbf{(C)}~F is a one-to-one (or injective) function.\par\vspace{2pt}\noindent
-\textbf{(D)}~F is a bijective function. \newline CS
+\textbf{(A)}~$F$ is NOT well-defined.\par\vspace{2pt}\noindent
+\textbf{(B)}~$F$ is an onto (or surjective) function.\par\vspace{2pt}\noindent
+\textbf{(C)}~$F$ is a one-to-one (or injective) function.\par\vspace{2pt}\noindent
+\textbf{(D)}~$F$ is a bijective function.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.50} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Suppose you are asked to design a new reliable byte-stream transport protocol
-like TCP. This protocol, named myTCP, runs over a 100 Mbps network with Round
-Trip Time of 150 milliseconds and the maximum segment lifetime of 2 minutes.
-Which of the following is/are valid lengths of the Sequence Number ﬁeld in the
-myTCP header? \par}
+{\bfseries Suppose you are asked to design a new reliable byte-stream transport protocol like TCP. This protocol, named myTCP, runs over a 100 Mbps network with Round Trip Time of 150 milliseconds and the maximum segment lifetime of 2 minutes.
+Which of the following is/are valid lengths of the Sequence Number field in the myTCP header? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~30 bits\par\vspace{2pt}\noindent
-\textbf{(B)}~32 bits\par\vspace{2pt}\noindent
-\textbf{(C)}~34 bits\par\vspace{2pt}\noindent
-\textbf{(D)}~36 bits \newline CS
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~30 bits & \textbf{(B)}~32 bits \\
+\addlinespace[2pt]
+\textbf{(C)}~34 bits & \textbf{(D)}~36 bits
+\end{tabular*}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.51} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Let X be a set and 2X denote the powerset of X.
-Deﬁne a binary operation Δ on 2X as follows:
-AΔB = (A −B) $\cup$(B −A) .
-Let H = (2X, Δ). Which of the following statements about H is/are correct? \par}
+{\bfseries Let $X$ be a set and $2^X$ denote the powerset of $X$.
+Define a binary operation $\Delta$ on $2^X$ as follows:
+\[ A \Delta B = (A - B) \cup (B - A). \]
+Let $H = (2^X, \Delta)$. Which of the following statements about $H$ is/are correct? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~H is a group.\par\vspace{2pt}\noindent
-\textbf{(B)}~Every element in H has an inverse, but H is NOT a group.\par\vspace{2pt}\noindent
-\textbf{(C)}~For every A $\in$2X, the inverse of A is the complement of A.\par\vspace{2pt}\noindent
-\textbf{(D)}~For every A $\in$2X, the inverse of A is A. \newline CS
+\textbf{(A)}~$H$ is a group.\par\vspace{2pt}\noindent
+\textbf{(B)}~Every element in $H$ has an inverse, but $H$ is NOT a group.\par\vspace{2pt}\noindent
+\textbf{(C)}~For every $A \in 2^X$, the inverse of $A$ is the complement of $A$.\par\vspace{2pt}\noindent
+\textbf{(D)}~For every $A \in 2^X$, the inverse of $A$ is $A$.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.52} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Suppose in a web browser, you click on the www.gate-2023.in URL. The browser
-cache is empty. The IP address for this URL is not cached in your local host, so
-a DNS lookup is triggered (by the local DNS server deployed on your local host)
-over the 3-tier DNS hierarchy in an iterative mode. No resource records are cached
-anywhere across all DNS servers.
-Let RTT denote the round trip time between your local host and DNS servers
-in the DNS hierarchy. The round trip time between the local host and the web
-server hosting www.gate-2023.in is also equal to RTT. The HTML ﬁle associated
-with the URL is small enough to have negligible transmission time and negligible
-rendering time by your web browser, which references 10 equally small objects on
-the same web server.
-Which of the following statements is/are CORRECT about the minimum elapsed
-time between clicking on the URL and your browser fully rendering it? \par}
+{\bfseries Suppose in a web browser, you click on the `www.gate-2023.in` URL. The browser cache is empty. The IP address for this URL is not cached in your local host, so a DNS lookup is triggered (by the local DNS server deployed on your local host) over the 3-tier DNS hierarchy in an iterative mode. No resource records are cached anywhere across all DNS servers.
+Let RTT denote the round trip time between your local host and DNS servers in the DNS hierarchy. The round trip time between the local host and the web server hosting `www.gate-2023.in` is also equal to RTT. The HTML file associated with the URL is small enough to have negligible transmission time and negligible rendering time by your web browser, which references 10 equally small objects on the same web server.
+Which of the following statements is/are CORRECT about the minimum elapsed time between clicking on the URL and your browser fully rendering it? \par}
 \par\vspace{2pt}\noindent
 \textbf{(A)}~7 RTTs, in case of non-persistent HTTP with 5 parallel TCP connections.\par\vspace{2pt}\noindent
 \textbf{(B)}~5 RTTs, in case of persistent HTTP with pipelining.\par\vspace{2pt}\noindent
 \textbf{(C)}~9 RTTs, in case of non-persistent HTTP with 5 parallel TCP connections.\par\vspace{2pt}\noindent
-\textbf{(D)}~6 RTTs, in case of persistent HTTP with pipelining. \newline CS
+\textbf{(D)}~6 RTTs, in case of persistent HTTP with pipelining.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.53} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Consider a random experiment where two fair coins are tossed. Let A be the event
-that denotes HEAD on both the throws, B be the event that denotes HEAD on
-the ﬁrst throw, and C be the event that denotes HEAD on the second throw.
+{\bfseries Consider a random experiment where two fair coins are tossed. Let $A$ be the event that denotes HEAD on both the throws, $B$ be the event that denotes HEAD on the first throw, and $C$ be the event that denotes HEAD on the second throw.
 Which of the following statements is/are TRUE? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~A and B are independent.\par\vspace{2pt}\noindent
-\textbf{(B)}~A and C are independent.\par\vspace{2pt}\noindent
-\textbf{(C)}~B and C are independent.\par\vspace{2pt}\noindent
-\textbf{(D)}~Prob(B|C) = Prob(B) \newline CS
+\textbf{(A)}~$A$ and $B$ are independent.\par\vspace{2pt}\noindent
+\textbf{(B)}~$A$ and $C$ are independent.\par\vspace{2pt}\noindent
+\textbf{(C)}~$B$ and $C$ are independent.\par\vspace{2pt}\noindent
+\textbf{(D)}~$\text{Prob}(B|C) = \text{Prob}(B)$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.54} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Consider functions Function 1 and Function 2 expressed in pseudocode as
-follows:
-Function 1
+{\bfseries Consider functions Function 1 and Function 2 expressed in pseudocode as follows:
+\begin{lstlisting}
+// Function 1
 while n > 1 do
-for i = 1 to n do
-x = x + 1;
-end for
-n = ⌊n/2⌋;
+    for i = 1 to n do
+        x = x + 1;
+    end for
+    n = floor(n / 2);
 end while
-Function 2
-for i = 1 to 100 ∗n do
-x = x + 1;
+\par\smallskip
+// Function 2
+for i = 1 to 100 * n do
+    x = x + 1;
 end for
-Let f1(n) and f2(n) denote the number of times the statement ``x = x + 1'' is
-executed in Function 1 and Function 2, respectively.
+\end{lstlisting}
+Let $f_1(n)$ and $f_2(n)$ denote the number of times the statement ``$x = x + 1$'' is executed in Function 1 and Function 2, respectively.
 Which of the following statements is/are TRUE? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~f1(n) $\in$Θ(f2(n))\par\vspace{2pt}\noindent
-\textbf{(B)}~f1(n) $\in$o(f2(n))\par\vspace{2pt}\noindent
-\textbf{(C)}~f1(n) $\in$$\omega$(f2(n))\par\vspace{2pt}\noindent
-\textbf{(D)}~f1(n) $\in$O(n) \newline CS
+\textbf{(A)}~$f_1(n) \in \Theta(f_2(n))$\par\vspace{2pt}\noindent
+\textbf{(B)}~$f_1(n) \in o(f_2(n))$\par\vspace{2pt}\noindent
+\textbf{(C)}~$f_1(n) \in \omega(f_2(n))$\par\vspace{2pt}\noindent
+\textbf{(D)}~$f_1(n) \in \mathcal{O}(n)$
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.55} \hfill {\footnotesize\textsf{[MSQ]}}
 \par\vspace{2pt}
-{\bfseries Let G be a simple, ﬁnite, undirected graph with vertex set \{v1, . . . , vn\}. Let Δ(G)
-denote the maximum degree of G and let N = \{1, 2, . . .\} denote the set of all possible
-colors. Color the vertices of G using the following greedy strategy:
-for i = 1, . . . , n
-color(vi) ←min\{j $\in$N :
-no neighbour of vi is colored j\}
+{\bfseries Let $G$ be a simple, finite, undirected graph with vertex set $\{v_1, \dots, v_n\}$. Let $\Delta(G)$ denote the maximum degree of $G$ and let $\mathbb{N} = \{1, 2, \dots\}$ denote the set of all possible colors. Color the vertices of $G$ using the following greedy strategy:
+\begin{lstlisting}
+for i = 1, ..., n
+    color(vi) <- min{j in N : no neighbour of vi is colored j}
+\end{lstlisting}
 Which of the following statements is/are TRUE? \par}
 \par\vspace{2pt}\noindent
-\textbf{(A)}~This procedure results in a proper vertex coloring of G.\par\vspace{2pt}\noindent
-\textbf{(B)}~The number of colors used is at most Δ(G) + 1.\par\vspace{2pt}\noindent
-\textbf{(C)}~The number of colors used is at most Δ(G).\par\vspace{2pt}\noindent
-\textbf{(D)}~The number of colors used is equal to the chromatic number of G. \newline CS
+\textbf{(A)}~This procedure results in a proper vertex coloring of $G$.\par\vspace{2pt}\noindent
+\textbf{(B)}~The number of colors used is at most $\Delta(G) + 1$.\par\vspace{2pt}\noindent
+\textbf{(C)}~The number of colors used is at most $\Delta(G)$.\par\vspace{2pt}\noindent
+\textbf{(D)}~The number of colors used is equal to the chromatic number of $G$.
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.56} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Let U = \{1, 2, 3\}. Let 2U denote the powerset of U. Consider an undirected graph
-G whose vertex set is 2U. For any A, B $\in$2U, (A, B) is an edge in G if and only
-if (i) A̸ = B, and (ii) either A ⊊B or B ⊊A. For any vertex A in G, the set of
-all possible orderings in which the vertices of G can be visited in a Breadth First
-Search (BFS) starting from A is denoted by B(A).
-If ∅denotes the empty set, then the cardinality of B(∅) is
-.
-CS \par}
+{\bfseries Let $U = \{1, 2, 3\}$. Let $2^U$ denote the powerset of $U$. Consider an undirected graph $G$ whose vertex set is $2^U$. For any $A, B \in 2^U$, $(A, B)$ is an edge in $G$ if and only if (i) $A \neq B$, and (ii) either $A \subsetneq B$ or $B \subsetneq A$. For any vertex $A$ in $G$, the set of all possible orderings in which the vertices of $G$ can be visited in a Breadth First Search (BFS) starting from $A$ is denoted by $B(A)$.
+If $\emptyset$ denotes the empty set, then the cardinality of $B(\emptyset)$ is \_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.57} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider the following two-dimensional array D in the C programming language,
-which is stored in row-major order:
+{\bfseries Consider the following two-dimensional array $D$ in the C programming language, which is stored in row-major order:
+\begin{lstlisting}[language=C]
 int D[128][128];
-Demand paging is used for allocating memory and each physical page frame holds
-512 elements of the array D. The Least Recently Used (LRU) page-replacement
-policy is used by the operating system. A total of 30 physical page frames are
-allocated to a process which executes the following code snippet:
+\end{lstlisting}
+Demand paging is used for allocating memory and each physical page frame holds 512 elements of the array $D$. The Least Recently Used (LRU) page-replacement policy is used by the operating system. A total of 30 physical page frames are allocated to a process which executes the following code snippet:
+\begin{lstlisting}[language=C]
 for (int i = 0; i < 128; i++)
-for (int j = 0; j < 128; j++)
-D[j][i] *= 10;
-The number of page faults generated during the execution of this code snippet is
-.
-CS \par}
+    for (int j = 0; j < 128; j++)
+        D[j][i] *= 10;
+\end{lstlisting}
+The number of page faults generated during the execution of this code snippet is \_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.58} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider a computer system with 57-bit virtual addressing using multi-level
-tree-structured page tables with L levels for virtual to physical address translation.
-The page size is 4 KB (1 KB = 1024 B) and a page table entry at any of the levels
-occupies 8 bytes.
-The value of L is
-.
-CS \par}
+{\bfseries Consider a computer system with 57-bit virtual addressing using multi-level tree-structured page tables with $L$ levels for virtual to physical address translation. The page size is 4 KB (1 KB = 1024 B) and a page table entry at any of the levels occupies 8 bytes.
+The value of $L$ is \_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.59} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider a sequence a of elements a0 = 1, a1 = 5, a2 = 7, a3 = 8, a4 = 9, and
-a5 = 2. The following operations are performed on a stack S and a queue Q, both
-of which are initially empty.
-I: push the elements of a from a0 to a5 in that order into S.
-II: enqueue the elements of a from a0 to a5 in that order into Q.
-III: pop an element from S.
-IV: dequeue an element from Q.
-V: pop an element from S.
-VI: dequeue an element from Q.
-VII: dequeue an element from Q and push the same element into S.
-VIII: Repeat operation VII three times.
-IX: pop an element from S.
-X: pop an element from S.
-The top element of S after executing the above operations is
-.
-CS \par}
+{\bfseries Consider a sequence $a$ of elements $a_0 = 1, a_1 = 5, a_2 = 7, a_3 = 8, a_4 = 9$, and $a_5 = 2$. The following operations are performed on a stack $S$ and a queue $Q$, both of which are initially empty:
+\begin{enumerate}[label=\Roman*.,itemsep=0pt,topsep=2pt]
+\item push the elements of $a$ from $a_0$ to $a_5$ in that order into $S$.
+\item enqueue the elements of $a$ from $a_0$ to $a_5$ in that order into $Q$.
+\item pop an element from $S$.
+\item dequeue an element from $Q$.
+\item pop an element from $S$.
+\item dequeue an element from $Q$.
+\item dequeue an element from $Q$ and push the same element into $S$.
+\item Repeat operation VII three times.
+\item pop an element from $S$.
+\item pop an element from $S$.
+\end{enumerate}
+The top element of $S$ after executing the above operations is \_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.60} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider the syntax directed translation given by the following grammar and se-
-mantic rules. Here N, I, F and B are non-terminals. N is the starting non-terminal,
-and \#, 0 and 1 are lexical tokens corresponding to input letters ``\#'', ``0'' and ``1'',
-respectively. X.val denotes the synthesized attribute (a numeric value) associated
-with a non-terminal X. I1 and F1 denote occurrences of I and F on the right hand
-side of a production, respectively. For the tokens 0 and 1, 0.val = 0 and 1.val = 1.
-N
-$\to$
-I \# F
-N.val = I.val + F.val
-I
-$\to$
-I1 B
-I.val = (2 I1.val) + B.val
-I
-$\to$
-B
-I.val = B.val
-F
-$\to$
-B F1
-F.val = 1
-2(B.val + F1.val)
-F
-$\to$
-B
-F.val = 1
-2B.val
-B
-$\to$
-0
-B.val = 0.val
-B
-$\to$
-1
-B.val = 1.val
-The value computed by the translation scheme for the input string
-10\#011
-is
-. (Rounded oﬀto three decimal places)
-CS \par}
+{\bfseries Consider the syntax directed translation given by the following grammar and semantic rules. Here $N, I, F$ and $B$ are non-terminals. $N$ is the starting non-terminal, and $\#, 0$ and $1$ are lexical tokens corresponding to input letters ``\#'', ``0'' and ``1'', respectively. $X.val$ denotes the synthesized attribute (a numeric value) associated with a non-terminal $X$. $I_1$ and $F_1$ denote occurrences of $I$ and $F$ on the right hand side of a production, respectively. For the tokens 0 and 1, $0.val = 0$ and $1.val = 1$.
+\begin{align*}
+N &\to I \,\#\, F & N.val &= I.val + F.val \\
+I &\to I_1 B & I.val &= (2 \cdot I_1.val) + B.val \\
+I &\to B & I.val &= B.val \\
+F &\to B F_1 & F.val &= \frac{1}{2}(B.val + F_1.val) \\
+F &\to B & F.val &= \frac{1}{2}B.val \\
+B &\to 0 & B.val &= 0.val \\
+B &\to 1 & B.val &= 1.val
+\end{align*}
+The value computed by the translation scheme for the input string `10\#011` is \_\_\_\_\_\_\_\_\. (Rounded off to three decimal places) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.61} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries Consider the following table named Student in a relational database. The primary
-key of this table is rollNum.
-Student
-rollNum
-name
-gender
-marks
-1
-Naman
-M
-62
-2
-Aliya
-F
-70
-3
-Aliya
-F
-80
-4
-James
-M
-82
-5
-Swati
-F
-65
-The SQL query below is executed on this database.
+{\bfseries Consider the following table named `Student` in a relational database. The primary key of this table is `rollNum`.
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{rollNum} & \textbf{name} & \textbf{gender} & \textbf{marks} \\
+\hline
+1 & Naman & M & 62 \\
+2 & Aliya & F & 70 \\
+3 & Aliya & F & 80 \\
+4 & James & M & 82 \\
+5 & Swati & F & 65 \\
+\hline
+\end{tabular}
+\end{center}
+The SQL query below is executed on this database:
+\begin{lstlisting}[language=SQL]
 SELECT *
 FROM Student
-WHERE gender = `F' AND
-marks > 65;
-The number of rows returned by the query is
-.
-CS \par}
+WHERE gender = 'F' AND marks > 65;
+\end{lstlisting}
+The number of rows returned by the query is \_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.63} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries CS
-\par\smallskip
-Consider the language L over the alphabet \{0, 1\}, given below:
-L = \{w $\in$\{0, 1\}∗| w does not contain three or more consecutive 1's\}.
-The minimum number of states in a Deterministic Finite-State Automaton (DFA)
-for L is
-.
-CS \par}
+{\bfseries Consider the language $L$ over the alphabet $\{0, 1\}$, given below:
+\[ L = \{w \in \{0, 1\}^* \mid w \text{ does not contain three or more consecutive 1's}\}. \]
+The minimum number of states in a Deterministic Finite-State Automaton (DFA) for $L$ is \_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.64} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries An 8-way set associative cache of size 64 KB (1 KB = 1024 bytes) is used in a
-system with 32-bit address. The address is sub-divided into TAG, INDEX, and
-BLOCK OFFSET.
-The number of bits in the TAG is
-.
-CS \par}
+{\bfseries An 8-way set associative cache of size 64 KB (1 KB = 1024 bytes) is used in a system with 32-bit address. The address is sub-divided into TAG, INDEX, and BLOCK OFFSET.
+The number of bits in the TAG is \_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \noindent\textbf{Q.65} \hfill {\footnotesize\textsf{[NAT]}}
 \par\vspace{2pt}
-{\bfseries The forwarding table of a router is shown below.
-Subnet Number
-Subnet Mask
-Interface ID
-200.150.0.0
-255.255.0.0
-1
-200.150.64.0
-255.255.224.0
-2
-200.150.68.0
-255.255.255.0
-3
-200.150.68.64
-255.255.255.224
-4
-Default
-0
-A packet addressed to a destination address 200.150.68.118 arrives at the router.
-It will be forwarded to the interface with ID
-.
-CS \par}
+{\bfseries The forwarding table of a router is shown below:
+\begin{center}
+\begin{tabular}{|l|l|c|}
+\hline
+\textbf{Subnet Number} & \textbf{Subnet Mask} & \textbf{Interface ID} \\
+\hline
+200.150.0.0 & 255.255.0.0 & 1 \\
+200.150.64.0 & 255.255.224.0 & 2 \\
+200.150.68.0 & 255.255.255.0 & 3 \\
+200.150.68.64 & 255.255.255.224 & 4 \\
+Default & & 0 \\
+\hline
+\end{tabular}
+\end{center}
+A packet addressed to a destination address 200.150.68.118 arrives at the router. It will be forwarded to the interface with ID \_\_\_\_\_\_\_\_\. (Answer in integer) \par}
 \par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
 \par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
 \end{multicols}
