@@ -288,10 +288,10 @@ def generate_latex_document(paper_data, abs_logo_path):
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\small\scshape GATE """ + f"{year} {subject} ({session})" + r"""}
-\fancyhead[R]{\small\scshape Practice Compendium \& Solutions}
-\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026 Rupam Ghosh \& Studiva}}
+\fancyhead[R]{\small\scshape Practice Question Bank with Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026} Studiva\textsuperscript{TM}}
 \fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
-\fancyfoot[R]{\scriptsize\texttt{www.studiva.co.in}}
+\fancyfoot[R]{\raisebox{-0.2em}{\includegraphics[height=1.0em]{""" + logo_path_latex + r"""}}\hspace{0.35em}\scriptsize\texttt{www.studiva.co.in}}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
@@ -312,8 +312,8 @@ def generate_latex_document(paper_data, abs_logo_path):
 \vspace*{0.5cm}
 \begin{center}
     \includegraphics[width=2.5cm]{""" + logo_path_latex + r"""}\\[0.6em]
-    {\LARGE \textbf{GATE COMPUTER SCIENCE \& IT}}\\[0.3em]
-    {\Large \textbf{PREVIOUS YEAR QUESTIONS COMPENDIUM}}\\[0.2em]
+    {\LARGE \textbf{GATE """ + str(year) + r""" COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTION BANK WITH SOLUTIONS}}\\[0.2em]
     {\normalsize \textsc{Session """ + str(session) + r""" $\cdot$ Examination Year """ + str(year) + r"""}}\\[1.2em]
     \rule{0.6\textwidth}{0.6pt}
 \end{center}
@@ -321,7 +321,7 @@ def generate_latex_document(paper_data, abs_logo_path):
 \vspace{1em}
 \noindent\begin{tabular}{ll}
 \textbf{Author / Compiler:} & Rupam Ghosh \\
-\textbf{Publisher \& Platform:} & Studiva (\texttt{www.studiva.co.in}) \\
+\textbf{Publisher \& Platform:} & Studiva\textsuperscript{TM} (\texttt{www.studiva.co.in}) \\
 \textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
 \textbf{Edition:} & First Standard Edition (2026) \\
 \textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
@@ -330,12 +330,12 @@ def generate_latex_document(paper_data, abs_logo_path):
 \vspace{1.5em}
 \begin{tcolorbox}[enhanced, standard jigsaw, opacityback=0, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
 \textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
-Copyright \copyright\ 2026 Rupam Ghosh \& Studiva. All Rights Reserved.\\[0.5em]
-This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva}.\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva\textsuperscript{TM}. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva\textsuperscript{TM}}.\\[0.6em]
 \textbf{Terms of Use \& Attribution Rules:}
 \begin{itemize}[leftmargin=*, nosep]
     \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
-    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva\textsuperscript{TM}} and include an active, direct link to \texttt{https://www.studiva.co.in}.
     \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
     \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
 \end{itemize}
@@ -351,7 +351,7 @@ Practice Recommendation: Use an opaque sheet of paper or ruler to cover the righ
 \end{center}
 
 \newpage
-% ==================== PAGE 2 ONWARDS: QUESTION COMPENDIUM ====================
+% ==================== PAGE 2 ONWARDS: QUESTION BANK WITH SOLUTIONS ====================
 """
     ]
 
