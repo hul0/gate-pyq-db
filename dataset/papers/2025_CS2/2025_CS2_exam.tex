@@ -1,0 +1,846 @@
+\documentclass[a4paper,10pt,twoside]{article}
+\usepackage{fontspec}
+\setmainfont{Liberation Sans}
+\setsansfont{Liberation Sans}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.8cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm,
+    headsep=14pt,
+    footskip=20pt
+}
+
+\setlength{\columnsep}{16pt}
+\setlength{\columnseprule}{0.35pt}
+
+% Persistent Subtle Watermark on Every Page
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=6.0cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.jpeg} \\[-0.2em]
+        {\fontsize{14}{17}\selectfont\bfseries Studiva}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.035] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Running Headers & Footers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\textbf{Studiva GATE Question Bank}}
+\fancyhead[LE]{\small\textit{Computer Science \& IT (2011--2025)}}
+\fancyhead[RO]{\small\textit{Studiva Education}}
+\fancyfoot[LE,RO]{\scriptsize\textbf{Studiva} $\cdot$ \texttt{www.studiva.co.in}}
+\fancyfoot[C]{\small\textbf{Page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[RE,LO]{\scriptsize\texttt{contact@studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Listings Style (Clean, professional)
+\lstset{
+    basicstyle=\scriptsize\ttfamily,
+    numbers=none,
+    frame=single,
+    rulecolor=\color{black!30},
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: FORMAL TITLE & COVER PAGE ====================
+\thispagestyle{empty}
+\vspace*{1.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.jpeg}\\[1.5em]
+    {\fontsize{24}{28}\selectfont\textbf{GATE COMPUTER SCIENCE \& IT}}\\[0.5em]
+    {\fontsize{16}{20}\selectfont\textbf{PREVIOUS YEARS QUESTION BANK (2011 -- 2025)}}\\[0.6em]
+    {\normalsize Detailed Examination Papers with Complete Official Answer Keys}\\[2.0em]
+    \rule{0.65\textwidth}{0.8pt}\\[2.0em]
+    {\large\textbf{Studiva GATE Examination Series}}\\[0.4em]
+    {\small Comprehensive Authentic Question Bank for GATE Computer Science \& Information Technology}\\[2.8cm]
+
+    \begin{tabular}{|ll|}
+        \hline
+        \textbf{Subject:} & Computer Science and Information Technology (CS/IT) \\
+        \textbf{Period Covered:} & 2011 to 2025 \\
+        \textbf{Examination Papers:} & 1 Complete Verified Paper Sets \\
+        \textbf{Contents:} & Examination Questions \& Official Final Answer Keys \\
+        \textbf{Published by:} & Studiva (\texttt{www.studiva.co.in}) \\
+        \hline
+    \end{tabular}
+
+    \vfill
+    {\small\textbf{Studiva $\cdot$ \texttt{www.studiva.co.in} $\cdot$ \texttt{contact@studiva.co.in}}}
+\end{center}
+
+\newpage
+
+% ==================== PAGE 2: PUBLICATION IMPRINT & NOTES ====================
+\thispagestyle{empty}
+\vspace*{0.6cm}
+\begin{center}
+    {\large\textbf{PUBLICATION INFORMATION \& COPYRIGHT NOTICE}}\\[0.4em]
+    \rule{0.6\textwidth}{0.5pt}
+\end{center}
+
+\vspace{1.2em}
+\noindent\begin{tabular}{ll}
+\textbf{Title:} & Studiva GATE Question Bank: Computer Science \& IT (2011--2025) \\
+\textbf{Publisher:} & Studiva \\
+\textbf{Website:} & \texttt{www.studiva.co.in} \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Edition (2026) \\
+\textbf{Syllabus Scope:} & Official GATE Syllabus (General Aptitude and CS / IT) \\
+\end{tabular}
+
+\vspace{1.8em}
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+\textbf{COPYRIGHT NOTICE}\\[0.4em]
+Copyright \copyright\ 2026 Studiva. All Rights Reserved.\\[0.4em]
+No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without prior written permission of Studiva, except for individual academic study.
+}}
+
+\vspace{1.5em}
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+\textbf{PUBLISHER'S NOTE: ARCHIVAL QUESTION FORMAT}\\[0.4em]
+This compendium has been meticulously curated and verified against official GATE question papers and final answer keys.
+\par\medskip\noindent
+\textbf{Notice on Image-Based Questions:}\\
+Questions containing diagrams, circuit schematics, graphs, or image-based figures from the original examination papers have been omitted in this text edition due to non-readable format in historical source archives. All text-based conceptual, analytical, mathematical, algorithmic, and numerical questions are fully included with verified official keys.
+}}
+
+\vspace{1.5em}
+\begin{center}
+\textbf{EXAMINATION STRUCTURE \& PRACTICE GUIDELINES}
+\end{center}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Sectional Mark Division:} Each paper comprises General Aptitude (GA) and Computer Science (CS). Questions are clearly grouped into 1-mark and 2-mark blocks at the head of each section.
+    \item \textbf{Question Types:} Includes Multiple Choice Questions (MCQ), Multiple Select Questions (MSQ), and Numerical Answer Type (NAT).
+    \item \textbf{Official Answer Keys:} For self-evaluation without distraction, complete official answer keys are printed at the conclusion of each respective examination paper set.
+\end{enumerate}
+
+\newpage
+
+% ==================== PAGE 3: TABLE OF CONTENTS ====================
+\begin{center}
+    {\Large\textbf{TABLE OF CONTENTS}}\\[0.4em]
+    \rule{0.5\textwidth}{0.6pt}
+\end{center}
+\vspace{1em}
+
+\noindent\begin{tabularx}{\linewidth}{|X|l|c|r|}
+\hline
+\textbf{Examination Paper} & \textbf{Session / Shift} & \textbf{Total Questions} & \textbf{Content Type} \\
+\hline
+
+GATE 2025 Computer Science & Shift CS2 & 61 & Questions + Answer Key \\ \hline
+\end{tabularx}
+
+\vspace{1.5em}
+\noindent{\footnotesize\textit{Note: All questions in this edition have been typeset from verified digital records and cross-referenced with official answer keys released by the organising IIT/IISc institutes.}}
+
+\newpage
+
+% ==================== PAPER: 2025_CS2 ====================
+\begin{center}
+{\Large\textbf{GATE 2025 EXAMINATION}}\\[3pt]
+{\normalsize\textbf{COMPUTER SCIENCE AND INFORMATION TECHNOLOGY}}\\[2pt]
+{\small\textbf{Session / Shift: CS2}}\\[5pt]
+\rule{\linewidth}{0.8pt}\vspace{-4pt}
+{\footnotesize\textbf{Duration: 180 Minutes} \hfill \textbf{Total Marks: 100} \hfill \textbf{Questions: 61}}\\
+\vspace{-4pt}\rule{\linewidth}{0.4pt}
+\end{center}
+\vspace{4pt}
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+\footnotesize\textbf{Examination Instructions:}\\[1pt]
+1. Question Types: Multiple Choice Questions (MCQ), Multiple Select Questions (MSQ), and Numerical Answer Type (NAT).\\
+2. Negative Marking Scheme: For 1-mark MCQ, $1/3$ mark is deducted; for 2-mark MCQ, $2/3$ mark is deducted. There is no negative marking for MSQ and NAT questions.\\
+3. Mark Division: Questions are grouped by mark allocation within each section as specified below. Full official answer key is provided at the end of this paper.
+}}
+\vspace{10pt}
+\begin{multicols}{2}
+
+\vspace{8pt}
+\noindent\textbf{\large\underline{GENERAL APTITUDE}}\\[2pt]
+\noindent{\footnotesize\textit{[Section Block: 1-mark questions]}}
+\vspace{4pt}
+
+\noindent\textbf{Q.1} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Despite his initial hesitation, Rehman's \_\_\_\_\_\_\_\_\_ to contribute to the success of the project never wavered.
+Select the most appropriate option to complete the above sentence. \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~ambivalence & \textbf{(B)}~satisfaction \\
+\addlinespace[2pt]
+\textbf{(C)}~resolve & \textbf{(D)}~revolve
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.2} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries $\text{Bird} : \text{Nest} :: \text{Bee} : \text{\_\_\_\_\_\_\_}$
+Select the correct option to complete the analogy. \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~Kennel & \textbf{(B)}~Hammock \\
+\addlinespace[2pt]
+\textbf{(C)}~Hive & \textbf{(D)}~Lair
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.3} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries If $P e^x = Q e^{-x}$ for all real values of $x$, which one of the following statements is true? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~$P = Q = 0$ & \textbf{(B)}~$P = Q = 1$ \\
+\addlinespace[2pt]
+\textbf{(C)}~$P = 1; Q = -1$ & \textbf{(D)}~$\frac{P}{Q} = 0$
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.5} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Let $p_1$ and $p_2$ denote two arbitrary prime numbers. Which one of the following statements is correct for all values of $p_1$ and $p_2$? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$p_1 + p_2$ is not a prime number.\par\vspace{2pt}\noindent
+\textbf{(B)}~$p_1 p_2$ is not a prime number.\par\vspace{2pt}\noindent
+\textbf{(C)}~$p_1 + p_2 + 1$ is a prime number.\par\vspace{2pt}\noindent
+\textbf{(D)}~$p_1 p_2 + 1$ is a prime number.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+
+\vspace{6pt}
+\noindent{\footnotesize\textit{[Section Block: 2-mark questions]}}
+\vspace{3pt}
+
+\noindent\textbf{Q.6} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Based only on the conversation below, identify the logically correct inference:
+``Even if I had known that you were in the hospital, I would not have gone there to see you'', Ramya told Josephine. \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Ramya knew that Josephine was in the hospital.\par\vspace{2pt}\noindent
+\textbf{(B)}~Ramya did not know that Josephine was in the hospital.\par\vspace{2pt}\noindent
+\textbf{(C)}~Ramya and Josephine were once close friends; but now, they are not.\par\vspace{2pt}\noindent
+\textbf{(D)}~Josephine was in the hospital due to an injury to her leg.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.7} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries If $\text{IMAGE}$ and $\text{FIELD}$ are coded as $\text{FHBNJ}$ and $\text{EMFJG}$ respectively then, which one among the given options is the most appropriate code for $\text{BEACH}$? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~CEADP & \textbf{(B)}~IDBFC \\
+\addlinespace[2pt]
+\textbf{(C)}~JGIBC & \textbf{(D)}~IBCEC
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.8} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which one of the following options is correct for the given data in the table?
+\par\smallskip
+\begin{center}\footnotesize
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Iteration ($i$)} & \textbf{Input ($I$)} & \textbf{Output ($X$)} & \textbf{Output ($Y$)} \\ \hline\hline
+0 & 20 & 20 & 20 \\ \hline
+1 & $-4$ & 16 & $-80$ \\ \hline
+2 & 10 & 26 & $-800$ \\ \hline
+3 & 15 & 41 & $-12000$ \\ \hline
+\end{tabular}\%
+}\end{center} \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$X(i) = X(i-1) + I(i); \; Y(i) = Y(i-1) I(i); \; i > 0$\par\vspace{2pt}\noindent
+\textbf{(B)}~$X(i) = X(i-1) I(i); \; Y(i) = Y(i-1) + I(i); \; i > 0$\par\vspace{2pt}\noindent
+\textbf{(C)}~$X(i) = X(i-1) I(i); \; Y(i) = Y(i-1) I(i); \; i > 0$\par\vspace{2pt}\noindent
+\textbf{(D)}~$X(i) = X(i-1) + I(i); \; Y(i) = Y(i-1) I(i-1); \; i > 0$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+
+\vspace{8pt}
+\noindent\textbf{\large\underline{COMPUTER SCIENCE AND INFORMATION TECHNOLOGY}}\\[2pt]
+\noindent{\footnotesize\textit{[Section Block: 1-mark questions]}}
+\vspace{4pt}
+
+\noindent\textbf{Q.11} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries If $A = \begin{pmatrix} 1 & 2 \\ 2 & -1 \end{pmatrix}$, then which ONE of the following is $A^8$? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$\begin{pmatrix} 25 & 0 \\ 0 & 25 \end{pmatrix}$\par\vspace{2pt}\noindent
+\textbf{(B)}~$\begin{pmatrix} 125 & 0 \\ 0 & 125 \end{pmatrix}$\par\vspace{2pt}\noindent
+\textbf{(C)}~$\begin{pmatrix} 625 & 0 \\ 0 & 625 \end{pmatrix}$\par\vspace{2pt}\noindent
+\textbf{(D)}~$\begin{pmatrix} 3125 & 0 \\ 0 & 3125 \end{pmatrix}$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.12} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries The value of $x$ such that $x > 1$, satisfying the equation $\int_1^x t \ln t \, dt = \frac{1}{4}$ is \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~$\sqrt{e}$ & \textbf{(B)}~$e$ \\
+\addlinespace[2pt]
+\textbf{(C)}~$e^2$ & \textbf{(D)}~$e^{-1}$
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.13} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider a binary tree $T$ in which every node has either zero or two children. Let $n > 0$ be the number of nodes in $T$. Which ONE of the following is the number of nodes in $T$ that have exactly two children? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~$\frac{n-2}{2}$ & \textbf{(B)}~$\frac{n-1}{2}$ \\
+\addlinespace[2pt]
+\textbf{(C)}~$\frac{n}{2}$ & \textbf{(D)}~$\frac{n+1}{2}$
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.14} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Let $L$, $M$, and $N$ be non-singular matrices of order 3 satisfying the equations $L^2 = L^{-1}$, $M = L^8$ and $N = L^2$. Which ONE of the following is the value of the determinant of $(M - N)$? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~0 & \textbf{(B)}~1 \\
+\addlinespace[2pt]
+\textbf{(C)}~2 & \textbf{(D)}~3
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.15} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Let $P(x)$ be an arbitrary predicate over the domain of natural numbers. Which ONE of the following statements is TRUE? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$(P(0) \land (\forall x [P(x) \implies P(x+1)])) \implies (\forall x P(x))$\par\vspace{2pt}\noindent
+\textbf{(B)}~$(P(0) \land (\forall x [P(x) \implies P(x-1)])) \implies (\forall x P(x))$\par\vspace{2pt}\noindent
+\textbf{(C)}~$(P(1000) \land (\forall x [P(x) \implies P(x-1)])) \implies (\forall x P(x))$\par\vspace{2pt}\noindent
+\textbf{(D)}~$(P(1000) \land (\forall x [P(x) \implies P(x+1)])) \implies (\forall x P(x))$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.16} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following statements:
+(i) Address Resolution Protocol (ARP) provides a mapping from an IP address to the corresponding hardware (link-layer) address.
+(ii) A single TCP segment from a sender S to a receiver R cannot carry both data from S to R and acknowledgement for a segment from R to S.
+Which ONE of the following is CORRECT? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Both (i) and (ii) are TRUE\par\vspace{2pt}\noindent
+\textbf{(B)}~(i) is TRUE and (ii) is FALSE\par\vspace{2pt}\noindent
+\textbf{(C)}~(i) is FALSE and (ii) is TRUE\par\vspace{2pt}\noindent
+\textbf{(D)}~Both (i) and (ii) are FALSE
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.17} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the routing protocols given in List I and the names given in List II:
+\par\smallskip
+\begin{center}\footnotesize
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|l|l|}
+\hline
+\textbf{List I} & \textbf{List II} \\ \hline\hline
+(i) Distance vector routing & (a) Bellman-Ford \\ \hline
+(ii) Link state routing & (b) Dijkstra \\ \hline
+\end{tabular}\%
+}\end{center}
+\par\smallskip
+For matching of items in List I with those in List II, which ONE of the following options is CORRECT? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~(i) -- (a) and (ii) -- (b)\par\vspace{2pt}\noindent
+\textbf{(B)}~(i) -- (a) and (ii) -- (a)\par\vspace{2pt}\noindent
+\textbf{(C)}~(i) -- (b) and (ii) -- (a)\par\vspace{2pt}\noindent
+\textbf{(D)}~(i) -- (b) and (ii) -- (b)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.18} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries A machine receives an IPv4 datagram. The protocol field of the IPv4 header has the protocol number of a protocol X. Which ONE of the following is NOT a possible candidate for X? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Internet Control Message Protocol (ICMP)\par\vspace{2pt}\noindent
+\textbf{(B)}~Internet Group Management Protocol (IGMP)\par\vspace{2pt}\noindent
+\textbf{(C)}~Open Shortest Path First (OSPF)\par\vspace{2pt}\noindent
+\textbf{(D)}~Routing Information Protocol (RIP)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.19} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following C program:
+ \par}\begin{lstlisting}[language=C, basicstyle=\scriptsize\ttfamily, frame=single, rulecolor=\color{black!40}, tabsize=2, breaklines=true, aboveskip=4pt, belowskip=4pt]
+#include <stdio.h>
+void stringcopy(char *, char *);
+int main() {
+    char a[30] = "@#Hello World!";
+    stringcopy(a, a + 2);
+    printf("%s\n", a);
+    return 0;
+}
+void stringcopy(char *s, char *t) {
+    while(*t)
+        *s++ = *t++;
+}
+\end{lstlisting}{\bfseries 
+Which ONE of the following will be the output of the program? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~@\#Hello World! & \textbf{(B)}~Hello World! \\
+\addlinespace[2pt]
+\textbf{(C)}~ello World! & \textbf{(D)}~Hello World!d!
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.20} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider an unordered list of $N$ distinct integers. What is the minimum number of element comparisons required to find an integer in the list that is NOT the largest in the list? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~1 & \textbf{(B)}~$N - 1$ \\
+\addlinespace[2pt]
+\textbf{(C)}~$N$ & \textbf{(D)}~$2N - 1$
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.21} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following statements about the use of backpatching in a compiler for intermediate code generation:
+(I) Backpatching can be used to generate code for Boolean expression in one pass.
+(II) Backpatching can be used to generate code for flow-of-control statements in one pass.
+Which ONE of the following options is CORRECT? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Only (I) is correct.\par\vspace{2pt}\noindent
+\textbf{(B)}~Only (II) is correct.\par\vspace{2pt}\noindent
+\textbf{(C)}~Both (I) and (II) are correct.\par\vspace{2pt}\noindent
+\textbf{(D)}~Neither (I) nor (II) is correct.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.22} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Given the following syntax directed translation rules:
+- Rule 1: $R \to AB \;\{ B.i = R.i - 1; \; A.i = B.i; \; R.i = A.i + 1; \}$
+- Rule 2: $P \to CD \;\{ P.i = C.i + D.i; \; D.i = C.i + 2; \}$
+- Rule 3: $Q \to EF \;\{ Q.i = E.i + F.i; \}$
+\par\smallskip
+Which ONE is the CORRECT option among the following? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Rule 1 is S-attributed and L-attributed; Rule 2 is S-attributed and not L-attributed; Rule 3 is neither S-attributed nor L-attributed\par\vspace{2pt}\noindent
+\textbf{(B)}~Rule 1 is neither S-attributed nor L-attributed; Rule 2 is S-attributed and L-attributed; Rule 3 is S-attributed and L-attributed\par\vspace{2pt}\noindent
+\textbf{(C)}~Rule 1 is neither S-attributed nor L-attributed; Rule 2 is not S-attributed and is L-attributed; Rule 3 is S-attributed and L-attributed\par\vspace{2pt}\noindent
+\textbf{(D)}~Rule 1 is S-attributed and not L-attributed; Rule 2 is not S-attributed and is L-attributed; Rule 3 is S-attributed and L-attributed
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.23} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider a network that uses Ethernet and IPv4. Assume that IPv4 headers do not use any options field. Each Ethernet frame can carry a maximum of 1500 bytes in its data field. A UDP segment is transmitted. The payload (data) in the UDP segment is 7488 bytes.
+Which ONE of the following choices has the CORRECT total number of fragments transmitted and the size of the last fragment including IPv4 header? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~5 fragments, 1488 bytes\par\vspace{2pt}\noindent
+\textbf{(B)}~6 fragments, 88 bytes\par\vspace{2pt}\noindent
+\textbf{(C)}~6 fragments, 108 bytes\par\vspace{2pt}\noindent
+\textbf{(D)}~6 fragments, 116 bytes
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.24} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which ONE of the following languages is accepted by a deterministic pushdown automaton? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Any regular language.\par\vspace{2pt}\noindent
+\textbf{(B)}~Any context-free language.\par\vspace{2pt}\noindent
+\textbf{(C)}~Any language accepted by a non-deterministic pushdown automaton.\par\vspace{2pt}\noindent
+\textbf{(D)}~Any decidable language.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.25} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Let $G_1, G_2$ be Context Free Grammars (CFGs) and $R$ be a regular expression. For a grammar $G$, let $L(G)$ denote the language generated by $G$. Which ONE among the following questions is decidable? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Is $L(G_1) = L(G_2)$?\par\vspace{2pt}\noindent
+\textbf{(B)}~Is $L(G_1) \cap L(G_2) = \emptyset$?\par\vspace{2pt}\noindent
+\textbf{(C)}~Is $L(G_1) = L(R)$?\par\vspace{2pt}\noindent
+\textbf{(D)}~Is $L(G_1) = \emptyset$?
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.26} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Processes $P_1, P_2, P_3, P_4$ arrive in that order at times 0, 1, 2, and 8 milliseconds respectively, and have execution times of 10, 13, 6, and 9 milliseconds respectively. Shortest Remaining Time First (SRTF) algorithm is used as the CPU scheduling policy. Ignore context switching times. Which ONE of the following correctly gives the average turnaround time of the four processes in milliseconds? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~22 & \textbf{(B)}~15 \\
+\addlinespace[2pt]
+\textbf{(C)}~37 & \textbf{(D)}~19
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.27} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries An audit of a banking transactions system has found that on an earlier occasion, two joint holders of account $A$ attempted simultaneous transfers of Rs. 10000 each from account $A$ to account $B$. Both transactions read the same value, Rs. 11000, as the initial balance in $A$ and were allowed to go through. $B$ was credited Rs. 10000 twice. $A$ was debited only once and ended up with a balance of Rs. 1000. Which of the following properties is/are certain to have been violated by the system? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~Atomicity & \textbf{(B)}~Consistency \\
+\addlinespace[2pt]
+\textbf{(C)}~Isolation & \textbf{(D)}~Durability
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.28} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Which of the following is/are part of an Instruction Set Architecture of a processor? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~The size of the cache memory\par\vspace{2pt}\noindent
+\textbf{(B)}~The clock frequency of the processor\par\vspace{2pt}\noindent
+\textbf{(C)}~The number of cache memory levels\par\vspace{2pt}\noindent
+\textbf{(D)}~The total number of registers
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.29} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Which of the following statements regarding Breadth First Search (BFS) and Depth First Search (DFS) on an undirected simple graph $G$ is/are TRUE? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~A DFS tree of $G$ is a Shortest Path tree of $G$.\par\vspace{2pt}\noindent
+\textbf{(B)}~Every non-tree edge of $G$ with respect to a DFS tree is a forward/back edge.\par\vspace{2pt}\noindent
+\textbf{(C)}~If $(u, v)$ is a non-tree edge of $G$ with respect to a BFS tree, then the distances from the source vertex $s$ to $u$ and $v$ in the BFS tree are within $\pm 1$ of each other.\par\vspace{2pt}\noindent
+\textbf{(D)}~Both BFS and DFS can be used to find the connected components of $G$.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.30} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the two lists List I and List II given below:
+\par\smallskip
+\begin{center}\footnotesize
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|l|l|}
+\hline
+\textbf{List I} & \textbf{List II} \\ \hline\hline
+(i) Context free languages & (a) Closed under union \\ \hline
+(ii) Recursive languages & (b) Not closed under complementation \\ \hline
+(iii) Regular languages & (c) Closed under intersection \\ \hline
+\end{tabular}\%
+}\end{center}
+\par\smallskip
+For matching of items in List I with those in List II, which of the following option(s) is/are CORRECT? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~(i) -- (a), (ii) -- (b), and (iii) -- (c)\par\vspace{2pt}\noindent
+\textbf{(B)}~(i) -- (b), (ii) -- (a), and (iii) -- (c)\par\vspace{2pt}\noindent
+\textbf{(C)}~(i) -- (b), (ii) -- (c), and (iii) -- (a)\par\vspace{2pt}\noindent
+\textbf{(D)}~(i) -- (a), (ii) -- (c), and (iii) -- (b)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.31} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the logic circuit diagram for function $F$. Which is/are the CORRECT option(s) for the output function $F$? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$\overline{X \overline{Y}}$\par\vspace{2pt}\noindent
+\textbf{(B)}~$\overline{X} + \overline{Y} + X\overline{Y}$\par\vspace{2pt}\noindent
+\textbf{(C)}~$\overline{X \overline{Y}} + \overline{X} + X\overline{Y}$\par\vspace{2pt}\noindent
+\textbf{(D)}~$X + \overline{Y}$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.32} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries The following two signed 2's complement numbers (multiplicand $M$ and multiplier $Q$) are being multiplied using Booth's algorithm:
+$M$: 1100 1101 1110 1101 and $Q$: 1010 0100 1010 1010
+The total number of addition and subtraction operations to be performed is \_\_\_\_\_\_\_\_\_\_\_. (Answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.33} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the following C code segment:
+ \par}\begin{lstlisting}[language=C, basicstyle=\scriptsize\ttfamily, frame=single, rulecolor=\color{black!40}, tabsize=2, breaklines=true, aboveskip=4pt, belowskip=4pt]
+int x=126, y=105;
+do {
+    if(x > y) x = x - y;
+    else y = y - x;
+} while(x != y);
+printf("%d", x);
+\end{lstlisting}{\bfseries 
+The output of the given C code segment is \_\_\_\_\_\_\_\_. (Answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.34} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries In a 4-bit ripple counter, if the period of the waveform at the last flip-flop is $64\,\mu\text{s}$, then the frequency of the ripple counter in kHz is \_\_\_\_\_\_\_\_. (Answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.35} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Suppose the values 10, $-4$, 15, 30, 20, 5, 60, 19 are inserted in that order into an initially empty binary search tree. Let $T$ be the resulting binary search tree. The number of edges in the path from the node containing 19 to the root node of $T$ is \_\_\_\_\_\_\_\_\_\_\_. (Answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+
+\vspace{6pt}
+\noindent{\footnotesize\textit{[Section Block: 2-mark questions]}}
+\vspace{3pt}
+
+\noindent\textbf{Q.36} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Suppose we are transmitting frames between two nodes using Stop-and-Wait protocol. The frame size is 3000 bits. Which ONE of the following gives the efficiency of the channel? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~88.23 & \textbf{(B)}~93.75 \\
+\addlinespace[2pt]
+\textbf{(C)}~85.44 & \textbf{(D)}~66.67
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.37} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Let $G$ be an edge-weighted undirected graph with positive edge weights. Suppose a positive constant $\alpha$ is added to the weight of every edge in $G$. Which ONE of the following statements is TRUE? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Every MST remains an MST, and every SP remains an SP.\par\vspace{2pt}\noindent
+\textbf{(B)}~MSTs need not remain MSTs, and every SP remains an SP.\par\vspace{2pt}\noindent
+\textbf{(C)}~Every MST remains an MST, and SPs need not remain SPs.\par\vspace{2pt}\noindent
+\textbf{(D)}~MSTs need not remain MSTs, and SPs need not remain SPs.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.38} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries A meld operation on two instances of a data structure combines them into one single instance of the same data structure. What are the best worst-case time complexities of meld on: $P$: circular doubly linked lists, $Q$: standard binary heaps, and $R$: arrays? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~P: $\Theta(1)$, Q: $\Theta(n)$, R: $\Theta(n)$\par\vspace{2pt}\noindent
+\textbf{(B)}~P: $\Theta(1)$, Q: $\Theta(n\log n)$, R: $\Theta(n)$\par\vspace{2pt}\noindent
+\textbf{(C)}~P: $\Theta(n)$, Q: $\Theta(n\log n)$, R: $\Theta(n^2)$\par\vspace{2pt}\noindent
+\textbf{(D)}~P: $\Theta(1)$, Q: $\Theta(n)$, R: $\Theta(n\log n)$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.39} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries For a direct-mapped cache, 4 bits are used for the tag field and 12 bits are used to index into a cache block. What are the cache data size and tag directory size respectively? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~64 KB and 4 KB & \textbf{(B)}~128 KB and 16 KB \\
+\addlinespace[2pt]
+\textbf{(C)}~64 KB and 8 KB & \textbf{(D)}~128 KB and 6 KB
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.40} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Given a Context-Free Grammar $G$:
+$$\begin{aligned} S &\to Aa \mid bAc \mid dc \mid bda \\ A &\to d \end{aligned}$$
+Which ONE of the following statements is CORRECT? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$G$ is neither LALR(1) nor SLR(1)\par\vspace{2pt}\noindent
+\textbf{(B)}~$G$ is CLR(1), not LALR(1)\par\vspace{2pt}\noindent
+\textbf{(C)}~$G$ is LALR(1), not SLR(1)\par\vspace{2pt}\noindent
+\textbf{(D)}~$G$ is LALR(1), also SLR(1)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.41} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries An array $A$ of length $n$ with distinct elements is said to be bitonic if there is an index $1 \le i \le n$ such that $A[1..i]$ is strictly increasing and $A[i..n]$ is strictly decreasing. What is the optimal time complexity to search for a key in a bitonic array? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~$\Theta(n)$ & \textbf{(B)}~$\Theta(1)$ \\
+\addlinespace[2pt]
+\textbf{(C)}~$\Theta(\log^2 n)$ & \textbf{(D)}~$\Theta(\log n)$
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.42} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Let $\mathcal{F}$ be the set of all functions from $\{1, \dots, n\}$ to $\{0, 1\}$. Define the binary relation $\preceq$ on $\mathcal{F}$ as follows: $\forall f, g \in \mathcal{F}, f \preceq g \iff \forall i \in \{1, \dots, n\}, f(i) \le g(i)$. Which of the following is/are TRUE? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$\preceq$ is a symmetric relation\par\vspace{2pt}\noindent
+\textbf{(B)}~$(\mathcal{F}, \preceq)$ is a partial order\par\vspace{2pt}\noindent
+\textbf{(C)}~$(\mathcal{F}, \preceq)$ is a lattice\par\vspace{2pt}\noindent
+\textbf{(D)}~$\preceq$ is an equivalence relation
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.43} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Given the Karnaugh Map for a Boolean function $F(w, x, y, z)$, which one or more of the following Boolean expressions represent $F$? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$\overline{w}\overline{x}\overline{y}\overline{z} + w\overline{x}\overline{y}\overline{z} + \overline{w}\overline{x}y\overline{z} + w\overline{x}y\overline{z} + xz$\par\vspace{2pt}\noindent
+\textbf{(B)}~$\overline{w}\overline{x}\overline{y}\overline{z} + \overline{w}\overline{x}y\overline{z} + w\overline{x}yz + xz$\par\vspace{2pt}\noindent
+\textbf{(C)}~$\overline{w}\overline{x}\overline{y}\overline{z} + w\overline{x}\overline{y}\overline{z} + w\overline{x}\overline{y}z + xz$\par\vspace{2pt}\noindent
+\textbf{(D)}~$\overline{x}\overline{z} + xz$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.44} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Consider a system of linear equations $PX = Q$ where $P \in \mathbb{R}^{3 \times 3}$ and $Q \in \mathbb{R}^{3 \times 1}$. Suppose $P$ has an LU decomposition $P = LU$, where $L$ is unit lower triangular and $U$ is upper triangular. Which of the following statements is/are TRUE? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~The system $PX = Q$ can be solved by first solving $LY = Q$ and then $UX = Y$.\par\vspace{2pt}\noindent
+\textbf{(B)}~If $P$ is invertible, then both $L$ and $U$ are invertible.\par\vspace{2pt}\noindent
+\textbf{(C)}~If $P$ is singular, then at least one of the diagonal elements of $U$ is zero.\par\vspace{2pt}\noindent
+\textbf{(D)}~If $P$ is symmetric, then both $L$ and $U$ are symmetric.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.45} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Consider a stack data structure into which we can PUSH and POP records. Assume that each record has a numeric key. Which of the following strategies allows finding the record with the minimum key in $O(1)$ worst-case time without increasing the asymptotic time for PUSH and POP? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Keep with every record in the stack, a pointer to the record with the smallest key below it.\par\vspace{2pt}\noindent
+\textbf{(B)}~Keep a pointer to the record with the smallest key in the stack.\par\vspace{2pt}\noindent
+\textbf{(C)}~Keep an auxiliary array in which the key values of the records in the stack are maintained in sorted order.\par\vspace{2pt}\noindent
+\textbf{(D)}~Keep a Min-Heap in which the key values of the records in the stack are maintained.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.46} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following relational schema along with all the functional dependencies that hold on them:
+$R_1(A, B, C, D)$ with FDs, and $R_2(E, F, G, H)$ with FDs.
+Which of the following statements is/are CORRECT? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~$R_1$ is in 3NF & \textbf{(B)}~$R_2$ is in 3NF \\
+\addlinespace[2pt]
+\textbf{(C)}~$R_1$ is NOT in 3NF & \textbf{(D)}~$R_2$ is NOT in 3NF
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.47} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Consider a demand paging system with three frames, and the following page reference string: 1 2 3 4 5 4 1 6 4 2 1. Which page replacement policy produces the minimum number of page faults for this reference string? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Least Recently Used page replacement policy\par\vspace{2pt}\noindent
+\textbf{(B)}~Least Frequently Used page replacement policy\par\vspace{2pt}\noindent
+\textbf{(C)}~Most Frequently Used page replacement policy\par\vspace{2pt}\noindent
+\textbf{(D)}~Optimal page replacement policy
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.48} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Let $P = \{P_1, P_2, P_3, P_4\}$ be active processes and $R = \{R_1, R_2, R_3, R_4\}$ be resources in an operating system. Given the allocation and request graph, which of the following actions makes the system deadlock free? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Aborting $P_1$ makes the system deadlock free.\par\vspace{2pt}\noindent
+\textbf{(B)}~Aborting $P_3$ makes the system deadlock free.\par\vspace{2pt}\noindent
+\textbf{(C)}~Aborting $P_2$ makes the system deadlock free.\par\vspace{2pt}\noindent
+\textbf{(D)}~Aborting $P_1$ and $P_4$ makes the system deadlock free.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.49} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Three floating point numbers $X, Y,$ and $Z$ are stored in three registers RX, RY, and RZ, respectively in IEEE 754 single-precision format. Which of the following relationships is/are CORRECT? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~$4(X+Y) + Z = 0$ & \textbf{(B)}~$2Y - Z = 0$ \\
+\addlinespace[2pt]
+\textbf{(C)}~$4X + 3Z = 0$ & \textbf{(D)}~$X+Y+Z = 0$
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.50} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Which of the following Boolean algebraic equation(s) is/are CORRECT? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$\overline{A}BC + A\overline{B}\overline{C} + \overline{A}\overline{B}\overline{C} + A\overline{B}C + ABC = BC + \overline{B}\overline{C} + \overline{A}\overline{B}$\par\vspace{2pt}\noindent
+\textbf{(B)}~$AB + \overline{A}C + BC = AB + \overline{A}C$\par\vspace{2pt}\noindent
+\textbf{(C)}~$(A + C)(\overline{A} + B) = AB + \overline{A}C$\par\vspace{2pt}\noindent
+\textbf{(D)}~$\overline{(A + \overline{B} + \overline{D})(C + D)(\overline{A} + C + D)(A + B + \overline{D})} = \overline{A}D + \overline{C}\overline{D}$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.51} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Consider two grammars $G_1$ and $G_2$ with production rules for dangling-else conditional statements. Which of the following statements is/are CORRECT? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$G_1$ is not $LL(1)$ and $G_2$ is $LL(1)$.\par\vspace{2pt}\noindent
+\textbf{(B)}~$G_1$ is $LL(1)$ and $G_2$ is not $LL(1)$.\par\vspace{2pt}\noindent
+\textbf{(C)}~$G_1$ and $G_2$ are not $LL(1)$.\par\vspace{2pt}\noindent
+\textbf{(D)}~$G_1$ and $G_2$ are ambiguous.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.52} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Let $\Sigma = \{a, b, c\}$. For $x \in \Sigma^*$, let $\#_\alpha(x)$ denote the number of occurrences of $\alpha$ in $x$. Which one or more of the following languages is/are regular? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$\{a^m b^n \mid m, n \ge 0\}$\par\vspace{2pt}\noindent
+\textbf{(B)}~$\{a, b\}^* \cap \{a^m b^n c^{m-n} \mid m \ge n \ge 0\}$\par\vspace{2pt}\noindent
+\textbf{(C)}~$\{w \in \{a, b\}^* \mid \#_a(w) \equiv 2 \pmod 7 \text{ and } \#_b(w) \equiv 3 \pmod 9\}$\par\vspace{2pt}\noindent
+\textbf{(D)}~$\{w \in \{a, b\}^* \mid \#_a(w) \equiv 2 \pmod 7 \text{ and } \#_a(w) = \#_b(w)\}$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.54} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the relational schema:
+- $\text{Students}(\underline{\text{rollno}}, \text{name}, \text{age}, \text{cgpa})$
+- $\text{Enrolled}(\underline{\text{rollno}, \text{courseno}})$
+\par\smallskip
+Which of the following SQL query/queries correctly find(s) the name of all students who have enrolled in course 1470? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~SELECT S.name \newline FROM Students S \newline WHERE EXISTS (SELECT * FROM Enrolled E WHERE E.courseno = 1470 AND E.rollno = S.rollno);\par\vspace{2pt}\noindent
+\textbf{(B)}~SELECT S.name \newline FROM Students S \newline WHERE SIZEOF (SELECT * FROM Enrolled E WHERE E.courseno = 1470 AND E.rollno = S.rollno) > 0;\par\vspace{2pt}\noindent
+\textbf{(C)}~SELECT S.name \newline FROM Students S \newline WHERE 0 < (SELECT COUNT(*) FROM Enrolled E WHERE E.courseno = 1470 AND E.rollno = S.rollno);\par\vspace{2pt}\noindent
+\textbf{(D)}~SELECT S.name \newline FROM Students S NATURAL JOIN Enrolled E \newline WHERE E.courseno = 1470;
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.55} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Given a computing system with two levels of cache (L1 and L2) and a main memory. The first level (L1) cache access time is 1 ns with 0.8 hit rate, L2 access time is 4 ns with 0.9 hit rate, and main memory access time is 50 ns. The average memory access time in nanoseconds is \_\_\_\_\_\_\_\_. (Answer in decimal) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.56} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries A 5-stage instruction pipeline has stage delays of 180, 250, 150, 170, and 250 nanoseconds respectively. What is the total execution time (in microseconds)? \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.57} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries In a B+- tree where each node can hold at most four key values, a root to leaf path consists of nodes containing keys. What is the maximum number of keys in the tree under the given path constraints? \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.58} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries A computer system supports a logical address space of $2^{32}$ bytes. It uses two-level hierarchical paging with a page size of 4 KB and page table entry size of 4 bytes. The number of bits in the outer page table index is \_\_\_\_\_\_\_\_. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.59} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the algorithm `someAlgo` that takes an undirected graph $G$ as input. What is the return value of `someAlgo(G)`? \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.60} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Let $\Sigma = \{1, 2, 3, 4\}$. For $x \in \Sigma^*$, let $prod(x)$ be the product of symbols in $x$ modulo 7. The minimum number of states in a DFA accepting strings with $prod(x) = 1$ is \_\_\_\_\_\_\_\_. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.61} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries An application executes $6.4 \times 10^8$ instructions in 6.3 seconds across four instruction classes. The processor clock frequency in GHz is \_\_\_\_\_\_\_\_. (Answer in decimal) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.62} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the following C program:
+ \par}\begin{lstlisting}[language=C, basicstyle=\scriptsize\ttfamily, frame=single, rulecolor=\color{black!40}, tabsize=2, breaklines=true, aboveskip=4pt, belowskip=4pt]
+#include <stdio.h>
+int main() {
+    int a;
+    int arr[5] = {30, 50, 10};
+    int *ptr;
+    // pointer manipulation
+}
+\end{lstlisting}{\bfseries 
+What is the output printed by the program? \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.63} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the C program with functions `int g(int n)` and `int f(int n)`. What is the value returned by `f(5)`? \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.64} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries A quadratic polynomial $(x - \alpha)(x - \beta)$ over complex numbers is said to be square invariant if $(x - \alpha)(x - \beta) = (x - \alpha^2)(x - \beta^2)$. What is the fraction of non-trivial square-invariant polynomials? \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.65} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries The unit interval $(0, 1)$ is divided at a point chosen uniformly distributed over $(0, 1)$ in $\mathbb{R}$ into two disjoint sub-intervals. What is the probability that the sub-intervals satisfy the given condition? \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\end{multicols}
+\vspace{8pt}
+\begin{center}
+\rule{0.35\linewidth}{0.5pt}\\[2pt]
+\textbf{\small --- END OF QUESTION PAPER ---}\\[-8pt]
+\rule{0.35\linewidth}{0.5pt}
+\end{center}
+\vspace{10pt}
+\subsection*{OFFICIAL ANSWER KEY --- GATE 2025 (CS2)}
+\vspace{-4pt}
+\noindent{\footnotesize\textit{Official final answer keys published by the GATE Organising Institute. For NAT questions, allowable numerical ranges are displayed where applicable. MTA = Marks To All.}}
+\vspace{4pt}
+\begin{center}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|c|c|l||c|c|l||c|c|l||c|c|l|}
+\hline
+\textbf{Q} & \textbf{Type} & \textbf{Key} & \textbf{Q} & \textbf{Type} & \textbf{Key} & \textbf{Q} & \textbf{Type} & \textbf{Key} & \textbf{Q} & \textbf{Type} & \textbf{Key} \\
+\hline\hline
+1 & MCQ & C & 20 & MCQ & A & 36 & MCQ & A & 52 & MSQ & A;C \\ \hline
+2 & MCQ & C & 21 & MCQ & C & 37 & MCQ & C & 54 & MSQ & A;C;D \\ \hline
+3 & MCQ & A & 22 & MCQ & C & 38 & MCQ & A & 55 & NAT & 4.0 \\ \hline
+5 & MCQ & B & 23 & MCQ & D & 39 & MCQ & A & 56 & NAT & 260.20 to 261.20 \\ \hline
+6 & MCQ & B & 24 & MCQ & A & 40 & MCQ & C & 57 & NAT & 33 \\ \hline
+7 & MCQ & B & 25 & MCQ & D & 41 & MCQ & D & 58 & NAT & 11 \\ \hline
+8 & MCQ & A & 26 & MCQ & D & 42 & MSQ & B;C & 59 & NAT & 6 \\ \hline
+11 & MCQ & C & 27 & MSQ & B;C & 43 & MSQ & A;D & 60 & NAT & 6 \\ \hline
+12 & MCQ & A & 28 & MSQ & D & 44 & MSQ & A;B;C & 61 & NAT & 3.0 \\ \hline
+13 & MCQ & B & 29 & MSQ & B;C;D & 45 & MSQ & A & 62 & NAT & 111 \\ \hline
+14 & MCQ & A & 30 & MSQ & B;C & 46 & MSQ & C;D & 63 & NAT & 46 \\ \hline
+15 & MCQ & A & 31 & MSQ & A;B;C & 47 & MSQ & D & 64 & NAT & 0.5 \\ \hline
+16 & MCQ & B & 32 & NAT & 13 & 48 & MSQ & C;D & 65 & NAT & 0.70 to 0.80 \\ \hline
+17 & MCQ & A & 33 & NAT & 21 & 49 & MSQ & A;B;C &  & &  \\ \hline
+18 & MCQ & D & 34 & NAT & 250 & 50 & MSQ & B;C;D &  & &  \\ \hline
+19 & MCQ & D & 35 & NAT & 4 & 51 & MSQ & C;D &  & &  \\ \hline
+\end{tabular}%
+}
+\end{center}
+\end{document}

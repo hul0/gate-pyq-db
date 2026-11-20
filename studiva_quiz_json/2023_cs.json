@@ -1,0 +1,468 @@
+{
+  "negative_marking": true,
+  "negative_marking_factor": 0.33,
+  "questions": [
+    {
+      "id": "2023_CS_GA_Q01",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "We reached the station late, and _______ missed the train.",
+      "options": [
+        "near",
+        "nearly",
+        "utterly",
+        "mostly"
+      ],
+      "answer": "nearly",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_GA_Q02",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Kind : _______ : : Often : Frequently\n(By word meaning)",
+      "options": [
+        "Mean",
+        "Type",
+        "Cruel",
+        "Kindly"
+      ],
+      "answer": "Mean",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_GA_Q03",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "A series of natural numbers 𝐹1, 𝐹2, 𝐹3, 𝐹4, 𝐹5, 𝐹6, 𝐹7, … obeys 𝐹𝑛+1 = 𝐹𝑛+ 𝐹𝑛−1\nfor all integers 𝑛≥2 .\nIf 𝐹6 = 37, and 𝐹7 = 60, then what is 𝐹1 ?",
+      "options": [
+        "4",
+        "5",
+        "8",
+        "9"
+      ],
+      "answer": "4",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_GA_Q04",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "A survey for a certain year found that 90% of pregnant women received medical\ncare at least once before giving birth. Of these women, 60% received medical care\nfrom doctors, while 40% received medical care from other healthcare providers.\nGiven this information, which one of the following statements can be inferred with\ncertainty?",
+      "options": [
+        "More than half of the pregnant women received medical care at least once from a\ndoctor.",
+        "Less than half of the pregnant women received medical care at least once from a\ndoctor.",
+        "More than half of the pregnant women received medical care at most once from a\ndoctor.",
+        "Less than half of the pregnant women received medical care at most once from a\ndoctor."
+      ],
+      "answer": "More than half of the pregnant women received medical care at least once from a\ndoctor.",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_GA_Q05",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Looking at the surface of a smooth 3-dimensional object from the outside, which\none of the following options is TRUE?",
+      "options": [
+        "The surface of the object must be concave everywhere.",
+        "The surface of the object must be convex everywhere.",
+        "The surface of the object may be concave in some places and convex in other places.",
+        "The object can have edges, but no corners."
+      ],
+      "answer": "The surface of the object may be concave in some places and convex in other places.",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_GA_Q06",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "The country of Zombieland is in distress since more than 75% of its working\npopulation is suffering from serious health issues. Studies conducted by competent\nhealth experts concluded that a complete lack of physical exercise among its\nworking population was one of the leading causes of their health issues. As one of\nthe measures to address the problem, the Government of Zombieland has decided\nto provide monetary incentives to those who ride bicycles to work.\n\nBased only on the information provided above, which one of the following\nstatements can be logically inferred with certainty?",
+      "options": [
+        "All the working population of Zombieland will henceforth ride bicycles to work.",
+        "Riding bicycles will ensure that all of the working population of Zombieland is free\nof health issues.",
+        "The health experts suggested to the Government of Zombieland to declare riding\nbicycles as mandatory.",
+        "The Government of Zombieland believes that riding bicycles is a form of physical\nexercise."
+      ],
+      "answer": "The Government of Zombieland believes that riding bicycles is a form of physical\nexercise.",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_GA_Q07",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider two functions of time (𝑡),\n𝑓(𝑡) = 0.01 𝑡2\n𝑔(𝑡) = 4 𝑡\nwhere 0 < 𝑡< ∞.\nNow consider the following two statements:\n(i)\nFor some 𝑡> 0, 𝑔(𝑡) > 𝑓(𝑡).\n(ii)\nThere exists a 𝑇, such that 𝑓(𝑡) > 𝑔(𝑡) for all 𝑡> 𝑇.\nWhich one of the following options is TRUE?",
+      "options": [
+        "only (i) is correct",
+        "only (ii) is correct",
+        "both (i) and (ii) are correct",
+        "neither (i) nor (ii) is correct"
+      ],
+      "answer": "both (i) and (ii) are correct",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_GA_Q08",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Which one of the following sentence sequences creates a coherent narrative?\n(i)\nOnce on the terrace, on her way to her small room in the corner, she\nnotices the man right away.\n(ii)\nShe begins to pant by the time she has climbed all the stairs.\n(iii)\nMina has bought vegetables and rice at the market, so her bags are\nheavy.\n(iv)\nHe was leaning against the parapet, watching the traffic below.",
+      "options": [
+        "(i), (ii), (iv), (iii)",
+        "(ii), (iii), (i), (iv)",
+        "(iv), (ii), (i), (iii)",
+        "(iii), (ii), (i), (iv)"
+      ],
+      "answer": "(iii), (ii), (i), (iv)",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_GA_Q09",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "( )\nf x and ( )\ng y are functions of x and y, respectively, and\n( )\n( )\nf x\ng y\n=\nfor all real\nvalues of 𝑥 and 𝑦. Which one of the following options is necessarily TRUE for all\nx and y?",
+      "options": [
+        "( )\n0\nf x =\nand ( )\n0\ng y =",
+        "( )\n( )\nconstant\nf x\ng y\n=\n=",
+        "( )\nconstant\nf x ≠\nand ( )\nconstant\ng y ≠",
+        "( )\n( )\n( )\n( )\n=\n\nf x\ng y\nf x\ng y\n+\n−"
+      ],
+      "answer": "( )\n( )\nconstant\nf x\ng y\n=\n=",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_GA_Q10",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Which one of the options best describes the transformation of the 2-dimensional\nfigure P to Q, and then to R, as shown?",
+      "options": [
+        "Only S1 is TRUE.",
+        "Only S1 and S2 are TRUE.",
+        "S1, S2, and S3 are all TRUE.",
+        "Only S1 and S3 are TRUE.\nCS"
+      ],
+      "answer": "Only S1 is TRUE.",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q12",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Which one of the following sequences when stored in an array at locations\nA[1], . . . , A[10] forms a max-heap?",
+      "options": [
+        "23, 17, 10, 6, 13, 14, 1, 5, 7, 12",
+        "23, 17, 14, 7, 13, 10, 1, 5, 6, 12",
+        "23, 17, 14, 6, 13, 10, 1, 5, 7, 15",
+        "23, 14, 17, 1, 10, 13, 16, 12, 7, 5\nCS"
+      ],
+      "answer": "23, 17, 14, 7, 13, 10, 1, 5, 6, 12",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q13",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Let SLLdel be a function that deletes a node in a singly-linked list given a pointer\nto the node and a pointer to the head of the list. Similarly, let DLLdel be another\nfunction that deletes a node in a doubly-linked list given a pointer to the node and\na pointer to the head of the list.\nLet n denote the number of nodes in each of the linked lists. Which one of the\nfollowing choices is TRUE about the worst-case time complexity of SLLdel and\nDLLdel?",
+      "options": [
+        "SLLdel is O(1) and DLLdel is O(n)",
+        "Both SLLdel and DLLdel are O(log(n))",
+        "Both SLLdel and DLLdel are O(1)",
+        "SLLdel is O(n) and DLLdel is O(1)\nCS"
+      ],
+      "answer": "SLLdel is O(n) and DLLdel is O(1)\nCS",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q15",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "The Lucas sequence Ln is deﬁned by the recurrence relation:\nLn = Ln−1 + Ln−2,\nfor\nn ≥3,\nwith L1 = 1 and L2 = 3.\nWhich one of the options given is TRUE?",
+      "options": [
+        "Ln =\n\u0002\n1 +\n√\n5\n2\n\u0003n\n+\n\u0002\n1 −\n√\n5\n2\n\u0003n",
+        "Ln =\n\u0002\n1 +\n√\n5\n2\n\u0003n\n−\n\u0002\n1 −\n√\n5\n3\n\u0003n",
+        "Ln =\n\u0002\n1 +\n√\n5\n2\n\u0003n\n+\n\u0002\n1 −\n√\n5\n3\n\u0003n",
+        "Ln =\n\u0002\n1 +\n√\n5\n2\n\u0003n\n−\n\u0002\n1 −\n√\n5\n2\n\u0003n\nCS"
+      ],
+      "answer": "Ln =\n\u0002\n1 +\n√\n5\n2\n\u0003n\n+\n\u0002\n1 −\n√\n5\n2\n\u0003n",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q16",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Which one of the options given below refers to the degree (or arity) of a relation in\nrelational database systems?",
+      "options": [
+        "Number of attributes of its relation schema.",
+        "Number of tuples stored in the relation.",
+        "Number of entries in the relation.",
+        "Number of distinct domains of its relation schema.\nCS"
+      ],
+      "answer": "Number of attributes of its relation schema.",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q17",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Suppose two hosts are connected by a point-to-point link and they are conﬁgured\nto use Stop-and-Wait protocol for reliable data transfer. Identify in which one of\nthe following scenarios, the utilization of the link is the lowest.",
+      "options": [
+        "Longer link length and lower transmission rate",
+        "Longer link length and higher transmission rate",
+        "Shorter link length and lower transmission rate",
+        "Shorter link length and higher transmission rate\nCS"
+      ],
+      "answer": "Longer link length and higher transmission rate",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q18",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Let\nA =\n⎡\n⎢⎢⎣\n1\n2\n3\n4\n4\n1\n2\n3\n3\n4\n1\n2\n2\n3\n4\n1\n⎤\n⎥⎥⎦\nand\nB =\n⎡\n⎢⎢⎣\n3\n4\n1\n2\n4\n1\n2\n3\n1\n2\n3\n4\n2\n3\n4\n1\n⎤\n⎥⎥⎦.\nLet det(A) and det(B) denote the determinants of the matrices A and B,\nrespectively.\nWhich one of the options given below is TRUE?",
+      "options": [
+        "det(A) = det(B)",
+        "det(B) = −det(A)",
+        "det(A) = 0",
+        "det(AB) = det(A) + det(B)\nCS"
+      ],
+      "answer": "det(B) = −det(A)",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q20",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "CS\n\nAn algorithm has to store several keys generated by an adversary in a hash\ntable. The adversary is malicious who tries to maximize the number of collisions.\nLet k be the number of keys, m be the number of slots in the hash table, and k > m.\nWhich one of the following is the best hashing strategy to counteract the adversary?",
+      "options": [
+        "Division method, i.e., use the hash function h(k) = k mod m.",
+        "Multiplication method, i.e., use the hash function h(k) = ⌊m(kA −⌊kA⌋)⌋, where\nA is a carefully chosen constant.",
+        "Universal hashing method.",
+        "If k is a prime number, use Division method. Otherwise, use Multiplication method.\nCS"
+      ],
+      "answer": "Universal hashing method.",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q31",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "The value of the deﬁnite integral\n3\n−3\n2\n−2\n1\n−1\n4x2y −z3\u000e\ndz dy dx\nis\n. (Rounded oﬀto the nearest integer)\nCS",
+      "answer": "0",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q32",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "A particular number is written as 132 in radix-4 representation. The same number\nin radix-5 representation is\n.\nCS",
+      "answer": "110",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q33",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "Consider a 3-stage pipelined processor having a delay of 10 ns (nanoseconds),\n20 ns, and 14 ns, for the ﬁrst, second, and the third stages, respectively. Assume\nthat there is no other delay and the processor does not suﬀer from any pipeline\nhazards. Also assume that one instruction is fetched every cycle.\nThe total execution time for executing 100 instructions on this processor is\nns.\nCS",
+      "answer": "2040",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q34",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "A keyboard connected to a computer is used at a rate of 1 keystroke per second.\nThe computer system polls the keyboard every 10 ms (milli seconds) to check for\na keystroke and consumes 100 μs (micro seconds) for each poll. If it is determined\nafter polling that a key has been pressed, the system consumes an additional 200\nμs to process the keystroke. Let T1 denote the fraction of a second spent in polling\nand processing a keystroke.\nIn an alternative implementation, the system uses interrupts instead of polling.\nAn interrupt is raised for every keystroke. It takes a total of 1 ms for servicing an\ninterrupt and processing a keystroke. Let T2 denote the fraction of a second spent\nin servicing the interrupt and processing a keystroke.\nThe ratio T1\nT2\nis\n. (Rounded oﬀto one decimal place)\nCS",
+      "answer": "10.2",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q35",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "The integer value printed by the ANSI-C program given below is\n.\n#include<stdio.h>\nint funcp(){\nstatic int x = 1;\nx++;\nreturn x;\n}\nint main(){\nint x,y;\nx = funcp();\ny = funcp()+x;\nprintf(\"%d\\n\", (x+y));\nreturn 0;\n}\nCS",
+      "answer": "7",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q36",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "CS\n\nConsider the following program:\nint main()\n{\nf1();\nf2(2);\nf3();\nreturn(0);\n}\nint f1()\n{\nreturn(1);\n}\nint f2(int X)\n{\nf3();\nif (X==1)\nreturn f1();\nelse\nreturn (X*f2(X-1));\n}\nint f3()\n{\nreturn(5);\n}\nWhich one of the following options represents the activation tree corresponding to\nthe main function?",
+      "options": [
+        "main\nf1 f2 f3\nf3\nf2\nf3\nf1",
+        "main\nf2 f3\nf1\nf1\nf3",
+        "main\nf2\nf1\nf3\nf1",
+        "main\nf1 f2 f3\nf3\nf2\nf1\nCS"
+      ],
+      "answer": "main\nf1 f2 f3\nf3\nf2\nf3\nf1",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q38",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "CS\n\nConsider the two functions incr and decr shown below.\nincr(){\nwait(s);\nX = X+1;\nsignal(s);\n}\ndecr(){\nwait(s);\nX = X-1;\nsignal(s);\n}\nThere are 5 threads each invoking incr once, and 3 threads each invoking decr\nonce, on the same shared variable X. The initial value of X is 10.\nSuppose there are two implementations of the semaphore s, as follows:\nI-1: s is a binary semaphore initialized to 1.\nI-2: s is a counting semaphore initialized to 2.\nLet V1, V2 be the values of X at the end of execution of all the threads with\nimplementations I-1, I-2, respectively.\nWhich one of the following choices corresponds to the minimum possible values of\nV1, V2, respectively?",
+      "options": [
+        "15, 7",
+        "7, 7",
+        "12, 7",
+        "12, 8\nCS"
+      ],
+      "answer": "12, 7",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q39",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider the context-free grammar G below\nS\n→\naSb | X\nX\n→\naX | Xb | a | b ,\nwhere S and X are non-terminals, and a and b are terminal symbols. The starting\nnon-terminal is S.\nWhich one of the following statements is CORRECT?",
+      "options": [
+        "The language generated by G is (a + b)∗",
+        "The language generated by G is a∗(a + b)b∗",
+        "The language generated by G is a∗b∗(a + b)",
+        "The language generated by G is not a regular language\nCS"
+      ],
+      "answer": "The language generated by G is a∗(a + b)b∗",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q41",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider the given C-code and its corresponding assembly code, with a few\noperands U1–U4 being unknown. Some useful information as well as the semantics\nof each unique assembly instruction is annotated as inline comments in the code.\nThe memory is byte-addressable.\n//C-code\nint a[10], b[10], i;\n// int is 32-bit\nfor (i=0; i<10;i++)\na[i] = b[i] * 8;\n;assembly-code (; indicates comments)\n;r1-r5 are 32-bit integer registers\n;initialize r1=0, r2=10\n;initialize r3, r4 with base address of a, b\nL01: jeq r1, r2, end\n;if(r1==r2) goto end\nL02: lw\nr5, 0(r4)\n;r5 <- Memory[r4+0]\nL03: shl r5, r5, U1\n;r5 <- r5 << U1\nL04: sw\nr5, 0(r3)\n;Memory[r3+0] <- r5\nL05: add r3, r3, U2\n;r3 <- r3+U2\nL06: add r4, r4, U3\nL07: add r1, r1, 1\nL08: jmp U4\n;goto U4\nL09: end\nWhich one of the following options is a CORRECT replacement for operands in\nthe position (U1, U2, U3, U4) in the above assembly code?",
+      "options": [
+        "(8, 4, 1, L02)",
+        "(3, 4, 4, L01)",
+        "(8, 1, 1, L02)",
+        "(3, 1, 1, L01)\nCS"
+      ],
+      "answer": "(3, 4, 4, L01)",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q45",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "CS\n\nConsider the IEEE-754 single precision ﬂoating point numbers\nP=0xC1800000 and Q=0x3F5C2EF4.\nWhich one of the following corresponds to the product of these numbers\n(i.e., P × Q), represented in the IEEE-754 single precision format?",
+      "options": [
+        "0x404C2EF4",
+        "0x405C2EF4",
+        "0xC15C2EF4",
+        "0xC14C2EF4\nCS"
+      ],
+      "answer": "0xC15C2EF4",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q46",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Let A be a priority queue for maintaining a set of elements.\nSuppose A is\nimplemented using a max-heap data structure. The operation Extract-Max(A)\nextracts and deletes the maximum element from A. The operation Insert(A,key)\ninserts a new element key in A. The properties of a max-heap are preserved at the\nend of each of these operations.\nWhen A contains n elements, which one of the following statements about the worst\ncase running time of these two operations is TRUE?",
+      "options": [
+        "Both Extract-Max(A) and Insert(A,key) run in O(1).",
+        "Both Extract-Max(A) and Insert(A,key) run in O(log(n)).",
+        "Extract-Max(A) runs in O(1) whereas Insert(A,key) runs in O(n).",
+        "Extract-Max(A) runs in O(1) whereas Insert(A,key) runs in O(log(n)).\nCS"
+      ],
+      "answer": "Both Extract-Max(A) and Insert(A,key) run in O(log(n)).",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q47",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider the C function foo and the binary tree shown.\ntypedef struct node {\nint val;\nstruct node *left, *right;\n} node;\nint foo(node *p) {\nint retval;\nif (p == NULL)\nreturn 0;\nelse {\nretval = p->val + foo(p->left) + foo(p->right);\nprintf(\"%d \", retval);\nreturn retval;\n}\n}\n10\n5\n3\n8\n11\n13\nWhen foo is called with a pointer to the root node of the given binary tree, what\nwill it print?",
+      "options": [
+        "3 8 5 13 11 10",
+        "3 5 8 10 11 13",
+        "3 8 16 13 24 50",
+        "3 16 8 50 24 13\nCS"
+      ],
+      "answer": "3 8 16 13 24 50",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q48",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Let U = {1, 2, . . . , n}, where n is a large positive integer greater than 1000. Let\nk be a positive integer less than n. Let A, B be subsets of U with |A| = |B| = k\nand A ∩B = ∅. We say that a permutation of U separates A from B if one of the\nfollowing is true.\n- All members of A appear in the permutation before any of the members of B.\n- All members of B appear in the permutation before any of the members of A.\nHow many permutations of U separate A from B?",
+      "options": [
+        "n!",
+        "\u000f n\n2k\n\u0010\n(n −2k)!",
+        "\u000f n\n2k\n\u0010\n(n −2k)! (k!)2",
+        "2\n\u000f n\n2k\n\u0010\n(n −2k)! (k!)2\nCS"
+      ],
+      "answer": "2\n\u000f n\n2k\n\u0010\n(n −2k)! (k!)2\nCS",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q56",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Let U = {1, 2, 3}. Let 2U denote the powerset of U. Consider an undirected graph\nG whose vertex set is 2U. For any A, B ∈2U, (A, B) is an edge in G if and only\nif (i) A̸ = B, and (ii) either A ⊊B or B ⊊A. For any vertex A in G, the set of\nall possible orderings in which the vertices of G can be visited in a Breadth First\nSearch (BFS) starting from A is denoted by B(A).\nIf ∅denotes the empty set, then the cardinality of B(∅) is\n.\nCS",
+      "answer": "5040",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q57",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider the following two-dimensional array D in the C programming language,\nwhich is stored in row-major order:\nint D[128][128];\nDemand paging is used for allocating memory and each physical page frame holds\n512 elements of the array D. The Least Recently Used (LRU) page-replacement\npolicy is used by the operating system. A total of 30 physical page frames are\nallocated to a process which executes the following code snippet:\nfor (int i = 0; i < 128; i++)\nfor (int j = 0; j < 128; j++)\nD[j][i] *= 10;\nThe number of page faults generated during the execution of this code snippet is\n.\nCS",
+      "answer": "4096",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q58",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider a computer system with 57-bit virtual addressing using multi-level\ntree-structured page tables with L levels for virtual to physical address translation.\nThe page size is 4 KB (1 KB = 1024 B) and a page table entry at any of the levels\noccupies 8 bytes.\nThe value of L is\n.\nCS",
+      "answer": "5",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q59",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider a sequence a of elements a0 = 1, a1 = 5, a2 = 7, a3 = 8, a4 = 9, and\na5 = 2. The following operations are performed on a stack S and a queue Q, both\nof which are initially empty.\nI: push the elements of a from a0 to a5 in that order into S.\nII: enqueue the elements of a from a0 to a5 in that order into Q.\nIII: pop an element from S.\nIV: dequeue an element from Q.\nV: pop an element from S.\nVI: dequeue an element from Q.\nVII: dequeue an element from Q and push the same element into S.\nVIII: Repeat operation VII three times.\nIX: pop an element from S.\nX: pop an element from S.\nThe top element of S after executing the above operations is\n.\nCS",
+      "answer": "8",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q60",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider the syntax directed translation given by the following grammar and se-\nmantic rules. Here N, I, F and B are non-terminals. N is the starting non-terminal,\nand #, 0 and 1 are lexical tokens corresponding to input letters “#”, “0” and “1”,\nrespectively. X.val denotes the synthesized attribute (a numeric value) associated\nwith a non-terminal X. I1 and F1 denote occurrences of I and F on the right hand\nside of a production, respectively. For the tokens 0 and 1, 0.val = 0 and 1.val = 1.\nN\n→\nI # F\nN.val = I.val + F.val\nI\n→\nI1 B\nI.val = (2 I1.val) + B.val\nI\n→\nB\nI.val = B.val\nF\n→\nB F1\nF.val = 1\n2(B.val + F1.val)\nF\n→\nB\nF.val = 1\n2B.val\nB\n→\n0\nB.val = 0.val\nB\n→\n1\nB.val = 1.val\nThe value computed by the translation scheme for the input string\n10#011\nis\n. (Rounded oﬀto three decimal places)\nCS",
+      "answer": "2.375",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q61",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider the following table named Student in a relational database. The primary\nkey of this table is rollNum.\nStudent\nrollNum\nname\ngender\nmarks\n1\nNaman\nM\n62\n2\nAliya\nF\n70\n3\nAliya\nF\n80\n4\nJames\nM\n82\n5\nSwati\nF\n65\nThe SQL query below is executed on this database.\nSELECT *\nFROM Student\nWHERE gender = ‘F’ AND\nmarks > 65;\nThe number of rows returned by the query is\n.\nCS",
+      "answer": "2",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q63",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "CS\n\nConsider the language L over the alphabet {0, 1}, given below:\nL = {w ∈{0, 1}∗| w does not contain three or more consecutive 1’s}.\nThe minimum number of states in a Deterministic Finite-State Automaton (DFA)\nfor L is\n.\nCS",
+      "answer": "4",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q64",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "An 8-way set associative cache of size 64 KB (1 KB = 1024 bytes) is used in a\nsystem with 32-bit address. The address is sub-divided into TAG, INDEX, and\nBLOCK OFFSET.\nThe number of bits in the TAG is\n.\nCS",
+      "answer": "19",
+      "explanation": ""
+    },
+    {
+      "id": "2023_CS_CS_Q65",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "The forwarding table of a router is shown below.\nSubnet Number\nSubnet Mask\nInterface ID\n200.150.0.0\n255.255.0.0\n1\n200.150.64.0\n255.255.224.0\n2\n200.150.68.0\n255.255.255.0\n3\n200.150.68.64\n255.255.255.224\n4\nDefault\n0\nA packet addressed to a destination address 200.150.68.118 arrives at the router.\nIt will be forwarded to the interface with ID\n.\nCS",
+      "answer": "3",
+      "explanation": ""
+    }
+  ]
+}

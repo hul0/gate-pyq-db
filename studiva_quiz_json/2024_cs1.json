@@ -1,0 +1,518 @@
+{
+  "negative_marking": true,
+  "negative_marking_factor": 0.33,
+  "questions": [
+    {
+      "id": "2024_CS1_GA_Q01",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "If `$\\to$' denotes increasing order of intensity, then the meaning of the words $[\\text{dry} \\to \\text{arid} \\to \\text{parched}]$ is analogous to $[\\text{diet} \\to \\text{fast} \\to \\text{\\_\\_\\_\\_\\_\\_\\_\\_}]$.\nWhich one of the given options is appropriate to fill the blank?",
+      "options": [
+        "starve",
+        "reject",
+        "feast",
+        "deny"
+      ],
+      "answer": "starve",
+      "explanation": "'dry $\\to$ arid $\\to$ parched' depicts an increasing scale of lack of moisture. Similarly, 'diet $\\to$ fast $\\to$ starve' depicts an increasing scale of food restriction/deprivation, where starving represents extreme lack of nourishment."
+    },
+    {
+      "id": "2024_CS1_GA_Q02",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "If two distinct non-zero real variables $x$ and $y$ are such that $(x+y)$ is proportional to $(x-y)$ then the value of $\\frac{x}{y}$",
+      "options": [
+        "depends on $xy$",
+        "depends only on $x$ and not on $y$",
+        "depends only on $y$ and not on $x$",
+        "is a constant"
+      ],
+      "answer": "is a constant",
+      "explanation": "If $(x+y) \\propto (x-y)$, then $x+y = k(x-y)$ for some non-zero constant $k \\neq 1$. Rearranging terms gives $x(1-k) = -y(1+k) \\implies \\frac{x}{y} = \\frac{k+1}{k-1}$, which is a constant independent of $x$ and $y$."
+    },
+    {
+      "id": "2024_CS1_GA_Q03",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider the following sample of numbers:\n\\[ 9, 18, 11, 14, 15, 17, 10, 69, 11, 13 \\]\nThe median of the sample is",
+      "options": [
+        "13.5",
+        "14",
+        "11",
+        "18.7"
+      ],
+      "answer": "13.5",
+      "explanation": "Arranging the 10 sample values in ascending order: $9, 10, 11, 11, 13, 14, 15, 17, 18, 69$. Since the sample size $n = 10$ is even, the median is the arithmetic mean of the 5th and 6th values: $\\frac{13 + 14}{2} = 13.5$."
+    },
+    {
+      "id": "2024_CS1_GA_Q04",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "The number of coins of Rs.~1, Rs.~5, and Rs.~10 denominations that a person has are in the ratio $5:3:13$. Of the total amount, the percentage of money in Rs.~5 coins is",
+      "options": [
+        "21\\%",
+        "$14\\frac{2}{7}\\%$",
+        "10\\%",
+        "30\\%"
+      ],
+      "answer": "10\\%",
+      "explanation": "Let the number of Rs.~1, Rs.~5, and Rs.~10 coins be $5k$, $3k$, and $13k$ respectively. The total value is $1(5k) + 5(3k) + 10(13k) = 5k + 15k + 130k = 150k$. The percentage of money in Rs.~5 coins is $\\frac{15k}{150k} \\times 100\\% = 10\\%$."
+    },
+    {
+      "id": "2024_CS1_GA_Q05",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "For positive non-zero real variables $p$ and $q$, if\n\\[ \\log(p^2 + q^2) = \\log p + \\log q + 2\\log 3, \\]\nthen, the value of $\\frac{p^4+q^4}{p^2q^2}$ is",
+      "options": [
+        "79",
+        "81",
+        "9",
+        "83"
+      ],
+      "answer": "79",
+      "explanation": "Using logarithm rules, $\\log(p^2 + q^2) = \\log p + \\log q + 2\\log 3 = \\log(9pq) \\implies p^2 + q^2 = 9pq$. Squaring both sides yields $(p^2+q^2)^2 = p^4 + q^4 + 2p^2q^2 = 81p^2q^2$, which gives $p^4 + q^4 = 79p^2q^2$. Hence, $\\frac{p^4+q^4}{p^2q^2} = 79$."
+    },
+    {
+      "id": "2024_CS1_GA_Q06",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "In the given text, the blanks are numbered (i)--(iv). Select the best match for all the blanks.\n\nSteve was advised to keep his head (i)\\_\\_\\_\\_ before heading (ii)\\_\\_\\_\\_ to bat; for, while he had a head (iii)\\_\\_\\_\\_ batting, he could only do so with a cool head (iv)\\_\\_\\_\\_ his shoulders.",
+      "options": [
+        "(i) down (ii) down (iii) on (iv) for",
+        "(i) on (ii) down (iii) for (iv) on",
+        "(i) down (ii) out (iii) for (iv) on",
+        "(i) on (ii) out (iii) on (iv) for"
+      ],
+      "answer": "(i) down (ii) out (iii) for (iv) on",
+      "explanation": "'Keep one's head down' means to stay focused and avoid trouble. 'Heading out' means going forth/departing. Having a 'head for' an activity signifies natural aptitude for it, and having a cool 'head on' one's shoulders means remaining calm and composed."
+    },
+    {
+      "id": "2024_CS1_GA_Q07",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "A rectangular paper sheet of dimensions $54\\text{ cm} \\times 4\\text{ cm}$ is taken. The two longer edges of the sheet are joined together to create a cylindrical tube. A cube whose surface area is equal to the area of the sheet is also taken.\nThen, the ratio of the volume of the cylindrical tube to the volume of the cube is",
+      "options": [
+        "$1/\\pi$",
+        "$2/\\pi$",
+        "$3/\\pi$",
+        "$4/\\pi$"
+      ],
+      "answer": "$1/\\pi$",
+      "explanation": "Joining the longer edges ($54\\text{ cm}$) creates a cylinder with height $h = 54\\text{ cm}$ and circumference $2\\pi r = 4\\text{ cm} \\implies r = \\frac{2}{\\pi}$, giving volume $V_{\\text{cyl}} = \\pi r^2 h = \\frac{216}{\\pi}$. The sheet area is $54 \\times 4 = 216\\text{ cm}^2$. A cube with surface area $6a^2 = 216$ has edge $a = 6\\text{ cm}$ and volume $V_{\\text{cube}} = 6^3 = 216$. Thus $\\frac{V_{\\text{cyl}}}{V_{\\text{cube}}} = \\frac{216/\\pi}{216} = \\frac{1}{\\pi}$."
+    },
+    {
+      "id": "2024_CS1_GA_Q09",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "A rectangular paper of $20\\text{ cm} \\times 8\\text{ cm}$ is folded 3 times. Each fold is made along the line of symmetry, which is perpendicular to its long edge. The perimeter of the final folded sheet (in cm) is",
+      "options": [
+        "18",
+        "24",
+        "20",
+        "21"
+      ],
+      "answer": "18",
+      "explanation": "Starting at $20 \\times 8\\text{ cm}$, the 1st fold perpendicular to the long edge yields $10 \\times 8\\text{ cm}$. The 2nd fold perpendicular to the new long edge ($10\\text{ cm}$) yields $5 \\times 8\\text{ cm}$. The 3rd fold perpendicular to the new long edge ($8\\text{ cm}$) yields $5 \\times 4\\text{ cm}$. The perimeter of this final folded sheet is $2(5 + 4) = 18\\text{ cm}$."
+    },
+    {
+      "id": "2024_CS1_GA_Q10",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "The least number of squares to be added in the figure to make $AB$ a line of symmetry is",
+      "options": [
+        "6",
+        "4",
+        "5",
+        "7"
+      ],
+      "answer": "6",
+      "explanation": "Reflecting each shaded cell across the diagonal axis $AB$ reveals that exactly 6 asymmetric squares must be shaded on the opposing side to achieve bilateral reflectional symmetry about line $AB$."
+    },
+    {
+      "id": "2024_CS1_CS_Q11",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Let $f: \\mathbb{R} \\to \\mathbb{R}$ be a function such that $f(x) = \\max\\{x, x^3\\}$, where $\\mathbb{R}$ is the set of all real numbers. The set of all points where $f(x)$ is NOT differentiable is",
+      "options": [
+        "$\\{-1, 1, 2\\}$",
+        "$\\{-2, -1, 1\\}$",
+        "$\\{0, 1\\}$",
+        "$\\{-1, 0, 1\\}$"
+      ],
+      "answer": "$\\{-1, 0, 1\\}$",
+      "explanation": "The functions $y = x$ and $y = x^3$ intersect at $x^3 - x = 0 \\implies x \\in \\{-1, 0, 1\\}$. The maximum function $f(x) = \\max\\{x, x^3\\}$ switches between $x$ and $x^3$ at each of these three intersection points. Because the left and right derivatives at each transition point differ ($f'(-1^-) = 3 \\neq 1 = f'(-1^+)$, $f'(0^-) = 1 \\neq 0 = f'(0^+)$, $f'(1^-) = 1 \\neq 3 = f'(1^+)$), $f(x)$ is not differentiable at $\\{-1, 0, 1\\}$."
+    },
+    {
+      "id": "2024_CS1_CS_Q12",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "The product of all eigenvalues of the matrix $\\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{bmatrix}$ is",
+      "options": [
+        "$-1$",
+        "0",
+        "1",
+        "2"
+      ],
+      "answer": "0",
+      "explanation": "The product of all eigenvalues of a square matrix equals its determinant $\\det(A)$. In $A = \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{bmatrix}$, the rows are in arithmetic progression with $R_3 - R_2 = R_2 - R_1 = [3, 3, 3]$, making the rows linearly dependent and $\\det(A) = 0$. Hence, the product of the eigenvalues is 0."
+    },
+    {
+      "id": "2024_CS1_CS_Q13",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider a system that uses 5 bits for representing signed integers in 2's complement format. In this system, two integers $A$ and $B$ are represented as $A = 01010$ and $B = 11010$. Which one of the following operations will result in either an arithmetic overflow or an arithmetic underflow?",
+      "options": [
+        "$A + B$",
+        "$A - B$",
+        "$B - A$",
+        "$2 * B$"
+      ],
+      "answer": "$A - B$",
+      "explanation": "In a 5-bit 2's complement representation, the range is $[-2^4, 2^4 - 1] = [-16, +15]$. Here, $A = 01010_2 = +10$ and $B = 11010_2 = -6$. The operation $A - B = 10 - (-6) = +16$, which exceeds $+15$, resulting in an arithmetic overflow."
+    },
+    {
+      "id": "2024_CS1_CS_Q14",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider a permutation sampled uniformly at random from the set of all permutations of $\\{1, 2, 3, \\dots, n\\}$ for some $n \\ge 4$. Let $X$ be the event that 1 occurs before 2 in the permutation, and $Y$ the event that 3 occurs before 4. Which one of the following statements is TRUE?",
+      "options": [
+        "The events $X$ and $Y$ are mutually exclusive",
+        "The events $X$ and $Y$ are independent",
+        "Either event $X$ or $Y$ must occur",
+        "Event $X$ is more likely than event $Y$"
+      ],
+      "answer": "The events $X$ and $Y$ are independent",
+      "explanation": "By symmetry in random permutations of $\\{1, 2, \\dots, n\\}$, $P(X) = P(1 \\text{ before } 2) = 1/2$, and $P(Y) = P(3 \\text{ before } 4) = 1/2$. Because the relative order of the disjoint pair $\\{1, 2\\}$ has no bearing on the relative order of $\\{3, 4\\}$, the joint probability is $P(X \\cap Y) = 1/4 = P(X)P(Y)$, proving that $X$ and $Y$ are independent."
+    },
+    {
+      "id": "2024_CS1_CS_Q15",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Which one of the following statements is FALSE?",
+      "options": [
+        "In the cycle stealing mode of DMA, one word of data is transferred between an I/O device and main memory in a stolen cycle",
+        "For bulk data transfer, the burst mode of DMA has a higher throughput than the cycle stealing mode",
+        "Programmed I/O mechanism has a better CPU utilization than the interrupt driven I/O mechanism",
+        "The CPU can start executing an interrupt service routine faster with vectored interrupts than with non-vectored interrupts"
+      ],
+      "answer": "Programmed I/O mechanism has a better CPU utilization than the interrupt driven I/O mechanism",
+      "explanation": "Programmed I/O requires the CPU to stay in a busy-waiting polling loop to check device readiness, wasting processor cycles and yielding poor CPU utilization. Interrupt-driven I/O frees the CPU to execute other tasks while I/O operations are underway, providing significantly better CPU utilization. Thus, statement (C) is FALSE."
+    },
+    {
+      "id": "2024_CS1_CS_Q16",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "A user starts browsing a webpage hosted at a remote server. The browser opens a single TCP connection to fetch the entire webpage from the server. The webpage consists of a top-level index page with multiple embedded image objects. Assume that all caches (e.g., DNS cache, browser cache) are all initially empty. The following packets leave the user's computer in some order:\n\\begin{enumerate}[label=(\\roman*),itemsep=0pt,topsep=2pt]\n\\item HTTP GET request for the index page\n\\item DNS request to resolve the web server's name to its IP address\n\\item HTTP GET request for an image object\n\\item TCP SYN to open a connection to the web server\n\\end{enumerate}\nWhich one of the following is the CORRECT chronological order (earliest in time to latest) of the packets leaving the computer?",
+      "options": [
+        "(iv), (ii), (iii), (i)",
+        "(ii), (iv), (iii), (i)",
+        "(ii), (iv), (i), (iii)",
+        "(iv), (ii), (i), (iii)"
+      ],
+      "answer": "(ii), (iv), (i), (iii)",
+      "explanation": "Initially all caches are empty. The client must first send a DNS query (ii) to resolve the server hostname to an IP. Next, it establishes a TCP connection by sending TCP SYN (iv). Once connected, it sends an HTTP GET request for the index HTML page (i). After parsing the HTML and identifying embedded images, it sends HTTP GET requests for the images (iii)."
+    },
+    {
+      "id": "2024_CS1_CS_Q17",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Given an integer array of size $N$, we want to check if the array is sorted (in either ascending or descending order). An algorithm solves this problem by making a single pass through the array and comparing each element of the array only with its adjacent elements. The worst-case time complexity of this algorithm is",
+      "options": [
+        "both $\\mathcal{O}(N)$ and $\\Omega(N)$",
+        "$\\mathcal{O}(N)$ but not $\\Omega(N)$",
+        "$\\Omega(N)$ but not $\\mathcal{O}(N)$",
+        "neither $\\mathcal{O}(N)$ nor $\\Omega(N)$"
+      ],
+      "answer": "both $\\mathcal{O}(N)$ and $\\Omega(N)$",
+      "explanation": "In the worst case (such as when the array is sorted or the disorder occurs at the very end), a single-pass algorithm that compares adjacent elements must traverse the entire array, performing $N-1$ comparisons. The worst-case runtime is asymptotically tight at $\\Theta(N)$, meaning it is both $\\mathcal{O}(N)$ and $\\Omega(N)$."
+    },
+    {
+      "id": "2024_CS1_CS_Q18",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider the following C program:\n\\begin{lstlisting}[language=C]\n#include <stdio.h>\nint main() {\n    int a = 6;\n    int b = 0;\n    while(a < 10) {\n        a = a / 12 + 1;\n        a += b;\n    }\n    printf(\"%d\", a);\n    return 0;\n}\n\\end{lstlisting}\nWhich one of the following statements is CORRECT?",
+      "options": [
+        "The program prints 9 as output",
+        "The program prints 10 as output",
+        "The program gets stuck in an infinite loop",
+        "The program prints 6 as output"
+      ],
+      "answer": "The program gets stuck in an infinite loop",
+      "explanation": "Initially $a = 6, b = 0$. In the loop, integer division $a/12 = 6/12 = 0$, so $a = 0 + 1 = 1$, and $a += b \\implies a = 1$. In subsequent iterations, $a=1 < 10$, $1/12 + 1 = 1$, so $a$ remains 1 in every iteration. The loop condition $a < 10$ remains true indefinitely, causing an infinite loop."
+    },
+    {
+      "id": "2024_CS1_CS_Q19",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider the following C program:\n\\begin{lstlisting}[language=C]\n#include <stdio.h>\nvoid fX();\nint main() {\n    fX();\n    return 0;\n}\nvoid fX() {\n    char a;\n    if((a = getchar()) != '\\n')\n        fX();\n    if(a != '\\n')\n        putchar(a);\n}\n\\end{lstlisting}\nAssume that the input to the program from the command line is `1234` followed by a newline character. Which one of the following statements is CORRECT?",
+      "options": [
+        "The program will not terminate",
+        "The program will terminate with no output",
+        "The program will terminate with 4321 as output",
+        "The program will terminate with 1234 as output"
+      ],
+      "answer": "The program will terminate with 4321 as output",
+      "explanation": "The function `fX()` recursively reads each character before printing. As each character (`'1'`, `'2'`, `'3'`, `'4'`) is read, it is saved on the call stack before `fX()` recurses. When `\\n` is reached, recursion terminates and the characters are printed during stack unwinding in reverse (LIFO) order as `4321`."
+    },
+    {
+      "id": "2024_CS1_CS_Q20",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Let $S$ be the specification: ``Instructors teach courses. Students register for courses. Courses are allocated classrooms. Instructors guide students.'' Which one of the following ER diagrams CORRECTLY represents $S$?",
+      "options": [
+        "(i)",
+        "(ii)",
+        "(iii)",
+        "(iv)"
+      ],
+      "answer": "(iv)",
+      "explanation": "Specification $S$ describes four distinct binary relationships among entities: Instructors teach courses, Students register for courses, Courses are allocated classrooms, and Instructors guide students. In standard ER modeling, entity sets are represented by rectangles and relationships by diamond diamonds connecting them; diagram (iv) correctly captures all four relationship sets."
+    },
+    {
+      "id": "2024_CS1_CS_Q21",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "In a $\\text{B}^+$ tree, the requirement of at least half-full (50\\%) node occupancy is relaxed for which one of the following cases?",
+      "options": [
+        "Only the root node",
+        "All leaf nodes",
+        "All internal nodes",
+        "Only the leftmost leaf node"
+      ],
+      "answer": "Only the root node",
+      "explanation": "In a $\\text{B}^+$ tree, every node except the root node must satisfy the minimum occupancy constraint of being at least half full ($\text{at least } \\lceil p/2 \\rceil$ child pointers). The root node is the sole exception, and is permitted to hold as few as two pointers (or one key) when non-leaf, and one key when leaf."
+    },
+    {
+      "id": "2024_CS1_CS_Q32",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "Let $A$ and $B$ be non-empty finite sets such that there exist one-to-one and onto functions (i) from $A$ to $B$ and (ii) from $A \\times A$ to $A \\cup B$. The number of possible values of $|A|$ is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "answer": "2",
+      "explanation": "A bijection from $A$ to $B$ implies $|A| = |B| = n$. A bijection from $A \\times A$ to $A \\cup B$ implies $|A \\times A| = |A \\cup B|$. We have $|A \\times A| = n^2$, and $n \\le |A \\cup B| \\le 2n$. Thus $n \\le n^2 \\le 2n$. Since $A$ is non-empty ($n \\ge 1$), dividing by $n$ gives $1 \\le n \\le 2$. This allows exactly two integer solutions: $n = 1$ (where $A = B$) and $n = 2$ (where $A \\cap B = \\emptyset$)."
+    },
+    {
+      "id": "2024_CS1_CS_Q33",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "Consider the operator precedence and associativity rules for the integer arithmetic operators given in the table below:\n\\begin{center}\n\\begin{tabular}{|c|c|c|}\n\\hline\n\\textbf{Operator} & \\textbf{Precedence} & \\textbf{Associativity} \\\\\n\\hline\n$+$ & Highest & Left \\\\\n$-$ & High & Right \\\\\n$*$ & Medium & Right \\\\\n$/$ & Low & Right \\\\\n\\hline\n\\end{tabular}\n\\end{center}\nThe value of the expression $3 + 1 + 5 * 2 / 7 + 2 - 4 - 7 - 6 / 2$ as per the above rules is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "answer": "6",
+      "explanation": "Precedence order is $+$ (highest, left-associative), then $-$ (right-associative), then $*$ (right-associative), then $/$ (lowest, right-associative). Evaluating $+$ first: $3+1+5 = 9$ and $7+2 = 9$. Expression becomes $9 * 2 / 9 - 4 - 7 - 6 / 2$. Evaluating $-$ right-associatively: $4 - (7 - 6) = 4 - 1 = 3$, giving $9 - 3 = 6$. The expression becomes $9 * 2 / 6 / 2$. Next $*$ gives $18 / 6 / 2$. Evaluating $/$ right-associatively: $6 / 2 = 3$, and $18 / 3 = 6$."
+    },
+    {
+      "id": "2024_CS1_CS_Q34",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "The number of spanning trees in a complete graph of 4 vertices labelled A, B, C, and D is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "answer": "16",
+      "explanation": "By Cayley's theorem, the number of spanning trees in a complete labelled graph $K_n$ on $n$ vertices is given by $n^{n-2}$. For $n = 4$ labelled vertices A, B, C, D, the number of spanning trees is $4^{4-2} = 4^2 = 16$."
+    },
+    {
+      "id": "2024_CS1_CS_Q35",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "Consider the following two relations, $R(A,B)$ and $S(A,C)$:\n\\begin{center}\n\\begin{tabular}{|c|c|}\n\\multicolumn{2}{c}{$R$} \\\\\n\\hline\n$A$ & $B$ \\\\\n\\hline\n10 & 20 \\\\\n20 & 30 \\\\\n30 & 40 \\\\\n30 & 50 \\\\\n\\hline\n\\end{tabular}\n\\qquad\n\\begin{tabular}{|c|c|}\n\\multicolumn{2}{c}{$S$} \\\\\n\\hline\n$A$ & $C$ \\\\\n\\hline\n10 & 90 \\\\\n30 & 45 \\\\\n40 & 80 \\\\\n50 & 95 \\\\\n\\hline\n\\end{tabular}\n\\end{center}\nThe total number of tuples obtained by evaluating the following expression\n\\[ \\sigma_{B < C}(R \\bowtie_{R.A = S.A} S) \\]\nis \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "answer": "2",
+      "explanation": "Joining $R(A,B)$ and $S(A,C)$ on $R.A = S.A$ yields: $(10, 20, 90)$ for $A=10$, and $(30, 40, 45)$, $(30, 50, 45)$ for $A=30$. Applying selection $\\sigma_{B < C}$: $20 < 90$ is true (tuple $(10, 20, 90)$), $40 < 45$ is true (tuple $(30, 40, 45)$), and $50 < 45$ is false. Thus, exactly 2 tuples satisfy the condition."
+    },
+    {
+      "id": "2024_CS1_CS_Q36",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider a network path P---Q---R between nodes P and R via router Q. Node P sends a file of size $10^6$ bytes to R via this path by splitting the file into chunks of $10^3$ bytes each. Node P sends these chunks one after the other without any wait time between the successive chunk transmissions. Assume that the size of extra headers added to these chunks is negligible, and that the chunk size is less than the MTU.\n\nEach of the links P---Q and Q---R has a bandwidth of $10^6$ bits/sec, and negligible propagation latency. Router Q immediately transmits every packet it receives from P to R, with negligible processing and queueing delays. Router Q can simultaneously receive on link P---Q and transmit on link Q---R.\n\nAssume P starts transmitting the chunks at time $t = 0$.\nWhich one of the following options gives the time (in seconds, rounded off to 3 decimal places) at which R receives all the chunks of the file?",
+      "options": [
+        "8.000",
+        "8.008",
+        "15.992",
+        "16.000"
+      ],
+      "answer": "8.008",
+      "explanation": "The file size is $10^6$ bytes split into 1000 chunks of $10^3$ bytes ($8000$ bits) each. Link transmission time for one chunk is $\\frac{8000\\text{ bits}}{10^6\\text{ bps}} = 0.008\\text{ s}$. Node P completes sending all 1000 chunks at $t = 1000 \\times 0.008 = 8.000\\text{ s}$. The last chunk arrives at router Q at $t = 8.000\\text{ s}$ and takes another $0.008\\text{ s}$ to reach R over link Q---R, completing at $8.008\\text{ s}$."
+    },
+    {
+      "id": "2024_CS1_CS_Q37",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider the following syntax-directed definition (SDD):\n\\begin{align*}\nS &\\to DHTU & \\{ S.val = D.val + H.val + T.val + U.val; \\} \\\\\nD &\\to \\text{``M''} D_1 & \\{ D.val = 5 + D_1.val; \\} \\\\\nD &\\to \\epsilon & \\{ D.val = -5; \\} \\\\\nH &\\to \\text{``L''} H_1 & \\{ H.val = 5 * 10 + H_1.val; \\} \\\\\nH &\\to \\epsilon & \\{ H.val = -10; \\} \\\\\nT &\\to \\text{``C''} T_1 & \\{ T.val = 5 * 100 + T_1.val; \\} \\\\\nT &\\to \\epsilon & \\{ T.val = -5; \\} \\\\\nU &\\to \\text{``K''} & \\{ U.val = 5; \\}\n\\end{align*}\nGiven ``MMLK'' as the input, which one of the following options is the CORRECT value computed by the SDD (in the attribute $S.val$)?",
+      "options": [
+        "45",
+        "50",
+        "55",
+        "65"
+      ],
+      "answer": "45",
+      "explanation": "For input \"MMLK\" with production $S \\to DHTU$: $D$ derives \"MM\" via $D \\to \\text{\"M\"} D_1 \\to \\text{\"M\"}\\text{\"M\"} D_2 \\to \\text{\"M\"}\\text{\"M\"}\\epsilon$, giving $D.val = 5 + 5 - 5 = 5$. $H$ derives \"L\" via $H \\to \\text{\"L\"} H_1 \\to \\text{\"L\"}\\epsilon$, giving $H.val = 50 - 10 = 40$. $T$ derives $\\epsilon$, giving $T.val = -5$. $U$ derives \"K\", giving $U.val = 5$. Summing attribute values yields $S.val = 5 + 40 - 5 + 5 = 45$."
+    },
+    {
+      "id": "2024_CS1_CS_Q38",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider the following grammar $G$, with $S$ as the start symbol. The grammar $G$ has three incomplete productions denoted by (1), (2), and (3).\n\\begin{align*}\nS &\\to daT \\mid (1) \\\\\nT &\\to aS \\mid bT \\mid (2) \\\\\nR &\\to (3) \\mid \\epsilon\n\\end{align*}\nThe set of terminals is $\\{a, b, c, d, f\\}$. The FIRST and FOLLOW sets of the different non-terminals are as follows:\n$$\\text{FIRST}(S) = \\{c, d, f\\}, \\quad \\text{FIRST}(T) = \\{a, b, \\epsilon\\}, \\quad \\text{FIRST}(R) = \\{c, \\epsilon\\}$$\n$$\\text{FOLLOW}(S) = \\text{FOLLOW}(T) = \\{c, f, \\$\\}, \\quad \\text{FOLLOW}(R) = \\{f\\}$$\nWhich one of the following options CORRECTLY fills in the incomplete productions?",
+      "options": [
+        "(1) $S \\to Rf$ (2) $T \\to \\epsilon$ (3) $R \\to cTR$",
+        "(1) $S \\to fR$ (2) $T \\to \\epsilon$ (3) $R \\to cTR$",
+        "(1) $S \\to fR$ (2) $T \\to cT$ (3) $R \\to cR$",
+        "(1) $S \\to Rf$ (2) $T \\to cT$ (3) $R \\to cR$"
+      ],
+      "answer": "(1) $S \\to Rf$ (2) $T \\to \\epsilon$ (3) $R \\to cTR$",
+      "explanation": "Since $\\text{FIRST}(S) = \\{c, d, f\\}$ and $S \\to daT$ generates $d$, production (1) must generate $c$ and $f$. With (1) as $S \\to Rf$ where $\\text{FIRST}(R) = \\{c, \\epsilon\\}$, $\\text{FIRST}(Rf) = \\{c, f\\}$. Since $\\epsilon \\in \\text{FIRST}(T)$, production (2) must be $T \\to \\epsilon$. Production (3) as $R \\to cTR$ matches $\\text{FIRST}(R) = \\{c, \\epsilon\\}$ and $\\text{FOLLOW}(R) = \\{f\\}$, matching option (A)."
+    },
+    {
+      "id": "2024_CS1_CS_Q39",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider the following pseudo-code:\n\\begin{lstlisting}\nL1:  t1 = -1\nL2:  t2 = 0\nL3:  t3 = 0\nL4:  t4 = 4 * t3\nL5:  t5 = 4 * t2\nL6:  t6 = t5 * M\nL7:  t7 = t4 + t6\nL8:  t8 = a[t7]\nL9:  if t8 <= max goto L11\nL10: t1 = t8\nL11: t3 = t3 + 1\nL12: if t3 < M goto L4\nL13: t2 = t2 + 1\nL14: if t2 < N goto L3\nL15: max = t1\n\\end{lstlisting}\nWhich one of the following options CORRECTLY specifies the number of basic blocks and the number of instructions in the largest basic block, respectively?",
+      "options": [
+        "6 and 6",
+        "6 and 7",
+        "7 and 7",
+        "7 and 6"
+      ],
+      "answer": "7 and 6",
+      "explanation": "Leaders are instructions that start a basic block: $L_1$ (first instruction), targets of conditional/unconditional jumps ($L_4, L_{11}, L_3$), and instructions immediately following jumps ($L_{10}, L_{13}, L_{15}$). This gives 7 leaders: $\\{L_1, L_4, L_{10}, L_{11}, L_3, L_{13}, L_{15}\\}$, forming 7 basic blocks. The block starting at $L_4$ contains lines $L_4$ through $L_9$, which has 6 instructions, the maximum in any block."
+    },
+    {
+      "id": "2024_CS1_CS_Q40",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider the following two threads T1 and T2 that update two shared variables `a` and `b`. Assume that initially $a = b = 1$. Though context switching between threads can happen at any time, each statement of T1 or T2 is executed atomically without interruption.\n\\begin{center}\n\\begin{tabular}{p{4cm}p{4cm}}\n\\textbf{T1} & \\textbf{T2} \\\\\n\\texttt{a = a + 1;} & \\texttt{b = 2 * b;} \\\\\n\\texttt{b = b + 1;} & \\texttt{a = 2 * a;}\n\\end{tabular}\n\\end{center}\nWhich one of the following options lists all the possible combinations of values of `a` and `b` after both T1 and T2 finish execution?",
+      "options": [
+        "$(a = 4, b = 4)$; $(a = 3, b = 3)$; $(a = 4, b = 3)$",
+        "$(a = 3, b = 4)$; $(a = 4, b = 3)$; $(a = 3, b = 3)$",
+        "$(a = 4, b = 4)$; $(a = 4, b = 3)$; $(a = 3, b = 4)$",
+        "$(a = 2, b = 2)$; $(a = 2, b = 3)$; $(a = 3, b = 4)$"
+      ],
+      "answer": "$(a = 4, b = 4)$; $(a = 3, b = 3)$; $(a = 4, b = 3)$",
+      "explanation": "Initially $a=b=1$. Let statements be $T_1: [S_1: a=a+1, S_2: b=b+1]$ and $T_2: [S_3: b=2b, S_4: a=2a]$. Executing $T_1$ then $T_2$ yields $a=2, b=2 \\to b=4, a=4 \\implies (4, 4)$. Executing $T_2$ then $T_1$ yields $b=2, a=2 \\to a=3, b=3 \\implies (3, 3)$. Executing $S_1, S_3, S_4, S_2$ yields $a=2 \\to b=2 \\to a=4 \\to b=3 \\implies (4, 3)$. No valid interleaving can produce $(a=3, b=4)$."
+    },
+    {
+      "id": "2024_CS1_CS_Q41",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "An array $[82, 101, 90, 11, 111, 75, 33, 131, 44, 93]$ is heapified. Which one of the following options represents the first three elements in the heapified array?",
+      "options": [
+        "82, 90, 101",
+        "82, 11, 93",
+        "131, 11, 93",
+        "131, 111, 90"
+      ],
+      "answer": "131, 111, 90",
+      "explanation": "Applying standard bottom-up max-heap construction (Floyd's algorithm) to $[82, 101, 90, 11, 111, 75, 33, 131, 44, 93]$ of length 10: non-leaf nodes are heapified from index 5 down to 1. The maximum element 131 bubbles up to index 1 (root), its left child becomes 111 (index 2), and right child becomes 90 (index 3)."
+    },
+    {
+      "id": "2024_CS1_CS_Q42",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider the following recurrence relation:\n\\[ T(n) = \\begin{cases} \\sqrt{n} T(\\sqrt{n}) + n & \\text{for } n > 1, \\\\ 1 & \\text{for } n = 1. \\end{cases} \\]\nWhich one of the following options is CORRECT?",
+      "options": [
+        "$T(n) = \\Theta(n \\log \\log n)$",
+        "$T(n) = \\Theta(n \\log n)$",
+        "$T(n) = \\Theta(n^2 \\log n)$",
+        "$T(n) = \\Theta(n^2 \\log \\log n)$"
+      ],
+      "answer": "$T(n) = \\Theta(n \\log \\log n)$",
+      "explanation": "Dividing $T(n) = \\sqrt{n} T(\\sqrt{n}) + n$ by $n$ gives $\\frac{T(n)}{n} = \\frac{T(\\sqrt{n})}{\\sqrt{n}} + 1$. Defining $S(n) = \\frac{T(n)}{n}$ yields $S(n) = S(\\sqrt{n}) + 1$. Substituting $n = 2^{2^k}$ gives $S(2^{2^k}) = S(2^{2^{k-1}}) + 1 = \\Theta(k) = \\Theta(\\log \\log n)$. Therefore, $T(n) = n S(n) = \\Theta(n \\log \\log n)$."
+    },
+    {
+      "id": "2024_CS1_CS_Q43",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider a binary min-heap containing 105 distinct elements. Let $k$ be the index (in the underlying array) of the maximum element stored in the heap. The number of possible values of $k$ is",
+      "options": [
+        "53",
+        "52",
+        "27",
+        "1"
+      ],
+      "answer": "53",
+      "explanation": "In a binary min-heap, every parent is strictly smaller than its children, so the maximum element cannot be an internal node and must reside at one of the leaf nodes. In a complete binary tree of $n = 105$ nodes, the number of leaf nodes is $\\lceil n/2 \\rceil = \\lceil 105/2 \\rceil = 53$. Hence, there are 53 possible index locations for the maximum element."
+    },
+    {
+      "id": "2024_CS1_CS_Q54",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider a 512 GB hard disk with 32 storage surfaces. There are 4096 sectors per track and each sector holds 1024 bytes of data. The number of cylinders in the hard disk is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "answer": "4096",
+      "explanation": "Disk capacity $= 512\\text{ GB} = 512 \\times 2^{30}\\text{ bytes} = 2^{39}$ bytes. One cylinder comprises 32 surfaces $\\times 4096$ sectors/track $\\times 1024$ bytes/sector $= 2^5 \\times 2^{12} \\times 2^{10} = 2^{27}$ bytes. Number of cylinders $= \\frac{2^{39}}{2^{27}} = 2^{12} = 4096$."
+    },
+    {
+      "id": "2024_CS1_CS_Q55",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "The baseline execution time of a program on a 2 GHz single core machine is 100 nanoseconds (ns). The code corresponding to 90\\% of the execution time can be fully parallelized. The overhead for using an additional core is 10 ns when running on a multicore system. Assume that all cores in the multicore system run their share of the parallelized code for an equal amount of time.\nThe number of cores that minimize the execution time of the program is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "answer": "3",
+      "explanation": "Baseline runtime is $100\\text{ ns}$, with $90\\text{ ns}$ parallelizable and $10\\text{ ns}$ serial. On $p$ cores, the parallel portion takes $\\frac{90}{p}\\text{ ns}$ with core overhead of $10(p-1)\\text{ ns}$. Total execution time $T(p) = 10 + \\frac{90}{p} + 10(p-1) = \\frac{90}{p} + 10p$. Evaluating: $T(1) = 100\\text{ ns}$, $T(2) = 65\\text{ ns}$, $T(3) = 60\\text{ ns}$, $T(4) = 62.5\\text{ ns}$. The time is minimized at $p = 3$ cores."
+    },
+    {
+      "id": "2024_CS1_CS_Q56",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "A given program has 25\\% load/store instructions. Suppose the ideal CPI (cycles per instruction) without any memory stalls is 2. The program exhibits 2\\% miss rate on instruction cache and 8\\% miss rate on data cache. The miss penalty is 100 cycles.\nThe speedup (rounded off to two decimal places) achieved with a perfect cache (i.e., with NO data or instruction cache misses) is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in numeric format)",
+      "answer": "3",
+      "explanation": "Total CPI is given by $\\text{CPI} = \\text{CPI}_{\\text{ideal}} + (\\text{I-miss rate} \\times \\text{penalty}) + (\\text{Data-instruction fraction} \\times \\text{D-miss rate} \\times \\text{penalty}) = 2 + (0.02 \\times 100) + (0.25 \\times 0.08 \\times 100) = 2 + 2 + 2 = 6$. For a perfect cache with no misses, $\\text{CPI}_{\\text{perfect}} = \\text{CPI}_{\\text{ideal}} = 2$. Speedup $= \\frac{6}{2} = 3.00$."
+    },
+    {
+      "id": "2024_CS1_CS_Q57",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider the following code snippet using the `fork()` and `wait()` system calls. Assume that the code compiles and runs correctly, and that the system calls run successfully without any errors.\n\\begin{lstlisting}[language=C]\nint x = 3;\nwhile(x > 0) {\n    fork();\n    printf(\"hello\");\n    wait(NULL);\n    x--;\n}\n\\end{lstlisting}\nThe total number of times the `printf` statement is executed is \\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "answer": "14",
+      "explanation": "Initially 1 process with $x=3$. Iteration 1 ($x=3$): `fork()` creates 1 child (total 2 processes); both print \"hello\" (2 prints) and decrement $x$ to 2. Iteration 2 ($x=2$): each of the 2 processes forks (total 4 processes); all 4 print \"hello\" (4 prints) and decrement $x$ to 1. Iteration 3 ($x=1$): each of the 4 processes forks (total 8 processes); all 8 print \"hello\" (8 prints) and decrement $x$ to 0, whereupon the loop ends. Total prints $= 2 + 4 + 8 = 14$."
+    },
+    {
+      "id": "2024_CS1_CS_Q58",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider the entries shown below in the forwarding table of an IP router. Each entry consists of an IP prefix and the corresponding next hop router for packets whose destination IP address matches the prefix. The notation ``/N'' in a prefix indicates a subnet mask with the most significant $N$ bits set to 1.\n\\begin{center}\n\\begin{tabular}{|l|c|}\n\\hline\n\\textbf{Prefix} & \\textbf{Next hop router} \\\\\n\\hline\n10.1.1.0/24 & R1 \\\\\n10.1.1.128/25 & R2 \\\\\n10.1.1.64/26 & R3 \\\\\n10.1.1.192/26 & R4 \\\\\n\\hline\n\\end{tabular}\n\\end{center}\nThis router forwards 20 packets each to 5 hosts. The IP addresses of the hosts are 10.1.1.16, 10.1.1.72, 10.1.1.132, 10.1.1.191, and 10.1.1.205. The number of packets forwarded via the next hop router R2 is \\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "answer": "40",
+      "explanation": "Using longest prefix match for each host address: 10.1.1.16 matches /24 (R1); 10.1.1.72 matches /24 and 10.1.1.64/26 (R3); 10.1.1.132 matches /24 and 10.1.1.128/25 (R2); 10.1.1.191 matches /24 and 10.1.1.128/25 (R2); 10.1.1.205 matches /24, /25, and 10.1.1.192/26 (R4). Thus, 2 hosts (10.1.1.132 and 10.1.1.191) match router R2. Total packets forwarded via R2 $= 2 \\times 20 = 40$."
+    },
+    {
+      "id": "2024_CS1_CS_Q59",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Let $G = (V, \\Sigma, S, P)$ be a context-free grammar in Chomsky Normal Form with $\\Sigma = \\{a, b, c\\}$ and $V$ containing 10 variable symbols including the start symbol $S$. The string $w = a^{30}b^{30}c^{30}$ is derivable from $S$. The number of steps (application of rules) in the derivation $S \\Rightarrow^* w$ is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "answer": "179",
+      "explanation": "In a Chomsky Normal Form (CNF) grammar, every production is either $A \\to BC$ or $A \\to a$. Deriving a string of length $n$ requires $n-1$ non-terminal splitting steps ($A \\to BC$) followed by $n$ terminal production steps ($A \\to a$), totaling $2n-1$ steps. For $w = a^{30}b^{30}c^{30}$, the length is $n = 90$, so the number of derivation steps is $2(90) - 1 = 179$."
+    },
+    {
+      "id": "2024_CS1_CS_Q60",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "The number of edges present in the forest generated by the DFS traversal of an undirected graph $G$ with 100 vertices is 40. The number of connected components in $G$ is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "answer": "60",
+      "explanation": "A DFS traversal of an undirected graph with $V$ vertices and $k$ connected components produces a spanning forest containing $k$ trees. A tree with $v_i$ vertices contains $v_i - 1$ edges, so the total number of tree edges in the forest is $\\sum (v_i - 1) = V - k$. Given $V = 100$ and $E = 40$, we have $40 = 100 - k \\implies k = 60$ connected components."
+    },
+    {
+      "id": "2024_CS1_CS_Q61",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider the following two regular expressions over the alphabet $\\{0,1\\}$:\n\\[ r = 0^* + 1^* \\]\n\\[ s = 01^* + 10^* \\]\nThe total number of strings of length less than or equal to 5, which are neither in $r$ nor in $s$, is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "answer": "44",
+      "explanation": "The total number of binary strings of length $\\le 5$ is $\\sum_{i=0}^5 2^i = 1+2+4+8+16+32 = 63$. Language $L(r) = 0^* + 1^*$ contains $\\epsilon$ and $0^k, 1^k$ for each length $k \\in \\{1..5\\}$ (11 strings). Language $L(s) = 01^* + 10^*$ contains $01^{k-1}$ and $10^{k-1}$ for each length $k \\in \\{1..5\\}$. At $k=1$, $0$ and $1$ overlap with $L(r)$; for $k \\in \\{2..5\\}$, the $4 \\times 2 = 8$ strings are disjoint from $L(r)$. Thus, $|L(r) \\cup L(s)| = 11 + 8 = 19$. The number of strings in neither language is $63 - 19 = 44$."
+    },
+    {
+      "id": "2024_CS1_CS_Q62",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider a memory management system that uses a page size of 2 KB. Assume that both the physical and virtual addresses start from 0. Assume that the pages 0, 1, 2, and 3 are stored in the page frames 1, 3, 2, and 0, respectively. The physical address (in decimal format) corresponding to the virtual address 2500 (in decimal format) is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "answer": "6596",
+      "explanation": "With page size $2\\text{ KB} = 2048\\text{ bytes}$, virtual address $2500$ has virtual page number $\\lfloor 2500 / 2048 \\rfloor = 1$ and offset $2500 \\pmod{2048} = 452$. Page 1 maps to frame 3. The physical address is $(\\text{frame } 3 \\times 2048) + \\text{offset } 452 = 6144 + 452 = 6596$."
+    },
+    {
+      "id": "2024_CS1_CS_Q63",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "A bag contains 10 red balls and 15 blue balls. Two balls are drawn randomly without replacement. Given that the first ball drawn is red, the probability (rounded off to 3 decimal places) that both balls drawn are red is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in numeric format)",
+      "answer": "0.375",
+      "explanation": "Let $R_1, R_2$ be the events of drawing red balls on the first and second draws without replacement. The conditional probability that both are red given the first is red is $P(R_1 \\cap R_2 \\mid R_1) = P(R_2 \\mid R_1)$. Given that 1 red ball is already drawn, 9 red balls remain out of $9 + 15 = 24$ total balls, so $P(R_2 \\mid R_1) = \\frac{9}{24} = \\frac{3}{8} = 0.375$."
+    },
+    {
+      "id": "2024_CS1_CS_Q65",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider sending an IP datagram of size 1420 bytes (including 20 bytes of IP header) from a sender to a receiver over a path of two links with a router between them. The first link (sender to router) has an MTU (Maximum Transmission Unit) size of 542 bytes, while the second link (router to receiver) has an MTU size of 360 bytes. The number of fragments that would be delivered at the receiver is \\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "answer": "6",
+      "explanation": "The datagram has 20 bytes IP header and 1400 bytes data. Link 1 has $\\text{MTU} = 542$ bytes (max data per fragment is $\\lfloor (542-20)/8 \\rfloor \\times 8 = 520$ bytes), producing 3 fragments with data sizes 520, 520, and 360 bytes. Link 2 has $\\text{MTU} = 360$ bytes (max data is $\\lfloor (360-20)/8 \\rfloor \\times 8 = 336$ bytes). At router Q, fragment 1 (520 bytes) is fragmented into 2 ($336 + 184$), fragment 2 (520 bytes) is fragmented into 2 ($336 + 184$), and fragment 3 (360 bytes) is fragmented into 2 ($336 + 24$). Total fragments delivered at the receiver $= 2 + 2 + 2 = 6$."
+    }
+  ]
+}

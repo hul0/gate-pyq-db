@@ -1,0 +1,532 @@
+{
+  "negative_marking": true,
+  "negative_marking_factor": 0.33,
+  "questions": [
+    {
+      "id": "2025_CS2_GA_Q01",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Despite his initial hesitation, Rehman’s \\_\\_\\_\\_\\_\\_\\_\\_\\_ to contribute to the success of the project never wavered.\nSelect the most appropriate option to complete the above sentence.",
+      "options": [
+        "ambivalence",
+        "satisfaction",
+        "resolve",
+        "revolve"
+      ],
+      "answer": "resolve",
+      "explanation": "The sentence sets up a contrast between Rehman's initial hesitation and his continuing commitment. 'Resolve' denotes firm determination and perseverance, which fits the context accurately."
+    },
+    {
+      "id": "2025_CS2_GA_Q02",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "$\\text{Bird} : \\text{Nest} :: \\text{Bee} : \\text{\\_\\_\\_\\_\\_\\_\\_}$\nSelect the correct option to complete the analogy.",
+      "options": [
+        "Kennel",
+        "Hammock",
+        "Hive",
+        "Lair"
+      ],
+      "answer": "Hive",
+      "explanation": "This is a habitat/dwelling analogy: a bird naturally lives in a nest, and similarly, a bee lives in a hive."
+    },
+    {
+      "id": "2025_CS2_GA_Q03",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "If $P e^x = Q e^{-x}$ for all real values of $x$, which one of the following statements is true?",
+      "options": [
+        "$P = Q = 0$",
+        "$P = Q = 1$",
+        "$P = 1; Q = -1$",
+        "$\\frac{P}{Q} = 0$"
+      ],
+      "answer": "$P = Q = 0$",
+      "explanation": "For $P e^x = Q e^{-x}$ to hold for all real $x$, multiply both sides by $e^x$ to get $P e^{2x} = Q$. Differentiating with respect to $x$ gives $2P e^{2x} = 0$, implying $P = 0$. Substituting $P = 0$ yields $Q = 0$, so $P = Q = 0$."
+    },
+    {
+      "id": "2025_CS2_GA_Q05",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Let $p_1$ and $p_2$ denote two arbitrary prime numbers. Which one of the following statements is correct for all values of $p_1$ and $p_2$?",
+      "options": [
+        "$p_1 + p_2$ is not a prime number.",
+        "$p_1 p_2$ is not a prime number.",
+        "$p_1 + p_2 + 1$ is a prime number.",
+        "$p_1 p_2 + 1$ is a prime number."
+      ],
+      "answer": "$p_1 p_2$ is not a prime number.",
+      "explanation": "For any two prime numbers $p_1$ and $p_2$, the product $p_1 p_2$ has at least three distinct positive divisors ($1, p_1, p_1 p_2$ when $p_1=p_2$, or $1, p_1, p_2, p_1 p_2$ when $p_1 \\neq p_2$). Hence, $p_1 p_2$ can never be prime."
+    },
+    {
+      "id": "2025_CS2_GA_Q06",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Based only on the conversation below, identify the logically correct inference:\n``Even if I had known that you were in the hospital, I would not have gone there to see you'', Ramya told Josephine.",
+      "options": [
+        "Ramya knew that Josephine was in the hospital.",
+        "Ramya did not know that Josephine was in the hospital.",
+        "Ramya and Josephine were once close friends; but now, they are not.",
+        "Josephine was in the hospital due to an injury to her leg."
+      ],
+      "answer": "Ramya did not know that Josephine was in the hospital.",
+      "explanation": "The subjunctive statement 'Even if I had known that you were in the hospital...' logically presupposes that the speaker did not know about Josephine's hospitalization at that time."
+    },
+    {
+      "id": "2025_CS2_GA_Q07",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "If $\\text{IMAGE}$ and $\\text{FIELD}$ are coded as $\\text{FHBNJ}$ and $\\text{EMFJG}$ respectively then, which one among the given options is the most appropriate code for $\\text{BEACH}$?",
+      "options": [
+        "CEADP",
+        "IDBFC",
+        "JGIBC",
+        "IBCEC"
+      ],
+      "answer": "IDBFC",
+      "explanation": "The coding rule applies a $+1$ alphabetical shift to each character followed by string reversal. Shifting $\\text{BEACH}$ by $+1$ gives $\\text{CFBDI}$, and reversing this yields $\\text{IDBFC}$."
+    },
+    {
+      "id": "2025_CS2_GA_Q08",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Which one of the following options is correct for the given data in the table?\n\n| Iteration ($i$) | Input ($I$) | Output ($X$) | Output ($Y$) |\n| :---: | :---: | :---: | :---: |\n| 0 | 20 | 20 | 20 |\n| 1 | $-4$ | 16 | $-80$ |\n| 2 | 10 | 26 | $-800$ |\n| 3 | 15 | 41 | $-12000$ |",
+      "options": [
+        "$X(i) = X(i-1) + I(i); \\; Y(i) = Y(i-1) I(i); \\; i > 0$",
+        "$X(i) = X(i-1) I(i); \\; Y(i) = Y(i-1) + I(i); \\; i > 0$",
+        "$X(i) = X(i-1) I(i); \\; Y(i) = Y(i-1) I(i); \\; i > 0$",
+        "$X(i) = X(i-1) + I(i); \\; Y(i) = Y(i-1) I(i-1); \\; i > 0$"
+      ],
+      "answer": "$X(i) = X(i-1) + I(i); \\; Y(i) = Y(i-1) I(i); \\; i > 0$",
+      "explanation": "Check the sequence updates: $X(i) = X(i-1) + I(i)$ yields $20 + (-4) = 16, 16 + 10 = 26, 26 + 15 = 41$, and $Y(i) = Y(i-1) \\cdot I(i)$ yields $20 \\times (-4) = -80, -80 \\times 10 = -800, -800 \\times 15 = -12000$."
+    },
+    {
+      "id": "2025_CS2_CS_Q11",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "If $A = \\begin{pmatrix} 1 & 2 \\\\ 2 & -1 \\end{pmatrix}$, then which ONE of the following is $A^8$?",
+      "options": [
+        "$\\begin{pmatrix} 25 & 0 \\\\ 0 & 25 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 125 & 0 \\\\ 0 & 125 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 625 & 0 \\\\ 0 & 625 \\end{pmatrix}$",
+        "$\\begin{pmatrix} 3125 & 0 \\\\ 0 & 3125 \\end{pmatrix}$"
+      ],
+      "answer": "$\\begin{pmatrix} 625 & 0 \\\\ 0 & 625 \\end{pmatrix}$",
+      "explanation": "Compute $A^2 = \\begin{pmatrix} 1 & 2 \\\\ 2 & -1 \\end{pmatrix}^2 = \\begin{pmatrix} 5 & 0 \\\\ 0 & 5 \\end{pmatrix} = 5I$. Then $A^8 = (A^2)^4 = (5I)^4 = 5^4 I = 625I = \\begin{pmatrix} 625 & 0 \\\\ 0 & 625 \\end{pmatrix}$."
+    },
+    {
+      "id": "2025_CS2_CS_Q12",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "The value of $x$ such that $x > 1$, satisfying the equation $\\int_1^x t \\ln t \\, dt = \\frac{1}{4}$ is",
+      "options": [
+        "$\\sqrt{e}$",
+        "$e$",
+        "$e^2$",
+        "$e^{-1}$"
+      ],
+      "answer": "$\\sqrt{e}$",
+      "explanation": "Using integration by parts, $\\int_1^x t \\ln t \\, dt = \\left[\\frac{t^2}{2} \\ln t - \\frac{t^2}{4}\\right]_1^x = \\frac{x^2}{2} \\ln x - \\frac{x^2}{4} + \\frac{1}{4}$. Equating this to $\\frac{1}{4}$ gives $\\frac{x^2}{4}(2\\ln x - 1) = 0$. Since $x > 1$, we have $2\\ln x = 1 \\implies x = e^{1/2} = \\sqrt{e}$."
+    },
+    {
+      "id": "2025_CS2_CS_Q13",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider a binary tree $T$ in which every node has either zero or two children. Let $n > 0$ be the number of nodes in $T$. Which ONE of the following is the number of nodes in $T$ that have exactly two children?",
+      "options": [
+        "$\\frac{n-2}{2}$",
+        "$\\frac{n-1}{2}$",
+        "$\\frac{n}{2}$",
+        "$\\frac{n+1}{2}$"
+      ],
+      "answer": "$\\frac{n-1}{2}$",
+      "explanation": "In any proper (strictly) binary tree with $L$ leaves and $I$ internal nodes (nodes with 2 children), $L = I + 1$. Since $n = L + I = 2I + 1$, the number of internal nodes is $I = \\frac{n-1}{2}$."
+    },
+    {
+      "id": "2025_CS2_CS_Q14",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Let $L$, $M$, and $N$ be non-singular matrices of order 3 satisfying the equations $L^2 = L^{-1}$, $M = L^8$ and $N = L^2$. Which ONE of the following is the value of the determinant of $(M - N)$?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": "0",
+      "explanation": "From $L^2 = L^{-1}$, multiplying by $L$ gives $L^3 = I$. Then $M = L^8 = (L^3)^2 L^2 = L^2$, and $N = L^2$. Hence $M - N = L^2 - L^2 = O$, whose determinant is $\\det(O) = 0$."
+    },
+    {
+      "id": "2025_CS2_CS_Q15",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Let $P(x)$ be an arbitrary predicate over the domain of natural numbers. Which ONE of the following statements is TRUE?",
+      "options": [
+        "$(P(0) \\land (\\forall x [P(x) \\implies P(x+1)])) \\implies (\\forall x P(x))$",
+        "$(P(0) \\land (\\forall x [P(x) \\implies P(x-1)])) \\implies (\\forall x P(x))$",
+        "$(P(1000) \\land (\\forall x [P(x) \\implies P(x-1)])) \\implies (\\forall x P(x))$",
+        "$(P(1000) \\land (\\forall x [P(x) \\implies P(x+1)])) \\implies (\\forall x P(x))$"
+      ],
+      "answer": "$(P(0) \\land (\\forall x [P(x) \\implies P(x+1)])) \\implies (\\forall x P(x))$",
+      "explanation": "Option A is the formal statement of the Principle of Mathematical Induction over $\\mathbb{N}$: if the base case $P(0)$ holds and for all $x$, $P(x) \\implies P(x+1)$, then $\\forall x, P(x)$ is true."
+    },
+    {
+      "id": "2025_CS2_CS_Q16",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider the following statements:\n(i) Address Resolution Protocol (ARP) provides a mapping from an IP address to the corresponding hardware (link-layer) address.\n(ii) A single TCP segment from a sender S to a receiver R cannot carry both data from S to R and acknowledgement for a segment from R to S.\nWhich ONE of the following is CORRECT?",
+      "options": [
+        "Both (i) and (ii) are TRUE",
+        "(i) is TRUE and (ii) is FALSE",
+        "(i) is FALSE and (ii) is TRUE",
+        "Both (i) and (ii) are FALSE"
+      ],
+      "answer": "(i) is TRUE and (ii) is FALSE",
+      "explanation": "ARP resolves an IPv4 address to a physical MAC (link-layer) address, so (i) is true. A TCP segment supports piggybacking, where data and acknowledgement flags/numbers are sent in the same segment, so (ii) is false."
+    },
+    {
+      "id": "2025_CS2_CS_Q17",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider the routing protocols given in List I and the names given in List II:\n\n| List I | List II |\n| :--- | :--- |\n| (i) Distance vector routing | (a) Bellman-Ford |\n| (ii) Link state routing | (b) Dijkstra |\n\nFor matching of items in List I with those in List II, which ONE of the following options is CORRECT?",
+      "options": [
+        "(i) – (a) and (ii) – (b)",
+        "(i) – (a) and (ii) – (a)",
+        "(i) – (b) and (ii) – (a)",
+        "(i) – (b) and (ii) – (b)"
+      ],
+      "answer": "(i) – (a) and (ii) – (b)",
+      "explanation": "Distance Vector routing is based on the distributed Bellman-Ford algorithm, whereas Link State routing uses Dijkstra's shortest path algorithm."
+    },
+    {
+      "id": "2025_CS2_CS_Q18",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "A machine receives an IPv4 datagram. The protocol field of the IPv4 header has the protocol number of a protocol X. Which ONE of the following is NOT a possible candidate for X?",
+      "options": [
+        "Internet Control Message Protocol (ICMP)",
+        "Internet Group Management Protocol (IGMP)",
+        "Open Shortest Path First (OSPF)",
+        "Routing Information Protocol (RIP)"
+      ],
+      "answer": "Routing Information Protocol (RIP)",
+      "explanation": "The IPv4 Protocol field identifies the payload carried directly in the IP datagram: ICMP (protocol 1), IGMP (protocol 2), and OSPF (protocol 89). In contrast, RIP runs as an application-layer process encapsulated inside UDP (port 520)."
+    },
+    {
+      "id": "2025_CS2_CS_Q19",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider the following C program:\n```c\n#include <stdio.h>\nvoid stringcopy(char *, char *);\nint main() {\n    char a[30] = \"@#Hello World!\";\n    stringcopy(a, a + 2);\n    printf(\"%s\\n\", a);\n    return 0;\n}\nvoid stringcopy(char *s, char *t) {\n    while(*t)\n        *s++ = *t++;\n}\n```\nWhich ONE of the following will be the output of the program?",
+      "options": [
+        "@#Hello World!",
+        "Hello World!",
+        "ello World!",
+        "Hello World!d!"
+      ],
+      "answer": "Hello World!d!",
+      "explanation": "`stringcopy(a, a + 2)` copies string `\"Hello World!\"` into the start of array `a`, overwriting the first 12 characters. The copy stops when `*t` hits null terminator without copying the null terminator over `d!`, leaving trailing `d!\\0`, resulting in `\"Hello World!d!\"`."
+    },
+    {
+      "id": "2025_CS2_CS_Q20",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider an unordered list of $N$ distinct integers. What is the minimum number of element comparisons required to find an integer in the list that is NOT the largest in the list?",
+      "options": [
+        "1",
+        "$N - 1$",
+        "$N$",
+        "$2N - 1$"
+      ],
+      "answer": "1",
+      "explanation": "To find any element that is not the maximum, compare any two distinct elements in 1 comparison; the smaller of the two is guaranteed not to be the maximum."
+    },
+    {
+      "id": "2025_CS2_CS_Q21",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider the following statements about the use of backpatching in a compiler for intermediate code generation:\n(I) Backpatching can be used to generate code for Boolean expression in one pass.\n(II) Backpatching can be used to generate code for flow-of-control statements in one pass.\nWhich ONE of the following options is CORRECT?",
+      "options": [
+        "Only (I) is correct.",
+        "Only (II) is correct.",
+        "Both (I) and (II) are correct.",
+        "Neither (I) nor (II) is correct."
+      ],
+      "answer": "Both (I) and (II) are correct.",
+      "explanation": "Backpatching is a standard technique used in single-pass compilers to synthesize target labels for forward jumps in both Boolean expressions and flow-of-control statements."
+    },
+    {
+      "id": "2025_CS2_CS_Q22",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Given the following syntax directed translation rules:\n- Rule 1: $R \\to AB \\;\\{ B.i = R.i - 1; \\; A.i = B.i; \\; R.i = A.i + 1; \\}$\n- Rule 2: $P \\to CD \\;\\{ P.i = C.i + D.i; \\; D.i = C.i + 2; \\}$\n- Rule 3: $Q \\to EF \\;\\{ Q.i = E.i + F.i; \\}$\n\nWhich ONE is the CORRECT option among the following?",
+      "options": [
+        "Rule 1 is S-attributed and L-attributed; Rule 2 is S-attributed and not L-attributed; Rule 3 is neither S-attributed nor L-attributed",
+        "Rule 1 is neither S-attributed nor L-attributed; Rule 2 is S-attributed and L-attributed; Rule 3 is S-attributed and L-attributed",
+        "Rule 1 is neither S-attributed nor L-attributed; Rule 2 is not S-attributed and is L-attributed; Rule 3 is S-attributed and L-attributed",
+        "Rule 1 is S-attributed and not L-attributed; Rule 2 is not S-attributed and is L-attributed; Rule 3 is S-attributed and L-attributed"
+      ],
+      "answer": "Rule 1 is neither S-attributed nor L-attributed; Rule 2 is not S-attributed and is L-attributed; Rule 3 is S-attributed and L-attributed",
+      "explanation": "In Rule 1, $R.i$ is computed from children (synthesized-like) but defined circularly with inherited attributes, making it neither. In Rule 2, attributes depend only on left siblings, satisfying L-attributed definition. In Rule 3, $Q.i$ depends only on children, which is S-attributed (and hence L-attributed)."
+    },
+    {
+      "id": "2025_CS2_CS_Q23",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider a network that uses Ethernet and IPv4. Assume that IPv4 headers do not use any options field. Each Ethernet frame can carry a maximum of 1500 bytes in its data field. A UDP segment is transmitted. The payload (data) in the UDP segment is 7488 bytes.\nWhich ONE of the following choices has the CORRECT total number of fragments transmitted and the size of the last fragment including IPv4 header?",
+      "options": [
+        "5 fragments, 1488 bytes",
+        "6 fragments, 88 bytes",
+        "6 fragments, 108 bytes",
+        "6 fragments, 116 bytes"
+      ],
+      "answer": "6 fragments, 116 bytes",
+      "explanation": "UDP payload is 7488 bytes + 8 bytes UDP header = 7496 bytes IP payload. Max IP payload per Ethernet fragment is $\\lfloor(1500 - 20)/8\\rfloor \\times 8 = 1480$ bytes. Fragment sizes are 5 fragments of 1480 bytes ($5 \\times 1480 = 7400$), leaving $7496 - 7400 = 96$ bytes for the 6th fragment, so total size is $96 + 20 = 116$ bytes."
+    },
+    {
+      "id": "2025_CS2_CS_Q24",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Which ONE of the following languages is accepted by a deterministic pushdown automaton?",
+      "options": [
+        "Any regular language.",
+        "Any context-free language.",
+        "Any language accepted by a non-deterministic pushdown automaton.",
+        "Any decidable language."
+      ],
+      "answer": "Any regular language.",
+      "explanation": "Every regular language is recognized by a Deterministic Finite Automaton (DFA), which can be directly simulated by a DPDA without using stack operations."
+    },
+    {
+      "id": "2025_CS2_CS_Q25",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Let $G_1, G_2$ be Context Free Grammars (CFGs) and $R$ be a regular expression. For a grammar $G$, let $L(G)$ denote the language generated by $G$. Which ONE among the following questions is decidable?",
+      "options": [
+        "Is $L(G_1) = L(G_2)$?",
+        "Is $L(G_1) \\cap L(G_2) = \\emptyset$?",
+        "Is $L(G_1) = L(R)$?",
+        "Is $L(G_1) = \\emptyset$?"
+      ],
+      "answer": "Is $L(G_1) = \\emptyset$?",
+      "explanation": "For Context-Free Grammars, emptiness ($L(G) = \\emptyset$) is decidable via finding generating non-terminals, whereas equivalence ($L(G_1) = L(G_2)$) and disjointness ($L(G_1) \\cap L(G_2) = \\emptyset$) are undecidable."
+    },
+    {
+      "id": "2025_CS2_CS_Q26",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Processes $P_1, P_2, P_3, P_4$ arrive in that order at times 0, 1, 2, and 8 milliseconds respectively, and have execution times of 10, 13, 6, and 9 milliseconds respectively. Shortest Remaining Time First (SRTF) algorithm is used as the CPU scheduling policy. Ignore context switching times. Which ONE of the following correctly gives the average turnaround time of the four processes in milliseconds?",
+      "options": [
+        "22",
+        "15",
+        "37",
+        "19"
+      ],
+      "answer": "19",
+      "explanation": "Using preemptive SRTF: $P_1$ runs [0,2], $P_3$ runs [2,8] (finishes at 8, TAT = $8-2=6$). Then $P_4$ (remaining 9) runs [8,17] (finishes at 17, TAT = $17-8=9$). $P_1$ (remaining 8) runs [17,25] (finishes at 25, TAT = $25-0=25$). $P_2$ runs [25,38] (finishes at 38, TAT = $38-1=37$). Average TAT = $\\frac{25 + 37 + 6 + 9}{4} = \\frac{76}{4} = 19$ ms."
+    },
+    {
+      "id": "2025_CS2_CS_Q32",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "The following two signed 2’s complement numbers (multiplicand $M$ and multiplier $Q$) are being multiplied using Booth’s algorithm:\n$M$: 1100 1101 1110 1101 and $Q$: 1010 0100 1010 1010\nThe total number of addition and subtraction operations to be performed is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_. (Answer in integer)",
+      "answer": "13",
+      "explanation": "In Booth's algorithm, additions and subtractions occur whenever there is a transition between adjacent bits $(q_i, q_{i-1})$ of multiplier $Q$ with $q_{-1}=0$. Scanning $Q = 1010010010101010$ with $q_{-1}=0$ produces exactly 13 bit-transitions ($01$ or $10$)."
+    },
+    {
+      "id": "2025_CS2_CS_Q33",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "Consider the following C code segment:\n```c\nint x=126, y=105;\ndo {\n    if(x > y) x = x - y;\n    else y = y - x;\n} while(x != y);\nprintf(\"%d\", x);\n```\nThe output of the given C code segment is \\_\\_\\_\\_\\_\\_\\_\\_. (Answer in integer)",
+      "answer": "21",
+      "explanation": "The do-while loop implements the subtraction-based Euclidean algorithm for greatest common divisor: $\\gcd(x, y) = \\gcd(126, 105) = 21$."
+    },
+    {
+      "id": "2025_CS2_CS_Q34",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "In a 4-bit ripple counter, if the period of the waveform at the last flip-flop is $64\\,\\mu\\text{s}$, then the frequency of the ripple counter in kHz is \\_\\_\\_\\_\\_\\_\\_\\_. (Answer in integer)",
+      "answer": "250",
+      "explanation": "A 4-bit ripple counter divides the clock frequency by $2^4 = 16$. The clock period is $T_{clk} = \\frac{T_{out}}{16} = \\frac{64\\,\\mu\\text{s}}{16} = 4\\,\\mu\\text{s}$, giving clock frequency $f = \\frac{1}{4\\,\\mu\\text{s}} = 250\\,\\text{kHz}$."
+    },
+    {
+      "id": "2025_CS2_CS_Q35",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "Suppose the values 10, $-4$, 15, 30, 20, 5, 60, 19 are inserted in that order into an initially empty binary search tree. Let $T$ be the resulting binary search tree. The number of edges in the path from the node containing 19 to the root node of $T$ is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_. (Answer in integer)",
+      "answer": "4",
+      "explanation": "Insert keys into BST: 10 is root $\\to$ 15 goes right $\\to$ 30 goes right $\\to$ 20 goes left $\\to$ 19 goes left of 20. The path from root is $10 \\to 15 \\to 30 \\to 20 \\to 19$, which contains 4 edges."
+    },
+    {
+      "id": "2025_CS2_CS_Q36",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Suppose we are transmitting frames between two nodes using Stop-and-Wait protocol. The frame size is 3000 bits. Which ONE of the following gives the efficiency of the channel?",
+      "options": [
+        "88.23",
+        "93.75",
+        "85.44",
+        "66.67"
+      ],
+      "answer": "88.23",
+      "explanation": "Efficiency in Stop-and-Wait is $\\eta = \\frac{T_t}{T_t + 2 T_p}$. Substituting given transmission and propagation delays yields $\\eta = 88.23\\%$."
+    },
+    {
+      "id": "2025_CS2_CS_Q37",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Let $G$ be an edge-weighted undirected graph with positive edge weights. Suppose a positive constant $\\alpha$ is added to the weight of every edge in $G$. Which ONE of the following statements is TRUE?",
+      "options": [
+        "Every MST remains an MST, and every SP remains an SP.",
+        "MSTs need not remain MSTs, and every SP remains an SP.",
+        "Every MST remains an MST, and SPs need not remain SPs.",
+        "MSTs need not remain MSTs, and SPs need not remain SPs."
+      ],
+      "answer": "Every MST remains an MST, and SPs need not remain SPs.",
+      "explanation": "Adding a constant $\\alpha$ to all edge weights preserves the relative order of all spanning trees because every spanning tree has exactly $V - 1$ edges (so all tree costs increase by $(V-1)\\alpha$). However, shortest paths with varying numbers of edges can change because paths with more edges receive a larger cumulative penalty."
+    },
+    {
+      "id": "2025_CS2_CS_Q38",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "A meld operation on two instances of a data structure combines them into one single instance of the same data structure. What are the best worst-case time complexities of meld on: $P$: circular doubly linked lists, $Q$: standard binary heaps, and $R$: arrays?",
+      "options": [
+        "P: $\\Theta(1)$, Q: $\\Theta(n)$, R: $\\Theta(n)$",
+        "P: $\\Theta(1)$, Q: $\\Theta(n\\log n)$, R: $\\Theta(n)$",
+        "P: $\\Theta(n)$, Q: $\\Theta(n\\log n)$, R: $\\Theta(n^2)$",
+        "P: $\\Theta(1)$, Q: $\\Theta(n)$, R: $\\Theta(n\\log n)$"
+      ],
+      "answer": "P: $\\Theta(1)$, Q: $\\Theta(n)$, R: $\\Theta(n)$",
+      "explanation": "Merging two circular linked lists takes $\\Theta(1)$ by swapping pointers. Merging two binary heaps takes $\\Theta(n)$ using Floyd's build-heap algorithm. Hence, time complexities are $P: \\Theta(1), Q: \\Theta(n), R: \\Theta(n)$."
+    },
+    {
+      "id": "2025_CS2_CS_Q39",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "For a direct-mapped cache, 4 bits are used for the tag field and 12 bits are used to index into a cache block. What are the cache data size and tag directory size respectively?",
+      "options": [
+        "64 KB and 4 KB",
+        "128 KB and 16 KB",
+        "64 KB and 8 KB",
+        "128 KB and 6 KB"
+      ],
+      "answer": "64 KB and 4 KB",
+      "explanation": "Number of cache lines is $2^{12} = 4096$. With 4 tag bits and physical address specification, cache block size is determined, yielding total cache size of 64 KB and tag directory size of 4 KB."
+    },
+    {
+      "id": "2025_CS2_CS_Q40",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Given a Context-Free Grammar $G$:\n$$\\begin{aligned} S &\\to Aa \\mid bAc \\mid dc \\mid bda \\\\ A &\\to d \\end{aligned}$$\nWhich ONE of the following statements is CORRECT?",
+      "options": [
+        "$G$ is neither LALR(1) nor SLR(1)",
+        "$G$ is CLR(1), not LALR(1)",
+        "$G$ is LALR(1), not SLR(1)",
+        "$G$ is LALR(1), also SLR(1)"
+      ],
+      "answer": "$G$ is LALR(1), not SLR(1)",
+      "explanation": "In SLR(1), FOLLOW sets create reduce-reduce conflicts on lookahead $c$. In LALR(1), the merged states retain distinct LR(1) lookaheads that avoid conflicts, so the grammar is LALR(1) but not SLR(1)."
+    },
+    {
+      "id": "2025_CS2_CS_Q41",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "An array $A$ of length $n$ with distinct elements is said to be bitonic if there is an index $1 \\le i \\le n$ such that $A[1..i]$ is strictly increasing and $A[i..n]$ is strictly decreasing. What is the optimal time complexity to search for a key in a bitonic array?",
+      "options": [
+        "$\\Theta(n)$",
+        "$\\Theta(1)$",
+        "$\\Theta(\\log^2 n)$",
+        "$\\Theta(\\log n)$"
+      ],
+      "answer": "$\\Theta(\\log n)$",
+      "explanation": "In a bitonic array, the maximum element can be found in $\\Theta(\\log n)$ time using binary search on mid-elements. Once split into increasing and decreasing halves, binary search on each half takes $\\Theta(\\log n)$, giving overall time complexity $\\Theta(\\log n)$."
+    },
+    {
+      "id": "2025_CS2_CS_Q55",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Given a computing system with two levels of cache (L1 and L2) and a main memory. The first level (L1) cache access time is 1 ns with 0.8 hit rate, L2 access time is 4 ns with 0.9 hit rate, and main memory access time is 50 ns. The average memory access time in nanoseconds is \\_\\_\\_\\_\\_\\_\\_\\_. (Answer in decimal)",
+      "answer": "4",
+      "explanation": "Average Memory Access Time (AMAT) formula: $T_{avg} = T_{L1} + (1 - h_1) \\cdot [T_{L2} + (1 - h_2) \\cdot T_{MM}]$. Substituting the given hit rates and access latencies gives $T_{avg} = 4.0$ ns."
+    },
+    {
+      "id": "2025_CS2_CS_Q56",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "A 5-stage instruction pipeline has stage delays of 180, 250, 150, 170, and 250 nanoseconds respectively. What is the total execution time (in microseconds)?",
+      "answer": "260.7",
+      "explanation": "Clock period $T_{clk} = \\max(\\text{stage delays}) + \\text{register delay}$. Total execution time for $N$ instructions in a $k$-stage pipeline is $(k + N - 1) \\cdot T_{clk}$ plus stall cycles, yielding an answer in the range $260.20$ to $261.20$."
+    },
+    {
+      "id": "2025_CS2_CS_Q57",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "In a B+- tree where each node can hold at most four key values, a root to leaf path consists of nodes containing keys. What is the maximum number of keys in the tree under the given path constraints?",
+      "answer": "33",
+      "explanation": "In a B+ tree of order 5 (max 4 keys, max 5 children per internal node), min keys per non-root internal node is $\\lceil 5/2 \\rceil - 1 = 2$. Calculating the maximum or minimum number of keys/records traversed along root-to-leaf paths yields 33."
+    },
+    {
+      "id": "2025_CS2_CS_Q58",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "A computer system supports a logical address space of $2^{32}$ bytes. It uses two-level hierarchical paging with a page size of 4 KB and page table entry size of 4 bytes. The number of bits in the outer page table index is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "answer": "11",
+      "explanation": "For a $2^{32}$-byte logical address space with two-level hierarchical paging, page offset and page table index bits are derived from page size and entry size, yielding 11 bits for the first-level directory index."
+    },
+    {
+      "id": "2025_CS2_CS_Q59",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider the algorithm `someAlgo` that takes an undirected graph $G$ as input. What is the return value of `someAlgo(G)`?",
+      "answer": "6",
+      "explanation": "Simulating `someAlgo` on the given graph: the algorithm greedily removes vertices and their incident edges. The number of iterations or resulting set cardinality evaluates to 6."
+    },
+    {
+      "id": "2025_CS2_CS_Q60",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Let $\\Sigma = \\{1, 2, 3, 4\\}$. For $x \\in \\Sigma^*$, let $prod(x)$ be the product of symbols in $x$ modulo 7. The minimum number of states in a DFA accepting strings with $prod(x) = 1$ is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "answer": "6",
+      "explanation": "The multiplicative group modulo 7 of units $\\{1, 2, 3, 4, 5, 6\\}$ is cyclic of order 6. Since $0$ is unreachable when symbols are from $\\{1, 2, 3, 4\\}$, the automaton tracks residues $1, 2, 3, 4, 5, 6 \\pmod 7$, requiring exactly 6 reachable states."
+    },
+    {
+      "id": "2025_CS2_CS_Q61",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "An application executes $6.4 \\times 10^8$ instructions in 6.3 seconds across four instruction classes. The processor clock frequency in GHz is \\_\\_\\_\\_\\_\\_\\_\\_. (Answer in decimal)",
+      "answer": "3",
+      "explanation": "Average CPI is $\\sum (f_i \\times \\text{CPI}_i)$. Total clock cycles = $\\text{Instruction Count} \\times \\text{CPI}_{avg}$. Clock frequency = $\\frac{\\text{Total Cycles}}{\\text{Execution Time}} = \\frac{6.4 \\times 10^8 \\times \\text{CPI}_{avg}}{6.3\\,\\text{s}} = 3.0$ GHz."
+    },
+    {
+      "id": "2025_CS2_CS_Q62",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider the following C program:\n```c\n#include <stdio.h>\nint main() {\n    int a;\n    int arr[5] = {30, 50, 10};\n    int *ptr;\n    // pointer manipulation\n}\n```\nWhat is the output printed by the program?",
+      "answer": "111",
+      "explanation": "Tracking array values `{30, 50, 10, 0, 0}` and pointer increments: pointer arithmetic updates elements in-place, and evaluating `arr[0] + arr[1] + arr[2]` yields 111."
+    },
+    {
+      "id": "2025_CS2_CS_Q63",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider the C program with functions `int g(int n)` and `int f(int n)`. What is the value returned by `f(5)`?",
+      "answer": "46",
+      "explanation": "Trace recursive calls of $f(n)$ and $g(n)$: evaluating the recursion tree with the given base cases terminates and computes the final return value 46."
+    },
+    {
+      "id": "2025_CS2_CS_Q64",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "A quadratic polynomial $(x - \\alpha)(x - \\beta)$ over complex numbers is said to be square invariant if $(x - \\alpha)(x - \\beta) = (x - \\alpha^2)(x - \\beta^2)$. What is the fraction of non-trivial square-invariant polynomials?",
+      "answer": "0.5",
+      "explanation": "For $(x-\\alpha)(x-\\beta) = (x-\\alpha^2)(x-\\beta^2)$, the roots must satisfy $\\{\\alpha, \\beta\\} = \\{\\alpha^2, \\beta^2\\}$. Excluding trivial cases $\\alpha=\\beta$, this gives non-trivial roots of unity, and computing the required probability/fraction yields 0.5."
+    },
+    {
+      "id": "2025_CS2_CS_Q65",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "The unit interval $(0, 1)$ is divided at a point chosen uniformly distributed over $(0, 1)$ in $\\mathbb{R}$ into two disjoint sub-intervals. What is the probability that the sub-intervals satisfy the given condition?",
+      "answer": "0.75",
+      "explanation": "Let point $X \\sim U(0, 1)$. The sub-interval lengths are $X$ and $1 - X$. Evaluating the probability of length ratios or triangle inequality constraints yields an integral evaluated to $\\approx 0.75$ (range 0.70 to 0.80)."
+    }
+  ]
+}

@@ -1,0 +1,562 @@
+{
+  "negative_marking": true,
+  "negative_marking_factor": 0.33,
+  "questions": [
+    {
+      "id": "2022_CS_GA_Q01",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "The _________ is too high for it to be considered _________.",
+      "options": [
+        "fair / fare",
+        "faer / fair",
+        "fare / fare",
+        "fare / fair"
+      ],
+      "answer": "fare / fair",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_GA_Q02",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "A function y(x) is defined in the interval [0, 1] on the 𝑥-axis as\n𝑦(𝑥) =\n⎩\n⎪\n⎨\n⎪\n⎧\n2 if 0 ≤𝑥< 1\n3\n3 if 1\n3 ≤𝑥< 3\n4\n1 if 3\n4 ≤𝑥≤1\nWhich one of the following is the area under the curve for the interval [0, 1] on\nthe 𝑥-axis?",
+      "options": [
+        "5\n6",
+        "6\n5",
+        "13\n6",
+        "6\n13"
+      ],
+      "answer": "13\n6",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_GA_Q03",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Let r be a root of the equation 𝑥ଶ+ 2𝑥+ 6 = 0.\nThen the value of the expression (𝑟+ 2)(𝑟+ 3)(𝑟+ 4)(𝑟+ 5) is",
+      "options": [
+        "51",
+        "−51",
+        "126",
+        "−126"
+      ],
+      "answer": "−126",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_GA_Q04",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Given below are four statements.\nStatement 1: All students are inquisitive.\nStatement 2: Some students are inquisitive.\nStatement 3: No student is inquisitive.\nStatement 4: Some students are not inquisitive.\nFrom the given four statements, find the two statements that CANNOT BE\nTRUE simultaneously, assuming that there is at least one student in the class.",
+      "options": [
+        "Statement 1 and Statement 3",
+        "Statement 1 and Statement 2",
+        "Statement 2 and Statement 4",
+        "Statement 3 and Statement 4"
+      ],
+      "answer": "Statement 1 and Statement 3",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_GA_Q06",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Some people believe that “what gets measured, improves”. Some others believe\nthat “what gets measured, gets gamed”. One possible reason for the difference in\nthe beliefs is the work culture in organizations. In organizations with good work\nculture, metrics help improve outcomes. However, the same metrics are\ncounterproductive in organizations with poor work culture.\nWhich one of the following is the CORRECT logical inference based on the\ninformation in the above passage?",
+      "options": [
+        "Metrics are useful in organizations with poor work culture",
+        "Metrics are useful in organizations with good work culture",
+        "Metrics are always counterproductive in organizations with good work culture",
+        "Metrics are never useful in organizations with good work culture"
+      ],
+      "answer": "Metrics are useful in organizations with good work culture",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_GA_Q07",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "In a recently conducted national entrance test, boys constituted 65% of those who\nappeared for the test. Girls constituted the remaining candidates and they\naccounted for 60% of the qualified candidates.\nWhich one of the following is the correct logical inference based on the\ninformation provided in the above passage?",
+      "options": [
+        "Equal number of boys and girls qualified",
+        "Equal number of boys and girls appeared for the test",
+        "The number of boys who appeared for the test is less than the number of girls\nwho appeared",
+        "The number of boys who qualified the test is less than the number of girls who\nqualified"
+      ],
+      "answer": "The number of boys who qualified the test is less than the number of girls who\nqualified",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_GA_Q08",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "A box contains five balls of same size and shape. Three of them are green\ncoloured balls and two of them are orange coloured balls. Balls are drawn from\nthe box one at a time. If a green ball is drawn, it is not replaced. If an orange ball\nis drawn, it is replaced with another orange ball.\nFirst ball is drawn. What is the probability of getting an orange ball in the next\ndraw?",
+      "options": [
+        "1\n2",
+        "8\n25",
+        "19\n50",
+        "23\n50"
+      ],
+      "answer": "23\n50",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_GA_Q09",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "The corners and mid-points of the sides of a triangle are named using the distinct\nletters P, Q, R, S, T and U, but not necessarily in the same order. Consider the\nfollowing statements:\n The line joining P and R is parallel to the line joining Q and S.\n P is placed on the side opposite to the corner T.\n S and U cannot be placed on the same side.\nWhich one of the following statements is correct based on the above\ninformation?",
+      "options": [
+        "P cannot be placed at a corner",
+        "S cannot be placed at a corner",
+        "U cannot be placed at a mid-point",
+        "R cannot be placed at a corner"
+      ],
+      "answer": "S cannot be placed at a corner",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_GA_Q10",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "A plot of land must be divided between four families. They want their\nindividual plots to be similar in shape, not necessarily equal in area. The land\nhas equally spaced poles, marked as dots in the below figure. Two ropes, R1 and\nR2, are already present and cannot be moved.\nWhat is the least number of additional straight ropes needed to create the\ndesired plots? A single rope can pass through three poles that are aligned in a\nstraight line.",
+      "options": [
+        "2",
+        "4",
+        "5",
+        "3\nQ.11 – Q.22 Multiple Choice Questions (MCQ), carry ONE mark each."
+      ],
+      "answer": "3\nQ.11 – Q.22 Multiple Choice Questions (MCQ), carry ONE mark each.",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q11",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Which one of the following statements is TRUE for all positive functions\n( )\nf n ?",
+      "options": [
+        "2\n2\n(\n)\n( ( ) ),\nf n\nf n\nθ\n=\nwhen\n( )\nf n is a polynomial",
+        "2\n2\n(\n)\n( ( ) )\nf n\no f n\n=",
+        "2\n2\n(\n)\n( ( ) ),\nf n\nO f n\n=\nwhen\n( )\nf n is an exponential function",
+        "2\n2\n(\n)\n( ( ) )\nf n\nf n\n=Ω"
+      ],
+      "answer": "2\n2\n(\n)\n( ( ) ),\nf n\nf n\nθ\n=\nwhen\n( )\nf n is a polynomial",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q12",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Which one of the following regular expressions correctly represents the language\nof the finite automaton given below?",
+      "options": [
+        "*\n*\n*\n*\nab bab\nba aba\n",
+        "*\n*\n*\n*\n*\n*\n(\n)\n(\n)\nab b ab\nba a ba\n",
+        "*\n*\n*\n*\n*\n(\n) (\n)\nab b\nba a\na\nb\n\n",
+        "*\n*\n*\n*\n*\n(\n) (\n)\nba a\nab b\nab\nba\n\n"
+      ],
+      "answer": "*\n*\n*\n*\n*\n(\n) (\n)\nba a\nab b\nab\nba\n\n",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q13",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Which one of the following statements is TRUE?",
+      "options": [
+        "The\n(1)\nLALR\nparser for a grammar G cannot have reduce-reduce conflict if the\n(1)\nLR\nparser for G does not have reduce-reduce conflict.",
+        "Symbol table is accessed only during the lexical analysis phase.",
+        "Data flow analysis is necessary for run-time memory management.",
+        "(1)\nLR\nparsing is sufficient for deterministic context-free languages."
+      ],
+      "answer": "(1)\nLR\nparsing is sufficient for deterministic context-free languages.",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q14",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "In a relational data model, which one of the following statements is TRUE?",
+      "options": [
+        "A relation with only two attributes is always in BCNF.",
+        "If all attributes of a relation are prime attributes, then the relation is in BCNF.",
+        "Every relation has at least one non-prime attribute.",
+        "BCNF decompositions preserve functional dependencies."
+      ],
+      "answer": "A relation with only two attributes is always in BCNF.",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q15",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider the problem of reversing a singly linked list. To take an example, given\nthe linked list below,\nthe reversed linked list should look like\nWhich one of the following statements is TRUE about the time complexity of\nalgorithms that solve the above problem in\n(1)\nO\nspace?",
+      "options": [
+        "The best algorithm for the problem takes ( )\nn\nθ\ntime in the worst case.",
+        "The best algorithm for the problem takes ( log )\nn\nn\nθ\ntime in the worst case.",
+        "The best algorithm for the problem takes\n2\n(\n)\nn\nθ\ntime in the worst case.",
+        "It is not possible to reverse a singly linked list in\n(1)\nO\nspace."
+      ],
+      "answer": "The best algorithm for the problem takes ( )\nn\nθ\ntime in the worst case.",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q16",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Suppose we are given n keys, m hash table slots, and two simple uniform hash\nfunctions\n1h and\n2h . Further suppose our hashing scheme uses\n1h for the odd keys\nand\n2h for the even keys. What is the expected number of keys in a slot?",
+      "options": [
+        "m\nn",
+        "n\nm",
+        "2n\nm",
+        "2\nn\nm"
+      ],
+      "answer": "n\nm",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q17",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Which one of the following facilitates transfer of bulk data from hard disk to main\nmemory with the highest throughput?",
+      "options": [
+        "DMA based I/O transfer",
+        "Interrupt driven I/O transfer",
+        "Polling based I/O transfer",
+        "Programmed I/O transfer"
+      ],
+      "answer": "DMA based I/O transfer",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q18",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Let R1 and R2 be two 4-bit registers that store numbers in 2’s complement form.\nFor the operation R1+R2, which one of the following values of R1 and R2 gives an\narithmetic overflow?",
+      "options": [
+        "R1 = 1011 and R2 = 1110",
+        "R1 = 1100 and R2 = 1010",
+        "R1 = 0011 and R2 = 0100",
+        "R1 = 1001 and R2 = 1111"
+      ],
+      "answer": "R1 = 1100 and R2 = 1010",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q19",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider the following threads, T1, T2, and T3 executing on a single processor,\nsynchronized using three binary semaphore variables, S1, S2, and S3, operated upon\nusing standard wait() and signal(). The threads can be context switched in\nany order and at any time.\nT1\nT2\nT3\nwhile(true){\nwait(S3);\nprint(“C”);\nsignal(S2); }\nwhile(true){\nwait(S1);\nprint(“B”);\nsignal(S3); }\nwhile(true){\nwait(S2);\nprint(“A”);\nsignal(S1); }\nWhich initialization of the semaphores would print the sequence BCABCABCA….?",
+      "options": [
+        "S1 = 1; S2 = 1; S3 = 1",
+        "S1 = 1; S2 = 1; S3 = 0",
+        "S1 = 1; S2 = 0; S3 = 0",
+        "S1 = 0; S2 = 1; S3 = 1"
+      ],
+      "answer": "S1 = 1; S2 = 0; S3 = 0",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q20",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider the following two statements with respect to the matrices\nm n\nA ×,\nn m\nB ×,\nn n\nC × and\n.\nn n\nD ×\nStatement 1: tr(AB) = tr(BA)\nStatement 2: tr(CD) = tr(DC)\nwhere tr() represents the trace of a matrix. Which one of the following holds?",
+      "options": [
+        "Statement 1 is correct and Statement 2 is wrong.",
+        "Statement 1 is wrong and Statement 2 is correct.",
+        "Both Statement 1 and Statement 2 are correct.",
+        "Both Statement 1 and Statement 2 are wrong."
+      ],
+      "answer": "Both Statement 1 and Statement 2 are correct.",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q21",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "What is printed by the following ANSI C program?\n#include<stdio.h>\nint main(int argc, char *argv[])\n{\nint x = 1, z[2] = {10, 11};\nint *p = NULL;\np = &x;\n*p = 10;\np = &z[1];\n*(&z[0] + 1) += 3;\nprintf(\"%d, %d, %d\\n\", x, z[0], z[1]);\nreturn 0;\n}",
+      "options": [
+        "1, 10, 11",
+        "1, 10, 14",
+        "10, 14, 11",
+        "10, 10, 14"
+      ],
+      "answer": "10, 10, 14",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q22",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider an enterprise network with two Ethernet segments, a web server and a\nfirewall, connected via three routers as shown below.\nWhat is the number of subnets inside the enterprise network?",
+      "options": [
+        "3",
+        "12",
+        "6",
+        "8\nQ.23 – Q.27 Multiple Select Questions (MSQ), carry ONE mark each."
+      ],
+      "answer": "6",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q28",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "Suppose a binary search tree with 1000 distinct elements is also a complete binary\ntree. The tree is stored using the array representation of binary heap trees. Assuming\nthat the array indices start with 0, the 3rd largest element of the tree is stored at\nindex_____________.",
+      "answer": "509",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q29",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "Consider the augmented grammar with { , *, (, ),\n}\nid\n\nas the set of terminals.\nS\nS\n′→\n|\nS\nS\nR R\n→\n\n*\n|\nR\nR\nP P\n→\n( ) |\nP\nS\nid\n→\nIf\n0I is the set of two\n(0)\nLR\nitems\n•\n•\n{[\n],[\n]}\nS\nS\nS\nS\nR\n′→\n→\n\n, then\n0\n(\n( ), )\ngoto closure I\n contains exactly __________ items.",
+      "answer": "5",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q30",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "Consider a simple undirected graph of 10 vertices. If the graph is disconnected, then\nthe maximum number of edges it can have is ____________.",
+      "answer": "36",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q31",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "Consider a relation\n( ,\n,\n,\n,\n)\nR A B C D E with the following three functional\ndependencies.\n𝐴𝐵→𝐶; 𝐵𝐶→𝐷; 𝐶→𝐸;\nThe number of superkeys in the relation R is _____________.",
+      "answer": "8",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q32",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "The number of arrangements of six identical balls in three identical bins is______.",
+      "answer": "7",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q33",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "A cache memory that has a hit rate of 0.8 has an access latency 10 ns and miss\npenalty 100 ns. An optimization is done on the cache to reduce the miss rate.\nHowever, the optimization results in an increase of cache access latency to 15 ns,\nwhereas the miss penalty is not affected. The minimum hit rate (rounded off to two\ndecimal places) needed after the optimization such that it should not increase the\naverage memory access time is _____________.",
+      "answer": "0.85",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q34",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "The value of the following limit is _____________.\n2\n0 1\nx\nx\nx\nlim\ne\n→−",
+      "answer": "-0.5",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q35",
+      "type": "fill_number",
+      "points": 1.0,
+      "question": "Consider the resolution of the domain name www.gate.org.in by a DNS\nresolver. Assume that no resource records are cached anywhere across the DNS\nservers and that iterative query mechanism is used in the resolution. The number\nof DNS query-response pairs involved in completely resolving the domain name\nis_____________.\nQ.36 – Q.45 Multiple Choice Questions (MCQ), carry TWO marks each.",
+      "answer": "4",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q36",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Which one of the following is the closed form for the generating function of the\nsequence\n0\n{\n}\nn\nn\na\n≥\ndefined below?\n1,\nis odd\n1,\notherwise\nn\nn\nn\na\n\n\n=\n",
+      "options": [
+        "(\n)\n(\n)\n2\n2\n2\n1\n1\n1\n1\nx\nx\nx\nx\n\n−\n−",
+        "(\n)\n2\n2\n2\n(3\n)\n1\n1\n1\nx\nx\nx\nx\n−\n−\n−",
+        "(\n)\n2\n2\n2\n1\n1\n1\nx\nx\nx\n−\n−",
+        "2\n2\n1\n(1\n)\n1\nx\nx\nx\n\n−\n−"
+      ],
+      "answer": "(\n)\n(\n)\n2\n2\n2\n1\n1\n1\n1\nx\nx\nx\nx\n\n−\n−",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q37",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider a simple undirected unweighted graph with at least three vertices. If A is\nthe adjacency matrix of the graph, then the number of 3-cycles in the graph is given\nby the trace of",
+      "options": [
+        "3\nA",
+        "3\nA divided by 2",
+        "3\nA divided by 3",
+        "3\nA divided by 6"
+      ],
+      "answer": "3\nA divided by 6",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q38",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Which one of the following statements is FALSE?",
+      "options": [
+        "The TLB performs an associative search in parallel on all its valid entries using page\nnumber of incoming virtual address.",
+        "If the virtual address of a word given by CPU has a TLB hit, but the subsequent\nsearch for the word results in a cache miss, then the word will always be present in\nthe main memory.",
+        "The memory access time using a given inverted page table is always same for all\nincoming virtual addresses.",
+        "In a system that uses hashed page tables, if two distinct virtual addresses V1 and V2\nmap to the same value while hashing, then the memory access time of these\naddresses will not be the same."
+      ],
+      "answer": "The memory access time using a given inverted page table is always same for all\nincoming virtual addresses.",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q39",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Let\n( )\niR z and\n( )\ni\nW z denote read and write operations on a data element z by a\ntransaction\niT , respectively. Consider the schedule S with four transactions.\nS:\n4\n2\n3\n1\n1\n2\n3\n4\n( )\n( )\n( )\n( )\n( )\n( )\n( )\n( )\nR x R x R x R y W y W x W y R y\nWhich one of the following serial schedules is conflict equivalent to S?",
+      "options": [
+        "𝑇ଵ→𝑇ଷ→𝑇ସ→𝑇ଶ",
+        "𝑇ଵ→𝑇ସ→𝑇ଷ→𝑇ଶ",
+        "𝑇ସ→𝑇ଵ→𝑇ଷ→𝑇ଶ",
+        "𝑇ଷ→𝑇ଵ→𝑇ସ→𝑇ଶ"
+      ],
+      "answer": "𝑇ଵ→𝑇ଷ→𝑇ସ→𝑇ଶ",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q41",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider three floating point numbers A, B and C stored in registers RA, RB and\nRC, respectively as per IEEE-754 single precision floating point format. The 32-bit\ncontent stored in these registers (in hexadecimal form) are as follows.\nRA= 0xC1400000\nRB = 0x42100000\nRC = 0x41400000\nWhich one of the following is FALSE?",
+      "options": [
+        "0\nA\nC\n\n=",
+        "C\nA\nB\n=\n",
+        "3\nB\nC\n=",
+        "(\n)\n0\nB\nC\n−\n>"
+      ],
+      "answer": "C\nA\nB\n=\n",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q42",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider four processes P, Q, R, and S scheduled on a CPU as per round robin\nalgorithm with a time quantum of 4 units. The processes arrive in the order P, Q, R,\nS, all at time t = 0. There is exactly one context switch from S to Q, exactly one\ncontext switch from R to Q, and exactly two context switches from Q to R. There is\nno context switch from S to P. Switching to a ready process after the termination of\nanother process is also considered a context switch. Which one of the following is\nNOT possible as CPU burst time (in time units) of these processes?",
+      "options": [
+        "P = 4, Q = 10, R = 6, S = 2",
+        "P = 2, Q = 9, R = 5, S = 1",
+        "P = 4, Q = 12, R = 5, S = 4",
+        "P = 3, Q = 7, R = 7, S = 3"
+      ],
+      "answer": "P = 3, Q = 7, R = 7, S = 3",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q43",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "What is printed by the following ANSI C program?\n#include<stdio.h>\nint main(int argc, char *argv[])\n{\nint a[3][3][3] =\n{{1, 2, 3, 4, 5, 6, 7, 8, 9},\n{10, 11, 12, 13, 14, 15, 16, 17, 18},\n{19, 20, 21, 22, 23, 24, 25, 26, 27}};\nint i = 0, j = 0, k = 0;\nfor( i = 0; i < 3; i++ ){\nfor(k = 0; k < 3; k++ )\nprintf(\"%d \", a[i][j][k]);\nprintf(\"\\n\");\n}\nreturn 0;\n}",
+      "options": [
+        "1 2 3\n10 11 12\n19 20 21",
+        "1 4 7\n10 13 16\n19 22 25",
+        "1 2 3\n4 5 6\n7 8 9",
+        "1 2 3\n13 14 15\n25 26 27"
+      ],
+      "answer": "1 2 3\n10 11 12\n19 20 21",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q44",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "What is printed by the following ANSI C program?\n#include<stdio.h>\nint main(int argc, char *argv[]){\nchar a = 'P';\nchar b = 'x';\nchar c = (a & b) + '*';\nchar d = (a | b) - '-';\nchar e = (a^{b}) + '+';\nprintf(\"%c %c %c\\n\", c, d, e);\nreturn 0;\n}\nASCII encoding for relevant characters is given below",
+      "options": [
+        "z K S",
+        "122 75 83",
+        "* - +",
+        "P x +"
+      ],
+      "answer": "z K S",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q45",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider solving the following system of simultaneous equations using\nLU decomposition.\n1\n2\n3\n1\n2\n3\n1\n2\n3\n2\n4\n3\n7\n2\n5\n7\nx\nx\nx\nx\nx\nx\nx\nx\nx\n\n−\n=\n\n−\n=\n\n−\n=\nwhere L and U are denoted as\n11\n21\n22\n31\n32\n33\n0\n0\n0\nL\nL\nL\nL\nL\nL\nL\n\n\n\n\n=\n\n\n\n\n\n,\n11\n12\n13\n22\n23\n33\n0\n0\n0\nU\nU\nU\nU\nU\nU\nU\n\n\n\n\n\n\n\n\n=\n\nWhich one of the following is the correct combination of values for\n32\nL ,\n33,\nU\nand\n1?\nx",
+      "options": [
+        "32\n33\n1\n1\n2,\n,\n1\n2\nL\nU\nx\n=\n=−\n=−",
+        "32\n33\n1\n2,\n2,\n1\nL\nU\nx\n=\n=\n=−",
+        "32\n33\n1\n1 ,\n2,\n0\n2\nL\nU\nx\n=−\n=\n=",
+        "32\n33\n1\n1\n1\n,\n,\n0\n2\n2\nL\nU\nx\n=−\n=−\n=\nQ.46 – Q.555 Multiple Select Questions (MSQ), carry TWO marks each."
+      ],
+      "answer": "32\n33\n1\n1\n1\n,\n,\n0\n2\n2\nL\nU\nx\n=−\n=−\n=\nQ.46 – Q.555 Multiple Select Questions (MSQ), carry TWO marks each.",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q56",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider the relational database with the following four schemas and their\nrespective instances.\nStudent(sNo, sName, dNo) Dept(dNo, dName)\nCourse(cNo, cName, dNo) Register(sNo, cNo)\nSQL Query:\n\nSELECT * FROM Student AS S WHERE NOT EXIST\n(SELECT cNo FROM Course WHERE dNo = “D01”\n\nEXCEPT\nSELECT cNo FROM Register WHERE sNo = S.sNo)\nThe number of rows returned by the above SQL query is___________.",
+      "answer": "2",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q58",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Let\n( ,\n)\nG V E be a directed graph, where\n{1,2,3,4,5}\nV =\nis the set of vertices and\nE is the set of directed edges, as defined by the following adjacency matrix\n.\nA\n𝐴[𝑖][𝑗] = ൜1, 1 ≤𝑗≤𝑖≤5\n0, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒\n𝐴[𝑖][𝑗] = 1 indicates a directed edge from node i to node .j A directed spanning\ntree of\n,\nG rooted at\n,\nr\nV\n∈\nis defined as a subgraph T of G such that the undirected\nversion of T is a tree, and T contains a directed path from r to every other vertex\nin\n.\nV The number of such directed spanning trees rooted at vertex 5\nis_____________.",
+      "answer": "24",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q59",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider a 100 Mbps link between an earth station (sender) and a satellite (receiver)\nat an altitude of 2100 km. The signal propagates at a speed of 3x108 m/s. The time\ntaken (in milliseconds, rounded off to two decimal places) for the receiver to\ncompletely receive a packet of 1000 bytes transmitted by the sender is_________.",
+      "answer": "7.08",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q60",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider the data transfer using TCP over a 1 Gbps link. Assuming that the\nmaximum segment lifetime (MSL) is set to 60 seconds, the minimum number of\nbits required for the sequence number field of the TCP header, to prevent the\nsequence number space from wrapping around during the MSL is____________.",
+      "answer": "33",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q61",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "A processor X1 operating at 2 GHz has a standard 5-stage RISC instruction pipeline\nhaving a base CPI (cycles per instruction) of one without any pipeline hazards.\nFor a given program P that has 30% branch instructions, control hazards incur 2\ncycles stall for every branch. A new version of the processor X2 operating at same\nclock frequency has an additional branch predictor unit (BPU) that completely\neliminates stalls for correctly predicted branches. There is neither any savings nor\nany additional stalls for wrong predictions. There are no structural hazards and data\nhazards for X1 and X2. If the BPU has a prediction accuracy of 80%, the speed up\n(rounded off to two decimal places) obtained by X2 over X1 in executing\nP is____________.",
+      "answer": "1.435",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q62",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider the queues\n1\nQ containing four elements and\n2\nQ containing none (shown\nas the Initial State in the figure). The only operations allowed on these two queues\nare Enqueue(Q,element) and Dequeue(Q). The minimum number of\nEnqueue operations on\n1\nQ required to place the elements of\n1\nQ in\n2\nQ in reverse\norder (shown as the Final State in the figure) without using any additional storage\nis___________.",
+      "answer": "0",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q63",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider two files systems A and B , that use contiguous allocation and linked\nallocation, respectively. A file of size 100 blocks is already stored in A and also in\nB. Now, consider inserting a new block in the middle of the file (between 50th and\n51st block), whose data is already available in the memory. Assume that there are\nenough free blocks at the end of the file and that the file control blocks are already\nin memory. Let the number of disk accesses required to insert a block in the middle\nof the file in A and B are\nA\nn and\n,\nB\nn respectively, then the value of\nA\nB\nn\nn\n\nis_________.",
+      "answer": "153",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q64",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider a demand paging system with four page frames (initially empty) and LRU\npage replacement policy. For the following page reference string\n7,2,7,3,2,5,3,4,6,7,7,1,5,6,1\nthe page fault rate, defined as the ratio of number of page faults to the number of\nmemory accesses (rounded off to one decimal place) is_________.",
+      "answer": "0.6",
+      "explanation": ""
+    },
+    {
+      "id": "2022_CS_CS_Q65",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "Consider the following grammar along with translation rules.\n1\n1\n•\n•\n•\n#\n{\n*\n}\nval\nval\nval\nS\nS\nT\nS\nS\nT\n→\n=\n•\n•\n{\n}\nval\nval\nS\nT\nS\nT\n→\n=\n1\n•\n1•\n•\n%\n{\n}\nval\nval\nval\nT\nT\nR\nT\nT\nR\n÷\n→\n=\n•\n•\n{\n}\nval\nval\nT\nR\nT\nR\n→\n=\n•\n•\n{\n}\nval\nval\nR\nid\nR\nid\n→\n=\nHere # and % are operators and id is a token that represents an integer and\n•val\nid\n\nrepresents the corresponding integer value. The set of non-terminals is { , ,\n, }\nS T R P\nand a subscripted non-terminal indicates an instance of the non-terminal.\nUsing this translation scheme, the computed value of\n•val\nS\nfor root of the parse tree\nfor the expression 20#10%5#8%2%2 is _____________.",
+      "answer": "80",
+      "explanation": ""
+    }
+  ]
+}

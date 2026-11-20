@@ -1,0 +1,961 @@
+\documentclass[a4paper,10pt,twoside]{article}
+\usepackage{fontspec}
+\setmainfont{Liberation Sans}
+\setsansfont{Liberation Sans}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.8cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm,
+    headsep=14pt,
+    footskip=20pt
+}
+
+\setlength{\columnsep}{16pt}
+\setlength{\columnseprule}{0.35pt}
+
+% Persistent Subtle Watermark on Every Page
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=6.0cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.jpeg} \\[-0.2em]
+        {\fontsize{14}{17}\selectfont\bfseries Studiva}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.035] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Running Headers & Footers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\textbf{Studiva GATE Question Bank}}
+\fancyhead[LE]{\small\textit{Computer Science \& IT (2011--2025)}}
+\fancyhead[RO]{\small\textit{Studiva Education}}
+\fancyfoot[LE,RO]{\scriptsize\textbf{Studiva} $\cdot$ \texttt{www.studiva.co.in}}
+\fancyfoot[C]{\small\textbf{Page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[RE,LO]{\scriptsize\texttt{contact@studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Listings Style (Clean, professional)
+\lstset{
+    basicstyle=\scriptsize\ttfamily,
+    numbers=none,
+    frame=single,
+    rulecolor=\color{black!30},
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: FORMAL TITLE & COVER PAGE ====================
+\thispagestyle{empty}
+\vspace*{1.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.jpeg}\\[1.5em]
+    {\fontsize{24}{28}\selectfont\textbf{GATE COMPUTER SCIENCE \& IT}}\\[0.5em]
+    {\fontsize{16}{20}\selectfont\textbf{PREVIOUS YEARS QUESTION BANK (2011 -- 2025)}}\\[0.6em]
+    {\normalsize Detailed Examination Papers with Complete Official Answer Keys}\\[2.0em]
+    \rule{0.65\textwidth}{0.8pt}\\[2.0em]
+    {\large\textbf{Studiva GATE Examination Series}}\\[0.4em]
+    {\small Comprehensive Authentic Question Bank for GATE Computer Science \& Information Technology}\\[2.8cm]
+
+    \begin{tabular}{|ll|}
+        \hline
+        \textbf{Subject:} & Computer Science and Information Technology (CS/IT) \\
+        \textbf{Period Covered:} & 2011 to 2025 \\
+        \textbf{Examination Papers:} & 1 Complete Verified Paper Sets \\
+        \textbf{Contents:} & Examination Questions \& Official Final Answer Keys \\
+        \textbf{Published by:} & Studiva (\texttt{www.studiva.co.in}) \\
+        \hline
+    \end{tabular}
+
+    \vfill
+    {\small\textbf{Studiva $\cdot$ \texttt{www.studiva.co.in} $\cdot$ \texttt{contact@studiva.co.in}}}
+\end{center}
+
+\newpage
+
+% ==================== PAGE 2: PUBLICATION IMPRINT & NOTES ====================
+\thispagestyle{empty}
+\vspace*{0.6cm}
+\begin{center}
+    {\large\textbf{PUBLICATION INFORMATION \& COPYRIGHT NOTICE}}\\[0.4em]
+    \rule{0.6\textwidth}{0.5pt}
+\end{center}
+
+\vspace{1.2em}
+\noindent\begin{tabular}{ll}
+\textbf{Title:} & Studiva GATE Question Bank: Computer Science \& IT (2011--2025) \\
+\textbf{Publisher:} & Studiva \\
+\textbf{Website:} & \texttt{www.studiva.co.in} \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Edition (2026) \\
+\textbf{Syllabus Scope:} & Official GATE Syllabus (General Aptitude and CS / IT) \\
+\end{tabular}
+
+\vspace{1.8em}
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+\textbf{COPYRIGHT NOTICE}\\[0.4em]
+Copyright \copyright\ 2026 Studiva. All Rights Reserved.\\[0.4em]
+No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without prior written permission of Studiva, except for individual academic study.
+}}
+
+\vspace{1.5em}
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+\textbf{PUBLISHER'S NOTE: ARCHIVAL QUESTION FORMAT}\\[0.4em]
+This compendium has been meticulously curated and verified against official GATE question papers and final answer keys.
+\par\medskip\noindent
+\textbf{Notice on Image-Based Questions:}\\
+Questions containing diagrams, circuit schematics, graphs, or image-based figures from the original examination papers have been omitted in this text edition due to non-readable format in historical source archives. All text-based conceptual, analytical, mathematical, algorithmic, and numerical questions are fully included with verified official keys.
+}}
+
+\vspace{1.5em}
+\begin{center}
+\textbf{EXAMINATION STRUCTURE \& PRACTICE GUIDELINES}
+\end{center}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Sectional Mark Division:} Each paper comprises General Aptitude (GA) and Computer Science (CS). Questions are clearly grouped into 1-mark and 2-mark blocks at the head of each section.
+    \item \textbf{Question Types:} Includes Multiple Choice Questions (MCQ), Multiple Select Questions (MSQ), and Numerical Answer Type (NAT).
+    \item \textbf{Official Answer Keys:} For self-evaluation without distraction, complete official answer keys are printed at the conclusion of each respective examination paper set.
+\end{enumerate}
+
+\newpage
+
+% ==================== PAGE 3: TABLE OF CONTENTS ====================
+\begin{center}
+    {\Large\textbf{TABLE OF CONTENTS}}\\[0.4em]
+    \rule{0.5\textwidth}{0.6pt}
+\end{center}
+\vspace{1em}
+
+\noindent\begin{tabularx}{\linewidth}{|X|l|c|r|}
+\hline
+\textbf{Examination Paper} & \textbf{Session / Shift} & \textbf{Total Questions} & \textbf{Content Type} \\
+\hline
+
+GATE 2025 Computer Science & Shift CS1 & 61 & Questions + Answer Key \\ \hline
+\end{tabularx}
+
+\vspace{1.5em}
+\noindent{\footnotesize\textit{Note: All questions in this edition have been typeset from verified digital records and cross-referenced with official answer keys released by the organising IIT/IISc institutes.}}
+
+\newpage
+
+% ==================== PAPER: 2025_CS1 ====================
+\begin{center}
+{\Large\textbf{GATE 2025 EXAMINATION}}\\[3pt]
+{\normalsize\textbf{COMPUTER SCIENCE AND INFORMATION TECHNOLOGY}}\\[2pt]
+{\small\textbf{Session / Shift: CS1}}\\[5pt]
+\rule{\linewidth}{0.8pt}\vspace{-4pt}
+{\footnotesize\textbf{Duration: 180 Minutes} \hfill \textbf{Total Marks: 100} \hfill \textbf{Questions: 61}}\\
+\vspace{-4pt}\rule{\linewidth}{0.4pt}
+\end{center}
+\vspace{4pt}
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+\footnotesize\textbf{Examination Instructions:}\\[1pt]
+1. Question Types: Multiple Choice Questions (MCQ), Multiple Select Questions (MSQ), and Numerical Answer Type (NAT).\\
+2. Negative Marking Scheme: For 1-mark MCQ, $1/3$ mark is deducted; for 2-mark MCQ, $2/3$ mark is deducted. There is no negative marking for MSQ and NAT questions.\\
+3. Mark Division: Questions are grouped by mark allocation within each section as specified below. Full official answer key is provided at the end of this paper.
+}}
+\vspace{10pt}
+\begin{multicols}{2}
+
+\vspace{8pt}
+\noindent\textbf{\large\underline{GENERAL APTITUDE}}\\[2pt]
+\noindent{\footnotesize\textit{[Section Block: 1-mark questions]}}
+\vspace{4pt}
+
+\noindent\textbf{Q.1} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Ravi had \_\_\_\_\_\_ younger brother who taught at \_\_\_\_\_\_ university. He was widely regarded as \_\_\_\_\_\_ honorable man.
+Select the option with the correct sequence of articles to fill in the blanks. \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~a; a; an & \textbf{(B)}~the; an; a \\
+\addlinespace[2pt]
+\textbf{(C)}~a; an; a & \textbf{(D)}~an; an; a
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.2} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries The CEO's decision to downsize the workforce was considered myopic because it sacrificed long-term stability to accommodate short-term gains.
+Select the most appropriate option that can replace the word ``myopic'' without changing the meaning of the sentence. \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~visionary & \textbf{(B)}~shortsighted \\
+\addlinespace[2pt]
+\textbf{(C)}~progressive & \textbf{(D)}~innovative
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.3} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries The average marks obtained by a class in an examination were calculated as 30.8. However, while checking the marks entered, the teacher found that the marks of one student were entered incorrectly as 24 instead of 42. After correcting the marks, the average becomes 31.4. How many students does the class have? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~25 & \textbf{(B)}~28 \\
+\addlinespace[2pt]
+\textbf{(C)}~30 & \textbf{(D)}~32
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.4} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the relationships among P, Q, R, S, and T:
+\begin{itemize}
+\item P is the brother of Q.
+\item S is the daughter of Q.
+\item T is the sister of S.
+\item R is the mother of Q.
+\end{itemize}
+The following statements are made based on the relationships given above:
+(1) R is the grandmother of S.
+(2) P is the uncle of S and T.
+(3) R has only one son.
+(4) Q has only one daughter.
+Which one of the following options is correct? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Both (1) and (2) are true.\par\vspace{2pt}\noindent
+\textbf{(B)}~Both (1) and (3) are true.\par\vspace{2pt}\noindent
+\textbf{(C)}~Only (3) is true.\par\vspace{2pt}\noindent
+\textbf{(D)}~Only (4) is true.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+
+\vspace{6pt}
+\noindent{\footnotesize\textit{[Section Block: 2-mark questions]}}
+\vspace{3pt}
+
+\noindent\textbf{Q.6} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries ``I put the brown paper in my pocket along with the chalks, and possibly other things. I suppose every one must have reflected how primeval and how poetical are the things that one carries in one's pocket: the pocket-knife, for instance the type of all human tools, the infant of the sword. Once I planned to write a book of poems entirely about the things in my pocket. But I found it would be too long: and the age of the great epics is past.''
+(From G.K. Chesterton's ``A Piece of Chalk'')
+\par\smallskip
+Based only on the information provided in the above passage, which one of the following statements is true? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~The author of the passage carries a mirror in his pocket to reflect upon things.\par\vspace{2pt}\noindent
+\textbf{(B)}~The author of the passage had decided to write a poem on epics.\par\vspace{2pt}\noindent
+\textbf{(C)}~The pocket-knife is described as the infant of the sword.\par\vspace{2pt}\noindent
+\textbf{(D)}~Epics are described as too inconvenient to write.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.8} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries A fair six-faced dice, with the faces labelled `1', `2', `3', `4', `5', and `6', is rolled thrice. What is the probability of rolling `6' exactly once? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~$\frac{75}{216}$ & \textbf{(B)}~$\frac{1}{6}$ \\
+\addlinespace[2pt]
+\textbf{(C)}~$\frac{1}{18}$ & \textbf{(D)}~$\frac{25}{216}$
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.10} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries A shop has 4 distinct flavors of ice-cream. One can purchase any number of scoops of any flavor. The order in which the scoops are purchased is inconsequential. If one wants to purchase 3 scoops of ice-cream, in how many ways can one make that purchase? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~4 & \textbf{(B)}~20 \\
+\addlinespace[2pt]
+\textbf{(C)}~24 & \textbf{(D)}~48
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+
+\vspace{8pt}
+\noindent\textbf{\large\underline{COMPUTER SCIENCE AND INFORMATION TECHNOLOGY}}\\[2pt]
+\noindent{\footnotesize\textit{[Section Block: 1-mark questions]}}
+\vspace{4pt}
+
+\noindent\textbf{Q.11} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Suppose a program is running on a non-pipelined single processor computer system. The computer is connected to an external device that can interrupt the processor asynchronously. The processor needs to execute the interrupt service routine (ISR) to serve this interrupt. The following steps (not necessarily in order) are taken by the processor when the interrupt arrives:
+\begin{enumerate}[label=(\roman*)]
+\item The processor saves the content of the program counter.
+\item The program counter is loaded with the start address of the ISR.
+\item The processor finishes the present instruction.
+\end{enumerate}
+Which ONE of the following is the CORRECT sequence of steps? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~(iii), (i), (ii) & \textbf{(B)}~(i), (iii), (ii) \\
+\addlinespace[2pt]
+\textbf{(C)}~(i), (ii), (iii) & \textbf{(D)}~(iii), (ii), (i)
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.12} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which ONE of the following statements is FALSE regarding the symbol table? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Symbol table is responsible for keeping track of the scope of variables.\par\vspace{2pt}\noindent
+\textbf{(B)}~Symbol table can be implemented using a binary search tree.\par\vspace{2pt}\noindent
+\textbf{(C)}~Symbol table is not required after the parsing phase.\par\vspace{2pt}\noindent
+\textbf{(D)}~Symbol table is created during the lexical analysis phase.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.13} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which ONE of the following techniques used in compiler code optimization uses live variable analysis? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Run-time function call management\par\vspace{2pt}\noindent
+\textbf{(B)}~Register assignment to variables\par\vspace{2pt}\noindent
+\textbf{(C)}~Strength reduction\par\vspace{2pt}\noindent
+\textbf{(D)}~Constant folding
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.14} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider a demand paging memory management system with 32-bit logical address, 20-bit physical address, and page size of 2048 bytes. Assuming that the memory is byte addressable, what is the maximum number of entries in the page table? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~$2^{21}$ & \textbf{(B)}~$2^{20}$ \\
+\addlinespace[2pt]
+\textbf{(C)}~$2^{22}$ & \textbf{(D)}~$2^{24}$
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.15} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries A schedule of three database transactions $T_1, T_2$, and $T_3$ is shown. $R_i(A)$ and $W_i(A)$ denote read and write of data item $A$ by transaction $T_i$, $i= 1,2,3$. The transaction $T_1$ aborts at the end. Which other transaction(s) will be required to be rolled back?
+\[ R\_1(X) \; W\_1(Y) \; R\_2(X) \; R\_2(Y) \; R\_3(Y) \; ABORT(T\_1) \] \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Only $T_2$\par\vspace{2pt}\noindent
+\textbf{(B)}~Only $T_3$\par\vspace{2pt}\noindent
+\textbf{(C)}~Both $T_2$ and $T_3$\par\vspace{2pt}\noindent
+\textbf{(D)}~Neither $T_2$ nor $T_3$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.16} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Identify the ONE CORRECT matching between the OSI layers and their corresponding functionalities as shown.
+\par\smallskip
+\begin{tabular}{ll}
+\textbf{OSI Layers} & \textbf{Functionalities} \\
+(a) Network layer & (I) Packet routing \\
+(b) Transport layer & (II) Framing and error handling \\
+(c) Datalink layer & (III) Host to host communication
+\end{tabular} \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~(a)-(I), (b)-(II), (c)-(III)\par\vspace{2pt}\noindent
+\textbf{(B)}~(a)-(I), (b)-(III), (c)-(II)\par\vspace{2pt}\noindent
+\textbf{(C)}~(a)-(II), (b)-(I), (c)-(III)\par\vspace{2pt}\noindent
+\textbf{(D)}~(a)-(III), (b)-(II), (c)-(I)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.17} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries $g(\cdot)$ is a function from $A$ to $B$, $f(\cdot)$ is a function from $B$ to $C$, and their composition defined as $f(g(\cdot))$ is a mapping from $A$ to $C$.
+If $f(\cdot)$ and $f(g(\cdot))$ are onto (surjective) functions, which ONE of the following is TRUE about the function $g(\cdot)$? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$g(\cdot)$ must be an onto (surjective) function.\par\vspace{2pt}\noindent
+\textbf{(B)}~$g(\cdot)$ must be a one-to-one (injective) function.\par\vspace{2pt}\noindent
+\textbf{(C)}~$g(\cdot)$ must be a bijective function, that is, both one-to-one and onto.\par\vspace{2pt}\noindent
+\textbf{(D)}~$g(\cdot)$ is not required to be a one-to-one or onto function.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.18} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Let $G$ be any undirected graph with positive edge weights, and $T$ be a minimum spanning tree of $G$. For any two vertices, $u$ and $v$, let $d_1(u, v)$ and $d_2(u, v)$ be the shortest distances between $u$ and $v$ in $G$ and $T$, respectively. Which ONE of the options is CORRECT for all possible $G, T, u$ and $v$? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$d_1(u, v) = d_2(u, v)$\par\vspace{2pt}\noindent
+\textbf{(B)}~$d_1(u, v) \le d_2(u, v)$\par\vspace{2pt}\noindent
+\textbf{(C)}~$d_1(u, v) \ge d_2(u, v)$\par\vspace{2pt}\noindent
+\textbf{(D)}~$d_1(u, v) \ne d_2(u, v)$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.19} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following context-free grammar $G$, where $S, A$, and $B$ are the variables (non-terminals), $a$ and $b$ are the terminal symbols, $S$ is the start variable, and the rules of $G$ are described as:
+\[ S \to aaB \mid Abb \]
+\[ A \to a \mid aA \]
+\[ B \to b \mid bB \]
+Which ONE of the languages $L(G)$ is accepted by $G$? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$L(G) = \{a^2b^n \mid n \ge 1\} \cup \{a^nb^2 \mid n \ge 1\}$\par\vspace{2pt}\noindent
+\textbf{(B)}~$L(G) = \{a^nb^{2n} \mid n \ge 1\} \cup \{a^{2n}b^n \mid n \ge 1\}$\par\vspace{2pt}\noindent
+\textbf{(C)}~$L(G) = \{a^nb^n \mid n \ge 1\}$\par\vspace{2pt}\noindent
+\textbf{(D)}~$L(G) = \{a^{2n}b^{2n} \mid n \ge 1\}$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.20} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following recurrence relation:
+\[ T(n) = 2T(n-1) + n2^n \quad \text{for } n > 0, \; T(0) = 1. \]
+Which ONE of the following options is CORRECT? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$T(n) = \Theta(n^2 2^n)$\par\vspace{2pt}\noindent
+\textbf{(B)}~$T(n) = \Theta(n 2^n)$\par\vspace{2pt}\noindent
+\textbf{(C)}~$T(n) = \Theta((\log n)^2 2^n)$\par\vspace{2pt}\noindent
+\textbf{(D)}~$T(n) = \Theta(4^n)$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.21} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Consider a $B^+$ tree with 5 nodes, in which a node can store at most 3 key values. The value 23 is now inserted in the $B^+$ tree. Which of the following option(s) is/are CORRECT? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~None of the nodes will split.\par\vspace{2pt}\noindent
+\textbf{(B)}~At least one node will split and redistribute.\par\vspace{2pt}\noindent
+\textbf{(C)}~The total number of nodes will remain same.\par\vspace{2pt}\noindent
+\textbf{(D)}~The height of the tree will increase.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.22} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the 3-way handshaking protocol for TCP connection establishment. Let the three packets exchanged during the connection establishment be denoted as P1, P2, and P3, in order. Which of the following option(s) is/are TRUE with respect to TCP header flags that are set in the packets? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~P3: SYN = 1, ACK = 1 & \textbf{(B)}~P2: SYN = 1, ACK = 1 \\
+\addlinespace[2pt]
+\textbf{(C)}~P2: SYN = 0, ACK = 1 & \textbf{(D)}~P1: SYN = 1
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.23} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the given system of linear equations for variables $x$ and $y$, where $k$ is a real-valued constant. Which of the following option(s) is/are CORRECT?
+\[ x + ky = 1 \]
+\[ kx + y = -1 \] \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~There is exactly one value of $k$ for which the above system of equations has no solution.\par\vspace{2pt}\noindent
+\textbf{(B)}~There exist an infinite number of values of $k$ for which the system of equations has no solution.\par\vspace{2pt}\noindent
+\textbf{(C)}~There exists exactly one value of $k$ for which the system of equations has exactly one solution.\par\vspace{2pt}\noindent
+\textbf{(D)}~There exists exactly one value of $k$ for which the system of equations has an infinite number of solutions.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.24} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Let $X$ be a 3-variable Boolean function that produces output as `1' when at least two of the input variables are `1'. Which of the following statement(s) is/are CORRECT, where $a, b, c, d, e$ are Boolean variables? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$X(a, b, X(c, d, e)) = X(X(a, b, c), d, e)$\par\vspace{2pt}\noindent
+\textbf{(B)}~$X(a, b, X(a, b, c)) = X(a, b, c)$\par\vspace{2pt}\noindent
+\textbf{(C)}~$X(a, b, X(a, c, d)) = (X(a, b, a) \text{ AND } X(c, d, c))$\par\vspace{2pt}\noindent
+\textbf{(D)}~$X(a, b, c) = X(a, X(a, b, c), X(a, c, c))$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.25} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries The number $-6$ can be represented as $1010_2$ in 4-bit 2's complement representation. Which of the following is/are CORRECT 2's complement representation(s) of $-6$? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~1000 1010 in 8-bits\par\vspace{2pt}\noindent
+\textbf{(B)}~1111 1010 in 8-bits\par\vspace{2pt}\noindent
+\textbf{(C)}~1000 0000 0000 1010 in 16-bits\par\vspace{2pt}\noindent
+\textbf{(D)}~1111 1111 1111 1010 in 16-bits
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.26} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Which of the following statement(s) is/are TRUE for any binary search tree (BST) having $n$ distinct integers? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~The maximum length of a path from the root node to any other node is $(n-1)$.\par\vspace{2pt}\noindent
+\textbf{(B)}~An inorder traversal will always produce a sorted sequence of elements.\par\vspace{2pt}\noindent
+\textbf{(C)}~Finding an element takes $O(\log_2 n)$ time in the worst case.\par\vspace{2pt}\noindent
+\textbf{(D)}~Every BST is also a Min-Heap.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.27} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries A partial data path of a processor is given, where RA, RB, and RZ are 32-bit registers. Multiplexer Mux\_A selects between RA and a 32-bit immediate value, and Mux\_B selects between RB and a 32-bit immediate value. The output of the ALU is stored into RZ. Which option(s) is/are CORRECT related to arithmetic operations using the data path as shown? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~The data path can implement arithmetic operations involving two registers.\par\vspace{2pt}\noindent
+\textbf{(B)}~The data path can implement arithmetic operations involving one register and one immediate value.\par\vspace{2pt}\noindent
+\textbf{(C)}~The data path can implement arithmetic operations involving two immediate values.\par\vspace{2pt}\noindent
+\textbf{(D)}~The data path can only implement arithmetic operations involving one register and one immediate value.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.28} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries A regular language $L$ is accepted by a non-deterministic finite automaton (NFA) with $n$ states. Which of the following statement(s) is/are FALSE? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$L$ may have an accepting NFA with $< n$ states.\par\vspace{2pt}\noindent
+\textbf{(B)}~$L$ may have an accepting DFA with $< n$ states.\par\vspace{2pt}\noindent
+\textbf{(C)}~There exists a DFA with $\le 2^n$ states that accepts $L$.\par\vspace{2pt}\noindent
+\textbf{(D)}~Every DFA that accepts $L$ has $> 2^n$ states.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.29} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Suppose in a multiprogramming environment, the following C program segment is executed. A process goes into I/O queue whenever an I/O related operation is performed. Assume that there will always be a context switch whenever a process requests for an I/O, and also whenever the process returns from an I/O. The number of times the process will enter the ready queue during its lifetime (not counting the time the process enters the ready queue when it is run initially) is \_\_\_\_\_\_\. (Answer in integer)
+\par\smallskip
+\begin{verbatim}
+int main()
+{
+    int x=0, i=0;
+    scanf("%d", &x);
+    for(i=0; i<20; i++)
+    {
+        x = x + 20;
+        printf("%d\n", x);
+    }
+    return 0;
+}
+\end{verbatim} \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.30} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Let $S$ be the set of all ternary strings defined over the alphabet $\{a, b, c\}$. Consider all strings in $S$ that contain at least one occurrence of two consecutive symbols, that is, ``aa'', ``bb'' or ``cc''. The number of such strings of length 5 that are possible is \_\_\_\_\_\_\. (Answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.31} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the given function $f(x)$:
+\[ f(x) = \begin{cases} ax + b & \text{for } x < 1 \\ x^3 + x^2 + 1 & \text{for } x \ge 1 \end{cases} \]
+If the function is differentiable everywhere, the value of $b$ must be \_\_\_\_\_\_\. (rounded off to one decimal place) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.32} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries A box contains 5 coins: 4 regular coins and 1 fake coin. When a regular coin is tossed, the probability $P(\text{head}) = 0.5$ and for a fake coin, $P(\text{head}) = 1$. You pick a coin at random and toss it twice, and get two heads. The probability that the coin you have chosen is the fake coin is \_\_\_\_\_\_\. (rounded off to two decimal places) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.33} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries The pseudocode of a function fun() is given below:
+\begin{verbatim}
+fun(int A[0,...,n-1]){
+    for i=0 to n-2
+        for j=0 to n-i-2
+            if (A[j] > A[j+1])
+                then swap A[j] and A[j+1]
+}
+\end{verbatim}
+Let $A[0, \ldots, 29]$ be an array storing 30 distinct integers in descending order. The number of swap operations that will be performed, if the function fun() is called with $A[0, \ldots, 29]$ as argument, is \_\_\_\_\_\_\. (Answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.34} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the following C program:
+\par\smallskip
+\begin{verbatim}
+#include <stdio.h>
+void foo(int *p, int x){
+    *p = x;
+}
+int main(){
+    int *z;
+    int a = 20, b = 25;
+    z = &a;
+    foo(z, b);
+    printf("%d", a);
+    return 0;
+}
+\end{verbatim}
+The output of the given C program is \_\_\_\_\_\_\. (Answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.35} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries The height of any rooted tree is defined as the maximum number of edges in the path from the root node to any leaf node. Suppose a Min-Heap $T$ stores 32 keys. The height of $T$ is \_\_\_\_\_\_\. (Answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+
+\vspace{6pt}
+\noindent{\footnotesize\textit{[Section Block: 2-mark questions]}}
+\vspace{3pt}
+
+\noindent\textbf{Q.36} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider a memory system with 1M bytes of main memory and 16K bytes of cache memory. Assume that the processor generates 20-bit memory address, and the cache block size is 16 bytes. If the cache uses direct mapping, how many bits will be required to store all the tag values? [Assume memory is byte addressable, $1\text{K}=2^{10}, 1\text{M}=2^{20}$.] \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~$6 \times 2^{10}$ & \textbf{(B)}~$8 \times 2^{10}$ \\
+\addlinespace[2pt]
+\textbf{(C)}~$2^{12}$ & \textbf{(D)}~$2^{14}$
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.37} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries A processor has 64 general-purpose registers and 50 distinct instruction types. An instruction is encoded in 32-bits. What is the maximum number of bits that can be used to store the immediate operand for the given instruction?
+\begin{verbatim}
+ADD R1, #25 // R1 = R1 + 25
+\end{verbatim} \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~16 & \textbf{(B)}~20 \\
+\addlinespace[2pt]
+\textbf{(C)}~22 & \textbf{(D)}~24
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.38} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries A computer has two processors, $M_1$ and $M_2$. Four processes $P_1, P_2, P_3, P_4$ with CPU bursts of 20, 16, 25, and 10 milliseconds, respectively, arrive at the same time and these are the only processes in the system. The scheduler uses non-preemptive priority scheduling, with priorities decided as follows:
+\begin{itemize}
+\item $M_1$ uses priority of execution for the processes as, $P_1 > P_3 > P_2 > P_4$, i.e., $P_1$ and $P_4$ have highest and lowest priorities, respectively.
+\item $M_2$ uses priority of execution for the processes as, $P_2 > P_3 > P_4 > P_1$, i.e., $P_2$ and $P_1$ have highest and lowest priorities, respectively.
+\end{itemize}
+A process $P_i$ is scheduled to a processor $M_k$, if the processor is free and no other process $P_j$ is waiting with higher priority. At any given point of time, a process can be allocated to any one of the free processors without violating the execution priority rules. Ignore the context switch time. What will be the average waiting time of the processes in milliseconds? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~9.00 & \textbf{(B)}~8.75 \\
+\addlinespace[2pt]
+\textbf{(C)}~6.50 & \textbf{(D)}~7.50
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.39} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider two relations describing $teams$ and $players$ in a sports league:
+\begin{itemize}
+\item $teams(tid, tname)$: $tid, tname$ are team-id and team-name, respectively
+\item $players(pid, pname, tid)$: $pid, pname$, and $tid$ denote player-id, player-name and the team-id of the player, respectively
+\end{itemize}
+Which ONE of the following tuple relational calculus queries returns the name of the players who play for the team having $tname$ as 'MI'? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$\{ p.pname \mid p \in players \land \exists t (t \in teams \land p.tid = t.tid \land t.tname = \text{'MI'}) \}$\par\vspace{2pt}\noindent
+\textbf{(B)}~$\{ p.pname \mid p \in teams \land \exists t (t \in players \land p.tid = t.tid \land t.tname = \text{'MI'}) \}$\par\vspace{2pt}\noindent
+\textbf{(C)}~$\{ p.pname \mid p \in players \land \exists t (t \in teams \land t.tname = \text{'MI'}) \}$\par\vspace{2pt}\noindent
+\textbf{(D)}~$\{ p.pname \mid p \in teams \land \exists t (t \in players \land t.tname = \text{'MI'}) \}$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.40} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries A packet with the destination IP address 145.36.109.70 arrives at a router whose routing table is shown below:
+\par\smallskip
+\begin{tabular}{|l|l|c|}
+\hline
+\textbf{Subnet Address} & \textbf{Subnet Mask (CIDR)} & \textbf{Interface} \\
+\hline
+145.36.0.0 & /16 & E1 \\
+145.36.128.0 & /17 & E2 \\
+145.36.64.0 & /18 & E3 \\
+145.36.255.0 & /24 & E4 \\
+Default & -- & E5 \\
+\hline
+\end{tabular}
+\par\smallskip
+Which interface will the packet be forwarded to? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~E3 & \textbf{(B)}~E1 \\
+\addlinespace[2pt]
+\textbf{(C)}~E2 & \textbf{(D)}~E5
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.41} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Let $A$ be a $2 \times 2$ matrix given by:
+\[ A = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix} \]
+What are the eigenvalues of the matrix $A^{13}$? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$1, -1$\par\vspace{2pt}\noindent
+\textbf{(B)}~$2\sqrt{2}, -2\sqrt{2}$\par\vspace{2pt}\noindent
+\textbf{(C)}~$4\sqrt{2}, -4\sqrt{2}$\par\vspace{2pt}\noindent
+\textbf{(D)}~$64\sqrt{2}, -64\sqrt{2}$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.42} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following four variable Boolean function in sum-of-product form:
+\[ F(b\_3, b\_2, b\_1, b\_0) = \sum(0, 2, 4, 8, 10, 11, 12) \]
+where the value of the function is computed by considering $b_3b_2b_1b_0$ as a 4-bit binary number, where $b_3$ denotes the most significant bit and $b_0$ denotes the least significant bit. Note that there are no don't care terms. Which ONE of the following options is the CORRECT minimized expression? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$\overline{b}_1\overline{b}_0 + \overline{b}_2\overline{b}_0 + b_1\overline{b}_2b_3$\par\vspace{2pt}\noindent
+\textbf{(B)}~$\overline{b}_1\overline{b}_0 + \overline{b}_2\overline{b}_0$\par\vspace{2pt}\noindent
+\textbf{(C)}~$\overline{b}_2\overline{b}_0 + b_1b_2b_3$\par\vspace{2pt}\noindent
+\textbf{(D)}~$\overline{b}_0\overline{b}_2 + \overline{b}_3$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.43} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Let $G(V, E)$ be an undirected and unweighted graph with 100 vertices. Let $d(u, v)$ denote the number of edges in a shortest path between vertices $u$ and $v$ in $V$. Let the maximum value of $d(u, v), u, v \in V$ such that $u \neq v$, be 30. Let $T$ be any breadth-first-search tree of $G$. Which ONE of the given options is CORRECT for every such graph $G$? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~The height of $T$ is exactly 15.\par\vspace{2pt}\noindent
+\textbf{(B)}~The height of $T$ is exactly 30.\par\vspace{2pt}\noindent
+\textbf{(C)}~The height of $T$ is at least 15.\par\vspace{2pt}\noindent
+\textbf{(D)}~The height of $T$ is at least 30.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.44} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following two languages over the alphabet $\{a, b\}$:
+\[ L\_1 = \{ \alpha\beta\alpha \mid \alpha \in \{a, b\}^+ \text{ AND } \beta \in \{a, b\}^+ \} \]
+\[ L\_2 = \{ \alpha\beta\alpha \mid \alpha \in \{a\}^+ \text{ AND } \beta \in \{a, b\}^+ \} \]
+Which ONE of the following statements is CORRECT? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Both $L_1$ and $L_2$ are regular languages.\par\vspace{2pt}\noindent
+\textbf{(B)}~$L_1$ is a regular language but $L_2$ is not a regular language.\par\vspace{2pt}\noindent
+\textbf{(C)}~$L_1$ is not a regular language but $L_2$ is a regular language.\par\vspace{2pt}\noindent
+\textbf{(D)}~Neither $L_1$ nor $L_2$ is a regular language.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.45} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following two languages over the alphabet $\{a, b, c\}$, where $m$ and $n$ are natural numbers.
+\[ L\_1 = \{a^mb^mc^{m+n} \mid m, n \ge 1\} \]
+\[ L\_2 = \{a^mb^nc^{m+n} \mid m, n \ge 1\} \]
+Which ONE of the following statements is CORRECT? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Both $L_1$ and $L_2$ are context-free languages.\par\vspace{2pt}\noindent
+\textbf{(B)}~$L_1$ is a context-free language but $L_2$ is not a context-free language.\par\vspace{2pt}\noindent
+\textbf{(C)}~$L_1$ is not a context-free language but $L_2$ is a context-free language.\par\vspace{2pt}\noindent
+\textbf{(D)}~Neither $L_1$ nor $L_2$ are context-free languages.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.46} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Which of the following statement(s) is/are TRUE while computing First and Follow during top down parsing by a compiler? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~For a production $A \to \epsilon$, $\epsilon$ will be added to $First(A)$.\par\vspace{2pt}\noindent
+\textbf{(B)}~If there is any input right end marker, it will be added to $First(S)$, where $S$ is the start symbol.\par\vspace{2pt}\noindent
+\textbf{(C)}~For a production $A \to \epsilon$, $\epsilon$ will be added to $Follow(A)$.\par\vspace{2pt}\noindent
+\textbf{(D)}~If there is any input right end marker, it will be added to $Follow(S)$, where $S$ is the start symbol.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.47} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Consider a relational schema $team(name, city, owner)$, with functional dependencies $\{name \to city, name \to owner\}$. The relation $team$ is decomposed into two relations, $t_1(name, city)$ and $t_2(name, owner)$. Which of the following statement(s) is/are TRUE? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~The relation $team$ is NOT in BCNF.\par\vspace{2pt}\noindent
+\textbf{(B)}~The relations $t_1$ and $t_2$ are in BCNF.\par\vspace{2pt}\noindent
+\textbf{(C)}~The decomposition constitutes a lossless join.\par\vspace{2pt}\noindent
+\textbf{(D)}~The relation $team$ is NOT in 3NF.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.48} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Which of the following predicate logic formulae/formula is/are CORRECT representation(s) of the statement: ``Everyone has exactly one mother''?
+The meanings of the predicates used are:
+\begin{itemize}
+\item $mother(y, x)$: $y$ is the mother of $x$
+\item $noteq(x, y)$: $x$ and $y$ are not equal
+\end{itemize} \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$\forall x \exists y \exists z (mother(y, x) \land \neg mother(z, x))$\par\vspace{2pt}\noindent
+\textbf{(B)}~$\forall x \exists y [mother(y, x) \land \forall z (noteq(z, y) \to \neg mother(z, x))]$\par\vspace{2pt}\noindent
+\textbf{(C)}~$\forall x \forall y [mother(y, x) \to \exists z (mother(z, x) \land \neg noteq(z, y))]$\par\vspace{2pt}\noindent
+\textbf{(D)}~$\forall x \exists y [mother(y, x) \land \neg \exists z (noteq(z, y) \land mother(z, x))]$
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.49} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries $A = \{0, 1, 2, 3, \dots \}$ is the set of non-negative integers. Let $\mathcal{F}$ be the set of functions from $A$ to itself. For any two functions $f_1, f_2 \in \mathcal{F}$, we define
+\[ (f\_1 \odot f\_2)(n) = f\_1(n) + f\_2(n) \]
+for every number $n$ in $A$. Which of the following is/are CORRECT about the mathematical structure $(\mathcal{F}, \odot)$? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~$(\mathcal{F}, \odot)$ is an Abelian group.\par\vspace{2pt}\noindent
+\textbf{(B)}~$(\mathcal{F}, \odot)$ is an Abelian monoid.\par\vspace{2pt}\noindent
+\textbf{(C)}~$(\mathcal{F}, \odot)$ is a non-Abelian group.\par\vspace{2pt}\noindent
+\textbf{(D)}~$(\mathcal{F}, \odot)$ is a non-Abelian monoid.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.50} \hfill {\footnotesize\textsf{[MSQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the deterministic finite automaton (DFA) defined over the alphabet $\Sigma = \{a, b\}$. Identify which of the following language(s) is/are accepted by the given DFA. \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~The set of all strings containing an even number of $b$'s.\par\vspace{2pt}\noindent
+\textbf{(B)}~The set of all strings containing the pattern $bab$.\par\vspace{2pt}\noindent
+\textbf{(C)}~The set of all strings ending with the pattern $bab$.\par\vspace{2pt}\noindent
+\textbf{(D)}~The set of all strings not containing the pattern $aba$.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.51} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries A disk of size 512M bytes is divided into blocks of 64K bytes. A file is stored in the disk using linked allocation. In linked allocation, each data block reserves 4 bytes to store the pointer to the next data block. The link part of the last data block contains a NULL pointer (also of 4 bytes). Suppose a file of 1M bytes needs to be stored in the disk. Assume $1\text{K} = 2^{10}$ and $1\text{M} = 2^{20}$. The amount of space in bytes that will be wasted due to internal fragmentation is \_\_\_\_\_\_\. (Answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.52} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Refer to the given 3-address code sequence. This code sequence is split into basic blocks. The number of basic blocks is \_\_\_\_\_\_\. (Answer in integer)
+\par\smallskip
+\begin{verbatim}
+1001: i = 1
+1002: j = 1
+1003: t1 = 10*i
+1004: t2 = t1+j
+1005: t3 = 8*t2
+1006: t4 = t3-88
+1007: a[t4] = 0.0
+1008: j = j+1
+1009: if j <= 10 goto 1003
+1010: i = i+1
+1011: if i <= 10 goto 1002
+1012: i = 1
+1013: t5 = i-1
+1014: t6 = 88*t5
+1015: a[t6] = 1.0
+1016: i = i+1
+1017: if i <= 11 goto 1013
+\end{verbatim} \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.53} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries A computer has a memory hierarchy consisting of two-level cache (L1 and L2) and a main memory. If the processor needs to access data from memory, it first looks into L1 cache ($h_1 = 0.95$, access time $t_1 = 10\text{ ns}$). If not found in L1, it accesses L2 cache ($h_2 = 0.85$, access time including L1 miss penalty $t_2 = 20\text{ ns}$). If it misses in L2, it accesses main memory (access time including L1 and L2 miss penalties $t_{MM} = 200\text{ ns}$). The average memory access time in nanoseconds (ns) is \_\_\_\_\_\_\. (rounded off to two decimal places) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.54} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries In optimal page replacement algorithm, information about all future page references is available to the operating system (OS). A modification of the optimal page replacement algorithm is as follows:
+The OS correctly predicts only up to next 4 page references (including the current page) at the time of allocating a frame to a page.
+A process accesses the pages in the following order of page numbers:
+1, 3, 2, 4, 2, 3, 1, 2, 4, 3, 1, 4.
+If the system has three memory frames that are initially empty, the number of page faults that will occur during execution of the process is \_\_\_\_\_\_\. (Answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.56} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Suppose a 5-bit message is transmitted from a source to a destination through a noisy channel. The probability that a bit of the message gets flipped during transmission is 0.01. Flipping of each bit is independent of one another. The probability that the message is delivered error-free to the destination is \_\_\_\_\_\_\. (rounded off to three decimal places) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.57} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Suppose a message of size 15000 bytes is transmitted from a source to a destination using IPv4 protocol via two routers as shown: Source $\to$ Router-1 ($\text{MTU} = 5000$ bytes) $\to$ Router-2 ($\text{MTU} = 3000$ bytes) $\to$ Destination. Each router has a defined maximum transmission unit (MTU) including the 20-byte IP header. The number of fragments that will be delivered to the destination is \_\_\_\_\_\_\. (Answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.58} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider a probability distribution given by the density function $P(x)$:
+\[ P(x) = \begin{cases} C x^2 & \text{for } 1 \le x \le 4 \\ 0 & \text{for } x < 1 \text{ or } x > 4 \end{cases} \]
+The probability that $x$ lies between 2 and 3, i.e., $P(2 \le x \le 3)$ is \_\_\_\_\_\_\. (rounded off to three decimal places) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.59} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider a finite state machine (FSM) with one input $X$ and one output $f$, represented by the given state transition table:
+\par\smallskip
+\begin{tabular}{|c|cc|cc|}
+\hline
+\textbf{Present state} & \multicolumn{2}{c|}{\textbf{Next state}} & \multicolumn{2}{c|}{\textbf{Output } $f$} \\
+& $X=0$ & $X=1$ & $X=0$ & $X=1$ \\
+\hline
+A & F & B & 0 & 0 \\
+B & D & C & 0 & 0 \\
+C & F & E & 0 & 0 \\
+D & G & A & 1 & 0 \\
+E & D & C & 0 & 0 \\
+F & F & B & 1 & 1 \\
+G & G & H & 0 & 1 \\
+H & G & A & 1 & 0 \\
+\hline
+\end{tabular}
+\par\smallskip
+The minimum number of states required to realize this FSM is \_\_\_\_\_\_\. (Answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.60} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the given sequential circuit designed using D-Flip-flops. The circuit is initialized with some value (initial state). The number of distinct states the circuit will go through before returning back to the initial state is \_\_\_\_\_\_\. (Answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.61} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the following C program:
+\par\smallskip
+\begin{verbatim}
+#include <stdio.h>
+int foo(int S[], int size){
+    if(size == 0) return 0;
+    if(size == 1) return 1;
+    if(S[0] != S[1]) return 1 + foo(S+1, size-1);
+    return foo(S+1, size-1);
+}
+int main(){
+    int A[] = {0, 1, 2, 2, 2, 0, 0, 1, 1};
+    printf("%d", foo(A, 9));
+    return 0;
+}
+\end{verbatim}
+The value printed by the given C program is \_\_\_\_\_\_\. (Answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.62} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Let LIST be a datatype for an implementation of linked list defined as follows:
+\begin{verbatim}
+typedef struct list {
+    int data;
+    struct list *next;
+} LIST;
+\end{verbatim}
+Suppose a program has created two linked lists, L1 and L2, whose contents are given (code for creating L1 and L2 is not provided here). L1 contains 9 nodes, and L2 contains 7 nodes.
+Consider the following C program segment that modifies the list L1. The number of nodes that will be there in L1 after the execution of the code segment is \_\_\_\_\_\_\. (Answer in integer)
+\par\smallskip
+\begin{verbatim}
+int find (int query, LIST *list) {
+    while (list != NULL){
+        if(list->data == query) return 1;
+        list = list->next;
+    }
+    return 0;
+}
+int main () {
+    ...
+    ptr1 = L1; ptr2 = L2;
+    while (ptr1->next != NULL){
+        query = ptr1->next->data;
+        if (find (query, L2))
+            ptr1->next = ptr1->next->next;
+        else ptr1 = ptr1->next;
+    }
+    ...
+    return 0;
+}
+\end{verbatim} \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.63} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the following C program:
+\par\smallskip
+\begin{verbatim}
+#include <stdio.h>
+int gate (int n) {
+    int d, t, newnum, turn;
+    newnum = turn = 0; t = 1;
+    while (n >= t) t *= 10;
+    t /= 10;
+    while (t > 0) {
+        d = n / t;
+        n = n % t;
+        t /= 10;
+        if (turn) newnum = 10 * newnum + d;
+        turn = (turn + 1) % 2;
+    }
+    return newnum;
+}
+int main () {
+    printf("%d", gate(14362));
+    return 0;
+}
+\end{verbatim}
+The value printed by the given C program is \_\_\_\_\_\_\. (Answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.64} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries The maximum value of $x$ such that the edge between the nodes B and C is included in every minimum spanning tree of the given graph is \_\_\_\_\_\_\. (answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.65} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries In a double hashing scheme, $h_1(k) = k \bmod 11$ and $h_2(k) = 1 + (k \bmod 7)$ are the auxiliary hash functions. The size $m$ of the hash table is 11. The hash function for the $i$-th probe in the open address table is $[h_1(k) + i \cdot h_2(k)] \bmod m$. The following keys are inserted in the given order: 63, 50, 25, 79, 67, 24.
+The slot at which key 24 gets stored is \_\_\_\_\_\_\. (Answer in integer) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\end{multicols}
+\vspace{8pt}
+\begin{center}
+\rule{0.35\linewidth}{0.5pt}\\[2pt]
+\textbf{\small --- END OF QUESTION PAPER ---}\\[-8pt]
+\rule{0.35\linewidth}{0.5pt}
+\end{center}
+\vspace{10pt}
+\subsection*{OFFICIAL ANSWER KEY --- GATE 2025 (CS1)}
+\vspace{-4pt}
+\noindent{\footnotesize\textit{Official final answer keys published by the GATE Organising Institute. For NAT questions, allowable numerical ranges are displayed where applicable. MTA = Marks To All.}}
+\vspace{4pt}
+\begin{center}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|c|c|l||c|c|l||c|c|l||c|c|l|}
+\hline
+\textbf{Q} & \textbf{Type} & \textbf{Key} & \textbf{Q} & \textbf{Type} & \textbf{Key} & \textbf{Q} & \textbf{Type} & \textbf{Key} & \textbf{Q} & \textbf{Type} & \textbf{Key} \\
+\hline\hline
+1 & MCQ & A & 20 & MCQ & A & 36 & MCQ & A & 52 & NAT & 6 \\ \hline
+2 & MCQ & B & 21 & MSQ & B;D & 37 & MCQ & B & 53 & NAT & 11.83 to 11.87 \\ \hline
+3 & MCQ & C & 22 & MSQ & B;D & 38 & MCQ & A & 54 & NAT & 6 \\ \hline
+4 & MCQ & A & 23 & MSQ & A;D & 39 & MCQ & A & 56 & NAT & 0.949 to 0.952 \\ \hline
+6 & MCQ & C & 24 & MSQ & B;D & 40 & MCQ & A & 57 & NAT & 7 \\ \hline
+8 & MCQ & A & 25 & MSQ & B;D & 41 & MCQ & D & 58 & NAT & 0.300 to 0.302 \\ \hline
+10 & MCQ & B & 26 & MSQ & A;B & 42 & MCQ & A & 59 & NAT & 5 \\ \hline
+11 & MCQ & A & 27 & MSQ & A;B;C & 43 & MCQ & C & 60 & NAT & 7 to 8 \\ \hline
+12 & MCQ & C & 28 & MSQ & D & 44 & MCQ & C & 61 & NAT & 5 \\ \hline
+13 & MCQ & B & 29 & NAT & 21 & 45 & MCQ & C & 62 & NAT & 5 \\ \hline
+14 & MCQ & A & 30 & NAT & 195 & 46 & MSQ & A;D & 63 & NAT & 46 \\ \hline
+15 & MCQ & C & 31 & NAT & -2.1 to -1.9 & 47 & MSQ & B;C & 64 & NAT & 5 \\ \hline
+16 & MCQ & B & 32 & NAT & 0.49 to 0.51 & 48 & MSQ & B;D & 65 & NAT & 10 \\ \hline
+17 & MCQ & D & 33 & NAT & 435 & 49 & MSQ & B &  & &  \\ \hline
+18 & MCQ & B & 34 & NAT & 25 & 50 & MSQ & C &  & &  \\ \hline
+19 & MCQ & A & 35 & NAT & 5 & 51 & NAT & 65468 &  & &  \\ \hline
+\end{tabular}%
+}
+\end{center}
+\end{document}

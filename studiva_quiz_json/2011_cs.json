@@ -1,0 +1,745 @@
+{
+  "negative_marking": true,
+  "negative_marking_factor": 0.33,
+  "questions": [
+    {
+      "id": "2011_CS_CS_Q01",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "In a compiler, keywords of a language are recognized during",
+      "options": [
+        "parsing of the program",
+        "the code generation",
+        "the lexical analysis of the program",
+        "dataflow analysis"
+      ],
+      "answer": "the lexical analysis of the program",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q01_v2",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Ta a (0, =<) where c is a constant\nwry (FA,",
+      "options": [],
+      "answer": "",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q02",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "A layer-4 firewall (a device that can look at all protocol headers up to the transport layer) CANNOT",
+      "options": [
+        "block entire HTTP traffic during 9:00PM and 5:00AM",
+        "block all ICMP traffic",
+        "stop incoming traffic from a specific IP address but allow outgoing traffic to the same IP\naddress",
+        "block TCP traffic from a specific user on a multi-user system during 9:00PM and 5:00AM."
+      ],
+      "answer": "block TCP traffic from a specific user on a multi-user system during 9:00PM and 5:00AM.",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q02_v2",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Ts, Ay (Fucaca «) where c; and c? are constants\nThe database can be configured to do ordered indexing on A, or hashing on A, - Which of the\nfollowing statements is TRUE?",
+      "options": [
+        "Ordered indexing will always outperform hashing for both queries",
+        "Hashing will always outperform ordered indexing for both queries",
+        "Hashing will outperform ordered indexing on Q1, but not on Q2",
+        "Hashing will outperform ordered indexing on Q2, but not on QI\n\n2011 cs"
+      ],
+      "answer": "Hashing will outperform ordered indexing on Q2, but not on QI\n\n2011 cs",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q03",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "If two fair coins are flipped and at least one of the outcomes is known to be a head, what is the\nprobability that both outcomes are heads?",
+      "options": [
+        "1/3",
+        "1/4",
+        "1/2",
+        "2/3"
+      ],
+      "answer": "1/3",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q04",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider different activities related to email.\nml: Send an email from a mail client to a mail server\nm2: Download an email from mailbox server to a mail client\nm3: Checking email in a web browser\nWhich is the application level protocol used in each activity?",
+      "options": [
+        "ml: HTTP m2:SMTP_ m3: POP",
+        "ml: SMTP m2: FTP m3: HTTP",
+        "ml: SMTP m2: POP m3: HTTP",
+        "ml: POP m2: SMTP m3: IMAP"
+      ],
+      "answer": "ml: SMTP m2: POP m3: HTTP",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q06",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Let the time taken to switch between user and kernel modes of execution be t; while the time taken\nto switch between two processes be tf. Which of the following is TRUE?",
+      "options": [
+        "1) >t\nB)t=h\n(O)ti<t",
+        "nothing can be said about the relation between tf, and f2\nCS-A 220\n2011 cs"
+      ],
+      "answer": "1) >t\nB)t=h\n(O)ti<t",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q07",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "A company needs to develop digital signal processing software for one of its newest inventions. The\nsoftware is expected to have 40000 lines of code. The company needs to determine the effort in\nperson-months needed to develop this software using the basic COCOMO model. The multiplicative\nfactor for this model is given as 2.8 for the software development on embedded systems, while the\nexponentiation factor is given as 1.20. What is the estimated effort in person -months?",
+      "options": [
+        "234.25",
+        "932.50",
+        "287.80",
+        "122.40"
+      ],
+      "answer": "234.25",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q08",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Which of the following pairs have DIFFERENT expressive power?",
+      "options": [
+        "Embed web objects from different sites into the same page",
+        "Refresh the page automatically after a specified interval",
+        "Automatically redirect to another page upon download",
+        "Display the client time as part of the page"
+      ],
+      "answer": "Refresh the page automatically after a specified interval",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q10",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Which one of the following is NOT desired in a good Software Requirement Specifications (SRS)\ndocument?",
+      "options": [
+        "Functional Requirements",
+        "Non-Functional Requirements",
+        "Goals of Implementation",
+        "Algorithms for Software Implementation"
+      ],
+      "answer": "Algorithms for Software Implementation",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q11",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Acomputer handles several interrupt sources of which the following are relevant for this question.\n¢ Interrupt from CPU temperature sensor (raises interrupt if CPU temperature is too high)\n¢ Interrupt from Mouse (raises interrupt if the mouse is moved or a button is pressed)\n© Interrupt from Keyboard (raises interrupt when a key is pressed or released)\n¢ Interrupt from Hard Disk (raises interrupt when a disk read is completed)\nWhich one of these will be handled at the HIGHEST priority?",
+      "options": [
+        "Interrupt from Hard Disk",
+        "Interrupt from Mouse",
+        "Interrupt from Keyboard",
+        "Interrupt from CPU temperature sensor\nCS-A 3/20\n2011 cs"
+      ],
+      "answer": "Interrupt from CPU temperature sensor\nCS-A 3/20\n2011 cs",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q12",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider a relational table with a single record for each registered student with the following\nattributes.\n1. Registration_Num: Unique registration number of each registered student\n2. UID: Unique identity number, unique at the national level for each citizen\n3. BankAccount_Num: Unique account number at the bank. A student can have multiple\naccounts or joint accounts. This attribute stores the primary account number.\n4. Name: Name of the student\n5. Hostel_Room: Room number of the hostel\nWhich of the following options is INCORRECT?",
+      "options": [
+        "(B)\n(©)",
+        "Registration_Num can be a primary key",
+        "UID is a candidate key if all students are from the same country",
+        "p>"
+      ],
+      "answer": "(B)\n(©)",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q14",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "The simplified SOP (Sum of Product) form of the Boolean expression\n(P+O+R).(P+O+R).(P+O+R) is",
+      "options": [
+        "(P.O+R) ®) (P+OR)\n© (P.O+R)",
+        "(P.Q+R)"
+      ],
+      "answer": "(P.O+R) ®) (P+OR)\n© (P.O+R)",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q15",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "The minimum number of D flip-flops needed to design a mod-258 counter is",
+      "options": [
+        "9",
+        "8",
+        "512",
+        "258"
+      ],
+      "answer": "9",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q16",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "A thread is usually defined as a “light weight process” because an operating system (OS) maintains\nsmaller data structures for a thread than for a process. In relation to this, which of the following is\nTRUE?",
+      "options": [
+        "On per-thread basis, the OS maintains only CPU register state",
+        "The OS does not maintain a separate stack for each thread",
+        "On per-thread basis, the OS does not maintain virtual memory state",
+        "On per-thread basis, the OS maintains only scheduling and accounting information\nCS-A 4/20\n2011 cs"
+      ],
+      "answer": "On per-thread basis, the OS does not maintain virtual memory state",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q17",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "K4 and Q3 are graphs with the following structures.\ni\nWhich one of the following statements is TRUE in relation to these graphs?",
+      "options": [
+        "K4 is planar while Q3 is not",
+        "Both K4 and Q3 are planar",
+        "Q3 is planar while K3 is not",
+        "Neither K4 nor Q3 is planar"
+      ],
+      "answer": "Both K4 and Q3 are planar",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q18",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "If the difference between the expectation of the square of a random variable (E [x >|) ana the\nsquare of the expectation of the random variable (E [ xX ly is denoted by R , then",
+      "options": [
+        "R=0",
+        "R<0O",
+        "R20",
+        "R>0"
+      ],
+      "answer": "R20",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q19",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "The lexical analysis for a modern computer language such as Java needs the power of which one of\nthe following machine models in a necessary and sufficient sense?",
+      "options": [
+        "Finite state automata",
+        "Deterministic pushdown automata",
+        "Non-deterministic pushdown automata",
+        "Turing machine"
+      ],
+      "answer": "Finite state automata",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q20",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Let the page fault service time be 10 ms in a computer with average memory access time being\n20 ns. If one page fault is generated for every 10° memory accesses, what is the effective access\ntime for the memory?",
+      "options": [
+        "21 ns",
+        "30 ns",
+        "23 ns",
+        "35 ns"
+      ],
+      "answer": "30 ns",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q21",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Consider a hypothetical processor with an instruction of type LW R1, 20(R2), which during\nexecution reads a 32-bit word from memory and stores it in a 32-bit register R1. The effective\naddress of the memory location is obtained by the addition of a constant 20 and the contents of\nregister R2. Which of the following best reflects the addressing mode implemented by this\ninstruction for the operand in memory?",
+      "options": [
+        "Immediate Addressing",
+        "Register Addressing",
+        "Register Indirect Scaled Addressing",
+        "Base Indexed Addressing"
+      ],
+      "answer": "Base Indexed Addressing",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q22",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "What does the following fragment of C program print?\nChar c[] = “”;\nchar *p = Cc;\nprintf (“%s”, p + p[3] - pll]);",
+      "options": [
+        "(B) E2011",
+        "2011",
+        "011\nCS-A 5/20\n2011 cs"
+      ],
+      "answer": "2011",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q24",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "Let P bea regular language and Q be a context-free language such that Q Cc P.. (For example, let\nP be the language represented by the regular expression p*g\"and Q be {p\"q\" |neé N}). Then\nwhich of the following is ALWAYS regular?",
+      "options": [
+        "PNO@",
+        "P-Q",
+        "X°-P () =*-Q"
+      ],
+      "answer": "X°-P () =*-Q",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q25",
+      "type": "mcq",
+      "points": 1.0,
+      "question": "An algorithm to find the length of the longest monotonically increasing sequence of numbers in an\narray A[0:n-1] is given below.\nLet L, denote the length of the longest monotonically increasing sequence starting at index iin\nthe array.\nInitialize L,_, =1.\nFor all i such thatO <i <n-—2\nL {he if A[i] <A[i+1]\n1 Otherwise\nFinally the length of the longest monotonically increasing sequence is Max (Ly, Lye Ly ) :\nWhich of the following statements is TRUE?",
+      "options": [
+        "The aigorithm uses dynamic programming paradigm",
+        "The algorithm has a linear complexity and uses branch and bound paradigm",
+        "The algorithm has a non-linear polynomial complexity and uses branch and bound paradigm",
+        "The algorithm uses divide and conquer paradigm.\nCS-A 6/20\n2011 cs\nQ. 26 to Q. 55 carry two marks each."
+      ],
+      "answer": "The aigorithm uses dynamic programming paradigm",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q26",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider the languages L1, L2 and L3 as given below.\nL1={071\"| p, gE N},\nL2={0'1\"| p, ge Nand p=q} and\nL3={0°170\" | p,q, r€N and p=q=r}. Which of the following statements is NOT TRUE?",
+      "options": [
+        "Push Down Automata (PDA) can be used to recognize Li and L2",
+        "L1 is a regular language",
+        "All the three languages are context free",
+        "Turing machines can be used to recognize all the languages"
+      ],
+      "answer": "All the three languages are context free",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q27",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider two binary operators ‘t’ and ‘|’ with the precedence of operator | being lower than that\nof the operator t. Operator ¢ is right associative while operator | is left associative. Which one of\nthe following represents the parse tree for expression (713141312)?",
+      "options": [
+        "(B)",
+        "(D)\nCS-A 7120\n2011 cs"
+      ],
+      "answer": "(B)",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q28",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Ona non-pipelined sequential processor, a program segment, which is a part of the interrupt service\nroutine, is given to transfer 500 bytes from an I/O device to memory.\nInitialize the address register\nInitialize the count to 500\nLOOP: Load a byte from device\nStore in memory at address given by address register\nIncrement the address register\nDecrement the count\nIf count ≠ 0 go to LOOP\nAssume that each statement in this program is equivalent to a machine instruction which takes one\nclock cycle to execute if it is a non-load/store instruction. The load-store instructions take two clock\ncycles to execute.\nThe designer of the system also has an alternate approach of using the DMA controller to\nimplement the same transfer. The DMA controller requires 20 clock cycles for initialization and\nother overheads. Each DMA transfer cycle takes two clock cycles to transfer one byte of data from\nthe device to the memory.\nWhat is the approximate speedup when the DMA controller based design is used in place of the\ninterrupt driven program based input-output?",
+      "options": [
+        "3.4",
+        "4.4",
+        "5.1",
+        "6.7"
+      ],
+      "answer": "3.4",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q29",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "We are given a set of distinct elements and an unlabeled binary tree with n nodes. In how many\nways can we populate the tree with the given set so that it becomes a binary search tree?",
+      "options": [
+        "0",
+        "1",
+        "nt",
+        "y-\"C,\nnT"
+      ],
+      "answer": "1",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q30",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Which one of the following options is CORRECT given three positive integers x, y and z, anda\npredicate\nP(x) A(x = 1) A Vy(Se(x = y*2>(y=x)v(_y =1))",
+      "options": [
+        "P(x) being true means that xis a prime number",
+        "P(x)being true means that xis a number other than 1",
+        "P(x)is always true irrespective of the value of x",
+        "P(x) being true means that x has exactly two factors other than | and x\nm2 woe\n- .. . os cos x +1sin x"
+      ],
+      "answer": "P(x) being true means that xis a prime number",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q31",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Given i=-/~1, what will be the evaluation of the definite integral J ——_ dx?\n9 COSx—isinx",
+      "options": [
+        "0",
+        "2",
+        "-i",
+        "i\nCS-A 8/20\n2011 cs"
+      ],
+      "answer": "i\nCS-A 8/20\n2011 cs",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q32",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider a database table T containing two columns X and Y each of type integer. After the\ncreation of the table, one record (X=1, Y=1) is inserted in the table.\nLet MX and MY denote the respective maximum values of X and Y among all records in the table\nat any point in time. Using MX and MY, new records are inserted in the table 128 times with X and\nY values being MX+1, 2*MY+1 respectively. It may be noted that each time after the insertion,\nvalues of MX and MY change.\nWhat will be the output of the following SQL query after the steps mentioned above are carried\nout?\nSELECT Y FROM T WHERE X=7;",
+      "options": [
+        "127",
+        "255 (©) 129",
+        "257"
+      ],
+      "answer": "127",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q33",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider a finite sequence of random values X = [X,,%,,--.,%, ]. Let M, be the mean and 0, be\nthe standard deviation of X. Let another finite sequence Y of equal length be derived from this\nas y, =a*x, +b, where a and bare positive constants. Let 44, be the mean and oy, be the standard\ndeviation of this sequence. Which one of the following statements is INCORRECT?",
+      "options": [
+        "1/5",
+        "4/25 (©) 1/4",
+        "2/5"
+      ],
+      "answer": "2/5",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q35",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider the following table of arrival time and burst time for three processes PO, P1 and P2.\nProcess | Arrival time | Burst Time\nPO Oms 9 ms\nPl lms 4 ms\nP2 2 ms 9 ms\nThe pre-emptive shortest job first scheduling algorithm is used. Scheduling is carried out only at\narrival or completion of processes. What is the average waiting time for the three processes?",
+      "options": [
+        "5.0 ms",
+        "4.33 ms",
+        "6.33 ms",
+        "7.33 ms\nCS-A 9/20\n2011\ncs"
+      ],
+      "answer": "5.0 ms",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q39",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider evaluating the following expression tree on a machine with load-store architecture in\nwhich memory can be accessed only through load and store instructions. The variables a, b, c,d\nand e are initially stored in memory. The binary operators used in this expression tree can be\nevaluated by the machine only when the operands are in registers. The instructions produce result\nonly in a register. If no intermediate results can be stored in memory,\nwhat is the minimum number\nof registers needed to evaluate this expression?",
+      "options": [
+        "248000",
+        "44000",
+        "19000",
+        "25000\nConsider a relational table r with sufficient number of records, having attributes A, , A,,..A, and\nlet 1 <p <n. Two queries Q] and Q2 are given below."
+      ],
+      "answer": "19000",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q40",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Consider the matrix as given below.\n12 3\n047\n00 3\nWhich one of the following options provides the CORRECT values of the eigenvalues of the\nmatrix?",
+      "options": [
+        "1, 4,3",
+        "3, 7,3",
+        "7, 3,2",
+        "1, 2,3"
+      ],
+      "answer": "1, 4,3",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q42",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Definition of a language L with alphabet {a} is given as following.\nL ={a™ |k >0, and n is a positive integer constant}\nWhat is the minimum number of states needed in a DFA to recognize L?",
+      "options": [
+        "k+1",
+        "n+] («© 2\"",
+        "2\""
+      ],
+      "answer": "n+] («© 2\"",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q43",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "An 8KB direct-mapped write-back cache is organized as multiple blocks, each of size 32-bytes. The\nprocessor generates 32-bit addresses. The cache controller maintains the tag information for each\ncache block comprising of the following.\n1 Valid bit\n1 Modified bit\nAs many bits as the minimum needed to identify the memory block mapped in the cache.\nWhat is the total size of memory needed at the cache controller to store meta-data (tags) for the\ncache?",
+      "options": [
+        "4864 bits",
+        "6144 bits",
+        "6656 bits",
+        "5376 bits"
+      ],
+      "answer": "5376 bits",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q44",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "An application loads 100 libraries at startup. Loading each library requires exactly one disk access.\nThe seek time of the disk to a random location is given as 10 ms. Rotational speed of disk is\n6000 rpm. If all 100 libraries are loaded from random locations on the disk, how long does it take to\nload all libraries? (The time to transfer data from the disk block once the head has been positioned\nat the start of the block may be neglected.)",
+      "options": [
+        "0.50 s",
+        "1.50s",
+        "1.258",
+        "1.00 s\nCs-A 11/20\n2011\ncs"
+      ],
+      "answer": "1.50s",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q46",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "A deterministic finite automaton (DFA) D with alphabet ¥ = {a,b} is given below.\nWhich of the following finite state machines is a valid minimal DFA which accepts the same\nlanguage as D?",
+      "options": [
+        "3",
+        "9",
+        "5",
+        "6\n\n2011 cs"
+      ],
+      "answer": "5",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q47",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "The following is the comment written for a C function.\n/* This function computes the roots of a quadratic equation\na.x*2 + b.x + c = 0. The function stores two real roots\nin *rootl and *root2 and returns the status of validity\nof roots. It handles four different kinds of cases.\n(i) When coefficient a is zero irrespective of discriminant\n(ii) When discriminant is positive\n(iii) When discriminant is zero\n(iv) When discriminant is negative.\nOnly in case (ii) and (iii), the stored roots are valid.\nOtherwise 0 is stored in the roots. The function returns\n0 when the roots are valid and -1 otherwise.\nThe function also ensures root1l ≥ root2.\nint get_QuadRoots(float a, float b, float c,\nfloat *root1l, float *root2);\n*/\nA software test engineer is assigned the job of doing black box testing. He comes up with the\nfollowing test cases, many of which are redundant.\nTest | Input Set Expected Output Set\nCase | a b c__| rootl | root2 | Return Value\nTI | 0.0 0.0 |_7.0 0.0 0.0 -1\nT2 | 0.0 10| 3.0 0.0 0.0 -1\nT3_ | 1.0 2.0| 10] -10} -1.0 0\nT4 | 4.0 |-12.0| 9.0 1.5 1.5 1)\nTS | 1.0 | -2.0 | -3.0 3.0 | -1.0 0\nTo | 1.0 10] 4.0 0.0 0.0 -1\nWhich one of the following options provide the set of non-redundant tests using equivalence class\npartitioning approach from input perspective for black box testing?",
+      "options": [
+        "T1, T2, T3, T6",
+        "T1, T3, T4, TS",
+        "T2, T4, T5, T6",
+        "T2, T3, T4, TS\nCS-A 13/20\n2011\ncs\nCommon Data Questions\nCommon Data for Questions 48 and 49:\nConsider the following recursive C function that takes two arguments.\nunsigned int foo(unsigned int n, unsigned int r) {\nif (m>0) return ((n%r) + foo(n/r, r));\nelse return 0;"
+      ],
+      "answer": "T2, T4, T5, T6",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q48",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "— What is the return value of the function £00 when it is called as £00 (345, 10)?",
+      "options": [
+        "345",
+        "12",
+        "5",
+        "3"
+      ],
+      "answer": "12",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q49",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "— What is the return value of the function £00 when it is called as foo(513, 2)?",
+      "options": [
+        "9",
+        "8",
+        "5",
+        "2\nCommon Data for Questions 50 and 51:\nConsider the following circuit involving three D-type flip-flops used in a certain type of counter\nconfiguration."
+      ],
+      "answer": "2\nCommon Data for Questions 50 and 51:\nConsider the following circuit involving three D-type flip-flops used in a certain type of counter\nconfiguration.",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q50",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "If at some instance prior to the occurrence of the clock edge, P, Q and R have a value 0, | and 0\nrespectively, what shall be the value of PQR after the clock edge?",
+      "options": [
+        "000",
+        "001",
+        "010",
+        "011"
+      ],
+      "answer": "011",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q52",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "— Thecost of link N2-N3 reduces to 2 (in both directions). After the next round of updates, what will\nbe the new distance vector at node, N3?",
+      "options": [
+        "(3, 2, 0, 2, 5)",
+        "(3, 2, 0, 2, 6)",
+        "(7, 2, 0, 2, 5)",
+        "(7, 2, 0, 2, 6)"
+      ],
+      "answer": "(3, 2, 0, 2, 5)",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q54",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "What will be the cost of the minimum spanning tree (MST) of such a graph with n nodes?",
+      "options": [
+        "bU1n?-5n)",
+        "rn? -nt1",
+        "6n-11",
+        "2n+1"
+      ],
+      "answer": "rn? -nt1",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q55",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "The length of the path from v, to v, in the MST of previous question with n = 10 is",
+      "options": [
+        "11",
+        "25",
+        "31",
+        "41\nCS-A 15/20\n2011 cs\nGeneral Aptitude (GA) Questions"
+      ],
+      "answer": "31",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q56",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Which of the following options is the closest in the meaning to the word below:\nInexplicable",
+      "options": [
+        "Incomprehensible",
+        "Indelible",
+        "Inextricable",
+        "Infallible"
+      ],
+      "answer": "Incomprehensible",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q57",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "If Log (P) = (1/2)Log (Q) = (1/3) Log (R), then which of the following options is TRUE?",
+      "options": [
+        "P?= QR?",
+        "V=PR (©) V=R?P",
+        "R=P°Q"
+      ],
+      "answer": "V=PR (©) V=R?P",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q58",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Choose the most appropriate word(s) from the options given below to complete the following\nsentence.\nI contemplated Singapore for my vacation but decided against it.",
+      "options": [
+        "to visit",
+        "having to visit",
+        "visiting",
+        "for a visit"
+      ],
+      "answer": "visiting",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q59",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Choose the most appropriate word from the options given below to complete the following\nsentence.\nIf you are trying to make a strong impression on your audience, you cannot do so by being\nunderstated, tentative or .",
+      "options": [
+        "hyperbolic",
+        "restrained",
+        "argumentative",
+        "indifferent"
+      ],
+      "answer": "restrained",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q60",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Choose the word from the options given below that is most nearly opposite in meaning to the given\nword:\nAmalgamate",
+      "options": [
+        "merge",
+        "split",
+        "collect",
+        "separate\nQ. 61 to Q. 65 carry two marks each."
+      ],
+      "answer": "separate\nQ. 61 to Q. 65 carry two marks each.",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q61",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Few school curricula include a unit on how to deal with bereavement and grief, and yet all\nstudents at some point in their lives suffer from losses through death and parting.\nBased on the above passage which topic would not be included in a unit on bereavement?",
+      "options": [
+        "how to write a letter of condolence",
+        "what emotional stages are passed through in the healing process",
+        "what the leading causes of death are",
+        "how to give support to a grieving friend\nCS-A 16/20\n2011 cs"
+      ],
+      "answer": "what the leading causes of death are",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q63",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "The variable cost (V) of manufacturing a product varies according to the equation V= 4q, where q\nis the quantity produced. The fixed cost (F) of production of same product reduces with q according\nto the equation F = 100/q. How many units should be produced to minimize the total cost (V+F)?",
+      "options": [
+        "5",
+        "4",
+        "7",
+        "6"
+      ],
+      "answer": "5",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q64",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "A transporter receives the same number of orders each day. Currently, he has some pending orders\n(backlog) to be shipped. If he uses 7 trucks, then at the end of the 4th day he can clear all the\norders. Alternatively, if he uses only 3 trucks, then all the orders are cleared at the end of the 10th\nday. What is the minimum number of trucks required so that there will be no pending order at the\nend of the Sth day?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": "6",
+      "explanation": ""
+    },
+    {
+      "id": "2011_CS_CS_Q65",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "A container originally contains 10 litres of pure spirit. From this container 1 litre of spirit is\nreplaced with | litre of water. Subsequently, | litre of the mixture is again replaced with | litre of\nwater and this process is repeated one more time. How much spirit is now left in the container?",
+      "options": [
+        "7.58 litres",
+        "7.84 litres",
+        "7 litres",
+        "7.29 litres\n\nCS-A 17/20"
+      ],
+      "answer": "7.29 litres\n\nCS-A 17/20",
+      "explanation": ""
+    }
+  ]
+}

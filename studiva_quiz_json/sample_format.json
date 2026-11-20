@@ -1,0 +1,78 @@
+{
+  "negative_marking": true,
+  "negative_marking_factor": 0.25,
+  "questions": [
+    {
+      "id": "q1_mcq_markdown",
+      "type": "mcq",
+      "points": 2.0,
+      "question": "Which of the following describes the core styling engine of Studiva quizzes?\n\n* **Tactile UI:** Inspired by Duolingo with physical 3D buttons.\n* **Markdown & LaTeX:** For rendering high-quality formatting, equations, and code blocks.\n* **Fast Navigation:** For quick, interactive learning loops.",
+      "options": [
+        "Standard boring form controls with plain text",
+        "Duolingo-style gamified UI with rich markdown + LaTeX",
+        "Plain text only inside standard list tiles",
+        "WebView-based static custom pages"
+      ],
+      "answer": "Duolingo-style gamified UI with rich markdown + LaTeX",
+      "explanation": "Studiva quizzes leverage a premium **Duolingo-style 3D UI** built on custom tactile animations combined with a robust **Markdown & LaTeX** parser (via `QuizMarkdown`) to make study sessions visually engaging and beautiful."
+    },
+    {
+      "id": "q2_mcq_latex",
+      "type": "mcq",
+      "points": 3.0,
+      "question": "Solve the quadratic equation using the quadratic formula:\n\n$$ax^2 + bx + c = 0$$\n\nWhat is the correct expression for the roots $x$?",
+      "options": [
+        "$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$",
+        "$x = \\frac{b \\pm \\sqrt{b^2 - 4ac}}{2a}$",
+        "$x = -b \\pm \\sqrt{b^2 - 4ac}$",
+        "$x = \\frac{-b \\pm (b^2 - 4ac)}{2a}$"
+      ],
+      "answer": "$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$",
+      "explanation": "According to the quadratic formula, the solutions to the equation $ax^2 + bx + c = 0$ are given by:\n\n$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$\n\nThis highlights Studiva's support for inline math formulas using single dollar signs (`$...$`) and block math formulas using double dollar signs (`$$...$$`)."
+    },
+    {
+      "id": "q3_true_false",
+      "type": "true_false",
+      "points": 1.0,
+      "question": "True or False: Studiva supports negative marking in quizzes, which penalizes users for incorrect answers by a configurable factor.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "By setting `\"negative_marking\": true` and `\"negative_marking_factor\": 0.25` at the quiz level, Studiva automatically deducts a fraction of points from the total score when a user answers incorrectly, encouraging thoughtful responses."
+    },
+    {
+      "id": "q4_fill_word",
+      "type": "fill_word",
+      "points": 1.5,
+      "question": "Fill in the blank: The name of the custom reusable 3D button widget that simulates a physical press effect across Studiva is **__________3DButton**.",
+      "answer": "Tactile",
+      "explanation": "The `Tactile3DButton` is Studiva's custom reusable design token widget that shifts its top/bottom margins and shadow dynamically to give a physical 3D depression effect."
+    },
+    {
+      "id": "q5_fill_number",
+      "type": "fill_number",
+      "points": 2.0,
+      "question": "If a quiz question is worth $4.0$ points and has a negative marking factor of $0.25$, how many points are **deducted** if a student answers incorrectly?",
+      "answer": "1",
+      "explanation": "The penalty is calculated as:\n\n$$\\text{Penalty} = \\text{Points} \\times \\text{Factor} = 4.0 \\times 0.25 = 1.0\\text{ point}$$\n\nNegative marking keeps assessments fair and realistic!"
+    },
+    {
+      "id": "q6_saq",
+      "type": "saq",
+      "points": 3.0,
+      "question": "Briefly describe the purpose of using Anki-inspired ratings like 'Hard', 'Good', and 'Easy' in Studiva flashcards.",
+      "answer": "Active recall and spaced repetition optimization",
+      "explanation": "By rating how well they recalled a card, Studiva tracks the learning state. This data is fed into an active recall system that decides when the user needs to review the concepts again."
+    },
+    {
+      "id": "q7_laq",
+      "type": "laq",
+      "points": 5.0,
+      "question": "Explain the advantages of modernizing educational applications with gamification elements like tactile physical controls, smooth micro-animations, and visual feedback overlay popups.",
+      "answer": "Gamification drives session retention, decreases cognitive fatigue, and makes repetitive study highly engaging through clear loops of effort, tactile action, and positive reinforcement.",
+      "explanation": "Combining Duolingo-style physicality with clear feedback arrays creates a highly engaging loop that motivates students to study longer and improves cognitive retention."
+    }
+  ]
+}

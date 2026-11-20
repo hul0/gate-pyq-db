@@ -1,0 +1,1331 @@
+\documentclass[a4paper,10pt,twoside]{article}
+\usepackage{fontspec}
+\setmainfont{Liberation Sans}
+\setsansfont{Liberation Sans}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.8cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm,
+    headsep=14pt,
+    footskip=20pt
+}
+
+\setlength{\columnsep}{16pt}
+\setlength{\columnseprule}{0.35pt}
+
+% Persistent Subtle Watermark on Every Page
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=6.0cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.jpeg} \\[-0.2em]
+        {\fontsize{14}{17}\selectfont\bfseries Studiva}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.035] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Running Headers & Footers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\textbf{Studiva GATE Question Bank}}
+\fancyhead[LE]{\small\textit{Computer Science \& IT (2011--2025)}}
+\fancyhead[RO]{\small\textit{Studiva Education}}
+\fancyfoot[LE,RO]{\scriptsize\textbf{Studiva} $\cdot$ \texttt{www.studiva.co.in}}
+\fancyfoot[C]{\small\textbf{Page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[RE,LO]{\scriptsize\texttt{contact@studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Listings Style (Clean, professional)
+\lstset{
+    basicstyle=\scriptsize\ttfamily,
+    numbers=none,
+    frame=single,
+    rulecolor=\color{black!30},
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: FORMAL TITLE & COVER PAGE ====================
+\thispagestyle{empty}
+\vspace*{1.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.jpeg}\\[1.5em]
+    {\fontsize{24}{28}\selectfont\textbf{GATE COMPUTER SCIENCE \& IT}}\\[0.5em]
+    {\fontsize{16}{20}\selectfont\textbf{PREVIOUS YEARS QUESTION BANK (2011 -- 2025)}}\\[0.6em]
+    {\normalsize Detailed Examination Papers with Complete Official Answer Keys}\\[2.0em]
+    \rule{0.65\textwidth}{0.8pt}\\[2.0em]
+    {\large\textbf{Studiva GATE Examination Series}}\\[0.4em]
+    {\small Comprehensive Authentic Question Bank for GATE Computer Science \& Information Technology}\\[2.8cm]
+
+    \begin{tabular}{|ll|}
+        \hline
+        \textbf{Subject:} & Computer Science and Information Technology (CS/IT) \\
+        \textbf{Period Covered:} & 2011 to 2025 \\
+        \textbf{Examination Papers:} & 1 Complete Verified Paper Sets \\
+        \textbf{Contents:} & Examination Questions \& Official Final Answer Keys \\
+        \textbf{Published by:} & Studiva (\texttt{www.studiva.co.in}) \\
+        \hline
+    \end{tabular}
+
+    \vfill
+    {\small\textbf{Studiva $\cdot$ \texttt{www.studiva.co.in} $\cdot$ \texttt{contact@studiva.co.in}}}
+\end{center}
+
+\newpage
+
+% ==================== PAGE 2: PUBLICATION IMPRINT & NOTES ====================
+\thispagestyle{empty}
+\vspace*{0.6cm}
+\begin{center}
+    {\large\textbf{PUBLICATION INFORMATION \& COPYRIGHT NOTICE}}\\[0.4em]
+    \rule{0.6\textwidth}{0.5pt}
+\end{center}
+
+\vspace{1.2em}
+\noindent\begin{tabular}{ll}
+\textbf{Title:} & Studiva GATE Question Bank: Computer Science \& IT (2011--2025) \\
+\textbf{Publisher:} & Studiva \\
+\textbf{Website:} & \texttt{www.studiva.co.in} \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Edition (2026) \\
+\textbf{Syllabus Scope:} & Official GATE Syllabus (General Aptitude and CS / IT) \\
+\end{tabular}
+
+\vspace{1.8em}
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+\textbf{COPYRIGHT NOTICE}\\[0.4em]
+Copyright \copyright\ 2026 Studiva. All Rights Reserved.\\[0.4em]
+No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without prior written permission of Studiva, except for individual academic study.
+}}
+
+\vspace{1.5em}
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+\textbf{PUBLISHER'S NOTE: ARCHIVAL QUESTION FORMAT}\\[0.4em]
+This compendium has been meticulously curated and verified against official GATE question papers and final answer keys.
+\par\medskip\noindent
+\textbf{Notice on Image-Based Questions:}\\
+Questions containing diagrams, circuit schematics, graphs, or image-based figures from the original examination papers have been omitted in this text edition due to non-readable format in historical source archives. All text-based conceptual, analytical, mathematical, algorithmic, and numerical questions are fully included with verified official keys.
+}}
+
+\vspace{1.5em}
+\begin{center}
+\textbf{EXAMINATION STRUCTURE \& PRACTICE GUIDELINES}
+\end{center}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Sectional Mark Division:} Each paper comprises General Aptitude (GA) and Computer Science (CS). Questions are clearly grouped into 1-mark and 2-mark blocks at the head of each section.
+    \item \textbf{Question Types:} Includes Multiple Choice Questions (MCQ), Multiple Select Questions (MSQ), and Numerical Answer Type (NAT).
+    \item \textbf{Official Answer Keys:} For self-evaluation without distraction, complete official answer keys are printed at the conclusion of each respective examination paper set.
+\end{enumerate}
+
+\newpage
+
+% ==================== PAGE 3: TABLE OF CONTENTS ====================
+\begin{center}
+    {\Large\textbf{TABLE OF CONTENTS}}\\[0.4em]
+    \rule{0.5\textwidth}{0.6pt}
+\end{center}
+\vspace{1em}
+
+\noindent\begin{tabularx}{\linewidth}{|X|l|c|r|}
+\hline
+\textbf{Examination Paper} & \textbf{Session / Shift} & \textbf{Total Questions} & \textbf{Content Type} \\
+\hline
+
+GATE 2014 Computer Science & Shift CS & 170 & Questions + Answer Key \\ \hline
+\end{tabularx}
+
+\vspace{1.5em}
+\noindent{\footnotesize\textit{Note: All questions in this edition have been typeset from verified digital records and cross-referenced with official answer keys released by the organising IIT/IISc institutes.}}
+
+\newpage
+
+% ==================== PAPER: 2014_CS ====================
+\begin{center}
+{\Large\textbf{GATE 2014 EXAMINATION}}\\[3pt]
+{\normalsize\textbf{COMPUTER SCIENCE AND INFORMATION TECHNOLOGY}}\\[2pt]
+{\small\textbf{Session / Shift: CS}}\\[5pt]
+\rule{\linewidth}{0.8pt}\vspace{-4pt}
+{\footnotesize\textbf{Duration: 180 Minutes} \hfill \textbf{Total Marks: 100} \hfill \textbf{Questions: 55}}\\
+\vspace{-4pt}\rule{\linewidth}{0.4pt}
+\end{center}
+\vspace{4pt}
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+\footnotesize\textbf{Examination Instructions:}\\[1pt]
+1. Question Types: Multiple Choice Questions (MCQ), Multiple Select Questions (MSQ), and Numerical Answer Type (NAT).\\
+2. Negative Marking Scheme: For 1-mark MCQ, $1/3$ mark is deducted; for 2-mark MCQ, $2/3$ mark is deducted. There is no negative marking for MSQ and NAT questions.\\
+3. Mark Division: Questions are grouped by mark allocation within each section as specified below. Full official answer key is provided at the end of this paper.
+}}
+\vspace{10pt}
+\begin{multicols}{2}
+
+\vspace{8pt}
+\noindent\textbf{\large\underline{GENERAL APTITUDE}}\\[2pt]
+\noindent{\footnotesize\textit{[Section Block: 1-mark questions]}}
+\vspace{4pt}
+
+\noindent\textbf{Q.1} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which of the following options is the closest in meaning to the phrase underlined in the sentence
+below?
+\par\smallskip
+It is fascinating to see life forms cope with varied environmental conditions. \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~adopt to & \textbf{(B)}~adapt to \\
+\addlinespace[2pt]
+\textbf{(C)}~adept in & \textbf{(D)}~accept with
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.2} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Choose the most appropriate word from the options given below to complete the following
+sentence.
+\par\smallskip
+He could not understand the judges awarding her the first prize, because he thought that her
+performance was quite \_\_\_\_\_\_\_\_\_\_. \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~superb & \textbf{(B)}~medium \\
+\addlinespace[2pt]
+\textbf{(C)}~mediocre & \textbf{(D)}~exhilarating
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.3} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries In a press meet on the recent scam, the minister said, "The buck stops here". What did the minister
+convey by the statement? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~He wants all the money\par\vspace{2pt}\noindent
+\textbf{(B)}~He will return the money\par\vspace{2pt}\noindent
+\textbf{(C)}~He will assume final responsibility\par\vspace{2pt}\noindent
+\textbf{(D)}~He will resist all enquiries
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.4} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries If ($z$$z$+ 1/$z$$z$)2 = 98, compute ($z$$z$2 + 1/$z$$z$2). \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.5} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries The roots of 𝑎𝑎$x$$x$2 + 𝑏𝑏𝑏𝑏+ 𝑐𝑐= 0 are real and positive. a, b and c are real. Then 𝑎𝑎$x$$x$2 + 𝑏𝑏|$x$$x$| + 𝑐𝑐= 0
+has \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~no roots & \textbf{(B)}~2 real roots \\
+\addlinespace[2pt]
+\textbf{(C)}~3 real roots & \textbf{(D)}~4 real roots
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+
+\vspace{6pt}
+\noindent{\footnotesize\textit{[Section Block: 2-mark questions]}}
+\vspace{3pt}
+
+\noindent\textbf{Q.6} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries The Palghat Gap (or Palakkad Gap), a region about 30 km wide in the southern part of the Western
+Ghats in India, is lower than the hilly terrain to its north and south. The exact reasons for the
+formation of this gap are not clear. It results in the neighbouring regions of Tamil Nadu getting
+more rainfall from the South West monsoon and the neighbouring regions of Kerala having higher
+summer temperatures.
+\par\smallskip
+What can be inferred from this passage? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~The Palghat gap is caused by high rainfall and high temperatures in southern Tamil Nadu and \newline Kerala\par\vspace{2pt}\noindent
+\textbf{(B)}~The regions in Tamil Nadu and Kerala that are near the Palghat Gap are low-lying\par\vspace{2pt}\noindent
+\textbf{(C)}~The low terrain of the Palghat Gap has a significant impact on weather patterns in neighbouring \newline parts of Tamil Nadu and Kerala\par\vspace{2pt}\noindent
+\textbf{(D)}~Higher summer temperatures result in higher rainfall near the Palghat Gap area \newline GA07 ()
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.7} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Geneticists say that they are very close to confirming the genetic roots of psychiatric illnesses such
+as depression and schizophrenia, and consequently, that doctors will be able to eradicate these
+diseases through early identification and gene therapy.
+\par\smallskip
+On which of the following assumptions does the statement above rely? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Strategies are now available for eliminating psychiatric illnesses\par\vspace{2pt}\noindent
+\textbf{(B)}~Certain psychiatric illnesses have a genetic basis\par\vspace{2pt}\noindent
+\textbf{(C)}~All human diseases can be traced back to genes and how they are expressed\par\vspace{2pt}\noindent
+\textbf{(D)}~In the future, genetics will become the only relevant field for identifying psychiatric illnesses
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.8} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Round-trip tickets to a tourist destination are eligible for a discount of 10\% on the total fare. In
+addition, groups of 4 or more get a discount of 5\% on the total fare. If the one way single person
+fare is Rs 100, a group of 5 tourists purchasing round-trip tickets will be charged Rs \_\_\_\_\_\_\_\_\_. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.9} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries In a survey, 300 respondents were asked whether they own a vehicle or not. If yes, they were
+further asked to mention whether they own a car or scooter or both. Their responses are tabulated
+below. What percent of respondents do not own a scooter?
+Men
+Women
+Own vehicle
+Car
+40
+34
+Scooter
+30
+20
+Both
+60
+46
+Do not own vehicle
+20
+50 \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.10} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries When a point inside of a tetrahedron (a solid with four triangular surfaces) is connected by straight
+lines to its corners, how many (new) internal planes are created with these lines? \_\_\_\_\_\_\_\_\_\_\_\_\_
+\par\smallskip
+GA07 () \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+
+\vspace{6pt}
+\noindent{\footnotesize\textit{[Section Block: 1-mark questions]}}
+\vspace{3pt}
+
+\noindent\textbf{Q.11} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Let ܩ
+of De \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.12} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Cons
+requi
+value \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.13} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which one of the following correctly determines the solution of the recurrence relation with
+T(1) = 1?
+ܶ(݊) = 2ܶቀ
+௡
+$^2$ቁ+ log݊ \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Θ(݊)\par\vspace{2pt}\noindent
+\textbf{(B)}~Θ(݊log݊)\par\vspace{2pt}\noindent
+\textbf{(C)}~Θ(݊ \newline $^2$)\par\vspace{2pt}\noindent
+\textbf{(D)}~Θ(log݊)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.14} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Let ܲ
+pivot
+[4 1 \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~ݐ\par\vspace{2pt}\noindent
+\textbf{(C)}~ݐ
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.15} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries If L1 = \{ܽ௡| ݊
+$\ge$0\} and L2= \{ܾ௡| ݊
+$\ge$0\}, consider
+(I) L1⋅L2 is a regular language
+(II) L1⋅L2 = \{ܽ௡ܾ
+௡|݊
+$\ge$0\}
+\par\smallskip
+Which one of the following is CORRECT? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~Only (I) & \textbf{(B)}~Only (II) \\
+\addlinespace[2pt]
+\textbf{(C)}~Both (I) and (II) & \textbf{(D)}~Neither (I) nor (II)
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.16} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Let ܣ $\le$௠ܤ denotes that language A is mapping reducible (also known as many-to-one reducible)
+to language B. Which one of the following is FALSE? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~If ܣ $\le$௠ܤ and B is recursive then A is recursive.\par\vspace{2pt}\noindent
+\textbf{(B)}~If ܣ $\le$௠ܤ and A is undecidable then B is undecidable.\par\vspace{2pt}\noindent
+\textbf{(C)}~If ܣ $\le$௠ܤ and B is recursively enumerable then A is recursively enumerable.\par\vspace{2pt}\noindent
+\textbf{(D)}~If ܣ $\le$௠ܤ and B is not recursively enumerable then A is not recursively enumerable. \newline CS02 ()
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.17} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which one of the following is FALSE? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~A basic block is a sequence of instructions where control enters the sequence at the beginning \newline and exits at the end.\par\vspace{2pt}\noindent
+\textbf{(B)}~Available expression analysis can be used for common subexpression elimination.\par\vspace{2pt}\noindent
+\textbf{(C)}~Live variable analysis can be used for dead code elimination.\par\vspace{2pt}\noindent
+\textbf{(D)}~ݔ= 4 ∗5 $\implies$ݔ= 20 is an example of common subexpression elimination.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.18} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which one of the following is NOT performed during compilation? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Dynamic memory allocation\par\vspace{2pt}\noindent
+\textbf{(B)}~Type checking\par\vspace{2pt}\noindent
+\textbf{(C)}~Symbol table management\par\vspace{2pt}\noindent
+\textbf{(D)}~Inline expansion
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.19} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Suppose a disk has 201 cylinders, numbered from 0 to 200. At some time the disk arm is at cylinder
+100, and there is a queue of disk access requests for cylinders 30, 85, 90, 100, 105, 110, 135 and
+145. If Shortest-Seek Time First (SSTF) is being used for scheduling the disk access, the request for
+cylinder 90 is serviced after servicing \_\_\_\_\_\_\_\_\_\_\_\_ number of requests. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.20} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which one of the following is FALSE? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~User level threads are not scheduled by the kernel.\par\vspace{2pt}\noindent
+\textbf{(B)}~When a user level thread is blocked, all other threads of its process are blocked.\par\vspace{2pt}\noindent
+\textbf{(C)}~Context switching between user level threads is faster than context switching between kernel \newline level threads.\par\vspace{2pt}\noindent
+\textbf{(D)}~Kernel level threads cannot share the code segment.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.21} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the relation scheme ܴ
+= (ܧ, ܨ, ܩ, ܪ, ܫ, ܬ, ܭ, ܮ, ܯ,ܰ
+) and the set of functional dependencies
+\{\{ܧ, ܨ\} $\to$\{ܩ\}, \{F\} $\to$\{ܫ, ܬ\}, \{ܧ, ܪ\} $\to$\{ܭ, ܮ\}, \{ܭ\} $\to$\{ܯ\}, \{ܮ\} $\to$\{ܰ\}\} on R. What is the key for
+R ? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~\{ܧ, ܨ\} & \textbf{(B)}~\{ܧ, ܨ, ܪ\} \\
+\addlinespace[2pt]
+\textbf{(C)}~\{ܧ, ܨ, ܪ, ܭ, ܮ\} & \textbf{(D)}~\{ܧ\}
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.22} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Given the following statements:
+S1: A foreign key declaration can always be replaced by an equivalent check
+assertion in SQL.
+\par\smallskip
+S2: Given the table R(a,b,c) where a and b together form the primary key,
+the following is a valid table definition.
+CREATE TABLE S (
+a INTEGER,
+d INTEGER,
+e INTEGER,
+PRIMARY KEY (d),
+FOREIGN KEY (a) references R)
+\par\smallskip
+Which one of the following statements is CORRECT? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~S1 is TRUE and S2 is FALSE.\par\vspace{2pt}\noindent
+\textbf{(B)}~Both S1 and S2 are TRUE.\par\vspace{2pt}\noindent
+\textbf{(C)}~S1 is FALSE and S2 is TRUE.\par\vspace{2pt}\noindent
+\textbf{(D)}~Both S1 and S2 are FALSE. \newline CS01 ()
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.23} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following three statements about link state and distance vector routing protocols, for a
+large network with 500 network nodes and 4000 links.
+\par\smallskip
+[S1] The computational overhead in link state protocols is higher than in distance vector protocols.
+[S2] A distance vector protocol (with split horizon) avoids persistent routing loops, but not a link
+state protocol.
+[S3] After a topology change, a link state protocol will converge faster than a distance vector
+protocol.
+\par\smallskip
+Which one of the following is correct about S1, S2, and S3 ? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~S1, S2, and S3 are all true.\par\vspace{2pt}\noindent
+\textbf{(B)}~S1, S2, and S3 are all false.\par\vspace{2pt}\noindent
+\textbf{(C)}~S1 and S2 are true, but S3 is false.\par\vspace{2pt}\noindent
+\textbf{(D)}~S1 and S3 are true, but S2 is false.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.24} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which of the following are used to generate a message digest by the network security protocols?
+(P) RSA
+(Q) SHA-1
+(R) DES
+(S) MD5 \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~P and R only & \textbf{(B)}~Q and R only \\
+\addlinespace[2pt]
+\textbf{(C)}~Q and S only & \textbf{(D)}~R and S only
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.25} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Identify the correct order in which the following actions take place in an interaction between a web
+browser and a web server.
+1. The web browser requests a webpage using HTTP.
+2. The web browser establishes a TCP connection with the web server.
+3. The web server sends the requested webpage using HTTP.
+4. The web browser resolves the domain name using DNS. \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~4,2,1,3 & \textbf{(B)}~1,2,3,4 \\
+\addlinespace[2pt]
+\textbf{(C)}~4,1,2,3 & \textbf{(D)}~2,4,1,3
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+
+\vspace{6pt}
+\noindent{\footnotesize\textit{[Section Block: 2-mark questions]}}
+\vspace{3pt}
+
+\noindent\textbf{Q.26} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider a token ring network with a length of 2 km having 10 stations including a monitoring
+station. The propagation speed of the signal is 2 $\times$ 10଼ m/s and the token transmission time is
+ignored. If each station is allowed to hold the token for 2 µsec, the minimum time for which the
+monitoring station should wait (in µsec)before assuming that the token is lost is \_\_\_\_\_\_\_. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.27} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Let the size of congestion window of a TCP connection be 32 KB when a timeout occurs. The round
+trip time of the connection is 100 msec and the maximum segment size used is 2 KB. The time taken
+(in msec) by the TCP connection to get back to 32 KB congestion window is \_\_\_\_\_\_\_\_\_. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.28} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider a selective repeat sliding window protocol that uses a frame size of 1 KB to send data on a
+1.5 Mbps link with a one-way latency of 50 msec. To achieve a link utilization of 60\%, the
+minimum number of bits required to represent the sequence number field is \_\_\_\_\_\_\_\_.
+CS01 () \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.29} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following four schedules due to three transactions (indicated by the subscript) using
+read and write on a data item x, denoted by r(x) and w(x) respectively. Which one of them is
+conflict serializable? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~r1(x); r2(x); w1(x); r3(x); w2(x)\par\vspace{2pt}\noindent
+\textbf{(B)}~r2(x);r1(x);w2(x);r3(x);w1(x)\par\vspace{2pt}\noindent
+\textbf{(C)}~r3(x);r2(x);r1(x);w2(x);w1(x)\par\vspace{2pt}\noindent
+\textbf{(D)}~r2(x);w2(x);r3(x);r1(x);w1(x)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.30} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Given the following two statements:
+\par\smallskip
+S1: Every table with two single-valued attributes is in 1NF, 2NF, 3NF
+and BCNF.
+S2: AB$\to$C, D$\to$E, E$\to$C is a minimal cover for the set of functional
+dependencies AB$\to$C, D$\to$E, AB$\to$E, E$\to$C.
+\par\smallskip
+Which one of the following is CORRECT? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~S1 is TRUE and S2 is FALSE.\par\vspace{2pt}\noindent
+\textbf{(B)}~Both S1 and S2 are TRUE.\par\vspace{2pt}\noindent
+\textbf{(C)}~S1 is FALSE and S2 is TRUE.\par\vspace{2pt}\noindent
+\textbf{(D)}~Both S1 and S2 are FALSE. \newline CS01 ()
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.31} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries An operating system uses the Banker's algorithm for deadlock avoidance when managing the
+allocation of three resource types X, Y, and Z to three processes P0, P1, and P2. The table given
+below presents the current system state. Here, the Allocation matrix shows the current number of
+resources of each type allocated to each process and the Max matrix shows the maximum number
+of resources of each type required by each process during its execution.
+Allocation
+\par\smallskip
+Max
+\par\smallskip
+X Y Z
+X Y Z
+P0
+0 0 1
+8 4 3
+P1
+3 2 0
+6 2 0
+P2
+2 1 1
+3 3 3
+\par\smallskip
+There are 3 units of type X, 2 units of type Y and 2 units of type Z still available. The system is
+currently in a safe state. Consider the following independent requests for additional resources in the
+current state:
+\par\smallskip
+REQ1: P0 requests 0 units of X, 0 units of Y and 2 units of Z
+REQ2: P1 requests 2 units of X, 0 units of Y and 0 units of Z
+\par\smallskip
+Which one of the following is TRUE? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Only REQ1 can be permitted.\par\vspace{2pt}\noindent
+\textbf{(B)}~Only REQ2 can be permitted.\par\vspace{2pt}\noindent
+\textbf{(C)}~Both REQ1 and REQ2 can be permitted.\par\vspace{2pt}\noindent
+\textbf{(D)}~Neither REQ1 nor REQ2 can be permitted.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.32} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the following set of processes that need to be scheduled on a single CPU. All the times are
+given in milliseconds.
+Process Name
+Arrival Time
+Execution Time
+A
+0
+6
+B
+3
+2
+C
+5
+4
+D
+7
+6
+E
+10
+3
+\par\smallskip
+Using the shortest remaining time first scheduling algorithm, the average process turnaround time
+(in msec) is \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.33} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Assume that there are 3 page frames which are initially empty. If the page reference string is 1, 2, 3,
+4, 2, 1, 5, 3, 2, 4, 6, the number of page faults using the optimal replacement policy is\_\_\_\_\_\_\_\_\_\_. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.34} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries A canonical set of items is given below ܵ
+⟶ܮ. >ܴ
+ܳ
+⟶ܴ
+.
+On input symbol < the set has \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~a shift-reduce conflict and a reduce-reduce conflict.\par\vspace{2pt}\noindent
+\textbf{(B)}~a shift-reduce conflict but not a reduce-reduce conflict.\par\vspace{2pt}\noindent
+\textbf{(C)}~a reduce-reduce conflict but not a shift-reduce conflict.\par\vspace{2pt}\noindent
+\textbf{(D)}~neither a shift-reduce nor a reduce-reduce conflict. \newline CS01 ()
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.35} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Let ܮ be a language and ܮത be its complement. Which one of the following is NOT a viable
+possibility? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Neither ܮ nor ܮത is recursively enumerable (r.e.).\par\vspace{2pt}\noindent
+\textbf{(B)}~One of ܮ and ܮത is r.e. but not recursive; the other is not r.e.\par\vspace{2pt}\noindent
+\textbf{(C)}~Both ܮ and ܮത are r.e. but not recursive.\par\vspace{2pt}\noindent
+\textbf{(D)}~Both ܮ and ܮത are recursive.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.36} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which of the regular expressions given below represent the following DFA?
+I) 0*1(1+00*1)*
+II) 0*1*1+11*0*1
+III) (0+1)*1 \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~I and II only & \textbf{(B)}~I and III only \\
+\addlinespace[2pt]
+\textbf{(C)}~II and III only & \textbf{(D)}~I, II, and III
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.37} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries There are 5 bags labeled 1 to 5. All the coins in a given bag have the same weight. Some bags
+have coins of weight 10 gm, others have coins of weight 11 gm. I pick 1, 2, 4, 8, 16 coins
+respectively from bags 1 to 5. Their total weight comes out to 323 gm. Then the product of the
+labels of the bags having 11 gm coins is \_\_\_.
+0
+1
+0
+1
+CS01 () \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.38} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Suppose P, Q, R, S, T are sorted sequences having lengths 20, 24, 30, 35, 50 respectively. They are
+to be merged into a single sequence by merging together two sequences at a time. The number of
+comparisons that will be needed in the worst case by the optimal algorithm for doing this is \_\_\_\_.
+CS02 () \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.39} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries The minimum number of comparisons required to find the minimum and the maximum of 100
+numbers is \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.40} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the following function
+\par\smallskip
+double f(double x)\{
+if( abs(x*x -- 3) < 0.01) return x;
+else return f(x/2 + 1.5/x);
+\}
+\par\smallskip
+Give a value q (to 2 decimals) such that f(q) will return q:\_\_\_\_\_. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.41} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following C function in which size is the number of elements in the array E:
+\par\smallskip
+int MyX(int *E, unsigned int size)
+\{
+int Y = 0;
+int Z;
+int i, j, k;
+\par\smallskip
+for(i = 0; i < size; i++)
+Y = Y + E[i];
+\par\smallskip
+for(i = 0; i < size; i++)
+for(j = i; j < size; j++)
+\{
+Z = 0;
+for(k = i; k $\le$ j; k++)
+Z = Z + E[k];
+if (Z > Y)
+Y = Z;
+\}
+return Y;
+\}
+\par\smallskip
+The value returned by the function MyX is the \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~maximum possible sum of elements in any sub-array of array E.\par\vspace{2pt}\noindent
+\textbf{(B)}~maximum element in any sub-array of array E.\par\vspace{2pt}\noindent
+\textbf{(C)}~sum of the maximum elements in all possible sub-arrays of array E.\par\vspace{2pt}\noindent
+\textbf{(D)}~the sum of all the elements in the array E.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.42} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following pseudo code. What is the total number of multiplications to be performed?
+\par\smallskip
+D = 2
+for i = 1 to n do
+for j = i to n do
+for k = j + 1 to n do
+D = D * 3 \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Half of the product of the 3 consecutive integers.\par\vspace{2pt}\noindent
+\textbf{(B)}~One-third of the product of the 3 consecutive integers.\par\vspace{2pt}\noindent
+\textbf{(C)}~One-sixth of the product of the 3 consecutive integers.\par\vspace{2pt}\noindent
+\textbf{(D)}~None of the above.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.43} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider a 6-stage instruction pipeline, where all stages are perfectly balanced.Assume that there is
+no cycle-time overhead of pipelining. When an application is executing on this 6-stage pipeline, the
+speedup achieved with respect to non-pipelined execution if 25\% of the instructions incur 2
+pipeline stall cycles is \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_.
+CS01 ()
+G \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.44} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries An a
+The n
+is bo
+assoc \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.45} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries The value of a float type variable is represented using the single-precision 32-bit floating point
+format of IEEE-754 standard that uses 1 bit for sign, 8 bits for biased exponent and 23 bits for
+mantissa. A float type variable X is assigned the decimal value of −14.25. The representation of X
+in hexadecimal notation is \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~C1640000H\par\vspace{2pt}\noindent
+\textbf{(B)}~416C0000H\par\vspace{2pt}\noindent
+\textbf{(C)}~41640000H\par\vspace{2pt}\noindent
+\textbf{(D)}~C16C0000H \newline CS02 ()
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.46} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries The f
+value \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.47} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries A fun݂
+(1) \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~(B) F\par\vspace{2pt}\noindent
+\textbf{(C)}~T\par\vspace{2pt}\noindent
+\textbf{(D)}~
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.48} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries The probability that a given positive integer lying between 1 and 100 (both inclusive) is NOT
+divisible by 2, 3 or 5 is \_\_\_\_\_\_ . \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.49} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries A pennant is a sequence of numbers, each number being 1 or 2. An n-pennant is a sequence of
+numbers with sum equal to n. For example, (1,1,2) is a 4-pennant. The set of all possible 1-pennants
+is \{(1)\}, the set of all possible 2-pennants is \{(2), (1,1)\}and the set of all 3-pennants is \{(2,1),
+(1,1,1), (1,2)\}. Note that the pennant (1,2) is not the same as the pennant (2,1). The number of 10-
+pennants is \_\_\_\_\_\_\_\_\_\_\_\_\_\_. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.50} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Let ܵ denote the set of all functions ݂: \{0,1\}ସ$\to$\{0,1\}. Denote by ܰ the number of functions
+from ܵ to the set \{0,1\}. The value of ݈݋݃$^2$݈
+݋݃$^2$ܰ
+is \_\_\_\_\_\_. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.51} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider an undirected graph ܩ where self-loops are not allowed. The vertex set of ܩ is \{(݅,݆): 1 $\le$݅
+$\le$12, 1 $\le$݆
+$\le$12\}. There is an edge between (ܽ,ܾ) and (ܿ,݀) if |ܽ−ܿ| $\le$1 and |ܾ−݀
+| $\le$1.
+The number of edges in this graph is \_\_\_\_\_\_\_\_\_\_. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.52} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries An ordered ݊-tuple (݀ଵ,݀
+$^2$, … ,݀
+௡) with ݀ଵ$\ge$݀
+$^2$$\ge$⋯$\ge$݀
+௡ is called graphic if there exists a simple
+undirected graph with ݊ vertices having degrees ݀
+ଵ,݀
+$^2$, … ,݀
+௡ respectively. Which of the following
+6-tuples is NOT graphic? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~(1, 1, 1, 1, 1, 1) & \textbf{(B)}~(2, 2, 2, 2, 2, 2) \\
+\addlinespace[2pt]
+\textbf{(C)}~(3, 3, 3, 1, 0, 0) & \textbf{(D)}~(3, 2, 1, 1, 1, 0)
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.53} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which one of the following propositional logic formulas is TRUE when exactly two of ݌, ݍ, and ݎ
+are TRUE? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~൫(݌$\leftrightarrow$ݍ) ∧ݎ൯∨(݌∧ݍ∧ ∼ݎ)\par\vspace{2pt}\noindent
+\textbf{(B)}~(∼(݌$\leftrightarrow$ݍ) ∧ݎ) ∨(݌∧ݍ∧∼ݎ)\par\vspace{2pt}\noindent
+\textbf{(C)}~൫(݌$\to$ݍ) ∧ݎ൯∨(݌∧ݍ∧ ∼ݎ)\par\vspace{2pt}\noindent
+\textbf{(D)}~(∼(݌$\leftrightarrow$ݍ) ∧ݎ) ∧(݌∧ݍ∧∼ݎ) \newline CS01 ()
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.54} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Given the following schema:
+\par\smallskip
+employees(emp-id, first-name, last-name, hire-date,
+dept-id, salary)
+\par\smallskip
+departments(dept-id, dept-name, manager-id, location-id)
+\par\smallskip
+You want to display the last names and hire dates of all latest hires in their respective departments
+in the location ID 1700. You issue the following query:
+SQL>SELECT last-name, hire-date
+FROM employees
+WHERE (dept-id, hire-date) IN
+(SELECT dept-id, MAX(hire-date)
+FROM employees JOIN departments USING(dept-id)
+WHERE location-id = 1700
+GROUP BY dept-id);
+\par\smallskip
+What is the outcome? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~It executes but does not give the correct result.\par\vspace{2pt}\noindent
+\textbf{(B)}~It executes and gives the correct result.\par\vspace{2pt}\noindent
+\textbf{(C)}~It generates an error because of pairwise comparison.\par\vspace{2pt}\noindent
+\textbf{(D)}~It generates an error because the GROUP BY clause cannot be used with table joins in a sub- \newline query.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.55} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider two processors ܲଵ and ܲ$^2$ executing the same instruction set. Assume that under identical
+conditions, for the same input, a program running on ܲ$^2$ takes 25\% less time but incurs 20\% more
+CPI (clock cycles per instruction) as compared to the program running on ܲଵ. If the clock frequency
+of ܲଵ is 1GHz, then the clock frequency of ܲ$^2$ (in GHz) is \_\_\_\_\_\_\_\_\_.
+\par\smallskip
+CS01 ()
+Key / Range
+Marks
+Key / Range
+Marks
+GA
+1
+B
+1
+CS
+24
+C
+1
+GA
+2
+C
+1
+CS
+25
+A
+1
+GA
+3
+C
+1
+CS
+26
+28 to 30
+2
+GA
+4
+96 to 96
+1
+CS
+27
+1100 to 1300
+2
+GA
+5
+D
+1
+CS
+28
+5 to 5
+2
+GA
+6
+C
+2
+CS
+29
+D
+2
+GA
+7
+B
+2
+CS
+30
+A
+2
+GA
+8
+850 to 850
+2
+CS
+31
+B
+2
+GA
+9
+48 to 48
+2
+CS
+32
+7.2 to 7.2
+2
+GA
+10
+6 to 6
+2
+CS
+33
+7 to 7
+2
+CS
+1
+D
+1
+CS
+34
+D
+2
+CS
+2
+0.24 to 0.27
+1
+CS
+35
+C
+2
+CS
+3
+B
+1
+CS
+36
+B
+2
+CS
+4
+1 to 1
+1
+CS
+37
+12 to 12
+2
+CS
+5
+0 to 0
+1
+CS
+38
+D
+2
+CS
+6
+C
+1
+CS
+39
+147.1 to 148.1
+2
+CS
+7
+A
+1
+CS
+40
+A
+2
+CS
+8
+5 to 5
+1
+CS
+41
+A
+2
+CS
+9
+16383 to 16383
+1
+CS
+42
+C
+2
+CS
+10
+D
+1
+CS
+43
+4 to 4
+2
+CS
+11
+C
+1
+CS
+44
+A
+2
+CS
+12
+1 to 1
+1
+CS
+45
+A
+2
+CS
+13
+C
+1
+CS
+46
+‐2 to ‐2
+2
+CS
+14
+C
+1
+CS
+47
+A
+2
+CS
+15
+C
+1
+CS
+48
+10 to 10
+2
+CS
+16
+A
+1
+CS
+49
+88.9 to 89.1
+2
+CS
+17
+D
+1
+CS
+50
+16 to 16
+2
+CS
+18
+B
+1
+CS
+51
+506 to 506
+2
+CS
+19
+3 to 3
+1
+CS
+52
+C
+2
+CS
+20
+D
+1
+CS
+53
+B
+2
+CS
+21
+B
+1
+CS
+54
+B
+2
+CS
+22
+D
+1
+CS
+55
+1.6 to 1.6
+2
+CS
+23
+D
+1
+Section Q. No.
+SESSION ‐ 1
+Section Q. No.
+SESSION ‐ 1
+SESSION - 2
+1. Total duration of the GATE examination is 180 minutes.
+2. The clock will be set at the server. The countdown timer at the top right corner of
+screen will display the remaining time available for you to complete the examination.
+When the timer reaches zero, the examination will end by itself. You need not
+terminate the examination or submit your paper.
+3. Any useful data required for your paper can be viewed by clicking on the Useful
+Common Data button that appears on the screen.
+4. Use the scribble pad provided to you for any rough work. Submit the scribble pad at
+the end of the examination.
+5. You are allowed to use a non-programmable type calculator, however, sharing of
+calculators is not allowed.
+6. The Question Palette displayed on the right side of screen will show the status of
+each question using one of the following symbols:
+The Marked for Review status for a question simply indicates that you would like to look at
+that question again. If a question is answered, but marked for review, then the answer will
+be considered for evaluation unless the status is modified by the candidate.
+Navigating to a Question :
+7. To answer a question, do the following:
+a. Click on the question number in the Question Palette to go to that question
+directly.
+b. Select an answer for a multiple choice type question by clicking on the bubble
+placed before the 4 choices, namely A, B, C and D. Use the virtual numeric
+keypad to enter a number as answer for a numerical type question.
+c. Click on Save \& Next to save your answer for the current question and then go
+to the next question.
+d. Click on Mark for Review \& Next to save your answer for the current question
+and also mark it for review, and then go to the next question.
+Caution: Note that your answer for the current question will not be saved, if you navigate
+to another question directly by clicking on a question number without saving the answer to
+the previous question.
+You can view all the questions by clicking on the Question Paper button. This feature is
+provided, so that if you want you can just see the entire question paper at a glance.
+Answering a Question :
+8. Procedure for answering a multiple choice (MCQ) type question:
+a. Choose one answer from the 4 options (A,B,C,D) given below the question,
+click on the bubble placed before the chosen option.
+b. To deselect your chosen answer, click on the bubble of the chosen option again
+or click on the Clear Response button.
+c. To change your chosen answer, click on the bubble of another option.
+d. To save your answer, you MUST click on the Save \& Next button.
+9. Procedure for answering a numerical answer type question:
+a. To enter a number as your answer, use the virtual numerical keypad.
+b. A fraction (e.g. -0.3 or -.3) can be entered as an answer with or without '0'
+before the decimal point. As many as four decimal points, e.g. 12.5435 or
+0.003 or -932.6711 or 12.82 can be entered.
+c. To clear your answer, click on the Clear Response button.
+d. To save your answer, you MUST click on the Save \& Next button
+10. To mark a question for review, click on the Mark for Review \& Next button. If an
+answer is selected (for MCQ) or entered (for numerical answer type) for a question
+that is Marked for Review, that answer will be considered in the evaluation unless
+the status is modified by the candidate.
+11. To change your answer to a question that has already been answered, first select
+that question for answering and then follow the procedure for answering that type of
+question.
+12. Note that ONLY Questions for which answers are saved or marked for review after
+answering will be considered for evaluation.
+Choosing a Section :
+13. Sections in this question paper are displayed on the top bar of the screen. Questions
+in a Section can be viewed by clicking on the name of that Section. The Section you
+are currently viewing will be highlighted.
+14. A checkbox is displayed for every optional Section, if any, in the Question Paper. To
+select the optional Section for answering, click on the checkbox for that Section.
+15. If the checkbox for an optional Section is not selected, the Save \& Next button and
+the Mark for Review \& Next button will NOT be enabled for that Section. You will
+only be able to see questions in this Section, but you will not be able to answer
+questions in the Section.
+16. After clicking the Save \& Next button for the last question in a Section, you will
+automatically be taken to the first question of the next Section in sequence.
+17. You can move the mouse cursor over the name of a Section to view the answering
+status for that Section.
+Changing the Optional Section :
+18. After answering the chosen optional Section, partially or completely, you can change
+the optional Section by selecting the checkbox for a new Section that you want to
+attempt. A warning message will appear along with a table showing the number of
+questions answered in each of the previously chosen optional Sections and a
+checkbox against each of these Sections. Click on a checkbox against a Section that
+you want to reset and then click on the RESET button. Note that RESETTING a Section
+will DELETE all the answers for questions in that Section. Hence, if you think that you
+may want to select this Section again later, you will have to note down your answers
+for questions in that Section. If you do not want to reset the Section and want to
+continue answering the previously chosen optional Section, then click on the BACK
+button.
+19. If you deselect the checkbox for an optional Section in the top bar, the following
+warning message will appear: "Deselecting the checkbox will DELETE all the answers
+for questions in this Section. Do you want to deselect this Section?'' If you want to
+deselect, click on the RESET button. If you do not want to deselect, click on the BACK
+button.
+20. You can shuffle between different Sections or change the optional Sections any
+number of times.
+CS:
+Duration: 180 minutes
+\par\smallskip
+Maximum Marks: 100
+Read the following instructions carefully.
+1. To login, enter your Registration Number and password provided to you. Kindly go through the various
+symbols used in the test and understand their meaning before you start the examination.
+2. Once you login and after the start of the examination, you can view all the questions in the question
+paper, by clicking on the View All Questions button in the screen.
+3. This question paper consists of 2 sections, General Aptitude (GA) for 15 marks and the subject
+specific GATE paper for 85 marks. Both these sections are compulsory.
+The GA section consists of 10 questions. Question numbers 1 to 5 are of 1-mark each, while question
+numbers 6 to 10 are of 2-mark each.
+The subject specific GATE paper section consists of 55 questions, out of which question numbers 1 to
+25 are of 1-mark each, while question numbers 26 to 55 are of 2-mark each.
+4. Depending upon the GATE paper, there may be useful common data that may be required for
+answering the questions. If the paper has such useful data, the same can be viewed by clicking on the
+Useful Common Data button that appears at the top, right hand side of the screen.
+\par\smallskip
+5. The computer allotted to you at the examination center runs specialized software that permits only one
+answer to be selected for multiple-choice questions using a mouse and to enter a suitable number for
+the numerical answer type questions using the virtual keyboard and mouse.
+6. Your answers shall be updated and saved on a server periodically and also at the end of the
+examination. The examination will stop automatically at the end of 180 minutes.
+7. In each paper a candidate can answer a total of 65 questions carrying 100 marks.
+8. The question paper may consist of questions of multiple choice type (MCQ) and numerical answer
+type.
+9. Multiple choice type questions will have four choices against A, B, C, D, out of which only ONE is the
+correct answer. The candidate has to choose the correct answer by clicking on the bubble (⃝) placed
+before the choice.
+10. For numerical answer type questions, each question will have a numerical answer and there will not be
+any choices. For these questions, the answer should be enteredby using the virtual keyboard that
+appears on the monitor and the mouse.
+11. All questions that are not attempted will result in zero marks. However, wrong answers for multiple
+choice type questions (MCQ) will result in NEGATIVE marks. For all MCQ questions a wrong
+answer will result in deduction of⅓ marks for a 1-mark question and ⅔ marks for a 2-mark question.
+12. There is NO NEGATIVE MARKING for questions of NUMERICAL ANSWER TYPE.
+13. Non-programmable type Calculator is allowed. Charts, graph sheets, and mathematical tables are NOT
+allowed in the Examination Hall. You must use the Scribble pad provided to you at the examination
+centre for all your rough work. The Scribble Pad has to be returned at the end of the examination.
+\par\smallskip
+Declaration by the candidate:
+\par\smallskip
+``I have read and understood all the above instructions. I have also read and understood clearly the
+instructions given on the admit card and shall follow the same. I also understand that in case I am found to
+violate any of these instructions, my candidature is liable to be cancelled. I also confirm that at the start of
+the examination all the computer hardware allotted to me are in proper working condition''. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\end{multicols}
+\vspace{8pt}
+\begin{center}
+\rule{0.35\linewidth}{0.5pt}\\[2pt]
+\textbf{\small --- END OF QUESTION PAPER ---}\\[-8pt]
+\rule{0.35\linewidth}{0.5pt}
+\end{center}
+\vspace{10pt}
+\subsection*{OFFICIAL ANSWER KEY --- GATE 2014 (CS)}
+\vspace{-4pt}
+\noindent{\footnotesize\textit{Official final answer keys published by the GATE Organising Institute. For NAT questions, allowable numerical ranges are displayed where applicable. MTA = Marks To All.}}
+\vspace{4pt}
+\begin{center}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|c|c|l||c|c|l||c|c|l||c|c|l|}
+\hline
+\textbf{Q} & \textbf{Type} & \textbf{Key} & \textbf{Q} & \textbf{Type} & \textbf{Key} & \textbf{Q} & \textbf{Type} & \textbf{Key} & \textbf{Q} & \textbf{Type} & \textbf{Key} \\
+\hline\hline
+1 & MCQ & B & 15 & MCQ & A & 29 & MCQ & D & 43 & NAT & 4 \\ \hline
+2 & MCQ & C & 16 & MCQ & D & 30 & MCQ & A & 44 & MCQ & A \\ \hline
+3 & MCQ & C & 17 & MCQ & D & 31 & MCQ & B & 45 & MCQ & A \\ \hline
+4 & NAT & 96 & 18 & MCQ & A & 32 & NAT & 7.2 & 46 & NAT & ‐2 \\ \hline
+5 & MCQ & D & 19 & NAT & 3 & 33 & NAT & 7 & 47 & MCQ & A \\ \hline
+6 & MCQ & C & 20 & MCQ & D & 34 & MCQ & D & 48 & NAT & 0.259 to 0.261 \\ \hline
+7 & MCQ & B & 21 & MCQ & B & 35 & MCQ & C & 49 & NAT & 88.9 to 89.1 \\ \hline
+8 & NAT & 850 & 22 & MCQ & D & 36 & MCQ & B & 50 & NAT & 16 \\ \hline
+9 & NAT & 48 & 23 & MCQ & D & 37 & NAT & 12 & 51 & NAT & 506 \\ \hline
+10 & NAT & 6 & 24 & MCQ & C & 38 & NAT & 358 & 52 & MCQ & C \\ \hline
+11 & MCQ & C & 25 & MCQ & A & 39 & NAT & 147.1 to 148.1 & 53 & MCQ & B \\ \hline
+12 & NAT & 1 & 26 & NAT & 28 to 30 & 40 & NAT & 1.72 to 1.74 & 54 & MCQ & B \\ \hline
+13 & MCQ & A & 27 & NAT & 1100 to 1300 & 41 & MCQ & A & 55 & NAT & 1.6 \\ \hline
+14 & MCQ & C & 28 & NAT & 5 & 42 & MCQ & C &  & &  \\ \hline
+\end{tabular}%
+}
+\end{center}
+\end{document}

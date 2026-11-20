@@ -1,0 +1,1347 @@
+\documentclass[a4paper,10pt,twoside]{article}
+\usepackage{fontspec}
+\setmainfont{Liberation Sans}
+\setsansfont{Liberation Sans}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.8cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm,
+    headsep=14pt,
+    footskip=20pt
+}
+
+\setlength{\columnsep}{16pt}
+\setlength{\columnseprule}{0.35pt}
+
+% Persistent Subtle Watermark on Every Page
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=6.0cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.jpeg} \\[-0.2em]
+        {\fontsize{14}{17}\selectfont\bfseries Studiva}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.035] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Running Headers & Footers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\small\textbf{Studiva GATE Question Bank}}
+\fancyhead[LE]{\small\textit{Computer Science \& IT (2011--2025)}}
+\fancyhead[RO]{\small\textit{Studiva Education}}
+\fancyfoot[LE,RO]{\scriptsize\textbf{Studiva} $\cdot$ \texttt{www.studiva.co.in}}
+\fancyfoot[C]{\small\textbf{Page \thepage\ of \pageref{LastPage}}}
+\fancyfoot[RE,LO]{\scriptsize\texttt{contact@studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Listings Style (Clean, professional)
+\lstset{
+    basicstyle=\scriptsize\ttfamily,
+    numbers=none,
+    frame=single,
+    rulecolor=\color{black!30},
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: FORMAL TITLE & COVER PAGE ====================
+\thispagestyle{empty}
+\vspace*{1.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.jpeg}\\[1.5em]
+    {\fontsize{24}{28}\selectfont\textbf{GATE COMPUTER SCIENCE \& IT}}\\[0.5em]
+    {\fontsize{16}{20}\selectfont\textbf{PREVIOUS YEARS QUESTION BANK (2011 -- 2025)}}\\[0.6em]
+    {\normalsize Detailed Examination Papers with Complete Official Answer Keys}\\[2.0em]
+    \rule{0.65\textwidth}{0.8pt}\\[2.0em]
+    {\large\textbf{Studiva GATE Examination Series}}\\[0.4em]
+    {\small Comprehensive Authentic Question Bank for GATE Computer Science \& Information Technology}\\[2.8cm]
+
+    \begin{tabular}{|ll|}
+        \hline
+        \textbf{Subject:} & Computer Science and Information Technology (CS/IT) \\
+        \textbf{Period Covered:} & 2011 to 2025 \\
+        \textbf{Examination Papers:} & 1 Complete Verified Paper Sets \\
+        \textbf{Contents:} & Examination Questions \& Official Final Answer Keys \\
+        \textbf{Published by:} & Studiva (\texttt{www.studiva.co.in}) \\
+        \hline
+    \end{tabular}
+
+    \vfill
+    {\small\textbf{Studiva $\cdot$ \texttt{www.studiva.co.in} $\cdot$ \texttt{contact@studiva.co.in}}}
+\end{center}
+
+\newpage
+
+% ==================== PAGE 2: PUBLICATION IMPRINT & NOTES ====================
+\thispagestyle{empty}
+\vspace*{0.6cm}
+\begin{center}
+    {\large\textbf{PUBLICATION INFORMATION \& COPYRIGHT NOTICE}}\\[0.4em]
+    \rule{0.6\textwidth}{0.5pt}
+\end{center}
+
+\vspace{1.2em}
+\noindent\begin{tabular}{ll}
+\textbf{Title:} & Studiva GATE Question Bank: Computer Science \& IT (2011--2025) \\
+\textbf{Publisher:} & Studiva \\
+\textbf{Website:} & \texttt{www.studiva.co.in} \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Edition (2026) \\
+\textbf{Syllabus Scope:} & Official GATE Syllabus (General Aptitude and CS / IT) \\
+\end{tabular}
+
+\vspace{1.8em}
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+\textbf{COPYRIGHT NOTICE}\\[0.4em]
+Copyright \copyright\ 2026 Studiva. All Rights Reserved.\\[0.4em]
+No part of this publication may be reproduced, stored in a retrieval system, or transmitted in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without prior written permission of Studiva, except for individual academic study.
+}}
+
+\vspace{1.5em}
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+\textbf{PUBLISHER'S NOTE: ARCHIVAL QUESTION FORMAT}\\[0.4em]
+This compendium has been meticulously curated and verified against official GATE question papers and final answer keys.
+\par\medskip\noindent
+\textbf{Notice on Image-Based Questions:}\\
+Questions containing diagrams, circuit schematics, graphs, or image-based figures from the original examination papers have been omitted in this text edition due to non-readable format in historical source archives. All text-based conceptual, analytical, mathematical, algorithmic, and numerical questions are fully included with verified official keys.
+}}
+
+\vspace{1.5em}
+\begin{center}
+\textbf{EXAMINATION STRUCTURE \& PRACTICE GUIDELINES}
+\end{center}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Sectional Mark Division:} Each paper comprises General Aptitude (GA) and Computer Science (CS). Questions are clearly grouped into 1-mark and 2-mark blocks at the head of each section.
+    \item \textbf{Question Types:} Includes Multiple Choice Questions (MCQ), Multiple Select Questions (MSQ), and Numerical Answer Type (NAT).
+    \item \textbf{Official Answer Keys:} For self-evaluation without distraction, complete official answer keys are printed at the conclusion of each respective examination paper set.
+\end{enumerate}
+
+\newpage
+
+% ==================== PAGE 3: TABLE OF CONTENTS ====================
+\begin{center}
+    {\Large\textbf{TABLE OF CONTENTS}}\\[0.4em]
+    \rule{0.5\textwidth}{0.6pt}
+\end{center}
+\vspace{1em}
+
+\noindent\begin{tabularx}{\linewidth}{|X|l|c|r|}
+\hline
+\textbf{Examination Paper} & \textbf{Session / Shift} & \textbf{Total Questions} & \textbf{Content Type} \\
+\hline
+
+GATE 2016 Computer Science & Shift CS & 124 & Questions + Answer Key \\ \hline
+\end{tabularx}
+
+\vspace{1.5em}
+\noindent{\footnotesize\textit{Note: All questions in this edition have been typeset from verified digital records and cross-referenced with official answer keys released by the organising IIT/IISc institutes.}}
+
+\newpage
+
+% ==================== PAPER: 2016_CS ====================
+\begin{center}
+{\Large\textbf{GATE 2016 EXAMINATION}}\\[3pt]
+{\normalsize\textbf{COMPUTER SCIENCE AND INFORMATION TECHNOLOGY}}\\[2pt]
+{\small\textbf{Session / Shift: CS}}\\[5pt]
+\rule{\linewidth}{0.8pt}\vspace{-4pt}
+{\footnotesize\textbf{Duration: 180 Minutes} \hfill \textbf{Total Marks: 100} \hfill \textbf{Questions: 55}}\\
+\vspace{-4pt}\rule{\linewidth}{0.4pt}
+\end{center}
+\vspace{4pt}
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+\footnotesize\textbf{Examination Instructions:}\\[1pt]
+1. Question Types: Multiple Choice Questions (MCQ), Multiple Select Questions (MSQ), and Numerical Answer Type (NAT).\\
+2. Negative Marking Scheme: For 1-mark MCQ, $1/3$ mark is deducted; for 2-mark MCQ, $2/3$ mark is deducted. There is no negative marking for MSQ and NAT questions.\\
+3. Mark Division: Questions are grouped by mark allocation within each section as specified below. Full official answer key is provided at the end of this paper.
+}}
+\vspace{10pt}
+\begin{multicols}{2}
+
+\vspace{8pt}
+\noindent\textbf{\large\underline{GENERAL APTITUDE}}\\[2pt]
+\noindent{\footnotesize\textit{[Section Block: 1-mark questions]}}
+\vspace{4pt}
+
+\noindent\textbf{Q.1} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Out of the following four sentences, select the most suitable sentence with respect to grammar and
+usage. \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~I will not leave the place until the minister does not meet me.\par\vspace{2pt}\noindent
+\textbf{(B)}~I will not leave the place until the minister doesn't meet me.\par\vspace{2pt}\noindent
+\textbf{(C)}~I will not leave the place until the minister meet me.\par\vspace{2pt}\noindent
+\textbf{(D)}~I will not leave the place until the minister meets me.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.2} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries A rewording of something written or spoken is a \_\_\_\_\_\_\_\_\_\_\_\_\_\_. \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~paraphrase & \textbf{(B)}~paradox \\
+\addlinespace[2pt]
+\textbf{(C)}~paradigm & \textbf{(D)}~paraffin
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.3} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Archimedes said, ``Give me a lever long enough and a fulcrum on which to place it, and I will move
+the world.''
+\par\smallskip
+The sentence above is an example of a \_\_\_\_\_\_\_\_\_\_\_ statement. \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~figurative & \textbf{(B)}~collateral \\
+\addlinespace[2pt]
+\textbf{(C)}~literal & \textbf{(D)}~figurine
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.4} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries If `relftaga' means carefree, `otaga' means careful and `fertaga' means careless, which of the
+following could mean `aftercare'? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~zentaga & \textbf{(B)}~tagafer \\
+\addlinespace[2pt]
+\textbf{(C)}~tagazen & \textbf{(D)}~relffer
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.5} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries A cube is built using 64 cubic blocks of side one unit. After it is built, one cubic block is removed
+from every corner of the cube. The resulting surface area of the body (in square units) after the
+removal is \_\_\_\_\_\_\_\_\_\_. \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~56 & \textbf{(B)}~64 \\
+\addlinespace[2pt]
+\textbf{(C)}~72 & \textbf{(D)}~96
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+
+\vspace{6pt}
+\noindent{\footnotesize\textit{[Section Block: 2-mark questions]}}
+\vspace{3pt}
+
+\noindent\textbf{Q.6} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries A shaving set company sells 4 different types of razors, Elegance, Smooth, Soft and Executive.
+Elegance sells at Rs. 48, Smooth at Rs. 63, Soft at Rs. 78 and Executive at Rs. 173 per piece. The
+table below shows the numbers of each razor sold in each quarter of a year.
+Quarter \ Product
+Elegance
+Smooth
+Soft
+Executive
+Q1
+27300
+20009
+17602
+9999
+Q2
+25222
+19392
+18445
+8942
+Q3
+28976
+22429
+19544
+10234
+Q4
+21012
+18229
+16595
+10109
+\par\smallskip
+Which product contributes the greatest fraction to the revenue of the company in that year? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~Elegance & \textbf{(B)}~Executive \\
+\addlinespace[2pt]
+\textbf{(C)}~Smooth & \textbf{(D)}~Soft
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.7} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Indian currency notes show the denomination indicated in at least seventeen languages. If this is not
+an indication of the nation's diversity, nothing else is.
+\par\smallskip
+Which of the following can be logically inferred from the above sentences? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~India is a country of exactly seventeen languages.\par\vspace{2pt}\noindent
+\textbf{(B)}~Linguistic pluralism is the only indicator of a nation's diversity.\par\vspace{2pt}\noindent
+\textbf{(C)}~Indian currency notes have sufficient space for all the Indian languages.\par\vspace{2pt}\noindent
+\textbf{(D)}~Linguistic pluralism is strong evidence of India's diversity.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.8} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following statements relating to the level of poker play of four players P, Q, R and S.
+I.
+P always beats Q
+II.
+R always beats S
+III.
+S loses to P only sometimes
+IV.
+R always loses to Q
+\par\smallskip
+Which of the following can be logically inferred from the above statements?
+(i)
+P is likely to beat all the three other players
+(ii)
+S is the absolute worst player in the set \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~(i) only & \textbf{(B)}~(ii) only \\
+\addlinespace[2pt]
+\textbf{(C)}~(i) and (ii) & \textbf{(D)}~neither (i) nor (ii)
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.9} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries If f($x$$x$) = 2$x$$x$7 + 3$x$$x$−5, which of the following is a factor of f(x)? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~(x3+8) & \textbf{(B)}~(x-1) \\
+\addlinespace[2pt]
+\textbf{(C)}~(2x-5) & \textbf{(D)}~(x+1)
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.10} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries In a process, the number of cycles to failure decreases exponentially with an increase in load. At a
+load of 80 units, it takes 100 cycles for failure. When the load is halved, it takes 10000 cycles for
+failure. The load for which the failure will happen in 5000 cycles is \_\_\_\_\_\_\_\_. \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~40.00 & \textbf{(B)}~46.02 \\
+\addlinespace[2pt]
+\textbf{(C)}~60.01 & \textbf{(D)}~92.02
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+
+\vspace{6pt}
+\noindent{\footnotesize\textit{[Section Block: 1-mark questions]}}
+\vspace{3pt}
+
+\noindent\textbf{Q.11} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the following directed graph:
+a
+b
+c
+f
+e
+d
+The number of different topological orderings of the vertices of the graph is
+. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.12} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following C program.
+void f(int, short);
+void main()
+\{
+int i = 100;
+short s = 12;
+short *p = \&s;
+\_\_\_\_\_\_\_\_\_\_ ;
+// call to f()
+\}
+Which one of the following expressions, when placed in the blank above, will NOT result in
+a type checking error? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~f(s,*s)\par\vspace{2pt}\noindent
+\textbf{(B)}~i = f(i,s)\par\vspace{2pt}\noindent
+\textbf{(C)}~f(i,*s)\par\vspace{2pt}\noindent
+\textbf{(D)}~f(i,*p) \newline CS(Set A)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.13} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries The worst case running times of Insertion sort, Merge sort and Quick sort, respectively, are: \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Θ(nlogn), Θ(nlogn), and Θ(n2)\par\vspace{2pt}\noindent
+\textbf{(B)}~Θ(n2), Θ(n2), and Θ(nlogn)\par\vspace{2pt}\noindent
+\textbf{(C)}~Θ(n2), Θ(nlogn), and Θ(nlogn)\par\vspace{2pt}\noindent
+\textbf{(D)}~Θ(n2), Θ(nlogn), and Θ(n2)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.14} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Let G be a weighted connected undirected graph with distinct positive edge weights. If every
+edge weight is increased by the same value, then which of the following statements is/are
+TRUE?
+P: Minimum spanning tree of G does not change
+Q: Shortest path between any pair of vertices does not change \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~P only\par\vspace{2pt}\noindent
+\textbf{(B)}~Q only\par\vspace{2pt}\noindent
+\textbf{(C)}~Neither P nor Q\par\vspace{2pt}\noindent
+\textbf{(D)}~Both P and Q \newline CS(Set A)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.15} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the following C program.
+\#include<stdio.h>
+void mystery(int *ptra, int *ptrb) \{
+int *temp;
+temp = ptrb;
+ptrb = ptra;
+ptra = temp;
+\}
+int main() \{
+int a=2016, b=0, c=4, d=42;
+mystery(\&a, \&b);
+if (a < c)
+mystery(\&c, \&a);
+mystery(\&a, \&d);
+printf("\%d\n", a);
+\}
+The output of the program is
+. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.16} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which of the following languages is generated by the given grammar?
+S
+−$\to$
+aS | bS | $\epsilon$ \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~\{anbm | n,m $\ge$0\}\par\vspace{2pt}\noindent
+\textbf{(B)}~\{w $\in$\{a,b\}∗| w has equal number of a's and b's \}\par\vspace{2pt}\noindent
+\textbf{(C)}~\{an | n $\ge$0\}$\cup$\{bn | n $\ge$0\}$\cup$\{anbn | n $\ge$0\}\par\vspace{2pt}\noindent
+\textbf{(D)}~\{a,b\}∗ \newline CS(Set A)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.17} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which of the following decision problems are undecidable?
+I. Given NFAs N1 and N2, is L(N1)$\cap$L(N2) = Φ?
+II. Given a CFG G = (N,$\Sigma$,P,S) and a string x $\in$$\Sigma$∗, does x $\in$L(G)?
+III. Given CFGs G1 and G2, is L(G1) = L(G2)?
+IV. Given a TM M, is L(M) = Φ? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~I and IV only & \textbf{(B)}~II and III only \\
+\addlinespace[2pt]
+\textbf{(C)}~III and IV only & \textbf{(D)}~II and IV only
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.18} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which one of the following regular expressions represents the language: the set of all binary
+strings having two consecutive 0s and two consecutive 1s? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~(0+1)∗0011(0+1)∗+(0+1)∗1100(0+1)∗\par\vspace{2pt}\noindent
+\textbf{(B)}~(0+1)∗(00(0+1)∗11+11(0+1)∗00)(0+1)∗\par\vspace{2pt}\noindent
+\textbf{(C)}~(0+1)∗00(0+1)∗+(0+1)∗11(0+1)∗\par\vspace{2pt}\noindent
+\textbf{(D)}~00(0+1)∗11+11(0+1)∗00
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.19} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the following code segment.
+x = u - t;
+y = x * v;
+x = y + w;
+y = t - z;
+y = x * y;
+The minimum number of total variables required to convert the above code segment to static
+single assignment form is
+.
+CS(Set A) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.20} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider an arbitrary set of CPU-bound processes with unequal CPU burst lengths
+submitted at the same time to a computer system.
+Which one of the following process
+scheduling algorithms would minimize the average waiting time in the ready queue? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Shortest remaining time ﬁrst\par\vspace{2pt}\noindent
+\textbf{(B)}~Round-robin with time quantum less than the shortest CPU burst\par\vspace{2pt}\noindent
+\textbf{(C)}~Uniform random\par\vspace{2pt}\noindent
+\textbf{(D)}~Highest priority ﬁrst with priority proportional to CPU burst length
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.21} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which of the following is NOT a superkey in a relational schema with attributes
+V, W, X, Y, Z and primary key V Y? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~VXYZ & \textbf{(B)}~VWXZ \\
+\addlinespace[2pt]
+\textbf{(C)}~VWXY & \textbf{(D)}~VWXYZ
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.22} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which one of the following is NOT a part of the ACID properties of database transactions? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Atomicity\par\vspace{2pt}\noindent
+\textbf{(B)}~Consistency\par\vspace{2pt}\noindent
+\textbf{(C)}~Isolation\par\vspace{2pt}\noindent
+\textbf{(D)}~Deadlock-freedom \newline CS(Set A)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.23} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries A database of research articles in a journal uses the following schema.
+(VOLUME, NUMBER, STARTPAGE, ENDPAGE, TITLE, YEAR, PRICE)
+The primary key is (VOLUME, NUMBER, STARTPAGE, ENDPAGE) and the following
+functional dependencies exist in the schema.
+(VOLUME, NUMBER, STARTPAGE, ENDPAGE)
+$\to$
+TITLE
+(VOLUME, NUMBER)
+$\to$
+YEAR
+(VOLUME, NUMBER, STARTPAGE, ENDPAGE)
+$\to$
+PRICE
+The database is redesigned to use the following schemas.
+(VOLUME, NUMBER, STARTPAGE, ENDPAGE, TITLE, PRICE)
+(VOLUME, NUMBER, YEAR)
+Which is the weakest normal form that the new database satisﬁes, but the old one does not? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~1NF & \textbf{(B)}~2NF \\
+\addlinespace[2pt]
+\textbf{(C)}~3NF & \textbf{(D)}~BCNF
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.24} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which one of the following protocols is NOT used to resolve one form of address to another
+one? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~DNS & \textbf{(B)}~ARP \\
+\addlinespace[2pt]
+\textbf{(C)}~DHCP & \textbf{(D)}~RARP
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.25} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Which of the following is/are example(s) of stateful application layer protocols?
+(i) HTTP
+(ii) FTP
+(iii) TCP
+(iv) POP3 \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~(i) and (ii) only\par\vspace{2pt}\noindent
+\textbf{(B)}~(ii) and (iii) only\par\vspace{2pt}\noindent
+\textbf{(C)}~(ii) and (iv) only\par\vspace{2pt}\noindent
+\textbf{(D)}~(iv) only \newline CS(Set A)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+
+\vspace{6pt}
+\noindent{\footnotesize\textit{[Section Block: 2-mark questions]}}
+\vspace{3pt}
+
+\noindent\textbf{Q.26} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries The coefﬁcient of x12 in (x3 +x4 +x5 +x6 +···)3 is
+. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.27} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the recurrence relation a1 = 8, an = 6n2 +2n+an−1. Let a99 = K $\times$104. The value
+of K is
+. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.28} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries A function f : N+ $\to$N+, deﬁned on the set of positive integers N+, satisﬁes the following
+properties:
+f(n) = f(n/2)
+if nis even
+f(n) = f(n+5)
+if nis odd
+Let R = \{i|∃j : f(j) = i\} be the set of distinct values that f takes. The maximum possible size
+of R is
+. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.29} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the following experiment.
+Step 1. Flip a fair coin twice.
+Step 2. If the outcomes are (TAILS, HEADS) then output Y and stop.
+Step 3. If the outcomes are either (HEADS, HEADS) or (HEADS, TAILS), then output N and
+stop.
+Step 4. If the outcomes are (TAILS, TAILS), then go to Step 1.
+The probability that the output of the experiment is Y is (up to two decimal places)
+.
+CS(Set A) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.30} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Suppose the functions F and G can be computed in 5 and 3 nanoseconds by functional units
+UF and UG, respectively. Given two instances of UF and two instances of UG, it is required to
+implement the computation F(G(Xi)) for 1 $\le$i $\le$10. Ignoring all other delays, the minimum
+time required to complete this computation is
+nanoseconds. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.31} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries The size of the data count register of a DMA controller is 16 bits. The processor needs to
+transfer a ﬁle of 29,154 kilobytes from disk to main memory. The memory is byte addressable.
+The minimum number of times the DMA controller needs to get the control of the system bus
+from the processor to transfer the ﬁle from the disk to main memory is
+. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.32} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries The stage delays in a 4-stage pipeline are 800, 500, 400 and 300 picoseconds. The ﬁrst
+stage (with delay 800 picoseconds) is replaced with a functionally equivalent design involving
+two stages with respective delays 600 and 350 picoseconds. The throughput increase of the
+pipeline is
+percent. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.33} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider a carry lookahead adder for adding two n-bit integers, built using gates of fan-in at
+most two. The time to perform addition using this adder is \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Θ(1)\par\vspace{2pt}\noindent
+\textbf{(B)}~Θ(log(n))\par\vspace{2pt}\noindent
+\textbf{(C)}~Θ($\sqrt{\vphantom{x}}$n)\par\vspace{2pt}\noindent
+\textbf{(D)}~Θ(n) \newline CS(Set A)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.34} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries The following function computes the maximum value contained in an integer array p[] of size
+n (n $\ge$ 1).
+int max(int *p, int n) \{
+int a=0, b=n-1;
+while (\_\_\_\_\_\_\_\_\_\_) \{
+if (p[a] $\le$ p[b]) \{ a = a+1; \}
+else
+\{ b = b-1; \}
+\}
+return p[a];
+\}
+The missing loop condition is \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~a $\ne$ n & \textbf{(B)}~b $\ne$ 0 \\
+\addlinespace[2pt]
+\textbf{(C)}~b > (a + 1) & \textbf{(D)}~b $\ne$ a
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.35} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries What will be the output of the following C program?
+void count(int n)\{
+static int d=1;
+printf("\%d ", n);
+printf("\%d ", d);
+d++;
+if(n>1) count(n-1);
+printf("\%d ", d);
+\}
+void main()\{
+count(3);
+\} \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~3 1 2 2 1 3 4 4 4\par\vspace{2pt}\noindent
+\textbf{(B)}~3 1 2 1 1 1 2 2 2\par\vspace{2pt}\noindent
+\textbf{(C)}~3 1 2 2 1 3 4\par\vspace{2pt}\noindent
+\textbf{(D)}~3 1 2 1 1 1 2 \newline CS(Set A)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.36} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries What will be the output of the following pseudo-code when parameters are passed by reference
+and dynamic scoping is assumed?
+a=3;
+void n(x) \{x = x * a; print(x);\}
+void m(y) \{a = 1; a = y - a; n(a); print(a);\}
+void main() \{m(a);\} \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~6, 2 & \textbf{(B)}~6, 6 \\
+\addlinespace[2pt]
+\textbf{(C)}~4, 2 & \textbf{(D)}~4, 4
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.37} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries An operator delete(i) for a binary heap data structure is to be designed to delete the item in
+the i-th node. Assume that the heap is implemented in an array and i refers to the i-th index
+of the array. If the heap tree has depth d (number of edges on the path from the root to the
+farthest leaf), then what is the time complexity to re-ﬁx the heap efﬁciently after the removal
+of the element? \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~O(1) & \textbf{(B)}~O(d) but not O(1) \\
+\addlinespace[2pt]
+\textbf{(C)}~O(2d) but not O(d) & \textbf{(D)}~O(d 2d) but not O(2d)
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.38} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider the weighted undirected graph with 4 vertices, where the weight of edge \{i, j\} is
+given by the entry Wi j in the matrix W.
+W =
+
+
+0
+2
+8
+5
+2
+0
+5
+8
+8
+5
+0
+x
+5
+8
+x
+0
+
+
+The largest possible integer value of x, for which at least one shortest path between some pair
+of vertices will contain the edge with weight x is
+. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.39} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Let G be a complete undirected graph on 4 vertices, having 6 edges with weights being 1, 2,
+3, 4, 5, and 6. The maximum possible weight that a minimum weight spanning tree of G can
+have is
+.
+CS(Set A) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.40} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries G = (V,E) is an undirected simple graph in which each edge has a distinct weight, and e is a
+particular edge of G. Which of the following statements about the minimum spanning trees
+(MSTs) of G is/are TRUE?
+I. If e is the lightest edge of some cycle in G, then every MST of G includes e
+II. If e is the heaviest edge of some cycle in G, then every MST of G excludes e \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~I only & \textbf{(B)}~II only \\
+\addlinespace[2pt]
+\textbf{(C)}~both I and II & \textbf{(D)}~neither I nor II
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.41} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Let Q denote a queue containing sixteen numbers and S be an empty stack. Head(Q) returns
+the element at the head of the queue Q without removing it from Q. Similarly Top(S) returns
+the element at the top of S without removing it from S. Consider the algorithm given below.
+while Q is not Empty do
+if S is Empty OR Top(S) $\le$Head(Q) then
+x := Dequeue(Q);
+Push(S,x);
+else
+x := Pop(S);
+Enqueue(Q,x);
+end
+end
+The maximum possible number of iterations of the while loop in the algorithm is
+. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.42} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following context-free grammars:
+G1: S $\to$aS|B, B $\to$b|bB
+G2: S $\to$aA|bB, A $\to$aA|B|$\epsilon$, B $\to$bB|$\epsilon$
+Which one of the following pairs of languages is generated by G1 and G2, respectively? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~\{ambn|m > 0 or n > 0\} and \{ambn|m > 0 and n > 0\}\par\vspace{2pt}\noindent
+\textbf{(B)}~\{ambn|m > 0 and n > 0\} and \{ambn|m > 0 or n $\ge$0\}\par\vspace{2pt}\noindent
+\textbf{(C)}~\{ambn|m $\ge$0 or n > 0\} and \{ambn|m > 0 and n > 0\}\par\vspace{2pt}\noindent
+\textbf{(D)}~\{ambn|m $\ge$0 and n > 0\} and \{ambn|m > 0 or n > 0\} \newline CS(Set A)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.43} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following languages:
+L1 = \{anbmcn+m : m,n $\ge$1\}
+L2 = \{anbnc2n : n $\ge$1\}
+Which one of the following is TRUE? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~Both L1 and L2 are context-free.\par\vspace{2pt}\noindent
+\textbf{(B)}~L1 is context-free while L2 is not context-free.\par\vspace{2pt}\noindent
+\textbf{(C)}~L2 is context-free while L1 is not context-free.\par\vspace{2pt}\noindent
+\textbf{(D)}~Neither L1 nor L2 is context-free. \newline CS(Set B)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.44} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Let X be a recursive language and Y be a recursively enumerable but not recursive language.
+Let W and Z be two languages such that Y reduces to W, and Z reduces to X (reduction means
+the standard many-one reduction). Which one of the following statements is TRUE? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~W can be recursively enumerable and Z is recursive.\par\vspace{2pt}\noindent
+\textbf{(B)}~W can be recursive and Z is recursively enumerable.\par\vspace{2pt}\noindent
+\textbf{(C)}~W is not recursively enumerable and Z is recursive.\par\vspace{2pt}\noindent
+\textbf{(D)}~W is not recursively enumerable and Z is not recursive.
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.45} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries The attributes of three arithmetic operators in some programming language are given below.
+Operator
+Precedence
+Associativity
+Arity
++
+High
+Left
+Binary
+−
+Medium
+Right
+Binary
+∗
+Low
+Left
+Binary
+The value of the expression 2−5+1−7∗3 in this language is
+.
+CS(Set A) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.46} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following Syntax Directed Translation Scheme (SDTS), with non-terminals
+\{S, A\} and terminals \{a, b\}.
+S
+−$\to$
+aA
+\{ print 1 \}
+S
+−$\to$
+a
+\{ print 2 \}
+A
+−$\to$
+Sb
+\{ print 3 \}
+Using the above SDTS, the output printed by a bottom-up parser, for the input aab is: \par}
+\par\vspace{2pt}\noindent
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}p{0.46\columnwidth}p{0.46\columnwidth}@{}}
+\textbf{(A)}~1 3 2 & \textbf{(B)}~2 2 3 \\
+\addlinespace[2pt]
+\textbf{(C)}~2 3 1 & \textbf{(D)}~syntax error
+\end{tabular*}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.47} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider a computer system with 40-bit virtual addressing and page size of sixteen
+kilobytes. If the computer system has a one-level page table per process and each page table
+entry requires 48 bits, then the size of the per-process page table is
+megabytes. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.48} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider a disk queue with requests for I/O to blocks on cylinders 47, 38, 121, 191, 87, 11,
+92, 10. The C-LOOK scheduling algorithm is used. The head is initially at cylinder number
+63, moving towards larger cylinder numbers on its servicing pass. The cylinders are numbered
+from 0 to 199. The total head movement (in number of cylinders) incurred while servicing
+these requests is
+. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.49} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries Consider a computer system with ten physical page frames. The system is provided with
+an access sequence (a1,a2,...,a20,a1,a2,...,a20), where each ai is a distinct virtual page
+number.
+The difference in the number of page faults between the last-in-ﬁrst-out page
+replacement policy and the optimal page replacement policy is
+.
+CS(Set A) \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.50} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following proposed solution for the critical section problem.
+There are n
+processes: P0 ...Pn−1. In the code, function pmax returns an integer not smaller than any
+of its arguments. For all i, t[i] is initialized to zero.
+Code for Pi:
+do \{
+c[i]=1; t[i] = pmax(t[0],...,t[n-1])+1; c[i]=0;
+for every j̸ = i in \{0,...,n-1\} \{
+while (c[j]);
+while (t[j] $\ne$ 0 \&\& t[j]$\le$t[i]);
+\}
+Critical Section;
+t[i]=0;
+Remainder Section;
+\} while (true);
+Which one of the following is TRUE about the above solution? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~At most one process can be in the critical section at any time\par\vspace{2pt}\noindent
+\textbf{(B)}~The bounded wait condition is satisﬁed\par\vspace{2pt}\noindent
+\textbf{(C)}~The progress condition is satisﬁed\par\vspace{2pt}\noindent
+\textbf{(D)}~It cannot cause a deadlock
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.51} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider the following two phase locking protocol. Suppose a transaction T accesses (for
+read or write operations), a certain set of objects \{O1,...,Ok\}. This is done in the following
+manner:
+Step 1. T acquires exclusive locks to O1, ..., Ok in increasing order of their addresses.
+Step 2. The required operations are performed.
+Step 3. All locks are released.
+This protocol will \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~guarantee serializability and deadlock-freedom\par\vspace{2pt}\noindent
+\textbf{(B)}~guarantee neither serializability nor deadlock-freedom\par\vspace{2pt}\noindent
+\textbf{(C)}~guarantee serializability but not deadlock-freedom\par\vspace{2pt}\noindent
+\textbf{(D)}~guarantee deadlock-freedom but not serializability \newline CS(Set A)
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.52} \hfill {\footnotesize\textsf{[MCQ]}}
+\par\vspace{2pt}
+{\bfseries Consider that B wants to send a message m that is digitally signed to A. Let the pair of private
+and public keys for A and B be denoted by K−
+x and K+
+x for x = A,B, respectively. Let Kx(m)
+represent the operation of encrypting m with a key Kx and H(m) represent the message digest.
+Which one of the following indicates the CORRECT way of sending the message m along
+with the digital signature to A? \par}
+\par\vspace{2pt}\noindent
+\textbf{(A)}~\{m,K+ \newline B (H(m))\}\par\vspace{2pt}\noindent
+\textbf{(B)}~\{m,K− \newline B (H(m))\}\par\vspace{2pt}\noindent
+\textbf{(C)}~\{m,K− \newline A (H(m))\}\par\vspace{2pt}\noindent
+\textbf{(D)}~\{m,K+ \newline A (m)\}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.53} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries An IP datagram of size 1000 bytes arrives at a router. The router has to forward this packet on
+a link whose MTU (maximum transmission unit) is 100 bytes. Assume that the size of the IP
+header is 20 bytes.
+The number of fragments that the IP datagram will be divided into for transmission is
+. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.54} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries For a host machine that uses the token bucket algorithm for congestion control, the token
+bucket has a capacity of 1 megabyte and the maximum output rate is 20 megabytes per second.
+Tokens arrive at a rate to sustain output at a rate of 10 megabytes per second. The token bucket
+is currently full and the machine needs to send 12 megabytes of data. The minimum time
+required to transmit the data is
+seconds. \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\noindent\textbf{Q.55} \hfill {\footnotesize\textsf{[NAT]}}
+\par\vspace{2pt}
+{\bfseries A sender uses the Stop-and-Wait ARQ protocol for reliable transmission of frames. Frames
+are of size 1000 bytes and the transmission rate at the sender is 80 Kbps (1Kbps = 1000
+bits/second). Size of an acknowledgement is 100 bytes and the transmission rate at the receiver
+is 8 Kbps. The one-way propagation delay is 100 milliseconds.
+Assuming no frame is lost, the sender throughput is
+bytes/second.
+CS(Set A)
+\par\smallskip
+Q. No Type
+Section
+Key
+Marks
+1
+MCQ
+GA
+D
+1
+2
+MCQ
+GA
+A
+1
+3
+MCQ
+GA
+A
+1
+4
+MCQ
+GA
+C
+1
+5
+MCQ
+GA
+D
+1
+6
+MCQ
+GA
+B
+2
+7
+MCQ
+GA
+D
+2
+8
+MCQ
+GA
+D
+2
+9
+MCQ
+GA
+B
+2
+10
+MCQ
+GA
+B
+2
+1
+NAT
+CS-1
+11.0 : 11.0
+1
+2
+MCQ
+CS-1
+B
+1
+3
+NAT
+CS-1
+1.0 : 1.0
+1
+4
+NAT
+CS-1
+0.5 : 0.5
+1
+5
+NAT
+CS-1
+15.0 : 15.0
+1
+6
+MCQ
+CS-1
+A
+1
+7
+NAT
+CS-1
+-11.0 : -11.0
+1
+8
+NAT
+CS-1
+3.0 : 4.0
+1
+9
+NAT
+CS-1
+31.0 : 31.0
+1
+10
+MCQ
+CS-1
+A
+1
+11
+NAT
+CS-1
+6.0 : 6.0
+1
+12
+MCQ
+CS-1
+D
+1
+13
+MCQ
+CS-1
+D
+1
+14
+MCQ
+CS-1
+A
+1
+15
+NAT
+CS-1
+2016.0 : 2016.0
+1
+16
+MCQ
+CS-1
+D
+1
+17
+MCQ
+CS-1
+C
+1
+18
+MCQ
+CS-1
+B
+1
+19
+NAT
+CS-1
+10.0 : 10.0
+1
+20
+MCQ
+CS-1
+A
+1
+21
+MCQ
+CS-1
+B
+1
+22
+MCQ
+CS-1
+D
+1
+23
+MCQ
+CS-1
+B
+1
+24
+MCQ
+CS-1
+C
+1
+25
+MCQ
+CS-1
+C
+1
+26
+NAT
+CS-1
+10.0 : 10.0
+2
+27
+NAT
+CS-1
+197.9 : 198.1
+2
+28
+NAT
+CS-1
+2.0 : 2.0
+2
+29
+NAT
+CS-1
+0.33 : 0.34
+2
+30
+MCQ
+CS-1
+D
+2
+31
+NAT
+CS-1
+456.0 : 456.0
+2
+32
+NAT
+CS-1
+33.0 : 34.0
+2
+33
+MCQ
+CS-1
+B
+2
+34
+MCQ
+CS-1
+D
+2
+35
+MCQ
+CS-1
+A
+2
+36
+MCQ
+CS-1
+D
+2
+37
+MCQ
+CS-1
+B
+2
+38
+NAT
+CS-1
+12.0 : 12.0
+2
+39
+NAT
+CS-1
+7.0 : 7.0
+2
+40
+MCQ
+CS-1
+B
+2
+41
+NAT
+CS-1
+256.0 : 256.0
+2
+42
+MCQ
+CS-1
+D
+2
+43
+MCQ
+CS-1
+D
+2
+44
+MCQ
+CS-1
+C
+2
+45
+NAT
+CS-1
+9.0 : 9.0
+2
+46
+MCQ
+CS-1
+C
+2
+47
+NAT
+CS-1
+384.0 : 384.0
+2
+48
+NAT
+CS-1
+346.0 : 346.0
+2
+49
+NAT
+CS-1
+1.0 : 1.0
+2
+50
+MCQ
+CS-1
+A
+2
+51
+MCQ
+CS-1
+A
+2
+52
+MCQ
+CS-1
+B
+2
+53
+NAT
+CS-1
+13.0 : 13.0
+2
+54
+NAT
+CS-1
+1.1 : 1.1
+2
+55
+NAT
+CS-1
+2500.0 : 2500.0
+2 \par}
+\par\vspace{3pt}\noindent\textbf{Answer:} \rule{3.2cm}{0.4pt}
+\par\vspace{6pt}\hrule height 0.25pt\vspace{6pt}
+\end{multicols}
+\vspace{8pt}
+\begin{center}
+\rule{0.35\linewidth}{0.5pt}\\[2pt]
+\textbf{\small --- END OF QUESTION PAPER ---}\\[-8pt]
+\rule{0.35\linewidth}{0.5pt}
+\end{center}
+\vspace{10pt}
+\subsection*{OFFICIAL ANSWER KEY --- GATE 2016 (CS)}
+\vspace{-4pt}
+\noindent{\footnotesize\textit{Official final answer keys published by the GATE Organising Institute. For NAT questions, allowable numerical ranges are displayed where applicable. MTA = Marks To All.}}
+\vspace{4pt}
+\begin{center}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|c|c|l||c|c|l||c|c|l||c|c|l|}
+\hline
+\textbf{Q} & \textbf{Type} & \textbf{Key} & \textbf{Q} & \textbf{Type} & \textbf{Key} & \textbf{Q} & \textbf{Type} & \textbf{Key} & \textbf{Q} & \textbf{Type} & \textbf{Key} \\
+\hline\hline
+1 & MCQ & D & 15 & NAT & 2016.0 : 2016.0 & 29 & NAT & 0.33 : 0.34 & 43 & MCQ & B \\ \hline
+2 & MCQ & A & 16 & MCQ & D & 30 & NAT & 28.0 : 28.0 & 44 & MCQ & C \\ \hline
+3 & MCQ & A & 17 & MCQ & C & 31 & NAT & 456.0 : 456.0 & 45 & NAT & 9.0 : 9.0 \\ \hline
+4 & MCQ & C & 18 & MCQ & B & 32 & NAT & 33.0 : 34.0 & 46 & MCQ & C \\ \hline
+5 & MCQ & D & 19 & NAT & 10.0 : 10.0 & 33 & MCQ & B & 47 & NAT & 384.0 : 384.0 \\ \hline
+6 & MCQ & B & 20 & MCQ & A & 34 & MCQ & D & 48 & NAT & 346.0 : 346.0 \\ \hline
+7 & MCQ & D & 21 & MCQ & B & 35 & MCQ & A & 49 & NAT & 1.0 : 1.0 \\ \hline
+8 & MCQ & D & 22 & MCQ & D & 36 & MCQ & D & 50 & MCQ & A \\ \hline
+9 & MCQ & B & 23 & MCQ & B & 37 & MCQ & B & 51 & MCQ & A \\ \hline
+10 & MCQ & B & 24 & MCQ & C & 38 & NAT & 12.0 : 12.0 & 52 & MCQ & B \\ \hline
+11 & NAT & 6.0 : 6.0 & 25 & MCQ & C & 39 & NAT & 7.0 : 7.0 & 53 & NAT & 13.0 : 13.0 \\ \hline
+12 & MCQ & D & 26 & NAT & 10.0 : 10.0 & 40 & MCQ & B & 54 & NAT & 1.1 : 1.1 \\ \hline
+13 & MCQ & D & 27 & NAT & 197.9 : 198.1 & 41 & NAT & 256.0 : 256.0 & 55 & NAT & 2500.0 : 2500.0 \\ \hline
+14 & MCQ & A & 28 & NAT & 2.0 : 2.0 & 42 & MCQ & D &  & &  \\ \hline
+\end{tabular}%
+}
+\end{center}
+\end{document}
