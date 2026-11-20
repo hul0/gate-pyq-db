@@ -33,10 +33,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading and comprehension",
+      "difficulty_level": "Easy",
+      "explaination": "The passage explicitly notes that \"In organizations with good work culture, metrics help improve outcomes.\" This directly implies that metrics are useful in organizations with good work culture.",
       "tags": [
         "2022",
         "2_mark",
@@ -47,7 +47,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Some people believe that ``what gets measured, improves''. Some others believe that ``what gets measured, gets gamed''. One possible reason for the difference in the beliefs is the work culture in organizations. In organizations with good work culture, metrics help improve outcomes. However, the same metrics are counterproductive in organizations with poor work culture.\nWhich one of the following is the CORRECT logical inference based on the information in the above passage?",
+      "options_latex": {
+        "A": "Metrics are useful in organizations with poor work culture",
+        "B": "Metrics are useful in organizations with good work culture",
+        "C": "Metrics are always counterproductive in organizations with good work culture",
+        "D": "Metrics are never useful in organizations with good work culture"
+      }
     },
     {
       "id": "2022_CS_GA_Q07",
@@ -77,10 +84,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Among all candidates who qualified, girls accounted for 60%, meaning boys accounted for the remaining $100\\% - 60\\% = 40\\%$. Because $40\\% < 60\\%$, the total number of boys who qualified is strictly less than the number of girls who qualified.",
       "tags": [
         "2022",
         "2_mark",
@@ -91,7 +98,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In a recently conducted national entrance test, boys constituted 65\\% of those who appeared for the test. Girls constituted the remaining candidates and they accounted for 60\\% of the qualified candidates.\nWhich one of the following is the correct logical inference based on the information provided in the above passage?",
+      "options_latex": {
+        "A": "Equal number of boys and girls qualified",
+        "B": "Equal number of boys and girls appeared for the test",
+        "C": "The number of boys who appeared for the test is less than the number of girls who appeared",
+        "D": "The number of boys who qualified the test is less than the number of girls who qualified"
+      }
     },
     {
       "id": "2022_CS_GA_Q08",
@@ -121,10 +135,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Elementary statistics and probability",
+      "difficulty_level": "Medium",
+      "explaination": "Initially, there are 3 green and 2 orange balls (total 5). If a green ball is drawn ($P(G_1) = 3/5$), 2 green and 2 orange remain, so $P(O_2|G_1) = 2/4 = 1/2$. If an orange ball is drawn ($P(O_1) = 2/5$), it is replaced, so $P(O_2|O_1) = 2/5$. By the law of total probability, $P(O_2) = \\left(\\frac{3}{5}\\right)\\left(\\frac{1}{2}\\right) + \\left(\\frac{2}{5}\\right)\\left(\\frac{2}{5}\\right) = \\frac{3}{10} + \\frac{4}{25} = \\frac{23}{50}$.",
       "tags": [
         "2022",
         "2_mark",
@@ -135,7 +149,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A box contains five balls of same size and shape. Three of them are green coloured balls and two of them are orange coloured balls. Balls are drawn from the box one at a time. If a green ball is drawn, it is not replaced. If an orange ball is drawn, it is replaced with another orange ball.\nFirst ball is drawn. What is the probability of getting an orange ball in the next draw?",
+      "options_latex": {
+        "A": "$1/2$",
+        "B": "$8/25$",
+        "C": "$19/50$",
+        "D": "$23/50$"
+      }
     },
     {
       "id": "2022_CS_GA_Q09",
@@ -165,10 +186,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Spatial Aptitude",
+      "subtopic": "Transformation of shapes: translation, rotation, scaling, mirroring, assembling, and grouping",
+      "difficulty_level": "Hard",
+      "explaination": "In a triangle, a segment connecting two midpoints is parallel to the opposite side joining two vertices. Between segments $PR$ and $QS$, one must connect two corners and the other two midpoints. If $S$ were a corner, then $Q$ and $S$ would both be corners, leaving $P$ and $R$ as midpoints, which violates the condition that $S$ and $U$ cannot share a side while $P$ opposes corner $T$. Thus, $S$ cannot be placed at a corner.",
       "tags": [
         "2022",
         "2_mark",
@@ -179,7 +200,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The corners and mid-points of the sides of a triangle are named using the distinct letters P, Q, R, S, T and U, but not necessarily in the same order. Consider the following statements:\n\\begin{itemize}[itemsep=0pt,topsep=2pt]\n\\item The line joining P and R is parallel to the line joining Q and S.\n\\item P is placed on the side opposite to the corner T.\n\\item S and U cannot be placed on the same side.\n\\end{itemize}\nWhich one of the following statements is correct based on the above information?",
+      "options_latex": {
+        "A": "P cannot be placed at a corner",
+        "B": "S cannot be placed at a corner",
+        "C": "U cannot be placed at a mid-point",
+        "D": "R cannot be placed at a corner"
+      }
     },
     {
       "id": "2022_CS_GA_Q10",
@@ -209,10 +237,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Spatial Aptitude",
+      "subtopic": "Paper folding, cutting, and patterns in 2 and 3 dimensions",
+      "difficulty_level": "Medium",
+      "explaination": "To partition the rectangular plot into four mutually similar subplots respecting the existing fixed ropes R1 and R2, exactly 3 additional collinear straight rope segments are needed to complete the congruent triangular and trapezoidal subdivisions.",
       "tags": [
         "2022",
         "2_mark",
@@ -223,7 +251,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A plot of land must be divided between four families. They want their individual plots to be similar in shape, not necessarily equal in area. The land has equally spaced poles, marked as dots in the figure. Two ropes, R1 and R2, are already present and cannot be moved.\nWhat is the least number of additional straight ropes needed to create the desired plots? A single rope can pass through three poles that are aligned in a straight line.",
+      "options_latex": {
+        "A": "2",
+        "B": "4",
+        "C": "5",
+        "D": "3"
+      }
     }
   ]
 }

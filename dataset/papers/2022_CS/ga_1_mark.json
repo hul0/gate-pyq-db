@@ -33,10 +33,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'Fare' denotes the price charged for a journey or conveyance, whereas 'fair' means reasonable or just. Therefore, 'The fare is too high for it to be considered fair.'",
       "tags": [
         "1_mark",
         "2022",
@@ -47,7 +47,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The \\_\\_\\_\\_\\_\\_\\_\\_\\_ is too high for it to be considered \\_\\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": {
+        "A": "fair / fare",
+        "B": "faer / fair",
+        "C": "fare / fare",
+        "D": "fare / fair"
+      }
     },
     {
       "id": "2022_CS_GA_Q02",
@@ -77,10 +84,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Calculus",
+      "subtopic": "Integration",
+      "difficulty_level": "Easy",
+      "explaination": "The area under the piecewise step function is the sum of the rectangular areas: $\\int_0^1 y(x) \\, dx = 2\\left(\\frac{1}{3} - 0\\right) + 3\\left(\\frac{3}{4} - \\frac{1}{3}\\right) + 1\\left(1 - \\frac{3}{4}\\right) = \\frac{2}{3} + 3\\left(\\frac{5}{12}\\right) + \\frac{1}{4} = \\frac{2}{3} + \\frac{5}{4} + \\frac{1}{4} = \\frac{2}{3} + \\frac{3}{2} = \\frac{13}{6}$.",
       "tags": [
         "1_mark",
         "2022",
@@ -91,7 +98,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A function $y(x)$ is defined in the interval $[0, 1]$ on the $x$-axis as\n\\[ y(x) = \\begin{cases} 2 & \\text{if } 0 \\le x < \\frac{1}{3} \\\\ 3 & \\text{if } \\frac{1}{3} \\le x < \\frac{3}{4} \\\\ 1 & \\text{if } \\frac{3}{4} \\le x \\le 1 \\end{cases} \\]\nWhich one of the following is the area under the curve for the interval $[0, 1]$ on the $x$-axis?",
+      "options_latex": {
+        "A": "$5/6$",
+        "B": "$6/5$",
+        "C": "$13/6$",
+        "D": "$6/13$"
+      }
     },
     {
       "id": "2022_CS_GA_Q03",
@@ -121,10 +135,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Medium",
+      "explaination": "Since $r$ is a root of $x^2 + 2x + 6 = 0$, we have $r^2 + 2r = -6$. Pairing terms in the expression: $[(r+2)(r+5)][(r+3)(r+4)] = [r^2 + 7r + 10][r^2 + 7r + 12]$. Substituting $r^2 = -2r - 6$ yields $(5r + 4)(5r + 6) = 25r^2 + 50r + 24 = 25(r^2 + 2r) + 24 = 25(-6) + 24 = -126$.",
       "tags": [
         "1_mark",
         "2022",
@@ -135,7 +149,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $r$ be a root of the equation $x^2 + 2x + 6 = 0$.\nThen the value of the expression $(r+2)(r+3)(r+4)(r+5)$ is",
+      "options_latex": {
+        "A": "51",
+        "B": "$-51$",
+        "C": "126",
+        "D": "$-126$"
+      }
     },
     {
       "id": "2022_CS_GA_Q04",
@@ -165,10 +186,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Analytical Aptitude",
+      "subtopic": "Logic: deduction and induction",
+      "difficulty_level": "Easy",
+      "explaination": "Statement 1 (\"All students are inquisitive\") and Statement 3 (\"No student is inquisitive\") are universal affirmative and universal negative statements (contraries). In classical categorical logic with a non-empty class, both statements cannot be simultaneously true.",
       "tags": [
         "1_mark",
         "2022",
@@ -179,7 +200,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Given below are four statements:\n\\begin{itemize}[itemsep=0pt,topsep=2pt]\n\\item Statement 1: All students are inquisitive.\n\\item Statement 2: Some students are inquisitive.\n\\item Statement 3: No student is inquisitive.\n\\item Statement 4: Some students are not inquisitive.\n\\end{itemize}\nFrom the given four statements, find the two statements that CANNOT BE TRUE simultaneously, assuming that there is at least one student in the class.",
+      "options_latex": {
+        "A": "Statement 1 and Statement 3",
+        "B": "Statement 1 and Statement 2",
+        "C": "Statement 2 and Statement 4",
+        "D": "Statement 3 and Statement 4"
+      }
     }
   ]
 }

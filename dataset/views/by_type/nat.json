@@ -4940,10 +4940,10 @@
         "min": 509.0,
         "max": 509.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees, binary search trees, binary heaps",
+      "difficulty_level": "Hard",
+      "explaination": "In a complete binary tree BST with 1000 nodes (indices 0 to 999), the rightmost branch contains nodes 0, 2, 6, 14, 30, 62, 126, 254, 510. Node 510 is a leaf and holds the maximum element (1st largest). Node 254 is its parent and holds the 2nd largest element. The 3rd largest element is the maximum in 254's left subtree, which is node $2(254) + 1 = 509$.",
       "tags": [
         "1_mark",
         "2022",
@@ -4952,7 +4952,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Suppose a binary search tree with 1000 distinct elements is also a complete binary tree. The tree is stored using the array representation of binary heap trees. Assuming that the array indices start with 0, the 3rd largest element of the tree is stored at index \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q29",
@@ -4978,10 +4980,10 @@
         "min": 5.0,
         "max": 5.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Medium",
+      "explaination": "From item $[S \\to S \\bullet + R]$ in $\\text{closure}(I_0)$, transitioning on symbol $+$ yields the kernel item $[S \\to S + \\bullet R]$. Computing its closure adds $[R \\to \\bullet R * P]$, $[R \\to \\bullet P]$, $[P \\to \\bullet ( S )]$, and $[P \\to \\bullet id]$, resulting in exactly 5 items.",
       "tags": [
         "1_mark",
         "2022",
@@ -4990,7 +4992,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the augmented grammar with $\\{+, *, (, ), id\\}$ as the set of terminals:\n\\begin{align*}\nS' &\\to S \\\\\nS &\\to S + R \\mid R \\\\\nR &\\to R * P \\mid P \\\\\nP &\\to ( S ) \\mid id\n\\end{align*}\nIf $I_0$ is the set of two LR(0) items $\\{[S' \\to \\bullet S], [S \\to \\bullet S + R]\\}$, then $\\text{goto}(\\text{closure}(I_0), +)$ contains exactly \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ items. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q30",
@@ -5016,10 +5020,10 @@
         "min": 36.0,
         "max": 36.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Graphs: connectivity, matching, colouring",
+      "difficulty_level": "Easy",
+      "explaination": "A disconnected graph on $n = 10$ vertices with the maximum number of edges has one isolated vertex and one complete component $K_{n-1} = K_9$. The maximum number of edges is $\\binom{9}{2} = \\frac{9 \\times 8}{2} = 36$.",
       "tags": [
         "1_mark",
         "2022",
@@ -5028,7 +5032,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a simple undirected graph of 10 vertices. If the graph is disconnected, then the maximum number of edges it can have is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q31",
@@ -5054,10 +5060,10 @@
         "min": 8.0,
         "max": 8.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Integrity constraints, normal forms",
+      "difficulty_level": "Easy",
+      "explaination": "Computing attribute closures: $(AB)^+ = \\{A, B, C, D, E\\}$. Attributes $A$ and $B$ never appear on any RHS, so $AB$ is the unique candidate key. Every superkey must contain $AB$, and can include any subset of the remaining 3 attributes $\\{C, D, E\\}$, giving $2^3 = 8$ superkeys.",
       "tags": [
         "1_mark",
         "2022",
@@ -5066,7 +5072,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a relation $R(A, B, C, D, E)$ with the following three functional dependencies:\n\\[ AB \\to C; \\quad BC \\to D; \\quad C \\to E; \\]\nThe number of superkeys in the relation $R$ is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q32",
@@ -5092,10 +5100,10 @@
         "min": 7.0,
         "max": 7.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Combinatorics: counting, recurrence relations, generating functions",
+      "difficulty_level": "Medium",
+      "explaination": "Distributing 6 identical balls into 3 identical bins is equivalent to integer partitions of 6 into at most 3 parts: $6$, $5+1$, $4+2$, $3+3$, $4+1+1$, $3+2+1$, and $2+2+2$. There are exactly 7 such partitions.",
       "tags": [
         "1_mark",
         "2022",
@@ -5104,7 +5112,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The number of arrangements of six identical balls in three identical bins is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q33",
@@ -5130,10 +5140,10 @@
         "min": 0.85,
         "max": 0.85
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory hierarchy: cache, main memory and secondary storage",
+      "difficulty_level": "Medium",
+      "explaination": "Initial AMAT is $10 + (1 - 0.80) \\times 100 = 10 + 20 = 30\\text{ ns}$. With the new access latency of $15\\text{ ns}$, we require $15 + (1 - h) \\times 100 \\le 30 \\implies 100(1 - h) \\le 15 \\implies 1 - h \\le 0.15 \\implies h \\ge 0.85$.",
       "tags": [
         "1_mark",
         "2022",
@@ -5142,7 +5152,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A cache memory that has a hit rate of 0.8 has an access latency 10 ns and miss penalty 100 ns. An optimization is done on the cache to reduce the miss rate. However, the optimization results in an increase of cache access latency to 15 ns, whereas the miss penalty is not affected. The minimum hit rate (rounded off to two decimal places) needed after the optimization such that it should not increase the average memory access time is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in numeric format)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q34",
@@ -5168,10 +5180,10 @@
         "min": -0.5,
         "max": -0.5
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Calculus",
+      "subtopic": "Limits, continuity and differentiability",
+      "difficulty_level": "Easy",
+      "explaination": "The limit $\\lim_{x \\to 0} \\frac{x}{1 - e^{2x}}$ has indeterminate form $\\frac{0}{0}$. Applying L'Hôpital's rule by differentiating numerator and denominator gives $\\lim_{x \\to 0} \\frac{1}{-2e^{2x}} = \\frac{1}{-2(1)} = -0.5$.",
       "tags": [
         "1_mark",
         "2022",
@@ -5180,7 +5192,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The value of the following limit is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in numeric format)\n\\[ \\lim_{x \\to 0^+} \\frac{x}{1 - e^{2x}} \\]",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q35",
@@ -5206,10 +5220,10 @@
         "min": 4.0,
         "max": 4.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Application layer protocols: DNS, SMTP, HTTP, FTP, Email",
+      "difficulty_level": "Easy",
+      "explaination": "In an un-cached iterative resolution for `www.gate.org.in`: the resolver queries Root DNS server (1), `.in` TLD server (2), `.org.in` SLD server (3), and `gate.org.in` Authoritative server (4). Each query yields a response, totaling 4 query-response pairs.",
       "tags": [
         "1_mark",
         "2022",
@@ -5218,7 +5232,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the resolution of the domain name `www.gate.org.in` by a DNS resolver. Assume that no resource records are cached anywhere across the DNS servers and that iterative query mechanism is used in the resolution. The number of DNS query-response pairs involved in completely resolving the domain name is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q56",
@@ -5244,10 +5260,10 @@
         "min": 2.0,
         "max": 2.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Relational model: relational algebra, tuple calculus, SQL",
+      "difficulty_level": "Medium",
+      "explaination": "The nested subquery with `EXCEPT` and `NOT EXISTS` expresses relational division: it finds students who have registered for every course offered by department 'D01'. In the database instance, exactly 2 students satisfy this condition.",
       "tags": [
         "2022",
         "2_mark",
@@ -5256,7 +5272,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the relational database with the following four schemas and their respective instances:\n\\[ \\text{Student}(sNo, sName, dNo), \\quad \\text{Dept}(dNo, dName), \\quad \\text{Course}(cNo, cName, dNo), \\quad \\text{Register}(sNo, cNo) \\]\n\\begin{lstlisting}[language=SQL]\nSELECT * FROM Student AS S WHERE NOT EXISTS\n    (SELECT cNo FROM Course WHERE dNo = 'D01'\n     EXCEPT\n     SELECT cNo FROM Register WHERE sNo = S.sNo)\n\\end{lstlisting}\nThe number of rows returned by the above SQL query is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q58",
@@ -5282,10 +5300,10 @@
         "min": 24.0,
         "max": 24.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Graph traversals, minimum spanning trees, shortest paths",
+      "difficulty_level": "Hard",
+      "explaination": "In a directed spanning tree rooted at 5 with edges $A[i][j]=1$ for $j \\le i$, every node $v \\in \\{1, 2, 3, 4\\}$ must choose exactly one parent $u$ with $u > v$. Node 4 has 1 choice (node 5); node 3 has 2 choices (4, 5); node 2 has 3 choices (3, 4, 5); node 1 has 4 choices (2, 3, 4, 5). Total spanning trees $= 1 \\times 2 \\times 3 \\times 4 = 24$.",
       "tags": [
         "2022",
         "2_mark",
@@ -5294,7 +5312,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $G = (V, E)$ be a directed graph, where $V = \\{1, 2, 3, 4, 5\\}$ is the set of vertices and $E$ is the set of directed edges, as defined by the adjacency matrix $A[i][j] = 1$ if $1 \\le j \\le i \\le 5$, and 0 otherwise. A directed spanning tree of $G$ rooted at $r \\in V$ is a subgraph $T$ whose undirected version is a tree and $T$ contains a directed path from $r$ to every other vertex. The number of such directed spanning trees rooted at vertex 5 is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q59",
@@ -5320,10 +5340,10 @@
         "min": 7.07,
         "max": 7.09
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Data link layer: framing, error detection, Medium Access Control, Ethernet bridging",
+      "difficulty_level": "Easy",
+      "explaination": "Propagation time is $T_{\\text{prop}} = \\frac{2100 \\times 10^3\\text{ m}}{3 \\times 10^8\\text{ m/s}} = 7.00\\text{ ms}$. Transmission time is $T_{\\text{trans}} = \\frac{1000 \\times 8\\text{ bits}}{100 \\times 10^6\\text{ bps}} = 0.08\\text{ ms}$. Total time to completely receive the packet is $T_{\\text{prop}} + T_{\\text{trans}} = 7.00 + 0.08 = 7.08\\text{ ms}$.",
       "tags": [
         "2022",
         "2_mark",
@@ -5332,7 +5352,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a 100 Mbps link between an earth station (sender) and a satellite (receiver) at an altitude of 2100 km. The signal propagates at a speed of $3 \\times 10^8\\text{ m/s}$. The time taken (in milliseconds, rounded off to two decimal places) for the receiver to completely receive a packet of 1000 bytes transmitted by the sender is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in numeric format)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q60",
@@ -5358,10 +5380,10 @@
         "min": 33.0,
         "max": 33.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Transport layer: flow control and congestion control, UDP, TCP, sockets",
+      "difficulty_level": "Medium",
+      "explaination": "Data transmitted at 1 Gbps line rate in $\\text{MSL} = 60\\text{ s}$ is $\\frac{10^9\\text{ bps}}{8} \\times 60\\text{ s} = 7.5 \\times 10^9\\text{ bytes}$. The sequence number space must satisfy $2^k \\ge 7.5 \\times 10^9$. Since $2^{32} \\approx 4.29 \\times 10^9 < 7.5 \\times 10^9$ and $2^{33} \\approx 8.59 \\times 10^9 > 7.5 \\times 10^9$, at least 33 bits are required.",
       "tags": [
         "2022",
         "2_mark",
@@ -5370,7 +5392,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the data transfer using TCP over a 1 Gbps link. Assuming that the maximum segment lifetime (MSL) is set to 60 seconds, the minimum number of bits required for the sequence number field of the TCP header, to prevent the sequence number space from wrapping around during the MSL is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q61",
@@ -5396,10 +5420,10 @@
         "min": 1.42,
         "max": 1.45
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Instruction pipelining, pipeline hazards",
+      "difficulty_level": "Medium",
+      "explaination": "For $X_1$: $\\text{CPI}_1 = 1 + (0.30 \\times 2) = 1.60$. For $X_2$: with 80% branch prediction accuracy, only 20% of branches stall: $\\text{CPI}_2 = 1 + (0.30 \\times 0.20 \\times 2) = 1.12$. Speedup $= \\frac{\\text{CPI}_1}{\\text{CPI}_2} = \\frac{1.60}{1.12} \\approx 1.43$.",
       "tags": [
         "2022",
         "2_mark",
@@ -5408,7 +5432,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A processor X1 operating at 2 GHz has a standard 5-stage RISC instruction pipeline having a base CPI (cycles per instruction) of one without any pipeline hazards. For a given program P that has 30\\% branch instructions, control hazards incur 2 cycles stall for every branch. A new version of the processor X2 operating at same clock frequency has an additional branch predictor unit (BPU) that completely eliminates stalls for correctly predicted branches. There is neither any savings nor any additional stalls for wrong predictions. There are no structural hazards and data hazards for X1 and X2. If the BPU has a prediction accuracy of 80\\%, the speed up (rounded off to two decimal places) obtained by X2 over X1 in executing P is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in numeric format)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q62",
@@ -5434,10 +5460,10 @@
         "min": 0.0,
         "max": 0.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Arrays, stacks, queues, linked lists",
+      "difficulty_level": "Medium",
+      "explaination": "To place the 4 elements of $Q_1$ into $Q_2$ in reverse order, elements are dequeued one by one from $Q_1$ and placed into $Q_2$. Internal order manipulation can be performed entirely by cycling elements within $Q_2$ via dequeue/enqueue on $Q_2$, requiring 0 enqueue operations on $Q_1$.",
       "tags": [
         "2022",
         "2_mark",
@@ -5446,7 +5472,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the queues $Q_1$ containing four elements and $Q_2$ containing none. The only operations allowed on these two queues are `Enqueue(Q, element)` and `Dequeue(Q)`. The minimum number of `Enqueue` operations on $Q_1$ required to place the elements of $Q_1$ in $Q_2$ in reverse order without using any additional storage is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q63",
@@ -5472,10 +5500,10 @@
         "min": 153.0,
         "max": 153.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "File systems",
+      "difficulty_level": "Hard",
+      "explaination": "In contiguous allocation $A$, inserting after block 50 requires shifting blocks 51 to 100 right by one position (50 reads + 50 writes) and writing the new block (1 write), so $n_A = 50 + 50 + 1 = 101$. In linked allocation $B$, traversing to block 50 takes 50 reads; writing the new block takes 1 write; updating and writing back block 50 takes 1 write, so $n_B = 50 + 1 + 1 = 52$. Thus $n_A + n_B = 101 + 52 = 153$.",
       "tags": [
         "2022",
         "2_mark",
@@ -5484,7 +5512,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider two file systems A and B, that use contiguous allocation and linked allocation, respectively. A file of size 100 blocks is already stored in A and also in B. Now, consider inserting a new block in the middle of the file (between 50th and 51st block), whose data is already available in the memory. Assume that there are enough free blocks at the end of the file and that the file control blocks are already in memory. Let the number of disk accesses required to insert a block in the middle of the file in A and B be $n_A$ and $n_B$ respectively, then the value of $n_A + n_B$ is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q64",
@@ -5510,10 +5540,10 @@
         "min": 0.6,
         "max": 0.6
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Memory management and virtual memory",
+      "difficulty_level": "Medium",
+      "explaination": "Simulating LRU with 4 empty frames on sequence $7, 2, 7, 3, 2, 5, 3, 4, 6, 7, 7, 1, 5, 6, 1$: page faults occur at references 1 (7), 2 (2), 4 (3), 6 (5), 8 (4), 9 (6), 10 (7), 12 (1), and 13 (5), totaling 9 faults across 15 accesses. Page fault rate is $9 / 15 = 0.6$.",
       "tags": [
         "2022",
         "2_mark",
@@ -5522,7 +5552,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a demand paging system with four page frames (initially empty) and LRU page replacement policy. For the following page reference string\n\\[ 7, 2, 7, 3, 2, 5, 3, 4, 6, 7, 7, 1, 5, 6, 1 \\]\nthe page fault rate, defined as the ratio of number of page faults to the number of memory accesses (rounded off to one decimal place) is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in numeric format)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q65",
@@ -5548,10 +5580,10 @@
         "min": 80.0,
         "max": 80.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Medium",
+      "explaination": "The SDD implements left-associative operators with $\\%$ at higher precedence than $\\#$. In `20 # 10 % 5 # 8 % 2 % 2`, we first evaluate subexpressions: $10 \\% 5 = 10 / 5 = 2$, and $8 \\% 2 \\% 2 = (8 / 2) / 2 = 2$. Then the outer multiplication evaluates left-associatively: $(20 \\times 2) \\times 2 = 40 \\times 2 = 80$.",
       "tags": [
         "2022",
         "2_mark",
@@ -5560,7 +5592,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following grammar along with translation rules:\n\\begin{align*}\nS &\\to S_1 \\,\\#\\, T & S.val &= S_1.val * T.val \\\\\nS &\\to T & S.val &= T.val \\\\\nT &\\to T_1 \\,\\%\\, R & T.val &= T_1.val \\div R.val \\\\\nT &\\to R & T.val &= R.val \\\\\nR &\\to id & R.val &= id.val\n\\end{align*}\nHere $\\#$ and $\\%$ are operators and $id$ is a token that represents an integer. Using this translation scheme, the computed value of $S.val$ for root of the parse tree for the expression `20#10%5#8%2%2` is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2023_CS_CS_Q31",

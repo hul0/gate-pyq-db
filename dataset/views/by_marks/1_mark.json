@@ -14549,10 +14549,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Asymptotic worst case time and space complexity",
+      "difficulty_level": "Medium",
+      "explaination": "If $f(n)$ is a polynomial of degree $k$ ($f(n) = \\Theta(n^k)$), then $f(n^2) = \\Theta((n^2)^k) = \\Theta(n^{2k})$, and $(f(n))^2 = (\\Theta(n^k))^2 = \\Theta(n^{2k})$. Since both functions grow at identical polynomial rates, $f(n^2) = \\Theta((f(n))^2)$ holds.",
       "tags": [
         "1_mark",
         "2022",
@@ -14562,7 +14562,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one of the following statements is TRUE for all positive functions $f(n)$?",
+      "options_latex": {
+        "A": "$f(n^2) = \\Theta((f(n))^2)$, when $f(n)$ is a polynomial",
+        "B": "$f(n^2) = o((f(n))^2)$",
+        "C": "$f(n^2) = \\mathcal{O}((f(n))^2)$, when $f(n)$ is an exponential function",
+        "D": "$f(n^2) = \\Omega((f(n))^2)$"
+      }
     },
     {
       "id": "2022_CS_CS_Q12",
@@ -14592,10 +14599,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular expressions and finite automata",
+      "difficulty_level": "Medium",
+      "explaination": "From the start state, loops on intermediate states allow repeating patterns of $ba^*a$ and $ab^*b$ before moving to an accepting state via either $ab^*$ or $ba^*$. Factoring loop paths and exit transitions yields the regular expression $(ba^*a + ab^*b)^*(ab^* + ba^*)$.",
       "tags": [
         "1_mark",
         "2022",
@@ -14605,7 +14612,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one of the following regular expressions correctly represents the language of the finite automaton given below?",
+      "options_latex": {
+        "A": "$ab^*ba^* + ba^*ab^*$",
+        "B": "$(ab^*b + ba^*a)^*(a + b)$",
+        "C": "$(ab^*b + ba^*a)^*(a^*b + b^*a)$",
+        "D": "$(ba^*a + ab^*b)^*(ab^* + ba^*)$"
+      }
     },
     {
       "id": "2022_CS_CS_Q13",
@@ -14635,10 +14649,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Easy",
+      "explaination": "LR(1) grammars describe exactly the family of Deterministic Context-Free Languages (DCFLs), meaning LR(1) parsing is both necessary and sufficient for any DCFL. LALR(1) can introduce reduce-reduce conflicts not present in LR(1), and symbol tables are accessed throughout compilation.",
       "tags": [
         "1_mark",
         "2022",
@@ -14648,7 +14662,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one of the following statements is TRUE?",
+      "options_latex": {
+        "A": "The LALR(1) parser for a grammar G cannot have reduce-reduce conflict if the LR(1) parser for G does not have reduce-reduce conflict.",
+        "B": "Symbol table is accessed only during the lexical analysis phase.",
+        "C": "Data flow analysis is necessary for run-time memory management.",
+        "D": "LR(1) parsing is sufficient for deterministic context-free languages."
+      }
     },
     {
       "id": "2022_CS_CS_Q14",
@@ -14678,10 +14699,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Integrity constraints, normal forms",
+      "difficulty_level": "Easy",
+      "explaination": "For any binary relation $R(A, B)$, the only possible non-trivial functional dependencies are $A \\to B$ or $B \\to A$. In either case, the left-hand side is a superkey of $R$, satisfying the definition of Boyce-Codd Normal Form (BCNF).",
       "tags": [
         "1_mark",
         "2022",
@@ -14691,7 +14712,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In a relational data model, which one of the following statements is TRUE?",
+      "options_latex": {
+        "A": "A relation with only two attributes is always in BCNF.",
+        "B": "If all attributes of a relation are prime attributes, then the relation is in BCNF.",
+        "C": "Every relation has at least one non-prime attribute.",
+        "D": "BCNF decompositions preserve functional dependencies."
+      }
     },
     {
       "id": "2022_CS_CS_Q15",
@@ -14721,10 +14749,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Arrays, stacks, queues, linked lists",
+      "difficulty_level": "Easy",
+      "explaination": "A singly linked list can be reversed in-place in $\\mathcal{O}(1)$ auxiliary space using three moving pointers (`prev`, `curr`, `next`) by reversing each pointer sequentially in a single pass of $n$ nodes, achieving optimal $\\Theta(n)$ worst-case time.",
       "tags": [
         "1_mark",
         "2022",
@@ -14734,7 +14762,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the problem of reversing a singly linked list. Which one of the following statements is TRUE about the time complexity of algorithms that solve the above problem in $\\mathcal{O}(1)$ space?",
+      "options_latex": {
+        "A": "The best algorithm for the problem takes $\\Theta(n)$ time in the worst case.",
+        "B": "The best algorithm for the problem takes $\\Theta(n \\log n)$ time in the worst case.",
+        "C": "The best algorithm for the problem takes $\\Theta(n^2)$ time in the worst case.",
+        "D": "It is not possible to reverse a singly linked list in $\\mathcal{O}(1)$ space."
+      }
     },
     {
       "id": "2022_CS_CS_Q16",
@@ -14764,10 +14799,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Searching, sorting, hashing",
+      "difficulty_level": "Easy",
+      "explaination": "Let $n_1$ be the number of odd keys and $n_2$ be the number of even keys ($n_1 + n_2 = n$). Under simple uniform hashing, each key independently hashes to any slot with probability $1/m$. By linearity of expectation, the expected number of keys in any slot is $\\frac{n_1}{m} + \\frac{n_2}{m} = \\frac{n}{m}$.",
       "tags": [
         "1_mark",
         "2022",
@@ -14777,7 +14812,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Suppose we are given $n$ keys, $m$ hash table slots, and two simple uniform hash functions $h_1$ and $h_2$. Further suppose our hashing scheme uses $h_1$ for the odd keys and $h_2$ for the even keys. What is the expected number of keys in a slot?",
+      "options_latex": {
+        "A": "$m/n$",
+        "B": "$n/m$",
+        "C": "$2n/m$",
+        "D": "$n / (2m)$"
+      }
     },
     {
       "id": "2022_CS_CS_Q17",
@@ -14807,10 +14849,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "I/O interface: interrupt and DMA mode",
+      "difficulty_level": "Easy",
+      "explaination": "Direct Memory Access (DMA) enables high-speed bulk data transfer directly between the disk controller and main memory without continuous CPU intervention, achieving the highest possible data throughput compared to programmed or interrupt-driven I/O.",
       "tags": [
         "1_mark",
         "2022",
@@ -14820,7 +14862,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one of the following facilitates transfer of bulk data from hard disk to main memory with the highest throughput?",
+      "options_latex": {
+        "A": "DMA based I/O transfer",
+        "B": "Interrupt driven I/O transfer",
+        "C": "Polling based I/O transfer",
+        "D": "Programmed I/O transfer"
+      }
     },
     {
       "id": "2022_CS_CS_Q18",
@@ -14850,10 +14899,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Number representations and computer arithmetic (fixed and floating point)",
+      "difficulty_level": "Medium",
+      "explaination": "In a 4-bit 2's complement system, representable integers span $[-2^3, 2^3 - 1] = [-8, +7]$. For $R_1 = 1100_2 = -4$ and $R_2 = 1010_2 = -6$, their sum is $-4 + (-6) = -10$. Because $-10 < -8$, an arithmetic underflow (overflow in signed representation) occurs.",
       "tags": [
         "1_mark",
         "2022",
@@ -14863,7 +14912,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $R_1$ and $R_2$ be two 4-bit registers that store numbers in 2's complement form. For the operation $R_1 + R_2$, which one of the following values of $R_1$ and $R_2$ gives an arithmetic overflow?",
+      "options_latex": {
+        "A": "$R_1 = 1011$ and $R_2 = 1110$",
+        "B": "$R_1 = 1100$ and $R_2 = 1010$",
+        "C": "$R_1 = 0011$ and $R_2 = 0100$",
+        "D": "$R_1 = 1001$ and $R_2 = 1111$"
+      }
     },
     {
       "id": "2022_CS_CS_Q19",
@@ -14893,10 +14949,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Concurrency and synchronization",
+      "difficulty_level": "Medium",
+      "explaination": "To output BCABCABCA..., the sequence begins with 'B' from T2, which requires $S_1 = 1$. After printing 'B', T2 signals $S_3$, allowing T1 to print 'C'. T1 then signals $S_2$, allowing T3 to print 'A'. Finally, T3 signals $S_1$, enabling T2 again. Therefore, the required initial semaphore values are $S_1 = 1, S_2 = 0, S_3 = 0$.",
       "tags": [
         "1_mark",
         "2022",
@@ -14906,7 +14962,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following threads, T1, T2, and T3 executing on a single processor, synchronized using three binary semaphore variables, S1, S2, and S3, operated upon using standard `wait()` and `signal()`:\n\\begin{center}\n\\begin{tabular}{p{3.5cm}p{3.5cm}p{3.5cm}}\n\\textbf{T1} & \\textbf{T2} & \\textbf{T3} \\\\\n\\texttt{while(true)\\{} & \\texttt{while(true)\\{} & \\texttt{while(true)\\{} \\\\\n\\texttt{\\ \\ wait(S3);} & \\texttt{\\ \\ wait(S1);} & \\texttt{\\ \\ wait(S2);} \\\\\n\\texttt{\\ \\ print(\"C\");} & \\texttt{\\ \\ print(\"B\");} & \\texttt{\\ \\ print(\"A\");} \\\\\n\\texttt{\\ \\ signal(S2);\\}} & \\texttt{\\ \\ signal(S3);\\}} & \\texttt{\\ \\ signal(S1);\\}}\n\\end{tabular}\n\\end{center}\nWhich initialization of the semaphores would print the sequence BCABCABCA\\dots?",
+      "options_latex": {
+        "A": "$S_1 = 1; S_2 = 1; S_3 = 1$",
+        "B": "$S_1 = 1; S_2 = 1; S_3 = 0$",
+        "C": "$S_1 = 1; S_2 = 0; S_3 = 0$",
+        "D": "$S_1 = 0; S_2 = 1; S_3 = 1$"
+      }
     },
     {
       "id": "2022_CS_CS_Q20",
@@ -14936,10 +14999,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Linear Algebra",
+      "subtopic": "Matrices, determinants",
+      "difficulty_level": "Easy",
+      "explaination": "The trace is cyclic: $\\text{tr}(AB) = \\text{tr}(BA)$ holds whenever $A$ is $m \\times n$ and $B$ is $n \\times m$. Similarly, for $n \\times n$ square matrices $C$ and $D$, $\\text{tr}(CD) = \\text{tr}(DC)$. Thus, both Statement 1 and Statement 2 are correct.",
       "tags": [
         "1_mark",
         "2022",
@@ -14949,7 +15012,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following two statements with respect to the matrices $A_{m \\times n}, B_{n \\times m}, C_{n \\times n}$ and $D_{n \\times n}$:\n\\begin{itemize}[itemsep=0pt,topsep=2pt]\n\\item Statement 1: $\\text{tr}(AB) = \\text{tr}(BA)$\n\\item Statement 2: $\\text{tr}(CD) = \\text{tr}(DC)$\n\\end{itemize}\nwhere $\\text{tr}()$ represents the trace of a matrix. Which one of the following holds?",
+      "options_latex": {
+        "A": "Statement 1 is correct and Statement 2 is wrong.",
+        "B": "Statement 1 is wrong and Statement 2 is correct.",
+        "C": "Both Statement 1 and Statement 2 are correct.",
+        "D": "Both Statement 1 and Statement 2 are wrong."
+      }
     },
     {
       "id": "2022_CS_CS_Q21",
@@ -14979,10 +15049,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Easy",
+      "explaination": "Initially $x = 1, z[0] = 10, z[1] = 11$. The assignment `p = &x; *p = 10;` sets $x = 10$. The line `*(&z[0] + 1) += 3;` targets `z[1]`, updating $z[1] = 11 + 3 = 14$. The array element $z[0]$ remains 10. The output printed is `10, 10, 14`.",
       "tags": [
         "1_mark",
         "2022",
@@ -14992,7 +15062,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "What is printed by the following ANSI C program?\n\\begin{lstlisting}[language=C]\n#include <stdio.h>\nint main(int argc, char *argv[]) {\n    int x = 1, z[2] = {10, 11};\n    int *p = NULL;\n    p = &x;\n    *p = 10;\n    p = &z[1];\n    *(&z[0] + 1) += 3;\n    printf(\"%d, %d, %d\\n\", x, z[0], z[1]);\n    return 0;\n}\n\\end{lstlisting}",
+      "options_latex": {
+        "A": "1, 10, 11",
+        "B": "1, 10, 14",
+        "C": "10, 14, 11",
+        "D": "10, 10, 14"
+      }
     },
     {
       "id": "2022_CS_CS_Q22",
@@ -15022,10 +15099,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Concept of layering: OSI and TCP/IP Protocol Stacks",
+      "difficulty_level": "Medium",
+      "explaination": "In the enterprise topology, subnets are formed by distinct broadcast domains separated by router interfaces: 2 Ethernet LAN segments (2 subnets), 1 web server subnet (1 subnet), 1 internal firewall segment (1 subnet), and 2 point-to-point links between the routers (2 subnets), yielding a total of 6 subnets.",
       "tags": [
         "1_mark",
         "2022",
@@ -15035,7 +15112,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider an enterprise network with two Ethernet segments, a web server and a firewall, connected via three routers. What is the number of subnets inside the enterprise network?",
+      "options_latex": {
+        "A": "3",
+        "B": "12",
+        "C": "6",
+        "D": "8"
+      }
     },
     {
       "id": "2022_CS_CS_Q23",
@@ -15067,10 +15151,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular and context-free languages, pumping lemma",
+      "difficulty_level": "Medium",
+      "explaination": "If $L$ and $\\overline{L}$ are both recursively enumerable, $L$ is recursive by Post's theorem (B is TRUE). Every CFL is recursive, and recursive languages are closed under complement, so $\\overline{\\text{CFL}}$ is recursive (C is TRUE). Regular languages are closed under intersection, and every regular language is a DCFL (D is TRUE). Subsets of RE languages need not be recursive (A is FALSE).",
       "tags": [
         "1_mark",
         "2022",
@@ -15080,7 +15164,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statements is/are TRUE?",
+      "options_latex": {
+        "A": "Every subset of a recursively enumerable language is recursive.",
+        "B": "If a language $L$ and its complement $\\overline{L}$ are both recursively enumerable, then $L$ must be recursive.",
+        "C": "Complement of a context-free language must be recursive.",
+        "D": "If $L_1$ and $L_2$ are regular, then $L_1 \\cap L_2$ must be deterministic context-free."
+      }
     },
     {
       "id": "2022_CS_CS_Q24",
@@ -15112,10 +15203,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory hierarchy: cache, main memory and secondary storage",
+      "difficulty_level": "Medium",
+      "explaination": "Write-through (WT) caches never maintain dirty blocks because main memory is updated simultaneously on every write, so WT does not have dirty bits (A is FALSE). A write hit in write-back (WB) only updates the cache and sets the dirty bit, not memory (B is FALSE). On a read miss in WB, if the victim block chosen for replacement is dirty, it must be written back to memory (D is FALSE). Statements A, B, and D are FALSE.",
       "tags": [
         "1_mark",
         "2022",
@@ -15125,7 +15216,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let WB and WT be two set associative cache organizations that use LRU algorithm for cache block replacement. WB is a write back cache and WT is a write through cache. Which of the following statements is/are FALSE?",
+      "options_latex": {
+        "A": "Each cache block in WB and WT has a dirty bit.",
+        "B": "Every write hit in WB leads to a data transfer from cache to main memory.",
+        "C": "Eviction of a block from WT will not lead to data transfer from cache to main memory.",
+        "D": "A read miss in WB will never lead to eviction of a dirty block from WB."
+      }
     },
     {
       "id": "2022_CS_CS_Q25",
@@ -15156,10 +15254,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Relational model: relational algebra, tuple calculus, SQL",
+      "difficulty_level": "Medium",
+      "explaination": "Relational division $\\Pi_{eId, bId}(Own) / \\Pi_{bId}(Brand)$ directly computes employees who own all brands (A is TRUE). Equivalently, taking all employees, finding those missing at least one brand via cartesian product with Brand followed by set difference with Own, and subtracting them from all employees yields the same set (B is TRUE).",
       "tags": [
         "1_mark",
         "2022",
@@ -15169,7 +15267,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following three relations in a relational database:\n\\[ \\text{Employee}(eId, Name), \\quad \\text{Brand}(bId, bName), \\quad \\text{Own}(eId, bId) \\]\nWhich of the following relational algebra expressions return the set of $eIds$ who own all the brands?",
+      "options_latex": {
+        "A": "$\\Pi_{eId}(\\Pi_{eId, bId}(Own) / \\Pi_{bId}(Brand))$",
+        "B": "$\\Pi_{eId}(Own) - \\Pi_{eId}((\\Pi_{eId}(Own) \\times \\Pi_{bId}(Brand)) - Own)$",
+        "C": "$\\Pi_{eId}(\\Pi_{eId, bId}(Own) / \\Pi_{bId}(Own))$",
+        "D": "$\\Pi_{eId}((\\Pi_{eId}(Own) \\times \\Pi_{bId}(Brand)) / \\Pi_{bId}(Own))$"
+      }
     },
     {
       "id": "2022_CS_CS_Q26",
@@ -15200,10 +15305,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Deadlock",
+      "difficulty_level": "Easy",
+      "explaination": "Circular wait is one of Coffman's four necessary conditions for deadlock (A is TRUE). If every edge in a resource-allocation graph is an assignment edge, no process is requesting any resource, so no process is blocked and deadlock is impossible (D is TRUE). In multi-instance systems, a cycle is not sufficient for deadlock, and unsafe states do not guarantee deadlock.",
       "tags": [
         "1_mark",
         "2022",
@@ -15213,7 +15318,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statements is/are TRUE with respect to deadlocks?",
+      "options_latex": {
+        "A": "Circular wait is a necessary condition for the formation of deadlock.",
+        "B": "In a system where each resource has more than one instance, a cycle in its wait-for graph indicates the presence of a deadlock.",
+        "C": "If the current allocation of resources to processes leads the system to unsafe state, then deadlock will necessarily occur.",
+        "D": "In the resource-allocation graph of a system, if every edge is an assignment edge, then the system is not in deadlock state."
+      }
     },
     {
       "id": "2022_CS_CS_Q27",
@@ -15245,10 +15357,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Monoids, Groups",
+      "difficulty_level": "Medium",
+      "explaination": "If $(xy)^2 = x^2 y^2$, then $xyxy = xxyy \\implies yx = xy$, so $G$ is commutative (A is TRUE). If $x^2 = 1$ for all $x$, every element is its own inverse, so $xy = (xy)^{-1} = y^{-1} x^{-1} = yx$ (B is TRUE). Any group of order 2 is isomorphic to $\\mathbb{Z}_2$, which is cyclic and abelian (C is TRUE). Subgroups of abelian groups are always abelian (D is FALSE).",
       "tags": [
         "1_mark",
         "2022",
@@ -15258,7 +15370,14 @@
         "msq",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which of the following statements is/are TRUE for a group $G$?",
+      "options_latex": {
+        "A": "If for all $x, y \\in G$, $(xy)^2 = x^2 y^2$, then $G$ is commutative.",
+        "B": "If for all $x \\in G$, $x^2 = 1$, then $G$ is commutative. Here, 1 is the identity element of $G$.",
+        "C": "If the order of $G$ is 2, then $G$ is commutative.",
+        "D": "If $G$ is commutative, then a subgroup of $G$ need not be commutative."
+      }
     },
     {
       "id": "2022_CS_CS_Q28",
@@ -15284,10 +15403,10 @@
         "min": 509.0,
         "max": 509.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees, binary search trees, binary heaps",
+      "difficulty_level": "Hard",
+      "explaination": "In a complete binary tree BST with 1000 nodes (indices 0 to 999), the rightmost branch contains nodes 0, 2, 6, 14, 30, 62, 126, 254, 510. Node 510 is a leaf and holds the maximum element (1st largest). Node 254 is its parent and holds the 2nd largest element. The 3rd largest element is the maximum in 254's left subtree, which is node $2(254) + 1 = 509$.",
       "tags": [
         "1_mark",
         "2022",
@@ -15296,7 +15415,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Suppose a binary search tree with 1000 distinct elements is also a complete binary tree. The tree is stored using the array representation of binary heap trees. Assuming that the array indices start with 0, the 3rd largest element of the tree is stored at index \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q29",
@@ -15322,10 +15443,10 @@
         "min": 5.0,
         "max": 5.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Medium",
+      "explaination": "From item $[S \\to S \\bullet + R]$ in $\\text{closure}(I_0)$, transitioning on symbol $+$ yields the kernel item $[S \\to S + \\bullet R]$. Computing its closure adds $[R \\to \\bullet R * P]$, $[R \\to \\bullet P]$, $[P \\to \\bullet ( S )]$, and $[P \\to \\bullet id]$, resulting in exactly 5 items.",
       "tags": [
         "1_mark",
         "2022",
@@ -15334,7 +15455,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the augmented grammar with $\\{+, *, (, ), id\\}$ as the set of terminals:\n\\begin{align*}\nS' &\\to S \\\\\nS &\\to S + R \\mid R \\\\\nR &\\to R * P \\mid P \\\\\nP &\\to ( S ) \\mid id\n\\end{align*}\nIf $I_0$ is the set of two LR(0) items $\\{[S' \\to \\bullet S], [S \\to \\bullet S + R]\\}$, then $\\text{goto}(\\text{closure}(I_0), +)$ contains exactly \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_ items. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q30",
@@ -15360,10 +15483,10 @@
         "min": 36.0,
         "max": 36.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Graphs: connectivity, matching, colouring",
+      "difficulty_level": "Easy",
+      "explaination": "A disconnected graph on $n = 10$ vertices with the maximum number of edges has one isolated vertex and one complete component $K_{n-1} = K_9$. The maximum number of edges is $\\binom{9}{2} = \\frac{9 \\times 8}{2} = 36$.",
       "tags": [
         "1_mark",
         "2022",
@@ -15372,7 +15495,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a simple undirected graph of 10 vertices. If the graph is disconnected, then the maximum number of edges it can have is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q31",
@@ -15398,10 +15523,10 @@
         "min": 8.0,
         "max": 8.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Integrity constraints, normal forms",
+      "difficulty_level": "Easy",
+      "explaination": "Computing attribute closures: $(AB)^+ = \\{A, B, C, D, E\\}$. Attributes $A$ and $B$ never appear on any RHS, so $AB$ is the unique candidate key. Every superkey must contain $AB$, and can include any subset of the remaining 3 attributes $\\{C, D, E\\}$, giving $2^3 = 8$ superkeys.",
       "tags": [
         "1_mark",
         "2022",
@@ -15410,7 +15535,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a relation $R(A, B, C, D, E)$ with the following three functional dependencies:\n\\[ AB \\to C; \\quad BC \\to D; \\quad C \\to E; \\]\nThe number of superkeys in the relation $R$ is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q32",
@@ -15436,10 +15563,10 @@
         "min": 7.0,
         "max": 7.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Combinatorics: counting, recurrence relations, generating functions",
+      "difficulty_level": "Medium",
+      "explaination": "Distributing 6 identical balls into 3 identical bins is equivalent to integer partitions of 6 into at most 3 parts: $6$, $5+1$, $4+2$, $3+3$, $4+1+1$, $3+2+1$, and $2+2+2$. There are exactly 7 such partitions.",
       "tags": [
         "1_mark",
         "2022",
@@ -15448,7 +15575,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The number of arrangements of six identical balls in three identical bins is \\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q33",
@@ -15474,10 +15603,10 @@
         "min": 0.85,
         "max": 0.85
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory hierarchy: cache, main memory and secondary storage",
+      "difficulty_level": "Medium",
+      "explaination": "Initial AMAT is $10 + (1 - 0.80) \\times 100 = 10 + 20 = 30\\text{ ns}$. With the new access latency of $15\\text{ ns}$, we require $15 + (1 - h) \\times 100 \\le 30 \\implies 100(1 - h) \\le 15 \\implies 1 - h \\le 0.15 \\implies h \\ge 0.85$.",
       "tags": [
         "1_mark",
         "2022",
@@ -15486,7 +15615,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A cache memory that has a hit rate of 0.8 has an access latency 10 ns and miss penalty 100 ns. An optimization is done on the cache to reduce the miss rate. However, the optimization results in an increase of cache access latency to 15 ns, whereas the miss penalty is not affected. The minimum hit rate (rounded off to two decimal places) needed after the optimization such that it should not increase the average memory access time is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in numeric format)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q34",
@@ -15512,10 +15643,10 @@
         "min": -0.5,
         "max": -0.5
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Calculus",
+      "subtopic": "Limits, continuity and differentiability",
+      "difficulty_level": "Easy",
+      "explaination": "The limit $\\lim_{x \\to 0} \\frac{x}{1 - e^{2x}}$ has indeterminate form $\\frac{0}{0}$. Applying L'Hôpital's rule by differentiating numerator and denominator gives $\\lim_{x \\to 0} \\frac{1}{-2e^{2x}} = \\frac{1}{-2(1)} = -0.5$.",
       "tags": [
         "1_mark",
         "2022",
@@ -15524,7 +15655,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The value of the following limit is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in numeric format)\n\\[ \\lim_{x \\to 0^+} \\frac{x}{1 - e^{2x}} \\]",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q35",
@@ -15550,10 +15683,10 @@
         "min": 4.0,
         "max": 4.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Application layer protocols: DNS, SMTP, HTTP, FTP, Email",
+      "difficulty_level": "Easy",
+      "explaination": "In an un-cached iterative resolution for `www.gate.org.in`: the resolver queries Root DNS server (1), `.in` TLD server (2), `.org.in` SLD server (3), and `gate.org.in` Authoritative server (4). Each query yields a response, totaling 4 query-response pairs.",
       "tags": [
         "1_mark",
         "2022",
@@ -15562,7 +15695,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the resolution of the domain name `www.gate.org.in` by a DNS resolver. Assume that no resource records are cached anywhere across the DNS servers and that iterative query mechanism is used in the resolution. The number of DNS query-response pairs involved in completely resolving the domain name is \\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2022_CS_GA_Q01",
@@ -15592,10 +15727,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "'Fare' denotes the price charged for a journey or conveyance, whereas 'fair' means reasonable or just. Therefore, 'The fare is too high for it to be considered fair.'",
       "tags": [
         "1_mark",
         "2022",
@@ -15606,7 +15741,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The \\_\\_\\_\\_\\_\\_\\_\\_\\_ is too high for it to be considered \\_\\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": {
+        "A": "fair / fare",
+        "B": "faer / fair",
+        "C": "fare / fare",
+        "D": "fare / fair"
+      }
     },
     {
       "id": "2022_CS_GA_Q02",
@@ -15636,10 +15778,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Calculus",
+      "subtopic": "Integration",
+      "difficulty_level": "Easy",
+      "explaination": "The area under the piecewise step function is the sum of the rectangular areas: $\\int_0^1 y(x) \\, dx = 2\\left(\\frac{1}{3} - 0\\right) + 3\\left(\\frac{3}{4} - \\frac{1}{3}\\right) + 1\\left(1 - \\frac{3}{4}\\right) = \\frac{2}{3} + 3\\left(\\frac{5}{12}\\right) + \\frac{1}{4} = \\frac{2}{3} + \\frac{5}{4} + \\frac{1}{4} = \\frac{2}{3} + \\frac{3}{2} = \\frac{13}{6}$.",
       "tags": [
         "1_mark",
         "2022",
@@ -15650,7 +15792,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A function $y(x)$ is defined in the interval $[0, 1]$ on the $x$-axis as\n\\[ y(x) = \\begin{cases} 2 & \\text{if } 0 \\le x < \\frac{1}{3} \\\\ 3 & \\text{if } \\frac{1}{3} \\le x < \\frac{3}{4} \\\\ 1 & \\text{if } \\frac{3}{4} \\le x \\le 1 \\end{cases} \\]\nWhich one of the following is the area under the curve for the interval $[0, 1]$ on the $x$-axis?",
+      "options_latex": {
+        "A": "$5/6$",
+        "B": "$6/5$",
+        "C": "$13/6$",
+        "D": "$6/13$"
+      }
     },
     {
       "id": "2022_CS_GA_Q03",
@@ -15680,10 +15829,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Medium",
+      "explaination": "Since $r$ is a root of $x^2 + 2x + 6 = 0$, we have $r^2 + 2r = -6$. Pairing terms in the expression: $[(r+2)(r+5)][(r+3)(r+4)] = [r^2 + 7r + 10][r^2 + 7r + 12]$. Substituting $r^2 = -2r - 6$ yields $(5r + 4)(5r + 6) = 25r^2 + 50r + 24 = 25(r^2 + 2r) + 24 = 25(-6) + 24 = -126$.",
       "tags": [
         "1_mark",
         "2022",
@@ -15694,7 +15843,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $r$ be a root of the equation $x^2 + 2x + 6 = 0$.\nThen the value of the expression $(r+2)(r+3)(r+4)(r+5)$ is",
+      "options_latex": {
+        "A": "51",
+        "B": "$-51$",
+        "C": "126",
+        "D": "$-126$"
+      }
     },
     {
       "id": "2022_CS_GA_Q04",
@@ -15724,10 +15880,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Analytical Aptitude",
+      "subtopic": "Logic: deduction and induction",
+      "difficulty_level": "Easy",
+      "explaination": "Statement 1 (\"All students are inquisitive\") and Statement 3 (\"No student is inquisitive\") are universal affirmative and universal negative statements (contraries). In classical categorical logic with a non-empty class, both statements cannot be simultaneously true.",
       "tags": [
         "1_mark",
         "2022",
@@ -15738,7 +15894,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Given below are four statements:\n\\begin{itemize}[itemsep=0pt,topsep=2pt]\n\\item Statement 1: All students are inquisitive.\n\\item Statement 2: Some students are inquisitive.\n\\item Statement 3: No student is inquisitive.\n\\item Statement 4: Some students are not inquisitive.\n\\end{itemize}\nFrom the given four statements, find the two statements that CANNOT BE TRUE simultaneously, assuming that there is at least one student in the class.",
+      "options_latex": {
+        "A": "Statement 1 and Statement 3",
+        "B": "Statement 1 and Statement 2",
+        "C": "Statement 2 and Statement 4",
+        "D": "Statement 3 and Statement 4"
+      }
     },
     {
       "id": "2023_CS_CS_Q12",
