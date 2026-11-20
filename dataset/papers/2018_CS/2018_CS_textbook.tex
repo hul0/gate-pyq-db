@@ -1,0 +1,2492 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\geometry{
+    a4paper,
+    top=1.5cm,
+    bottom=1.8cm,
+    left=1.2cm,
+    right=1.2cm
+}
+
+% Persistent Unremovable Canvas Watermark on Every Page (Shared XObject)
+\newsavebox{\watermarkbox}
+\sbox{\watermarkbox}{%
+    \begin{tabular}{c}
+        \includegraphics[width=8cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.png} \\[-0.5em]
+        {\fontsize{18}{22}\selectfont\bfseries\scshape www.studiva.co.in}
+    \end{tabular}%
+}
+\AddToShipoutPictureBG{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[opacity=0.12] at (current page.center) {\usebox{\watermarkbox}};
+    \end{tikzpicture}%
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\scshape GATE 2018 Computer Science and Information Technology (CS)}
+\fancyhead[R]{\small\scshape Practice Question Bank with Solutions}
+\fancyfoot[L]{\scriptsize\textsc{Copyright \copyright\ 2026} Studiva\textsuperscript{TM}}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\fancyfoot[R]{\raisebox{-0.2em}{\includegraphics[height=1.0em]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.png}}\hspace{0.35em}\scriptsize\texttt{www.studiva.co.in}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Code Listing Style (Monochrome, clean)
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=none,
+    frame=none,
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\begin{document}
+
+% ==================== PAGE 1: DEDICATED IMPRINT & COPYRIGHT PAGE ====================
+\thispagestyle{empty}
+\vspace*{0.5cm}
+\begin{center}
+    \includegraphics[width=2.5cm]{/home/johan/GATE/GATE_CS_PYQ_DB/assets/studiva_butterfly_icon_transparent.png}\\[0.6em]
+    {\LARGE \textbf{GATE 2018 COMPUTER SCIENCE \& IT}}\\[0.3em]
+    {\Large \textbf{PREVIOUS YEAR QUESTION BANK WITH SOLUTIONS}}\\[0.2em]
+    {\normalsize \textsc{Session CS $\cdot$ Examination Year 2018}}\\[1.2em]
+    \rule{0.6\textwidth}{0.6pt}
+\end{center}
+
+\vspace{1em}
+\noindent\begin{tabular}{ll}
+\textbf{Author / Compiler:} & Rupam Ghosh \\
+\textbf{Publisher \& Platform:} & Studiva\textsuperscript{TM} (\texttt{www.studiva.co.in}) \\
+\textbf{Official Inquiries:} & \texttt{contact@studiva.co.in} \\
+\textbf{Edition:} & First Standard Edition (2026) \\
+\textbf{Syllabus Reference:} & Official GATE 2026 Syllabus (Organizing Institute: IIT Guwahati) \\
+\end{tabular}
+
+\vspace{1.5em}
+\begin{tcolorbox}[enhanced, standard jigsaw, opacityback=0, colframe=black!40, arc=1mm, boxrule=0.5pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+\textbf{\large COPYRIGHT \& INTELLECTUAL PROPERTY NOTICE}\\[0.6em]
+Copyright \copyright\ 2026 Rupam Ghosh \& Studiva\textsuperscript{TM}. All Rights Reserved.\\[0.5em]
+This educational compilation, problem organization, taxonomy classification, LaTeX typesetting, hints, and explanatory solutions are the proprietary intellectual property of \textbf{Rupam Ghosh} and \textbf{Studiva\textsuperscript{TM}}.\\[0.6em]
+\textbf{Terms of Use \& Attribution Rules:}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Personal Educational Use:} Permitted freely for individual students and educators preparing for competitive examinations.
+    \item \textbf{Mandatory Attribution:} Any reproduction, republication, hosting, or sharing (digital or physical) must prominently credit \textbf{Rupam Ghosh \& Studiva\textsuperscript{TM}} and include an active, direct link to \texttt{https://www.studiva.co.in}.
+    \item \textbf{Commercial Restrictions:} Commercial resale, sublicensing, course bundling, or inclusion in paid test series without prior written permission is strictly prohibited.
+    \item \textbf{Anti-Tampering Notice:} Removing, altering, or obscuring copyright notices, page watermarks, or website links from this document is strictly prohibited.
+\end{itemize}
+\vspace{0.6em}
+\textbf{Fair Use Disclaimer:}\\
+The underlying examination questions originate from the Graduate Aptitude Test in Engineering (GATE), conducted by the Indian Institutes of Technology (IITs) and Indian Institute of Science (IISc). Question texts are reproduced for non-commercial educational study under Fair Use doctrines. No copyright is claimed over the original GATE examination question texts.
+\end{tcolorbox}
+
+\vspace{1.2em}
+\begin{center}
+\small\itshape
+Practice Recommendation: Use an opaque sheet of paper or ruler to cover the right-hand column during mock attempts. Tick your chosen answers directly in the check boxes on the left, then slide the cover to check the solution and hint.
+\end{center}
+
+\newpage
+% ==================== PAGE 2 ONWARDS: QUESTION BANK WITH SOLUTIONS ====================
+
+\vspace{6pt}
+\subsection*{General Aptitude}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.1} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q01}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+``From where are they bringing their books? \_\_\_\_\_\_\_\_ bringing \_\_\_\_\_\_\_ books from \_\_\_\_\_.''
+\par\medskip
+The words that best fill the blanks in the above sentence are
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Their, they're, there & $\square$\ \textbf{(B)} They're, their, there \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} There, their, they're & $\square$\ \textbf{(D)} They're, there, there
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Vocabulary: words, idioms, and phrases in context}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small "They're" is the contraction for "they are", "their" is the possessive pronoun, and "there" refers to a place. Thus, the complete sentence is: "They're bringing their books from there."}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.2} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q02}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+``A \_\_\_\_\_\_\_\_\_ investigation can sometimes yield new facts, but typically organized ones are more successful.''
+\par\medskip
+The word that best fills the blank in the above sentence is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} meandering & $\square$\ \textbf{(B)} timely \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} consistent & $\square$\ \textbf{(D)} systematic
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Verbal Aptitude \\
+\textbf{Subtopic:} \textit{Vocabulary: words, idioms, and phrases in context}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The sentence contrasts an erratic or wandering investigation with an "organized" one. "Meandering" means proceeding in a winding or circuitous course without a clear direction, which fits the context precisely.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.3} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q03}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The area of a square is $d$. What is the area of the circle which has the diagonal of the square as its diameter?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $\pi d$ & $\square$\ \textbf{(B)} $\pi d^2$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\frac{1}{4}\pi d^2$ & $\square$\ \textbf{(D)} $\frac{1}{2}\pi d$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Mensuration and geometry}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For a square of area $d$, the side length is $s = \sqrt{d}$ and its diagonal is $s\sqrt{2} = \sqrt{2d}$. Since this diagonal is the diameter of the circle, the radius is $r = \frac{\sqrt{2d}}{2} = \sqrt{\frac{d}{2}}$. Hence, the area of the circle is $\pi r^2 = \pi \left(\frac{d}{2}\right) = \frac{1}{2}\pi d$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.4} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q04}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+What would be the smallest natural number which when divided either by 20 or by 42 or by 76 leaves a remainder of 7 in each case?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 3047 & $\square$\ \textbf{(B)} 6047 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 7987 & $\square$\ \textbf{(D)} 63847
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The required number is $\text{LCM}(20, 42, 76) + 7$. Calculating prime factorizations: $20 = 2^2 \times 5$, $42 = 2 \times 3 \times 7$, $76 = 2^2 \times 19$. Thus $\text{LCM} = 2^2 \times 3 \times 5 \times 7 \times 19 = 7980$. Adding the remainder 7 gives $7980 + 7 = 7987$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.5} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q05}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+What is the missing number in the following sequence?
+\[ 2,\; 12,\; 60,\; 240,\; 720,\; 1440,\; \_\_\_\_\_,\; 0 \]
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 2880 & $\square$\ \textbf{(B)} 1440 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 720 & $\square$\ \textbf{(D)} 0
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Examining consecutive multipliers: $2 \times 6 = 12$, $12 \times 5 = 60$, $60 \times 4 = 240$, $240 \times 3 = 720$, $720 \times 2 = 1440$. Following this decreasing multiplier pattern, the next term is $1440 \times 1 = 1440$, and the term after is $1440 \times 0 = 0$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.6} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q06}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+An old man walks in a town to distribute old age pensions. There are 300 persons in the town who are eligible for the pension. The monthly pension is Rs. 750 for each eligible man and Rs. 1000 for each eligible woman. 8/9 of the eligible men and 2/3 of the eligible women claim the pension. The total pension claimed per month is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Rs. 1,50,000 & $\square$\ \textbf{(B)} Rs. 2,00,000 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Rs. 2,25,000 & $\square$\ \textbf{(D)} Cannot be determined
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Let $M$ and $W$ be eligible men and women, with $M + W = 300$. Number claiming pension is $\frac{8}{9}M$ men and $\frac{2}{3}W$ women. Total pension claimed $= \frac{8}{9}M(750) + \frac{2}{3}W(1000) = \frac{2000}{3}M + \frac{2000}{3}W = \frac{2000}{3}(M + W) = \frac{2000}{3}(300) = 2{,}00{,}000$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.7} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q07}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+If $p^{-x} = \frac{1}{q}$, $q^{-y} = \frac{1}{r}$, and $r^{-z} = \frac{1}{p}$, what is the value of $xyz$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $-1$ & $\square$\ \textbf{(B)} 0 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 1 & $\square$\ \textbf{(D)} $pqr$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small From $p^{-x} = \frac{1}{q}$, we have $q = p^x$. Substituting into $q^{-y} = \frac{1}{r}$ gives $r = q^y = (p^x)^y = p^{xy}$. Then $r^{-z} = \frac{1}{p}$ gives $p = r^z = (p^{xy})^z = p^{xyz}$. Since $p > 0$ and $p \neq 1$, it follows that $xyz = 1$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.8} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q08}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In a party, 60\% of the invited guests are male and 40\% are female. 80\% of the invited guests attend the party. If all the invited female guests attend the party, what is the ratio of male guests who attended to the female guests who attended?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 2 : 3 & $\square$\ \textbf{(B)} 1 : 1 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 3 : 2 & $\square$\ \textbf{(D)} 2 : 1
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Out of 100 invited guests, 60 are male and 40 are female. Since 80 guests attend and all 40 invited females attend, the remaining $80 - 40 = 40$ attendees must be male. Thus, the ratio of attending males to attending females is $40 : 40 = 1 : 1$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.10} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q10}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A six sided unbiased die with four green faces and two red faces is rolled seven times. Which of the following combinations is the most likely outcome of the experiment?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Three green faces and four red faces \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Four green faces and three red faces \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Five green faces and two red faces \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Six green faces and one red face
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Quantitative Aptitude \\
+\textbf{Subtopic:} \textit{Elementary statistics and probability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The number of green faces $X$ follows a Binomial distribution $B(n=7, p=4/6=2/3)$. The mode of a binomial distribution is $\lfloor (n+1)p \rfloor = \lfloor 8 \times \frac{2}{3} \rfloor = \lfloor 5.33 \rfloor = 5$. Thus, the most likely outcome is 5 green faces and $7 - 5 = 2$ red faces.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\vspace{6pt}
+\subsection*{Computer Science and Information Technology}
+\vspace{-4pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.1} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q01\_v2}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which one of the following is a closed form expression for the generating function of the sequence $\{a_n\}$, where $a_n = 2n + 3$ for all $n = 0, 1, 2, \dots$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $\frac{3}{(1-x)^2}$ & $\square$\ \textbf{(B)} $\frac{3x}{(1-x)^2}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\frac{2-x}{(1-x)^2}$ & $\square$\ \textbf{(D)} $\frac{3-x}{(1-x)^2}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Combinatorics: counting, recurrence relations, generating functions}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The generating function is $G(x) = \sum_{n=0}^\infty (2n + 3)x^n = 2\sum_{n=0}^\infty n x^n + 3\sum_{n=0}^\infty x^n$. Using the standard power series $\sum_{n=0}^\infty x^n = \frac{1}{1-x}$ and $\sum_{n=0}^\infty n x^n = \frac{x}{(1-x)^2}$, we obtain $G(x) = \frac{2x}{(1-x)^2} + \frac{3(1-x)}{(1-x)^2} = \frac{3 - x}{(1-x)^2}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.2} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q02\_v2}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following C program.
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+struct Ournode {
+    char x, y, z;
+};
+\par\medskip
+int main() {
+    struct Ournode p = {'1', '0', 'a' + 2};
+    struct Ournode *q = &p;
+    printf("%c, %c", *((char*)q + 1), *((char*)q + 2));
+    return 0;
+}
+\end{lstlisting}
+The output of this program is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 0, c & $\square$\ \textbf{(B)} 0, a+2 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} '0', 'p+2' & $\square$\ \textbf{(D)} 1, 0
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Programming and Data Structures \\
+\textbf{Subtopic:} \textit{Programming in C}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In `struct Ournode`, `char x, y, z;` are stored contiguously in memory. Since `p = {'1', '0', 'a'+2}`, `p.x = '1'`, `p.y = '0'`, and `p.z = 'c'`. Pointer `q` points to `p`; casting `q` to `(char*)` gives byte-level access where `*((char*)q + 1)` accesses `p.y` ('0') and `*((char*)q + 2)` accesses `p.z` ('c').}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.4} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q04\_v2}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $\oplus$ and $\odot$ denote the Exclusive OR and Exclusive NOR operations, respectively. Which one of the following is NOT CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\overline{P \oplus Q} = P \odot Q$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\overline{P \odot Q} = P \oplus Q$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\overline{P} \oplus Q = P \odot Q$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $(P \oplus \overline{P}) \oplus Q = (P \odot \overline{P}) \odot \overline{Q}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Boolean algebra}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Recall that $P \oplus \overline{P} = 1$ and $1 \oplus Q = \overline{Q}$. On the right-hand side of (D), $P \odot \overline{P} = 0$, and $0 \odot \overline{Q} = \overline{0 \oplus \overline{Q}} = \overline{\overline{Q}} = Q$. Since $\overline{Q} \neq Q$, option (D) is NOT correct.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.5} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q05\_v2}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following processor design characteristics.
+\begin{enumerate}[label=\Roman*.]
+    \item Register-to-register arithmetic operations only
+    \item Fixed-length instruction format
+    \item Hardwired control unit
+\end{enumerate}
+Which of the characteristics above are used in the design of a RISC processor?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} I and II only & $\square$\ \textbf{(B)} II and III only \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} I and III only & $\square$\ \textbf{(D)} I, II and III
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Machine instructions and addressing modes}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small RISC (Reduced Instruction Set Computer) architectures feature load-store designs where arithmetic operations operate only on registers (I), fixed-length instruction encodings for streamlined pipelining (II), and hardwired control units for single-cycle instruction execution (III). Hence, all three characteristics I, II, and III are typical of RISC processors.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.6} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q06\_v2}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $N$ be an NFA with $n$ states. Let $k$ be the number of states of a minimal DFA which is equivalent to $N$. Which one of the following is necessarily true?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $k \ge 2^n$ & $\square$\ \textbf{(B)} $k \ge n$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $k \le n^2$ & $\square$\ \textbf{(D)} $k \le 2^n$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small By the subset construction algorithm, converting an $n$-state NFA to a DFA produces states that are subsets of the NFA states. Thus, the power set has $2^n$ possible states, ensuring that any equivalent minimal DFA has $k \le 2^n$ states.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.7} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q07\_v2}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The set of all recursively enumerable languages is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} closed under complementation. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} closed under intersection. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} a subset of the set of all context-sensitive languages. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} an uncountable set.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular and context-free languages, pumping lemma}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The set of recursively enumerable (RE) languages is closed under union, intersection, concatenation, and Kleene star, but not closed under complementation or set difference.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.8} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q08\_v2}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Which one of the following statements is FALSE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Context-free grammar can be used to specify both lexical and syntax rules. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Type checking is done before parsing. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} High-level language programs can be converted to intermediate code directly. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Arguments to a function can be passed using the program stack.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Type checking verifies semantic consistency according to language type rules and is performed during semantic analysis, which occurs after syntax analysis (parsing). Therefore, the statement that type checking is done during syntax analysis is FALSE.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.9} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q09}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The following are some events that occur after a device controller issues an interrupt while process $L$ is under execution.
+\begin{itemize}[leftmargin=*, nosep]
+    \item[P.] The processor pushes the process status of $L$ on to the control stack.
+    \item[Q.] The processor finishes the execution of the current instruction.
+    \item[R.] The processor executes the interrupt service routine.
+    \item[S.] The processor pops the process status of $L$ from the control stack.
+    \item[T.] The processor fetches the new PC value from the interrupt vector.
+\end{itemize}
+Which one of the following is the correct order of events?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Q, P, T, R, S & $\square$\ \textbf{(B)} P, Q, T, R, S \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Q, P, R, T, S & $\square$\ \textbf{(D)} P, Q, R, T, S
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{I/O interface: interrupt and DMA mode}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Upon receiving an interrupt, the processor finishes the execution of the current instruction (Q), saves the processor status and return PC onto the stack (P), loads the starting address of the ISR from the interrupt vector table (T), executes the ISR (R), and finally restores the saved status and resumes process $L$ (S). Hence the order is QPTRS.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.10} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q10\_v2}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a process executing on an operating system that uses demand paging. The average time for a memory access in the system is $M$ units if the corresponding memory page is available in memory, and $D$ units $(D \gg M)$ if the page needs to be fetched from the disk. If $X$ is the effective memory access time, the page fault rate $p$ is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $\frac{X - M}{D}$ & $\square$\ \textbf{(B)} $\frac{X - M}{D - M}$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\frac{D - X}{D - M}$ & $\square$\ \textbf{(D)} $\frac{X - M}{D + M}$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{Memory management and virtual memory}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The effective access time is $X = (1 - p)M + pD = M + p(D - M)$. Solving for $p$ yields $p(D - M) = X - M \implies p = \frac{X - M}{D - M}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.11} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q11}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In an Entity-Relationship (ER) model, suppose $R$ is a many-to-one relationship from entity set $E_1$ to entity set $E_2$. Assume that $E_1$ has total participation in $R$, but $E_2$ has partial participation in $R$. Which one of the following statements is necessarily TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Every entity in $E_1$ is associated with exactly one entity in $E_2$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Some entity in $E_1$ is associated with more than one entity in $E_2$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Every entity in $E_2$ is associated with at least one entity in $E_1$. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} Every entity in $E_2$ is associated with at most one entity in $E_1$.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Databases \\
+\textbf{Subtopic:} \textit{ER-model}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In an ER diagram, a many-to-one relationship from $E_1$ to $E_2$ means each entity in $E_1$ is related to at most one entity in $E_2$. Total participation of $E_1$ requires that every entity in $E_1$ participates in at least one relationship. Combining these, every entity in $E_1$ is associated with exactly one entity in $E_2$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.12} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q12}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following two tables and four queries in SQL.
+\texttt{Book (isbn, bname)}
+\texttt{Stock (isbn, copies)}
+\par\medskip
+Query 1: \texttt{SELECT B.isbn, S.copies FROM Book B INNER JOIN Stock S ON B.isbn = S.isbn;}
+Query 2: \texttt{SELECT B.isbn, S.copies FROM Book B LEFT OUTER JOIN Stock S ON B.isbn = S.isbn;}
+Query 3: \texttt{SELECT B.isbn, S.copies FROM Book B RIGHT OUTER JOIN Stock S ON B.isbn = S.isbn;}
+Query 4: \texttt{SELECT B.isbn, S.copies FROM Book B FULL OUTER JOIN Stock S ON B.isbn = S.isbn;}
+\par\medskip
+Which one of the following statements is CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} Query 1 and Query 2 always produce the same number of rows. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} Query 2 and Query 3 always produce the same number of rows. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Query 1 always produces the maximum number of rows among all queries. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} All rows from Query 1, Query 2, and Query 3 are always present in the result of Query 4.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Databases \\
+\textbf{Subtopic:} \textit{Relational model: relational algebra, tuple calculus, SQL}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Query 1 uses natural join (inner join), Query 2 uses left outer join, Query 3 uses right outer join, and Query 4 uses full outer join. A full outer join preserves all tuples from both relation $Book$ and relation $Stock$ (filling missing values with NULLs). Therefore, every tuple output by Query 1, Query 2, and Query 3 is guaranteed to appear in Query 4.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.13} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q13}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Match the following:
+\begin{center}
+\begin{tabular}{ll@{\hspace{2cm}}ll}
+\textbf{Field} & & \textbf{Length in bits} & \\
+P. & UDP Header's Port Number & I. & 48 \\
+Q. & Ethernet MAC Address & II. & 8 \\
+R. & IPv6 Next Header & III. & 32 \\
+S. & TCP Header's Sequence Number & IV. & 16
+\end{tabular}
+\end{center}
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} P-III, Q-I, R-II, S-IV & $\square$\ \textbf{(B)} P-IV, Q-II, R-I, S-III \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} P-IV, Q-I, R-II, S-III & $\square$\ \textbf{(D)} P-I, Q-IV, R-II, S-III
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Concept of layering: OSI and TCP/IP Protocol Stacks}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small UDP port numbers are 16 bits long (P-IV). Ethernet MAC addresses are 48 bits long (Q-I). The IPv6 Next Header field is 8 bits long (R-II). TCP sequence numbers are 32 bits long (S-III). Hence the correct matching is P-IV, Q-I, R-II, S-III.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.14} \quad {\footnotesize\textsc{[MCQ $\cdot$ 1 Mark(s) $\cdot$ Neg: 0.33]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q14}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following statements regarding the slow start phase of the TCP congestion control algorithm. Note that $cwnd$ stands for the congestion window size and $MSS$ denotes the Maximum Segment Size.
+\begin{itemize}[leftmargin=*, nosep]
+    \item[(i)] The $cwnd$ increases by 2 $MSS$ on every successful acknowledgement.
+    \item[(ii)] The $cwnd$ increases by 1 $MSS$ on every successful acknowledgement.
+    \item[(iii)] The $cwnd$ increases by 1 $MSS$ every round trip time.
+    \item[(iv)] The $cwnd$ approximately doubles every round trip time.
+\end{itemize}
+Which of the following statements is/are CORRECT?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} (i) and (iii) only & $\square$\ \textbf{(B)} (i) and (iv) only \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (ii) and (iv) only & $\square$\ \textbf{(D)} (ii) and (iii) only
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Transport layer: flow control and congestion control, UDP, TCP, sockets}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In TCP slow start, the congestion window (`cwnd`) increases by 1 MSS for each acknowledged segment. Consequently, when all segments in a flight are acknowledged, `cwnd` approximately doubles every round-trip time (RTT). Thus, statement (iv) is TRUE.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.15} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q15}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Two people, $P$ and $Q$, decide to independently roll two identical dice, each with 6 faces, numbered 1 to 6. The person with the higher number wins. In case both get the same number, they repeat the roll until someone wins. The probability that the game concludes on the third roll is \_\_\_\_\_\_\. (Answer in 3 decimal places)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 0.021 to 0.024} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Random variables}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small On rolling two fair dice independently, the probability of a tie is $P(\text{tie}) = \frac{6}{36} = \frac{1}{6}$, and the probability of someone winning (no tie) is $1 - \frac{1}{6} = \frac{5}{6}$. The game ends on the third roll if trials 1 and 2 are ties and trial 3 produces a winner: $P(\text{Trial 3}) = \left(\frac{1}{6}\right) \times \left(\frac{1}{6}\right) \times \left(\frac{5}{6}\right) = \frac{5}{216} \approx 0.0231$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.16} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q16}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The value of $\int_0^{\pi/4} x \cos(x^2) \, dx$ correct to three decimal places (assuming that $\pi = 3.14$) is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 0.27 to 0.30} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Calculus \\
+\textbf{Subtopic:} \textit{Integration}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Substitute $u = x^2$, so $du = 2x\,dx$. The limits transform from $x = 0 \implies u = 0$ to $x = \frac{\pi}{4} \implies u = \frac{\pi^2}{16} \approx \frac{9.8596}{16} \approx 0.61685$ radians. The integral is $\frac{1}{2}\int_0^{\pi^2/16} \cos u \, du = \frac{1}{2} \sin\left(\frac{\pi^2}{16}\right) \approx \frac{1}{2} \sin(0.61685) \approx \frac{1}{2}(0.5784) \approx 0.289$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.17} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q17}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a matrix $A = u v^T$ where $u = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$ and $v = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$. Note that $v^T$ denotes the transpose of $v$. The largest eigenvalue of $A$ is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 3 to 3} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{Eigenvalues and eigenvectors}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For an outer product matrix $A = u v^T$ where $u = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$ and $v = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$, the rank of $A$ is 1. Its non-zero eigenvalue equals the trace of $A$, which is given by the inner product $v^T u = 1(1) + 1(2) = 3$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.18} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q18}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The chromatic number of the graph containing a 7-cycle with a single cross-chord is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 3 to 3} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Graphs: connectivity, matching, colouring}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The given graph contains an odd cycle, which prevents it from being 2-colorable (bipartite), meaning $\chi(G) \ge 3$. A valid 3-coloring can be directly constructed without any conflicts between adjacent vertices, so $\chi(G) = 3$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.19} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q19}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $G$ be a finite group on 84 elements. The size of a largest possible proper subgroup of $G$ is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 42 to 42} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Monoids, Groups}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small By Lagrange's Theorem, the order of any subgroup $H$ of a finite group $G$ must divide $|G| = 84$. A proper subgroup cannot equal the whole group, so $|H| < 84$. The largest proper divisor of 84 is $\frac{84}{2} = 42$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.20} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q20}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The postorder traversal of a binary tree is $8, 9, 6, 7, 4, 5, 2, 3, 1$. The inorder traversal of the same tree is $8, 6, 9, 4, 7, 2, 5, 1, 3$. The height of a tree is the length of the longest path from the root to any leaf (in terms of number of edges). The height of the binary tree is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 4 to 4} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Programming and Data Structures \\
+\textbf{Subtopic:} \textit{Trees, binary search trees, binary heaps}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In postorder traversal, the root is the last element (1). Splitting inorder $[8,6,9,4,7,2,5]$ and $[3]$ around root 1 gives left subtree nodes and right subtree node 3. Recursively constructing the unique binary tree reveals the longest leaf path: $1 \to 2 \to 4 \to 6 \to 8$ (or 9), which has 4 edges. Thus, the height in terms of edges is 4.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.21} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q21}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following C program:
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+int counter = 0;
+\par\medskip
+int calc(int a, int b) {
+    int c;
+    counter++;
+    if (b <= 3) return (a + b);
+    else {
+        c = b / 3;
+        return (calc(a, c));
+    }
+}
+\par\medskip
+int main() {
+    calc(4, 81);
+    printf("%d", counter);
+    return 0;
+}
+\end{lstlisting}
+The output of this program is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 4 to 4} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Programming and Data Structures \\
+\textbf{Subtopic:} \textit{Recursion}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Function `calc(a, b)` computes $\log_3(b)$ recursively: `calc(4, 81)` calls `calc(4, 27)` $\to$ `calc(4, 9)` $\to$ `calc(4, 3)`. At $b = 3$, `b <= 3` is satisfied and it returns. The variable `counter` is incremented once per invocation, resulting in exactly 4 calls.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.23} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q23}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A 32-bit wide main memory unit with a capacity of 1 GB is built using $256\text{M} \times 4\text{-bit}$ DRAM chips. The number of rows of memory cells in the DRAM chip is $2^{14}$. The time taken to perform one refresh operation is 50 nanoseconds. The refresh period is 2 milliseconds. The percentage of time that the memory is available for performing the normal read and write operations is \_\_\_\_\_\_\_\_\%. (Answer in integer)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 59.0 to 60.0} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The DRAM has $2^{14} = 16384$ rows. Refreshing all rows takes $16384 \times 50\text{ ns} = 819.2\ \mu\text{s}$ every $2000\ \mu\text{s}$. The refresh overhead fraction is $\frac{819.2}{2000} = 40.96\%$. Hence, the percentage of time available for reading and writing memory is $100\% - 40.96\% = 59.04\% \approx 59\%$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.24} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q24}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a system with 3 processes that share 4 instances of the same resource type. Each process can request at most $K$ instances of the resource type at any time. The largest value of $K$ that will always avoid deadlock is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 2 to 2} \hfill \textit{\small [Easy]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{Deadlock}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For $n$ processes sharing $m$ instances of a single resource type where each process needs at most $K$ instances, deadlock is guaranteed to be avoided if $\sum_{i=1}^n (K - 1) < m \implies n(K - 1) \le m - 1$. Here $n = 3$ and $m = 4$, so $3(K - 1) \le 3 \implies K - 1 \le 1 \implies K \le 2$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.25} \quad {\footnotesize\textsc{[NAT $\cdot$ 1 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q25}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a 1 Gbps network with an MTU of 1500 bytes and a 32-bit sequence number space. The minimum time (in seconds, rounded to the nearest integer) after which the sequence numbers can wrap around is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 34 to 34} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Transport layer: flow control and congestion control, UDP, TCP, sockets}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A 32-bit sequence number space contains $2^{32} = 4{,}294{,}967{,}296$ bytes. At a transmission rate of $1\text{ Gbps} = \frac{10^9}{8} = 1.25 \times 10^8\text{ bytes/s}$, the wrap-around time is $\frac{2^{32}}{1.25 \times 10^8} = \frac{4294967296}{125000000} \approx 34.36$ seconds $\approx 34$ seconds.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.26} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q26}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a matrix $P = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$. The only linearly independent eigenvector of $P$ is $\begin{bmatrix} 1 \\ 4 \end{bmatrix}$. Consider the following statements:
+\begin{enumerate}[label=\Roman*.]
+    \item $\det(P) = 0$
+    \item $P$ has repeated eigenvalues
+    \item $P$ is not diagonalizable
+\end{enumerate}
+Which of the statements above are necessarily TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} I and II only & $\square$\ \textbf{(B)} I and III only \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} I, II and III & $\square$\ \textbf{(D)} II and III only
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Linear Algebra \\
+\textbf{Subtopic:} \textit{Eigenvalues and eigenvectors}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A $2 \times 2$ matrix with only one linearly independent eigenvector has geometric multiplicity 1. This implies that the algebraic multiplicity of its eigenvalue must be 2 (repeated eigenvalues, so II is true) and that $P$ is not diagonalizable (so III is true). The determinant may be non-zero (e.g., $\begin{bmatrix} 2 & 1 \\ 0 & 2 \end{bmatrix}$), so I is not necessarily true.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.27} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q27}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $\mathbb{N}$ denote the set of all natural numbers and $\mathbb{Q}$ denote the set of all rational numbers. Consider the following sets:
+\begin{itemize}[leftmargin=*, nosep]
+    \item[$P$:] The set of all rational numbers between 0 and 1.
+    \item[$Q$:] The set of all functions from $\{0, 1\}$ to $\mathbb{N}$.
+    \item[$R$:] The set of all functions from $\mathbb{N}$ to $\{0, 1\}$.
+    \item[$S$:] The set of all finite subsets of $\mathbb{N}$.
+\end{itemize}
+Which of the sets above are countable?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $P$ and $Q$ only & $\square$\ \textbf{(B)} $Q$ and $R$ only \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $P$, $Q$ and $R$ only & $\square$\ \textbf{(D)} $P$, $Q$ and $S$ only
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Sets, relations, functions, partial orders and lattices}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Set $P$ (rationals) is countably infinite. Set $Q$ (functions $\{0, 1\} \to \mathbb{N}$) is equivalent to $\mathbb{N} \times \mathbb{N}$, which is countable. Set $S$ (finite subsets of $\mathbb{N}$) is countable. Set $R$ (functions $\mathbb{N} \to \{0, 1\}$) is equivalent to the power set $\mathcal{P}(\mathbb{N})$ and has cardinality $2^{\aleph_0}$, which is uncountable. Hence, $P$, $Q$, and $S$ are countable.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.28} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q28}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the first-order logic sentence
+\[ \varphi \equiv \exists s \, \exists t \, \exists u \, \forall v \, \forall w \, \forall x \, \forall y \; \psi(s, t, u, v, w, x, y) \]
+where $\psi(s, t, u, v, w, x, y)$ is a quantifier-free first-order logic formula using only predicate symbols and variables (no functions or constants). If $\varphi$ has a model with a universe of elements, then $\varphi$ is guaranteed to have a model of size at most
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 3 & $\square$\ \textbf{(B)} 4 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 7 & $\square$\ \textbf{(D)} $\infty$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Propositional and first order logic}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The sentence $\varphi$ has existential quantifiers for 3 variables ($s, t, u$) followed exclusively by universal quantifiers for the remaining variables. If a structure satisfies $\varphi$, the submodel formed by taking the domain as the elements corresponding to $s, t, u$ will itself satisfy the sentence because any elements evaluated under universal quantifiers are chosen from this 3-element domain.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.29} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q29}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following C program:
+\begin{lstlisting}[language=C]
+#include <stdio.h>
+\par\medskip
+void fun1(char *s1, char *s2) {
+    char *tmp;
+    tmp = s1;
+    s1 = s2;
+    s2 = tmp;
+}
+\par\medskip
+void fun2(char **s1, char **s2) {
+    char *tmp;
+    tmp = *s1;
+    *s1 = *s2;
+    *s2 = tmp;
+}
+\par\medskip
+int main() {
+    char *str1 = "Hi", *str2 = "Bye";
+    fun1(str1, str2);
+    printf("%s %s ", str1, str2);
+    fun2(&str1, &str2);
+    printf("%s %s", str1, str2);
+    return 0;
+}
+\end{lstlisting}
+The output of the program is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Hi Bye Bye Hi & $\square$\ \textbf{(B)} Hi Bye Hi Bye \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Bye Hi Bye Hi & $\square$\ \textbf{(D)} Bye Hi Hi Bye
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Programming and Data Structures \\
+\textbf{Subtopic:} \textit{Programming in C}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In `fun1`, pointers `s1` and `s2` are passed by value, so the pointer swap only alters local variables and has no effect on `str1` and `str2` in `main` (printing "Hi Bye"). In `fun2`, the addresses of the pointers (`char**`) are passed, so dereferencing swaps the actual pointer values `str1` and `str2` (printing "Bye Hi").}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.30} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q30}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $G$ be a simple undirected graph. Let $T_D$ be a depth first search tree of $G$. Let $T_B$ be a breadth first search tree of $G$. Consider the following statements:
+\begin{enumerate}[label=\Roman*.]
+    \item For every edge $(u, v)$ of $G$, if $u$ is at depth $i$ and $v$ is at depth $j$ in $T_D$, then $|i - j| \ge 1$.
+    \item For every edge $(u, v)$ of $G$, if $u$ is at depth $i$ and $v$ is at depth $j$ in $T_B$, then $|i - j| = 1$.
+\end{enumerate}
+Which of the statements above is/are necessarily TRUE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} I only & $\square$\ \textbf{(B)} II only \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Both I and II & $\square$\ \textbf{(D)} Neither I nor II
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Algorithms \\
+\textbf{Subtopic:} \textit{Graph traversals, minimum spanning trees, shortest paths}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a DFS tree of an undirected graph, every non-tree edge is a back edge connecting an ancestor and a descendant, so forward and cross edges do not exist; thus statement I is necessarily true. In a BFS tree, cross edges can connect vertices at the same level ($|i - j| = 0$), so statement II is false.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.31} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q31}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Assume that multiplying a matrix $G_1$ of dimension $p \times q$ with another matrix $G_2$ of dimension $q \times r$ requires $pqr$ scalar multiplications. Computing the product of five matrices $F_1, F_2, F_3, F_4$ and $F_5$ of dimensions $2 \times 25$, $25 \times 3$, $3 \times 16$, $16 \times 1$ and $1 \times 10$, respectively, using the minimum number of scalar multiplications requires first computing
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $F_1 F_2$ and $F_3 F_4$ & $\square$\ \textbf{(B)} $F_2 F_3$ and $F_3 F_4$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $F_2 F_3$ and $F_4 F_5$ & $\square$\ \textbf{(D)} $F_1 F_2$ and $F_4 F_5$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Algorithms \\
+\textbf{Subtopic:} \textit{Algorithm design techniques: greedy, dynamic programming and divide-and-conquer}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Using dynamic programming for matrix chain multiplication with dimensions $d = \langle 2, 25, 3, 16, 1, 10 \rangle$: calculating minimum multiplication costs reveals optimal parenthesization as $((F_1(F_2 F_3))(F_4 F_5))$, where the intermediate pairs computed first are $F_2 F_3$ and $F_4 F_5$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.32} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q32}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following C code. Assume that \texttt{unsigned long int} type length is 64 bits.
+\begin{lstlisting}[language=C]
+unsigned long int fun(unsigned long int n) {
+    unsigned long int i, j = 0, sum = 0;
+    while (n > 1) {
+        j++;
+        n /= 2;
+    }
+    for (i = 0; j > 1; i++) {
+        sum += (j % 2);
+        j /= 2;
+    }
+    return sum;
+}
+\end{lstlisting}
+The value returned when we call \texttt{fun(pow(2, 40))} is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} 4 & $\square$\ \textbf{(B)} 5 \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} 6 & $\square$\ \textbf{(D)} 40
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Algorithms \\
+\textbf{Subtopic:} \textit{Asymptotic worst case time and space complexity}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For $n = 2^{40}$, the first loop `n /= 2` executes until $n = 1$, which takes $\log_2(2^{40}) = 40$ steps, giving $j = 40$. The second loop starts with $j = 40$ and halves $j$ until $j \le 1$: values taken by $j$ are $40 \to 20 \to 10 \to 5 \to 2 \to 1$, incrementing `sum` exactly 5 times.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.33} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q33}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the unsigned 8-bit fixed point binary number representation below:
+\[ b\_7 b\_6 b\_5 b\_4 b\_3 \, . \, b\_2 b\_1 b\_0 \]
+where the position of the binary point is between $b_3$ and $b_2$. Which of the following decimal numbers can be represented exactly in this format?
+\begin{enumerate}[label=(\roman*)]
+    \item 0.500
+    \item 0.875
+    \item 0.100
+    \item 0.001
+\end{enumerate}
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} (i) and (ii) only & $\square$\ \textbf{(B)} (i) and (iii) only \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} (i) and (ii) only & $\square$\ \textbf{(D)} (i), (ii) and (iii)
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Digital Logic \\
+\textbf{Subtopic:} \textit{Number representations and computer arithmetic (fixed and floating point)}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The fractional portion uses 3 bits ($b_2 b_1 b_0$), so the fractional precision is $2^{-3} = 0.125$. Any representable fraction must be an integer multiple of $0.125$: $0.500 = 4 \times 0.125$ (i) and $0.875 = 7 \times 0.125$ (ii) are exact multiples, while $0.100$ and $0.001$ are not.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.34} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q34}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The size of the physical address space of a processor is $2^P$ bytes. The word length is $2^W$ bytes. The capacity of cache memory is $2^N$ bytes. The size of each cache block is $2^M$ words. For a $K$-way set-associative cache memory, the length (in number of bits) of the tag field is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $P - N - \log_2 K$ & $\square$\ \textbf{(B)} $P - N + \log_2 K$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $P - N - M - W - \log_2 K$ & $\square$\ \textbf{(D)} $P - N - M - W + \log_2 K$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Memory hierarchy: cache, main memory and secondary storage}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Block size $= 2^{M+W}$ bytes $\implies M+W$ offset bits. Cache size $= 2^N$ bytes, so number of lines $= 2^N / 2^{M+W} = 2^{N-M-W}$. With $K = 2^k$ lines per set, number of sets $= 2^{N-M-W-k} \implies N-M-W-k$ set index bits. Tag bits $= P - (N-M-W-k) - (M+W) = P - N + k = P - N + \log_2 K$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.35} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q35}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following languages:
+\begin{itemize}[leftmargin=*, nosep]
+    \item[I.] $\{a^m b^n c^p d^q \mid m + p = n + q, \text{ where } m, n, p, q \ge 0\}$
+    \item[II.] $\{a^m b^n c^p d^q \mid m = n \text{ and } p = q, \text{ where } m, n, p, q \ge 0\}$
+    \item[III.] $\{a^m b^n c^p d^q \mid m = p \text{ and } n = q, \text{ where } m, n, p, q \ge 0\}$
+    \item[IV.] $\{a^m b^n c^p d^q \mid m = q \text{ and } n = p, \text{ where } m, n, p, q \ge 0\}$
+\end{itemize}
+Which of the languages above are context-free?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} I and IV only & $\square$\ \textbf{(B)} I and II only \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} II and III only & $\square$\ \textbf{(D)} II and IV only
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Context-free grammars and push-down automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Language I has condition $m - n = q - p$, which can be checked by pushing $a$'s, popping for $b$'s, then pushing/popping for $c$ and $d$ on a single PDA stack (CFL). Language II is the concatenation of CFLs $L_1 = \{a^m b^m\}$ and $L_2 = \{c^p d^p\}$, hence a CFL. Languages III and IV require multi-variable dependencies across non-adjacent symbols simultaneously, which cannot be handled by a single stack (non-CFL).}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.36} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q36}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following problems. $L(G)$ denotes the language generated by a grammar $G$. $L(M)$ denotes the language accepted by a machine $M$.
+\begin{enumerate}[label=\Roman*.]
+    \item For an unrestricted grammar $G$ and a string $w$, whether $w \in L(G)$
+    \item Given a Turing machine $M$, whether $L(M)$ is regular
+    \item Given two grammars $G_1$ and $G_2$, whether $L(G_1) = L(G_2)$
+    \item Given an NFA $N$ and a DPDA $D$, whether $L(N) = L(D)$
+\end{enumerate}
+Which of the above problems are UNDECIDABLE?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} I and IV only & $\square$\ \textbf{(B)} II and III only \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} III and IV only & $\square$\ \textbf{(D)} I, II and III only
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Turing machines and undecidability}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Problem I (membership for unrestricted grammars) is undecidable. Problem II (testing if a TM accepts a regular language) is undecidable by Rice's theorem. Problem III (equivalence of CFGs) is undecidable. Problem IV asks whether a regular language (NFA) equals a deterministic context-free language (DPDA), which is decidable. Hence, I, II, and III are undecidable.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.37} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q37}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A lexical analyzer uses the following patterns to recognize three tokens $T_1, T_2$, and $T_3$ over the alphabet $\{a, b, c\}$:
+\[ T\_1: a?(b|c)^*a \qquad T\_2: b?(a|c)^*b \qquad T\_3: c?(b|a)^*c \]
+Note that '?' means 0 or 1 occurrence of the preceding symbol. The analyzer matches the longest prefix of the remaining input. For the input string `bbaacabc`, the token sequence generated is
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} $T_1 T_2 T_3$ & $\square$\ \textbf{(B)} $T_1 T_3$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $T_2 T_1 T_3$ & $\square$\ \textbf{(D)} $T_3 T_3$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large D} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Compiler Design \\
+\textbf{Subtopic:} \textit{Lexical analysis, parsing, syntax-directed translation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A lexical analyzer applies the longest match rule. For input `bbaacabc`, pattern $T_3 = c?(b|a)^*c$ matches prefix `bbaac` (starts without $c$, matches $(b|a)^* = bbaa$, ends with $c$), consuming `bbaac` as token $T_3$. The remaining string is `abc`, which also matches $T_3$ (starts without $c$, $(b|a)^* = ab$, ends with $c$). Hence the recognized sequence of tokens is $T_3 T_3$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.39} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q39}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+In a system, there are three types of resources: $E, F$ and $G$. Four processes $P_0, P_1, P_2$ and $P_3$ execute concurrently. At time $t_0$, the maximum need and current allocation of resources are:
+\begin{center}
+\begin{tabular}{c|ccc|ccc}
+\textbf{Process} & \multicolumn{3}{c|}{\textbf{Allocation}} & \multicolumn{3}{c}{\textbf{Max Need}} \\
+& $E$ & $F$ & $G$ & $E$ & $F$ & $G$ \\
+\hline
+$P_0$ & 2 & 0 & 1 & 5 & 3 & 1 \\
+$P_1$ & 0 & 1 & 0 & 1 & 2 & 1 \\
+$P_2$ & 0 & 0 & 1 & 0 & 3 & 1 \\
+$P_3$ & 1 & 0 & 0 & 3 & 2 & 1 \\
+\end{tabular}
+\end{center}
+Total resources are: $E = 6, F = 4, G = 2$. The system at time $t_0$ is in
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} a safe state. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} an unsafe state, but not in a deadlock. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} a deadlock. \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} none of the above.
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large A} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{Deadlock}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Currently Allocated: $E = 2+0+0+1 = 3$, $F = 0+1+0+0 = 1$, $G = 1+0+1+0 = 2$. Available resources $= (6-3, 4-1, 2-2) = (3, 3, 0)$. Need matrix: $P_0(3, 3, 0)$, $P_1(1, 1, 1)$, $P_2(0, 3, 0)$, $P_3(2, 2, 1)$. Since $\text{Need}(P_0) \le \text{Available}$, $P_0$ can finish, releasing its allocation $(2, 0, 1)$ to make Available $(5, 3, 1)$. Next $P_2, P_1, P_3$ can all execute. Thus, the system is in a safe state.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.40} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q40}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following solution to the producer-consumer synchronization problem. The shared buffer size is $N$. Three semaphores $empty, full$ and $mutex$ are used with initial values $N, 0$ and $1$, respectively.
+\begin{lstlisting}[language=C]
+// Producer:
+while (1) {
+    produce();
+    wait(P);
+    wait(mutex);
+    put_item();
+    signal(mutex);
+    signal(Q);
+}
+\par\medskip
+// Consumer:
+while (1) {
+    wait(R);
+    wait(mutex);
+    remove_item();
+    signal(mutex);
+    signal(S);
+    consume();
+}
+\end{lstlisting}
+Which of the following choices for $P, Q, R, S$ makes the solution correct?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $P: empty, Q: full, R: empty, S: full$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $P: empty, Q: full, R: full, S: empty$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $P: full, Q: empty, R: empty, S: full$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $P: full, Q: empty, R: full, S: empty$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{Concurrency and synchronization}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In the standard producer-consumer problem with a buffer of size $N$, `empty` is initialized to $N$ and `full` is initialized to $0$. The producer waits on `empty` and signals `full`. Conversely, the consumer waits on `full` and signals `empty`. Comparing this with the provided code reveals that semaphore `empty` corresponds to buffer spaces and `full` corresponds to items, making $P: \text{full}, Q: \text{empty}, R: \text{empty}, S: \text{full}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.41} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q41}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the relations $r(A, B)$ and $s(B, C)$, where $s.B$ is a primary key and $r.B$ is a foreign key referencing $s.B$. Consider the query:
+\[ Q: \Pi\_{A, B, C}(r \bowtie \sigma\_{B < 5}(s)) \]
+Which one of the following relational algebra queries is NOT equivalent to $Q$?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.98\linewidth}@{}}
+$\square$\ \textbf{(A)} $\Pi_{A, B, C}(\sigma_{B < 5}(r) \bowtie s)$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(B)} $\sigma_{B < 5}(\Pi_{A, B, C}(r \bowtie s))$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} $\Pi_{A, B, C}(r \,\text{⟕}\, \sigma_{B < 5}(s))$ \\
+\addlinespace[3pt]
+$\square$\ \textbf{(D)} $\Pi_{A, B, C}(\sigma_{B < 5}(r \bowtie s))$
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large C} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Databases \\
+\textbf{Subtopic:} \textit{Relational model: relational algebra, tuple calculus, SQL}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Query $Q$ inner joins $r$ with $\sigma_{B < 5}(s)$, which discards all tuples from $r$ where $B \ge 5$. Option (C) performs a left outer join between $r$ and $\sigma_{B < 5}(s)$, which retains all tuples from $r$ (filling missing $C$ values with NULL for $B \ge 5$), so its result is NOT equivalent to $Q$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.42} \quad {\footnotesize\textsc{[MCQ $\cdot$ 2 Mark(s) $\cdot$ Neg: 0.66]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q42}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following four relational schemas. For each schema, all non-trivial functional dependencies are listed. The underlined attributes denote candidate keys.
+\begin{itemize}[leftmargin=*, nosep]
+    \item[Schema I:] $R_1(A, B, C, D)$ with FDs: $A \to B, B \to C, C \to D$
+    \item[Schema II:] $R_2(\underline{rollno}, \underline{courseid}, email)$ with FDs: $rollno \to email, email \to rollno$
+    \item[Schema III:] $R_3(A, B, C)$ with FDs: $A \to B, B \to C$
+    \item[Schema IV:] $R_4(A, B, C)$ with FDs: $AB \to C, C \to A$
+\end{itemize}
+Which one of the relational schemas is in 3NF but not in BCNF?
+
+\par\vspace{6pt}\noindent
+\begin{tabular}{@{}p{0.48\linewidth}@{\hspace{0.04\linewidth}}p{0.48\linewidth}@{}}
+$\square$\ \textbf{(A)} Schema I & $\square$\ \textbf{(B)} Schema II \\
+\addlinespace[3pt]
+$\square$\ \textbf{(C)} Schema III & $\square$\ \textbf{(D)} Schema IV
+\end{tabular}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large B} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Databases \\
+\textbf{Subtopic:} \textit{Integrity constraints, normal forms}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In Schema II, the functional dependencies are $rollno \to email$ and $email \to rollno$. The candidate keys are $\{rollno, courseid\}$ and $\{email, courseid\}$. In $email \to rollno$, the left side is not a superkey (violating BCNF), but the right side $rollno$ is a prime attribute (satisfying 3NF). Hence Schema II is in 3NF but not in BCNF.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.43} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q43}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Let $G$ be a graph with $100!$ vertices, with each vertex labelled by a distinct permutation of the numbers $1, 2, \dots, 100$. There is an edge between two vertices if and only if the permutation of one can be obtained by swapping two adjacent elements of the other. Let $y$ be the degree of a vertex in $G$ and $z$ be the number of connected components in $G$. Then $y + 10z =$ \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 109 to 109} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Discrete Mathematics \\
+\textbf{Subtopic:} \textit{Graphs: connectivity, matching, colouring}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Each permutation of length 100 has 99 pairs of adjacent elements that can be swapped, so the degree of each vertex is $y = 99$. Adjacent transpositions generate the entire symmetric group $S_{100}$, meaning every permutation is reachable from any other; thus the graph is connected, giving $z = 1$ connected component. Hence $y + 10z = 99 + 10(1) = 109$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.44} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q44}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider Guwahati ($G$) and Delhi ($D$) whose temperatures can be classified as high ($H$), medium ($M$) and low ($L$). Let $P(H_G) = 0.2$, $P(M_G) = 0.5$, and $P(L_G) = 0.3$ be the probabilities that Guwahati has high, medium, and low temperatures, respectively. Given $P(H_D \mid H_G) = 0.40$, $P(H_D \mid M_G) = 0.10$, and $P(H_D \mid L_G) = 0.01$, the conditional probability $P(H_G \mid H_D)$ is \_\_\_\_\_\_\_\_. (Answer correct to two decimal places)
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 0.60 to 0.62} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Probability and Statistics \\
+\textbf{Subtopic:} \textit{Conditional probability and Bayes theorem}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Using the law of total probability, the probability of high temperature in Delhi is $P(H_D) = 0.2(0.40) + 0.5(0.10) + 0.3(0.01) = 0.08 + 0.05 + 0.003 = 0.133$. By Bayes' theorem, $P(H_G \mid H_D) = \frac{P(H_G \cap H_D)}{P(H_D)} = \frac{0.08}{0.133} \approx 0.6015$, which falls in the range $0.60$ to $0.62$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.45} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q45}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following pseudo-code function where $x$ and $y$ are positive integers:
+\begin{lstlisting}[language=C]
+Count(x, y) {
+    if (y != 1) {
+        if (x != 1) {
+            print("*");
+            Count(x / 2, y);
+        } else {
+            Count(1024, y - 1);
+        }
+    }
+}
+\end{lstlisting}
+The total number of times `print("*")` is executed for `Count(1024, 1024)` is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 10230 to 10230} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Programming and Data Structures \\
+\textbf{Subtopic:} \textit{Recursion}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In `Count(x, y)`, outer recursion on $y$ runs for $y = 1024, 1023, \dots, 2$ ($1023$ values). For each $y$, the inner branch halves $x$ until $x = 1$: starting from $x = 1024$, this loop prints 10 times (since $\log_2(1024) = 10$). Total prints $= 1023 \times 10 = 10230$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.46} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q46}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The number of possible min-heaps containing each value from $\{1, 2, 3, 4, 5, 6, 7\}$ exactly once is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 80 to 80} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Programming and Data Structures \\
+\textbf{Subtopic:} \textit{Trees, binary search trees, binary heaps}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small In a min-heap of 7 elements, the root must contain the minimum element (1). The left subtree has size 3 and the right subtree has size 3. Choosing 3 elements for the left subtree from the remaining 6 elements can be done in $\binom{6}{3} = 20$ ways. A 3-element min-heap has $\binom{2}{1} = 2$ valid configurations. Hence, total valid min-heaps $= 20 \times 2 \times 2 = 80$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.48} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q48}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider the following items with weights and values:
+\begin{center}
+\begin{tabular}{ccc}
+\textbf{Item} & \textbf{Weight} & \textbf{Value} \\
+1 & 10 & 60 \\
+2 & 7 & 28 \\
+3 & 4 & 20 \\
+4 & 2 & 24 \\
+\end{tabular}
+\end{center}
+A knapsack has capacity 11. A greedy heuristic sorts items in decreasing order of value-to-weight ratio and picks each item that fits. Let $V_{\text{opt}}$ and $V_{\text{heuristic}}$ denote the optimal knapsack value and heuristic value, respectively. The value of $V_{\text{opt}} - V_{\text{heuristic}}$ is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 16 to 16} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Algorithms \\
+\textbf{Subtopic:} \textit{Algorithm design techniques: greedy, dynamic programming and divide-and-conquer}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Value-to-weight ratios: Item 4 ($24/2 = 12$), Item 1 ($60/10 = 6$), Item 3 ($20/4 = 5$), Item 2 ($28/7 = 4$). The heuristic sorts by ratio and greedily takes Item 4 (wt 2, remaining 9); Item 1 does not fit ($10 > 9$); Item 3 fits (wt 4, remaining 5); Item 2 does not fit ($7 > 5$), yielding $V_{\text{heuristic}} = 24 + 20 = 44$. The optimal 0/1 knapsack selection picks Item 1 (wt 10, val 60). Thus $V_{\text{opt}} - V_{\text{heuristic}} = 60 - 44 = 16$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.50} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q50}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+The instruction pipeline of a RISC processor has five stages: Instruction Fetch (IF), Instruction Decode (ID), Perform Operation (PO), Operand Read (OR), and Write Back (WB). Each stage takes 1 clock cycle except PO. For a sequence of 100 instructions, 40 instructions require 3 clock cycles in PO, 35 instructions require 2 clock cycles in PO, and the remaining 25 instructions require 1 clock cycle in PO. Assuming no memory stalls or branch delays, the total number of clock cycles to execute the 100 instructions is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 219 to 219} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Instruction pipelining, pipeline hazards}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small For 100 instructions in a 5-stage pipeline without branch delays, ideal cycles $= 5 + (100 - 1) = 104$. The PO stage causes pipeline stalls when operand evaluation takes extra cycles: 40 instructions require 3 cycles (2 extra cycles $\implies 40 \times 2 = 80$ stall cycles) and 35 instructions require 2 cycles (1 extra cycle $\implies 35 \times 1 = 35$ stall cycles). Total clock cycles $= 104 + 80 + 35 = 219$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.51} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q51}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+A processor has 16 integer registers (R0 to R15) and 64 floating point registers (F0 to F63). It uses a 16-bit instruction format. Four types of instructions are supported:
+\begin{itemize}[leftmargin=*, nosep]
+    \item Type-1: Opcode with three integer register operands
+    \item Type-2: Opcode with two floating point register operands
+    \item Type-3: Opcode with one integer and one floating point register operand
+    \item Type-4: Opcode with one floating point register operand
+\end{itemize}
+If there are 4 Type-1, 8 Type-2, and 14 Type-3 instructions, the maximum number of Type-4 instructions that can be supported is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 32 to 32} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Organization and Architecture \\
+\textbf{Subtopic:} \textit{Machine instructions and addressing modes}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small A 16-bit instruction space has $2^{16} = 65536$ encodings. Type-1: 4 instructions with $3 \times 4\text{-bit}$ registers consume $4 \times 2^{12} = 16384$. Type-2: 8 instructions with $2 \times 6\text{-bit}$ registers consume $8 \times 2^{12} = 32768$. Type-3: 14 instructions with 4-bit and 6-bit registers consume $14 \times 2^{10} = 14336$. Remaining encodings $= 65536 - (16384 + 32768 + 14336) = 2048$. Each Type-4 instruction uses one 6-bit register ($2^6 = 64$ encodings). Thus, maximum $N = 2048 / 64 = 32$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.52} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q52}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Given a language $L$, define $L^i$ as $L^0 = \{\varepsilon\}$ and $L^i = L^{i-1} \cdot L$ for $i > 0$. The order of a language $L$ is defined as the smallest $k$ such that $L^k = L^{k+1}$. Consider the finite automaton accepting $L$ over $\{0\}$ where states accept strings of positive length. The order of language $L$ is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 2 to 2} \hfill \textit{\small [Hard]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Theory of Computation \\
+\textbf{Subtopic:} \textit{Regular expressions and finite automata}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small The given automaton on alphabet $\{0\}$ accepts $L = \{0, 00, 000, \dots\} = 0^+$. Its powers are $L^2 = \{0^k \mid k \ge 2\}$, $L^3 = \{0^k \mid k \ge 3\}$. For the language of strings accepted by the automaton, the smallest integer $k$ satisfying $L^k = L^{k+1}$ is 2.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.53} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q53}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider a storage disk with 200 cylinders (0 to 199). Requests arrive for cylinders: 16, 20, 72, 86, 116, 134. The read/write head is currently at cylinder 80 and moving towards higher cylinder numbers. The SSTF algorithm is used. The disk arm consumes 0.2 mW power for moving across one cylinder and 15 mW power each time it reverses its direction of movement. The total power consumed (in mW) to service all requests is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 85 to 85} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Operating System \\
+\textbf{Subtopic:} \textit{File systems}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Using Shortest Seek Time First (SSTF) starting at cylinder 80: closest is 86 (diff 6, upward), then 72 (diff 14, downward $\implies$ reversal 1), then 116 (diff 44, upward $\implies$ reversal 2), then 134 (diff 18, upward), then 20 (diff 114, downward $\implies$ reversal 3), and finally 16 (diff 4, downward). Total cylinder distance $= 6 + 14 + 44 + 18 + 114 + 4 = 200$. Head movement power $= 200 \times 0.2\text{ mW} = 40\text{ mW}$. Direction reversals $= 3 \times 15\text{ mW} = 45\text{ mW}$. Total power consumed $= 40 + 45 = 85\text{ mW}$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\noindent
+\begin{tcolorbox}[
+    blanker,
+    sidebyside,
+    sidebyside align=top,
+    lefthand width=0.55\textwidth,
+    top=4pt, bottom=4pt, left=0pt, right=0pt,
+    middle=16pt,
+    underlay={
+        \draw[dashed, black!80, line width=0.8pt, dash pattern=on 4pt off 3pt]
+            ([xshift=0.55\textwidth+8pt]frame.north west) --
+            ([xshift=0.55\textwidth+8pt]frame.south west);
+    }
+]
+\textbf{Q.54} \quad {\footnotesize\textsc{[NAT $\cdot$ 2 Mark(s) $\cdot$ No Neg]}} \hfill {\tiny\texttt{2018\_CS\_GA\_Q54}}
+\vspace{2pt}\hrule height 0.3pt\vspace{4pt}
+
+Consider an IP packet with a length of 4,500 bytes that includes a 20-byte IPv4 header and a 40-byte TCP header. The packet is forwarded across an IP network with an MTU of 600 bytes. The value of the fragment offset field in the third fragment (in 8-byte units) is \_\_\_\_\_\_\_\_.
+
+\par\vspace{6pt}\noindent\textbf{Your Answer:} \fbox{\rule{0pt}{1.3ex}\hspace{3cm}}
+
+\tcblower
+
+\textbf{Official Key:} \textbf{\large 144 to 144} \hfill \textit{\small [Medium]}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Topic:} Computer Networks \\
+\textbf{Subtopic:} \textit{Fragmentation and IP addressing, IPv4, CIDR notation}
+\vspace{2pt}\hrule height 0.3pt\vspace{3pt}
+\textbf{Guide / Hint:} \\
+{\small Total payload to fragment $= 4500 - 20 = 4480$ bytes. With $\text{MTU} = 600$, maximum payload per fragment must be a multiple of 8: $\lfloor (600 - 20) / 8 \rfloor \times 8 = 72 \times 8 = 576$ bytes. Fragment 1 carries bytes 0 to 575 (offset 0). Fragment 2 carries bytes 576 to 1151 (offset $576/8 = 72$). Fragment 3 carries bytes 1152 onwards, so its fragment offset field is $\frac{1152}{8} = 144$.}
+
+\end{tcolorbox}
+\vspace{6pt}\hrule height 0.35pt\vspace{6pt}
+\end{document}

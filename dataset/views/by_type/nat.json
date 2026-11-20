@@ -4141,8 +4141,8 @@
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4160,10 +4160,10 @@
         "min": 0.021,
         "max": 0.024
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Probability and Statistics",
+      "subtopic": "Random variables",
+      "difficulty_level": "Medium",
+      "explaination": "On rolling two fair dice independently, the probability of a tie is $P(\\text{tie}) = \\frac{6}{36} = \\frac{1}{6}$, and the probability of someone winning (no tie) is $1 - \\frac{1}{6} = \\frac{5}{6}$. The game ends on the third roll if trials 1 and 2 are ties and trial 3 produces a winner: $P(\\text{Trial 3}) = \\left(\\frac{1}{6}\\right) \\times \\left(\\frac{1}{6}\\right) \\times \\left(\\frac{5}{6}\\right) = \\frac{5}{216} \\approx 0.0231$.",
       "tags": [
         "1_mark",
         "2018",
@@ -4173,15 +4173,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Two people, $P$ and $Q$, decide to independently roll two identical dice, each with 6 faces, numbered 1 to 6. The person with the higher number wins. In case both get the same number, they repeat the roll until someone wins. The probability that the game concludes on the third roll is \\_\\_\\_\\_\\_\\_\\. (Answer in 3 decimal places)",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q16",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4199,10 +4201,10 @@
         "min": 0.27,
         "max": 0.3
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Calculus",
+      "subtopic": "Integration",
+      "difficulty_level": "Easy",
+      "explaination": "Substitute $u = x^2$, so $du = 2x\\,dx$. The limits transform from $x = 0 \\implies u = 0$ to $x = \\frac{\\pi}{4} \\implies u = \\frac{\\pi^2}{16} \\approx \\frac{9.8596}{16} \\approx 0.61685$ radians. The integral is $\\frac{1}{2}\\int_0^{\\pi^2/16} \\cos u \\, du = \\frac{1}{2} \\sin\\left(\\frac{\\pi^2}{16}\\right) \\approx \\frac{1}{2} \\sin(0.61685) \\approx \\frac{1}{2}(0.5784) \\approx 0.289$.",
       "tags": [
         "1_mark",
         "2018",
@@ -4212,15 +4214,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The value of $\\int_0^{\\pi/4} x \\cos(x^2) \\, dx$ correct to three decimal places (assuming that $\\pi = 3.14$) is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q17",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4238,10 +4242,10 @@
         "min": 3.0,
         "max": 3.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Linear Algebra",
+      "subtopic": "Eigenvalues and eigenvectors",
+      "difficulty_level": "Easy",
+      "explaination": "For an outer product matrix $A = u v^T$ where $u = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}$ and $v = \\begin{bmatrix} 1 \\\\ 1 \\end{bmatrix}$, the rank of $A$ is 1. Its non-zero eigenvalue equals the trace of $A$, which is given by the inner product $v^T u = 1(1) + 1(2) = 3$.",
       "tags": [
         "1_mark",
         "2018",
@@ -4251,15 +4255,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a matrix $A = u v^T$ where $u = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}$ and $v = \\begin{bmatrix} 1 \\\\ 1 \\end{bmatrix}$. Note that $v^T$ denotes the transpose of $v$. The largest eigenvalue of $A$ is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q18",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4277,10 +4283,10 @@
         "min": 3.0,
         "max": 3.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Graphs: connectivity, matching, colouring",
+      "difficulty_level": "Easy",
+      "explaination": "The given graph contains an odd cycle, which prevents it from being 2-colorable (bipartite), meaning $\\chi(G) \\ge 3$. A valid 3-coloring can be directly constructed without any conflicts between adjacent vertices, so $\\chi(G) = 3$.",
       "tags": [
         "1_mark",
         "2018",
@@ -4290,15 +4296,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The chromatic number of the graph containing a 7-cycle with a single cross-chord is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q19",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4316,10 +4324,10 @@
         "min": 42.0,
         "max": 42.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Monoids, Groups",
+      "difficulty_level": "Easy",
+      "explaination": "By Lagrange's Theorem, the order of any subgroup $H$ of a finite group $G$ must divide $|G| = 84$. A proper subgroup cannot equal the whole group, so $|H| < 84$. The largest proper divisor of 84 is $\\frac{84}{2} = 42$.",
       "tags": [
         "1_mark",
         "2018",
@@ -4329,15 +4337,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $G$ be a finite group on 84 elements. The size of a largest possible proper subgroup of $G$ is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q20",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4355,10 +4365,10 @@
         "min": 4.0,
         "max": 4.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees, binary search trees, binary heaps",
+      "difficulty_level": "Medium",
+      "explaination": "In postorder traversal, the root is the last element (1). Splitting inorder $[8,6,9,4,7,2,5]$ and $[3]$ around root 1 gives left subtree nodes and right subtree node 3. Recursively constructing the unique binary tree reveals the longest leaf path: $1 \\to 2 \\to 4 \\to 6 \\to 8$ (or 9), which has 4 edges. Thus, the height in terms of edges is 4.",
       "tags": [
         "1_mark",
         "2018",
@@ -4368,15 +4378,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The postorder traversal of a binary tree is $8, 9, 6, 7, 4, 5, 2, 3, 1$. The inorder traversal of the same tree is $8, 6, 9, 4, 7, 2, 5, 1, 3$. The height of a tree is the length of the longest path from the root to any leaf (in terms of number of edges). The height of the binary tree is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q21",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4394,10 +4406,10 @@
         "min": 4.0,
         "max": 4.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Recursion",
+      "difficulty_level": "Medium",
+      "explaination": "Function `calc(a, b)` computes $\\log_3(b)$ recursively: `calc(4, 81)` calls `calc(4, 27)` $\\to$ `calc(4, 9)` $\\to$ `calc(4, 3)`. At $b = 3$, `b <= 3` is satisfied and it returns. The variable `counter` is incremented once per invocation, resulting in exactly 4 calls.",
       "tags": [
         "1_mark",
         "2018",
@@ -4407,15 +4419,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C program:\n\\begin{lstlisting}[language=C]\n#include <stdio.h>\nint counter = 0;\n\nint calc(int a, int b) {\n    int c;\n    counter++;\n    if (b <= 3) return (a + b);\n    else {\n        c = b / 3;\n        return (calc(a, c));\n    }\n}\n\nint main() {\n    calc(4, 81);\n    printf(\"%d\", counter);\n    return 0;\n}\n\\end{lstlisting}\nThe output of this program is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q23",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4433,10 +4447,10 @@
         "min": 59.0,
         "max": 60.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory hierarchy: cache, main memory and secondary storage",
+      "difficulty_level": "Medium",
+      "explaination": "The DRAM has $2^{14} = 16384$ rows. Refreshing all rows takes $16384 \\times 50\\text{ ns} = 819.2\\ \\mu\\text{s}$ every $2000\\ \\mu\\text{s}$. The refresh overhead fraction is $\\frac{819.2}{2000} = 40.96\\%$. Hence, the percentage of time available for reading and writing memory is $100\\% - 40.96\\% = 59.04\\% \\approx 59\\%$.",
       "tags": [
         "1_mark",
         "2018",
@@ -4446,15 +4460,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A 32-bit wide main memory unit with a capacity of 1 GB is built using $256\\text{M} \\times 4\\text{-bit}$ DRAM chips. The number of rows of memory cells in the DRAM chip is $2^{14}$. The time taken to perform one refresh operation is 50 nanoseconds. The refresh period is 2 milliseconds. The percentage of time that the memory is available for performing the normal read and write operations is \\_\\_\\_\\_\\_\\_\\_\\_\\%. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q24",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4472,10 +4488,10 @@
         "min": 2.0,
         "max": 2.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Deadlock",
+      "difficulty_level": "Easy",
+      "explaination": "For $n$ processes sharing $m$ instances of a single resource type where each process needs at most $K$ instances, deadlock is guaranteed to be avoided if $\\sum_{i=1}^n (K - 1) < m \\implies n(K - 1) \\le m - 1$. Here $n = 3$ and $m = 4$, so $3(K - 1) \\le 3 \\implies K - 1 \\le 1 \\implies K \\le 2$.",
       "tags": [
         "1_mark",
         "2018",
@@ -4485,15 +4501,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a system with 3 processes that share 4 instances of the same resource type. Each process can request at most $K$ instances of the resource type at any time. The largest value of $K$ that will always avoid deadlock is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q25",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4511,10 +4529,10 @@
         "min": 34.0,
         "max": 34.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Transport layer: flow control and congestion control, UDP, TCP, sockets",
+      "difficulty_level": "Medium",
+      "explaination": "A 32-bit sequence number space contains $2^{32} = 4{,}294{,}967{,}296$ bytes. At a transmission rate of $1\\text{ Gbps} = \\frac{10^9}{8} = 1.25 \\times 10^8\\text{ bytes/s}$, the wrap-around time is $\\frac{2^{32}}{1.25 \\times 10^8} = \\frac{4294967296}{125000000} \\approx 34.36$ seconds $\\approx 34$ seconds.",
       "tags": [
         "1_mark",
         "2018",
@@ -4524,15 +4542,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a 1 Gbps network with an MTU of 1500 bytes and a 32-bit sequence number space. The minimum time (in seconds, rounded to the nearest integer) after which the sequence numbers can wrap around is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q43",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4550,10 +4570,10 @@
         "min": 109.0,
         "max": 109.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Graphs: connectivity, matching, colouring",
+      "difficulty_level": "Hard",
+      "explaination": "Each permutation of length 100 has 99 pairs of adjacent elements that can be swapped, so the degree of each vertex is $y = 99$. Adjacent transpositions generate the entire symmetric group $S_{100}$, meaning every permutation is reachable from any other; thus the graph is connected, giving $z = 1$ connected component. Hence $y + 10z = 99 + 10(1) = 109$.",
       "tags": [
         "2018",
         "2_mark",
@@ -4563,15 +4583,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $G$ be a graph with $100!$ vertices, with each vertex labelled by a distinct permutation of the numbers $1, 2, \\dots, 100$. There is an edge between two vertices if and only if the permutation of one can be obtained by swapping two adjacent elements of the other. Let $y$ be the degree of a vertex in $G$ and $z$ be the number of connected components in $G$. Then $y + 10z =$ \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q44",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4589,10 +4611,10 @@
         "min": 0.6,
         "max": 0.62
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Probability and Statistics",
+      "subtopic": "Conditional probability and Bayes theorem",
+      "difficulty_level": "Medium",
+      "explaination": "Using the law of total probability, the probability of high temperature in Delhi is $P(H_D) = 0.2(0.40) + 0.5(0.10) + 0.3(0.01) = 0.08 + 0.05 + 0.003 = 0.133$. By Bayes' theorem, $P(H_G \\mid H_D) = \\frac{P(H_G \\cap H_D)}{P(H_D)} = \\frac{0.08}{0.133} \\approx 0.6015$, which falls in the range $0.60$ to $0.62$.",
       "tags": [
         "2018",
         "2_mark",
@@ -4602,15 +4624,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider Guwahati ($G$) and Delhi ($D$) whose temperatures can be classified as high ($H$), medium ($M$) and low ($L$). Let $P(H_G) = 0.2$, $P(M_G) = 0.5$, and $P(L_G) = 0.3$ be the probabilities that Guwahati has high, medium, and low temperatures, respectively. Given $P(H_D \\mid H_G) = 0.40$, $P(H_D \\mid M_G) = 0.10$, and $P(H_D \\mid L_G) = 0.01$, the conditional probability $P(H_G \\mid H_D)$ is \\_\\_\\_\\_\\_\\_\\_\\_. (Answer correct to two decimal places)",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q45",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4628,10 +4652,10 @@
         "min": 10230.0,
         "max": 10230.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Recursion",
+      "difficulty_level": "Medium",
+      "explaination": "In `Count(x, y)`, outer recursion on $y$ runs for $y = 1024, 1023, \\dots, 2$ ($1023$ values). For each $y$, the inner branch halves $x$ until $x = 1$: starting from $x = 1024$, this loop prints 10 times (since $\\log_2(1024) = 10$). Total prints $= 1023 \\times 10 = 10230$.",
       "tags": [
         "2018",
         "2_mark",
@@ -4641,15 +4665,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following pseudo-code function where $x$ and $y$ are positive integers:\n\\begin{lstlisting}[language=C]\nCount(x, y) {\n    if (y != 1) {\n        if (x != 1) {\n            print(\"*\");\n            Count(x / 2, y);\n        } else {\n            Count(1024, y - 1);\n        }\n    }\n}\n\\end{lstlisting}\nThe total number of times `print(\"*\")` is executed for `Count(1024, 1024)` is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q46",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4667,10 +4693,10 @@
         "min": 80.0,
         "max": 80.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees, binary search trees, binary heaps",
+      "difficulty_level": "Medium",
+      "explaination": "In a min-heap of 7 elements, the root must contain the minimum element (1). The left subtree has size 3 and the right subtree has size 3. Choosing 3 elements for the left subtree from the remaining 6 elements can be done in $\\binom{6}{3} = 20$ ways. A 3-element min-heap has $\\binom{2}{1} = 2$ valid configurations. Hence, total valid min-heaps $= 20 \\times 2 \\times 2 = 80$.",
       "tags": [
         "2018",
         "2_mark",
@@ -4680,15 +4706,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The number of possible min-heaps containing each value from $\\{1, 2, 3, 4, 5, 6, 7\\}$ exactly once is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q48",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4706,10 +4734,10 @@
         "min": 16.0,
         "max": 16.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Algorithm design techniques: greedy, dynamic programming and divide-and-conquer",
+      "difficulty_level": "Medium",
+      "explaination": "Value-to-weight ratios: Item 4 ($24/2 = 12$), Item 1 ($60/10 = 6$), Item 3 ($20/4 = 5$), Item 2 ($28/7 = 4$). The heuristic sorts by ratio and greedily takes Item 4 (wt 2, remaining 9); Item 1 does not fit ($10 > 9$); Item 3 fits (wt 4, remaining 5); Item 2 does not fit ($7 > 5$), yielding $V_{\\text{heuristic}} = 24 + 20 = 44$. The optimal 0/1 knapsack selection picks Item 1 (wt 10, val 60). Thus $V_{\\text{opt}} - V_{\\text{heuristic}} = 60 - 44 = 16$.",
       "tags": [
         "2018",
         "2_mark",
@@ -4719,15 +4747,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following items with weights and values:\n\\begin{center}\n\\begin{tabular}{ccc}\n\\textbf{Item} & \\textbf{Weight} & \\textbf{Value} \\\\\n1 & 10 & 60 \\\\\n2 & 7 & 28 \\\\\n3 & 4 & 20 \\\\\n4 & 2 & 24 \\\\\n\\end{tabular}\n\\end{center}\nA knapsack has capacity 11. A greedy heuristic sorts items in decreasing order of value-to-weight ratio and picks each item that fits. Let $V_{\\text{opt}}$ and $V_{\\text{heuristic}}$ denote the optimal knapsack value and heuristic value, respectively. The value of $V_{\\text{opt}} - V_{\\text{heuristic}}$ is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q50",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4745,10 +4775,10 @@
         "min": 219.0,
         "max": 219.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Instruction pipelining, pipeline hazards",
+      "difficulty_level": "Medium",
+      "explaination": "For 100 instructions in a 5-stage pipeline without branch delays, ideal cycles $= 5 + (100 - 1) = 104$. The PO stage causes pipeline stalls when operand evaluation takes extra cycles: 40 instructions require 3 cycles (2 extra cycles $\\implies 40 \\times 2 = 80$ stall cycles) and 35 instructions require 2 cycles (1 extra cycle $\\implies 35 \\times 1 = 35$ stall cycles). Total clock cycles $= 104 + 80 + 35 = 219$.",
       "tags": [
         "2018",
         "2_mark",
@@ -4758,15 +4788,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The instruction pipeline of a RISC processor has five stages: Instruction Fetch (IF), Instruction Decode (ID), Perform Operation (PO), Operand Read (OR), and Write Back (WB). Each stage takes 1 clock cycle except PO. For a sequence of 100 instructions, 40 instructions require 3 clock cycles in PO, 35 instructions require 2 clock cycles in PO, and the remaining 25 instructions require 1 clock cycle in PO. Assuming no memory stalls or branch delays, the total number of clock cycles to execute the 100 instructions is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q51",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4784,10 +4816,10 @@
         "min": 32.0,
         "max": 32.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Machine instructions and addressing modes",
+      "difficulty_level": "Hard",
+      "explaination": "A 16-bit instruction space has $2^{16} = 65536$ encodings. Type-1: 4 instructions with $3 \\times 4\\text{-bit}$ registers consume $4 \\times 2^{12} = 16384$. Type-2: 8 instructions with $2 \\times 6\\text{-bit}$ registers consume $8 \\times 2^{12} = 32768$. Type-3: 14 instructions with 4-bit and 6-bit registers consume $14 \\times 2^{10} = 14336$. Remaining encodings $= 65536 - (16384 + 32768 + 14336) = 2048$. Each Type-4 instruction uses one 6-bit register ($2^6 = 64$ encodings). Thus, maximum $N = 2048 / 64 = 32$.",
       "tags": [
         "2018",
         "2_mark",
@@ -4797,15 +4829,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A processor has 16 integer registers (R0 to R15) and 64 floating point registers (F0 to F63). It uses a 16-bit instruction format. Four types of instructions are supported:\n\\begin{itemize}[leftmargin=*, nosep]\n    \\item Type-1: Opcode with three integer register operands\n    \\item Type-2: Opcode with two floating point register operands\n    \\item Type-3: Opcode with one integer and one floating point register operand\n    \\item Type-4: Opcode with one floating point register operand\n\\end{itemize}\nIf there are 4 Type-1, 8 Type-2, and 14 Type-3 instructions, the maximum number of Type-4 instructions that can be supported is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q52",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4823,10 +4857,10 @@
         "min": 2.0,
         "max": 2.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular expressions and finite automata",
+      "difficulty_level": "Hard",
+      "explaination": "The given automaton on alphabet $\\{0\\}$ accepts $L = \\{0, 00, 000, \\dots\\} = 0^+$. Its powers are $L^2 = \\{0^k \\mid k \\ge 2\\}$, $L^3 = \\{0^k \\mid k \\ge 3\\}$. For the language of strings accepted by the automaton, the smallest integer $k$ satisfying $L^k = L^{k+1}$ is 2.",
       "tags": [
         "2018",
         "2_mark",
@@ -4836,15 +4870,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Given a language $L$, define $L^i$ as $L^0 = \\{\\varepsilon\\}$ and $L^i = L^{i-1} \\cdot L$ for $i > 0$. The order of a language $L$ is defined as the smallest $k$ such that $L^k = L^{k+1}$. Consider the finite automaton accepting $L$ over $\\{0\\}$ where states accept strings of positive length. The order of language $L$ is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q53",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4862,10 +4898,10 @@
         "min": 85.0,
         "max": 85.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "File systems",
+      "difficulty_level": "Medium",
+      "explaination": "Using Shortest Seek Time First (SSTF) starting at cylinder 80: closest is 86 (diff 6, upward), then 72 (diff 14, downward $\\implies$ reversal 1), then 116 (diff 44, upward $\\implies$ reversal 2), then 134 (diff 18, upward), then 20 (diff 114, downward $\\implies$ reversal 3), and finally 16 (diff 4, downward). Total cylinder distance $= 6 + 14 + 44 + 18 + 114 + 4 = 200$. Head movement power $= 200 \\times 0.2\\text{ mW} = 40\\text{ mW}$. Direction reversals $= 3 \\times 15\\text{ mW} = 45\\text{ mW}$. Total power consumed $= 40 + 45 = 85\\text{ mW}$.",
       "tags": [
         "2018",
         "2_mark",
@@ -4875,15 +4911,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a storage disk with 200 cylinders (0 to 199). Requests arrive for cylinders: 16, 20, 72, 86, 116, 134. The read/write head is currently at cylinder 80 and moving towards higher cylinder numbers. The SSTF algorithm is used. The disk arm consumes 0.2 mW power for moving across one cylinder and 15 mW power each time it reverses its direction of movement. The total power consumed (in mW) to service all requests is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q54",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -4901,10 +4939,10 @@
         "min": 144.0,
         "max": 144.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Fragmentation and IP addressing, IPv4, CIDR notation",
+      "difficulty_level": "Medium",
+      "explaination": "Total payload to fragment $= 4500 - 20 = 4480$ bytes. With $\\text{MTU} = 600$, maximum payload per fragment must be a multiple of 8: $\\lfloor (600 - 20) / 8 \\rfloor \\times 8 = 72 \\times 8 = 576$ bytes. Fragment 1 carries bytes 0 to 575 (offset 0). Fragment 2 carries bytes 576 to 1151 (offset $576/8 = 72$). Fragment 3 carries bytes 1152 onwards, so its fragment offset field is $\\frac{1152}{8} = 144$.",
       "tags": [
         "2018",
         "2_mark",
@@ -4914,7 +4952,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider an IP packet with a length of 4,500 bytes that includes a 20-byte IPv4 header and a 40-byte TCP header. The packet is forwarded across an IP network with an MTU of 600 bytes. The value of the fragment offset field in the third fragment (in 8-byte units) is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q28",

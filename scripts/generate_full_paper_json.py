@@ -42,8 +42,8 @@ def build_full_paper(paper_id="2025_CS2"):
                 paper_metadata["session"] = data.get("session")
             all_questions.extend(data.get("questions", []))
 
-    # Sort questions by question_number
-    all_questions.sort(key=lambda q: q.get("question_number", 0))
+    # Sort questions by section (GA first, then CS) and question_number
+    all_questions.sort(key=lambda q: (0 if q.get("section_code") == "GA" else 1, q.get("question_number", 0)))
 
     ga_questions = [q for q in all_questions if q.get("section_code") == "GA"]
     cs_questions = [q for q in all_questions if q.get("section_code") == "CS"]

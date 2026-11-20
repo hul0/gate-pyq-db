@@ -14898,10 +14898,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Medium",
+      "explaination": "Let $M$ and $W$ be eligible men and women, with $M + W = 300$. Number claiming pension is $\\frac{8}{9}M$ men and $\\frac{2}{3}W$ women. Total pension claimed $= \\frac{8}{9}M(750) + \\frac{2}{3}W(1000) = \\frac{2000}{3}M + \\frac{2000}{3}W = \\frac{2000}{3}(M + W) = \\frac{2000}{3}(300) = 2{,}00{,}000$.",
       "tags": [
         "2018",
         "2_mark",
@@ -14912,7 +14912,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "An old man walks in a town to distribute old age pensions. There are 300 persons in the town who are eligible for the pension. The monthly pension is Rs. 750 for each eligible man and Rs. 1000 for each eligible woman. 8/9 of the eligible men and 2/3 of the eligible women claim the pension. The total pension claimed per month is",
+      "options_latex": {
+        "A": "Rs. 1,50,000",
+        "B": "Rs. 2,00,000",
+        "C": "Rs. 2,25,000",
+        "D": "Cannot be determined"
+      }
     },
     {
       "id": "2018_CS_GA_Q07",
@@ -14942,10 +14949,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "From $p^{-x} = \\frac{1}{q}$, we have $q = p^x$. Substituting into $q^{-y} = \\frac{1}{r}$ gives $r = q^y = (p^x)^y = p^{xy}$. Then $r^{-z} = \\frac{1}{p}$ gives $p = r^z = (p^{xy})^z = p^{xyz}$. Since $p > 0$ and $p \\neq 1$, it follows that $xyz = 1$.",
       "tags": [
         "2018",
         "2_mark",
@@ -14956,7 +14963,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "If $p^{-x} = \\frac{1}{q}$, $q^{-y} = \\frac{1}{r}$, and $r^{-z} = \\frac{1}{p}$, what is the value of $xyz$?",
+      "options_latex": {
+        "A": "$-1$",
+        "B": "0",
+        "C": "1",
+        "D": "$pqr$"
+      }
     },
     {
       "id": "2018_CS_GA_Q08",
@@ -14986,10 +15000,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Out of 100 invited guests, 60 are male and 40 are female. Since 80 guests attend and all 40 invited females attend, the remaining $80 - 40 = 40$ attendees must be male. Thus, the ratio of attending males to attending females is $40 : 40 = 1 : 1$.",
       "tags": [
         "2018",
         "2_mark",
@@ -15000,7 +15014,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In a party, 60\\% of the invited guests are male and 40\\% are female. 80\\% of the invited guests attend the party. If all the invited female guests attend the party, what is the ratio of male guests who attended to the female guests who attended?",
+      "options_latex": {
+        "A": "2 : 3",
+        "B": "1 : 1",
+        "C": "3 : 2",
+        "D": "2 : 1"
+      }
     },
     {
       "id": "2018_CS_GA_Q10",
@@ -15030,10 +15051,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Elementary statistics and probability",
+      "difficulty_level": "Medium",
+      "explaination": "The number of green faces $X$ follows a Binomial distribution $B(n=7, p=4/6=2/3)$. The mode of a binomial distribution is $\\lfloor (n+1)p \\rfloor = \\lfloor 8 \\times \\frac{2}{3} \\rfloor = \\lfloor 5.33 \\rfloor = 5$. Thus, the most likely outcome is 5 green faces and $7 - 5 = 2$ red faces.",
       "tags": [
         "2018",
         "2_mark",
@@ -15044,15 +15065,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A six sided unbiased die with four green faces and two red faces is rolled seven times. Which of the following combinations is the most likely outcome of the experiment?",
+      "options_latex": {
+        "A": "Three green faces and four red faces",
+        "B": "Four green faces and three red faces",
+        "C": "Five green faces and two red faces",
+        "D": "Six green faces and one red face"
+      }
     },
     {
       "id": "2018_CS_GA_Q26",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.66,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15074,10 +15102,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Linear Algebra",
+      "subtopic": "Eigenvalues and eigenvectors",
+      "difficulty_level": "Medium",
+      "explaination": "A $2 \\times 2$ matrix with only one linearly independent eigenvector has geometric multiplicity 1. This implies that the algebraic multiplicity of its eigenvalue must be 2 (repeated eigenvalues, so II is true) and that $P$ is not diagonalizable (so III is true). The determinant may be non-zero (e.g., $\\begin{bmatrix} 2 & 1 \\\\ 0 & 2 \\end{bmatrix}$), so I is not necessarily true.",
       "tags": [
         "2018",
         "2_mark",
@@ -15088,15 +15116,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a matrix $P = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$. The only linearly independent eigenvector of $P$ is $\\begin{bmatrix} 1 \\\\ 4 \\end{bmatrix}$. Consider the following statements:\n\\begin{enumerate}[label=\\Roman*.]\n    \\item $\\det(P) = 0$\n    \\item $P$ has repeated eigenvalues\n    \\item $P$ is not diagonalizable\n\\end{enumerate}\nWhich of the statements above are necessarily TRUE?",
+      "options_latex": {
+        "A": "I and II only",
+        "B": "I and III only",
+        "C": "I, II and III",
+        "D": "II and III only"
+      }
     },
     {
       "id": "2018_CS_GA_Q27",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.66,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15118,10 +15153,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Sets, relations, functions, partial orders and lattices",
+      "difficulty_level": "Medium",
+      "explaination": "Set $P$ (rationals) is countably infinite. Set $Q$ (functions $\\{0, 1\\} \\to \\mathbb{N}$) is equivalent to $\\mathbb{N} \\times \\mathbb{N}$, which is countable. Set $S$ (finite subsets of $\\mathbb{N}$) is countable. Set $R$ (functions $\\mathbb{N} \\to \\{0, 1\\}$) is equivalent to the power set $\\mathcal{P}(\\mathbb{N})$ and has cardinality $2^{\\aleph_0}$, which is uncountable. Hence, $P$, $Q$, and $S$ are countable.",
       "tags": [
         "2018",
         "2_mark",
@@ -15132,15 +15167,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $\\mathbb{N}$ denote the set of all natural numbers and $\\mathbb{Q}$ denote the set of all rational numbers. Consider the following sets:\n\\begin{itemize}[leftmargin=*, nosep]\n    \\item[$P$:] The set of all rational numbers between 0 and 1.\n    \\item[$Q$:] The set of all functions from $\\{0, 1\\}$ to $\\mathbb{N}$.\n    \\item[$R$:] The set of all functions from $\\mathbb{N}$ to $\\{0, 1\\}$.\n    \\item[$S$:] The set of all finite subsets of $\\mathbb{N}$.\n\\end{itemize}\nWhich of the sets above are countable?",
+      "options_latex": {
+        "A": "$P$ and $Q$ only",
+        "B": "$Q$ and $R$ only",
+        "C": "$P$, $Q$ and $R$ only",
+        "D": "$P$, $Q$ and $S$ only"
+      }
     },
     {
       "id": "2018_CS_GA_Q28",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.66,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15162,10 +15204,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Propositional and first order logic",
+      "difficulty_level": "Hard",
+      "explaination": "The sentence $\\varphi$ has existential quantifiers for 3 variables ($s, t, u$) followed exclusively by universal quantifiers for the remaining variables. If a structure satisfies $\\varphi$, the submodel formed by taking the domain as the elements corresponding to $s, t, u$ will itself satisfy the sentence because any elements evaluated under universal quantifiers are chosen from this 3-element domain.",
       "tags": [
         "2018",
         "2_mark",
@@ -15176,15 +15218,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the first-order logic sentence\n\\[ \\varphi \\equiv \\exists s \\, \\exists t \\, \\exists u \\, \\forall v \\, \\forall w \\, \\forall x \\, \\forall y \\; \\psi(s, t, u, v, w, x, y) \\]\nwhere $\\psi(s, t, u, v, w, x, y)$ is a quantifier-free first-order logic formula using only predicate symbols and variables (no functions or constants). If $\\varphi$ has a model with a universe of elements, then $\\varphi$ is guaranteed to have a model of size at most",
+      "options_latex": {
+        "A": "3",
+        "B": "4",
+        "C": "7",
+        "D": "$\\infty$"
+      }
     },
     {
       "id": "2018_CS_GA_Q29",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.66,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15206,10 +15255,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Medium",
+      "explaination": "In `fun1`, pointers `s1` and `s2` are passed by value, so the pointer swap only alters local variables and has no effect on `str1` and `str2` in `main` (printing \"Hi Bye\"). In `fun2`, the addresses of the pointers (`char**`) are passed, so dereferencing swaps the actual pointer values `str1` and `str2` (printing \"Bye Hi\").",
       "tags": [
         "2018",
         "2_mark",
@@ -15220,15 +15269,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C program:\n\\begin{lstlisting}[language=C]\n#include <stdio.h>\n\nvoid fun1(char *s1, char *s2) {\n    char *tmp;\n    tmp = s1;\n    s1 = s2;\n    s2 = tmp;\n}\n\nvoid fun2(char **s1, char **s2) {\n    char *tmp;\n    tmp = *s1;\n    *s1 = *s2;\n    *s2 = tmp;\n}\n\nint main() {\n    char *str1 = \"Hi\", *str2 = \"Bye\";\n    fun1(str1, str2);\n    printf(\"%s %s \", str1, str2);\n    fun2(&str1, &str2);\n    printf(\"%s %s\", str1, str2);\n    return 0;\n}\n\\end{lstlisting}\nThe output of the program is",
+      "options_latex": {
+        "A": "Hi Bye Bye Hi",
+        "B": "Hi Bye Hi Bye",
+        "C": "Bye Hi Bye Hi",
+        "D": "Bye Hi Hi Bye"
+      }
     },
     {
       "id": "2018_CS_GA_Q30",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.66,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15250,10 +15306,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Graph traversals, minimum spanning trees, shortest paths",
+      "difficulty_level": "Medium",
+      "explaination": "In a DFS tree of an undirected graph, every non-tree edge is a back edge connecting an ancestor and a descendant, so forward and cross edges do not exist; thus statement I is necessarily true. In a BFS tree, cross edges can connect vertices at the same level ($|i - j| = 0$), so statement II is false.",
       "tags": [
         "2018",
         "2_mark",
@@ -15264,15 +15320,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $G$ be a simple undirected graph. Let $T_D$ be a depth first search tree of $G$. Let $T_B$ be a breadth first search tree of $G$. Consider the following statements:\n\\begin{enumerate}[label=\\Roman*.]\n    \\item For every edge $(u, v)$ of $G$, if $u$ is at depth $i$ and $v$ is at depth $j$ in $T_D$, then $|i - j| \\ge 1$.\n    \\item For every edge $(u, v)$ of $G$, if $u$ is at depth $i$ and $v$ is at depth $j$ in $T_B$, then $|i - j| = 1$.\n\\end{enumerate}\nWhich of the statements above is/are necessarily TRUE?",
+      "options_latex": {
+        "A": "I only",
+        "B": "II only",
+        "C": "Both I and II",
+        "D": "Neither I nor II"
+      }
     },
     {
       "id": "2018_CS_GA_Q31",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.66,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15294,10 +15357,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Algorithm design techniques: greedy, dynamic programming and divide-and-conquer",
+      "difficulty_level": "Medium",
+      "explaination": "Using dynamic programming for matrix chain multiplication with dimensions $d = \\langle 2, 25, 3, 16, 1, 10 \\rangle$: calculating minimum multiplication costs reveals optimal parenthesization as $((F_1(F_2 F_3))(F_4 F_5))$, where the intermediate pairs computed first are $F_2 F_3$ and $F_4 F_5$.",
       "tags": [
         "2018",
         "2_mark",
@@ -15308,15 +15371,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Assume that multiplying a matrix $G_1$ of dimension $p \\times q$ with another matrix $G_2$ of dimension $q \\times r$ requires $pqr$ scalar multiplications. Computing the product of five matrices $F_1, F_2, F_3, F_4$ and $F_5$ of dimensions $2 \\times 25$, $25 \\times 3$, $3 \\times 16$, $16 \\times 1$ and $1 \\times 10$, respectively, using the minimum number of scalar multiplications requires first computing",
+      "options_latex": {
+        "A": "$F_1 F_2$ and $F_3 F_4$",
+        "B": "$F_2 F_3$ and $F_3 F_4$",
+        "C": "$F_2 F_3$ and $F_4 F_5$",
+        "D": "$F_1 F_2$ and $F_4 F_5$"
+      }
     },
     {
       "id": "2018_CS_GA_Q32",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.66,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15338,10 +15408,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Asymptotic worst case time and space complexity",
+      "difficulty_level": "Medium",
+      "explaination": "For $n = 2^{40}$, the first loop `n /= 2` executes until $n = 1$, which takes $\\log_2(2^{40}) = 40$ steps, giving $j = 40$. The second loop starts with $j = 40$ and halves $j$ until $j \\le 1$: values taken by $j$ are $40 \\to 20 \\to 10 \\to 5 \\to 2 \\to 1$, incrementing `sum` exactly 5 times.",
       "tags": [
         "2018",
         "2_mark",
@@ -15352,15 +15422,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C code. Assume that \\texttt{unsigned long int} type length is 64 bits.\n\\begin{lstlisting}[language=C]\nunsigned long int fun(unsigned long int n) {\n    unsigned long int i, j = 0, sum = 0;\n    while (n > 1) {\n        j++;\n        n /= 2;\n    }\n    for (i = 0; j > 1; i++) {\n        sum += (j % 2);\n        j /= 2;\n    }\n    return sum;\n}\n\\end{lstlisting}\nThe value returned when we call \\texttt{fun(pow(2, 40))} is",
+      "options_latex": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "40"
+      }
     },
     {
       "id": "2018_CS_GA_Q33",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.66,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15382,10 +15459,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Number representations and computer arithmetic (fixed and floating point)",
+      "difficulty_level": "Medium",
+      "explaination": "The fractional portion uses 3 bits ($b_2 b_1 b_0$), so the fractional precision is $2^{-3} = 0.125$. Any representable fraction must be an integer multiple of $0.125$: $0.500 = 4 \\times 0.125$ (i) and $0.875 = 7 \\times 0.125$ (ii) are exact multiples, while $0.100$ and $0.001$ are not.",
       "tags": [
         "2018",
         "2_mark",
@@ -15396,15 +15473,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the unsigned 8-bit fixed point binary number representation below:\n\\[ b_7 b_6 b_5 b_4 b_3 \\, . \\, b_2 b_1 b_0 \\]\nwhere the position of the binary point is between $b_3$ and $b_2$. Which of the following decimal numbers can be represented exactly in this format?\n\\begin{enumerate}[label=(\\roman*)]\n    \\item 0.500\n    \\item 0.875\n    \\item 0.100\n    \\item 0.001\n\\end{enumerate}",
+      "options_latex": {
+        "A": "(i) and (ii) only",
+        "B": "(i) and (iii) only",
+        "C": "(i) and (ii) only",
+        "D": "(i), (ii) and (iii)"
+      }
     },
     {
       "id": "2018_CS_GA_Q34",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.66,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15426,10 +15510,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory hierarchy: cache, main memory and secondary storage",
+      "difficulty_level": "Medium",
+      "explaination": "Block size $= 2^{M+W}$ bytes $\\implies M+W$ offset bits. Cache size $= 2^N$ bytes, so number of lines $= 2^N / 2^{M+W} = 2^{N-M-W}$. With $K = 2^k$ lines per set, number of sets $= 2^{N-M-W-k} \\implies N-M-W-k$ set index bits. Tag bits $= P - (N-M-W-k) - (M+W) = P - N + k = P - N + \\log_2 K$.",
       "tags": [
         "2018",
         "2_mark",
@@ -15440,15 +15524,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The size of the physical address space of a processor is $2^P$ bytes. The word length is $2^W$ bytes. The capacity of cache memory is $2^N$ bytes. The size of each cache block is $2^M$ words. For a $K$-way set-associative cache memory, the length (in number of bits) of the tag field is",
+      "options_latex": {
+        "A": "$P - N - \\log_2 K$",
+        "B": "$P - N + \\log_2 K$",
+        "C": "$P - N - M - W - \\log_2 K$",
+        "D": "$P - N - M - W + \\log_2 K$"
+      }
     },
     {
       "id": "2018_CS_GA_Q35",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.66,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15470,10 +15561,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Context-free grammars and push-down automata",
+      "difficulty_level": "Medium",
+      "explaination": "Language I has condition $m - n = q - p$, which can be checked by pushing $a$'s, popping for $b$'s, then pushing/popping for $c$ and $d$ on a single PDA stack (CFL). Language II is the concatenation of CFLs $L_1 = \\{a^m b^m\\}$ and $L_2 = \\{c^p d^p\\}$, hence a CFL. Languages III and IV require multi-variable dependencies across non-adjacent symbols simultaneously, which cannot be handled by a single stack (non-CFL).",
       "tags": [
         "2018",
         "2_mark",
@@ -15484,15 +15575,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following languages:\n\\begin{itemize}[leftmargin=*, nosep]\n    \\item[I.] $\\{a^m b^n c^p d^q \\mid m + p = n + q, \\text{ where } m, n, p, q \\ge 0\\}$\n    \\item[II.] $\\{a^m b^n c^p d^q \\mid m = n \\text{ and } p = q, \\text{ where } m, n, p, q \\ge 0\\}$\n    \\item[III.] $\\{a^m b^n c^p d^q \\mid m = p \\text{ and } n = q, \\text{ where } m, n, p, q \\ge 0\\}$\n    \\item[IV.] $\\{a^m b^n c^p d^q \\mid m = q \\text{ and } n = p, \\text{ where } m, n, p, q \\ge 0\\}$\n\\end{itemize}\nWhich of the languages above are context-free?",
+      "options_latex": {
+        "A": "I and IV only",
+        "B": "I and II only",
+        "C": "II and III only",
+        "D": "II and IV only"
+      }
     },
     {
       "id": "2018_CS_GA_Q36",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.66,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15514,10 +15612,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Turing machines and undecidability",
+      "difficulty_level": "Hard",
+      "explaination": "Problem I (membership for unrestricted grammars) is undecidable. Problem II (testing if a TM accepts a regular language) is undecidable by Rice's theorem. Problem III (equivalence of CFGs) is undecidable. Problem IV asks whether a regular language (NFA) equals a deterministic context-free language (DPDA), which is decidable. Hence, I, II, and III are undecidable.",
       "tags": [
         "2018",
         "2_mark",
@@ -15528,15 +15626,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following problems. $L(G)$ denotes the language generated by a grammar $G$. $L(M)$ denotes the language accepted by a machine $M$.\n\\begin{enumerate}[label=\\Roman*.]\n    \\item For an unrestricted grammar $G$ and a string $w$, whether $w \\in L(G)$\n    \\item Given a Turing machine $M$, whether $L(M)$ is regular\n    \\item Given two grammars $G_1$ and $G_2$, whether $L(G_1) = L(G_2)$\n    \\item Given an NFA $N$ and a DPDA $D$, whether $L(N) = L(D)$\n\\end{enumerate}\nWhich of the above problems are UNDECIDABLE?",
+      "options_latex": {
+        "A": "I and IV only",
+        "B": "II and III only",
+        "C": "III and IV only",
+        "D": "I, II and III only"
+      }
     },
     {
       "id": "2018_CS_GA_Q37",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.66,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15558,10 +15663,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Medium",
+      "explaination": "A lexical analyzer applies the longest match rule. For input `bbaacabc`, pattern $T_3 = c?(b|a)^*c$ matches prefix `bbaac` (starts without $c$, matches $(b|a)^* = bbaa$, ends with $c$), consuming `bbaac` as token $T_3$. The remaining string is `abc`, which also matches $T_3$ (starts without $c$, $(b|a)^* = ab$, ends with $c$). Hence the recognized sequence of tokens is $T_3 T_3$.",
       "tags": [
         "2018",
         "2_mark",
@@ -15572,15 +15677,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A lexical analyzer uses the following patterns to recognize three tokens $T_1, T_2$, and $T_3$ over the alphabet $\\{a, b, c\\}$:\n\\[ T_1: a?(b|c)^*a \\qquad T_2: b?(a|c)^*b \\qquad T_3: c?(b|a)^*c \\]\nNote that '?' means 0 or 1 occurrence of the preceding symbol. The analyzer matches the longest prefix of the remaining input. For the input string `bbaacabc`, the token sequence generated is",
+      "options_latex": {
+        "A": "$T_1 T_2 T_3$",
+        "B": "$T_1 T_3$",
+        "C": "$T_2 T_1 T_3$",
+        "D": "$T_3 T_3$"
+      }
     },
     {
       "id": "2018_CS_GA_Q39",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.66,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15602,10 +15714,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Deadlock",
+      "difficulty_level": "Medium",
+      "explaination": "Currently Allocated: $E = 2+0+0+1 = 3$, $F = 0+1+0+0 = 1$, $G = 1+0+1+0 = 2$. Available resources $= (6-3, 4-1, 2-2) = (3, 3, 0)$. Need matrix: $P_0(3, 3, 0)$, $P_1(1, 1, 1)$, $P_2(0, 3, 0)$, $P_3(2, 2, 1)$. Since $\\text{Need}(P_0) \\le \\text{Available}$, $P_0$ can finish, releasing its allocation $(2, 0, 1)$ to make Available $(5, 3, 1)$. Next $P_2, P_1, P_3$ can all execute. Thus, the system is in a safe state.",
       "tags": [
         "2018",
         "2_mark",
@@ -15616,15 +15728,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In a system, there are three types of resources: $E, F$ and $G$. Four processes $P_0, P_1, P_2$ and $P_3$ execute concurrently. At time $t_0$, the maximum need and current allocation of resources are:\n\\begin{center}\n\\begin{tabular}{c|ccc|ccc}\n\\textbf{Process} & \\multicolumn{3}{c|}{\\textbf{Allocation}} & \\multicolumn{3}{c}{\\textbf{Max Need}} \\\\\n& $E$ & $F$ & $G$ & $E$ & $F$ & $G$ \\\\\n\\hline\n$P_0$ & 2 & 0 & 1 & 5 & 3 & 1 \\\\\n$P_1$ & 0 & 1 & 0 & 1 & 2 & 1 \\\\\n$P_2$ & 0 & 0 & 1 & 0 & 3 & 1 \\\\\n$P_3$ & 1 & 0 & 0 & 3 & 2 & 1 \\\\\n\\end{tabular}\n\\end{center}\nTotal resources are: $E = 6, F = 4, G = 2$. The system at time $t_0$ is in",
+      "options_latex": {
+        "A": "a safe state.",
+        "B": "an unsafe state, but not in a deadlock.",
+        "C": "a deadlock.",
+        "D": "none of the above."
+      }
     },
     {
       "id": "2018_CS_GA_Q40",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.66,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15646,10 +15765,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Concurrency and synchronization",
+      "difficulty_level": "Medium",
+      "explaination": "In the standard producer-consumer problem with a buffer of size $N$, `empty` is initialized to $N$ and `full` is initialized to $0$. The producer waits on `empty` and signals `full`. Conversely, the consumer waits on `full` and signals `empty`. Comparing this with the provided code reveals that semaphore `empty` corresponds to buffer spaces and `full` corresponds to items, making $P: \\text{full}, Q: \\text{empty}, R: \\text{empty}, S: \\text{full}$.",
       "tags": [
         "2018",
         "2_mark",
@@ -15660,15 +15779,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following solution to the producer-consumer synchronization problem. The shared buffer size is $N$. Three semaphores $empty, full$ and $mutex$ are used with initial values $N, 0$ and $1$, respectively.\n\\begin{lstlisting}[language=C]\n// Producer:\nwhile (1) {\n    produce();\n    wait(P);\n    wait(mutex);\n    put_item();\n    signal(mutex);\n    signal(Q);\n}\n\n// Consumer:\nwhile (1) {\n    wait(R);\n    wait(mutex);\n    remove_item();\n    signal(mutex);\n    signal(S);\n    consume();\n}\n\\end{lstlisting}\nWhich of the following choices for $P, Q, R, S$ makes the solution correct?",
+      "options_latex": {
+        "A": "$P: empty, Q: full, R: empty, S: full$",
+        "B": "$P: empty, Q: full, R: full, S: empty$",
+        "C": "$P: full, Q: empty, R: empty, S: full$",
+        "D": "$P: full, Q: empty, R: full, S: empty$"
+      }
     },
     {
       "id": "2018_CS_GA_Q41",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.66,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15690,10 +15816,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Relational model: relational algebra, tuple calculus, SQL",
+      "difficulty_level": "Medium",
+      "explaination": "Query $Q$ inner joins $r$ with $\\sigma_{B < 5}(s)$, which discards all tuples from $r$ where $B \\ge 5$. Option (C) performs a left outer join between $r$ and $\\sigma_{B < 5}(s)$, which retains all tuples from $r$ (filling missing $C$ values with NULL for $B \\ge 5$), so its result is NOT equivalent to $Q$.",
       "tags": [
         "2018",
         "2_mark",
@@ -15704,15 +15830,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the relations $r(A, B)$ and $s(B, C)$, where $s.B$ is a primary key and $r.B$ is a foreign key referencing $s.B$. Consider the query:\n\\[ Q: \\Pi_{A, B, C}(r \\bowtie \\sigma_{B < 5}(s)) \\]\nWhich one of the following relational algebra queries is NOT equivalent to $Q$?",
+      "options_latex": {
+        "A": "$\\Pi_{A, B, C}(\\sigma_{B < 5}(r) \\bowtie s)$",
+        "B": "$\\sigma_{B < 5}(\\Pi_{A, B, C}(r \\bowtie s))$",
+        "C": "$\\Pi_{A, B, C}(r \\,\\text{⟕}\\, \\sigma_{B < 5}(s))$",
+        "D": "$\\Pi_{A, B, C}(\\sigma_{B < 5}(r \\bowtie s))$"
+      }
     },
     {
       "id": "2018_CS_GA_Q42",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.66,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15734,10 +15867,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Integrity constraints, normal forms",
+      "difficulty_level": "Medium",
+      "explaination": "In Schema II, the functional dependencies are $rollno \\to email$ and $email \\to rollno$. The candidate keys are $\\{rollno, courseid\\}$ and $\\{email, courseid\\}$. In $email \\to rollno$, the left side is not a superkey (violating BCNF), but the right side $rollno$ is a prime attribute (satisfying 3NF). Hence Schema II is in 3NF but not in BCNF.",
       "tags": [
         "2018",
         "2_mark",
@@ -15748,15 +15881,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following four relational schemas. For each schema, all non-trivial functional dependencies are listed. The underlined attributes denote candidate keys.\n\\begin{itemize}[leftmargin=*, nosep]\n    \\item[Schema I:] $R_1(A, B, C, D)$ with FDs: $A \\to B, B \\to C, C \\to D$\n    \\item[Schema II:] $R_2(\\underline{rollno}, \\underline{courseid}, email)$ with FDs: $rollno \\to email, email \\to rollno$\n    \\item[Schema III:] $R_3(A, B, C)$ with FDs: $A \\to B, B \\to C$\n    \\item[Schema IV:] $R_4(A, B, C)$ with FDs: $AB \\to C, C \\to A$\n\\end{itemize}\nWhich one of the relational schemas is in 3NF but not in BCNF?",
+      "options_latex": {
+        "A": "Schema I",
+        "B": "Schema II",
+        "C": "Schema III",
+        "D": "Schema IV"
+      }
     },
     {
       "id": "2018_CS_GA_Q43",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15774,10 +15914,10 @@
         "min": 109.0,
         "max": 109.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Graphs: connectivity, matching, colouring",
+      "difficulty_level": "Hard",
+      "explaination": "Each permutation of length 100 has 99 pairs of adjacent elements that can be swapped, so the degree of each vertex is $y = 99$. Adjacent transpositions generate the entire symmetric group $S_{100}$, meaning every permutation is reachable from any other; thus the graph is connected, giving $z = 1$ connected component. Hence $y + 10z = 99 + 10(1) = 109$.",
       "tags": [
         "2018",
         "2_mark",
@@ -15787,15 +15927,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $G$ be a graph with $100!$ vertices, with each vertex labelled by a distinct permutation of the numbers $1, 2, \\dots, 100$. There is an edge between two vertices if and only if the permutation of one can be obtained by swapping two adjacent elements of the other. Let $y$ be the degree of a vertex in $G$ and $z$ be the number of connected components in $G$. Then $y + 10z =$ \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q44",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15813,10 +15955,10 @@
         "min": 0.6,
         "max": 0.62
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Probability and Statistics",
+      "subtopic": "Conditional probability and Bayes theorem",
+      "difficulty_level": "Medium",
+      "explaination": "Using the law of total probability, the probability of high temperature in Delhi is $P(H_D) = 0.2(0.40) + 0.5(0.10) + 0.3(0.01) = 0.08 + 0.05 + 0.003 = 0.133$. By Bayes' theorem, $P(H_G \\mid H_D) = \\frac{P(H_G \\cap H_D)}{P(H_D)} = \\frac{0.08}{0.133} \\approx 0.6015$, which falls in the range $0.60$ to $0.62$.",
       "tags": [
         "2018",
         "2_mark",
@@ -15826,15 +15968,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider Guwahati ($G$) and Delhi ($D$) whose temperatures can be classified as high ($H$), medium ($M$) and low ($L$). Let $P(H_G) = 0.2$, $P(M_G) = 0.5$, and $P(L_G) = 0.3$ be the probabilities that Guwahati has high, medium, and low temperatures, respectively. Given $P(H_D \\mid H_G) = 0.40$, $P(H_D \\mid M_G) = 0.10$, and $P(H_D \\mid L_G) = 0.01$, the conditional probability $P(H_G \\mid H_D)$ is \\_\\_\\_\\_\\_\\_\\_\\_. (Answer correct to two decimal places)",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q45",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15852,10 +15996,10 @@
         "min": 10230.0,
         "max": 10230.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Recursion",
+      "difficulty_level": "Medium",
+      "explaination": "In `Count(x, y)`, outer recursion on $y$ runs for $y = 1024, 1023, \\dots, 2$ ($1023$ values). For each $y$, the inner branch halves $x$ until $x = 1$: starting from $x = 1024$, this loop prints 10 times (since $\\log_2(1024) = 10$). Total prints $= 1023 \\times 10 = 10230$.",
       "tags": [
         "2018",
         "2_mark",
@@ -15865,15 +16009,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following pseudo-code function where $x$ and $y$ are positive integers:\n\\begin{lstlisting}[language=C]\nCount(x, y) {\n    if (y != 1) {\n        if (x != 1) {\n            print(\"*\");\n            Count(x / 2, y);\n        } else {\n            Count(1024, y - 1);\n        }\n    }\n}\n\\end{lstlisting}\nThe total number of times `print(\"*\")` is executed for `Count(1024, 1024)` is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q46",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15891,10 +16037,10 @@
         "min": 80.0,
         "max": 80.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees, binary search trees, binary heaps",
+      "difficulty_level": "Medium",
+      "explaination": "In a min-heap of 7 elements, the root must contain the minimum element (1). The left subtree has size 3 and the right subtree has size 3. Choosing 3 elements for the left subtree from the remaining 6 elements can be done in $\\binom{6}{3} = 20$ ways. A 3-element min-heap has $\\binom{2}{1} = 2$ valid configurations. Hence, total valid min-heaps $= 20 \\times 2 \\times 2 = 80$.",
       "tags": [
         "2018",
         "2_mark",
@@ -15904,15 +16050,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The number of possible min-heaps containing each value from $\\{1, 2, 3, 4, 5, 6, 7\\}$ exactly once is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q48",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15930,10 +16078,10 @@
         "min": 16.0,
         "max": 16.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Algorithms",
+      "subtopic": "Algorithm design techniques: greedy, dynamic programming and divide-and-conquer",
+      "difficulty_level": "Medium",
+      "explaination": "Value-to-weight ratios: Item 4 ($24/2 = 12$), Item 1 ($60/10 = 6$), Item 3 ($20/4 = 5$), Item 2 ($28/7 = 4$). The heuristic sorts by ratio and greedily takes Item 4 (wt 2, remaining 9); Item 1 does not fit ($10 > 9$); Item 3 fits (wt 4, remaining 5); Item 2 does not fit ($7 > 5$), yielding $V_{\\text{heuristic}} = 24 + 20 = 44$. The optimal 0/1 knapsack selection picks Item 1 (wt 10, val 60). Thus $V_{\\text{opt}} - V_{\\text{heuristic}} = 60 - 44 = 16$.",
       "tags": [
         "2018",
         "2_mark",
@@ -15943,15 +16091,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following items with weights and values:\n\\begin{center}\n\\begin{tabular}{ccc}\n\\textbf{Item} & \\textbf{Weight} & \\textbf{Value} \\\\\n1 & 10 & 60 \\\\\n2 & 7 & 28 \\\\\n3 & 4 & 20 \\\\\n4 & 2 & 24 \\\\\n\\end{tabular}\n\\end{center}\nA knapsack has capacity 11. A greedy heuristic sorts items in decreasing order of value-to-weight ratio and picks each item that fits. Let $V_{\\text{opt}}$ and $V_{\\text{heuristic}}$ denote the optimal knapsack value and heuristic value, respectively. The value of $V_{\\text{opt}} - V_{\\text{heuristic}}$ is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q50",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -15969,10 +16119,10 @@
         "min": 219.0,
         "max": 219.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Instruction pipelining, pipeline hazards",
+      "difficulty_level": "Medium",
+      "explaination": "For 100 instructions in a 5-stage pipeline without branch delays, ideal cycles $= 5 + (100 - 1) = 104$. The PO stage causes pipeline stalls when operand evaluation takes extra cycles: 40 instructions require 3 cycles (2 extra cycles $\\implies 40 \\times 2 = 80$ stall cycles) and 35 instructions require 2 cycles (1 extra cycle $\\implies 35 \\times 1 = 35$ stall cycles). Total clock cycles $= 104 + 80 + 35 = 219$.",
       "tags": [
         "2018",
         "2_mark",
@@ -15982,15 +16132,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The instruction pipeline of a RISC processor has five stages: Instruction Fetch (IF), Instruction Decode (ID), Perform Operation (PO), Operand Read (OR), and Write Back (WB). Each stage takes 1 clock cycle except PO. For a sequence of 100 instructions, 40 instructions require 3 clock cycles in PO, 35 instructions require 2 clock cycles in PO, and the remaining 25 instructions require 1 clock cycle in PO. Assuming no memory stalls or branch delays, the total number of clock cycles to execute the 100 instructions is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q51",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -16008,10 +16160,10 @@
         "min": 32.0,
         "max": 32.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Machine instructions and addressing modes",
+      "difficulty_level": "Hard",
+      "explaination": "A 16-bit instruction space has $2^{16} = 65536$ encodings. Type-1: 4 instructions with $3 \\times 4\\text{-bit}$ registers consume $4 \\times 2^{12} = 16384$. Type-2: 8 instructions with $2 \\times 6\\text{-bit}$ registers consume $8 \\times 2^{12} = 32768$. Type-3: 14 instructions with 4-bit and 6-bit registers consume $14 \\times 2^{10} = 14336$. Remaining encodings $= 65536 - (16384 + 32768 + 14336) = 2048$. Each Type-4 instruction uses one 6-bit register ($2^6 = 64$ encodings). Thus, maximum $N = 2048 / 64 = 32$.",
       "tags": [
         "2018",
         "2_mark",
@@ -16021,15 +16173,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A processor has 16 integer registers (R0 to R15) and 64 floating point registers (F0 to F63). It uses a 16-bit instruction format. Four types of instructions are supported:\n\\begin{itemize}[leftmargin=*, nosep]\n    \\item Type-1: Opcode with three integer register operands\n    \\item Type-2: Opcode with two floating point register operands\n    \\item Type-3: Opcode with one integer and one floating point register operand\n    \\item Type-4: Opcode with one floating point register operand\n\\end{itemize}\nIf there are 4 Type-1, 8 Type-2, and 14 Type-3 instructions, the maximum number of Type-4 instructions that can be supported is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q52",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -16047,10 +16201,10 @@
         "min": 2.0,
         "max": 2.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular expressions and finite automata",
+      "difficulty_level": "Hard",
+      "explaination": "The given automaton on alphabet $\\{0\\}$ accepts $L = \\{0, 00, 000, \\dots\\} = 0^+$. Its powers are $L^2 = \\{0^k \\mid k \\ge 2\\}$, $L^3 = \\{0^k \\mid k \\ge 3\\}$. For the language of strings accepted by the automaton, the smallest integer $k$ satisfying $L^k = L^{k+1}$ is 2.",
       "tags": [
         "2018",
         "2_mark",
@@ -16060,15 +16214,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Given a language $L$, define $L^i$ as $L^0 = \\{\\varepsilon\\}$ and $L^i = L^{i-1} \\cdot L$ for $i > 0$. The order of a language $L$ is defined as the smallest $k$ such that $L^k = L^{k+1}$. Consider the finite automaton accepting $L$ over $\\{0\\}$ where states accept strings of positive length. The order of language $L$ is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q53",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -16086,10 +16242,10 @@
         "min": 85.0,
         "max": 85.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "File systems",
+      "difficulty_level": "Medium",
+      "explaination": "Using Shortest Seek Time First (SSTF) starting at cylinder 80: closest is 86 (diff 6, upward), then 72 (diff 14, downward $\\implies$ reversal 1), then 116 (diff 44, upward $\\implies$ reversal 2), then 134 (diff 18, upward), then 20 (diff 114, downward $\\implies$ reversal 3), and finally 16 (diff 4, downward). Total cylinder distance $= 6 + 14 + 44 + 18 + 114 + 4 = 200$. Head movement power $= 200 \\times 0.2\\text{ mW} = 40\\text{ mW}$. Direction reversals $= 3 \\times 15\\text{ mW} = 45\\text{ mW}$. Total power consumed $= 40 + 45 = 85\\text{ mW}$.",
       "tags": [
         "2018",
         "2_mark",
@@ -16099,15 +16255,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a storage disk with 200 cylinders (0 to 199). Requests arrive for cylinders: 16, 20, 72, 86, 116, 134. The read/write head is currently at cylinder 80 and moving towards higher cylinder numbers. The SSTF algorithm is used. The disk arm consumes 0.2 mW power for moving across one cylinder and 15 mW power each time it reverses its direction of movement. The total power consumed (in mW) to service all requests is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q54",
       "category": "ga_2_mark",
       "marks": 2.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -16125,10 +16283,10 @@
         "min": 144.0,
         "max": 144.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Fragmentation and IP addressing, IPv4, CIDR notation",
+      "difficulty_level": "Medium",
+      "explaination": "Total payload to fragment $= 4500 - 20 = 4480$ bytes. With $\\text{MTU} = 600$, maximum payload per fragment must be a multiple of 8: $\\lfloor (600 - 20) / 8 \\rfloor \\times 8 = 72 \\times 8 = 576$ bytes. Fragment 1 carries bytes 0 to 575 (offset 0). Fragment 2 carries bytes 576 to 1151 (offset $576/8 = 72$). Fragment 3 carries bytes 1152 onwards, so its fragment offset field is $\\frac{1152}{8} = 144$.",
       "tags": [
         "2018",
         "2_mark",
@@ -16138,7 +16296,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider an IP packet with a length of 4,500 bytes that includes a 20-byte IPv4 header and a 40-byte TCP header. The packet is forwarded across an IP network with an MTU of 600 bytes. The value of the fragment offset field in the third fragment (in 8-byte units) is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2022_CS_CS_Q36",

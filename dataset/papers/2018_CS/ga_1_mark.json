@@ -33,10 +33,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "\"They're\" is the contraction for \"they are\", \"their\" is the possessive pronoun, and \"there\" refers to a place. Thus, the complete sentence is: \"They're bringing their books from there.\"",
       "tags": [
         "1_mark",
         "2018",
@@ -47,7 +47,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "``From where are they bringing their books? \\_\\_\\_\\_\\_\\_\\_\\_ bringing \\_\\_\\_\\_\\_\\_\\_ books from \\_\\_\\_\\_\\_.''\n\nThe words that best fill the blanks in the above sentence are",
+      "options_latex": {
+        "A": "Their, they're, there",
+        "B": "They're, their, there",
+        "C": "There, their, they're",
+        "D": "They're, there, there"
+      }
     },
     {
       "id": "2018_CS_GA_Q02",
@@ -77,10 +84,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Vocabulary: words, idioms, and phrases in context",
+      "difficulty_level": "Easy",
+      "explaination": "The sentence contrasts an erratic or wandering investigation with an \"organized\" one. \"Meandering\" means proceeding in a winding or circuitous course without a clear direction, which fits the context precisely.",
       "tags": [
         "1_mark",
         "2018",
@@ -91,7 +98,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "``A \\_\\_\\_\\_\\_\\_\\_\\_\\_ investigation can sometimes yield new facts, but typically organized ones are more successful.''\n\nThe word that best fills the blank in the above sentence is",
+      "options_latex": {
+        "A": "meandering",
+        "B": "timely",
+        "C": "consistent",
+        "D": "systematic"
+      }
     },
     {
       "id": "2018_CS_GA_Q03",
@@ -121,10 +135,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Mensuration and geometry",
+      "difficulty_level": "Easy",
+      "explaination": "For a square of area $d$, the side length is $s = \\sqrt{d}$ and its diagonal is $s\\sqrt{2} = \\sqrt{2d}$. Since this diagonal is the diameter of the circle, the radius is $r = \\frac{\\sqrt{2d}}{2} = \\sqrt{\\frac{d}{2}}$. Hence, the area of the circle is $\\pi r^2 = \\pi \\left(\\frac{d}{2}\\right) = \\frac{1}{2}\\pi d$.",
       "tags": [
         "1_mark",
         "2018",
@@ -135,7 +149,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The area of a square is $d$. What is the area of the circle which has the diagonal of the square as its diameter?",
+      "options_latex": {
+        "A": "$\\pi d$",
+        "B": "$\\pi d^2$",
+        "C": "$\\frac{1}{4}\\pi d^2$",
+        "D": "$\\frac{1}{2}\\pi d$"
+      }
     },
     {
       "id": "2018_CS_GA_Q04",
@@ -165,10 +186,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "The required number is $\\text{LCM}(20, 42, 76) + 7$. Calculating prime factorizations: $20 = 2^2 \\times 5$, $42 = 2 \\times 3 \\times 7$, $76 = 2^2 \\times 19$. Thus $\\text{LCM} = 2^2 \\times 3 \\times 5 \\times 7 \\times 19 = 7980$. Adding the remainder 7 gives $7980 + 7 = 7987$.",
       "tags": [
         "1_mark",
         "2018",
@@ -179,7 +200,14 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "What would be the smallest natural number which when divided either by 20 or by 42 or by 76 leaves a remainder of 7 in each case?",
+      "options_latex": {
+        "A": "3047",
+        "B": "6047",
+        "C": "7987",
+        "D": "63847"
+      }
     },
     {
       "id": "2018_CS_GA_Q05",
@@ -209,10 +237,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical computation and estimation: ratios, percentages, powers, exponents and logarithms, permutations and combinations, series",
+      "difficulty_level": "Easy",
+      "explaination": "Examining consecutive multipliers: $2 \\times 6 = 12$, $12 \\times 5 = 60$, $60 \\times 4 = 240$, $240 \\times 3 = 720$, $720 \\times 2 = 1440$. Following this decreasing multiplier pattern, the next term is $1440 \\times 1 = 1440$, and the term after is $1440 \\times 0 = 0$.",
       "tags": [
         "1_mark",
         "2018",
@@ -223,15 +251,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "What is the missing number in the following sequence?\n\\[ 2,\\; 12,\\; 60,\\; 240,\\; 720,\\; 1440,\\; \\_\\_\\_\\_\\_,\\; 0 \\]",
+      "options_latex": {
+        "A": "2880",
+        "B": "1440",
+        "C": "720",
+        "D": "0"
+      }
     },
     {
       "id": "2018_CS_GA_Q01_v2",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.33,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -253,10 +288,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Combinatorics: counting, recurrence relations, generating functions",
+      "difficulty_level": "Easy",
+      "explaination": "The generating function is $G(x) = \\sum_{n=0}^\\infty (2n + 3)x^n = 2\\sum_{n=0}^\\infty n x^n + 3\\sum_{n=0}^\\infty x^n$. Using the standard power series $\\sum_{n=0}^\\infty x^n = \\frac{1}{1-x}$ and $\\sum_{n=0}^\\infty n x^n = \\frac{x}{(1-x)^2}$, we obtain $G(x) = \\frac{2x}{(1-x)^2} + \\frac{3(1-x)}{(1-x)^2} = \\frac{3 - x}{(1-x)^2}$.",
       "tags": [
         "1_mark",
         "2018",
@@ -267,15 +302,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one of the following is a closed form expression for the generating function of the sequence $\\{a_n\\}$, where $a_n = 2n + 3$ for all $n = 0, 1, 2, \\dots$?",
+      "options_latex": {
+        "A": "$\\frac{3}{(1-x)^2}$",
+        "B": "$\\frac{3x}{(1-x)^2}$",
+        "C": "$\\frac{2-x}{(1-x)^2}$",
+        "D": "$\\frac{3-x}{(1-x)^2}$"
+      }
     },
     {
       "id": "2018_CS_GA_Q02_v2",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.33,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -297,10 +339,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Programming in C",
+      "difficulty_level": "Easy",
+      "explaination": "In `struct Ournode`, `char x, y, z;` are stored contiguously in memory. Since `p = {'1', '0', 'a'+2}`, `p.x = '1'`, `p.y = '0'`, and `p.z = 'c'`. Pointer `q` points to `p`; casting `q` to `(char*)` gives byte-level access where `*((char*)q + 1)` accesses `p.y` ('0') and `*((char*)q + 2)` accesses `p.z` ('c').",
       "tags": [
         "1_mark",
         "2018",
@@ -311,15 +353,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C program.\n\\begin{lstlisting}[language=C]\n#include <stdio.h>\nstruct Ournode {\n    char x, y, z;\n};\n\nint main() {\n    struct Ournode p = {'1', '0', 'a' + 2};\n    struct Ournode *q = &p;\n    printf(\"%c, %c\", *((char*)q + 1), *((char*)q + 2));\n    return 0;\n}\n\\end{lstlisting}\nThe output of this program is",
+      "options_latex": {
+        "A": "0, c",
+        "B": "0, a+2",
+        "C": "'0', 'p+2'",
+        "D": "1, 0"
+      }
     },
     {
       "id": "2018_CS_GA_Q04_v2",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.33,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -341,10 +390,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Digital Logic",
+      "subtopic": "Boolean algebra",
+      "difficulty_level": "Easy",
+      "explaination": "Recall that $P \\oplus \\overline{P} = 1$ and $1 \\oplus Q = \\overline{Q}$. On the right-hand side of (D), $P \\odot \\overline{P} = 0$, and $0 \\odot \\overline{Q} = \\overline{0 \\oplus \\overline{Q}} = \\overline{\\overline{Q}} = Q$. Since $\\overline{Q} \\neq Q$, option (D) is NOT correct.",
       "tags": [
         "1_mark",
         "2018",
@@ -355,15 +404,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $\\oplus$ and $\\odot$ denote the Exclusive OR and Exclusive NOR operations, respectively. Which one of the following is NOT CORRECT?",
+      "options_latex": {
+        "A": "$\\overline{P \\oplus Q} = P \\odot Q$",
+        "B": "$\\overline{P \\odot Q} = P \\oplus Q$",
+        "C": "$\\overline{P} \\oplus Q = P \\odot Q$",
+        "D": "$(P \\oplus \\overline{P}) \\oplus Q = (P \\odot \\overline{P}) \\odot \\overline{Q}$"
+      }
     },
     {
       "id": "2018_CS_GA_Q05_v2",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.33,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -385,10 +441,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Machine instructions and addressing modes",
+      "difficulty_level": "Easy",
+      "explaination": "RISC (Reduced Instruction Set Computer) architectures feature load-store designs where arithmetic operations operate only on registers (I), fixed-length instruction encodings for streamlined pipelining (II), and hardwired control units for single-cycle instruction execution (III). Hence, all three characteristics I, II, and III are typical of RISC processors.",
       "tags": [
         "1_mark",
         "2018",
@@ -399,15 +455,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following processor design characteristics.\n\\begin{enumerate}[label=\\Roman*.]\n    \\item Register-to-register arithmetic operations only\n    \\item Fixed-length instruction format\n    \\item Hardwired control unit\n\\end{enumerate}\nWhich of the characteristics above are used in the design of a RISC processor?",
+      "options_latex": {
+        "A": "I and II only",
+        "B": "II and III only",
+        "C": "I and III only",
+        "D": "I, II and III"
+      }
     },
     {
       "id": "2018_CS_GA_Q06_v2",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.33,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -429,10 +492,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular expressions and finite automata",
+      "difficulty_level": "Easy",
+      "explaination": "By the subset construction algorithm, converting an $n$-state NFA to a DFA produces states that are subsets of the NFA states. Thus, the power set has $2^n$ possible states, ensuring that any equivalent minimal DFA has $k \\le 2^n$ states.",
       "tags": [
         "1_mark",
         "2018",
@@ -443,15 +506,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $N$ be an NFA with $n$ states. Let $k$ be the number of states of a minimal DFA which is equivalent to $N$. Which one of the following is necessarily true?",
+      "options_latex": {
+        "A": "$k \\ge 2^n$",
+        "B": "$k \\ge n$",
+        "C": "$k \\le n^2$",
+        "D": "$k \\le 2^n$"
+      }
     },
     {
       "id": "2018_CS_GA_Q07_v2",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.33,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -473,10 +543,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Theory of Computation",
+      "subtopic": "Regular and context-free languages, pumping lemma",
+      "difficulty_level": "Easy",
+      "explaination": "The set of recursively enumerable (RE) languages is closed under union, intersection, concatenation, and Kleene star, but not closed under complementation or set difference.",
       "tags": [
         "1_mark",
         "2018",
@@ -487,15 +557,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The set of all recursively enumerable languages is",
+      "options_latex": {
+        "A": "closed under complementation.",
+        "B": "closed under intersection.",
+        "C": "a subset of the set of all context-sensitive languages.",
+        "D": "an uncountable set."
+      }
     },
     {
       "id": "2018_CS_GA_Q08_v2",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.33,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -517,10 +594,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Compiler Design",
+      "subtopic": "Lexical analysis, parsing, syntax-directed translation",
+      "difficulty_level": "Easy",
+      "explaination": "Type checking verifies semantic consistency according to language type rules and is performed during semantic analysis, which occurs after syntax analysis (parsing). Therefore, the statement that type checking is done during syntax analysis is FALSE.",
       "tags": [
         "1_mark",
         "2018",
@@ -531,15 +608,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Which one of the following statements is FALSE?",
+      "options_latex": {
+        "A": "Context-free grammar can be used to specify both lexical and syntax rules.",
+        "B": "Type checking is done before parsing.",
+        "C": "High-level language programs can be converted to intermediate code directly.",
+        "D": "Arguments to a function can be passed using the program stack."
+      }
     },
     {
       "id": "2018_CS_GA_Q09",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.33,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -561,10 +645,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "I/O interface: interrupt and DMA mode",
+      "difficulty_level": "Easy",
+      "explaination": "Upon receiving an interrupt, the processor finishes the execution of the current instruction (Q), saves the processor status and return PC onto the stack (P), loads the starting address of the ISR from the interrupt vector table (T), executes the ISR (R), and finally restores the saved status and resumes process $L$ (S). Hence the order is QPTRS.",
       "tags": [
         "1_mark",
         "2018",
@@ -575,15 +659,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The following are some events that occur after a device controller issues an interrupt while process $L$ is under execution.\n\\begin{itemize}[leftmargin=*, nosep]\n    \\item[P.] The processor pushes the process status of $L$ on to the control stack.\n    \\item[Q.] The processor finishes the execution of the current instruction.\n    \\item[R.] The processor executes the interrupt service routine.\n    \\item[S.] The processor pops the process status of $L$ from the control stack.\n    \\item[T.] The processor fetches the new PC value from the interrupt vector.\n\\end{itemize}\nWhich one of the following is the correct order of events?",
+      "options_latex": {
+        "A": "Q, P, T, R, S",
+        "B": "P, Q, T, R, S",
+        "C": "Q, P, R, T, S",
+        "D": "P, Q, R, T, S"
+      }
     },
     {
       "id": "2018_CS_GA_Q10_v2",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.33,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -605,10 +696,10 @@
         "B"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Memory management and virtual memory",
+      "difficulty_level": "Medium",
+      "explaination": "The effective access time is $X = (1 - p)M + pD = M + p(D - M)$. Solving for $p$ yields $p(D - M) = X - M \\implies p = \\frac{X - M}{D - M}$.",
       "tags": [
         "1_mark",
         "2018",
@@ -619,15 +710,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a process executing on an operating system that uses demand paging. The average time for a memory access in the system is $M$ units if the corresponding memory page is available in memory, and $D$ units $(D \\gg M)$ if the page needs to be fetched from the disk. If $X$ is the effective memory access time, the page fault rate $p$ is",
+      "options_latex": {
+        "A": "$\\frac{X - M}{D}$",
+        "B": "$\\frac{X - M}{D - M}$",
+        "C": "$\\frac{D - X}{D - M}$",
+        "D": "$\\frac{X - M}{D + M}$"
+      }
     },
     {
       "id": "2018_CS_GA_Q11",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.33,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -649,10 +747,10 @@
         "A"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "ER-model",
+      "difficulty_level": "Easy",
+      "explaination": "In an ER diagram, a many-to-one relationship from $E_1$ to $E_2$ means each entity in $E_1$ is related to at most one entity in $E_2$. Total participation of $E_1$ requires that every entity in $E_1$ participates in at least one relationship. Combining these, every entity in $E_1$ is associated with exactly one entity in $E_2$.",
       "tags": [
         "1_mark",
         "2018",
@@ -663,15 +761,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "In an Entity-Relationship (ER) model, suppose $R$ is a many-to-one relationship from entity set $E_1$ to entity set $E_2$. Assume that $E_1$ has total participation in $R$, but $E_2$ has partial participation in $R$. Which one of the following statements is necessarily TRUE?",
+      "options_latex": {
+        "A": "Every entity in $E_1$ is associated with exactly one entity in $E_2$.",
+        "B": "Some entity in $E_1$ is associated with more than one entity in $E_2$.",
+        "C": "Every entity in $E_2$ is associated with at least one entity in $E_1$.",
+        "D": "Every entity in $E_2$ is associated with at most one entity in $E_1$."
+      }
     },
     {
       "id": "2018_CS_GA_Q12",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.33,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -693,10 +798,10 @@
         "D"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Databases",
+      "subtopic": "Relational model: relational algebra, tuple calculus, SQL",
+      "difficulty_level": "Easy",
+      "explaination": "Query 1 uses natural join (inner join), Query 2 uses left outer join, Query 3 uses right outer join, and Query 4 uses full outer join. A full outer join preserves all tuples from both relation $Book$ and relation $Stock$ (filling missing values with NULLs). Therefore, every tuple output by Query 1, Query 2, and Query 3 is guaranteed to appear in Query 4.",
       "tags": [
         "1_mark",
         "2018",
@@ -707,15 +812,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following two tables and four queries in SQL.\n\\texttt{Book (isbn, bname)}\n\\texttt{Stock (isbn, copies)}\n\nQuery 1: \\texttt{SELECT B.isbn, S.copies FROM Book B INNER JOIN Stock S ON B.isbn = S.isbn;}\nQuery 2: \\texttt{SELECT B.isbn, S.copies FROM Book B LEFT OUTER JOIN Stock S ON B.isbn = S.isbn;}\nQuery 3: \\texttt{SELECT B.isbn, S.copies FROM Book B RIGHT OUTER JOIN Stock S ON B.isbn = S.isbn;}\nQuery 4: \\texttt{SELECT B.isbn, S.copies FROM Book B FULL OUTER JOIN Stock S ON B.isbn = S.isbn;}\n\nWhich one of the following statements is CORRECT?",
+      "options_latex": {
+        "A": "Query 1 and Query 2 always produce the same number of rows.",
+        "B": "Query 2 and Query 3 always produce the same number of rows.",
+        "C": "Query 1 always produces the maximum number of rows among all queries.",
+        "D": "All rows from Query 1, Query 2, and Query 3 are always present in the result of Query 4."
+      }
     },
     {
       "id": "2018_CS_GA_Q13",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.33,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -737,10 +849,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Concept of layering: OSI and TCP/IP Protocol Stacks",
+      "difficulty_level": "Easy",
+      "explaination": "UDP port numbers are 16 bits long (P-IV). Ethernet MAC addresses are 48 bits long (Q-I). The IPv6 Next Header field is 8 bits long (R-II). TCP sequence numbers are 32 bits long (S-III). Hence the correct matching is P-IV, Q-I, R-II, S-III.",
       "tags": [
         "1_mark",
         "2018",
@@ -751,15 +863,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Match the following:\n\\begin{center}\n\\begin{tabular}{ll@{\\hspace{2cm}}ll}\n\\textbf{Field} & & \\textbf{Length in bits} & \\\\\nP. & UDP Header's Port Number & I. & 48 \\\\\nQ. & Ethernet MAC Address & II. & 8 \\\\\nR. & IPv6 Next Header & III. & 32 \\\\\nS. & TCP Header's Sequence Number & IV. & 16\n\\end{tabular}\n\\end{center}",
+      "options_latex": {
+        "A": "P-III, Q-I, R-II, S-IV",
+        "B": "P-IV, Q-II, R-I, S-III",
+        "C": "P-IV, Q-I, R-II, S-III",
+        "D": "P-I, Q-IV, R-II, S-III"
+      }
     },
     {
       "id": "2018_CS_GA_Q14",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.33,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -781,10 +900,10 @@
         "C"
       ],
       "numerical_answer_range": null,
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Transport layer: flow control and congestion control, UDP, TCP, sockets",
+      "difficulty_level": "Medium",
+      "explaination": "In TCP slow start, the congestion window (`cwnd`) increases by 1 MSS for each acknowledged segment. Consequently, when all segments in a flight are acknowledged, `cwnd` approximately doubles every round-trip time (RTT). Thus, statement (iv) is TRUE.",
       "tags": [
         "1_mark",
         "2018",
@@ -795,15 +914,22 @@
         "mcq",
         "negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following statements regarding the slow start phase of the TCP congestion control algorithm. Note that $cwnd$ stands for the congestion window size and $MSS$ denotes the Maximum Segment Size.\n\\begin{itemize}[leftmargin=*, nosep]\n    \\item[(i)] The $cwnd$ increases by 2 $MSS$ on every successful acknowledgement.\n    \\item[(ii)] The $cwnd$ increases by 1 $MSS$ on every successful acknowledgement.\n    \\item[(iii)] The $cwnd$ increases by 1 $MSS$ every round trip time.\n    \\item[(iv)] The $cwnd$ approximately doubles every round trip time.\n\\end{itemize}\nWhich of the following statements is/are CORRECT?",
+      "options_latex": {
+        "A": "(i) and (iii) only",
+        "B": "(i) and (iv) only",
+        "C": "(ii) and (iv) only",
+        "D": "(ii) and (iii) only"
+      }
     },
     {
       "id": "2018_CS_GA_Q15",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -821,10 +947,10 @@
         "min": 0.021,
         "max": 0.024
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Probability and Statistics",
+      "subtopic": "Random variables",
+      "difficulty_level": "Medium",
+      "explaination": "On rolling two fair dice independently, the probability of a tie is $P(\\text{tie}) = \\frac{6}{36} = \\frac{1}{6}$, and the probability of someone winning (no tie) is $1 - \\frac{1}{6} = \\frac{5}{6}$. The game ends on the third roll if trials 1 and 2 are ties and trial 3 produces a winner: $P(\\text{Trial 3}) = \\left(\\frac{1}{6}\\right) \\times \\left(\\frac{1}{6}\\right) \\times \\left(\\frac{5}{6}\\right) = \\frac{5}{216} \\approx 0.0231$.",
       "tags": [
         "1_mark",
         "2018",
@@ -834,15 +960,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Two people, $P$ and $Q$, decide to independently roll two identical dice, each with 6 faces, numbered 1 to 6. The person with the higher number wins. In case both get the same number, they repeat the roll until someone wins. The probability that the game concludes on the third roll is \\_\\_\\_\\_\\_\\_\\. (Answer in 3 decimal places)",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q16",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -860,10 +988,10 @@
         "min": 0.27,
         "max": 0.3
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Calculus",
+      "subtopic": "Integration",
+      "difficulty_level": "Easy",
+      "explaination": "Substitute $u = x^2$, so $du = 2x\\,dx$. The limits transform from $x = 0 \\implies u = 0$ to $x = \\frac{\\pi}{4} \\implies u = \\frac{\\pi^2}{16} \\approx \\frac{9.8596}{16} \\approx 0.61685$ radians. The integral is $\\frac{1}{2}\\int_0^{\\pi^2/16} \\cos u \\, du = \\frac{1}{2} \\sin\\left(\\frac{\\pi^2}{16}\\right) \\approx \\frac{1}{2} \\sin(0.61685) \\approx \\frac{1}{2}(0.5784) \\approx 0.289$.",
       "tags": [
         "1_mark",
         "2018",
@@ -873,15 +1001,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The value of $\\int_0^{\\pi/4} x \\cos(x^2) \\, dx$ correct to three decimal places (assuming that $\\pi = 3.14$) is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q17",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -899,10 +1029,10 @@
         "min": 3.0,
         "max": 3.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Linear Algebra",
+      "subtopic": "Eigenvalues and eigenvectors",
+      "difficulty_level": "Easy",
+      "explaination": "For an outer product matrix $A = u v^T$ where $u = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}$ and $v = \\begin{bmatrix} 1 \\\\ 1 \\end{bmatrix}$, the rank of $A$ is 1. Its non-zero eigenvalue equals the trace of $A$, which is given by the inner product $v^T u = 1(1) + 1(2) = 3$.",
       "tags": [
         "1_mark",
         "2018",
@@ -912,15 +1042,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a matrix $A = u v^T$ where $u = \\begin{bmatrix} 1 \\\\ 2 \\end{bmatrix}$ and $v = \\begin{bmatrix} 1 \\\\ 1 \\end{bmatrix}$. Note that $v^T$ denotes the transpose of $v$. The largest eigenvalue of $A$ is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q18",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -938,10 +1070,10 @@
         "min": 3.0,
         "max": 3.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Graphs: connectivity, matching, colouring",
+      "difficulty_level": "Easy",
+      "explaination": "The given graph contains an odd cycle, which prevents it from being 2-colorable (bipartite), meaning $\\chi(G) \\ge 3$. A valid 3-coloring can be directly constructed without any conflicts between adjacent vertices, so $\\chi(G) = 3$.",
       "tags": [
         "1_mark",
         "2018",
@@ -951,15 +1083,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The chromatic number of the graph containing a 7-cycle with a single cross-chord is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q19",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -977,10 +1111,10 @@
         "min": 42.0,
         "max": 42.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Discrete Mathematics",
+      "subtopic": "Monoids, Groups",
+      "difficulty_level": "Easy",
+      "explaination": "By Lagrange's Theorem, the order of any subgroup $H$ of a finite group $G$ must divide $|G| = 84$. A proper subgroup cannot equal the whole group, so $|H| < 84$. The largest proper divisor of 84 is $\\frac{84}{2} = 42$.",
       "tags": [
         "1_mark",
         "2018",
@@ -990,15 +1124,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Let $G$ be a finite group on 84 elements. The size of a largest possible proper subgroup of $G$ is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q20",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -1016,10 +1152,10 @@
         "min": 4.0,
         "max": 4.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees, binary search trees, binary heaps",
+      "difficulty_level": "Medium",
+      "explaination": "In postorder traversal, the root is the last element (1). Splitting inorder $[8,6,9,4,7,2,5]$ and $[3]$ around root 1 gives left subtree nodes and right subtree node 3. Recursively constructing the unique binary tree reveals the longest leaf path: $1 \\to 2 \\to 4 \\to 6 \\to 8$ (or 9), which has 4 edges. Thus, the height in terms of edges is 4.",
       "tags": [
         "1_mark",
         "2018",
@@ -1029,15 +1165,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "The postorder traversal of a binary tree is $8, 9, 6, 7, 4, 5, 2, 3, 1$. The inorder traversal of the same tree is $8, 6, 9, 4, 7, 2, 5, 1, 3$. The height of a tree is the length of the longest path from the root to any leaf (in terms of number of edges). The height of the binary tree is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q21",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -1055,10 +1193,10 @@
         "min": 4.0,
         "max": 4.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Programming and Data Structures",
+      "subtopic": "Recursion",
+      "difficulty_level": "Medium",
+      "explaination": "Function `calc(a, b)` computes $\\log_3(b)$ recursively: `calc(4, 81)` calls `calc(4, 27)` $\\to$ `calc(4, 9)` $\\to$ `calc(4, 3)`. At $b = 3$, `b <= 3` is satisfied and it returns. The variable `counter` is incremented once per invocation, resulting in exactly 4 calls.",
       "tags": [
         "1_mark",
         "2018",
@@ -1068,15 +1206,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider the following C program:\n\\begin{lstlisting}[language=C]\n#include <stdio.h>\nint counter = 0;\n\nint calc(int a, int b) {\n    int c;\n    counter++;\n    if (b <= 3) return (a + b);\n    else {\n        c = b / 3;\n        return (calc(a, c));\n    }\n}\n\nint main() {\n    calc(4, 81);\n    printf(\"%d\", counter);\n    return 0;\n}\n\\end{lstlisting}\nThe output of this program is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q23",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -1094,10 +1234,10 @@
         "min": 59.0,
         "max": 60.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory hierarchy: cache, main memory and secondary storage",
+      "difficulty_level": "Medium",
+      "explaination": "The DRAM has $2^{14} = 16384$ rows. Refreshing all rows takes $16384 \\times 50\\text{ ns} = 819.2\\ \\mu\\text{s}$ every $2000\\ \\mu\\text{s}$. The refresh overhead fraction is $\\frac{819.2}{2000} = 40.96\\%$. Hence, the percentage of time available for reading and writing memory is $100\\% - 40.96\\% = 59.04\\% \\approx 59\\%$.",
       "tags": [
         "1_mark",
         "2018",
@@ -1107,15 +1247,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "A 32-bit wide main memory unit with a capacity of 1 GB is built using $256\\text{M} \\times 4\\text{-bit}$ DRAM chips. The number of rows of memory cells in the DRAM chip is $2^{14}$. The time taken to perform one refresh operation is 50 nanoseconds. The refresh period is 2 milliseconds. The percentage of time that the memory is available for performing the normal read and write operations is \\_\\_\\_\\_\\_\\_\\_\\_\\%. (Answer in integer)",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q24",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -1133,10 +1275,10 @@
         "min": 2.0,
         "max": 2.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Operating System",
+      "subtopic": "Deadlock",
+      "difficulty_level": "Easy",
+      "explaination": "For $n$ processes sharing $m$ instances of a single resource type where each process needs at most $K$ instances, deadlock is guaranteed to be avoided if $\\sum_{i=1}^n (K - 1) < m \\implies n(K - 1) \\le m - 1$. Here $n = 3$ and $m = 4$, so $3(K - 1) \\le 3 \\implies K - 1 \\le 1 \\implies K \\le 2$.",
       "tags": [
         "1_mark",
         "2018",
@@ -1146,15 +1288,17 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a system with 3 processes that share 4 instances of the same resource type. Each process can request at most $K$ instances of the resource type at any time. The largest value of $K$ that will always avoid deadlock is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     },
     {
       "id": "2018_CS_GA_Q25",
       "category": "ga_1_mark",
       "marks": 1.0,
       "negative_marks": 0.0,
-      "section": "General Aptitude",
-      "section_code": "GA",
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
       "paper_id": "2018_CS",
       "year": 2018,
       "session": "CS",
@@ -1172,10 +1316,10 @@
         "min": 34.0,
         "max": 34.0
       },
-      "topic": "",
-      "subtopic": "",
-      "difficulty_level": "",
-      "explaination": "",
+      "topic": "Computer Networks",
+      "subtopic": "Transport layer: flow control and congestion control, UDP, TCP, sockets",
+      "difficulty_level": "Medium",
+      "explaination": "A 32-bit sequence number space contains $2^{32} = 4{,}294{,}967{,}296$ bytes. At a transmission rate of $1\\text{ Gbps} = \\frac{10^9}{8} = 1.25 \\times 10^8\\text{ bytes/s}$, the wrap-around time is $\\frac{2^{32}}{1.25 \\times 10^8} = \\frac{4294967296}{125000000} \\approx 34.36$ seconds $\\approx 34$ seconds.",
       "tags": [
         "1_mark",
         "2018",
@@ -1185,7 +1329,9 @@
         "nat",
         "no_negative_marking",
         "text_only"
-      ]
+      ],
+      "question_text_latex": "Consider a 1 Gbps network with an MTU of 1500 bytes and a 32-bit sequence number space. The minimum time (in seconds, rounded to the nearest integer) after which the sequence numbers can wrap around is \\_\\_\\_\\_\\_\\_\\_\\_.",
+      "options_latex": null
     }
   ]
 }
