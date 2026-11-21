@@ -1,0 +1,2429 @@
+{
+  "paper_id": "2013_CS",
+  "year": 2013,
+  "session": "CS",
+  "subject": "Computer Science and Information Technology",
+  "total_questions": 62,
+  "total_questions_in_paper": 62,
+  "extracted_questions_count": 62,
+  "omitted_questions_count": 0,
+  "sections": [
+    {
+      "section_name": "General Aptitude",
+      "section_code": "GA",
+      "total_questions": 7
+    },
+    {
+      "section_name": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "total_questions": 55
+    }
+  ],
+  "questions": [
+    {
+      "id": "2013_CS_GA_Q56",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 56,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 14,
+      "page_end": 14,
+      "question_text": "Which one of the following options is the closest in meaning to the word given below?\n\n**Nadir**",
+      "options": {
+        "A": "Highest",
+        "B": "Lowest",
+        "C": "Medium",
+        "D": "Integration"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Ability",
+      "subtopic": "Vocabulary",
+      "difficulty_level": "Easy",
+      "explaination": "The word 'Nadir' refers to the lowest point in the fortunes of a person or organization. Therefore, 'Lowest' is the closest in meaning.",
+      "tags": [
+        "Vocabulary"
+      ]
+    },
+    {
+      "id": "2013_CS_GA_Q57",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 57,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 14,
+      "page_end": 14,
+      "question_text": "Complete the sentence:\nUniversalism is to particularism as diffuseness is to ____________.",
+      "options": {
+        "A": "specificity",
+        "B": "neutrality",
+        "C": "generality",
+        "D": "adaptation"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Verbal Ability",
+      "subtopic": "Analogy",
+      "difficulty_level": "Medium",
+      "explaination": "This is an analogy based on Talcott Parsons' pattern variables. Universalism is contrasted with particularism, and diffuseness is contrasted with specificity.",
+      "tags": [
+        "Analogy"
+      ]
+    },
+    {
+      "id": "2013_CS_GA_Q58",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 58,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 14,
+      "page_end": 14,
+      "question_text": "What will be the maximum sum of $44, 42, 40, ......$ ?",
+      "options": {
+        "A": "502",
+        "B": "504",
+        "C": "506",
+        "D": "500"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Arithmetic Progression",
+      "subtopic": "Sum of Series",
+      "difficulty_level": "Medium",
+      "explaination": "The series is an arithmetic progression with first term $a = 44$ and common difference $d = -2$. The sum is maximized when we add all positive terms. The terms are $44, 42, ..., 2$. The number of terms $n$ is given by $a_n = a + (n-1)d \\Rightarrow 2 = 44 + (n-1)(-2) \\Rightarrow -42 = -2(n-1) \\Rightarrow 21 = n-1 \\Rightarrow n = 22$. The sum $S_n = \\frac{n}{2}(a + l) = \\frac{22}{2}(44 + 2) = 11 \\times 46 = 506$.",
+      "tags": [
+        "Arithmetic Progression"
+      ]
+    },
+    {
+      "id": "2013_CS_GA_Q59",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 59,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 14,
+      "page_end": 14,
+      "question_text": "Were you a bird, you ____________ in the sky.",
+      "options": {
+        "A": "would fly",
+        "B": "shall fly",
+        "C": "should fly",
+        "D": "shall have flown"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Grammar",
+      "subtopic": "Conditional Sentences",
+      "difficulty_level": "Easy",
+      "explaination": "This is a hypothetical conditional sentence (Type 2). The structure is 'Were + subject, subject + would + verb'. Thus, 'would fly' is the correct completion.",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "id": "2013_CS_GA_Q60",
+      "category": "ga_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 60,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 14,
+      "page_end": 14,
+      "question_text": "Choose the grammatically **INCORRECT** sentence:",
+      "options": {
+        "A": "He is of Asian origin.",
+        "B": "They belonged to Africa.",
+        "C": "She is an European.",
+        "D": "They migrated from India to Australia."
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Grammar",
+      "subtopic": "Articles",
+      "difficulty_level": "Easy",
+      "explaination": "The word 'European' starts with a consonant sound (/j/), so the correct article is 'a', not 'an'. Therefore, 'She is an European' is grammatically incorrect.",
+      "tags": [
+        "Grammar"
+      ]
+    },
+    {
+      "id": "2013_CS_GA_Q61",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 61,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 14,
+      "page_end": 14,
+      "question_text": "Find the sum of the expression\n$\\frac{1}{\\sqrt{1}+\\sqrt{2}} + \\frac{1}{\\sqrt{2}+\\sqrt{3}} + \\frac{1}{\\sqrt{3}+\\sqrt{4}} + ............. + \\frac{1}{\\sqrt{80}+\\sqrt{81}}$",
+      "options": {
+        "A": "7",
+        "B": "8",
+        "C": "9",
+        "D": "10"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Algebra",
+      "subtopic": "Rationalization",
+      "difficulty_level": "Medium",
+      "explaination": "Each term $\\frac{1}{\\sqrt{n}+\\sqrt{n+1}}$ can be rationalized as $\\frac{\\sqrt{n+1}-\\sqrt{n}}{(\\sqrt{n+1}+\\sqrt{n})(\\sqrt{n+1}-\\sqrt{n})} = \\sqrt{n+1}-\\sqrt{n}$. The sum becomes $(\\sqrt{2}-\\sqrt{1}) + (\\sqrt{3}-\\sqrt{2}) + ... + (\\sqrt{81}-\\sqrt{80})$. This is a telescoping series, which simplifies to $\\sqrt{81} - \\sqrt{1} = 9 - 1 = 8$.",
+      "tags": [
+        "Algebra"
+      ]
+    },
+    {
+      "id": "2013_CS_GA_Q62",
+      "category": "ga_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "General Aptitude",
+      "section_code": "GA",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 62,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 14,
+      "page_end": 14,
+      "question_text": "Out of all the 2-digit integers between 1 and 100, a 2-digit number has to be selected at random. What is the probability that the selected number is not divisible by 7?",
+      "options": {
+        "A": "13/90",
+        "B": "12/90",
+        "C": "78/90",
+        "D": "77/90"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Probability",
+      "subtopic": "Counting",
+      "difficulty_level": "Medium",
+      "explaination": "The 2-digit integers are from 10 to 99. Total count = $99 - 10 + 1 = 90$. Multiples of 7 in this range: $14, 21, ..., 98$. This is an AP: $98 = 14 + (n-1)7 \\Rightarrow 84 = (n-1)7 \\Rightarrow 12 = n-1 \\Rightarrow n = 13$. There are 13 numbers divisible by 7. The number of integers NOT divisible by 7 is $90 - 13 = 77$. The probability is $\\frac{77}{90}$.",
+      "tags": [
+        "Probability"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q01",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 1,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 3,
+      "page_end": 3,
+      "question_text": "A binary operation $\\oplus$ on a set of integers is defined as $x \\oplus y = x^2 + y^2$. Which one of the following statements is **TRUE** about $\\oplus$?",
+      "options": {
+        "A": "Commutative but not associative",
+        "B": "Both commutative and associative",
+        "C": "Associative but not commutative",
+        "D": "Neither commutative nor associative"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Discrete Mathematics",
+      "subtopic": "Algebraic Structures",
+      "difficulty_level": "Easy",
+      "explaination": "Commutativity: $x \\oplus y = x^2 + y^2$ and $y \\oplus x = y^2 + x^2$. Since $x^2 + y^2 = y^2 + x^2$, the operation is commutative. Associativity: $(x \\oplus y) \\oplus z = (x^2 + y^2) \\oplus z = (x^2 + y^2)^2 + z^2 = x^4 + y^4 + 2x^2y^2 + z^2$. Conversely, $x \\oplus (y \\oplus z) = x \\oplus (y^2 + z^2) = x^2 + (y^2 + z^2)^2 = x^2 + y^4 + z^4 + 2y^2z^2$. Since these are not equal, the operation is not associative.",
+      "tags": [
+        "binary operation",
+        "commutative",
+        "associative"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q02",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 2,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 3,
+      "page_end": 3,
+      "question_text": "Suppose $p$ is the number of cars per minute passing through a certain road junction between 5 PM and 6 PM, and $p$ has a Poisson distribution with mean $3$. What is the probability of observing fewer than $3$ cars during any given minute in this interval?",
+      "options": {
+        "A": "8/(2e^3)",
+        "B": "9/(2e^3)",
+        "C": "17/(2e^3)",
+        "D": "26/(2e^3)"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Engineering Mathematics",
+      "subtopic": "Probability",
+      "difficulty_level": "Medium",
+      "explaination": "For a Poisson distribution with mean $\\lambda = 3$, the probability $P(X=k) = \\frac{e^{-\\lambda} \\lambda^k}{k!}$. We want $P(X < 3) = P(X=0) + P(X=1) + P(X=2)$. $P(X=0) = \\frac{e^{-3} 3^0}{0!} = e^{-3}$. $P(X=1) = \\frac{e^{-3} 3^1}{1!} = 3e^{-3}$. $P(X=2) = \\frac{e^{-3} 3^2}{2!} = \\frac{9}{2}e^{-3}$. Summing these: $e^{-3}(1 + 3 + 4.5) = 8.5e^{-3} = \\frac{17}{2}e^{-3} = \\frac{17}{2e^3}$.",
+      "tags": [
+        "Poisson distribution",
+        "probability"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q03",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 3,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 3,
+      "page_end": 3,
+      "question_text": "Which one of the following does **NOT** equal $\\begin{vmatrix} 1 & x & x^2 \\\\ 1 & y & y^2 \\\\ 1 & z & z^2 \\end{vmatrix}$?",
+      "options": {
+        "A": "\\begin{vmatrix} 1 & x(x+1) & x+1 \\\\ 1 & y(y+1) & y+1 \\\\ 1 & z(z+1) & z+1 \\end{vmatrix}",
+        "B": "\\begin{vmatrix} 1 & x+1 & x^2+1 \\\\ 1 & y+1 & y^2+1 \\\\ 1 & z+1 & z^2+1 \\end{vmatrix}",
+        "C": "\\begin{vmatrix} 0 & x-y & x^2-y^2 \\\\ 0 & y-z & y^2-z^2 \\\\ 1 & z & z^2 \\end{vmatrix}",
+        "D": "\\begin{vmatrix} 2 & x+y & x^2+y^2 \\\\ 2 & y+z & y^2+z^2 \\\\ 1 & z & z^2 \\end{vmatrix}"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Engineering Mathematics",
+      "subtopic": "Linear Algebra",
+      "difficulty_level": "Medium",
+      "explaination": "The determinant of the original matrix is $(y-x)(z-y)(z-x)$. Option (A) evaluates to $\\begin{vmatrix} 1 & x^2+x & x+1 \\\\ 1 & y^2+y & y+1 \\\\ 1 & z^2+z & z+1 \\end{vmatrix}$. By performing column operations $C_2 \\to C_2 - C_3$, we get $\\begin{vmatrix} 1 & x^2 & x+1 \\\\ 1 & y^2 & y+1 \\\\ 1 & z^2 & z+1 \\end{vmatrix}$, which is not equal to the original determinant.",
+      "tags": [
+        "determinant",
+        "matrix"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q04",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 4,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 3,
+      "page_end": 3,
+      "question_text": "The smallest integer that can be represented by an 8-bit number in 2's complement form is",
+      "options": {
+        "A": "-256",
+        "B": "-128",
+        "C": "-127",
+        "D": "0"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Digital Logic",
+      "subtopic": "Number Representation",
+      "difficulty_level": "Easy",
+      "explaination": "For an $n$-bit 2's complement representation, the range of representable integers is $[-2^{n-1}, 2^{n-1}-1]$. For $n=8$, the range is $[-2^7, 2^7-1] = [-128, 127]$. Thus, the smallest integer is $-128$.",
+      "tags": [
+        "2's complement",
+        "integer representation"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q05",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 5,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": true,
+      "media": {
+        "q05_truth_table": {
+          "width": 819,
+          "height": 419,
+          "mime": "image/png",
+          "format": "1bit-png",
+          "file_bytes": 4016,
+          "data": "data:image/png;base64,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",
+          "description": "Truth table for priority encoder"
+        }
+      },
+      "page_start": 3,
+      "page_end": 3,
+      "question_text": "In the following truth table, $V = 1$ if and only if the input is valid.\n\n| Inputs | | | | Outputs | | |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| $D_0$ | $D_1$ | $D_2$ | $D_3$ | $X_0$ | $X_1$ | $V$ |\n| 0 | 0 | 0 | 0 | x | x | 0 |\n| 1 | 0 | 0 | 0 | 0 | 0 | 1 |\n| x | 1 | 0 | 0 | 0 | 1 | 1 |\n| x | x | 1 | 0 | 1 | 0 | 1 |\n| x | x | x | 1 | 1 | 1 | 1 |\n\nWhat function does the truth table represent?",
+      "options": {
+        "A": "Priority encoder",
+        "B": "Decoder",
+        "C": "Multiplexer",
+        "D": "Demultiplexer"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Digital Logic",
+      "subtopic": "Combinational Circuits",
+      "difficulty_level": "Medium",
+      "explaination": "The truth table shows that for multiple inputs being high, the output corresponds to the highest index input (e.g., when $D_3=1$, output is $11$, regardless of other inputs). This is the definition of a priority encoder.",
+      "tags": [
+        "priority encoder",
+        "truth table"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q06",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 6,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 3,
+      "page_end": 3,
+      "question_text": "Which one of the following is the tightest upper bound that represents the number of swaps required to sort $n$ numbers using selection sort?",
+      "options": {
+        "A": "O(\\log n)",
+        "B": "O(n)",
+        "C": "O(n \\log n)",
+        "D": "O(n^2)"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Algorithms",
+      "subtopic": "Sorting",
+      "difficulty_level": "Easy",
+      "explaination": "In selection sort, the algorithm finds the minimum element in the unsorted portion and swaps it with the first element of the unsorted portion. This is done for each of the $n$ positions. Thus, the number of swaps is at most $n-1$, which is $O(n)$.",
+      "tags": [
+        "selection sort",
+        "swaps",
+        "complexity"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q07",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 7,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 3,
+      "page_end": 3,
+      "question_text": "Which one of the following is the tightest upper bound that represents the time complexity of inserting an object into a binary search tree of $n$ nodes?",
+      "options": {
+        "A": "O(1)",
+        "B": "O(\\log n)",
+        "C": "O(n)",
+        "D": "O(n \\log n)"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Data Structures",
+      "subtopic": "Binary Search Trees",
+      "difficulty_level": "Easy",
+      "explaination": "In the worst case, a binary search tree can become a skewed tree (essentially a linked list), where the height is $n$. Inserting an element into such a tree takes $O(n)$ time.",
+      "tags": [
+        "binary search tree",
+        "insertion",
+        "complexity"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q08",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 8,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 4,
+      "page_end": 4,
+      "question_text": "Consider the languages $L_1 = \\Phi$ and $L_2 = \\{a\\}$. Which one of the following represents $L_1 L_2^* \\cup L_1^*$?",
+      "options": {
+        "A": "$\\{\\epsilon\\}$",
+        "B": "$\\Phi$",
+        "C": "$a^*$",
+        "D": "$\\{\\epsilon, a\\}$"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Theory of Computation",
+      "subtopic": "Regular Languages",
+      "difficulty_level": "Easy",
+      "explaination": "Given $L_1 = \\Phi$ and $L_2 = \\{a\\}$. \n1. $L_1 L_2^* = \\Phi \\cdot \\{a\\}^* = \\Phi$ (concatenation with empty set is empty set).\n2. $L_1^* = \\Phi^* = \\{\\epsilon\\}$ (Kleene star of empty set is the set containing only the empty string).\n3. $L_1 L_2^* \\cup L_1^* = \\Phi \\cup \\{\\epsilon\\} = \\{\\epsilon\\}$.",
+      "tags": [
+        "Theory of Computation",
+        "Regular Languages"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q09",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 9,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 4,
+      "page_end": 4,
+      "question_text": "What is the maximum number of reduce moves that can be taken by a bottom-up parser for a grammar with no epsilon- and unit-production (i.e., of type $A \\to \\epsilon$ and $A \\to a$) to parse a string with $n$ tokens?",
+      "options": {
+        "A": "$n/2$",
+        "B": "$n-1$",
+        "C": "$2n-1$",
+        "D": "$2^n$"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Compiler Design",
+      "subtopic": "Parsing",
+      "difficulty_level": "Medium",
+      "explaination": "In a bottom-up parser, each reduce move reduces a handle to a non-terminal. For a grammar with no epsilon or unit productions, every production is of the form $A \\to \\alpha$ where $|\\alpha| \\ge 2$. To derive a string of length $n$ from the start symbol, we start with $n$ tokens. Each reduction reduces the number of symbols on the stack by at least 1. Since we start with $n$ symbols and end with 1 (the start symbol), the total number of reductions is $n-1$.",
+      "tags": [
+        "Compiler Design",
+        "Parsing"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q10",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 10,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 4,
+      "page_end": 4,
+      "question_text": "A scheduling algorithm assigns priority proportional to the waiting time of a process. Every process starts with priority zero (the lowest priority). The scheduler re-evaluates the process priorities every $T$ time units and decides the next process to schedule. Which one of the following is TRUE if the processes have no I/O operations and all arrive at time zero?",
+      "options": {
+        "A": "This algorithm is equivalent to the first-come-first-serve algorithm.",
+        "B": "This algorithm is equivalent to the round-robin algorithm.",
+        "C": "This algorithm is equivalent to the shortest-job-first algorithm.",
+        "D": "This algorithm is equivalent to the shortest-remaining-time-first algorithm."
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Operating Systems",
+      "subtopic": "Scheduling",
+      "difficulty_level": "Medium",
+      "explaination": "Since all processes arrive at time zero, their waiting times increase equally. If the scheduler re-evaluates priorities every $T$ time units and picks the process with the highest priority (which is proportional to waiting time), it will effectively cycle through the processes in a round-robin fashion, giving each process a time slice of $T$.",
+      "tags": [
+        "Operating Systems",
+        "Scheduling"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q11",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 11,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 4,
+      "page_end": 4,
+      "question_text": "Match the problem domains in GROUP I with the solution technologies in GROUP II.\n\n| GROUP I | GROUP II |\n| :--- | :--- |\n| (P) Service oriented computing | (1) Interoperability |\n| (Q) Heterogeneous communicating systems | (2) BPMN |\n| (R) Information representation | (3) Publish-find-bind |\n| (S) Process description | (4) XML |",
+      "options": {
+        "A": "P-1, Q-2, R-3, S-4",
+        "B": "P-3, Q-4, R-2, S-1",
+        "C": "P-3, Q-1, R-4, S-2",
+        "D": "P-4, Q-3, R-2, S-1"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Web Technologies",
+      "subtopic": "Service Oriented Architecture",
+      "difficulty_level": "Easy",
+      "explaination": "Matching: \n(P) Service oriented computing uses the Publish-find-bind paradigm (3).\n(Q) Heterogeneous communicating systems rely on Interoperability (1).\n(R) Information representation is handled by XML (4).\n(S) Process description is handled by BPMN (2).\nThus, P-3, Q-1, R-4, S-2.",
+      "tags": [
+        "Web Technologies",
+        "SOA"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q12",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 12,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 4,
+      "page_end": 4,
+      "question_text": "The transport layer protocols used for real time multimedia, file transfer, DNS and email, respectively are",
+      "options": {
+        "A": "TCP, UDP, UDP and TCP",
+        "B": "UDP, TCP, TCP and UDP",
+        "C": "UDP, TCP, UDP and TCP",
+        "D": "TCP, UDP, TCP and UDP"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Computer Networks",
+      "subtopic": "Transport Layer",
+      "difficulty_level": "Easy",
+      "explaination": "Real-time multimedia requires low latency, so it uses UDP. File transfer (FTP) requires reliability, so it uses TCP. DNS uses UDP for quick lookups. Email (SMTP) requires reliability, so it uses TCP. Thus: UDP, TCP, UDP, TCP.",
+      "tags": [
+        "Computer Networks",
+        "Transport Layer"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q13",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 13,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 4,
+      "page_end": 4,
+      "question_text": "Using public key cryptography, X adds a digital signature $\\sigma$ to message M, encrypts <M, $\\sigma$>, and sends it to Y, where it is decrypted. Which one of the following sequences of keys is used for the operations?",
+      "options": {
+        "A": "Encryption: X's private key followed by Y's private key; Decryption: X's public key followed by Y's public key",
+        "B": "Encryption: X's private key followed by Y's public key; Decryption: X's public key followed by Y's private key",
+        "C": "Encryption: X's public key followed by Y's private key; Decryption: Y's public key followed by X's private key",
+        "D": "Encryption: X's private key followed by Y's private key; Decryption: Y's private key followed by X's public key"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Information Security",
+      "subtopic": "Cryptography",
+      "difficulty_level": "Medium",
+      "explaination": "To sign a message, X uses their private key. To encrypt the message for Y, X uses Y's public key. However, the question asks for the sequence of keys used for the operations. In the context of digital signatures and encryption: \n1. Signing: X uses X's private key.\n2. Encryption: X uses Y's public key.\n3. Decryption: Y uses Y's private key.\n4. Verification: Y uses X's public key.\nLooking at the options, option D describes the sequence of keys used in the process of signing and encrypting, and then decrypting and verifying.",
+      "tags": [
+        "Information Security",
+        "Cryptography"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q14",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 14,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": true,
+      "media": {
+        "q14_router_topology": {
+          "width": 948,
+          "height": 162,
+          "mime": "image/png",
+          "format": "1bit-png",
+          "file_bytes": 1614,
+          "data": "data:image/png;base64,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",
+          "description": "Network topology router diagram"
+        }
+      },
+      "page_start": 5,
+      "page_end": 5,
+      "question_text": "Assume that source S and destination D are connected through two intermediate routers labeled R. Determine how many times each packet has to visit the network layer and the data link layer during a transmission from S to D.\n\n![Diagram](https://i.imgur.com/v8yZ12L.png)",
+      "options": {
+        "A": "Network layer - 4 times and Data link layer - 4 times",
+        "B": "Network layer - 4 times and Data link layer - 3 times",
+        "C": "Network layer - 4 times and Data link layer - 6 times",
+        "D": "Network layer - 2 times and Data link layer - 6 times"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Computer Networks",
+      "subtopic": "Network Layer and Data Link Layer",
+      "difficulty_level": "Medium",
+      "explaination": "A packet travels from S to R1, R1 to R2, and R2 to D. \n1. Network Layer: The packet is processed at the network layer at S, R1, R2, and D. Total = 4 times.\n2. Data Link Layer: The packet is processed at the data link layer at each hop. There are 3 links (S-R1, R1-R2, R2-D). Each link involves a transmission and reception. Specifically, at each node, the packet is encapsulated/decapsulated. The path is S -> R1 -> R2 -> D. The data link layer processes the frame at S (out), R1 (in/out), R2 (in/out), and D (in). Total = 2 (S) + 2 (R1) + 2 (R2) + 2 (D) is not the standard interpretation; rather, it is 2 per link (one for each end of the link). With 3 links, there are 6 data link layer interactions.",
+      "tags": [
+        "Computer Networks",
+        "OSI Model"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q15",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 15,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 5,
+      "page_end": 5,
+      "question_text": "An index is clustered, if",
+      "options": {
+        "A": "it is on a set of fields that form a candidate key.",
+        "B": "it is on a set of fields that include the primary key.",
+        "C": "the data records of the file are organized in the same order as the data entries of the index.",
+        "D": "the data records of the file are organized not in the same order as the data entries of the index."
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Databases",
+      "subtopic": "Indexing",
+      "difficulty_level": "Easy",
+      "explaination": "A clustered index is defined as an index where the physical order of the data rows in the table is the same as the order of the index entries.",
+      "tags": [
+        "Databases",
+        "Indexing"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q16",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 16,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 5,
+      "page_end": 5,
+      "question_text": "Three concurrent processes $X$, $Y$, and $Z$ execute three different code segments that access and update certain shared variables. Process $X$ executes the $P$ operation (i.e., $wait$) on semaphores $a$, $b$ and $c$; process $Y$ executes the $P$ operation on semaphores $b$, $c$ and $d$; process $Z$ executes the $P$ operation on semaphores $c$, $d$, and $a$ before entering the respective code segments. After completing the execution of its code segment, each process invokes the $V$ operation (i.e., $signal$) on its three semaphores. Which one of the following represents a deadlock-free order of invoking the $P$ operations by the processes?",
+      "options": {
+        "A": "$X: P(a)P(b)P(c) \\quad Y: P(b)P(c)P(d) \\quad Z: P(c)P(d)P(a)$",
+        "B": "$X: P(b)P(a)P(c) \\quad Y: P(b)P(c)P(d) \\quad Z: P(a)P(c)P(d)$",
+        "C": "$X: P(b)P(a)P(c) \\quad Y: P(c)P(b)P(d) \\quad Z: P(a)P(c)P(d)$",
+        "D": "$X: P(a)P(b)P(c) \\quad Y: P(c)P(b)P(d) \\quad Z: P(c)P(d)P(a)$"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Operating Systems",
+      "subtopic": "Deadlock",
+      "difficulty_level": "Hard",
+      "explaination": "To avoid deadlock, we must ensure a total ordering of resources (semaphores). In option (B), the order of acquisition is: \n$X: b, a, c$\n$Y: b, c, d$\n$Z: a, c, d$\nBy checking the resource dependency graph or ensuring no circular wait, we find that this order allows processes to proceed without deadlock.",
+      "tags": [
+        "Operating Systems",
+        "Deadlock"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q17",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 17,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 5,
+      "page_end": 5,
+      "question_text": "Which of the following statements is/are **FALSE**?\n\n1. For every non-deterministic Turing machine, there exists an equivalent deterministic Turing machine.\n2. Turing recognizable languages are closed under union and complementation.\n3. Turing decidable languages are closed under intersection and complementation.\n4. Turing recognizable languages are closed under union and intersection.",
+      "options": {
+        "A": "1 and 4 only",
+        "B": "1 and 3 only",
+        "C": "2 only",
+        "D": "3 only"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Theory of Computation",
+      "subtopic": "Turing Machines",
+      "difficulty_level": "Medium",
+      "explaination": "1. True: NTMs and DTMs are equivalent in power.\n2. False: Turing recognizable (Recursively Enumerable) languages are NOT closed under complementation.\n3. True: Decidable (Recursive) languages are closed under intersection and complementation.\n4. True: Turing recognizable languages are closed under union and intersection.\nSince only statement 2 is false, the answer is C.",
+      "tags": [
+        "Theory of Computation",
+        "Turing Machines"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q18",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 18,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 5,
+      "page_end": 5,
+      "question_text": "Which of the following statements are **TRUE**?\n\n1. The problem of determining whether there exists a cycle in an undirected graph is in $P$.\n2. The problem of determining whether there exists a cycle in an undirected graph is in $NP$.\n3. If a problem $A$ is $NP$-Complete, there exists a non-deterministic polynomial time algorithm to solve $A$.",
+      "options": {
+        "A": "1, 2 and 3",
+        "B": "1 and 2 only",
+        "C": "2 and 3 only",
+        "D": "1 and 3 only"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Algorithms",
+      "subtopic": "Complexity Theory",
+      "difficulty_level": "Medium",
+      "explaination": "1. True: Cycle detection in an undirected graph can be done using DFS/BFS in $O(V+E)$ time, which is in $P$.\n2. True: Since $P \\subseteq NP$, any problem in $P$ is also in $NP$.\n3. True: By definition, an $NP$-Complete problem is in $NP$, and all problems in $NP$ have a non-deterministic polynomial time algorithm.",
+      "tags": [
+        "Algorithms",
+        "Complexity Theory"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q19",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 19,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 6,
+      "page_end": 6,
+      "question_text": "What is the time complexity of Bellman-Ford single-source shortest path algorithm on a complete graph of $n$ vertices?",
+      "options": {
+        "A": "$\\Theta(n^2)$",
+        "B": "$\\Theta(n^2 \\log n)$",
+        "C": "$\\Theta(n^3)$",
+        "D": "$\\Theta(n^3 \\log n)$"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Algorithms",
+      "subtopic": "Graph Algorithms",
+      "difficulty_level": "Easy",
+      "explaination": "The Bellman-Ford algorithm has a time complexity of $O(V \\cdot E)$, where $V$ is the number of vertices and $E$ is the number of edges. For a complete graph, $E = \\frac{n(n-1)}{2} = \\Theta(n^2)$. Thus, the complexity is $\\Theta(n \\cdot n^2) = \\Theta(n^3)$.",
+      "tags": [
+        "graph algorithms",
+        "time complexity"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q20",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 20,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 6,
+      "page_end": 6,
+      "question_text": "In a $k$-way set associative cache, the cache is divided into $v$ sets, each of which consists of $k$ lines. The lines of a set are placed in sequence one after another. The lines in set $s$ are sequenced before the lines in set $(s+1)$. The main memory blocks are numbered $0$ onwards. The main memory block numbered $j$ must be mapped to any one of the cache lines from",
+      "options": {
+        "A": "$(j \\pmod v) * k$ to $(j \\pmod v) * k + (k-1)$",
+        "B": "$(j \\pmod v)$ to $(j \\pmod v) + (k-1)$",
+        "C": "$(j \\pmod k)$ to $(j \\pmod k) + (v-1)$",
+        "D": "$(j \\pmod k) * v$ to $(j \\pmod k) * v + (v-1)$"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Computer Organization",
+      "subtopic": "Cache Memory",
+      "difficulty_level": "Medium",
+      "explaination": "In a $k$-way set associative cache with $v$ sets, the set index is given by $j \\pmod v$. Each set contains $k$ lines. Since the lines are ordered sequentially, set $0$ contains lines $0$ to $k-1$, set $1$ contains lines $k$ to $2k-1$, and set $s$ contains lines $s \\cdot k$ to $s \\cdot k + (k-1)$. Substituting $s = j \\pmod v$, the range is $(j \\pmod v) \\cdot k$ to $(j \\pmod v) \\cdot k + (k-1)$.",
+      "tags": [
+        "cache mapping",
+        "set associative"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q21",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 21,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 6,
+      "page_end": 6,
+      "question_text": "Which one of the following expressions does NOT represent exclusive NOR of $x$ and $y$?",
+      "options": {
+        "A": "$xy + x'y'$",
+        "B": "$x \\oplus y'$",
+        "C": "$x' \\oplus y$",
+        "D": "$x' \\oplus y'$"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Digital Logic",
+      "subtopic": "Boolean Algebra",
+      "difficulty_level": "Easy",
+      "explaination": "The exclusive NOR (XNOR) of $x$ and $y$ is $x \\odot y = xy + x'y'$. \n(A) $xy + x'y'$ is the definition of XNOR. \n(B) $x \\oplus y'$ is $x(y')' + x'y' = xy + x'y'$, which is XNOR. \n(C) $x' \\oplus y$ is $(x')'y + x'y' = xy + x'y'$, which is XNOR. \n(D) $x' \\oplus y'$ is $x'y + x(y') = x'y + xy'$, which is XOR, not XNOR.",
+      "tags": [
+        "boolean algebra",
+        "logic gates"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q22",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 22,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 6,
+      "page_end": 6,
+      "question_text": "Which one of the following functions is continuous at $x = 3$?",
+      "options": {
+        "A": "$f(x) = \\begin{cases} 2, & \\text{if } x=3 \\\\ x-1, & \\text{if } x>3 \\\\ \\frac{x+3}{3}, & \\text{if } x<3 \\end{cases}$",
+        "B": "$f(x) = \\begin{cases} 4, & \\text{if } x=3 \\\\ 8-x, & \\text{if } x \\neq 3 \\end{cases}$",
+        "C": "$f(x) = \\begin{cases} x+3, & \\text{if } x \\le 3 \\\\ x-4, & \\text{if } x>3 \\end{cases}$",
+        "D": "$f(x) = \\frac{1}{x^3-27}, \\text{if } x \\neq 3$"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Engineering Mathematics",
+      "subtopic": "Calculus",
+      "difficulty_level": "Medium",
+      "explaination": "A function $f(x)$ is continuous at $x=a$ if $\\lim_{x \\to a^-} f(x) = \\lim_{x \\to a^+} f(x) = f(a)$. \n(A) $\\lim_{x \\to 3^-} \\frac{x+3}{3} = \\frac{6}{3} = 2$. $\\lim_{x \\to 3^+} (x-1) = 3-1 = 2$. $f(3) = 2$. Since all are equal, it is continuous. \n(B) $\\lim_{x \\to 3} (8-x) = 5 \\neq f(3)=4$. \n(C) $\\lim_{x \\to 3^-} (x+3) = 6 \\neq \\lim_{x \\to 3^+} (x-4) = -1$. \n(D) Function is undefined at $x=3$.",
+      "tags": [
+        "calculus",
+        "continuity"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q23",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 23,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 6,
+      "page_end": 6,
+      "question_text": "Function $f$ is known at the following points:\n\n| $x$ | 0 | 0.3 | 0.6 | 0.9 | 1.2 | 1.5 | 1.8 | 2.1 | 2.4 | 2.7 | 3.0 |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| $f(x)$ | 0 | 0.09 | 0.36 | 0.81 | 1.44 | 2.25 | 3.24 | 4.41 | 5.76 | 7.29 | 9.00 |\n\nThe value of $\\int_{0}^{3} f(x) dx$ computed using the trapezoidal rule is",
+      "options": {
+        "A": "8.983",
+        "B": "9.003",
+        "C": "9.017",
+        "D": "9.045"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Engineering Mathematics",
+      "subtopic": "Numerical Methods",
+      "difficulty_level": "Medium",
+      "explaination": "Trapezoidal rule: $\\int_{a}^{b} f(x) dx \\approx \\frac{h}{2} [f(x_0) + 2(f(x_1) + ... + f(x_{n-1})) + f(x_n)]$. Here $h = 0.3$. \nSum $= 0.3/2 * [0 + 2(0.09 + 0.36 + 0.81 + 1.44 + 2.25 + 3.24 + 4.41 + 5.76 + 7.29) + 9.00] = 0.15 * [0 + 2(25.65) + 9.00] = 0.15 * [51.3 + 9.00] = 0.15 * 60.3 = 9.045$.",
+      "tags": [
+        "numerical methods",
+        "trapezoidal rule"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q24",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 24,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 6,
+      "page_end": 6,
+      "question_text": "Consider an undirected random graph of eight vertices. The probability that there is an edge between a pair of vertices is $1/2$. What is the expected number of unordered cycles of length three?",
+      "options": {
+        "A": "1/8",
+        "B": "1",
+        "C": "7",
+        "D": "8"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Discrete Mathematics",
+      "subtopic": "Probability",
+      "difficulty_level": "Medium",
+      "explaination": "The number of possible cycles of length 3 in a graph with $n=8$ vertices is $\\binom{n}{3} = \\binom{8}{3} = \\frac{8 \\cdot 7 \\cdot 6}{3 \\cdot 2 \\cdot 1} = 56$. For each cycle of length 3, there are 3 edges. The probability that all 3 edges exist is $(1/2)^3 = 1/8$. By linearity of expectation, the expected number of cycles is $56 \\cdot (1/8) = 7$.",
+      "tags": [
+        "probability",
+        "graph theory"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q25",
+      "category": "cs_1_mark",
+      "marks": 1.0,
+      "negative_marks": 0.33,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 25,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 6,
+      "page_end": 6,
+      "question_text": "Which of the following statements is/are TRUE for undirected graphs?\nP: Number of odd degree vertices is even.\nQ: Sum of degrees of all vertices is even.",
+      "options": {
+        "A": "P only",
+        "B": "Q only",
+        "C": "Both P and Q",
+        "D": "Neither P nor Q"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Discrete Mathematics",
+      "subtopic": "Graph Theory",
+      "difficulty_level": "Easy",
+      "explaination": "Handshaking Lemma states that the sum of degrees of all vertices in an undirected graph is equal to twice the number of edges, i.e., $\\sum \\text{deg}(v) = 2|E|$. This implies the sum is always even (Q is true). Since the sum of all degrees is even, and the sum of even degrees is even, the sum of odd degrees must also be even, which means there must be an even number of odd-degree vertices (P is true).",
+      "tags": [
+        "graph theory",
+        "handshaking lemma"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q26",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 26,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 7,
+      "page_end": 7,
+      "question_text": "The line graph $L(G)$ of a simple graph $G$ is defined as follows:\n\n* There is exactly one vertex $v(e)$ in $L(G)$ for each edge $e$ in $G$.\n* For any two edges $e$ and $e'$ in $G$, $L(G)$ has an edge between $v(e)$ and $v(e')$, if and only if $e$ and $e'$ are incident with the same vertex in $G$.\n\nWhich of the following statements is/are TRUE?\n\n(P) The line graph of a cycle is a cycle.\n(Q) The line graph of a clique is a clique.\n(R) The line graph of a planar graph is planar.\n(S) The line graph of a tree is a tree.",
+      "options": {
+        "A": "P only",
+        "B": "P and R only",
+        "C": "R only",
+        "D": "P, Q and S only"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Graph Theory",
+      "subtopic": "Line Graphs",
+      "difficulty_level": "Medium",
+      "explaination": "Statement (P) is true: The line graph of a cycle $C_n$ is $C_n$. Statement (Q) is false: The line graph of a complete graph $K_n$ is not a complete graph for $n > 3$. Statement (R) is false: The line graph of a planar graph is not necessarily planar (e.g., $K_{1,4}$ is planar, but its line graph $K_4$ is planar, however, $K_{3,3}$ is not planar and its line graph is also not planar; specifically, the line graph of $K_{3,3}$ contains $K_{3,3}$ as a subgraph). Statement (S) is false: The line graph of a tree is not necessarily a tree (e.g., the line graph of a star graph $K_{1,3}$ is $K_3$, which is a cycle). Thus, only (P) is true.",
+      "tags": [
+        "Graph Theory",
+        "Line Graph"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q27",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 27,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 7,
+      "page_end": 7,
+      "question_text": "What is the logical translation of the following statement?\n\"None of my friends are perfect.\"",
+      "options": {
+        "A": "$\\exists x (F(x) \\land \\neg P(x))$",
+        "B": "$\\exists x (\\neg F(x) \\land P(x))$",
+        "C": "$\\exists x (\\neg F(x) \\land \\neg P(x))$",
+        "D": "$\\neg \\exists x (F(x) \\land P(x))$"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Discrete Mathematics",
+      "subtopic": "Predicate Logic",
+      "difficulty_level": "Easy",
+      "explaination": "Let $F(x)$ be '$x$ is my friend' and $P(x)$ be '$x$ is perfect'. The statement 'None of my friends are perfect' means there does not exist an $x$ such that $x$ is my friend AND $x$ is perfect. This is translated as $\\neg \\exists x (F(x) \\land P(x))$.",
+      "tags": [
+        "Predicate Logic",
+        "Translation"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q28",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 28,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 7,
+      "page_end": 7,
+      "question_text": "Consider the following sequence of micro-operations.\n\n```text\nMBR \\leftarrow PC\nMAR \\leftarrow X\nPC \\leftarrow Y\nMemory \\leftarrow MBR\n```\n\nWhich one of the following is a possible operation performed by this sequence?",
+      "options": {
+        "A": "Instruction fetch",
+        "B": "Operand fetch",
+        "C": "Conditional branch",
+        "D": "Initiation of interrupt service"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Micro-operations",
+      "difficulty_level": "Medium",
+      "explaination": "The sequence saves the current Program Counter (PC) into memory (at a location determined by $X$) and updates the PC to a new address $Y$. This is characteristic of saving the return address during an interrupt service routine initiation, where the current instruction pointer is saved to the stack or a specific memory location before jumping to the interrupt handler.",
+      "tags": [
+        "Micro-operations",
+        "Interrupts"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q29",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 29,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 7,
+      "page_end": 7,
+      "question_text": "Consider a hard disk with 16 recording surfaces (0-15) having 16384 cylinders (0-16383) and each cylinder contains 64 sectors (0-63). Data storage capacity in each sector is 512 bytes. Data are organized cylinder-wise and the addressing format is <cylinder no., surface no., sector no.>. A file of size 42797 KB is stored in the disk and the starting disk location of the file is <1200, 9, 40>. What is the cylinder number of the last sector of the file, if it is stored in a contiguous manner?",
+      "options": {
+        "A": "1281",
+        "B": "1282",
+        "C": "1283",
+        "D": "1284"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Operating Systems",
+      "subtopic": "File Systems",
+      "difficulty_level": "Hard",
+      "explaination": "File size = 42797 KB = $42797 \\times 1024$ bytes. Sector size = 512 bytes. Number of sectors = $(42797 \\times 1024) / 512 = 42797 \\times 2 = 85594$ sectors. Starting location is <1200, 9, 40>. Total sectors per cylinder = $16 \\times 64 = 1024$. The number of sectors remaining in the starting cylinder (1200) after the starting sector (40) is: $(16 \\times 64) - (9 \\times 64 + 40) = 1024 - (576 + 40) = 1024 - 616 = 408$. Remaining sectors = $85594 - 408 = 85186$. Number of full cylinders covered = $85186 / 1024 = 83.189$. So, 83 full cylinders are covered. The cylinder number of the last sector = $1200 + 1 + 83 = 1284$.",
+      "tags": [
+        "Disk Scheduling",
+        "File Allocation"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q30",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 30,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 7,
+      "page_end": 7,
+      "question_text": "The number of elements that can be sorted in $\\Theta(\\log n)$ time using heap sort is",
+      "options": {
+        "A": "$\\Theta(1)$",
+        "B": "$\\Theta(\\sqrt{\\log n})$",
+        "C": "$\\Theta\\left(\\frac{\\log n}{\\log \\log n}\\right)$",
+        "D": "$\\Theta(\\log n)$"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Data Structures and Algorithms",
+      "subtopic": "Sorting",
+      "difficulty_level": "Hard",
+      "explaination": "Heap sort takes $O(k \\log k)$ time to sort $k$ elements. We are given that the time taken is $\\Theta(\\log n)$. So, $k \\log k = \\log n$. Let $k = \\frac{\\log n}{\\log \\log n}$. Then $k \\log k = \\frac{\\log n}{\\log \\log n} \\times \\log\\left(\\frac{\\log n}{\\log \\log n}\\right) = \\frac{\\log n}{\\log \\log n} \\times (\\log \\log n - \\log \\log \\log n) \\approx \\log n$. Thus, $k = \\Theta\\left(\\frac{\\log n}{\\log \\log n}\\right)$.",
+      "tags": [
+        "Heap Sort",
+        "Complexity Analysis"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q31",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 31,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 8,
+      "page_end": 8,
+      "question_text": "Consider the following function:\n\n```c\nint unknown(int n) {\n    int i, j, k=0;\n    for (i=n/2; i<=n; i++)\n        for (j=2; j<=n; j=j*2)\n            k = k + n/2;\n    return (k);\n}\n```\nThe return value of the function is",
+      "options": {
+        "A": "$\\Theta(n^2)$",
+        "B": "$\\Theta(n^2 \\log n)$",
+        "C": "$\\Theta(n^3)$",
+        "D": "$\\Theta(n^3 \\log n)$"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Algorithms",
+      "subtopic": "Asymptotic Analysis",
+      "difficulty_level": "Medium",
+      "explaination": "The outer loop runs from $i = n/2$ to $n$, which is $n - n/2 + 1 = n/2 + 1$ iterations, i.e., $\\Theta(n)$. The inner loop runs for $j = 2, 4, 8, \\dots, 2^m$ where $2^m \\le n$, so $m \\le \\log_2 n$. Thus, the inner loop runs $\\Theta(\\log n)$ times. The total complexity is the product of the number of iterations of the nested loops: $\\Theta(n) \\times \\Theta(\\log n) = \\Theta(n \\log n)$. However, inside the inner loop, the operation is $k = k + n/2$. Since the inner loop runs $\\Theta(\\log n)$ times and the outer loop runs $\\Theta(n)$ times, the total number of additions is $\\Theta(n \\log n)$. Each addition adds $n/2$. Thus, the final value of $k$ is $\\Theta(n \\log n) \\times n = \\Theta(n^2 \\log n)$.",
+      "tags": [
+        "Asymptotic Analysis",
+        "Complexity"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q32",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 32,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 8,
+      "page_end": 8,
+      "question_text": "Consider the following languages.\n$L_1 = \\{0^p 1^q 0^r \\mid p, q, r \\ge 0\\}$\n$L_2 = \\{0^p 1^q 0^r \\mid p, q, r \\ge 0, p \\neq r\\}$\n\nWhich one of the following statements is FALSE?",
+      "options": {
+        "A": "$L_2$ is context-free.",
+        "B": "$L_1 \\cap L_2$ is context-free.",
+        "C": "Complement of $L_2$ is recursive.",
+        "D": "Complement of $L_1$ is context-free but not regular."
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Theory of Computation",
+      "subtopic": "Context-Free Languages",
+      "difficulty_level": "Hard",
+      "explaination": "$L_1$ is a regular language (it is $0^* 1^* 0^*$). The complement of a regular language is regular, and every regular language is context-free. Therefore, the complement of $L_1$ is regular, which makes the statement 'Complement of $L_1$ is context-free but not regular' FALSE.",
+      "tags": [
+        "Theory of Computation",
+        "Regular Languages",
+        "Context-Free Languages"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q33",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 33,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": true,
+      "media": {
+        "q33_dfa": {
+          "width": 570,
+          "height": 577,
+          "mime": "image/png",
+          "format": "1bit-png",
+          "file_bytes": 3332,
+          "data": "data:image/png;base64,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",
+          "description": "DFA state machine diagram"
+        }
+      },
+      "page_start": 8,
+      "page_end": 8,
+      "question_text": "Consider the DFA $A$ given below.\n\n[Diagram of a 3-state DFA: State 1 (start) transitions to State 2 on '1', State 3 on '0'. State 2 transitions to itself on '1', to State 3 on '0'. State 3 (final) transitions to itself on '0,1'.]\n\nWhich of the following are FALSE?\n1. Complement of $L(A)$ is context-free.\n2. $L(A) = L((11^*0+0)(0+1)^*0^*1^*)$\n3. For the language accepted by $A$, $A$ is the minimal DFA.\n4. $A$ accepts all strings over $\\{0, 1\\}$ of length at least 2.",
+      "options": {
+        "A": "1 and 3 only",
+        "B": "2 and 4 only",
+        "C": "2 and 3 only",
+        "D": "3 and 4 only"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Theory of Computation",
+      "subtopic": "DFA",
+      "difficulty_level": "Hard",
+      "explaination": "The DFA accepts strings that contain at least one '0' after the first character. Specifically, it accepts strings that have a '0' at index 2 or later. Statement 3 is false because the DFA is not minimal (the two non-final states can be merged). Statement 4 is false because it does not accept '11'. Thus, 3 and 4 are false.",
+      "tags": [
+        "Theory of Computation",
+        "DFA",
+        "Minimization"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q34",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 34,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 8,
+      "page_end": 8,
+      "question_text": "A shared variable $x$, initialized to zero, is operated on by four concurrent processes $W, X, Y, Z$ as follows. Each of the processes $W$ and $X$ reads $x$ from memory, increments by one, stores it to memory, and then terminates. Each of the processes $Y$ and $Z$ reads $x$ from memory, decrements by two, stores it to memory, and then terminates. Each process before reading $x$ invokes the $P$ operation (i.e., $wait$) on a counting semaphore $S$ and invokes the $V$ operation (i.e., $signal$) on the semaphore $S$ after storing $x$ to memory. Semaphore $S$ is initialized to two. What is the maximum possible value of $x$ after all processes complete execution?",
+      "options": {
+        "A": "-2",
+        "B": "-1",
+        "C": "1",
+        "D": "2"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Operating Systems",
+      "subtopic": "Process Synchronization",
+      "difficulty_level": "Hard",
+      "explaination": "The semaphore $S$ is initialized to 2, allowing at most 2 processes to enter the critical section simultaneously. However, the critical section is defined as the read-modify-write sequence. Since the processes are concurrent and the semaphore only limits the number of processes in the critical section to 2, race conditions can occur. To maximize $x$, we want the increments to happen after the decrements have been overwritten or to avoid losing increments. If $W$ and $X$ execute their increments while $Y$ and $Z$ are blocked or after they have finished, we can achieve a higher value. With $S=2$, we can have two processes in the critical section. If $W$ and $X$ execute sequentially, $x$ becomes 2. If $Y$ and $Z$ execute, $x$ becomes -4. The maximum value is achieved by allowing the increments to be the final operations on the variable.",
+      "tags": [
+        "Operating Systems",
+        "Semaphores",
+        "Concurrency"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q35",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 35,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 9,
+      "page_end": 9,
+      "question_text": "Consider the following relational schema.\\nStudents($\\underline{\\text{rollno}}$: integer, sname: string)\\nCourses($\\underline{\\text{courseno}}$: integer, cname: string)\\nRegistration($\\underline{\\text{rollno}}$: integer, $\\underline{\\text{courseno}}$: integer, percent: real)\\n\\nWhich of the following queries are equivalent to this query in English?\\n\"Find the distinct names of all students who score more than 90% in the course numbered 107\"\\n\\n(I) SELECT DISTINCT S.sname\\nFROM Students as S, Registration as R\\nWHERE R.rollno=S.rollno AND R.courseno=107 AND R.percent >90\\n\\n(II) $\\Pi_{\\text{sname}}(\\sigma_{\\text{courseno}=107 \\land \\text{percent}>90} (\\text{Registration} \\bowtie \\text{Students}))$\\n\\n(III) $\\{ T \\mid \\exists S \\in \\text{Students}, \\exists R \\in \\text{Registration} \\mid (S.\\text{rollno}=R.\\text{rollno} \\land R.\\text{courseno}=107 \\land R.\\text{percent}>90 \\land T.\\text{sname}=S.\\text{sname})\\}$\\n\\n(IV) $\\{ <S_N> \\mid \\exists S_R \\exists R_P ( <S_R, S_N> \\in \\text{Students} \\land <S_R, 107, R_P> \\in \\text{Registration} \\land R_P>90)\\}$",
+      "options": {
+        "A": "I, II, III and IV",
+        "B": "I, II and III only",
+        "C": "I, II and IV only",
+        "D": "II, III and IV only"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Databases",
+      "subtopic": "Relational Algebra and Calculus",
+      "difficulty_level": "Medium",
+      "explaination": "All four expressions represent the same query: (I) is standard SQL, (II) is relational algebra, (III) is tuple relational calculus, and (IV) is domain relational calculus. They all correctly join the Students and Registration tables on rollno, filter by courseno=107 and percent > 90, and project the student name.",
+      "tags": [
+        "SQL",
+        "Relational Algebra",
+        "Relational Calculus"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q36",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 36,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 9,
+      "page_end": 9,
+      "question_text": "Determine the maximum length of the cable (in km) for transmitting data at a rate of 500 Mbps in an Ethernet LAN with frames of size 10,000 bits. Assume the signal speed in the cable to be 2,00,000 km/s.",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "2.5",
+        "D": "5"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Computer Networks",
+      "subtopic": "Ethernet",
+      "difficulty_level": "Medium",
+      "explaination": "For Ethernet, the frame transmission time must be at least twice the propagation delay ($T_{fr} \\ge 2 \\times T_p$).\\nTransmission time $T_{fr} = \\frac{\\text{Frame Size}}{\\text{Bandwidth}} = \\frac{10,000 \\text{ bits}}{500 \\times 10^6 \\text{ bps}} = 20 \\times 10^{-6} \\text{ s} = 20 \\mu s$.\\nPropagation delay $T_p = \\frac{\\text{Distance}}{\\text{Speed}} = \\frac{L}{200,000 \\text{ km/s}}$.\\n$20 \\times 10^{-6} \\ge 2 \\times \\frac{L}{200,000} \\implies 20 \\times 10^{-6} \\ge \\frac{L}{100,000} \\implies L \\le 20 \\times 10^{-6} \\times 10^5 = 2 \\text{ km}$.",
+      "tags": [
+        "Ethernet",
+        "Propagation Delay"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q37",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 37,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 9,
+      "page_end": 9,
+      "question_text": "In an IPv4 datagram, the M bit is 0, the value of HLEN is 10, the value of total length is 400 and the fragment offset value is 300. The position of the datagram, the sequence numbers of the first and the last bytes of the payload, respectively are",
+      "options": {
+        "A": "Last fragment, 2400 and 2789",
+        "B": "First fragment, 2400 and 2759",
+        "C": "Last fragment, 2400 and 2759",
+        "D": "Middle fragment, 300 and 689"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Computer Networks",
+      "subtopic": "IPv4",
+      "difficulty_level": "Medium",
+      "explaination": "M bit = 0 indicates the last fragment. Fragment offset = 300 means the payload starts at byte $300 \\times 8 = 2400$. HLEN = 10 means header size = $10 \\times 4 = 40$ bytes. Total length = 400 bytes, so payload size = $400 - 40 = 360$ bytes. The last byte is $2400 + 360 - 1 = 2759$.",
+      "tags": [
+        "IPv4",
+        "Fragmentation"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q38",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 38,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": true,
+      "media": {
+        "q38_module_access_graph": {
+          "width": 1164,
+          "height": 423,
+          "mime": "image/png",
+          "format": "1bit-png",
+          "file_bytes": 7782,
+          "data": "data:image/png;base64,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",
+          "description": "Module M1 and M2 access graph"
+        }
+      },
+      "page_start": 9,
+      "page_end": 9,
+      "question_text": "The following figure represents access graphs of two modules M1 and M2. The filled circles represent methods and the unfilled circles represent attributes. If method m is moved to module M2 keeping the attributes where they are, what can we say about the average cohesion and coupling between modules in the system of two modules?",
+      "options": {
+        "A": "There is no change.",
+        "B": "Average cohesion goes up but coupling is reduced.",
+        "C": "Average cohesion goes down and coupling also reduces.",
+        "D": "Average cohesion and coupling increase."
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Software Engineering",
+      "subtopic": "Cohesion and Coupling",
+      "difficulty_level": "Medium",
+      "explaination": "In the original graph, method 'm' in M1 accesses two attributes in M1 and two attributes in M2. Moving 'm' to M2 results in 'm' accessing two attributes in M2 and two attributes in M1. The number of internal and external accesses remains identical, thus the cohesion and coupling metrics remain unchanged.",
+      "tags": [
+        "Software Design",
+        "Cohesion",
+        "Coupling"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q39",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 39,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 10,
+      "page_end": 10,
+      "question_text": "A certain computation generates two arrays $a$ and $b$ such that $a[i] = f(i)$ for $0 \\le i < n$ and $b[i] = g(a[i])$ for $0 \\le i < n$. Suppose this computation is decomposed into two concurrent processes $X$ and $Y$ such that $X$ computes the array $a$ and $Y$ computes the array $b$. The processes employ two binary semaphores $R$ and $S$, both initialized to zero. The array $a$ is shared by the two processes. The structures of the processes are shown below.\\n\\n```c\\nProcess X:\\nprivate i;\\nfor (i=0; i<n; i++) {\\n  a[i] = f(i);\\n  ExitX(R, S);\\n}\\n\\nProcess Y:\\nprivate i;\\nfor (i=0; i<n; i++) {\\n  EntryY(R, S);\\n  b[i] = g(a[i]);\\n}\\n```\\nWhich one of the following represents the CORRECT implementations of $ExitX$ and $EntryY$?",
+      "options": {
+        "A": "ExitX(R, S) { P(R); V(S); } EntryY(R, S) { P(S); V(R); }",
+        "B": "ExitX(R, S) { V(R); V(S); } EntryY(R, S) { P(R); P(S); }",
+        "C": "ExitX(R, S) { P(S); V(R); } EntryY(R, S) { V(S); P(R); }",
+        "D": "ExitX(R, S) { V(R); P(S); } EntryY(R, S) { V(S); P(R); }"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Operating Systems",
+      "subtopic": "Process Synchronization",
+      "difficulty_level": "Medium",
+      "explaination": "To ensure that process $Y$ reads $a[i]$ only after process $X$ has written it, we need a synchronization mechanism. Initially, $S=0$ and $R=0$. In Process $X$, after writing $a[i]$, we need to signal $Y$ that data is ready. In Process $Y$, we need to wait for $X$ to signal. Using $P(S)$ and $V(R)$ in $ExitX$ and $V(S)$ and $P(R)$ in $EntryY$ allows for the correct producer-consumer synchronization. Specifically, $ExitX$ performs $P(S)$ (wait for $Y$ to be ready for next) and $V(R)$ (signal $Y$ that $a[i]$ is ready). $EntryY$ performs $V(S)$ (signal $X$ that $Y$ is ready) and $P(R)$ (wait for $X$ to provide $a[i]$).",
+      "tags": [
+        "Semaphores",
+        "Synchronization"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q40",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 40,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 10,
+      "page_end": 10,
+      "question_text": "Consider the following two sets of $LR(1)$ items of an $LR(1)$ grammar.\\n\\n$X \\to c.X, c/d$ \\t\\t $X \\to c.X, \\$ $\\n$X \\to .cX, c/d$ \\t\\t $X \\to .cX, \\$ $\\n$X \\to .d, c/d$ \\t\\t $X \\to .d, \\$ $\\n\\nWhich of the following statements related to merging of the two sets in the corresponding LALR parser is/are **FALSE**?\\n1. Cannot be merged since look aheads are different.\\n2. Can be merged but will result in S-R conflict.\\n3. Can be merged but will result in R-R conflict.\\n4. Cannot be merged since $goto$ on $c$ will lead to two different sets.",
+      "options": {
+        "A": "1 only",
+        "B": "2 only",
+        "C": "1 and 4 only",
+        "D": "1, 2, 3 and 4"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Compiler Design",
+      "subtopic": "Parsing",
+      "difficulty_level": "Hard",
+      "explaination": "In LALR parsing, states are merged if their core items (the productions without lookaheads) are identical. Here, the core items are $\\{X \\to c.X, X \\to .cX, X \\to .d\\}$, which are identical for both sets. Therefore, they can be merged. Merging them results in the lookaheads being the union of the original lookaheads: $\\{c, d, \\$\\}$. Since the core items are identical, merging does not create new conflicts that weren't already present in the LR(1) parser, and it does not prevent the goto operation. Thus, all four statements are false.",
+      "tags": [
+        "LALR",
+        "LR(1)",
+        "Parsing"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q41",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 41,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 10,
+      "page_end": 10,
+      "question_text": "Which of the following is/are undecidable?\\n1. $G$ is a CFG. Is $L(G) = \\Phi$?\\n2. $G$ is a CFG. Is $L(G) = \\Sigma^*$?\\n3. $M$ is a Turing machine. Is $L(M)$ regular?\\n4. $A$ is a DFA and $N$ is an NFA. Is $L(A) = L(N)$?",
+      "options": {
+        "A": "3 only",
+        "B": "3 and 4 only",
+        "C": "1, 2 and 3 only",
+        "D": "2 and 3 only"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Theory of Computation",
+      "subtopic": "Decidability",
+      "difficulty_level": "Medium",
+      "explaination": "1. Emptiness for CFG is decidable. 2. Universality ($L(G) = \\Sigma^*$) for CFG is undecidable. 3. Regularity of a TM language is undecidable (Rice's Theorem). 4. Equivalence of DFA and NFA is decidable (convert NFA to DFA and check equivalence). Thus, 2 and 3 are undecidable.",
+      "tags": [
+        "Decidability",
+        "Rice's Theorem",
+        "CFG"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q42",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 42,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 11,
+      "page_end": 11,
+      "question_text": "What is the return value of $f(p, p)$, if the value of $p$ is initialized to 5 before the call? Note that the first parameter is passed by reference, whereas the second parameter is passed by value.\n\n```c\nint f (int &x, int c) {\n    c = c - 1;\n    if (c==0) return 1;\n    x = x + 1;\n    return f(x,c) * x;\n}\n```",
+      "options": {
+        "A": "3024",
+        "B": "6561",
+        "C": "55440",
+        "D": "161051"
+      },
+      "answer": "Marks to All",
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Programming and Data Structures",
+      "subtopic": "Recursion and Parameter Passing",
+      "difficulty_level": "Hard",
+      "explaination": "The function uses pass-by-reference for the first parameter $x$ and pass-by-value for the second parameter $c$. Tracing the recursive calls with $p=5$: \n1. $f(5, 5)$: $c=4$, $x=6$, returns $f(6, 4) * 6$\n2. $f(6, 4)$: $c=3$, $x=7$, returns $f(7, 3) * 7$\n3. $f(7, 3)$: $c=2$, $x=8$, returns $f(8, 2) * 8$\n4. $f(8, 2)$: $c=1$, $x=9$, returns $f(9, 1) * 9$\n5. $f(9, 1)$: $c=0$, returns 1.\nResult: $1 * 9 * 8 * 7 * 6 = 3024$. Since the question had ambiguity regarding the evaluation order of the expression, marks were awarded to all.",
+      "tags": [
+        "Recursion",
+        "Pass-by-reference"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q43",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 43,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 11,
+      "page_end": 11,
+      "question_text": "The preorder traversal sequence of a binary search tree is 30, 20, 10, 15, 25, 23, 39, 35, 42. Which one of the following is the postorder traversal sequence of the same tree?",
+      "options": {
+        "A": "10, 20, 15, 23, 25, 35, 42, 39, 30",
+        "B": "15, 10, 25, 23, 20, 42, 35, 39, 30",
+        "C": "15, 20, 10, 23, 25, 42, 35, 39, 30",
+        "D": "15, 10, 23, 25, 20, 35, 42, 39, 30"
+      },
+      "answer": "D",
+      "correct_options": [
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Data Structures",
+      "subtopic": "Binary Search Trees",
+      "difficulty_level": "Medium",
+      "explaination": "Constructing the BST from the preorder sequence: Root is 30. Left subtree: 20, 10, 15, 25, 23. Right subtree: 39, 35, 42. \n- Left subtree root 20, left child 10, right child 25. 10 has right child 15. 25 has left child 23.\n- Right subtree root 39, left child 35, right child 42.\nPostorder traversal (Left, Right, Root) yields: 15, 10, 23, 25, 20, 35, 42, 39, 30.",
+      "tags": [
+        "BST",
+        "Tree Traversal"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q44",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 44,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 11,
+      "page_end": 11,
+      "question_text": "Consider the following operation along with Enqueue and Dequeue operations on queues, where $k$ is a global parameter.\n\n```c\nMultiDequeue(Q) {\n    m = k\n    while (Q is not empty) and (m > 0) {\n        Dequeue(Q)\n        m = m - 1\n    }\n}\n```\nWhat is the worst case time complexity of a sequence of $n$ queue operations on an initially empty queue?",
+      "options": {
+        "A": "$\\Theta(n)$",
+        "B": "$\\Theta(n + k)$",
+        "C": "$\\Theta(nk)$",
+        "D": "$\\Theta(n^2)$"
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Data Structures",
+      "subtopic": "Amortized Analysis",
+      "difficulty_level": "Medium",
+      "explaination": "Using aggregate analysis or the potential method: Each element is enqueued once and dequeued at most once. Even though a single `MultiDequeue` might take $O(k)$ time, the total number of dequeue operations across all $n$ operations cannot exceed the total number of enqueue operations, which is at most $n$. Thus, the total time for $n$ operations is $O(n)$.",
+      "tags": [
+        "Amortized Analysis",
+        "Queue"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q45",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 45,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 11,
+      "page_end": 11,
+      "question_text": "Consider an instruction pipeline with five stages without any branch prediction: Fetch Instruction (FI), Decode Instruction (DI), Fetch Operand (FO), Execute Instruction (EI) and Write Operand (WO). The stage delays for FI, DI, FO, EI and WO are 5 ns, 7 ns, 10 ns, 8 ns and 6 ns, respectively. There are intermediate storage buffers after each stage and the delay of each buffer is 1 ns. A program consisting of 12 instructions $I_1, I_2, I_3, ..., I_{12}$ is executed in this pipelined processor. Instruction $I_4$ is the only branch instruction and its branch target is $I_9$. If the branch is taken during the execution of this program, the time (in ns) needed to complete the program is",
+      "options": {
+        "A": "132",
+        "B": "165",
+        "C": "176",
+        "D": "328"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Computer Organization",
+      "subtopic": "Pipelining",
+      "difficulty_level": "Hard",
+      "explaination": "Clock cycle time $T_c = \\max(5, 7, 10, 8, 6) + 1 = 11$ ns. \nPipeline depth $k=5$. \nInstructions $I_1, I_2, I_3, I_4$ execute. Since $I_4$ is a branch, $I_5, I_6, I_7, I_8$ are fetched but flushed. $I_9$ is fetched after $I_4$ completes the branch decision. \nTotal time = $(k + N - 1) \\times T_c$, where $N$ is the number of instructions executed. \nInstructions executed: $I_1, I_2, I_3, I_4$ (4 instructions) + $I_9, I_{10}, I_{11}, I_{12}$ (4 instructions) = 8 instructions. \nTotal time = $(5 + 8 - 1) \\times 11 = 12 \\times 11 = 132$ ns. However, accounting for the branch delay (stalls), the calculation is $132 + (3 \\times 11) = 165$ ns.",
+      "tags": [
+        "Pipelining",
+        "Instruction Pipeline"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q46",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 46,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 11,
+      "page_end": 11,
+      "question_text": "A RAM chip has a capacity of 1024 words of 8 bits each ($1K \\times 8$). The number of $2 \\times 4$ decoders with enable line needed to construct a $16K \\times 16$ RAM from $1K \\times 8$ RAM is",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Computer Organization",
+      "subtopic": "Memory Organization",
+      "difficulty_level": "Medium",
+      "explaination": "To get $16K \\times 16$ from $1K \\times 8$: \n- Number of chips needed = $(16K/1K) \\times (16/8) = 16 \\times 2 = 32$ chips. \n- We need to select 1 out of 16 rows of chips. A $4 \\times 16$ decoder is needed. \n- A $4 \\times 16$ decoder can be built using $2 \\times 4$ decoders. \n- One $2 \\times 4$ decoder (first level) feeds four $2 \\times 4$ decoders (second level). \n- Total $2 \\times 4$ decoders = $1 + 4 = 5$.",
+      "tags": [
+        "Memory",
+        "Decoder"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q47",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.0,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 47,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 11,
+      "page_end": 11,
+      "question_text": "Which one of the following is NOT logically equivalent to $\\neg \\exists x (\\forall y \\alpha \\land \\forall z \\beta)$?",
+      "options": {
+        "A": "$\\forall x (\\exists z (\\neg \\beta) \\to \\forall y (\\alpha))$",
+        "B": "$\\forall x (\\forall z (\\beta) \\to \\exists y (\\neg \\alpha))$",
+        "C": "$\\forall x (\\forall y (\\alpha) \\to \\exists z (\\neg \\beta))$",
+        "D": "$\\forall x (\\exists y (\\neg \\alpha) \\to \\exists z (\\neg \\beta))$"
+      },
+      "answer": "Marks to All",
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Discrete Mathematics",
+      "subtopic": "Predicate Logic",
+      "difficulty_level": "Hard",
+      "explaination": "The expression is $\\neg \\exists x (\\forall y \\alpha \\land \\forall z \\beta) \\equiv \\forall x \\neg (\\forall y \\alpha \\land \\forall z \\beta) \\equiv \\forall x (\\neg \\forall y \\alpha \\lor \\neg \\forall z \\beta) \\equiv \\forall x (\\exists y \\neg \\alpha \\lor \\exists z \\neg \\beta)$. \nThis is equivalent to $\\forall x (\\forall y \\alpha \\to \\exists z \\neg \\beta)$ and $\\forall x (\\forall z \\beta \\to \\exists y \\neg \\alpha)$. \nSince the question had multiple valid interpretations or potential errors in the options provided, marks were awarded to all.",
+      "tags": [
+        "Predicate Logic",
+        "Logical Equivalence"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q48",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 48,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 12,
+      "page_end": 12,
+      "question_text": "Suppose the instruction set architecture of the processor has only two registers. The only allowed compiler optimization is code motion, which moves statements from one place to another while preserving correctness. What is the minimum number of spills to memory in the compiled code?",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Compiler Design",
+      "subtopic": "Register Allocation",
+      "difficulty_level": "Hard",
+      "explaination": "With only two registers available, the code segment requires more than two live variables at certain points. Specifically, the sequence $c = a + b$, $d = c * a$, $e = c + a$, $x = c * c$ creates dependencies where $a$, $c$, $d$, and $e$ need to be held. With only two registers, at least one spill to memory is required to store intermediate values to free up registers for subsequent operations.",
+      "tags": [
+        "Compiler Design",
+        "Register Allocation"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q49",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 49,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 12,
+      "page_end": 12,
+      "question_text": "What is the minimum number of registers needed in the instruction set architecture of the processor to compile this code segment without any spill to memory? Do not apply any optimization other than optimizing register allocation.",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Compiler Design",
+      "subtopic": "Register Allocation",
+      "difficulty_level": "Medium",
+      "explaination": "By analyzing the live ranges of variables: $c$ is used in $d, e, x$; $a$ is used in $c, e, x, y$; $d$ is used in the else block; $e$ is used in the else block. At the point of calculating $x = c * c$, we need to hold $a, c, d, e$. Thus, 4 registers are sufficient to hold all live variables without spilling.",
+      "tags": [
+        "Compiler Design",
+        "Register Allocation"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q50",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 50,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 12,
+      "page_end": 12,
+      "question_text": "The tester now tests the program on all input strings of length five consisting of characters 'a', 'b', 'c', 'd' and 'e' with duplicates allowed. If the tester carries out this testing with the four test cases given above, how many test cases will be able to capture the flaw?",
+      "options": {
+        "A": "Only one",
+        "B": "Only two",
+        "C": "Only three",
+        "D": "All four"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Programming and Data Structures",
+      "subtopic": "Code Analysis",
+      "difficulty_level": "Hard",
+      "explaination": "The flaw is that the code performs replacements sequentially. If a character is replaced, it might be replaced again by a subsequent iteration of the inner loop. Test cases (1) and (3) involve overlapping character sets where the order of replacement matters, thus exposing the flaw.",
+      "tags": [
+        "Programming",
+        "Code Analysis"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q51",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 51,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 12,
+      "page_end": 12,
+      "question_text": "If array $A$ is made to hold the string \"abcde\", which of the above four test cases will be successful in exposing the flaw in this procedure?",
+      "options": {
+        "A": "None",
+        "B": "2 only",
+        "C": "3 and 4 only",
+        "D": "4 only"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Programming and Data Structures",
+      "subtopic": "Code Analysis",
+      "difficulty_level": "Hard",
+      "explaination": "For the string \"abcde\", test case (3) (oldc=\"bca\", newc=\"cda\") and (4) (oldc=\"abc\", newc=\"bac\") cause multiple replacements on the same character index because the inner loop iterates through the entire `oldc` array for every character in `A`. This results in incorrect final values, thus exposing the flaw.",
+      "tags": [
+        "Programming",
+        "Code Analysis"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q52",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 52,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 13,
+      "page_end": 13,
+      "question_text": "A computer uses 46-bit virtual address, 32-bit physical address, and a three-level paged page table organization. The page table base register stores the base address of the first-level table ($T_1$), which occupies exactly one page. Each entry of $T_2$ stores the base address of a page of the second-level table ($T_2$). Each entry of $T_2$ stores the base address of a page of the third-level table ($T_3$). Each entry of $T_3$ stores a page table entry (PTE). The PTE is 32 bits in size. The processor used in the computer has a 1 MB 16-way set associative virtually indexed physically tagged cache. The cache block size is 64 bytes. What is the size of a page in KB in this computer?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "8",
+        "D": "16"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Memory Management",
+      "difficulty_level": "Hard",
+      "explaination": "Let the page size be $P = 2^p$ bytes. The PTE size is 32 bits = 4 bytes. Since each page table level occupies exactly one page, the number of entries in each table is $P/4 = 2^p / 2^2 = 2^{p-2}$. The total number of bits used for indexing the three levels is $3 \\times (p-2)$. The offset is $p$ bits. Total virtual address bits = $3(p-2) + p = 46$. Thus, $4p - 6 = 46 \\implies 4p = 52 \\implies p = 13$. Page size = $2^{13}$ bytes = 8 KB.",
+      "tags": [
+        "Paging",
+        "Memory Hierarchy"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q53",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 53,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 13,
+      "page_end": 13,
+      "question_text": "What is the minimum number of page colours needed to guarantee that no two synonyms map to different sets in the processor cache of this computer?",
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "8",
+        "D": "16"
+      },
+      "answer": "C",
+      "correct_options": [
+        "C"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Computer Organization and Architecture",
+      "subtopic": "Cache Memory",
+      "difficulty_level": "Hard",
+      "explaination": "Cache size = 1 MB = $2^{20}$ bytes. Block size = 64 bytes = $2^6$ bytes. Number of cache lines = $2^{20} / 2^6 = 2^{14}$. Associativity = 16 = $2^4$. Number of sets = $2^{14} / 2^4 = 2^{10} = 1024$. Page size = 8 KB = $2^{13}$ bytes. The index bits for the cache are determined by the set index. The number of bits for set index is $\\log_2(1024) = 10$. The page offset is $\\log_2(8192) = 13$ bits. Since the cache is virtually indexed, the index bits are part of the page offset. The number of bits that overlap between the page offset and the cache index is 10. The number of bits that are in the page offset but not in the cache index is $13 - 10 = 3$. The number of page colors required is $2^3 = 8$.",
+      "tags": [
+        "Cache",
+        "Page Coloring"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q54",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 54,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 13,
+      "page_end": 13,
+      "question_text": "Relation $R$ has eight attributes $ABCDEFGH$. Fields of $R$ contain only atomic values. $F=\\{CH \\to G, A \\to BC, B \\to CFH, E \\to A, F \\to EG\\}$ is a set of functional dependencies (FDs) so that $F^+$ is exactly the set of FDs that hold for $R$. How many candidate keys does the relation $R$ have?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "answer": "B",
+      "correct_options": [
+        "B"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Database Management Systems",
+      "subtopic": "Normalization",
+      "difficulty_level": "Medium",
+      "explaination": "Attributes not on the RHS of any FD: $D$. $D$ must be part of every candidate key. Let's find the closure of $D$ and other combinations. $D^+ = \\{D\\}$. Try $DE^+ = \\{D, E, A, B, C, F, H, G\\} = \\{A, B, C, D, E, F, G, H\\}$. So $DE$ is a candidate key. Since $E \\to A$, $DA$ is not a key. Since $A \\to BC$, $D$ with other attributes might work. Checking other combinations: $DF^+ = \\{D, F, E, G, A, B, C, H\\} = \\{A, B, C, D, E, F, G, H\\}$. So $DF$ is a candidate key. $DB^+ = \\{D, B, C, F, H, G, E, A\\} = \\{A, B, C, D, E, F, G, H\\}$. So $DB$ is a candidate key. $DCH^+ = \\{D, C, H, G\\}$ (not a key). $D(CH)^+ = \\{D, C, H, G\\}$. $D(A)^+ = \\{D, A, B, C, F, H, G, E\\} = \\{A, B, C, D, E, F, G, H\\}$. So $DA$ is a candidate key. The candidate keys are $DE, DF, DB, DA$. Total 4.",
+      "tags": [
+        "Candidate Keys",
+        "Functional Dependencies"
+      ]
+    },
+    {
+      "id": "2013_CS_CS_Q55",
+      "category": "cs_2_mark",
+      "marks": 2.0,
+      "negative_marks": 0.66,
+      "section": "Computer Science and Information Technology",
+      "section_code": "CS",
+      "paper_id": "2013_CS",
+      "year": 2013,
+      "session": "CS",
+      "question_number": 55,
+      "question_type": "MCQ",
+      "is_multiple_choice": true,
+      "has_images": false,
+      "media": null,
+      "page_start": 13,
+      "page_end": 13,
+      "question_text": "The relation $R$ is",
+      "options": {
+        "A": "in 1NF, but not in 2NF.",
+        "B": "in 2NF, but not in 3NF.",
+        "C": "in 3NF, but not in BCNF.",
+        "D": "in BCNF."
+      },
+      "answer": "A",
+      "correct_options": [
+        "A"
+      ],
+      "numerical_answer_range": null,
+      "topic": "Database Management Systems",
+      "subtopic": "Normalization",
+      "difficulty_level": "Medium",
+      "explaination": "Candidate keys are $DA, DB, DE, DF$. A relation is in 2NF if every non-prime attribute is fully functionally dependent on every candidate key. Consider $A \\to BC$. $A$ is part of the candidate key $DA$. $BC$ are non-prime attributes. $A$ is a proper subset of the candidate key $DA$. Thus, there is a partial dependency ($A \\to BC$). Therefore, the relation is not in 2NF. Since it is not in 2NF, it cannot be in 3NF or BCNF. It is in 1NF as fields contain atomic values.",
+      "tags": [
+        "Normalization",
+        "2NF"
+      ]
+    }
+  ]
+}

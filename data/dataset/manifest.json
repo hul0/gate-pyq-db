@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-11-20T21:37:04.950724",
   "total_papers": 12,
-  "total_questions": 1079,
+  "total_questions": 1090,
   "breakdown_by_marks": {
     "1.0": 512,
     "2.0": 567
@@ -20,23 +20,23 @@
       "paper_id": "2011_CS",
       "year": 2011,
       "session": "CS",
-      "total_questions": 54,
+      "total_questions": 65,
       "categories": {
         "cs_1_mark": {
           "file": "papers/2011_CS/cs_1_mark.json",
-          "count": 23
+          "count": 25
         },
         "cs_2_mark": {
           "file": "papers/2011_CS/cs_2_mark.json",
-          "count": 31
+          "count": 30
         },
         "ga_1_mark": {
           "file": "papers/2011_CS/ga_1_mark.json",
-          "count": 0
+          "count": 5
         },
         "ga_2_mark": {
           "file": "papers/2011_CS/ga_2_mark.json",
-          "count": 0
+          "count": 5
         }
       }
     },

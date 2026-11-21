@@ -37,3 +37,16 @@ temp/
 .DS_Store
 Thumbs.db
 *.log
+
+# JS & NPM
+node_modules/
+package-lock.json
+.npmrc
+.pnp.js
+
+# Frontend builds
+
+
+# Next.js (if using Next.js)
+.next/
+out/

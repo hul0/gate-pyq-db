@@ -1,0 +1,431 @@
+question_number,question_id,field,manual,api,match_status,analysis
+1,2013_CS_CS_Q01,question_text,A binary operation $\oplus$ on a set of integers is defined as $x \oplus y = x^2 + y^2$. Which one of the following statements is TRUE about $\oplus$?,A binary operation $\oplus$ on a set of integers is defined as $x \oplus y = x^2 + y^2$. Which one of the following statements is **TRUE** about $\oplus$?,VARIATION,API adds Markdown bold emphasis matching printed exam typography.
+2,2013_CS_CS_Q02,question_text,"Suppose $p$ is the number of cars per minute passing through a certain road junction between 5 PM and 6 PM, and $p$ has a Poisson distribution with mean 3. What is the probability of observing fewer than 3 cars during any given minute in this interval?","Suppose $p$ is the number of cars per minute passing through a certain road junction between 5 PM and 6 PM, and $p$ has a Poisson distribution with mean $3$. What is the probability of observing fewer than $3$ cars during any given minute in this interval?",VARIATION,API has denser LaTeX variable wrapping (4 vs 2 math spans).
+2,2013_CS_CS_Q02,option_A,$8/(2e^3)$,8/(2e^3),VARIATION,Manual has denser LaTeX variable wrapping (1 vs 0 math spans).
+2,2013_CS_CS_Q02,option_B,$9/(2e^3)$,9/(2e^3),VARIATION,Manual has denser LaTeX variable wrapping (1 vs 0 math spans).
+2,2013_CS_CS_Q02,option_C,$17/(2e^3)$,17/(2e^3),VARIATION,Manual has denser LaTeX variable wrapping (1 vs 0 math spans).
+2,2013_CS_CS_Q02,option_D,$26/(2e^3)$,26/(2e^3),VARIATION,Manual has denser LaTeX variable wrapping (1 vs 0 math spans).
+3,2013_CS_CS_Q03,question_text,Which one of the following does NOT equal $\begin{vmatrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \end{vmatrix}$?,Which one of the following does **NOT** equal $\begin{vmatrix} 1 & x & x^2 \\ 1 & y & y^2 \\ 1 & z & z^2 \end{vmatrix}$?,VARIATION,API adds Markdown bold emphasis matching printed exam typography.
+3,2013_CS_CS_Q03,option_A,$\begin{vmatrix} 1 & x(x+1) & x+1 \\ 1 & y(y+1) & y+1 \\ 1 & z(z+1) & z+1 \end{vmatrix}$,\begin{vmatrix} 1 & x(x+1) & x+1 \\ 1 & y(y+1) & y+1 \\ 1 & z(z+1) & z+1 \end{vmatrix},VARIATION,Manual includes proper $ math delimiters (needed for KaTeX/LaTeX matrix). | Manual has denser LaTeX variable wrapping (1 vs 0 math spans).
+3,2013_CS_CS_Q03,option_B,$\begin{vmatrix} 1 & x+1 & x^2+1 \\ 1 & y+1 & y^2+1 \\ 1 & z+1 & z^2+1 \end{vmatrix}$,\begin{vmatrix} 1 & x+1 & x^2+1 \\ 1 & y+1 & y^2+1 \\ 1 & z+1 & z^2+1 \end{vmatrix},VARIATION,Manual includes proper $ math delimiters (needed for KaTeX/LaTeX matrix). | Manual has denser LaTeX variable wrapping (1 vs 0 math spans).
+3,2013_CS_CS_Q03,option_C,$\begin{vmatrix} 0 & x-y & x^2-y^2 \\ 0 & y-z & y^2-z^2 \\ 1 & z & z^2 \end{vmatrix}$,\begin{vmatrix} 0 & x-y & x^2-y^2 \\ 0 & y-z & y^2-z^2 \\ 1 & z & z^2 \end{vmatrix},VARIATION,Manual includes proper $ math delimiters (needed for KaTeX/LaTeX matrix). | Manual has denser LaTeX variable wrapping (1 vs 0 math spans).
+3,2013_CS_CS_Q03,option_D,$\begin{vmatrix} 2 & x+y & x^2+y^2 \\ 2 & y+z & y^2+z^2 \\ 1 & z & z^2 \end{vmatrix}$,\begin{vmatrix} 2 & x+y & x^2+y^2 \\ 2 & y+z & y^2+z^2 \\ 1 & z & z^2 \end{vmatrix},VARIATION,Manual includes proper $ math delimiters (needed for KaTeX/LaTeX matrix). | Manual has denser LaTeX variable wrapping (1 vs 0 math spans).
+5,2013_CS_CS_Q05,question_text,"In the following truth table, $V = 1$ if and only if the input is valid.
+
+| Inputs | | | | Outputs | | |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| $D_0$ | $D_1$ | $D_2$ | $D_3$ | $X_0$ | $X_1$ | $V$ |
+| 0 | 0 | 0 | 0 | x | x | 0 |
+| 1 | 0 | 0 | 0 | 0 | 0 | 1 |
+| x | 1 | 0 | 0 | 0 | 1 | 1 |
+| x | x | 1 | 0 | 1 | 0 | 1 |
+| x | x | x | 1 | 1 | 1 | 1 |
+
+What function does the truth table represent?","In the following truth table, $V = 1$ if and only if the input is valid.
+
+| Inputs | | | | Outputs | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| $D_0$ | $D_1$ | $D_2$ | $D_3$ | $X_0$ | $X_1$ | $V$ |
+| 0 | 0 | 0 | 0 | x | x | 0 |
+| 1 | 0 | 0 | 0 | 0 | 0 | 1 |
+| x | 1 | 0 | 0 | 0 | 1 | 1 |
+| x | x | 1 | 0 | 1 | 0 | 1 |
+| x | x | x | 1 | 1 | 1 | 1 |
+
+What function does the truth table represent?",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+6,2013_CS_CS_Q06,question_text,Which one of the following is the tightest upper bound that represents the number of swaps required to sort $n$ numbers using selection sort?,Which one of the following is the tightest upper bound that represents the number of swaps required to sort $n$ numbers using selection sort?,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+6,2013_CS_CS_Q06,option_A,$O(\log n)$,O(\log n),VARIATION,Manual includes proper $ math delimiters (needed for KaTeX/LaTeX matrix). | Manual has denser LaTeX variable wrapping (1 vs 0 math spans).
+6,2013_CS_CS_Q06,option_B,$O(n)$,O(n),VARIATION,Manual includes proper $ math delimiters (needed for KaTeX/LaTeX matrix). | Manual has denser LaTeX variable wrapping (1 vs 0 math spans).
+6,2013_CS_CS_Q06,option_C,$O(n \log n)$,O(n \log n),VARIATION,Manual includes proper $ math delimiters (needed for KaTeX/LaTeX matrix). | Manual has denser LaTeX variable wrapping (1 vs 0 math spans).
+6,2013_CS_CS_Q06,option_D,$O(n^2)$,O(n^2),VARIATION,Manual includes proper $ math delimiters (needed for KaTeX/LaTeX matrix). | Manual has denser LaTeX variable wrapping (1 vs 0 math spans).
+7,2013_CS_CS_Q07,question_text,Which one of the following is the tightest upper bound that represents the time complexity of inserting an object into a binary search tree of $n$ nodes?,Which one of the following is the tightest upper bound that represents the time complexity of inserting an object into a binary search tree of $n$ nodes?,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+7,2013_CS_CS_Q07,option_A,$O(1)$,O(1),VARIATION,Manual includes proper $ math delimiters (needed for KaTeX/LaTeX matrix). | Manual has denser LaTeX variable wrapping (1 vs 0 math spans).
+7,2013_CS_CS_Q07,option_B,$O(\log n)$,O(\log n),VARIATION,Manual includes proper $ math delimiters (needed for KaTeX/LaTeX matrix). | Manual has denser LaTeX variable wrapping (1 vs 0 math spans).
+7,2013_CS_CS_Q07,option_C,$O(n)$,O(n),VARIATION,Manual includes proper $ math delimiters (needed for KaTeX/LaTeX matrix). | Manual has denser LaTeX variable wrapping (1 vs 0 math spans).
+7,2013_CS_CS_Q07,option_D,$O(n \log n)$,O(n \log n),VARIATION,Manual includes proper $ math delimiters (needed for KaTeX/LaTeX matrix). | Manual has denser LaTeX variable wrapping (1 vs 0 math spans).
+8,2013_CS_CS_Q08,question_text,Consider the languages $L_1 = \Phi$ and $L_2 = \{a\}$. Which one of the following represents $L_1 L_2^* \cup L_1^*$?,Consider the languages $L_1 = \Phi$ and $L_2 = \{a\}$. Which one of the following represents $L_1 L_2^* \cup L_1^*$?,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+8,2013_CS_CS_Q08,option_A,$\{\epsilon\}$,$\{\epsilon\}$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+8,2013_CS_CS_Q08,option_B,$\Phi$,$\Phi$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+8,2013_CS_CS_Q08,option_C,$a^*$,$a^*$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+8,2013_CS_CS_Q08,option_D,"$\{\epsilon, a\}$","$\{\epsilon, a\}$",EXACT_MATCH,100% identical transcription and LaTeX syntax.
+9,2013_CS_CS_Q09,question_text,"What is the maximum number of reduce moves that can be taken by a bottom-up parser for a grammar with no epsilon- and unit-production (i.e., of type $A \to \epsilon$ and $A \to a$) to parse a string with $n$ tokens?","What is the maximum number of reduce moves that can be taken by a bottom-up parser for a grammar with no epsilon- and unit-production (i.e., of type $A \to \epsilon$ and $A \to a$) to parse a string with $n$ tokens?",EXACT_MATCH,100% identical transcription and LaTeX syntax.
+9,2013_CS_CS_Q09,option_A,$n/2$,$n/2$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+9,2013_CS_CS_Q09,option_B,$n-1$,$n-1$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+9,2013_CS_CS_Q09,option_C,$2n-1$,$2n-1$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+9,2013_CS_CS_Q09,option_D,$2^n$,$2^n$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+10,2013_CS_CS_Q10,question_text,A scheduling algorithm assigns priority proportional to the waiting time of a process. Every process starts with priority zero (the lowest priority). The scheduler re-evaluates the process priorities every $T$ time units and decides the next process to schedule. Which one of the following is TRUE if the processes have no I/O operations and all arrive at time zero?,A scheduling algorithm assigns priority proportional to the waiting time of a process. Every process starts with priority zero (the lowest priority). The scheduler re-evaluates the process priorities every $T$ time units and decides the next process to schedule. Which one of the following is TRUE if the processes have no I/O operations and all arrive at time zero?,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+13,2013_CS_CS_Q13,question_text,"Using public key cryptography, X adds a digital signature $\sigma$ to message M, encrypts $\langle M, \sigma \rangle$, and sends it to Y, where it is decrypted. Which one of the following sequences of keys is used for the operations?","Using public key cryptography, X adds a digital signature $\sigma$ to message M, encrypts <M, $\sigma$>, and sends it to Y, where it is decrypted. Which one of the following sequences of keys is used for the operations?",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+16,2013_CS_CS_Q16,question_text,"Three concurrent processes X, Y, and Z execute three different code segments that access and update certain shared variables. Process X executes the P operation (i.e., wait) on semaphores $a, b$ and $c$; process Y executes the P operation on semaphores $b, c$ and $d$; process Z executes the P operation on semaphores $c, d$, and $a$ before entering the respective code segments. After completing the execution of its code segment, each process invokes the V operation (i.e., signal) on its three semaphores. All semaphores are binary semaphores initialized to one. Which one of the following represents a deadlock-free order of invoking the P operations by the processes?","Three concurrent processes $X$, $Y$, and $Z$ execute three different code segments that access and update certain shared variables. Process $X$ executes the $P$ operation (i.e., $wait$) on semaphores $a$, $b$ and $c$; process $Y$ executes the $P$ operation on semaphores $b$, $c$ and $d$; process $Z$ executes the $P$ operation on semaphores $c$, $d$, and $a$ before entering the respective code segments. After completing the execution of its code segment, each process invokes the $V$ operation (i.e., $signal$) on its three semaphores. Which one of the following represents a deadlock-free order of invoking the $P$ operations by the processes?",VARIATION,API has denser LaTeX variable wrapping (22 vs 6 math spans).
+16,2013_CS_CS_Q16,option_A,X: P(a)P(b)P(c)   Y: P(b)P(c)P(d)   Z: P(c)P(d)P(a),$X: P(a)P(b)P(c) \quad Y: P(b)P(c)P(d) \quad Z: P(c)P(d)P(a)$,VARIATION,API wraps math expression in $ delimiters. | API has denser LaTeX variable wrapping (1 vs 0 math spans).
+16,2013_CS_CS_Q16,option_B,X: P(b)P(a)P(c)   Y: P(b)P(c)P(d)   Z: P(a)P(c)P(d),$X: P(b)P(a)P(c) \quad Y: P(b)P(c)P(d) \quad Z: P(a)P(c)P(d)$,VARIATION,API wraps math expression in $ delimiters. | API has denser LaTeX variable wrapping (1 vs 0 math spans).
+16,2013_CS_CS_Q16,option_C,X: P(b)P(a)P(c)   Y: P(c)P(b)P(d)   Z: P(a)P(c)P(d),$X: P(b)P(a)P(c) \quad Y: P(c)P(b)P(d) \quad Z: P(a)P(c)P(d)$,VARIATION,API wraps math expression in $ delimiters. | API has denser LaTeX variable wrapping (1 vs 0 math spans).
+16,2013_CS_CS_Q16,option_D,X: P(a)P(b)P(c)   Y: P(c)P(b)P(d)   Z: P(c)P(d)P(a),$X: P(a)P(b)P(c) \quad Y: P(c)P(b)P(d) \quad Z: P(c)P(d)P(a)$,VARIATION,API wraps math expression in $ delimiters. | API has denser LaTeX variable wrapping (1 vs 0 math spans).
+18,2013_CS_CS_Q18,question_text,"Which of the following statements are TRUE?
+1. The problem of determining whether there exists a cycle in an undirected graph is in P.
+2. The problem of determining whether there exists a cycle in an undirected graph is in NP.
+3. If a problem A is NP-Complete, there exists a non-deterministic polynomial time algorithm to solve A.","Which of the following statements are **TRUE**?
+
+1. The problem of determining whether there exists a cycle in an undirected graph is in $P$.
+2. The problem of determining whether there exists a cycle in an undirected graph is in $NP$.
+3. If a problem $A$ is $NP$-Complete, there exists a non-deterministic polynomial time algorithm to solve $A$.",VARIATION,API adds Markdown bold emphasis matching printed exam typography. | API has denser LaTeX variable wrapping (5 vs 0 math spans).
+19,2013_CS_CS_Q19,question_text,What is the time complexity of Bellman-Ford single-source shortest path algorithm on a complete graph of $n$ vertices?,What is the time complexity of Bellman-Ford single-source shortest path algorithm on a complete graph of $n$ vertices?,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+19,2013_CS_CS_Q19,option_A,$\Theta(n^2)$,$\Theta(n^2)$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+19,2013_CS_CS_Q19,option_B,$\Theta(n^2 \log n)$,$\Theta(n^2 \log n)$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+19,2013_CS_CS_Q19,option_C,$\Theta(n^3)$,$\Theta(n^3)$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+19,2013_CS_CS_Q19,option_D,$\Theta(n^3 \log n)$,$\Theta(n^3 \log n)$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+20,2013_CS_CS_Q20,question_text,"In a $k$-way set associative cache, the cache is divided into $v$ sets, each of which consists of $k$ lines. The lines of a set are placed in sequence one after another. The lines in set $s$ are sequenced before the lines in set $(s+1)$. The main memory blocks are numbered 0 onwards. The main memory block numbered $j$ must be mapped to any one of the cache lines from","In a $k$-way set associative cache, the cache is divided into $v$ sets, each of which consists of $k$ lines. The lines of a set are placed in sequence one after another. The lines in set $s$ are sequenced before the lines in set $(s+1)$. The main memory blocks are numbered $0$ onwards. The main memory block numbered $j$ must be mapped to any one of the cache lines from",VARIATION,API has denser LaTeX variable wrapping (7 vs 6 math spans).
+20,2013_CS_CS_Q20,option_A,$(j \bmod v) * k$ to $(j \bmod v) * k + (k-1)$,$(j \pmod v) * k$ to $(j \pmod v) * k + (k-1)$,VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+20,2013_CS_CS_Q20,option_B,$(j \bmod v)$ to $(j \bmod v) + (k-1)$,$(j \pmod v)$ to $(j \pmod v) + (k-1)$,VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+20,2013_CS_CS_Q20,option_C,$(j \bmod k)$ to $(j \bmod k) + (v-1)$,$(j \pmod k)$ to $(j \pmod k) + (v-1)$,VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+20,2013_CS_CS_Q20,option_D,$(j \bmod k) * v$ to $(j \bmod k) * v + (v-1)$,$(j \pmod k) * v$ to $(j \pmod k) * v + (v-1)$,VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+21,2013_CS_CS_Q21,question_text,Which one of the following expressions does NOT represent exclusive NOR of $x$ and $y$?,Which one of the following expressions does NOT represent exclusive NOR of $x$ and $y$?,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+21,2013_CS_CS_Q21,option_A,$xy + x'y'$,$xy + x'y'$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+21,2013_CS_CS_Q21,option_B,$x \oplus y'$,$x \oplus y'$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+21,2013_CS_CS_Q21,option_C,$x' \oplus y$,$x' \oplus y$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+21,2013_CS_CS_Q21,option_D,$x' \oplus y'$,$x' \oplus y'$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+22,2013_CS_CS_Q22,question_text,Which one of the following functions is continuous at $x = 3$?,Which one of the following functions is continuous at $x = 3$?,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+22,2013_CS_CS_Q22,option_A,"$f(x) = \begin{cases} 2, & \text{if } x = 3 \\ x - 1, & \text{if } x > 3 \\ \frac{x+3}{3}, & \text{if } x < 3 \end{cases}$","$f(x) = \begin{cases} 2, & \text{if } x=3 \\ x-1, & \text{if } x>3 \\ \frac{x+3}{3}, & \text{if } x<3 \end{cases}$",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+22,2013_CS_CS_Q22,option_B,"$f(x) = \begin{cases} 4, & \text{if } x = 3 \\ 8 - x, & \text{if } x \neq 3 \end{cases}$","$f(x) = \begin{cases} 4, & \text{if } x=3 \\ 8-x, & \text{if } x \neq 3 \end{cases}$",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+22,2013_CS_CS_Q22,option_C,"$f(x) = \begin{cases} x + 3, & \text{if } x \le 3 \\ x - 4, & \text{if } x > 3 \end{cases}$","$f(x) = \begin{cases} x+3, & \text{if } x \le 3 \\ x-4, & \text{if } x>3 \end{cases}$",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+22,2013_CS_CS_Q22,option_D,"$f(x) = \frac{1}{x^3 - 27}, \quad \text{if } x \neq 3$","$f(x) = \frac{1}{x^3-27}, \text{if } x \neq 3$",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+23,2013_CS_CS_Q23,question_text,"Function $f$ is known at the following points:
+
+| $x$ | 0 | 0.3 | 0.6 | 0.9 | 1.2 | 1.5 | 1.8 | 2.1 | 2.4 | 2.7 | 3.0 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| $f(x)$ | 0 | 0.09 | 0.36 | 0.81 | 1.44 | 2.25 | 3.24 | 4.41 | 5.76 | 7.29 | 9.00 |
+
+The value of $\int_0^3 f(x)\,dx$ computed using the trapezoidal rule is","Function $f$ is known at the following points:
+
+| $x$ | 0 | 0.3 | 0.6 | 0.9 | 1.2 | 1.5 | 1.8 | 2.1 | 2.4 | 2.7 | 3.0 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| $f(x)$ | 0 | 0.09 | 0.36 | 0.81 | 1.44 | 2.25 | 3.24 | 4.41 | 5.76 | 7.29 | 9.00 |
+
+The value of $\int_{0}^{3} f(x) dx$ computed using the trapezoidal rule is",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+24,2013_CS_CS_Q24,question_text,Consider an undirected random graph of eight vertices. The probability that there is an edge between a pair of vertices is $1/2$. What is the expected number of unordered cycles of length three?,Consider an undirected random graph of eight vertices. The probability that there is an edge between a pair of vertices is $1/2$. What is the expected number of unordered cycles of length three?,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+26,2013_CS_CS_Q26,question_text,"The line graph $L(G)$ of a simple graph $G$ is defined as follows:
+- There is exactly one vertex $v(e)$ in $L(G)$ for each edge $e$ in $G$.
+- For any two edges $e$ and $e'$ in $G$, $L(G)$ has an edge between $v(e)$ and $v(e')$, if and only if $e$ and $e'$ are incident with the same vertex in $G$.
+
+Which of the following statements is/are TRUE?
+(P) The line graph of a cycle is a cycle.
+(Q) The line graph of a clique is a clique.
+(R) The line graph of a planar graph is planar.
+(S) The line graph of a tree is a tree.","The line graph $L(G)$ of a simple graph $G$ is defined as follows:
+
+* There is exactly one vertex $v(e)$ in $L(G)$ for each edge $e$ in $G$.
+* For any two edges $e$ and $e'$ in $G$, $L(G)$ has an edge between $v(e)$ and $v(e')$, if and only if $e$ and $e'$ are incident with the same vertex in $G$.
+
+Which of the following statements is/are TRUE?
+
+(P) The line graph of a cycle is a cycle.
+(Q) The line graph of a clique is a clique.
+(R) The line graph of a planar graph is planar.
+(S) The line graph of a tree is a tree.",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+27,2013_CS_CS_Q27,option_A,$\exists x (F(x) \land \neg P(x))$,$\exists x (F(x) \land \neg P(x))$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+27,2013_CS_CS_Q27,option_B,$\exists x (\neg F(x) \land P(x))$,$\exists x (\neg F(x) \land P(x))$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+27,2013_CS_CS_Q27,option_C,$\exists x (\neg F(x) \land \neg P(x))$,$\exists x (\neg F(x) \land \neg P(x))$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+27,2013_CS_CS_Q27,option_D,$\neg \exists x (F(x) \land P(x))$,$\neg \exists x (F(x) \land P(x))$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+28,2013_CS_CS_Q28,question_text,"Consider the following sequence of micro-operations.
+```text
+MBR ← PC
+MAR ← X
+PC ← Y
+Memory ← MBR
+```
+Which one of the following is a possible operation performed by this sequence?","Consider the following sequence of micro-operations.
+
+```text
+MBR \leftarrow PC
+MAR \leftarrow X
+PC \leftarrow Y
+Memory \leftarrow MBR
+```
+
+Which one of the following is a possible operation performed by this sequence?",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+29,2013_CS_CS_Q29,question_text,"Consider a hard disk with 16 recording surfaces (0-15) having 16384 cylinders (0-16383) and each cylinder contains 64 sectors (0-63). Data storage capacity in each sector is 512 bytes. Data are organized cylinder-wise and the addressing format is $\langle\text{cylinder no., surface no., sector no.}\rangle$. A file of size 42797 KB is stored in the disk and the starting disk location of the file is $\langle 1200, 9, 40 \rangle$. What is the cylinder number of the last sector of the file, if it is stored in a contiguous manner?","Consider a hard disk with 16 recording surfaces (0-15) having 16384 cylinders (0-16383) and each cylinder contains 64 sectors (0-63). Data storage capacity in each sector is 512 bytes. Data are organized cylinder-wise and the addressing format is <cylinder no., surface no., sector no.>. A file of size 42797 KB is stored in the disk and the starting disk location of the file is <1200, 9, 40>. What is the cylinder number of the last sector of the file, if it is stored in a contiguous manner?",VARIATION,Manual has denser LaTeX variable wrapping (2 vs 0 math spans).
+30,2013_CS_CS_Q30,question_text,The number of elements that can be sorted in $\Theta(\log n)$ time using heap sort is,The number of elements that can be sorted in $\Theta(\log n)$ time using heap sort is,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+30,2013_CS_CS_Q30,option_A,$\Theta(1)$,$\Theta(1)$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+30,2013_CS_CS_Q30,option_B,$\Theta(\sqrt{\log n})$,$\Theta(\sqrt{\log n})$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+30,2013_CS_CS_Q30,option_C,$\Theta\left(\frac{\log n}{\log \log n}\right)$,$\Theta\left(\frac{\log n}{\log \log n}\right)$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+30,2013_CS_CS_Q30,option_D,$\Theta(\log n)$,$\Theta(\log n)$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+31,2013_CS_CS_Q31,question_text,"Consider the following function:
+```c
+int unknown(int n){
+    int i, j, k=0;
+    for (i=n/2; i<=n; i++)
+        for (j=2; j<=n; j=j*2)
+            k = k + n/2;
+    return (k);
+}
+```
+The return value of the function is","Consider the following function:
+
+```c
+int unknown(int n) {
+    int i, j, k=0;
+    for (i=n/2; i<=n; i++)
+        for (j=2; j<=n; j=j*2)
+            k = k + n/2;
+    return (k);
+}
+```
+The return value of the function is",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+31,2013_CS_CS_Q31,option_A,$\Theta(n^2)$,$\Theta(n^2)$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+31,2013_CS_CS_Q31,option_B,$\Theta(n^2 \log n)$,$\Theta(n^2 \log n)$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+31,2013_CS_CS_Q31,option_C,$\Theta(n^3)$,$\Theta(n^3)$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+31,2013_CS_CS_Q31,option_D,$\Theta(n^3 \log n)$,$\Theta(n^3 \log n)$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+32,2013_CS_CS_Q32,question_text,"Consider the following languages.
+$$L_1 = \{0^p 1^q 0^r \mid p, q, r \ge 0\}$$
+$$L_2 = \{0^p 1^q 0^r \mid p, q, r \ge 0, p \neq r\}$$
+
+Which one of the following statements is FALSE?","Consider the following languages.
+$L_1 = \{0^p 1^q 0^r \mid p, q, r \ge 0\}$
+$L_2 = \{0^p 1^q 0^r \mid p, q, r \ge 0, p \neq r\}$
+
+Which one of the following statements is FALSE?",VARIATION,Manual has denser LaTeX variable wrapping (4 vs 2 math spans).
+32,2013_CS_CS_Q32,option_A,$L_2$ is context-free.,$L_2$ is context-free.,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+32,2013_CS_CS_Q32,option_B,$L_1 \cap L_2$ is context-free.,$L_1 \cap L_2$ is context-free.,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+32,2013_CS_CS_Q32,option_C,Complement of $L_2$ is recursive.,Complement of $L_2$ is recursive.,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+32,2013_CS_CS_Q32,option_D,Complement of $L_1$ is context-free but not regular.,Complement of $L_1$ is context-free but not regular.,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+33,2013_CS_CS_Q33,question_text,"Consider the DFA $A$ given below.
+
+Which of the following are FALSE?
+1. Complement of $L(A)$ is context-free.
+2. $L(A) = L((11^*0+0)(0 + 1)^*0^*1^*)$
+3. For the language accepted by $A$, $A$ is the minimal DFA.
+4. $A$ accepts all strings over $\{0, 1\}$ of length at least 2.","Consider the DFA $A$ given below.
+
+[Diagram of a 3-state DFA: State 1 (start) transitions to State 2 on '1', State 3 on '0'. State 2 transitions to itself on '1', to State 3 on '0'. State 3 (final) transitions to itself on '0,1'.]
+
+Which of the following are FALSE?
+1. Complement of $L(A)$ is context-free.
+2. $L(A) = L((11^*0+0)(0+1)^*0^*1^*)$
+3. For the language accepted by $A$, $A$ is the minimal DFA.
+4. $A$ accepts all strings over $\{0, 1\}$ of length at least 2.",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+34,2013_CS_CS_Q34,question_text,"A shared variable $x$, initialized to zero, is operated on by four concurrent processes $W, X, Y, Z$ as follows. Each of the processes $W$ and $X$ reads $x$ from memory, increments by one, stores it to memory, and then terminates. Each of the processes $Y$ and $Z$ reads $x$ from memory, decrements by two, stores it to memory, and then terminates. Each process before reading $x$ invokes the $P$ operation (i.e., wait) on a counting semaphore $S$ and invokes the $V$ operation (i.e., signal) on the semaphore $S$ after storing $x$ to memory. Semaphore $S$ is initialized to two. What is the maximum possible value of $x$ after all processes complete execution?","A shared variable $x$, initialized to zero, is operated on by four concurrent processes $W, X, Y, Z$ as follows. Each of the processes $W$ and $X$ reads $x$ from memory, increments by one, stores it to memory, and then terminates. Each of the processes $Y$ and $Z$ reads $x$ from memory, decrements by two, stores it to memory, and then terminates. Each process before reading $x$ invokes the $P$ operation (i.e., $wait$) on a counting semaphore $S$ and invokes the $V$ operation (i.e., $signal$) on the semaphore $S$ after storing $x$ to memory. Semaphore $S$ is initialized to two. What is the maximum possible value of $x$ after all processes complete execution?",VARIATION,API has denser LaTeX variable wrapping (18 vs 16 math spans).
+35,2013_CS_CS_Q35,question_text,"Consider the following relational schema.
+```text
+Students(rollno: integer, sname: string)
+Courses(courseno: integer, cname: string)
+Registration(rollno: integer, courseno: integer, percent: real)
+```
+Which of the following queries are equivalent to this query in English?
+“Find the distinct names of all students who score more than 90% in the course numbered 107”
+
+(I)
+```sql
+SELECT DISTINCT S.sname
+FROM Students as S, Registration as R
+WHERE R.rollno=S.rollno AND R.courseno=107 AND R.percent >90
+```
+(II) $\prod_{\text{sname}}(\sigma_{\text{courseno}=107 \,\land\, \text{percent}>90} (\text{Registration} \bowtie \text{Students}))$
+
+(III) $\{T \mid \exists S \in \text{Students}, \exists R \in \text{Registration} \,(S.\text{rollno}=R.\text{rollno} \land R.\text{courseno}=107 \land R.\text{percent}>90 \land T.\text{sname}=S.\text{sname})\}$
+
+(IV) $\{\langle SN \rangle \mid \exists SR \exists RP \,(\langle SR, SN \rangle \in \text{Students} \land \langle SR, 107, RP \rangle \in \text{Registration} \land RP > 90)\}$","Consider the following relational schema.\nStudents($\underline{\text{rollno}}$: integer, sname: string)\nCourses($\underline{\text{courseno}}$: integer, cname: string)\nRegistration($\underline{\text{rollno}}$: integer, $\underline{\text{courseno}}$: integer, percent: real)\n\nWhich of the following queries are equivalent to this query in English?\n""Find the distinct names of all students who score more than 90% in the course numbered 107""\n\n(I) SELECT DISTINCT S.sname\nFROM Students as S, Registration as R\nWHERE R.rollno=S.rollno AND R.courseno=107 AND R.percent >90\n\n(II) $\Pi_{\text{sname}}(\sigma_{\text{courseno}=107 \land \text{percent}>90} (\text{Registration} \bowtie \text{Students}))$\n\n(III) $\{ T \mid \exists S \in \text{Students}, \exists R \in \text{Registration} \mid (S.\text{rollno}=R.\text{rollno} \land R.\text{courseno}=107 \land R.\text{percent}>90 \land T.\text{sname}=S.\text{sname})\}$\n\n(IV) $\{ <S_N> \mid \exists S_R \exists R_P ( <S_R, S_N> \in \text{Students} \land <S_R, 107, R_P> \in \text{Registration} \land R_P>90)\}$",VARIATION,API has denser LaTeX variable wrapping (7 vs 3 math spans).
+39,2013_CS_CS_Q39,question_text,"A certain computation generates two arrays $a$ and $b$ such that $a[i]=f(i)$ for $0 \le i < n$ and $b[i] = g(a[i])$ for $0 \le i < n$. Suppose this computation is decomposed into two concurrent processes X and Y such that X computes the array $a$ and Y computes the array $b$. The processes employ two binary semaphores R and S, both initialized to zero. The array $a$ is shared by the two processes. The structures of the processes are shown below.
+```text
+Process X:
+private i;
+for (i=0; i<n; i++) {
+    a[i] = f(i);
+    ExitX(R, S);
+}
+
+Process Y:
+private i;
+for (i=0; i<n; i++) {
+    EntryY(R, S);
+    b[i] = g(a[i]);
+}
+```
+Which one of the following represents the CORRECT implementations of ExitX and EntryY?","A certain computation generates two arrays $a$ and $b$ such that $a[i] = f(i)$ for $0 \le i < n$ and $b[i] = g(a[i])$ for $0 \le i < n$. Suppose this computation is decomposed into two concurrent processes $X$ and $Y$ such that $X$ computes the array $a$ and $Y$ computes the array $b$. The processes employ two binary semaphores $R$ and $S$, both initialized to zero. The array $a$ is shared by the two processes. The structures of the processes are shown below.\n\n```c\nProcess X:\nprivate i;\nfor (i=0; i<n; i++) {\n  a[i] = f(i);\n  ExitX(R, S);\n}\n\nProcess Y:\nprivate i;\nfor (i=0; i<n; i++) {\n  EntryY(R, S);\n  b[i] = g(a[i]);\n}\n```\nWhich one of the following represents the CORRECT implementations of $ExitX$ and $EntryY$?",VARIATION,API has denser LaTeX variable wrapping (17 vs 9 math spans).
+39,2013_CS_CS_Q39,option_A,"ExitX(R, S) {
+    P(R);
+    V(S);
+}
+EntryY(R, S) {
+    P(S);
+    V(R);
+}","ExitX(R, S) { P(R); V(S); } EntryY(R, S) { P(S); V(R); }",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+39,2013_CS_CS_Q39,option_B,"ExitX(R, S) {
+    V(R);
+    V(S);
+}
+EntryY(R, S) {
+    P(R);
+    P(S);
+}","ExitX(R, S) { V(R); V(S); } EntryY(R, S) { P(R); P(S); }",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+39,2013_CS_CS_Q39,option_C,"ExitX(R, S) {
+    P(S);
+    V(R);
+}
+EntryY(R, S) {
+    V(S);
+    P(R);
+}","ExitX(R, S) { P(S); V(R); } EntryY(R, S) { V(S); P(R); }",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+39,2013_CS_CS_Q39,option_D,"ExitX(R, S) {
+    V(R);
+    P(S);
+}
+EntryY(R, S) {
+    V(S);
+    P(R);
+}","ExitX(R, S) { V(R); P(S); } EntryY(R, S) { V(S); P(R); }",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+40,2013_CS_CS_Q40,question_text,"Consider the following two sets of LR(1) items of an LR(1) grammar.
+$$\begin{array}{ll}
+X \to c.X, \, c/d & X \to c.X, \, \$ \\
+X \to .cX, \, c/d & X \to .cX, \, \$ \\
+X \to .d, \, c/d & X \to .d, \, \$
+\end{array}$$
+Which of the following statements related to merging of the two sets in the corresponding LALR parser is/are FALSE?
+1. Cannot be merged since look aheads are different.
+2. Can be merged but will result in S-R conflict.
+3. Can be merged but will result in R-R conflict.
+4. Cannot be merged since goto on $c$ will lead to two different sets.","Consider the following two sets of $LR(1)$ items of an $LR(1)$ grammar.\n\n$X \to c.X, c/d$ \t\t $X \to c.X, \$$\n$X \to .cX, c/d$ \t\t $X \to .cX, \$$\n$X \to .d, c/d$ \t\t $X \to .d, \$$\n\nWhich of the following statements related to merging of the two sets in the corresponding LALR parser is/are **FALSE**?\n1. Cannot be merged since look aheads are different.\n2. Can be merged but will result in S-R conflict.\n3. Can be merged but will result in R-R conflict.\n4. Cannot be merged since $goto$ on $c$ will lead to two different sets.",VARIATION,API adds Markdown bold emphasis matching printed exam typography. | API has denser LaTeX variable wrapping (11 vs 4 math spans).
+41,2013_CS_CS_Q41,question_text,"Which of the following is/are undecidable?
+1. $G$ is a CFG. Is $L(G) = \Phi$?
+2. $G$ is a CFG. Is $L(G) = \Sigma^*$?
+3. $M$ is a Turing machine. Is $L(M)$ regular?
+4. $A$ is a DFA and $N$ is an NFA. Is $L(A) = L(N)$?",Which of the following is/are undecidable?\n1. $G$ is a CFG. Is $L(G) = \Phi$?\n2. $G$ is a CFG. Is $L(G) = \Sigma^*$?\n3. $M$ is a Turing machine. Is $L(M)$ regular?\n4. $A$ is a DFA and $N$ is an NFA. Is $L(A) = L(N)$?,VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+42,2013_CS_CS_Q42,question_text,"What is the return value of `f(p,p)`, if the value of $p$ is initialized to 5 before the call? Note that the first parameter is passed by reference, whereas the second parameter is passed by value.
+```c
+int f (int &x, int c) {
+    c = c - 1;
+    if (c==0) return 1;
+    x = x + 1;
+    return f(x,c) * x;
+}
+```","What is the return value of $f(p, p)$, if the value of $p$ is initialized to 5 before the call? Note that the first parameter is passed by reference, whereas the second parameter is passed by value.
+
+```c
+int f (int &x, int c) {
+    c = c - 1;
+    if (c==0) return 1;
+    x = x + 1;
+    return f(x,c) * x;
+}
+```",VARIATION,API has denser LaTeX variable wrapping (2 vs 1 math spans).
+44,2013_CS_CS_Q44,question_text,"Consider the following operation along with Enqueue and Dequeue operations on queues, where $k$ is a global parameter.
+```text
+MultiDequeue(Q){
+    m = k
+    while (Q is not empty) and (m > 0) {
+        Dequeue(Q)
+        m = m - 1
+    }
+}
+```
+What is the worst case time complexity of a sequence of $n$ queue operations on an initially empty queue?","Consider the following operation along with Enqueue and Dequeue operations on queues, where $k$ is a global parameter.
+
+```c
+MultiDequeue(Q) {
+    m = k
+    while (Q is not empty) and (m > 0) {
+        Dequeue(Q)
+        m = m - 1
+    }
+}
+```
+What is the worst case time complexity of a sequence of $n$ queue operations on an initially empty queue?",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+44,2013_CS_CS_Q44,option_A,$\Theta(n)$,$\Theta(n)$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+44,2013_CS_CS_Q44,option_B,$\Theta(n + k)$,$\Theta(n + k)$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+44,2013_CS_CS_Q44,option_C,$\Theta(nk)$,$\Theta(nk)$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+44,2013_CS_CS_Q44,option_D,$\Theta(n^2)$,$\Theta(n^2)$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+45,2013_CS_CS_Q45,question_text,"Consider an instruction pipeline with five stages without any branch prediction: Fetch Instruction (FI), Decode Instruction (DI), Fetch Operand (FO), Execute Instruction (EI) and Write Operand (WO). The stage delays for FI, DI, FO, EI and WO are 5 ns, 7 ns, 10 ns, 8 ns and 6 ns, respectively. There are intermediate storage buffers after each stage and the delay of each buffer is 1 ns. A program consisting of 12 instructions $I_1, I_2, I_3, \dots, I_{12}$ is executed in this pipelined processor. Instruction $I_4$ is the only branch instruction and its branch target is $I_9$. If the branch is taken during the execution of this program, the time (in ns) needed to complete the program is","Consider an instruction pipeline with five stages without any branch prediction: Fetch Instruction (FI), Decode Instruction (DI), Fetch Operand (FO), Execute Instruction (EI) and Write Operand (WO). The stage delays for FI, DI, FO, EI and WO are 5 ns, 7 ns, 10 ns, 8 ns and 6 ns, respectively. There are intermediate storage buffers after each stage and the delay of each buffer is 1 ns. A program consisting of 12 instructions $I_1, I_2, I_3, ..., I_{12}$ is executed in this pipelined processor. Instruction $I_4$ is the only branch instruction and its branch target is $I_9$. If the branch is taken during the execution of this program, the time (in ns) needed to complete the program is",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+46,2013_CS_CS_Q46,question_text,A RAM chip has a capacity of 1024 words of 8 bits each ($1\text{K} \times 8$). The number of $2 \times 4$ decoders with enable line needed to construct a $16\text{K} \times 16$ RAM from $1\text{K} \times 8$ RAM is,A RAM chip has a capacity of 1024 words of 8 bits each ($1K \times 8$). The number of $2 \times 4$ decoders with enable line needed to construct a $16K \times 16$ RAM from $1K \times 8$ RAM is,VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+47,2013_CS_CS_Q47,question_text,Which one of the following is NOT logically equivalent to $\neg \exists x (\forall y (\alpha) \land \forall z (\beta))$?,Which one of the following is NOT logically equivalent to $\neg \exists x (\forall y \alpha \land \forall z \beta)$?,VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+47,2013_CS_CS_Q47,option_A,$\forall x (\exists z (\neg \beta) \to \forall y (\alpha))$,$\forall x (\exists z (\neg \beta) \to \forall y (\alpha))$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+47,2013_CS_CS_Q47,option_B,$\forall x (\forall z (\beta) \to \exists y (\neg \alpha))$,$\forall x (\forall z (\beta) \to \exists y (\neg \alpha))$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+47,2013_CS_CS_Q47,option_C,$\forall x (\forall y (\alpha) \to \exists z (\neg \beta))$,$\forall x (\forall y (\alpha) \to \exists z (\neg \beta))$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+47,2013_CS_CS_Q47,option_D,$\forall x (\exists y (\neg \alpha) \to \exists z (\neg \beta))$,$\forall x (\exists y (\neg \alpha) \to \exists z (\neg \beta))$,EXACT_MATCH,100% identical transcription and LaTeX syntax.
+48,2013_CS_CS_Q48,question_text,"Common Data for Questions 48 and 49:
+The following code segment is executed on a processor which allows only register operands in its instructions. Each instruction can have atmost two source operands and one destination operand. Assume that all variables are dead after this code segment.
+```c
+c = a + b;
+d = c * a;
+e = c + a;
+x = c * c;
+if (x > a) {
+    y = a * a;
+}
+else {
+    d = d * d;
+    e = e * e;
+}
+```
+Suppose the instruction set architecture of the processor has only two registers. The only allowed compiler optimization is code motion, which moves statements from one place to another while preserving correctness. What is the minimum number of spills to memory in the compiled code?","Suppose the instruction set architecture of the processor has only two registers. The only allowed compiler optimization is code motion, which moves statements from one place to another while preserving correctness. What is the minimum number of spills to memory in the compiled code?",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+49,2013_CS_CS_Q49,question_text,"Common Data for Questions 48 and 49:
+The following code segment is executed on a processor which allows only register operands in its instructions. Each instruction can have atmost two source operands and one destination operand. Assume that all variables are dead after this code segment.
+```c
+c = a + b;
+d = c * a;
+e = c + a;
+x = c * c;
+if (x > a) {
+    y = a * a;
+}
+else {
+    d = d * d;
+    e = e * e;
+}
+```
+What is the minimum number of registers needed in the instruction set architecture of the processor to compile this code segment without any spill to memory? Do not apply any optimization other than optimizing register allocation.",What is the minimum number of registers needed in the instruction set architecture of the processor to compile this code segment without any spill to memory? Do not apply any optimization other than optimizing register allocation.,VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+50,2013_CS_CS_Q50,question_text,"Common Data for Questions 50 and 51:
+The procedure given below is required to find and replace certain characters inside an input character string supplied in array A. The characters to be replaced are supplied in array oldc, while their respective replacement characters are supplied in array newc. Array A has a fixed length of five characters, while arrays oldc and newc contain three characters each. However, the procedure is flawed.
+```c
+void find_and_replace (char *A, char *oldc, char *newc) {
+    for (int i=0; i<5; i++)
+        for (int j=0; j<3; j++)
+            if (A[i] == oldc[j]) A[i] = newc[j];
+}
+```
+The procedure is tested with the following four test cases.
+(1) oldc = “abc”, newc = “dab”
+(2) oldc = “cde”, newc = “bcd”
+(3) oldc = “bca”, newc = “cda”
+(4) oldc = “abc”, newc = “bac”
+
+The tester now tests the program on all input strings of length five consisting of characters ‘a’, ‘b’, ‘c’, ‘d’ and ‘e’ with duplicates allowed. If the tester carries out this testing with the four test cases given above, how many test cases will be able to capture the flaw?","The tester now tests the program on all input strings of length five consisting of characters 'a', 'b', 'c', 'd' and 'e' with duplicates allowed. If the tester carries out this testing with the four test cases given above, how many test cases will be able to capture the flaw?",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+51,2013_CS_CS_Q51,question_text,"Common Data for Questions 50 and 51:
+The procedure given below is required to find and replace certain characters inside an input character string supplied in array A. The characters to be replaced are supplied in array oldc, while their respective replacement characters are supplied in array newc. Array A has a fixed length of five characters, while arrays oldc and newc contain three characters each. However, the procedure is flawed.
+```c
+void find_and_replace (char *A, char *oldc, char *newc) {
+    for (int i=0; i<5; i++)
+        for (int j=0; j<3; j++)
+            if (A[i] == oldc[j]) A[i] = newc[j];
+}
+```
+The procedure is tested with the following four test cases.
+(1) oldc = “abc”, newc = “dab”
+(2) oldc = “cde”, newc = “bcd”
+(3) oldc = “bca”, newc = “cda”
+(4) oldc = “abc”, newc = “bac”
+
+If array A is made to hold the string “abcde”, which of the above four test cases will be successful in exposing the flaw in this procedure?","If array $A$ is made to hold the string ""abcde"", which of the above four test cases will be successful in exposing the flaw in this procedure?",VARIATION,API has denser LaTeX variable wrapping (1 vs 0 math spans).
+52,2013_CS_CS_Q52,question_text,"Statement for Linked Answer Questions 52 and 53:
+A computer uses 46-bit virtual address, 32-bit physical address, and a three-level paged page table organization. The page table base register stores the base address of the first-level table ($T_1$), which occupies exactly one page. Each entry of $T_1$ stores the base address of a page of the second-level table ($T_2$). Each entry of $T_2$ stores the base address of a page of the third-level table ($T_3$). Each entry of $T_3$ stores a page table entry (PTE). The PTE is 32 bits in size. The processor used in the computer has a 1 MB 16-way set associative virtually indexed physically tagged cache. The cache block size is 64 bytes.
+
+What is the size of a page in KB in this computer?","A computer uses 46-bit virtual address, 32-bit physical address, and a three-level paged page table organization. The page table base register stores the base address of the first-level table ($T_1$), which occupies exactly one page. Each entry of $T_2$ stores the base address of a page of the second-level table ($T_2$). Each entry of $T_2$ stores the base address of a page of the third-level table ($T_3$). Each entry of $T_3$ stores a page table entry (PTE). The PTE is 32 bits in size. The processor used in the computer has a 1 MB 16-way set associative virtually indexed physically tagged cache. The cache block size is 64 bytes. What is the size of a page in KB in this computer?",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+53,2013_CS_CS_Q53,question_text,"Statement for Linked Answer Questions 52 and 53:
+A computer uses 46-bit virtual address, 32-bit physical address, and a three-level paged page table organization. The page table base register stores the base address of the first-level table ($T_1$), which occupies exactly one page. Each entry of $T_1$ stores the base address of a page of the second-level table ($T_2$). Each entry of $T_2$ stores the base address of a page of the third-level table ($T_3$). Each entry of $T_3$ stores a page table entry (PTE). The PTE is 32 bits in size. The processor used in the computer has a 1 MB 16-way set associative virtually indexed physically tagged cache. The cache block size is 64 bytes.
+
+What is the minimum number of page colours needed to guarantee that no two synonyms map to different sets in the processor cache of this computer?",What is the minimum number of page colours needed to guarantee that no two synonyms map to different sets in the processor cache of this computer?,VARIATION,Manual has denser LaTeX variable wrapping (6 vs 0 math spans).
+54,2013_CS_CS_Q54,question_text,"Statement for Linked Answer Questions 54 and 55:
+Relation $R$ has eight attributes $ABCDEFGH$. Fields of $R$ contain only atomic values.
+$F = \{CH \to G, A \to BC, B \to CFH, E \to A, F \to EG\}$ is a set of functional dependencies (FDs) so that $F^+$ is exactly the set of FDs that hold for $R$.
+
+How many candidate keys does the relation $R$ have?","Relation $R$ has eight attributes $ABCDEFGH$. Fields of $R$ contain only atomic values. $F=\{CH \to G, A \to BC, B \to CFH, E \to A, F \to EG\}$ is a set of functional dependencies (FDs) so that $F^+$ is exactly the set of FDs that hold for $R$. How many candidate keys does the relation $R$ have?",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+55,2013_CS_CS_Q55,question_text,"Statement for Linked Answer Questions 54 and 55:
+Relation $R$ has eight attributes $ABCDEFGH$. Fields of $R$ contain only atomic values.
+$F = \{CH \to G, A \to BC, B \to CFH, E \to A, F \to EG\}$ is a set of functional dependencies (FDs) so that $F^+$ is exactly the set of FDs that hold for $R$.
+
+The relation $R$ is",The relation $R$ is,VARIATION,Manual has denser LaTeX variable wrapping (7 vs 1 math spans).
+57,2013_CS_GA_Q57,question_text,"Complete the sentence:
+Universalism is to particularism as diffuseness is to _______________.","Complete the sentence:
+Universalism is to particularism as diffuseness is to ____________.",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+58,2013_CS_GA_Q58,question_text,"What will be the maximum sum of $44, 42, 40, \dots$?","What will be the maximum sum of $44, 42, 40, ......$ ?",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+59,2013_CS_GA_Q59,question_text,"Were you a bird, you ___________________ in the sky.","Were you a bird, you ____________ in the sky.",VARIATION,"Minor whitespace, punctuation, or equivalent LaTeX notation variation."
+61,2013_CS_GA_Q61,question_text,"Find the sum of the expression
+$$\frac{1}{\sqrt{1}+\sqrt{2}} + \frac{1}{\sqrt{2}+\sqrt{3}} + \frac{1}{\sqrt{3}+\sqrt{4}} + \dots + \frac{1}{\sqrt{80}+\sqrt{81}}$$","Find the sum of the expression
+$\frac{1}{\sqrt{1}+\sqrt{2}} + \frac{1}{\sqrt{2}+\sqrt{3}} + \frac{1}{\sqrt{3}+\sqrt{4}} + ............. + \frac{1}{\sqrt{80}+\sqrt{81}}$",VARIATION,Manual has denser LaTeX variable wrapping (2 vs 1 math spans).
